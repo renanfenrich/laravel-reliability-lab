@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from pathlib import Path
-import json
+import json,hashlib
 root=Path(__file__).resolve().parent.parent
 objects={}
 def add(o):
@@ -78,4 +78,8 @@ if (root/'observability/prometheus.yml').exists():
     deploy('grafana','grafana/grafana:13.2.3',3000,env=[secret('GF_SECURITY_ADMIN_USER'),secret('GF_SECURITY_ADMIN_PASSWORD'),{'name':'GF_ANALYTICS_REPORTING_ENABLED','value':'false'},{'name':'GF_ANALYTICS_CHECK_FOR_UPDATES','value':'false'}],volumes=[x[0] for x in pairs]+[{'name':'data','emptyDir':{}},{'name':'tmp','emptyDir':{}}],mounts=[x[1] for x in pairs]+[{'name':'data','mountPath':'/var/lib/grafana'},{'name':'tmp','mountPath':'/tmp'}],user=472,probe={'httpGet':{'path':'/api/health','port':3000}},limits={'cpu':'1','memory':'512Mi'})
     role('kube-state-metrics',[{'apiGroups':[''],'resources':['pods'],'verbs':['list','watch']},{'apiGroups':['apps'],'resources':['deployments'],'verbs':['list','watch']}])
     deploy('kube-state-metrics','registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.20.0',8080,args=['--namespaces=lab','--resources=pods,deployments'],user=65534,probe={'httpGet':{'path':'/healthz','port':8080}},sa='kube-state-metrics',limits={'cpu':'500m','memory':'128Mi'})
+for o in objects.values():
+    if o['kind']=='Deployment':
+        pod=o['spec']['template']; cfg=[v['configMap']['name'] for v in pod['spec'].get('volumes',[]) if 'configMap' in v]
+        if cfg:pod['metadata']['annotations']={'lab-config-checksum':hashlib.sha256(json.dumps([objects['configmap-'+n]['data'] for n in cfg],sort_keys=True).encode()).hexdigest()}
 (root/'infra/manifests.json').write_text(json.dumps(objects,indent=2)+'\n')

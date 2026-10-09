@@ -1,0 +1,401 @@
+{
+  "groups": [
+    {
+      "name": "lab-slo",
+      "interval": "15s",
+      "rules": [
+        {
+          "record": "lab:api_availability_miss_ratio:5m",
+          "expr": "sum(rate(lab_http_total{traffic=\"normal\",class=\"5xx\"}[5m])) / clamp_min(sum(rate(lab_http_total{traffic=\"normal\"}[5m])), 1e-12)"
+        },
+        {
+          "record": "lab:api_latency_miss_ratio:5m",
+          "expr": "clamp_min((sum(rate(lab_http_seconds_count{traffic=\"normal\"}[5m])) - sum(rate(lab_http_seconds_bucket{traffic=\"normal\",le=\"0.5\"}[5m]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\"normal\"}[5m])), 1e-12), 0)"
+        },
+        {
+          "record": "lab:processing_miss_ratio:5m",
+          "expr": "(sum(lab_processing_cohort_total{traffic=\"normal\",window=\"5m\"}) - sum(lab_processing_cohort_met{traffic=\"normal\",window=\"5m\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\"normal\",window=\"5m\"}), 1)"
+        },
+        {
+          "record": "lab:api_availability_burn:5m",
+          "expr": "lab:api_availability_miss_ratio:5m / 0.001"
+        },
+        {
+          "record": "lab:api_latency_burn:5m",
+          "expr": "lab:api_latency_miss_ratio:5m / 0.01"
+        },
+        {
+          "record": "lab:processing_burn:5m",
+          "expr": "lab:processing_miss_ratio:5m / 0.01"
+        },
+        {
+          "record": "lab:api_availability_miss_ratio:30m",
+          "expr": "sum(rate(lab_http_total{traffic=\"normal\",class=\"5xx\"}[30m])) / clamp_min(sum(rate(lab_http_total{traffic=\"normal\"}[30m])), 1e-12)"
+        },
+        {
+          "record": "lab:api_latency_miss_ratio:30m",
+          "expr": "clamp_min((sum(rate(lab_http_seconds_count{traffic=\"normal\"}[30m])) - sum(rate(lab_http_seconds_bucket{traffic=\"normal\",le=\"0.5\"}[30m]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\"normal\"}[30m])), 1e-12), 0)"
+        },
+        {
+          "record": "lab:processing_miss_ratio:30m",
+          "expr": "(sum(lab_processing_cohort_total{traffic=\"normal\",window=\"30m\"}) - sum(lab_processing_cohort_met{traffic=\"normal\",window=\"30m\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\"normal\",window=\"30m\"}), 1)"
+        },
+        {
+          "record": "lab:api_availability_burn:30m",
+          "expr": "lab:api_availability_miss_ratio:30m / 0.001"
+        },
+        {
+          "record": "lab:api_latency_burn:30m",
+          "expr": "lab:api_latency_miss_ratio:30m / 0.01"
+        },
+        {
+          "record": "lab:processing_burn:30m",
+          "expr": "lab:processing_miss_ratio:30m / 0.01"
+        },
+        {
+          "record": "lab:api_availability_miss_ratio:1h",
+          "expr": "sum(rate(lab_http_total{traffic=\"normal\",class=\"5xx\"}[1h])) / clamp_min(sum(rate(lab_http_total{traffic=\"normal\"}[1h])), 1e-12)"
+        },
+        {
+          "record": "lab:api_latency_miss_ratio:1h",
+          "expr": "clamp_min((sum(rate(lab_http_seconds_count{traffic=\"normal\"}[1h])) - sum(rate(lab_http_seconds_bucket{traffic=\"normal\",le=\"0.5\"}[1h]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\"normal\"}[1h])), 1e-12), 0)"
+        },
+        {
+          "record": "lab:processing_miss_ratio:1h",
+          "expr": "(sum(lab_processing_cohort_total{traffic=\"normal\",window=\"1h\"}) - sum(lab_processing_cohort_met{traffic=\"normal\",window=\"1h\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\"normal\",window=\"1h\"}), 1)"
+        },
+        {
+          "record": "lab:api_availability_burn:1h",
+          "expr": "lab:api_availability_miss_ratio:1h / 0.001"
+        },
+        {
+          "record": "lab:api_latency_burn:1h",
+          "expr": "lab:api_latency_miss_ratio:1h / 0.01"
+        },
+        {
+          "record": "lab:processing_burn:1h",
+          "expr": "lab:processing_miss_ratio:1h / 0.01"
+        },
+        {
+          "record": "lab:api_availability_miss_ratio:2h",
+          "expr": "sum(rate(lab_http_total{traffic=\"normal\",class=\"5xx\"}[2h])) / clamp_min(sum(rate(lab_http_total{traffic=\"normal\"}[2h])), 1e-12)"
+        },
+        {
+          "record": "lab:api_latency_miss_ratio:2h",
+          "expr": "clamp_min((sum(rate(lab_http_seconds_count{traffic=\"normal\"}[2h])) - sum(rate(lab_http_seconds_bucket{traffic=\"normal\",le=\"0.5\"}[2h]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\"normal\"}[2h])), 1e-12), 0)"
+        },
+        {
+          "record": "lab:processing_miss_ratio:2h",
+          "expr": "(sum(lab_processing_cohort_total{traffic=\"normal\",window=\"2h\"}) - sum(lab_processing_cohort_met{traffic=\"normal\",window=\"2h\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\"normal\",window=\"2h\"}), 1)"
+        },
+        {
+          "record": "lab:api_availability_burn:2h",
+          "expr": "lab:api_availability_miss_ratio:2h / 0.001"
+        },
+        {
+          "record": "lab:api_latency_burn:2h",
+          "expr": "lab:api_latency_miss_ratio:2h / 0.01"
+        },
+        {
+          "record": "lab:processing_burn:2h",
+          "expr": "lab:processing_miss_ratio:2h / 0.01"
+        },
+        {
+          "record": "lab:api_availability_miss_ratio:6h",
+          "expr": "sum(rate(lab_http_total{traffic=\"normal\",class=\"5xx\"}[6h])) / clamp_min(sum(rate(lab_http_total{traffic=\"normal\"}[6h])), 1e-12)"
+        },
+        {
+          "record": "lab:api_latency_miss_ratio:6h",
+          "expr": "clamp_min((sum(rate(lab_http_seconds_count{traffic=\"normal\"}[6h])) - sum(rate(lab_http_seconds_bucket{traffic=\"normal\",le=\"0.5\"}[6h]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\"normal\"}[6h])), 1e-12), 0)"
+        },
+        {
+          "record": "lab:processing_miss_ratio:6h",
+          "expr": "(sum(lab_processing_cohort_total{traffic=\"normal\",window=\"6h\"}) - sum(lab_processing_cohort_met{traffic=\"normal\",window=\"6h\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\"normal\",window=\"6h\"}), 1)"
+        },
+        {
+          "record": "lab:api_availability_burn:6h",
+          "expr": "lab:api_availability_miss_ratio:6h / 0.001"
+        },
+        {
+          "record": "lab:api_latency_burn:6h",
+          "expr": "lab:api_latency_miss_ratio:6h / 0.01"
+        },
+        {
+          "record": "lab:processing_burn:6h",
+          "expr": "lab:processing_miss_ratio:6h / 0.01"
+        },
+        {
+          "record": "lab:api_availability_miss_ratio:1d",
+          "expr": "sum(rate(lab_http_total{traffic=\"normal\",class=\"5xx\"}[1d])) / clamp_min(sum(rate(lab_http_total{traffic=\"normal\"}[1d])), 1e-12)"
+        },
+        {
+          "record": "lab:api_latency_miss_ratio:1d",
+          "expr": "clamp_min((sum(rate(lab_http_seconds_count{traffic=\"normal\"}[1d])) - sum(rate(lab_http_seconds_bucket{traffic=\"normal\",le=\"0.5\"}[1d]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\"normal\"}[1d])), 1e-12), 0)"
+        },
+        {
+          "record": "lab:processing_miss_ratio:1d",
+          "expr": "(sum(lab_processing_cohort_total{traffic=\"normal\",window=\"1d\"}) - sum(lab_processing_cohort_met{traffic=\"normal\",window=\"1d\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\"normal\",window=\"1d\"}), 1)"
+        },
+        {
+          "record": "lab:api_availability_burn:1d",
+          "expr": "lab:api_availability_miss_ratio:1d / 0.001"
+        },
+        {
+          "record": "lab:api_latency_burn:1d",
+          "expr": "lab:api_latency_miss_ratio:1d / 0.01"
+        },
+        {
+          "record": "lab:processing_burn:1d",
+          "expr": "lab:processing_miss_ratio:1d / 0.01"
+        },
+        {
+          "record": "lab:api_availability_miss_ratio:3d",
+          "expr": "sum(rate(lab_http_total{traffic=\"normal\",class=\"5xx\"}[3d])) / clamp_min(sum(rate(lab_http_total{traffic=\"normal\"}[3d])), 1e-12)"
+        },
+        {
+          "record": "lab:api_latency_miss_ratio:3d",
+          "expr": "clamp_min((sum(rate(lab_http_seconds_count{traffic=\"normal\"}[3d])) - sum(rate(lab_http_seconds_bucket{traffic=\"normal\",le=\"0.5\"}[3d]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\"normal\"}[3d])), 1e-12), 0)"
+        },
+        {
+          "record": "lab:processing_miss_ratio:3d",
+          "expr": "(sum(lab_processing_cohort_total{traffic=\"normal\",window=\"3d\"}) - sum(lab_processing_cohort_met{traffic=\"normal\",window=\"3d\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\"normal\",window=\"3d\"}), 1)"
+        },
+        {
+          "record": "lab:api_availability_burn:3d",
+          "expr": "lab:api_availability_miss_ratio:3d / 0.001"
+        },
+        {
+          "record": "lab:api_latency_burn:3d",
+          "expr": "lab:api_latency_miss_ratio:3d / 0.01"
+        },
+        {
+          "record": "lab:processing_burn:3d",
+          "expr": "lab:processing_miss_ratio:3d / 0.01"
+        },
+        {
+          "record": "lab:api_availability_miss_ratio:30d",
+          "expr": "sum(rate(lab_http_total{traffic=\"normal\",class=\"5xx\"}[30d])) / clamp_min(sum(rate(lab_http_total{traffic=\"normal\"}[30d])), 1e-12)"
+        },
+        {
+          "record": "lab:api_latency_miss_ratio:30d",
+          "expr": "clamp_min((sum(rate(lab_http_seconds_count{traffic=\"normal\"}[30d])) - sum(rate(lab_http_seconds_bucket{traffic=\"normal\",le=\"0.5\"}[30d]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\"normal\"}[30d])), 1e-12), 0)"
+        },
+        {
+          "record": "lab:processing_miss_ratio:30d",
+          "expr": "(sum(lab_processing_cohort_total{traffic=\"normal\",window=\"30d\"}) - sum(lab_processing_cohort_met{traffic=\"normal\",window=\"30d\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\"normal\",window=\"30d\"}), 1)"
+        },
+        {
+          "record": "lab:api_availability_burn:30d",
+          "expr": "lab:api_availability_miss_ratio:30d / 0.001"
+        },
+        {
+          "record": "lab:api_latency_burn:30d",
+          "expr": "lab:api_latency_miss_ratio:30d / 0.01"
+        },
+        {
+          "record": "lab:processing_burn:30d",
+          "expr": "lab:processing_miss_ratio:30d / 0.01"
+        },
+        {
+          "alert": "SLOBurnApiAvailability1h",
+          "expr": "(lab:api_availability_burn:1h > 14.4) and (lab:api_availability_burn:5m > 14.4) and on() (up{job=\"lab-exporter\"} == 1)",
+          "for": "2m",
+          "labels": {
+            "severity": "critical",
+            "routing": "local-console",
+            "sli": "api_availability"
+          },
+          "annotations": {
+            "summary": "SLOBurnApiAvailability1h",
+            "runbook": "docs/runbooks/api-errors.md"
+          }
+        },
+        {
+          "alert": "SLOBurnApiAvailability6h",
+          "expr": "(lab:api_availability_burn:6h > 6) and (lab:api_availability_burn:30m > 6) and on() (up{job=\"lab-exporter\"} == 1)",
+          "for": "2m",
+          "labels": {
+            "severity": "critical",
+            "routing": "local-console",
+            "sli": "api_availability"
+          },
+          "annotations": {
+            "summary": "SLOBurnApiAvailability6h",
+            "runbook": "docs/runbooks/api-errors.md"
+          }
+        },
+        {
+          "alert": "SLOBurnApiAvailability1d",
+          "expr": "(lab:api_availability_burn:1d > 3) and (lab:api_availability_burn:2h > 3) and on() (up{job=\"lab-exporter\"} == 1)",
+          "for": "2m",
+          "labels": {
+            "severity": "warning",
+            "routing": "local-console",
+            "sli": "api_availability"
+          },
+          "annotations": {
+            "summary": "SLOBurnApiAvailability1d",
+            "runbook": "docs/runbooks/api-errors.md"
+          }
+        },
+        {
+          "alert": "SLOBurnApiAvailability3d",
+          "expr": "(lab:api_availability_burn:3d > 1) and (lab:api_availability_burn:6h > 1) and on() (up{job=\"lab-exporter\"} == 1)",
+          "for": "2m",
+          "labels": {
+            "severity": "warning",
+            "routing": "local-console",
+            "sli": "api_availability"
+          },
+          "annotations": {
+            "summary": "SLOBurnApiAvailability3d",
+            "runbook": "docs/runbooks/api-errors.md"
+          }
+        },
+        {
+          "alert": "SLOBurnApiLatency1h",
+          "expr": "(lab:api_latency_burn:1h > 14.4) and (lab:api_latency_burn:5m > 14.4) and on() (up{job=\"lab-exporter\"} == 1)",
+          "for": "2m",
+          "labels": {
+            "severity": "critical",
+            "routing": "local-console",
+            "sli": "api_latency"
+          },
+          "annotations": {
+            "summary": "SLOBurnApiLatency1h",
+            "runbook": "docs/runbooks/api-errors.md"
+          }
+        },
+        {
+          "alert": "SLOBurnApiLatency6h",
+          "expr": "(lab:api_latency_burn:6h > 6) and (lab:api_latency_burn:30m > 6) and on() (up{job=\"lab-exporter\"} == 1)",
+          "for": "2m",
+          "labels": {
+            "severity": "critical",
+            "routing": "local-console",
+            "sli": "api_latency"
+          },
+          "annotations": {
+            "summary": "SLOBurnApiLatency6h",
+            "runbook": "docs/runbooks/api-errors.md"
+          }
+        },
+        {
+          "alert": "SLOBurnApiLatency1d",
+          "expr": "(lab:api_latency_burn:1d > 3) and (lab:api_latency_burn:2h > 3) and on() (up{job=\"lab-exporter\"} == 1)",
+          "for": "2m",
+          "labels": {
+            "severity": "warning",
+            "routing": "local-console",
+            "sli": "api_latency"
+          },
+          "annotations": {
+            "summary": "SLOBurnApiLatency1d",
+            "runbook": "docs/runbooks/api-errors.md"
+          }
+        },
+        {
+          "alert": "SLOBurnApiLatency3d",
+          "expr": "(lab:api_latency_burn:3d > 1) and (lab:api_latency_burn:6h > 1) and on() (up{job=\"lab-exporter\"} == 1)",
+          "for": "2m",
+          "labels": {
+            "severity": "warning",
+            "routing": "local-console",
+            "sli": "api_latency"
+          },
+          "annotations": {
+            "summary": "SLOBurnApiLatency3d",
+            "runbook": "docs/runbooks/api-errors.md"
+          }
+        },
+        {
+          "alert": "SLOBurnProcessing1h",
+          "expr": "(lab:processing_burn:1h > 14.4) and (lab:processing_burn:5m > 14.4) and on() (up{job=\"lab-exporter\"} == 1)",
+          "for": "2m",
+          "labels": {
+            "severity": "critical",
+            "routing": "local-console",
+            "sli": "processing"
+          },
+          "annotations": {
+            "summary": "SLOBurnProcessing1h",
+            "runbook": "docs/runbooks/slow-processing.md"
+          }
+        },
+        {
+          "alert": "SLOBurnProcessing6h",
+          "expr": "(lab:processing_burn:6h > 6) and (lab:processing_burn:30m > 6) and on() (up{job=\"lab-exporter\"} == 1)",
+          "for": "2m",
+          "labels": {
+            "severity": "critical",
+            "routing": "local-console",
+            "sli": "processing"
+          },
+          "annotations": {
+            "summary": "SLOBurnProcessing6h",
+            "runbook": "docs/runbooks/slow-processing.md"
+          }
+        },
+        {
+          "alert": "SLOBurnProcessing1d",
+          "expr": "(lab:processing_burn:1d > 3) and (lab:processing_burn:2h > 3) and on() (up{job=\"lab-exporter\"} == 1)",
+          "for": "2m",
+          "labels": {
+            "severity": "warning",
+            "routing": "local-console",
+            "sli": "processing"
+          },
+          "annotations": {
+            "summary": "SLOBurnProcessing1d",
+            "runbook": "docs/runbooks/slow-processing.md"
+          }
+        },
+        {
+          "alert": "SLOBurnProcessing3d",
+          "expr": "(lab:processing_burn:3d > 1) and (lab:processing_burn:6h > 1) and on() (up{job=\"lab-exporter\"} == 1)",
+          "for": "2m",
+          "labels": {
+            "severity": "warning",
+            "routing": "local-console",
+            "sli": "processing"
+          },
+          "annotations": {
+            "summary": "SLOBurnProcessing3d",
+            "runbook": "docs/runbooks/slow-processing.md"
+          }
+        },
+        {
+          "record": "lab:demo_processing_miss_ratio:5m",
+          "expr": "(sum(lab_processing_cohort_total{traffic=\"fault\",window=\"5m\"}) - sum(lab_processing_cohort_met{traffic=\"fault\",window=\"5m\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\"fault\",window=\"5m\"}),1)"
+        },
+        {
+          "alert": "LabDemoProcessingMiss",
+          "expr": "lab:demo_processing_miss_ratio:5m > 0",
+          "for": "15s",
+          "labels": {
+            "severity": "info",
+            "routing": "local-console",
+            "mode": "accelerated-demonstration"
+          },
+          "annotations": {
+            "summary": "LabDemoProcessingMiss",
+            "runbook": "docs/runbooks/slow-processing.md"
+          }
+        },
+        {
+          "alert": "TelemetryUnavailable",
+          "expr": "(max(up{job=\"lab-exporter\"}) == 0) or absent(max(up{job=\"lab-exporter\"})) or absent(max(lab_telemetry_heartbeat_seconds)) or (max(time() - lab_scheduler_heartbeat_seconds) > 30)",
+          "for": "1m",
+          "labels": {
+            "severity": "warning",
+            "routing": "local-console"
+          },
+          "annotations": {
+            "summary": "TelemetryUnavailable",
+            "runbook": "docs/runbooks/telemetry.md"
+          }
+        }
+      ]
+    }
+  ]
+}

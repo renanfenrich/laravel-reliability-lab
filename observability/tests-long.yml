@@ -1,0 +1,456 @@
+{
+  "rule_files": [
+    "rules-long.yml"
+  ],
+  "evaluation_interval": "1h",
+  "fuzzy_compare": true,
+  "tests": [
+    {
+      "name": "healthy 30d",
+      "interval": "1h",
+      "input_series": [
+        {
+          "series": "up{job=\"lab-exporter\"}",
+          "values": "1+0x721"
+        },
+        {
+          "series": "lab_scheduler_heartbeat_seconds",
+          "values": "0+60x721"
+        },
+        {
+          "series": "lab_telemetry_heartbeat_seconds",
+          "values": "0+60x721"
+        },
+        {
+          "series": "lab_http_total{traffic=\"normal\",route=\"submit\",class=\"2xx\"}",
+          "values": "0+1000x721"
+        },
+        {
+          "series": "lab_http_total{traffic=\"normal\",route=\"submit\",class=\"5xx\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_http_seconds_count{traffic=\"normal\",route=\"submit\",class=\"2xx\"}",
+          "values": "0+1000x721"
+        },
+        {
+          "series": "lab_http_seconds_bucket{traffic=\"normal\",route=\"submit\",class=\"2xx\",le=\"0.5\"}",
+          "values": "0+1000x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"5m\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"5m\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"30m\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"30m\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"1h\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"1h\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"2h\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"2h\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"6h\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"6h\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"1d\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"1d\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"3d\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"3d\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"30d\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"30d\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"fault\",window=\"5m\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"fault\",window=\"5m\"}",
+          "values": "0+0x721"
+        }
+      ],
+      "promql_expr_test": [
+        {
+          "expr": "round(lab:api_availability_miss_ratio:30d, 1e-9)",
+          "eval_time": "30d",
+          "exp_samples": [
+            {
+              "labels": "{}",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "expr": "round(lab:api_latency_miss_ratio:30d, 1e-9)",
+          "eval_time": "30d",
+          "exp_samples": [
+            {
+              "labels": "{}",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "expr": "round(lab:processing_miss_ratio:30d, 1e-9)",
+          "eval_time": "30d",
+          "exp_samples": [
+            {
+              "labels": "{}",
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "alert_rule_test": [
+        {
+          "eval_time": "30d",
+          "alertname": "SLOBurnApiAvailability3d",
+          "exp_alerts": []
+        }
+      ]
+    },
+    {
+      "name": "violations 30d",
+      "interval": "1h",
+      "input_series": [
+        {
+          "series": "up{job=\"lab-exporter\"}",
+          "values": "1+0x721"
+        },
+        {
+          "series": "lab_scheduler_heartbeat_seconds",
+          "values": "0+60x721"
+        },
+        {
+          "series": "lab_telemetry_heartbeat_seconds",
+          "values": "0+60x721"
+        },
+        {
+          "series": "lab_http_total{traffic=\"normal\",route=\"submit\",class=\"2xx\"}",
+          "values": "0+950x721"
+        },
+        {
+          "series": "lab_http_total{traffic=\"normal\",route=\"submit\",class=\"5xx\"}",
+          "values": "0+50x721"
+        },
+        {
+          "series": "lab_http_seconds_count{traffic=\"normal\",route=\"submit\",class=\"2xx\"}",
+          "values": "0+1000x721"
+        },
+        {
+          "series": "lab_http_seconds_bucket{traffic=\"normal\",route=\"submit\",class=\"2xx\",le=\"0.5\"}",
+          "values": "0+800x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"5m\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"5m\"}",
+          "values": "8000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"30m\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"30m\"}",
+          "values": "8000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"1h\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"1h\"}",
+          "values": "8000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"2h\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"2h\"}",
+          "values": "8000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"6h\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"6h\"}",
+          "values": "8000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"1d\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"1d\"}",
+          "values": "8000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"3d\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"3d\"}",
+          "values": "8000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"30d\"}",
+          "values": "10000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"30d\"}",
+          "values": "8000+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"fault\",window=\"5m\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"fault\",window=\"5m\"}",
+          "values": "0+0x721"
+        }
+      ],
+      "promql_expr_test": [
+        {
+          "expr": "round(lab:api_availability_miss_ratio:30d, 1e-9)",
+          "eval_time": "30d",
+          "exp_samples": [
+            {
+              "labels": "{}",
+              "value": 0.05
+            }
+          ]
+        },
+        {
+          "expr": "round(lab:api_latency_miss_ratio:30d, 1e-9)",
+          "eval_time": "30d",
+          "exp_samples": [
+            {
+              "labels": "{}",
+              "value": 0.2
+            }
+          ]
+        },
+        {
+          "expr": "round(lab:processing_miss_ratio:30d, 1e-9)",
+          "eval_time": "30d",
+          "exp_samples": [
+            {
+              "labels": "{}",
+              "value": 0.2
+            }
+          ]
+        }
+      ],
+      "alert_rule_test": [
+        {
+          "eval_time": "30d",
+          "alertname": "SLOBurnApiAvailability3d",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "warning",
+                "routing": "local-console",
+                "sli": "api_availability"
+              },
+              "exp_annotations": {
+                "summary": "SLOBurnApiAvailability3d",
+                "runbook": "docs/runbooks/api-errors.md"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "zero volume 30d",
+      "interval": "1h",
+      "input_series": [
+        {
+          "series": "up{job=\"lab-exporter\"}",
+          "values": "1+0x721"
+        },
+        {
+          "series": "lab_scheduler_heartbeat_seconds",
+          "values": "0+60x721"
+        },
+        {
+          "series": "lab_telemetry_heartbeat_seconds",
+          "values": "0+60x721"
+        },
+        {
+          "series": "lab_http_total{traffic=\"normal\",route=\"submit\",class=\"2xx\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_http_total{traffic=\"normal\",route=\"submit\",class=\"5xx\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_http_seconds_count{traffic=\"normal\",route=\"submit\",class=\"2xx\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_http_seconds_bucket{traffic=\"normal\",route=\"submit\",class=\"2xx\",le=\"0.5\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"5m\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"5m\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"30m\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"30m\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"1h\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"1h\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"2h\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"2h\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"6h\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"6h\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"1d\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"1d\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"3d\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"3d\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"normal\",window=\"30d\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"normal\",window=\"30d\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_total{traffic=\"fault\",window=\"5m\"}",
+          "values": "0+0x721"
+        },
+        {
+          "series": "lab_processing_cohort_met{traffic=\"fault\",window=\"5m\"}",
+          "values": "0+0x721"
+        }
+      ],
+      "promql_expr_test": [
+        {
+          "expr": "round(lab:api_availability_miss_ratio:30d, 1e-9)",
+          "eval_time": "30d",
+          "exp_samples": [
+            {
+              "labels": "{}",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "expr": "round(lab:api_latency_miss_ratio:30d, 1e-9)",
+          "eval_time": "30d",
+          "exp_samples": [
+            {
+              "labels": "{}",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "expr": "round(lab:processing_miss_ratio:30d, 1e-9)",
+          "eval_time": "30d",
+          "exp_samples": [
+            {
+              "labels": "{}",
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "alert_rule_test": [
+        {
+          "eval_time": "30d",
+          "alertname": "SLOBurnApiAvailability3d",
+          "exp_alerts": []
+        }
+      ]
+    }
+  ]
+}

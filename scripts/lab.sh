@@ -65,7 +65,7 @@ PY
   for name in api worker scheduler exporter; do k -n lab rollout status deployment/"$name" --timeout=120s; done
   ;;
  smoke) python3 scripts/smoke.py ;;
- rules) docker run --rm --entrypoint promtool -v "$PWD/observability:/rules:ro" prom/prometheus:v3.15.0 test rules /rules/tests.yml ;;
+ rules) docker run --rm --entrypoint promtool -v "$PWD/observability:/rules:ro" prom/prometheus:v3.15.0 test rules /rules/tests.yml /rules/tests-long.yml ;;
  load-test) python3 scripts/experiments.py load ;;
  verify)
   "$0" test

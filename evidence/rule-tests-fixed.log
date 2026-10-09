@@ -1,0 +1,9 @@
+  SUCCESS
+
+
+
+  FAILED:
+    expr: "lab:api_latency_miss_ratio:30d", time: 30d,
+        exp: {__name__="lab:api_latency_miss_ratio:30d"} 2E-01
+        got: {__name__="lab:api_latency_miss_ratio:30d"} 2.0000000000000007E-01
+make: *** [Makefile:4: rules] Error 1

@@ -1,0 +1,33 @@
+{
+  "start": "2026-10-09T20:01:59Z",
+  "end": "2026-10-09T20:02:00Z",
+  "commit": "1be815e6c7372fd1a24371ab50d8abc9806d6515",
+  "targets": [
+    {
+      "job": "kube-state-metrics",
+      "health": "up"
+    },
+    {
+      "job": "kubelet-cadvisor",
+      "health": "up"
+    },
+    {
+      "job": "lab-exporter",
+      "health": "up"
+    },
+    {
+      "job": "prometheus",
+      "health": "up"
+    }
+  ],
+  "metric_series": {
+    "lab_accepted_total": 3,
+    "lab_completed_total": 3,
+    "lab_processing_cohort_total": 24,
+    "container_memory_working_set_bytes{namespace=\"lab\"}": 63,
+    "kube_pod_container_status_restarts_total{namespace=\"lab\"}": 18
+  },
+  "searchable_correlated_worker_logs": true,
+  "dashboard_panels": 15,
+  "result": "PASS"
+}

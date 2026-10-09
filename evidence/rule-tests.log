@@ -1,0 +1,40 @@
+Unable to find image 'prom/prometheus:v3.15.0' locally
+v3.15.0: Pulling from prom/prometheus
+f9de78a4ea69: Pulling fs layer
+71af9fb8ff89: Pulling fs layer
+e1db8b9e6f1c: Pulling fs layer
+487858d29734: Pulling fs layer
+6bddf0169a34: Pulling fs layer
+3859a559c288: Pulling fs layer
+1e155d6744e4: Pulling fs layer
+fde357b1187c: Pulling fs layer
+4ce6fa7d0795: Pulling fs layer
+f9de78a4ea69: Download complete
+71af9fb8ff89: Download complete
+e1db8b9e6f1c: Download complete
+6bddf0169a34: Download complete
+487858d29734: Download complete
+fde357b1187c: Download complete
+6bddf0169a34: Pull complete
+487858d29734: Pull complete
+4ce6fa7d0795: Download complete
+1e155d6744e4: Download complete
+3859a559c288: Download complete
+3859a559c288: Pull complete
+71af9fb8ff89: Pull complete
+e1db8b9e6f1c: Pull complete
+fde357b1187c: Pull complete
+4ce6fa7d0795: Pull complete
+1e155d6744e4: Pull complete
+f9de78a4ea69: Pull complete
+Digest: sha256:efd719c99d83b060d9daefdcf00360461adf279f45ef5391f8d111892118753e
+Status: Downloaded newer image for prom/prometheus:v3.15.0
+
+
+
+  FAILED:
+    rule: lab:api_availability_miss_ratio:30d, time: 166h37m0s, err: query processing would load too many samples into memory in query execution
+    expr: "lab:api_availability_burn:1h", time: 1h30m,
+        exp: {__name__="lab:api_availability_burn:1h"} 5E+01
+        got: {__name__="lab:api_availability_burn:1h"} 4.999999999999999E+01
+make: *** [Makefile:4: rules] Error 1
