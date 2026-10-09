@@ -1,0 +1,2808 @@
+{
+  "start": "2026-10-09T20:04:31Z",
+  "commit": "7e7d9d19753a5871f6a3edd984e7813eb36e31de",
+  "host": "               total        used        free      shared  buff/cache   available\nMem:     33374842880  9553039360  4694999040  1041285120 20636356608 23821803520\nSwap:     8589930496           0  8589930496\nFilesystem        1B-blocks         Used   Available Use% Mounted on\n/dev/nvme0n1p2 501809635328 383793451008 92450381824  81% /\nArchitecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           39 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  16\nOn-line CPU(s) list:                     0-15\nVendor ID:                               GenuineIntel\nModel name:                              13th Gen Intel(R) Core(TM) i7-13620H\nCPU family:                              6\nModel:                                   186\nThread(s) per core:                      2\nCore(s) per socket:                      10\nSocket(s):                               1\nStepping:                                2\nMicrocode version:                       0x6134\nCPU(s) scaling MHz:                      62%\nCPU max MHz:                             4900.0000\nCPU min MHz:                             400.0000\nBogoMIPS:                                5836.80\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities\nVirtualization:                          VT-x\nL1d cache:                               416 KiB (10 instances)\nL1i cache:                               448 KiB (10 instances)\nL2 cache:                                9.5 MiB (7 instances)\nL3 cache:                                24 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-15\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Mitigation; Clear Register File\nVulnerability Retbleed:                  Not affected\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Mitigation; IBPB before exit to userspace\n",
+  "workload_configuration": {
+    "persistentvolume-laravel-reliability-postgres": {
+      "apiVersion": "v1",
+      "kind": "PersistentVolume",
+      "metadata": {
+        "name": "laravel-reliability-postgres"
+      },
+      "spec": {
+        "capacity": {
+          "storage": "5Gi"
+        },
+        "accessModes": [
+          "ReadWriteOnce"
+        ],
+        "persistentVolumeReclaimPolicy": "Retain",
+        "storageClassName": "lab-static",
+        "hostPath": {
+          "path": "/lab-postgres",
+          "type": "DirectoryOrCreate"
+        },
+        "claimRef": {
+          "namespace": "lab",
+          "name": "postgres-data"
+        }
+      }
+    },
+    "persistentvolumeclaim-postgres-data": {
+      "apiVersion": "v1",
+      "kind": "PersistentVolumeClaim",
+      "metadata": {
+        "name": "postgres-data",
+        "namespace": "lab"
+      },
+      "spec": {
+        "accessModes": [
+          "ReadWriteOnce"
+        ],
+        "storageClassName": "lab-static",
+        "volumeName": "laravel-reliability-postgres",
+        "resources": {
+          "requests": {
+            "storage": "5Gi"
+          }
+        }
+      }
+    },
+    "deployment-postgres": {
+      "apiVersion": "apps/v1",
+      "kind": "Deployment",
+      "metadata": {
+        "name": "postgres",
+        "namespace": "lab"
+      },
+      "spec": {
+        "replicas": 1,
+        "strategy": {
+          "type": "Recreate"
+        },
+        "selector": {
+          "matchLabels": {
+            "app": "postgres"
+          }
+        },
+        "template": {
+          "metadata": {
+            "labels": {
+              "app": "postgres"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "postgres",
+                "image": "postgres:18.0-bookworm",
+                "imagePullPolicy": "IfNotPresent",
+                "ports": [
+                  {
+                    "containerPort": 5432,
+                    "name": "http"
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "100m",
+                    "memory": "128Mi"
+                  },
+                  "limits": {
+                    "cpu": "2",
+                    "memory": "512Mi"
+                  }
+                },
+                "securityContext": {
+                  "allowPrivilegeEscalation": false,
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ],
+                    "add": [
+                      "CHOWN",
+                      "SETUID",
+                      "SETGID",
+                      "DAC_OVERRIDE",
+                      "FOWNER"
+                    ]
+                  },
+                  "readOnlyRootFilesystem": false
+                },
+                "env": [
+                  {
+                    "name": "POSTGRES_DB",
+                    "value": "lab"
+                  },
+                  {
+                    "name": "POSTGRES_USER",
+                    "value": "lab"
+                  },
+                  {
+                    "name": "POSTGRES_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "POSTGRES_PASSWORD"
+                      }
+                    }
+                  }
+                ],
+                "volumeMounts": [
+                  {
+                    "name": "data",
+                    "mountPath": "/var/lib/postgresql"
+                  }
+                ],
+                "startupProbe": {
+                  "exec": {
+                    "command": [
+                      "pg_isready",
+                      "-U",
+                      "lab",
+                      "-d",
+                      "lab"
+                    ]
+                  },
+                  "failureThreshold": 60,
+                  "periodSeconds": 3,
+                  "timeoutSeconds": 2
+                },
+                "readinessProbe": {
+                  "exec": {
+                    "command": [
+                      "pg_isready",
+                      "-U",
+                      "lab",
+                      "-d",
+                      "lab"
+                    ]
+                  },
+                  "periodSeconds": 5,
+                  "timeoutSeconds": 3
+                },
+                "livenessProbe": {
+                  "exec": {
+                    "command": [
+                      "pg_isready",
+                      "-U",
+                      "lab",
+                      "-d",
+                      "lab"
+                    ]
+                  },
+                  "periodSeconds": 10,
+                  "timeoutSeconds": 3,
+                  "failureThreshold": 6
+                }
+              }
+            ],
+            "terminationGracePeriodSeconds": 25,
+            "automountServiceAccountToken": false,
+            "securityContext": {
+              "seccompProfile": {
+                "type": "RuntimeDefault"
+              }
+            },
+            "volumes": [
+              {
+                "name": "data",
+                "persistentVolumeClaim": {
+                  "claimName": "postgres-data"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "service-postgres": {
+      "apiVersion": "v1",
+      "kind": "Service",
+      "metadata": {
+        "name": "postgres",
+        "namespace": "lab"
+      },
+      "spec": {
+        "selector": {
+          "app": "postgres"
+        },
+        "ports": [
+          {
+            "port": 5432,
+            "targetPort": 5432,
+            "name": "tcp"
+          }
+        ]
+      }
+    },
+    "deployment-redis": {
+      "apiVersion": "apps/v1",
+      "kind": "Deployment",
+      "metadata": {
+        "name": "redis",
+        "namespace": "lab"
+      },
+      "spec": {
+        "replicas": 1,
+        "strategy": {
+          "type": "Recreate"
+        },
+        "selector": {
+          "matchLabels": {
+            "app": "redis"
+          }
+        },
+        "template": {
+          "metadata": {
+            "labels": {
+              "app": "redis"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "redis",
+                "image": "redis:8.2.2-bookworm",
+                "imagePullPolicy": "IfNotPresent",
+                "ports": [
+                  {
+                    "containerPort": 6379,
+                    "name": "http"
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "100m",
+                    "memory": "128Mi"
+                  },
+                  "limits": {
+                    "cpu": "1",
+                    "memory": "256Mi"
+                  }
+                },
+                "securityContext": {
+                  "allowPrivilegeEscalation": false,
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ],
+                    "add": [
+                      "CHOWN",
+                      "SETUID",
+                      "SETGID",
+                      "DAC_OVERRIDE",
+                      "FOWNER"
+                    ]
+                  },
+                  "readOnlyRootFilesystem": false
+                },
+                "command": [
+                  "sh",
+                  "-c",
+                  "exec redis-server --appendonly yes --requirepass \"$REDIS_PASSWORD\""
+                ],
+                "env": [
+                  {
+                    "name": "REDIS_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "REDIS_PASSWORD"
+                      }
+                    }
+                  }
+                ],
+                "volumeMounts": [
+                  {
+                    "name": "data",
+                    "mountPath": "/data"
+                  }
+                ],
+                "startupProbe": {
+                  "exec": {
+                    "command": [
+                      "sh",
+                      "-c",
+                      "REDISCLI_AUTH=\"$REDIS_PASSWORD\" redis-cli ping | grep -q PONG"
+                    ]
+                  },
+                  "failureThreshold": 60,
+                  "periodSeconds": 3,
+                  "timeoutSeconds": 2
+                },
+                "readinessProbe": {
+                  "exec": {
+                    "command": [
+                      "sh",
+                      "-c",
+                      "REDISCLI_AUTH=\"$REDIS_PASSWORD\" redis-cli ping | grep -q PONG"
+                    ]
+                  },
+                  "periodSeconds": 5,
+                  "timeoutSeconds": 3
+                },
+                "livenessProbe": {
+                  "exec": {
+                    "command": [
+                      "sh",
+                      "-c",
+                      "REDISCLI_AUTH=\"$REDIS_PASSWORD\" redis-cli ping | grep -q PONG"
+                    ]
+                  },
+                  "periodSeconds": 10,
+                  "timeoutSeconds": 3,
+                  "failureThreshold": 6
+                }
+              }
+            ],
+            "terminationGracePeriodSeconds": 25,
+            "automountServiceAccountToken": false,
+            "securityContext": {
+              "seccompProfile": {
+                "type": "RuntimeDefault"
+              }
+            },
+            "volumes": [
+              {
+                "name": "data",
+                "emptyDir": {}
+              }
+            ]
+          }
+        }
+      }
+    },
+    "service-redis": {
+      "apiVersion": "v1",
+      "kind": "Service",
+      "metadata": {
+        "name": "redis",
+        "namespace": "lab"
+      },
+      "spec": {
+        "selector": {
+          "app": "redis"
+        },
+        "ports": [
+          {
+            "port": 6379,
+            "targetPort": 6379,
+            "name": "tcp"
+          }
+        ]
+      }
+    },
+    "deployment-simulator": {
+      "apiVersion": "apps/v1",
+      "kind": "Deployment",
+      "metadata": {
+        "name": "simulator",
+        "namespace": "lab"
+      },
+      "spec": {
+        "replicas": 1,
+        "strategy": {
+          "type": "RollingUpdate"
+        },
+        "selector": {
+          "matchLabels": {
+            "app": "simulator"
+          }
+        },
+        "template": {
+          "metadata": {
+            "labels": {
+              "app": "simulator"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "simulator",
+                "image": "laravel-reliability-simulator:g1",
+                "imagePullPolicy": "IfNotPresent",
+                "ports": [
+                  {
+                    "containerPort": 8081,
+                    "name": "http"
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "100m",
+                    "memory": "128Mi"
+                  },
+                  "limits": {
+                    "cpu": "1",
+                    "memory": "128Mi"
+                  }
+                },
+                "securityContext": {
+                  "allowPrivilegeEscalation": false,
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  },
+                  "readOnlyRootFilesystem": true,
+                  "runAsUser": 1000,
+                  "runAsNonRoot": true
+                },
+                "startupProbe": {
+                  "httpGet": {
+                    "path": "/live",
+                    "port": 8081
+                  },
+                  "failureThreshold": 60,
+                  "periodSeconds": 3,
+                  "timeoutSeconds": 2
+                },
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/live",
+                    "port": 8081
+                  },
+                  "periodSeconds": 5,
+                  "timeoutSeconds": 3
+                },
+                "livenessProbe": {
+                  "httpGet": {
+                    "path": "/live",
+                    "port": 8081
+                  },
+                  "periodSeconds": 10,
+                  "timeoutSeconds": 3,
+                  "failureThreshold": 6
+                }
+              }
+            ],
+            "terminationGracePeriodSeconds": 25,
+            "automountServiceAccountToken": false,
+            "securityContext": {
+              "seccompProfile": {
+                "type": "RuntimeDefault"
+              },
+              "fsGroup": 1000
+            }
+          }
+        }
+      }
+    },
+    "service-simulator": {
+      "apiVersion": "v1",
+      "kind": "Service",
+      "metadata": {
+        "name": "simulator",
+        "namespace": "lab"
+      },
+      "spec": {
+        "selector": {
+          "app": "simulator"
+        },
+        "ports": [
+          {
+            "port": 8081,
+            "targetPort": 8081,
+            "name": "http"
+          }
+        ]
+      }
+    },
+    "deployment-api": {
+      "apiVersion": "apps/v1",
+      "kind": "Deployment",
+      "metadata": {
+        "name": "api",
+        "namespace": "lab"
+      },
+      "spec": {
+        "replicas": 2,
+        "strategy": {
+          "type": "RollingUpdate"
+        },
+        "selector": {
+          "matchLabels": {
+            "app": "api"
+          }
+        },
+        "template": {
+          "metadata": {
+            "labels": {
+              "app": "api"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "api",
+                "image": "laravel-reliability-app:g1",
+                "imagePullPolicy": "IfNotPresent",
+                "ports": [
+                  {
+                    "containerPort": 8080,
+                    "name": "http"
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "100m",
+                    "memory": "128Mi"
+                  },
+                  "limits": {
+                    "cpu": "1",
+                    "memory": "384Mi"
+                  }
+                },
+                "securityContext": {
+                  "allowPrivilegeEscalation": false,
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  },
+                  "readOnlyRootFilesystem": true,
+                  "runAsUser": 1000,
+                  "runAsNonRoot": true
+                },
+                "command": [
+                  "php",
+                  "-S",
+                  "0.0.0.0:8080",
+                  "-t",
+                  "public",
+                  "public/index.php"
+                ],
+                "env": [
+                  {
+                    "name": "APP_KEY",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "APP_KEY"
+                      }
+                    }
+                  },
+                  {
+                    "name": "DB_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "DB_PASSWORD"
+                      }
+                    }
+                  },
+                  {
+                    "name": "REDIS_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "REDIS_PASSWORD"
+                      }
+                    }
+                  },
+                  {
+                    "name": "LAB_TOKEN",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "LAB_TOKEN"
+                      }
+                    }
+                  },
+                  {
+                    "name": "APP_ENV",
+                    "value": "local"
+                  },
+                  {
+                    "name": "LAB_FAULTS",
+                    "value": "true"
+                  },
+                  {
+                    "name": "DB_HOST",
+                    "value": "postgres"
+                  },
+                  {
+                    "name": "REDIS_HOST",
+                    "value": "redis"
+                  },
+                  {
+                    "name": "SIMULATOR_URL",
+                    "value": "http://simulator:8081"
+                  },
+                  {
+                    "name": "LAB_ROLE",
+                    "value": "api"
+                  },
+                  {
+                    "name": "PHP_CLI_SERVER_WORKERS",
+                    "value": "4"
+                  }
+                ],
+                "volumeMounts": [
+                  {
+                    "name": "storage",
+                    "mountPath": "/app/storage"
+                  },
+                  {
+                    "name": "cache",
+                    "mountPath": "/app/bootstrap/cache"
+                  },
+                  {
+                    "name": "tmp",
+                    "mountPath": "/tmp"
+                  }
+                ],
+                "startupProbe": {
+                  "httpGet": {
+                    "path": "/api/ready",
+                    "port": 8080
+                  },
+                  "failureThreshold": 60,
+                  "periodSeconds": 3,
+                  "timeoutSeconds": 2
+                },
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/api/ready",
+                    "port": 8080
+                  },
+                  "periodSeconds": 5,
+                  "timeoutSeconds": 3
+                },
+                "livenessProbe": {
+                  "httpGet": {
+                    "path": "/api/live",
+                    "port": 8080
+                  },
+                  "periodSeconds": 10,
+                  "failureThreshold": 3
+                }
+              }
+            ],
+            "terminationGracePeriodSeconds": 25,
+            "automountServiceAccountToken": false,
+            "securityContext": {
+              "seccompProfile": {
+                "type": "RuntimeDefault"
+              },
+              "fsGroup": 1000
+            },
+            "volumes": [
+              {
+                "name": "storage",
+                "emptyDir": {}
+              },
+              {
+                "name": "cache",
+                "emptyDir": {}
+              },
+              {
+                "name": "tmp",
+                "emptyDir": {}
+              }
+            ],
+            "initContainers": [
+              {
+                "name": "storage-init",
+                "image": "laravel-reliability-app:g1",
+                "imagePullPolicy": "IfNotPresent",
+                "command": [
+                  "sh",
+                  "-c",
+                  "mkdir -p /app/storage/framework/cache /app/storage/framework/views /app/storage/framework/sessions /app/storage/logs"
+                ],
+                "volumeMounts": [
+                  {
+                    "name": "storage",
+                    "mountPath": "/app/storage"
+                  },
+                  {
+                    "name": "cache",
+                    "mountPath": "/app/bootstrap/cache"
+                  },
+                  {
+                    "name": "tmp",
+                    "mountPath": "/tmp"
+                  }
+                ],
+                "securityContext": {
+                  "runAsUser": 1000,
+                  "runAsNonRoot": true,
+                  "allowPrivilegeEscalation": false,
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "service-api": {
+      "apiVersion": "v1",
+      "kind": "Service",
+      "metadata": {
+        "name": "api",
+        "namespace": "lab"
+      },
+      "spec": {
+        "selector": {
+          "app": "api"
+        },
+        "ports": [
+          {
+            "port": 8080,
+            "targetPort": 8080,
+            "name": "http"
+          }
+        ]
+      }
+    },
+    "deployment-worker": {
+      "apiVersion": "apps/v1",
+      "kind": "Deployment",
+      "metadata": {
+        "name": "worker",
+        "namespace": "lab"
+      },
+      "spec": {
+        "replicas": 2,
+        "strategy": {
+          "type": "RollingUpdate"
+        },
+        "selector": {
+          "matchLabels": {
+            "app": "worker"
+          }
+        },
+        "template": {
+          "metadata": {
+            "labels": {
+              "app": "worker"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "worker",
+                "image": "laravel-reliability-app:g1",
+                "imagePullPolicy": "IfNotPresent",
+                "ports": [
+                  {
+                    "containerPort": 8080,
+                    "name": "http"
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "100m",
+                    "memory": "128Mi"
+                  },
+                  "limits": {
+                    "cpu": "1",
+                    "memory": "384Mi"
+                  }
+                },
+                "securityContext": {
+                  "allowPrivilegeEscalation": false,
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  },
+                  "readOnlyRootFilesystem": true,
+                  "runAsUser": 1000,
+                  "runAsNonRoot": true
+                },
+                "command": [
+                  "php",
+                  "artisan",
+                  "queue:work",
+                  "redis",
+                  "--queue=reports",
+                  "--sleep=1",
+                  "--timeout=10",
+                  "--tries=1"
+                ],
+                "env": [
+                  {
+                    "name": "APP_KEY",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "APP_KEY"
+                      }
+                    }
+                  },
+                  {
+                    "name": "DB_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "DB_PASSWORD"
+                      }
+                    }
+                  },
+                  {
+                    "name": "REDIS_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "REDIS_PASSWORD"
+                      }
+                    }
+                  },
+                  {
+                    "name": "LAB_TOKEN",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "LAB_TOKEN"
+                      }
+                    }
+                  },
+                  {
+                    "name": "APP_ENV",
+                    "value": "local"
+                  },
+                  {
+                    "name": "LAB_FAULTS",
+                    "value": "true"
+                  },
+                  {
+                    "name": "DB_HOST",
+                    "value": "postgres"
+                  },
+                  {
+                    "name": "REDIS_HOST",
+                    "value": "redis"
+                  },
+                  {
+                    "name": "SIMULATOR_URL",
+                    "value": "http://simulator:8081"
+                  },
+                  {
+                    "name": "LAB_ROLE",
+                    "value": "worker"
+                  }
+                ],
+                "volumeMounts": [
+                  {
+                    "name": "storage",
+                    "mountPath": "/app/storage"
+                  },
+                  {
+                    "name": "cache",
+                    "mountPath": "/app/bootstrap/cache"
+                  },
+                  {
+                    "name": "tmp",
+                    "mountPath": "/tmp"
+                  }
+                ],
+                "startupProbe": {
+                  "exec": {
+                    "command": [
+                      "php",
+                      "artisan",
+                      "lab:ready"
+                    ]
+                  },
+                  "failureThreshold": 60,
+                  "periodSeconds": 3,
+                  "timeoutSeconds": 2
+                },
+                "readinessProbe": {
+                  "exec": {
+                    "command": [
+                      "php",
+                      "artisan",
+                      "lab:ready"
+                    ]
+                  },
+                  "periodSeconds": 5,
+                  "timeoutSeconds": 3
+                },
+                "livenessProbe": {
+                  "exec": {
+                    "command": [
+                      "php",
+                      "-r",
+                      "exit(str_contains(file_get_contents('/proc/1/cmdline'), 'artisan') ? 0 : 1);"
+                    ]
+                  },
+                  "periodSeconds": 10,
+                  "failureThreshold": 3
+                }
+              }
+            ],
+            "terminationGracePeriodSeconds": 25,
+            "automountServiceAccountToken": false,
+            "securityContext": {
+              "seccompProfile": {
+                "type": "RuntimeDefault"
+              },
+              "fsGroup": 1000
+            },
+            "volumes": [
+              {
+                "name": "storage",
+                "emptyDir": {}
+              },
+              {
+                "name": "cache",
+                "emptyDir": {}
+              },
+              {
+                "name": "tmp",
+                "emptyDir": {}
+              }
+            ],
+            "initContainers": [
+              {
+                "name": "storage-init",
+                "image": "laravel-reliability-app:g1",
+                "imagePullPolicy": "IfNotPresent",
+                "command": [
+                  "sh",
+                  "-c",
+                  "mkdir -p /app/storage/framework/cache /app/storage/framework/views /app/storage/framework/sessions /app/storage/logs"
+                ],
+                "volumeMounts": [
+                  {
+                    "name": "storage",
+                    "mountPath": "/app/storage"
+                  },
+                  {
+                    "name": "cache",
+                    "mountPath": "/app/bootstrap/cache"
+                  },
+                  {
+                    "name": "tmp",
+                    "mountPath": "/tmp"
+                  }
+                ],
+                "securityContext": {
+                  "runAsUser": 1000,
+                  "runAsNonRoot": true,
+                  "allowPrivilegeEscalation": false,
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "service-worker": {
+      "apiVersion": "v1",
+      "kind": "Service",
+      "metadata": {
+        "name": "worker",
+        "namespace": "lab"
+      },
+      "spec": {
+        "selector": {
+          "app": "worker"
+        },
+        "ports": [
+          {
+            "port": 8080,
+            "targetPort": 8080,
+            "name": "http"
+          }
+        ]
+      }
+    },
+    "deployment-scheduler": {
+      "apiVersion": "apps/v1",
+      "kind": "Deployment",
+      "metadata": {
+        "name": "scheduler",
+        "namespace": "lab"
+      },
+      "spec": {
+        "replicas": 1,
+        "strategy": {
+          "type": "RollingUpdate"
+        },
+        "selector": {
+          "matchLabels": {
+            "app": "scheduler"
+          }
+        },
+        "template": {
+          "metadata": {
+            "labels": {
+              "app": "scheduler"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "scheduler",
+                "image": "laravel-reliability-app:g1",
+                "imagePullPolicy": "IfNotPresent",
+                "ports": [
+                  {
+                    "containerPort": 8080,
+                    "name": "http"
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "100m",
+                    "memory": "128Mi"
+                  },
+                  "limits": {
+                    "cpu": "1",
+                    "memory": "384Mi"
+                  }
+                },
+                "securityContext": {
+                  "allowPrivilegeEscalation": false,
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  },
+                  "readOnlyRootFilesystem": true,
+                  "runAsUser": 1000,
+                  "runAsNonRoot": true
+                },
+                "command": [
+                  "php",
+                  "artisan",
+                  "schedule:work"
+                ],
+                "env": [
+                  {
+                    "name": "APP_KEY",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "APP_KEY"
+                      }
+                    }
+                  },
+                  {
+                    "name": "DB_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "DB_PASSWORD"
+                      }
+                    }
+                  },
+                  {
+                    "name": "REDIS_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "REDIS_PASSWORD"
+                      }
+                    }
+                  },
+                  {
+                    "name": "LAB_TOKEN",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "LAB_TOKEN"
+                      }
+                    }
+                  },
+                  {
+                    "name": "APP_ENV",
+                    "value": "local"
+                  },
+                  {
+                    "name": "LAB_FAULTS",
+                    "value": "true"
+                  },
+                  {
+                    "name": "DB_HOST",
+                    "value": "postgres"
+                  },
+                  {
+                    "name": "REDIS_HOST",
+                    "value": "redis"
+                  },
+                  {
+                    "name": "SIMULATOR_URL",
+                    "value": "http://simulator:8081"
+                  },
+                  {
+                    "name": "LAB_ROLE",
+                    "value": "scheduler"
+                  }
+                ],
+                "volumeMounts": [
+                  {
+                    "name": "storage",
+                    "mountPath": "/app/storage"
+                  },
+                  {
+                    "name": "cache",
+                    "mountPath": "/app/bootstrap/cache"
+                  },
+                  {
+                    "name": "tmp",
+                    "mountPath": "/tmp"
+                  }
+                ],
+                "startupProbe": {
+                  "exec": {
+                    "command": [
+                      "php",
+                      "artisan",
+                      "lab:ready"
+                    ]
+                  },
+                  "failureThreshold": 60,
+                  "periodSeconds": 3,
+                  "timeoutSeconds": 2
+                },
+                "readinessProbe": {
+                  "exec": {
+                    "command": [
+                      "php",
+                      "artisan",
+                      "lab:ready"
+                    ]
+                  },
+                  "periodSeconds": 5,
+                  "timeoutSeconds": 3
+                },
+                "livenessProbe": {
+                  "exec": {
+                    "command": [
+                      "php",
+                      "-r",
+                      "exit(str_contains(file_get_contents('/proc/1/cmdline'), 'artisan') ? 0 : 1);"
+                    ]
+                  },
+                  "periodSeconds": 10,
+                  "failureThreshold": 3
+                }
+              }
+            ],
+            "terminationGracePeriodSeconds": 25,
+            "automountServiceAccountToken": false,
+            "securityContext": {
+              "seccompProfile": {
+                "type": "RuntimeDefault"
+              },
+              "fsGroup": 1000
+            },
+            "volumes": [
+              {
+                "name": "storage",
+                "emptyDir": {}
+              },
+              {
+                "name": "cache",
+                "emptyDir": {}
+              },
+              {
+                "name": "tmp",
+                "emptyDir": {}
+              }
+            ],
+            "initContainers": [
+              {
+                "name": "storage-init",
+                "image": "laravel-reliability-app:g1",
+                "imagePullPolicy": "IfNotPresent",
+                "command": [
+                  "sh",
+                  "-c",
+                  "mkdir -p /app/storage/framework/cache /app/storage/framework/views /app/storage/framework/sessions /app/storage/logs"
+                ],
+                "volumeMounts": [
+                  {
+                    "name": "storage",
+                    "mountPath": "/app/storage"
+                  },
+                  {
+                    "name": "cache",
+                    "mountPath": "/app/bootstrap/cache"
+                  },
+                  {
+                    "name": "tmp",
+                    "mountPath": "/tmp"
+                  }
+                ],
+                "securityContext": {
+                  "runAsUser": 1000,
+                  "runAsNonRoot": true,
+                  "allowPrivilegeEscalation": false,
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "service-scheduler": {
+      "apiVersion": "v1",
+      "kind": "Service",
+      "metadata": {
+        "name": "scheduler",
+        "namespace": "lab"
+      },
+      "spec": {
+        "selector": {
+          "app": "scheduler"
+        },
+        "ports": [
+          {
+            "port": 8080,
+            "targetPort": 8080,
+            "name": "http"
+          }
+        ]
+      }
+    },
+    "deployment-exporter": {
+      "apiVersion": "apps/v1",
+      "kind": "Deployment",
+      "metadata": {
+        "name": "exporter",
+        "namespace": "lab"
+      },
+      "spec": {
+        "replicas": 1,
+        "strategy": {
+          "type": "RollingUpdate"
+        },
+        "selector": {
+          "matchLabels": {
+            "app": "exporter"
+          }
+        },
+        "template": {
+          "metadata": {
+            "labels": {
+              "app": "exporter"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "exporter",
+                "image": "laravel-reliability-app:g1",
+                "imagePullPolicy": "IfNotPresent",
+                "ports": [
+                  {
+                    "containerPort": 8080,
+                    "name": "http"
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "100m",
+                    "memory": "128Mi"
+                  },
+                  "limits": {
+                    "cpu": "1",
+                    "memory": "384Mi"
+                  }
+                },
+                "securityContext": {
+                  "allowPrivilegeEscalation": false,
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  },
+                  "readOnlyRootFilesystem": true,
+                  "runAsUser": 1000,
+                  "runAsNonRoot": true
+                },
+                "command": [
+                  "php",
+                  "-S",
+                  "0.0.0.0:8080",
+                  "-t",
+                  "public",
+                  "public/index.php"
+                ],
+                "env": [
+                  {
+                    "name": "APP_KEY",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "APP_KEY"
+                      }
+                    }
+                  },
+                  {
+                    "name": "DB_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "DB_PASSWORD"
+                      }
+                    }
+                  },
+                  {
+                    "name": "REDIS_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "REDIS_PASSWORD"
+                      }
+                    }
+                  },
+                  {
+                    "name": "LAB_TOKEN",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "LAB_TOKEN"
+                      }
+                    }
+                  },
+                  {
+                    "name": "APP_ENV",
+                    "value": "local"
+                  },
+                  {
+                    "name": "LAB_FAULTS",
+                    "value": "true"
+                  },
+                  {
+                    "name": "DB_HOST",
+                    "value": "postgres"
+                  },
+                  {
+                    "name": "REDIS_HOST",
+                    "value": "redis"
+                  },
+                  {
+                    "name": "SIMULATOR_URL",
+                    "value": "http://simulator:8081"
+                  },
+                  {
+                    "name": "LAB_ROLE",
+                    "value": "exporter"
+                  }
+                ],
+                "volumeMounts": [
+                  {
+                    "name": "storage",
+                    "mountPath": "/app/storage"
+                  },
+                  {
+                    "name": "cache",
+                    "mountPath": "/app/bootstrap/cache"
+                  },
+                  {
+                    "name": "tmp",
+                    "mountPath": "/tmp"
+                  }
+                ],
+                "startupProbe": {
+                  "httpGet": {
+                    "path": "/api/ready",
+                    "port": 8080
+                  },
+                  "failureThreshold": 60,
+                  "periodSeconds": 3,
+                  "timeoutSeconds": 2
+                },
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/api/ready",
+                    "port": 8080
+                  },
+                  "periodSeconds": 5,
+                  "timeoutSeconds": 3
+                },
+                "livenessProbe": {
+                  "httpGet": {
+                    "path": "/api/live",
+                    "port": 8080
+                  },
+                  "periodSeconds": 10,
+                  "failureThreshold": 3
+                }
+              }
+            ],
+            "terminationGracePeriodSeconds": 25,
+            "automountServiceAccountToken": false,
+            "securityContext": {
+              "seccompProfile": {
+                "type": "RuntimeDefault"
+              },
+              "fsGroup": 1000
+            },
+            "volumes": [
+              {
+                "name": "storage",
+                "emptyDir": {}
+              },
+              {
+                "name": "cache",
+                "emptyDir": {}
+              },
+              {
+                "name": "tmp",
+                "emptyDir": {}
+              }
+            ],
+            "initContainers": [
+              {
+                "name": "storage-init",
+                "image": "laravel-reliability-app:g1",
+                "imagePullPolicy": "IfNotPresent",
+                "command": [
+                  "sh",
+                  "-c",
+                  "mkdir -p /app/storage/framework/cache /app/storage/framework/views /app/storage/framework/sessions /app/storage/logs"
+                ],
+                "volumeMounts": [
+                  {
+                    "name": "storage",
+                    "mountPath": "/app/storage"
+                  },
+                  {
+                    "name": "cache",
+                    "mountPath": "/app/bootstrap/cache"
+                  },
+                  {
+                    "name": "tmp",
+                    "mountPath": "/tmp"
+                  }
+                ],
+                "securityContext": {
+                  "runAsUser": 1000,
+                  "runAsNonRoot": true,
+                  "allowPrivilegeEscalation": false,
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "service-exporter": {
+      "apiVersion": "v1",
+      "kind": "Service",
+      "metadata": {
+        "name": "exporter",
+        "namespace": "lab"
+      },
+      "spec": {
+        "selector": {
+          "app": "exporter"
+        },
+        "ports": [
+          {
+            "port": 8080,
+            "targetPort": 8080,
+            "name": "http"
+          }
+        ]
+      }
+    },
+    "configmap-prometheus": {
+      "apiVersion": "v1",
+      "kind": "ConfigMap",
+      "metadata": {
+        "name": "prometheus",
+        "namespace": "lab"
+      },
+      "data": {
+        "prometheus.yml": "{\n  \"global\": {\n    \"scrape_interval\": \"5s\",\n    \"evaluation_interval\": \"15s\"\n  },\n  \"rule_files\": [\n    \"/etc/prometheus/rules.yml\"\n  ],\n  \"scrape_configs\": [\n    {\n      \"job_name\": \"lab-exporter\",\n      \"metrics_path\": \"/api/metrics\",\n      \"static_configs\": [\n        {\n          \"targets\": [\n            \"exporter:8080\"\n          ]\n        }\n      ]\n    },\n    {\n      \"job_name\": \"kube-state-metrics\",\n      \"static_configs\": [\n        {\n          \"targets\": [\n            \"kube-state-metrics:8080\"\n          ]\n        }\n      ]\n    },\n    {\n      \"job_name\": \"prometheus\",\n      \"static_configs\": [\n        {\n          \"targets\": [\n            \"localhost:9090\"\n          ]\n        }\n      ]\n    },\n    {\n      \"job_name\": \"kubelet-cadvisor\",\n      \"scheme\": \"https\",\n      \"metrics_path\": \"/metrics/cadvisor\",\n      \"kubernetes_sd_configs\": [\n        {\n          \"role\": \"node\"\n        }\n      ],\n      \"authorization\": {\n        \"credentials_file\": \"/var/run/secrets/kubernetes.io/serviceaccount/token\"\n      },\n      \"tls_config\": {\n        \"insecure_skip_verify\": true\n      },\n      \"relabel_configs\": [\n        {\n          \"source_labels\": [\n            \"__meta_kubernetes_node_name\"\n          ],\n          \"target_label\": \"node\"\n        }\n      ]\n    }\n  ]\n}\n",
+        "rules.yml": "{\n  \"groups\": [\n    {\n      \"name\": \"lab-slo\",\n      \"interval\": \"15s\",\n      \"rules\": [\n        {\n          \"record\": \"lab:api_availability_miss_ratio:5m\",\n          \"expr\": \"sum(rate(lab_http_total{traffic=\\\"normal\\\",class=\\\"5xx\\\"}[5m])) / clamp_min(sum(rate(lab_http_total{traffic=\\\"normal\\\"}[5m])), 1e-12)\"\n        },\n        {\n          \"record\": \"lab:api_latency_miss_ratio:5m\",\n          \"expr\": \"clamp_min((sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[5m])) - sum(rate(lab_http_seconds_bucket{traffic=\\\"normal\\\",le=\\\"0.5\\\"}[5m]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[5m])), 1e-12), 0)\"\n        },\n        {\n          \"record\": \"lab:processing_miss_ratio:5m\",\n          \"expr\": \"(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"5m\\\"}) - sum(lab_processing_cohort_met{traffic=\\\"normal\\\",window=\\\"5m\\\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"5m\\\"}), 1)\"\n        },\n        {\n          \"record\": \"lab:api_availability_burn:5m\",\n          \"expr\": \"lab:api_availability_miss_ratio:5m / 0.001\"\n        },\n        {\n          \"record\": \"lab:api_latency_burn:5m\",\n          \"expr\": \"lab:api_latency_miss_ratio:5m / 0.01\"\n        },\n        {\n          \"record\": \"lab:processing_burn:5m\",\n          \"expr\": \"lab:processing_miss_ratio:5m / 0.01\"\n        },\n        {\n          \"record\": \"lab:api_availability_miss_ratio:30m\",\n          \"expr\": \"sum(rate(lab_http_total{traffic=\\\"normal\\\",class=\\\"5xx\\\"}[30m])) / clamp_min(sum(rate(lab_http_total{traffic=\\\"normal\\\"}[30m])), 1e-12)\"\n        },\n        {\n          \"record\": \"lab:api_latency_miss_ratio:30m\",\n          \"expr\": \"clamp_min((sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[30m])) - sum(rate(lab_http_seconds_bucket{traffic=\\\"normal\\\",le=\\\"0.5\\\"}[30m]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[30m])), 1e-12), 0)\"\n        },\n        {\n          \"record\": \"lab:processing_miss_ratio:30m\",\n          \"expr\": \"(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"30m\\\"}) - sum(lab_processing_cohort_met{traffic=\\\"normal\\\",window=\\\"30m\\\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"30m\\\"}), 1)\"\n        },\n        {\n          \"record\": \"lab:api_availability_burn:30m\",\n          \"expr\": \"lab:api_availability_miss_ratio:30m / 0.001\"\n        },\n        {\n          \"record\": \"lab:api_latency_burn:30m\",\n          \"expr\": \"lab:api_latency_miss_ratio:30m / 0.01\"\n        },\n        {\n          \"record\": \"lab:processing_burn:30m\",\n          \"expr\": \"lab:processing_miss_ratio:30m / 0.01\"\n        },\n        {\n          \"record\": \"lab:api_availability_miss_ratio:1h\",\n          \"expr\": \"sum(rate(lab_http_total{traffic=\\\"normal\\\",class=\\\"5xx\\\"}[1h])) / clamp_min(sum(rate(lab_http_total{traffic=\\\"normal\\\"}[1h])), 1e-12)\"\n        },\n        {\n          \"record\": \"lab:api_latency_miss_ratio:1h\",\n          \"expr\": \"clamp_min((sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[1h])) - sum(rate(lab_http_seconds_bucket{traffic=\\\"normal\\\",le=\\\"0.5\\\"}[1h]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[1h])), 1e-12), 0)\"\n        },\n        {\n          \"record\": \"lab:processing_miss_ratio:1h\",\n          \"expr\": \"(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"1h\\\"}) - sum(lab_processing_cohort_met{traffic=\\\"normal\\\",window=\\\"1h\\\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"1h\\\"}), 1)\"\n        },\n        {\n          \"record\": \"lab:api_availability_burn:1h\",\n          \"expr\": \"lab:api_availability_miss_ratio:1h / 0.001\"\n        },\n        {\n          \"record\": \"lab:api_latency_burn:1h\",\n          \"expr\": \"lab:api_latency_miss_ratio:1h / 0.01\"\n        },\n        {\n          \"record\": \"lab:processing_burn:1h\",\n          \"expr\": \"lab:processing_miss_ratio:1h / 0.01\"\n        },\n        {\n          \"record\": \"lab:api_availability_miss_ratio:2h\",\n          \"expr\": \"sum(rate(lab_http_total{traffic=\\\"normal\\\",class=\\\"5xx\\\"}[2h])) / clamp_min(sum(rate(lab_http_total{traffic=\\\"normal\\\"}[2h])), 1e-12)\"\n        },\n        {\n          \"record\": \"lab:api_latency_miss_ratio:2h\",\n          \"expr\": \"clamp_min((sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[2h])) - sum(rate(lab_http_seconds_bucket{traffic=\\\"normal\\\",le=\\\"0.5\\\"}[2h]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[2h])), 1e-12), 0)\"\n        },\n        {\n          \"record\": \"lab:processing_miss_ratio:2h\",\n          \"expr\": \"(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"2h\\\"}) - sum(lab_processing_cohort_met{traffic=\\\"normal\\\",window=\\\"2h\\\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"2h\\\"}), 1)\"\n        },\n        {\n          \"record\": \"lab:api_availability_burn:2h\",\n          \"expr\": \"lab:api_availability_miss_ratio:2h / 0.001\"\n        },\n        {\n          \"record\": \"lab:api_latency_burn:2h\",\n          \"expr\": \"lab:api_latency_miss_ratio:2h / 0.01\"\n        },\n        {\n          \"record\": \"lab:processing_burn:2h\",\n          \"expr\": \"lab:processing_miss_ratio:2h / 0.01\"\n        },\n        {\n          \"record\": \"lab:api_availability_miss_ratio:6h\",\n          \"expr\": \"sum(rate(lab_http_total{traffic=\\\"normal\\\",class=\\\"5xx\\\"}[6h])) / clamp_min(sum(rate(lab_http_total{traffic=\\\"normal\\\"}[6h])), 1e-12)\"\n        },\n        {\n          \"record\": \"lab:api_latency_miss_ratio:6h\",\n          \"expr\": \"clamp_min((sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[6h])) - sum(rate(lab_http_seconds_bucket{traffic=\\\"normal\\\",le=\\\"0.5\\\"}[6h]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[6h])), 1e-12), 0)\"\n        },\n        {\n          \"record\": \"lab:processing_miss_ratio:6h\",\n          \"expr\": \"(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"6h\\\"}) - sum(lab_processing_cohort_met{traffic=\\\"normal\\\",window=\\\"6h\\\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"6h\\\"}), 1)\"\n        },\n        {\n          \"record\": \"lab:api_availability_burn:6h\",\n          \"expr\": \"lab:api_availability_miss_ratio:6h / 0.001\"\n        },\n        {\n          \"record\": \"lab:api_latency_burn:6h\",\n          \"expr\": \"lab:api_latency_miss_ratio:6h / 0.01\"\n        },\n        {\n          \"record\": \"lab:processing_burn:6h\",\n          \"expr\": \"lab:processing_miss_ratio:6h / 0.01\"\n        },\n        {\n          \"record\": \"lab:api_availability_miss_ratio:1d\",\n          \"expr\": \"sum(rate(lab_http_total{traffic=\\\"normal\\\",class=\\\"5xx\\\"}[1d])) / clamp_min(sum(rate(lab_http_total{traffic=\\\"normal\\\"}[1d])), 1e-12)\"\n        },\n        {\n          \"record\": \"lab:api_latency_miss_ratio:1d\",\n          \"expr\": \"clamp_min((sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[1d])) - sum(rate(lab_http_seconds_bucket{traffic=\\\"normal\\\",le=\\\"0.5\\\"}[1d]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[1d])), 1e-12), 0)\"\n        },\n        {\n          \"record\": \"lab:processing_miss_ratio:1d\",\n          \"expr\": \"(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"1d\\\"}) - sum(lab_processing_cohort_met{traffic=\\\"normal\\\",window=\\\"1d\\\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"1d\\\"}), 1)\"\n        },\n        {\n          \"record\": \"lab:api_availability_burn:1d\",\n          \"expr\": \"lab:api_availability_miss_ratio:1d / 0.001\"\n        },\n        {\n          \"record\": \"lab:api_latency_burn:1d\",\n          \"expr\": \"lab:api_latency_miss_ratio:1d / 0.01\"\n        },\n        {\n          \"record\": \"lab:processing_burn:1d\",\n          \"expr\": \"lab:processing_miss_ratio:1d / 0.01\"\n        },\n        {\n          \"record\": \"lab:api_availability_miss_ratio:3d\",\n          \"expr\": \"sum(rate(lab_http_total{traffic=\\\"normal\\\",class=\\\"5xx\\\"}[3d])) / clamp_min(sum(rate(lab_http_total{traffic=\\\"normal\\\"}[3d])), 1e-12)\"\n        },\n        {\n          \"record\": \"lab:api_latency_miss_ratio:3d\",\n          \"expr\": \"clamp_min((sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[3d])) - sum(rate(lab_http_seconds_bucket{traffic=\\\"normal\\\",le=\\\"0.5\\\"}[3d]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[3d])), 1e-12), 0)\"\n        },\n        {\n          \"record\": \"lab:processing_miss_ratio:3d\",\n          \"expr\": \"(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"3d\\\"}) - sum(lab_processing_cohort_met{traffic=\\\"normal\\\",window=\\\"3d\\\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"3d\\\"}), 1)\"\n        },\n        {\n          \"record\": \"lab:api_availability_burn:3d\",\n          \"expr\": \"lab:api_availability_miss_ratio:3d / 0.001\"\n        },\n        {\n          \"record\": \"lab:api_latency_burn:3d\",\n          \"expr\": \"lab:api_latency_miss_ratio:3d / 0.01\"\n        },\n        {\n          \"record\": \"lab:processing_burn:3d\",\n          \"expr\": \"lab:processing_miss_ratio:3d / 0.01\"\n        },\n        {\n          \"record\": \"lab:api_availability_miss_ratio:30d\",\n          \"expr\": \"sum(rate(lab_http_total{traffic=\\\"normal\\\",class=\\\"5xx\\\"}[30d])) / clamp_min(sum(rate(lab_http_total{traffic=\\\"normal\\\"}[30d])), 1e-12)\"\n        },\n        {\n          \"record\": \"lab:api_latency_miss_ratio:30d\",\n          \"expr\": \"clamp_min((sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[30d])) - sum(rate(lab_http_seconds_bucket{traffic=\\\"normal\\\",le=\\\"0.5\\\"}[30d]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[30d])), 1e-12), 0)\"\n        },\n        {\n          \"record\": \"lab:processing_miss_ratio:30d\",\n          \"expr\": \"(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"30d\\\"}) - sum(lab_processing_cohort_met{traffic=\\\"normal\\\",window=\\\"30d\\\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"30d\\\"}), 1)\"\n        },\n        {\n          \"record\": \"lab:api_availability_burn:30d\",\n          \"expr\": \"lab:api_availability_miss_ratio:30d / 0.001\"\n        },\n        {\n          \"record\": \"lab:api_latency_burn:30d\",\n          \"expr\": \"lab:api_latency_miss_ratio:30d / 0.01\"\n        },\n        {\n          \"record\": \"lab:processing_burn:30d\",\n          \"expr\": \"lab:processing_miss_ratio:30d / 0.01\"\n        },\n        {\n          \"alert\": \"SLOBurnApiAvailability1h\",\n          \"expr\": \"(lab:api_availability_burn:1h > 14.4) and (lab:api_availability_burn:5m > 14.4) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"critical\",\n            \"routing\": \"local-console\",\n            \"sli\": \"api_availability\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnApiAvailability1h\",\n            \"runbook\": \"docs/runbooks/api-errors.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnApiAvailability6h\",\n          \"expr\": \"(lab:api_availability_burn:6h > 6) and (lab:api_availability_burn:30m > 6) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"critical\",\n            \"routing\": \"local-console\",\n            \"sli\": \"api_availability\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnApiAvailability6h\",\n            \"runbook\": \"docs/runbooks/api-errors.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnApiAvailability1d\",\n          \"expr\": \"(lab:api_availability_burn:1d > 3) and (lab:api_availability_burn:2h > 3) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"warning\",\n            \"routing\": \"local-console\",\n            \"sli\": \"api_availability\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnApiAvailability1d\",\n            \"runbook\": \"docs/runbooks/api-errors.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnApiAvailability3d\",\n          \"expr\": \"(lab:api_availability_burn:3d > 1) and (lab:api_availability_burn:6h > 1) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"warning\",\n            \"routing\": \"local-console\",\n            \"sli\": \"api_availability\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnApiAvailability3d\",\n            \"runbook\": \"docs/runbooks/api-errors.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnApiLatency1h\",\n          \"expr\": \"(lab:api_latency_burn:1h > 14.4) and (lab:api_latency_burn:5m > 14.4) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"critical\",\n            \"routing\": \"local-console\",\n            \"sli\": \"api_latency\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnApiLatency1h\",\n            \"runbook\": \"docs/runbooks/api-errors.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnApiLatency6h\",\n          \"expr\": \"(lab:api_latency_burn:6h > 6) and (lab:api_latency_burn:30m > 6) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"critical\",\n            \"routing\": \"local-console\",\n            \"sli\": \"api_latency\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnApiLatency6h\",\n            \"runbook\": \"docs/runbooks/api-errors.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnApiLatency1d\",\n          \"expr\": \"(lab:api_latency_burn:1d > 3) and (lab:api_latency_burn:2h > 3) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"warning\",\n            \"routing\": \"local-console\",\n            \"sli\": \"api_latency\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnApiLatency1d\",\n            \"runbook\": \"docs/runbooks/api-errors.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnApiLatency3d\",\n          \"expr\": \"(lab:api_latency_burn:3d > 1) and (lab:api_latency_burn:6h > 1) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"warning\",\n            \"routing\": \"local-console\",\n            \"sli\": \"api_latency\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnApiLatency3d\",\n            \"runbook\": \"docs/runbooks/api-errors.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnProcessing1h\",\n          \"expr\": \"(lab:processing_burn:1h > 14.4) and (lab:processing_burn:5m > 14.4) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"critical\",\n            \"routing\": \"local-console\",\n            \"sli\": \"processing\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnProcessing1h\",\n            \"runbook\": \"docs/runbooks/slow-processing.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnProcessing6h\",\n          \"expr\": \"(lab:processing_burn:6h > 6) and (lab:processing_burn:30m > 6) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"critical\",\n            \"routing\": \"local-console\",\n            \"sli\": \"processing\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnProcessing6h\",\n            \"runbook\": \"docs/runbooks/slow-processing.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnProcessing1d\",\n          \"expr\": \"(lab:processing_burn:1d > 3) and (lab:processing_burn:2h > 3) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"warning\",\n            \"routing\": \"local-console\",\n            \"sli\": \"processing\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnProcessing1d\",\n            \"runbook\": \"docs/runbooks/slow-processing.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnProcessing3d\",\n          \"expr\": \"(lab:processing_burn:3d > 1) and (lab:processing_burn:6h > 1) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"warning\",\n            \"routing\": \"local-console\",\n            \"sli\": \"processing\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnProcessing3d\",\n            \"runbook\": \"docs/runbooks/slow-processing.md\"\n          }\n        },\n        {\n          \"record\": \"lab:demo_processing_miss_ratio:5m\",\n          \"expr\": \"(sum(lab_processing_cohort_total{traffic=\\\"fault\\\",window=\\\"5m\\\"}) - sum(lab_processing_cohort_met{traffic=\\\"fault\\\",window=\\\"5m\\\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\\\"fault\\\",window=\\\"5m\\\"}),1)\"\n        },\n        {\n          \"alert\": \"LabDemoProcessingMiss\",\n          \"expr\": \"lab:demo_processing_miss_ratio:5m > 0\",\n          \"for\": \"15s\",\n          \"labels\": {\n            \"severity\": \"info\",\n            \"routing\": \"local-console\",\n            \"mode\": \"accelerated-demonstration\"\n          },\n          \"annotations\": {\n            \"summary\": \"LabDemoProcessingMiss\",\n            \"runbook\": \"docs/runbooks/slow-processing.md\"\n          }\n        },\n        {\n          \"alert\": \"TelemetryUnavailable\",\n          \"expr\": \"(max(up{job=\\\"lab-exporter\\\"}) == 0) or absent(max(up{job=\\\"lab-exporter\\\"})) or absent(max(lab_telemetry_heartbeat_seconds)) or (max(time() - lab_scheduler_heartbeat_seconds) > 30)\",\n          \"for\": \"1m\",\n          \"labels\": {\n            \"severity\": \"warning\",\n            \"routing\": \"local-console\"\n          },\n          \"annotations\": {\n            \"summary\": \"TelemetryUnavailable\",\n            \"runbook\": \"docs/runbooks/telemetry.md\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
+      }
+    },
+    "deployment-prometheus": {
+      "apiVersion": "apps/v1",
+      "kind": "Deployment",
+      "metadata": {
+        "name": "prometheus",
+        "namespace": "lab"
+      },
+      "spec": {
+        "replicas": 1,
+        "strategy": {
+          "type": "RollingUpdate"
+        },
+        "selector": {
+          "matchLabels": {
+            "app": "prometheus"
+          }
+        },
+        "template": {
+          "metadata": {
+            "labels": {
+              "app": "prometheus"
+            },
+            "annotations": {
+              "lab-config-checksum": "a31f478f25facc0f5672ff2cd435eda896aab352025a50b4772b54797fabaca2"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "prometheus",
+                "image": "prom/prometheus:v3.15.0",
+                "imagePullPolicy": "IfNotPresent",
+                "ports": [
+                  {
+                    "containerPort": 9090,
+                    "name": "http"
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "100m",
+                    "memory": "128Mi"
+                  },
+                  "limits": {
+                    "cpu": "2",
+                    "memory": "768Mi"
+                  }
+                },
+                "securityContext": {
+                  "allowPrivilegeEscalation": false,
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  },
+                  "readOnlyRootFilesystem": true,
+                  "runAsUser": 65534,
+                  "runAsNonRoot": true
+                },
+                "args": [
+                  "--config.file=/etc/prometheus/prometheus.yml",
+                  "--storage.tsdb.path=/prometheus",
+                  "--storage.tsdb.retention.time=31d"
+                ],
+                "volumeMounts": [
+                  {
+                    "name": "prometheus",
+                    "mountPath": "/etc/prometheus",
+                    "readOnly": true
+                  },
+                  {
+                    "name": "data",
+                    "mountPath": "/prometheus"
+                  }
+                ],
+                "startupProbe": {
+                  "httpGet": {
+                    "path": "/-/ready",
+                    "port": 9090
+                  },
+                  "failureThreshold": 60,
+                  "periodSeconds": 3,
+                  "timeoutSeconds": 2
+                },
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/-/ready",
+                    "port": 9090
+                  },
+                  "periodSeconds": 5,
+                  "timeoutSeconds": 3
+                },
+                "livenessProbe": {
+                  "httpGet": {
+                    "path": "/-/ready",
+                    "port": 9090
+                  },
+                  "periodSeconds": 10,
+                  "timeoutSeconds": 3,
+                  "failureThreshold": 6
+                }
+              }
+            ],
+            "terminationGracePeriodSeconds": 25,
+            "automountServiceAccountToken": true,
+            "securityContext": {
+              "seccompProfile": {
+                "type": "RuntimeDefault"
+              },
+              "fsGroup": 65534
+            },
+            "volumes": [
+              {
+                "name": "prometheus",
+                "configMap": {
+                  "name": "prometheus"
+                }
+              },
+              {
+                "name": "data",
+                "emptyDir": {}
+              }
+            ],
+            "serviceAccountName": "prometheus"
+          }
+        }
+      }
+    },
+    "service-prometheus": {
+      "apiVersion": "v1",
+      "kind": "Service",
+      "metadata": {
+        "name": "prometheus",
+        "namespace": "lab"
+      },
+      "spec": {
+        "selector": {
+          "app": "prometheus"
+        },
+        "ports": [
+          {
+            "port": 9090,
+            "targetPort": 9090,
+            "name": "http"
+          }
+        ]
+      }
+    },
+    "serviceaccount-prometheus": {
+      "apiVersion": "v1",
+      "kind": "ServiceAccount",
+      "metadata": {
+        "name": "prometheus",
+        "namespace": "lab"
+      }
+    },
+    "clusterrole-prometheus": {
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "kind": "ClusterRole",
+      "metadata": {
+        "name": "laravel-reliability-prometheus"
+      },
+      "rules": [
+        {
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "nodes"
+          ],
+          "verbs": [
+            "get",
+            "list",
+            "watch"
+          ]
+        },
+        {
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "nodes/metrics"
+          ],
+          "verbs": [
+            "get"
+          ]
+        }
+      ]
+    },
+    "clusterrolebinding-prometheus": {
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "kind": "ClusterRoleBinding",
+      "metadata": {
+        "name": "laravel-reliability-prometheus"
+      },
+      "roleRef": {
+        "apiGroup": "rbac.authorization.k8s.io",
+        "kind": "ClusterRole",
+        "name": "laravel-reliability-prometheus"
+      },
+      "subjects": [
+        {
+          "kind": "ServiceAccount",
+          "name": "prometheus",
+          "namespace": "lab"
+        }
+      ]
+    },
+    "configmap-loki": {
+      "apiVersion": "v1",
+      "kind": "ConfigMap",
+      "metadata": {
+        "name": "loki",
+        "namespace": "lab"
+      },
+      "data": {
+        "loki.yml": "{\n  \"auth_enabled\": false,\n  \"server\": {\n    \"http_listen_port\": 3100\n  },\n  \"common\": {\n    \"path_prefix\": \"/loki\",\n    \"replication_factor\": 1,\n    \"ring\": {\n      \"kvstore\": {\n        \"store\": \"inmemory\"\n      }\n    },\n    \"storage\": {\n      \"filesystem\": {\n        \"chunks_directory\": \"/loki/chunks\",\n        \"rules_directory\": \"/loki/rules\"\n      }\n    }\n  },\n  \"schema_config\": {\n    \"configs\": [\n      {\n        \"from\": \"2024-01-01\",\n        \"store\": \"tsdb\",\n        \"object_store\": \"filesystem\",\n        \"schema\": \"v13\",\n        \"index\": {\n          \"prefix\": \"index_\",\n          \"period\": \"24h\"\n        }\n      }\n    ]\n  },\n  \"limits_config\": {\n    \"retention_period\": \"744h\",\n    \"allow_structured_metadata\": true\n  },\n  \"compactor\": {\n    \"working_directory\": \"/loki/compactor\",\n    \"retention_enabled\": true,\n    \"delete_request_store\": \"filesystem\"\n  },\n  \"analytics\": {\n    \"reporting_enabled\": false\n  }\n}\n"
+      }
+    },
+    "deployment-loki": {
+      "apiVersion": "apps/v1",
+      "kind": "Deployment",
+      "metadata": {
+        "name": "loki",
+        "namespace": "lab"
+      },
+      "spec": {
+        "replicas": 1,
+        "strategy": {
+          "type": "RollingUpdate"
+        },
+        "selector": {
+          "matchLabels": {
+            "app": "loki"
+          }
+        },
+        "template": {
+          "metadata": {
+            "labels": {
+              "app": "loki"
+            },
+            "annotations": {
+              "lab-config-checksum": "346bf60bb55c7a2d8f93a8e9ff94a9c93ff30297fca6b40098bea9c57321939d"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "loki",
+                "image": "grafana/loki:3.7.8",
+                "imagePullPolicy": "IfNotPresent",
+                "ports": [
+                  {
+                    "containerPort": 3100,
+                    "name": "http"
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "100m",
+                    "memory": "128Mi"
+                  },
+                  "limits": {
+                    "cpu": "1",
+                    "memory": "512Mi"
+                  }
+                },
+                "securityContext": {
+                  "allowPrivilegeEscalation": false,
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  },
+                  "readOnlyRootFilesystem": true,
+                  "runAsUser": 10001,
+                  "runAsNonRoot": true
+                },
+                "args": [
+                  "-config.file=/etc/loki/loki.yml"
+                ],
+                "volumeMounts": [
+                  {
+                    "name": "loki",
+                    "mountPath": "/etc/loki",
+                    "readOnly": true
+                  },
+                  {
+                    "name": "data",
+                    "mountPath": "/loki"
+                  },
+                  {
+                    "name": "tmp",
+                    "mountPath": "/tmp"
+                  }
+                ],
+                "startupProbe": {
+                  "httpGet": {
+                    "path": "/ready",
+                    "port": 3100
+                  },
+                  "failureThreshold": 60,
+                  "periodSeconds": 3,
+                  "timeoutSeconds": 2
+                },
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/ready",
+                    "port": 3100
+                  },
+                  "periodSeconds": 5,
+                  "timeoutSeconds": 3
+                },
+                "livenessProbe": {
+                  "httpGet": {
+                    "path": "/ready",
+                    "port": 3100
+                  },
+                  "periodSeconds": 10,
+                  "timeoutSeconds": 3,
+                  "failureThreshold": 6
+                }
+              }
+            ],
+            "terminationGracePeriodSeconds": 25,
+            "automountServiceAccountToken": false,
+            "securityContext": {
+              "seccompProfile": {
+                "type": "RuntimeDefault"
+              },
+              "fsGroup": 10001
+            },
+            "volumes": [
+              {
+                "name": "loki",
+                "configMap": {
+                  "name": "loki"
+                }
+              },
+              {
+                "name": "data",
+                "emptyDir": {}
+              },
+              {
+                "name": "tmp",
+                "emptyDir": {}
+              }
+            ]
+          }
+        }
+      }
+    },
+    "service-loki": {
+      "apiVersion": "v1",
+      "kind": "Service",
+      "metadata": {
+        "name": "loki",
+        "namespace": "lab"
+      },
+      "spec": {
+        "selector": {
+          "app": "loki"
+        },
+        "ports": [
+          {
+            "port": 3100,
+            "targetPort": 3100,
+            "name": "http"
+          }
+        ]
+      }
+    },
+    "configmap-alloy": {
+      "apiVersion": "v1",
+      "kind": "ConfigMap",
+      "metadata": {
+        "name": "alloy",
+        "namespace": "lab"
+      },
+      "data": {
+        "config.alloy": "discovery.kubernetes \"lab\" {\n  role = \"pod\"\n  namespaces {\n    names = [\"lab\"]\n  }\n}\ndiscovery.relabel \"logs\" {\n  targets = discovery.kubernetes.lab.targets\n  rule {\n    source_labels = [\"__meta_kubernetes_namespace\"]\n    target_label = \"namespace\"\n  }\n  rule {\n    source_labels = [\"__meta_kubernetes_pod_label_app\"]\n    target_label = \"app\"\n  }\n  rule {\n    source_labels = [\"__meta_kubernetes_pod_container_name\"]\n    target_label = \"container\"\n  }\n}\nloki.source.kubernetes \"lab\" {\n  targets = discovery.relabel.logs.output\n  forward_to = [loki.write.local.receiver]\n}\nloki.write \"local\" {\n  endpoint {\n    url = \"http://loki:3100/loki/api/v1/push\"\n  }\n}\n"
+      }
+    },
+    "deployment-alloy": {
+      "apiVersion": "apps/v1",
+      "kind": "Deployment",
+      "metadata": {
+        "name": "alloy",
+        "namespace": "lab"
+      },
+      "spec": {
+        "replicas": 1,
+        "strategy": {
+          "type": "RollingUpdate"
+        },
+        "selector": {
+          "matchLabels": {
+            "app": "alloy"
+          }
+        },
+        "template": {
+          "metadata": {
+            "labels": {
+              "app": "alloy"
+            },
+            "annotations": {
+              "lab-config-checksum": "939c171073c5989473e168ca34badba3dd70388fb3ce557b764662900f0b62bb"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "alloy",
+                "image": "grafana/alloy:v1.20.1",
+                "imagePullPolicy": "IfNotPresent",
+                "ports": [
+                  {
+                    "containerPort": 12345,
+                    "name": "http"
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "100m",
+                    "memory": "128Mi"
+                  },
+                  "limits": {
+                    "cpu": "1",
+                    "memory": "256Mi"
+                  }
+                },
+                "securityContext": {
+                  "allowPrivilegeEscalation": false,
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  },
+                  "readOnlyRootFilesystem": true,
+                  "runAsUser": 1000,
+                  "runAsNonRoot": true
+                },
+                "args": [
+                  "run",
+                  "/etc/alloy/config.alloy",
+                  "--server.http.listen-addr=0.0.0.0:12345",
+                  "--storage.path=/alloy"
+                ],
+                "volumeMounts": [
+                  {
+                    "name": "alloy",
+                    "mountPath": "/etc/alloy",
+                    "readOnly": true
+                  },
+                  {
+                    "name": "data",
+                    "mountPath": "/alloy"
+                  }
+                ],
+                "startupProbe": {
+                  "httpGet": {
+                    "path": "/-/ready",
+                    "port": 12345
+                  },
+                  "failureThreshold": 60,
+                  "periodSeconds": 3,
+                  "timeoutSeconds": 2
+                },
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/-/ready",
+                    "port": 12345
+                  },
+                  "periodSeconds": 5,
+                  "timeoutSeconds": 3
+                },
+                "livenessProbe": {
+                  "httpGet": {
+                    "path": "/-/ready",
+                    "port": 12345
+                  },
+                  "periodSeconds": 10,
+                  "timeoutSeconds": 3,
+                  "failureThreshold": 6
+                }
+              }
+            ],
+            "terminationGracePeriodSeconds": 25,
+            "automountServiceAccountToken": true,
+            "securityContext": {
+              "seccompProfile": {
+                "type": "RuntimeDefault"
+              },
+              "fsGroup": 1000
+            },
+            "volumes": [
+              {
+                "name": "alloy",
+                "configMap": {
+                  "name": "alloy"
+                }
+              },
+              {
+                "name": "data",
+                "emptyDir": {}
+              }
+            ],
+            "serviceAccountName": "alloy"
+          }
+        }
+      }
+    },
+    "service-alloy": {
+      "apiVersion": "v1",
+      "kind": "Service",
+      "metadata": {
+        "name": "alloy",
+        "namespace": "lab"
+      },
+      "spec": {
+        "selector": {
+          "app": "alloy"
+        },
+        "ports": [
+          {
+            "port": 12345,
+            "targetPort": 12345,
+            "name": "http"
+          }
+        ]
+      }
+    },
+    "serviceaccount-alloy": {
+      "apiVersion": "v1",
+      "kind": "ServiceAccount",
+      "metadata": {
+        "name": "alloy",
+        "namespace": "lab"
+      }
+    },
+    "role-alloy": {
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "kind": "Role",
+      "metadata": {
+        "name": "alloy",
+        "namespace": "lab"
+      },
+      "rules": [
+        {
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "pods"
+          ],
+          "verbs": [
+            "get",
+            "list",
+            "watch"
+          ]
+        },
+        {
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "pods/log"
+          ],
+          "verbs": [
+            "get"
+          ]
+        }
+      ]
+    },
+    "rolebinding-alloy": {
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "kind": "RoleBinding",
+      "metadata": {
+        "name": "alloy",
+        "namespace": "lab"
+      },
+      "roleRef": {
+        "apiGroup": "rbac.authorization.k8s.io",
+        "kind": "Role",
+        "name": "alloy"
+      },
+      "subjects": [
+        {
+          "kind": "ServiceAccount",
+          "name": "alloy",
+          "namespace": "lab"
+        }
+      ]
+    },
+    "configmap-grafana-datasources": {
+      "apiVersion": "v1",
+      "kind": "ConfigMap",
+      "metadata": {
+        "name": "grafana-datasources",
+        "namespace": "lab"
+      },
+      "data": {
+        "datasources.yml": "{\n  \"apiVersion\": 1,\n  \"datasources\": [\n    {\n      \"name\": \"Prometheus\",\n      \"uid\": \"prometheus\",\n      \"type\": \"prometheus\",\n      \"access\": \"proxy\",\n      \"url\": \"http://prometheus:9090\",\n      \"isDefault\": true\n    },\n    {\n      \"name\": \"Loki\",\n      \"uid\": \"loki\",\n      \"type\": \"loki\",\n      \"access\": \"proxy\",\n      \"url\": \"http://loki:3100\"\n    }\n  ]\n}\n"
+      }
+    },
+    "configmap-grafana-provider": {
+      "apiVersion": "v1",
+      "kind": "ConfigMap",
+      "metadata": {
+        "name": "grafana-provider",
+        "namespace": "lab"
+      },
+      "data": {
+        "dashboards.yml": "{\n  \"apiVersion\": 1,\n  \"providers\": [\n    {\n      \"name\": \"lab\",\n      \"type\": \"file\",\n      \"options\": {\n        \"path\": \"/var/lib/grafana/dashboards\"\n      },\n      \"updateIntervalSeconds\": 10\n    }\n  ]\n}\n"
+      }
+    },
+    "configmap-grafana-dashboard": {
+      "apiVersion": "v1",
+      "kind": "ConfigMap",
+      "metadata": {
+        "name": "grafana-dashboard",
+        "namespace": "lab"
+      },
+      "data": {
+        "lab.json": "{\n  \"uid\": \"reliability-lab\",\n  \"title\": \"Laravel local reliability lab\",\n  \"schemaVersion\": 39,\n  \"version\": 1,\n  \"tags\": [\n    \"local-lab\",\n    \"provisional-slo\"\n  ],\n  \"refresh\": \"5s\",\n  \"time\": {\n    \"from\": \"now-15m\",\n    \"to\": \"now\"\n  },\n  \"panels\": [\n    {\n      \"id\": 1,\n      \"title\": \"API request rate by traffic and status class\",\n      \"type\": \"timeseries\",\n      \"datasource\": {\n        \"uid\": \"prometheus\",\n        \"type\": \"prometheus\"\n      },\n      \"gridPos\": {\n        \"x\": 0,\n        \"y\": 0,\n        \"w\": 12,\n        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\": \"A\",\n          \"expr\": \"sum by(traffic,class)(rate(lab_http_total[1m]))\"\n        }\n      ],\n      \"fieldConfig\": {\n        \"defaults\": {\n          \"unit\": \"reqps\"\n        }\n      },\n      \"options\": {\n        \"legend\": {\n          \"displayMode\": \"list\"\n        }\n      }\n    },\n    {\n      \"id\": 2,\n      \"title\": \"API p99 latency \\u2014 500ms provisional threshold\",\n      \"type\": \"timeseries\",\n      \"datasource\": {\n        \"uid\": \"prometheus\",\n        \"type\": \"prometheus\"\n      },\n      \"gridPos\": {\n        \"x\": 12,\n        \"y\": 0,\n        \"w\": 12,\n        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\": \"A\",\n          \"expr\": \"histogram_quantile(0.99,sum by(le,traffic)(rate(lab_http_seconds_bucket[1m])))\"\n        }\n      ],\n      \"fieldConfig\": {\n        \"defaults\": {\n          \"unit\": \"s\"\n        }\n      },\n      \"options\": {\n        \"legend\": {\n          \"displayMode\": \"list\"\n        }\n      }\n    },\n    {\n      \"id\": 3,\n      \"title\": \"Processing cohorts: misses include unfinished/failed at deadline\",\n      \"type\": \"timeseries\",\n      \"datasource\": {\n        \"uid\": \"prometheus\",\n        \"type\": \"prometheus\"\n      },\n      \"gridPos\": {\n        \"x\": 0,\n        \"y\": 8,\n        \"w\": 12,\n        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\": \"A\",\n          \"expr\": \"lab:processing_miss_ratio:5m\"\n        }\n      ],\n      \"fieldConfig\": {\n        \"defaults\": {\n          \"unit\": \"percentunit\"\n        }\n      },\n      \"options\": {\n        \"legend\": {\n          \"displayMode\": \"list\"\n        }\n      }\n    },\n    {\n      \"id\": 4,\n      \"title\": \"30-day intended SLI window \\u2014 incomplete history until 30d\",\n      \"type\": \"timeseries\",\n      \"datasource\": {\n        \"uid\": \"prometheus\",\n        \"type\": \"prometheus\"\n      },\n      \"gridPos\": {\n        \"x\": 12,\n        \"y\": 8,\n        \"w\": 12,\n        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\": \"A\",\n          \"expr\": \"lab:api_availability_miss_ratio:30d\"\n        }\n      ],\n      \"fieldConfig\": {\n        \"defaults\": {\n          \"unit\": \"percentunit\"\n        }\n      },\n      \"options\": {\n        \"legend\": {\n          \"displayMode\": \"list\"\n        }\n      }\n    },\n    {\n      \"id\": 5,\n      \"title\": \"Reports by state and traffic\",\n      \"type\": \"timeseries\",\n      \"datasource\": {\n        \"uid\": \"prometheus\",\n        \"type\": \"prometheus\"\n      },\n      \"gridPos\": {\n        \"x\": 0,\n        \"y\": 16,\n        \"w\": 12,\n        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\": \"A\",\n          \"expr\": \"lab_reports\"\n        }\n      ],\n      \"fieldConfig\": {\n        \"defaults\": {\n          \"unit\": \"short\"\n        }\n      },\n      \"options\": {\n        \"legend\": {\n          \"displayMode\": \"list\"\n        }\n      }\n    },\n    {\n      \"id\": 6,\n      \"title\": \"Overdue unfinished reports\",\n      \"type\": \"timeseries\",\n      \"datasource\": {\n        \"uid\": \"prometheus\",\n        \"type\": \"prometheus\"\n      },\n      \"gridPos\": {\n        \"x\": 12,\n        \"y\": 16,\n        \"w\": 12,\n        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\": \"A\",\n          \"expr\": \"lab_overdue_reports\"\n        }\n      ],\n      \"fieldConfig\": {\n        \"defaults\": {\n          \"unit\": \"short\"\n        }\n      },\n      \"options\": {\n        \"legend\": {\n          \"displayMode\": \"list\"\n        }\n      }\n    },\n    {\n      \"id\": 7,\n      \"title\": \"Completion p99 (completed only; diagnostic, NOT processing SLI)\",\n      \"type\": \"timeseries\",\n      \"datasource\": {\n        \"uid\": \"prometheus\",\n        \"type\": \"prometheus\"\n      },\n      \"gridPos\": {\n        \"x\": 0,\n        \"y\": 24,\n        \"w\": 12,\n        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\": \"A\",\n          \"expr\": \"histogram_quantile(0.99,sum by(le,traffic)(rate(lab_processing_seconds_bucket[1m])))\"\n        }\n      ],\n      \"fieldConfig\": {\n        \"defaults\": {\n          \"unit\": \"s\"\n        }\n      },\n      \"options\": {\n        \"legend\": {\n          \"displayMode\": \"list\"\n        }\n      }\n    },\n    {\n      \"id\": 8,\n      \"title\": \"Retries and lease recovery\",\n      \"type\": \"timeseries\",\n      \"datasource\": {\n        \"uid\": \"prometheus\",\n        \"type\": \"prometheus\"\n      },\n      \"gridPos\": {\n        \"x\": 12,\n        \"y\": 24,\n        \"w\": 12,\n        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\": \"A\",\n          \"expr\": \"sum by(traffic)(rate(lab_retries_total[1m]) + rate(lab_lease_recoveries_total[1m]))\"\n        }\n      ],\n      \"fieldConfig\": {\n        \"defaults\": {\n          \"unit\": \"short\"\n        }\n      },\n      \"options\": {\n        \"legend\": {\n          \"displayMode\": \"list\"\n        }\n      }\n    },\n    {\n      \"id\": 9,\n      \"title\": \"External dependency latency\",\n      \"type\": \"timeseries\",\n      \"datasource\": {\n        \"uid\": \"prometheus\",\n        \"type\": \"prometheus\"\n      },\n      \"gridPos\": {\n        \"x\": 0,\n        \"y\": 32,\n        \"w\": 12,\n        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\": \"A\",\n          \"expr\": \"histogram_quantile(0.99,sum by(le,traffic)(rate(lab_external_seconds_bucket[1m])))\"\n        }\n      ],\n      \"fieldConfig\": {\n        \"defaults\": {\n          \"unit\": \"s\"\n        }\n      },\n      \"options\": {\n        \"legend\": {\n          \"displayMode\": \"list\"\n        }\n      }\n    },\n    {\n      \"id\": 10,\n      \"title\": \"External dependency errors\",\n      \"type\": \"timeseries\",\n      \"datasource\": {\n        \"uid\": \"prometheus\",\n        \"type\": \"prometheus\"\n      },\n      \"gridPos\": {\n        \"x\": 12,\n        \"y\": 32,\n        \"w\": 12,\n        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\": \"A\",\n          \"expr\": \"sum by(traffic)(rate(lab_external_seconds_count{outcome=\\\"error\\\"}[1m]))\"\n        }\n      ],\n      \"fieldConfig\": {\n        \"defaults\": {\n          \"unit\": \"short\"\n        }\n      },\n      \"options\": {\n        \"legend\": {\n          \"displayMode\": \"list\"\n        }\n      }\n    },\n    {\n      \"id\": 11,\n      \"title\": \"Pod CPU \\u2014 measured kubelet counters\",\n      \"type\": \"timeseries\",\n      \"datasource\": {\n        \"uid\": \"prometheus\",\n        \"type\": \"prometheus\"\n      },\n      \"gridPos\": {\n        \"x\": 0,\n        \"y\": 40,\n        \"w\": 12,\n        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\": \"A\",\n          \"expr\": \"sum by(pod)(rate(container_cpu_usage_seconds_total{namespace=\\\"lab\\\",container!=\\\"\\\"}[1m]))\"\n        }\n      ],\n      \"fieldConfig\": {\n        \"defaults\": {\n          \"unit\": \"cores\"\n        }\n      },\n      \"options\": {\n        \"legend\": {\n          \"displayMode\": \"list\"\n        }\n      }\n    },\n    {\n      \"id\": 12,\n      \"title\": \"Pod working set memory\",\n      \"type\": \"timeseries\",\n      \"datasource\": {\n        \"uid\": \"prometheus\",\n        \"type\": \"prometheus\"\n      },\n      \"gridPos\": {\n        \"x\": 12,\n        \"y\": 40,\n        \"w\": 12,\n        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\": \"A\",\n          \"expr\": \"sum by(pod)(container_memory_working_set_bytes{namespace=\\\"lab\\\",container!=\\\"\\\"})\"\n        }\n      ],\n      \"fieldConfig\": {\n        \"defaults\": {\n          \"unit\": \"bytes\"\n        }\n      },\n      \"options\": {\n        \"legend\": {\n          \"displayMode\": \"list\"\n        }\n      }\n    },\n    {\n      \"id\": 13,\n      \"title\": \"Pod restarts\",\n      \"type\": \"timeseries\",\n      \"datasource\": {\n        \"uid\": \"prometheus\",\n        \"type\": \"prometheus\"\n      },\n      \"gridPos\": {\n        \"x\": 0,\n        \"y\": 48,\n        \"w\": 12,\n        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\": \"A\",\n          \"expr\": \"kube_pod_container_status_restarts_total{namespace=\\\"lab\\\"}\"\n        }\n      ],\n      \"fieldConfig\": {\n        \"defaults\": {\n          \"unit\": \"short\"\n        }\n      },\n      \"options\": {\n        \"legend\": {\n          \"displayMode\": \"list\"\n        }\n      }\n    },\n    {\n      \"id\": 14,\n      \"title\": \"Active alerts and routing severity\",\n      \"type\": \"timeseries\",\n      \"datasource\": {\n        \"uid\": \"prometheus\",\n        \"type\": \"prometheus\"\n      },\n      \"gridPos\": {\n        \"x\": 12,\n        \"y\": 48,\n        \"w\": 12,\n        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\": \"A\",\n          \"expr\": \"ALERTS{alertstate=\\\"firing\\\"}\"\n        }\n      ],\n      \"fieldConfig\": {\n        \"defaults\": {\n          \"unit\": \"short\"\n        }\n      },\n      \"options\": {\n        \"legend\": {\n          \"displayMode\": \"list\"\n        }\n      }\n    },\n    {\n      \"id\": 15,\n      \"title\": \"Structured report logs: filter request_id/report_id in Explore\",\n      \"type\": \"logs\",\n      \"datasource\": {\n        \"uid\": \"loki\",\n        \"type\": \"loki\"\n      },\n      \"gridPos\": {\n        \"x\": 0,\n        \"y\": 56,\n        \"w\": 12,\n        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\": \"A\",\n          \"expr\": \"{namespace=\\\"lab\\\",app=~\\\"api|worker|scheduler\\\"} | json\"\n        }\n      ],\n      \"fieldConfig\": {\n        \"defaults\": {\n          \"unit\": \"short\"\n        }\n      },\n      \"options\": {\n        \"legend\": {\n          \"displayMode\": \"list\"\n        }\n      }\n    }\n  ],\n  \"annotations\": {\n    \"list\": []\n  }\n}\n"
+      }
+    },
+    "deployment-grafana": {
+      "apiVersion": "apps/v1",
+      "kind": "Deployment",
+      "metadata": {
+        "name": "grafana",
+        "namespace": "lab"
+      },
+      "spec": {
+        "replicas": 1,
+        "strategy": {
+          "type": "RollingUpdate"
+        },
+        "selector": {
+          "matchLabels": {
+            "app": "grafana"
+          }
+        },
+        "template": {
+          "metadata": {
+            "labels": {
+              "app": "grafana"
+            },
+            "annotations": {
+              "lab-config-checksum": "31ba38c79ee750e0fa48c7567127e146f28393b1df118acb2b68c9d1d87750ee"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "grafana",
+                "image": "grafana/grafana:13.2.3",
+                "imagePullPolicy": "IfNotPresent",
+                "ports": [
+                  {
+                    "containerPort": 3000,
+                    "name": "http"
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "100m",
+                    "memory": "128Mi"
+                  },
+                  "limits": {
+                    "cpu": "1",
+                    "memory": "512Mi"
+                  }
+                },
+                "securityContext": {
+                  "allowPrivilegeEscalation": false,
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  },
+                  "readOnlyRootFilesystem": true,
+                  "runAsUser": 472,
+                  "runAsNonRoot": true
+                },
+                "env": [
+                  {
+                    "name": "GF_SECURITY_ADMIN_USER",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "GF_SECURITY_ADMIN_USER"
+                      }
+                    }
+                  },
+                  {
+                    "name": "GF_SECURITY_ADMIN_PASSWORD",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "lab-secrets",
+                        "key": "GF_SECURITY_ADMIN_PASSWORD"
+                      }
+                    }
+                  },
+                  {
+                    "name": "GF_ANALYTICS_REPORTING_ENABLED",
+                    "value": "false"
+                  },
+                  {
+                    "name": "GF_ANALYTICS_CHECK_FOR_UPDATES",
+                    "value": "false"
+                  }
+                ],
+                "volumeMounts": [
+                  {
+                    "name": "grafana-datasources",
+                    "mountPath": "/etc/grafana/provisioning/datasources",
+                    "readOnly": true
+                  },
+                  {
+                    "name": "grafana-provider",
+                    "mountPath": "/etc/grafana/provisioning/dashboards",
+                    "readOnly": true
+                  },
+                  {
+                    "name": "grafana-dashboard",
+                    "mountPath": "/var/lib/grafana/dashboards",
+                    "readOnly": true
+                  },
+                  {
+                    "name": "data",
+                    "mountPath": "/var/lib/grafana"
+                  },
+                  {
+                    "name": "tmp",
+                    "mountPath": "/tmp"
+                  }
+                ],
+                "startupProbe": {
+                  "httpGet": {
+                    "path": "/api/health",
+                    "port": 3000
+                  },
+                  "failureThreshold": 60,
+                  "periodSeconds": 3,
+                  "timeoutSeconds": 2
+                },
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/api/health",
+                    "port": 3000
+                  },
+                  "periodSeconds": 5,
+                  "timeoutSeconds": 3
+                },
+                "livenessProbe": {
+                  "httpGet": {
+                    "path": "/api/health",
+                    "port": 3000
+                  },
+                  "periodSeconds": 10,
+                  "timeoutSeconds": 3,
+                  "failureThreshold": 6
+                }
+              }
+            ],
+            "terminationGracePeriodSeconds": 25,
+            "automountServiceAccountToken": false,
+            "securityContext": {
+              "seccompProfile": {
+                "type": "RuntimeDefault"
+              },
+              "fsGroup": 472
+            },
+            "volumes": [
+              {
+                "name": "grafana-datasources",
+                "configMap": {
+                  "name": "grafana-datasources"
+                }
+              },
+              {
+                "name": "grafana-provider",
+                "configMap": {
+                  "name": "grafana-provider"
+                }
+              },
+              {
+                "name": "grafana-dashboard",
+                "configMap": {
+                  "name": "grafana-dashboard"
+                }
+              },
+              {
+                "name": "data",
+                "emptyDir": {}
+              },
+              {
+                "name": "tmp",
+                "emptyDir": {}
+              }
+            ]
+          }
+        }
+      }
+    },
+    "service-grafana": {
+      "apiVersion": "v1",
+      "kind": "Service",
+      "metadata": {
+        "name": "grafana",
+        "namespace": "lab"
+      },
+      "spec": {
+        "selector": {
+          "app": "grafana"
+        },
+        "ports": [
+          {
+            "port": 3000,
+            "targetPort": 3000,
+            "name": "http"
+          }
+        ]
+      }
+    },
+    "serviceaccount-kube-state-metrics": {
+      "apiVersion": "v1",
+      "kind": "ServiceAccount",
+      "metadata": {
+        "name": "kube-state-metrics",
+        "namespace": "lab"
+      }
+    },
+    "role-kube-state-metrics": {
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "kind": "Role",
+      "metadata": {
+        "name": "kube-state-metrics",
+        "namespace": "lab"
+      },
+      "rules": [
+        {
+          "apiGroups": [
+            ""
+          ],
+          "resources": [
+            "pods"
+          ],
+          "verbs": [
+            "list",
+            "watch"
+          ]
+        },
+        {
+          "apiGroups": [
+            "apps"
+          ],
+          "resources": [
+            "deployments"
+          ],
+          "verbs": [
+            "list",
+            "watch"
+          ]
+        }
+      ]
+    },
+    "rolebinding-kube-state-metrics": {
+      "apiVersion": "rbac.authorization.k8s.io/v1",
+      "kind": "RoleBinding",
+      "metadata": {
+        "name": "kube-state-metrics",
+        "namespace": "lab"
+      },
+      "roleRef": {
+        "apiGroup": "rbac.authorization.k8s.io",
+        "kind": "Role",
+        "name": "kube-state-metrics"
+      },
+      "subjects": [
+        {
+          "kind": "ServiceAccount",
+          "name": "kube-state-metrics",
+          "namespace": "lab"
+        }
+      ]
+    },
+    "deployment-kube-state-metrics": {
+      "apiVersion": "apps/v1",
+      "kind": "Deployment",
+      "metadata": {
+        "name": "kube-state-metrics",
+        "namespace": "lab"
+      },
+      "spec": {
+        "replicas": 1,
+        "strategy": {
+          "type": "RollingUpdate"
+        },
+        "selector": {
+          "matchLabels": {
+            "app": "kube-state-metrics"
+          }
+        },
+        "template": {
+          "metadata": {
+            "labels": {
+              "app": "kube-state-metrics"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "kube-state-metrics",
+                "image": "registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.20.0",
+                "imagePullPolicy": "IfNotPresent",
+                "ports": [
+                  {
+                    "containerPort": 8080,
+                    "name": "http"
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "100m",
+                    "memory": "128Mi"
+                  },
+                  "limits": {
+                    "cpu": "500m",
+                    "memory": "128Mi"
+                  }
+                },
+                "securityContext": {
+                  "allowPrivilegeEscalation": false,
+                  "capabilities": {
+                    "drop": [
+                      "ALL"
+                    ]
+                  },
+                  "readOnlyRootFilesystem": true,
+                  "runAsUser": 65534,
+                  "runAsNonRoot": true
+                },
+                "args": [
+                  "--namespaces=lab",
+                  "--resources=pods,deployments"
+                ],
+                "startupProbe": {
+                  "httpGet": {
+                    "path": "/healthz",
+                    "port": 8080
+                  },
+                  "failureThreshold": 60,
+                  "periodSeconds": 3,
+                  "timeoutSeconds": 2
+                },
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/healthz",
+                    "port": 8080
+                  },
+                  "periodSeconds": 5,
+                  "timeoutSeconds": 3
+                },
+                "livenessProbe": {
+                  "httpGet": {
+                    "path": "/healthz",
+                    "port": 8080
+                  },
+                  "periodSeconds": 10,
+                  "timeoutSeconds": 3,
+                  "failureThreshold": 6
+                }
+              }
+            ],
+            "terminationGracePeriodSeconds": 25,
+            "automountServiceAccountToken": true,
+            "securityContext": {
+              "seccompProfile": {
+                "type": "RuntimeDefault"
+              },
+              "fsGroup": 65534
+            },
+            "serviceAccountName": "kube-state-metrics"
+          }
+        }
+      }
+    },
+    "service-kube-state-metrics": {
+      "apiVersion": "v1",
+      "kind": "Service",
+      "metadata": {
+        "name": "kube-state-metrics",
+        "namespace": "lab"
+      },
+      "spec": {
+        "selector": {
+          "app": "kube-state-metrics"
+        },
+        "ports": [
+          {
+            "port": 8080,
+            "targetPort": 8080,
+            "name": "http"
+          }
+        ]
+      }
+    }
+  },
+  "notes": "Local experiments; normal/load/fault separated. No 30-day attainment claim. Python stdlib scheduled-arrival load generator equivalent; raw request samples retained.",
+  "healthy_baseline": {
+    "start": "2026-10-09T20:04:31Z",
+    "end_requests": "2026-10-09T20:04:52Z",
+    "commit": "7e7d9d19753a5871f6a3edd984e7813eb36e31de",
+    "prefix": "exp-78d9c5e426ae4e00aa0fd852bf29bf25-",
+    "traffic": "normal",
+    "offered_rate_rps": 2,
+    "offered_duration_seconds": 20,
+    "requests": 40,
+    "elapsed_client_seconds": 20.547541435000312,
+    "throughput_rps": 1.9467049197362718,
+    "acceptance_rps": 1.9467049197362718,
+    "http_error_ratio": 0.0,
+    "client_latency_p50_seconds": 1.0443554200028302,
+    "client_latency_p95_seconds": 1.0670944399971631,
+    "client_latency_p99_seconds": 1.0713962789959623,
+    "client_latency_within_500ms_ratio": 0.0,
+    "arrival_lateness_p99_seconds": 0.0011552829964784905,
+    "request_samples": [
+      {
+        "status": 202,
+        "latency_seconds": 1.025022468995303,
+        "id": "3473ce3b-7ea0-4b1c-991b-b123768377be",
+        "arrival_lateness_seconds": 0.001405276998411864
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0559278939981596,
+        "id": "7a84470e-cad9-4ec8-8eaf-bca04d75b0d4",
+        "arrival_lateness_seconds": 0.0008987670007627457
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0443554200028302,
+        "id": "533dfc7b-31b1-4cc7-aa8e-3c84dfce2579",
+        "arrival_lateness_seconds": 0.0006517770016216673
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0467578009993304,
+        "id": "e16f9402-c239-40a0-b7f8-0558dc7c9d92",
+        "arrival_lateness_seconds": 0.0003075400018133223
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0433317350034486,
+        "id": "9946d20d-410f-4683-9f30-4893382e3213",
+        "arrival_lateness_seconds": 0.0002670179965207353
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.048145544998988,
+        "id": "a6eda277-1548-4cf9-a08b-0d81b8466b66",
+        "arrival_lateness_seconds": 0.0011552829964784905
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0259534569995594,
+        "id": "3a745b7b-9d44-41f5-a7ee-f7763995297f",
+        "arrival_lateness_seconds": 0.0001748630020301789
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0471786170019186,
+        "id": "5817ee40-0032-4ef6-a5bb-6a384b6a8d1d",
+        "arrival_lateness_seconds": 0.00020017899805679917
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.024949991995527,
+        "id": "ba6f09e9-123c-47b4-9a71-6669da758890",
+        "arrival_lateness_seconds": 0.00011577199620660394
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0441249340001377,
+        "id": "fd9762b9-50f8-4d16-a0f2-88e7eec41780",
+        "arrival_lateness_seconds": 0.0003667490018415265
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.052975961996708,
+        "id": "2225d9a3-803f-40fd-a136-3a95a53ec176",
+        "arrival_lateness_seconds": 0.0003347509991726838
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0489461760007543,
+        "id": "4315e927-8ab2-4486-af29-6b300413b94e",
+        "arrival_lateness_seconds": 0.0004464009980438277
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0357375009989482,
+        "id": "962eebea-0d9e-4784-8c8e-6a99a54fd84a",
+        "arrival_lateness_seconds": 0.0002563219968578778
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0713962789959623,
+        "id": "d8da691d-ba1c-4ec0-b830-d94d13a4f697",
+        "arrival_lateness_seconds": 0.0002576469996711239
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.071919212998182,
+        "id": "804a3cff-ba3a-459a-b30e-b246c01b504b",
+        "arrival_lateness_seconds": 0.0002927730020019226
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0490455700055463,
+        "id": "09afd432-4348-4aad-b48e-9337a76e0432",
+        "arrival_lateness_seconds": 0.00033177500154124573
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0578163459940697,
+        "id": "15642e6a-ad62-4536-a43b-b23181e65e9e",
+        "arrival_lateness_seconds": 0.0003864559985231608
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0434109650013852,
+        "id": "305a8741-8286-4f1a-91c5-cb5610f25c34",
+        "arrival_lateness_seconds": 0.00017178599955514073
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0347092299998621,
+        "id": "2114d2aa-d6a3-4375-b55f-0c8d9133a635",
+        "arrival_lateness_seconds": 0.0001889769991976209
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0443888709996827,
+        "id": "d01a478b-a9f7-4527-97f1-dd5106a267d3",
+        "arrival_lateness_seconds": 0.0003550219989847392
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0418006440013414,
+        "id": "dda8334a-0f59-4fb8-ac30-c0bae0676fd4",
+        "arrival_lateness_seconds": 0.0003836109972326085
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.044643109999015,
+        "id": "e0aee8d3-60b8-4fc1-95a2-8fc8f84649ea",
+        "arrival_lateness_seconds": 0.0002741169955697842
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0500726400059648,
+        "id": "b939b583-6f3a-4e67-83ba-f71cd04830c6",
+        "arrival_lateness_seconds": 0.00026671699743019417
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.027795108006103,
+        "id": "502f9050-9818-4dd6-bce9-aba65221f71f",
+        "arrival_lateness_seconds": 0.00017698000010568649
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0488042479992146,
+        "id": "ef947429-903a-40fc-89a9-bdc7f70cb749",
+        "arrival_lateness_seconds": 0.0002323079970665276
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0559887350027566,
+        "id": "d3a3f9c8-d160-4a6b-9b63-9df282e0363b",
+        "arrival_lateness_seconds": 0.0002914869983214885
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0280244349996792,
+        "id": "749ed89b-bfd8-43bf-98cc-e442171c8d79",
+        "arrival_lateness_seconds": 0.00021245899552013725
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0670944399971631,
+        "id": "91289663-ad94-47d6-901f-fa70f7d02c2e",
+        "arrival_lateness_seconds": 0.0003039219955098815
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0263649030021043,
+        "id": "94551f5c-a7d5-4d8a-ad13-f265edb888a6",
+        "arrival_lateness_seconds": 0.0001226659951498732
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0460747619945323,
+        "id": "3123844e-45e9-4f8c-a2de-ad325f36abaf",
+        "arrival_lateness_seconds": 0.0003263809994678013
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0314310369940358,
+        "id": "e4928c2a-dc37-4874-be4c-e275c0b8cc6e",
+        "arrival_lateness_seconds": 0.00013777300046058372
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0442096640035743,
+        "id": "d022a2ac-9b4e-4359-b8ed-0511b97d6313",
+        "arrival_lateness_seconds": 0.00026437600172357634
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0324578790023224,
+        "id": "cff66e36-d0eb-4769-a3be-0e7500835f9d",
+        "arrival_lateness_seconds": 0.0001403659989591688
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0444795799994608,
+        "id": "0005266b-32c6-40e4-ba10-4b6ad897d234",
+        "arrival_lateness_seconds": 0.000317015998007264
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0473149130048114,
+        "id": "13b5c273-b3dd-4811-9626-361619068d69",
+        "arrival_lateness_seconds": 0.0001995839993469417
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.040642054998898,
+        "id": "2791624a-0c67-4d3d-9fc9-862d8769ccee",
+        "arrival_lateness_seconds": 0.00039267299871426076
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0201725049992092,
+        "id": "aff2a3e1-13e6-4ac8-af9c-c8c3e5559606",
+        "arrival_lateness_seconds": 0.0001254599992535077
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.020012509994558,
+        "id": "bf16764f-f551-46ca-a12b-93c634243fa6",
+        "arrival_lateness_seconds": 9.307899745181203e-05
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0231128490049741,
+        "id": "729c8f46-5918-471c-8864-68582746267f",
+        "arrival_lateness_seconds": 0.00021770499733975157
+      },
+      {
+        "status": 202,
+        "latency_seconds": 1.0461374259975855,
+        "id": "f854e49c-a48c-4392-b6ba-c85024d68ae4",
+        "arrival_lateness_seconds": 0.00039807699795346707
+      }
+    ],
+    "cohort": {
+      "accepted": 40,
+      "completed": 40,
+      "failed": 0,
+      "unfinished": 0,
+      "expired": 40,
+      "deadline_met": 40,
+      "deadline_miss": 0,
+      "e2e_p99_seconds": 0,
+      "latest_deadline_seconds": 0
+    },
+    "processing_timeliness_ratio": 1.0,
+    "end": "2026-10-09T20:05:51Z",
+    "saturation_observed": true
+  }
+}

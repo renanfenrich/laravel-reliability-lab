@@ -30,7 +30,8 @@ resource "kubernetes_secret_v1" "lab" {
   })
 }
 resource "kubernetes_manifest" "lab" {
-  for_each   = jsondecode(file("${path.module}/manifests.json"))
-  manifest   = each.value
-  depends_on = [kubernetes_namespace_v1.lab, kubernetes_secret_v1.lab]
+  computed_fields = each.value.kind == "Deployment" ? ["spec.template.metadata.annotations"] : []
+  for_each        = jsondecode(file("${path.module}/manifests.json"))
+  manifest        = each.value
+  depends_on      = [kubernetes_namespace_v1.lab, kubernetes_secret_v1.lab]
 }

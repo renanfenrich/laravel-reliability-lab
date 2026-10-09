@@ -9,7 +9,8 @@ class Reports {
         $hash=hash('sha256',json_encode($payload));
         $id=(string)Str::uuid();
         $created=DB::transaction(function() use($payload,$key,$requestId,$traffic,$hash,$id) {
-            $n=DB::table('reports')->insertOrIgnore(['id'=>$id,'idempotency_key'=>$key,'request_id'=>$requestId,'traffic'=>$traffic,'payload_hash'=>$hash,'payload'=>json_encode($payload),'state'=>'pending','accepted_at'=>now(),'deadline_at'=>now()->addSeconds(60),'dispatch_after'=>now(),'available_at'=>now()]);
+            $accepted=now();
+            $n=DB::table('reports')->insertOrIgnore(['id'=>$id,'idempotency_key'=>$key,'request_id'=>$requestId,'traffic'=>$traffic,'payload_hash'=>$hash,'payload'=>json_encode($payload),'state'=>'pending','accepted_at'=>$accepted->format('Y-m-d H:i:s.uP'),'deadline_at'=>$accepted->copy()->addSeconds(60)->format('Y-m-d H:i:s.uP'),'dispatch_after'=>now(),'available_at'=>now()]);
             if ($n) Metrics::add('lab_accepted_total',['traffic'=>$traffic]);
             return (bool)$n;
         });
@@ -43,7 +44,7 @@ class Reports {
     public function deadlines(): void {
         DB::transaction(function() {
             foreach(DB::table('reports')->whereNull('deadline_met')->where('deadline_at','<=',now())->lockForUpdate()->get() as $r) {
-                $met=$r->completed_at!==null && strtotime($r->completed_at)<=strtotime($r->deadline_at);
+                $met=$r->completed_at!==null && \Illuminate\Support\Carbon::parse($r->completed_at)->lte(\Illuminate\Support\Carbon::parse($r->deadline_at));
                 DB::table('reports')->where('id',$r->id)->update(['deadline_met'=>$met]);
                 Metrics::add('lab_deadlines_total',['traffic'=>$r->traffic,'outcome'=>$met?'met':'miss']);
             }

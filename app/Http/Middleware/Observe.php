@@ -13,10 +13,11 @@ class Observe {
         $route=$request->route()?->uri(); $status=$response->getStatusCode();
         $traffic=$request->attributes->get('traffic','normal');
         if(in_array($route,['api/reports','api/reports/{id}']) && ($status<400 || $status>=500)) {
-            try { \Illuminate\Support\Facades\DB::transaction(function() use($route,$status,$traffic,$start) {
+            $elapsed=microtime(true)-$start;
+            try { \Illuminate\Support\Facades\DB::transaction(function() use($route,$status,$traffic,$elapsed) {
                 $labels=['route'=>$route==='api/reports'?'submit':'status','traffic'=>$traffic,'class'=>(string)intdiv($status,100).'xx'];
                 Metrics::add('lab_http_total',$labels);
-                Metrics::observe('lab_http_seconds',microtime(true)-$start,$labels,[0.05,0.1,0.25,0.5,1,2,5]);
+                Metrics::observe('lab_http_seconds',$elapsed,$labels,[0.05,0.1,0.25,0.5,1,2,5]);
             }); } catch(\Throwable $e) { Log::error('telemetry.write_failed',['request_id'=>$id]); }
         }
         Log::info('http.response',['request_id'=>$id,'route'=>$route,'status'=>$status,'traffic'=>$traffic,'duration_seconds'=>microtime(true)-$start]);

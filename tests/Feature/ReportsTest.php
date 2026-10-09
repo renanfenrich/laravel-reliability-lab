@@ -70,6 +70,27 @@ class ReportsTest extends TestCase {
         $this->assertDatabaseHas('reports',['id'=>$id,'deadline_met'=>true]);
         $this->assertEquals(1,DB::table('metric_samples')->where('series','lab_deadlines_total{outcome="met",traffic="normal"}')->value('value'));
     }
+    public function test_subsecond_deadline_boundary_preserves_a_late_miss(): void {
+        $id=$this->report(); $deadline=now()->subSeconds(2)->startOfSecond()->addMicroseconds(100000);
+        DB::table('reports')->where('id',$id)->update(['state'=>'completed','deadline_at'=>$deadline->format('Y-m-d H:i:s.uP'),'completed_at'=>$deadline->copy()->addMicroseconds(100000)->format('Y-m-d H:i:s.uP')]);
+        app(Reports::class)->deadlines(); $this->assertDatabaseHas('reports',['id'=>$id,'deadline_met'=>false]);
+    }
+    public function test_stale_attempt_cannot_overwrite_recovered_result(): void {
+        $id=$this->report();
+        $calls=0;
+        Http::fake(function() use($id,&$calls) {
+            if(++$calls>1) return Http::response(['checksum'=>'current-token'],200);
+            DB::table('reports')->where('id',$id)->update(['lease_until'=>now()->subSecond()]);
+            app(Reports::class)->reconcile();
+            (new ProcessReport($id))->handle();
+            return Http::response(['checksum'=>'stale-token'],200);
+        });
+        (new ProcessReport($id))->handle();
+        $r=DB::table('reports')->where('id',$id)->first();
+        $this->assertSame('current-token',json_decode($r->result,true)['checksum']);
+        $this->assertEquals(2,$r->attempts);
+        $this->assertEquals(1,DB::table('metric_samples')->where('series','lab_completed_total{traffic="normal"}')->value('value'));
+    }
     public function test_liveness_and_readiness_have_distinct_semantics(): void {
         $this->getJson('/api/live')->assertOk();
         \Illuminate\Support\Facades\Redis::shouldReceive('ping')->andThrow(new \RuntimeException('synthetic redis outage'));

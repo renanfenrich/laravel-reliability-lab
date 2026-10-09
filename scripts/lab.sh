@@ -61,7 +61,6 @@ PY
   terraform -chdir=infra apply -auto-approve -input=false -var-file=local.tfvars.json
   for name in $(python3 -c 'import json; print(" ".join(x["metadata"]["name"] for x in json.load(open("infra/manifests.json")).values() if x["kind"]=="Deployment"))'); do k -n lab rollout status deployment/"$name" --timeout=180s; done
   k -n lab exec deployment/api -- php artisan migrate --force
-  k -n lab rollout restart deployment/api deployment/worker deployment/scheduler deployment/exporter
   for name in api worker scheduler exporter; do k -n lab rollout status deployment/"$name" --timeout=120s; done
   ;;
  smoke) python3 scripts/smoke.py ;;
@@ -86,6 +85,6 @@ PY
   fi
   echo 'Preserved Compose volumes and .runtime/postgres. Observability ephemeral data removed with cluster.'
   ;;
- data-reset) echo 'Destructive: removes lab PostgreSQL and Redis data. Explicitly run scripts/reset-data.sh after human approval.'; exit 1 ;;
+ data-reset) ./scripts/reset-data.sh ;;
  *) echo 'Unknown lab command' >&2; exit 2 ;;
 esac

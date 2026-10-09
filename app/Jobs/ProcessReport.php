@@ -30,8 +30,8 @@ class ProcessReport implements ShouldQueue {
             if($current->state!=='processing' || $current->lease_token!==$token) return;
             Metrics::observe('lab_external_seconds',microtime(true)-$start,['traffic'=>$r->traffic,'outcome'=>$error?'error':'success'],[0.1,0.5,1,3,5]);
             $state=$error?($r->attempts>=3?'failed':'pending'):'completed';
-            DB::table('reports')->where('id',$r->id)->update(['state'=>$state,'result'=>$result?json_encode($result):null,'completed_at'=>$state==='completed'?now():null,'error'=>$error,'lease_token'=>null,'lease_until'=>null,'dispatch_after'=>now()->addSeconds(2**$r->attempts),'available_at'=>now()->addSeconds(2**$r->attempts)]);
-            if($state==='completed') { Metrics::add('lab_completed_total',['traffic'=>$r->traffic]); Metrics::observe('lab_processing_seconds',microtime(true)-strtotime($r->accepted_at),['traffic'=>$r->traffic],[1,5,15,30,60,120]); }
+            DB::table('reports')->where('id',$r->id)->update(['state'=>$state,'result'=>$result?json_encode($result):null,'completed_at'=>$state==='completed'?now()->format('Y-m-d H:i:s.uP'):null,'error'=>$error,'lease_token'=>null,'lease_until'=>null,'dispatch_after'=>now()->addSeconds(2**$r->attempts),'available_at'=>now()->addSeconds(2**$r->attempts)]);
+            if($state==='completed') { Metrics::add('lab_completed_total',['traffic'=>$r->traffic]); Metrics::observe('lab_processing_seconds',(float)now()->format('U.u')-(float)\Illuminate\Support\Carbon::parse($r->accepted_at)->format('U.u'),['traffic'=>$r->traffic],[1,5,15,30,60,120]); }
             elseif($state==='failed') Metrics::add('lab_failed_total',['traffic'=>$r->traffic]);
             else Metrics::add('lab_retries_total',['traffic'=>$r->traffic]);
             Log::info('report.'.$state,['report_id'=>$r->id,'request_id'=>$r->request_id,'attempt'=>$r->attempts,'error'=>$error]);

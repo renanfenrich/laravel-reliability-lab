@@ -390,6 +390,9 @@
         "metadata": {
           "labels": {
             "app": "simulator"
+          },
+          "annotations": {
+            "lab-source-checksum": "0cb06d498f26916fc58474ba50270b100d25946876681d24d52f6bb48314e000"
           }
         },
         "spec": {
@@ -506,6 +509,9 @@
         "metadata": {
           "labels": {
             "app": "api"
+          },
+          "annotations": {
+            "lab-source-checksum": "e17db02ffb46548fbc4e9a48dc390de577c630f31490ef6541918d488ac0bfa0"
           }
         },
         "spec": {
@@ -759,6 +765,9 @@
         "metadata": {
           "labels": {
             "app": "worker"
+          },
+          "annotations": {
+            "lab-source-checksum": "e17db02ffb46548fbc4e9a48dc390de577c630f31490ef6541918d488ac0bfa0"
           }
         },
         "spec": {
@@ -1019,6 +1028,9 @@
         "metadata": {
           "labels": {
             "app": "scheduler"
+          },
+          "annotations": {
+            "lab-source-checksum": "e17db02ffb46548fbc4e9a48dc390de577c630f31490ef6541918d488ac0bfa0"
           }
         },
         "spec": {
@@ -1274,6 +1286,9 @@
         "metadata": {
           "labels": {
             "app": "exporter"
+          },
+          "annotations": {
+            "lab-source-checksum": "e17db02ffb46548fbc4e9a48dc390de577c630f31490ef6541918d488ac0bfa0"
           }
         },
         "spec": {

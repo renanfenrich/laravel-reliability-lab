@@ -1,0 +1,13 @@
+Defaulted container "worker" out of: worker, storage-init (init)
+Warning: Immediate deletion does not wait for confirmation that the running resource has been terminated. The resource may continue to run on the cluster indefinitely.
+Traceback (most recent call last):
+  File "/home/renanfenrich/Code/laravel-reliability-lab/scripts/experiments.py", line 103, in <module>
+    try:main(sys.argv[1] if len(sys.argv)>1 else 'all')
+        ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/renanfenrich/Code/laravel-reliability-lab/scripts/experiments.py", line 74, in main
+    result['worker_termination']=interruption(base);save('experiments-progress.json',result)
+                                 ~~~~~~~~~~~~^^^^^^
+  File "/home/renanfenrich/Code/laravel-reliability-lab/scripts/experiments.py", line 64, in interruption
+    result,wait=wait_report(base,id,100);assert result['state']=='completed' and result['attempts']>=2,result
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'id': '634761f1-6978-42ba-b419-0d9d24301fbb', 'state': 'completed', 'attempts': 1, 'result': {'checksum': '03e2bac3ce192cb5e61392223826d8c6d41feef4edd1026be58cc6849a448597'}, 'error': None, 'deadline_met': None, 'overdue': False}

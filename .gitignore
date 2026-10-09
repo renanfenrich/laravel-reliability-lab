@@ -12,3 +12,6 @@
 /.runtime/
 /infra/local.tfvars.json
 /.phpunit.cache/
+
+__pycache__/
+*.pyc

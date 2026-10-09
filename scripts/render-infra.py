@@ -3,6 +3,13 @@ from pathlib import Path
 import json,hashlib
 root=Path(__file__).resolve().parent.parent
 objects={}
+def source_hash(dirs,files):
+    paths=[root/f for f in files]
+    for d in dirs:paths.extend((root/d).rglob('*.php'))
+    data=b''.join(str(f.relative_to(root)).encode()+b'\0'+f.read_bytes() for f in sorted(paths) if f.is_file() and 'cache' not in f.parts)
+    return hashlib.sha256(data).hexdigest()
+apphash=source_hash(['app','bootstrap','config','database','routes','public'],['Dockerfile','.dockerignore','composer.json','composer.lock','artisan'])
+simhash=source_hash([],['simulator/Dockerfile','simulator/server.py'])
 def add(o):
     key=o['kind'].lower()+'-'+o['metadata']['name']; objects[key]=o
     return o
@@ -80,6 +87,8 @@ if (root/'observability/prometheus.yml').exists():
     deploy('kube-state-metrics','registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.20.0',8080,args=['--namespaces=lab','--resources=pods,deployments'],user=65534,probe={'httpGet':{'path':'/healthz','port':8080}},sa='kube-state-metrics',limits={'cpu':'500m','memory':'128Mi'})
 for o in objects.values():
     if o['kind']=='Deployment':
+        if o['metadata']['name'] in ['api','worker','scheduler','exporter','simulator']:
+            o['spec']['template']['metadata']['annotations']={'lab-source-checksum':simhash if o['metadata']['name']=='simulator' else apphash}
         pod=o['spec']['template']; cfg=[v['configMap']['name'] for v in pod['spec'].get('volumes',[]) if 'configMap' in v]
-        if cfg:pod['metadata']['annotations']={'lab-config-checksum':hashlib.sha256(json.dumps([objects['configmap-'+n]['data'] for n in cfg],sort_keys=True).encode()).hexdigest()}
+        if cfg:pod['metadata'].setdefault('annotations',{}).update({'lab-config-checksum':hashlib.sha256(json.dumps([objects['configmap-'+n]['data'] for n in cfg],sort_keys=True).encode()).hexdigest()})
 (root/'infra/manifests.json').write_text(json.dumps(objects,indent=2)+'\n')

@@ -6,3 +6,10 @@ infra/.terraform
 infra/*.tfstate*
 .kubeconfig
 .runtime
+infra
+.tools
+.github
+docs
+*.tfvars*
+**/*.tfvars*
+**/*.tfstate*

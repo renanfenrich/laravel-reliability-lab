@@ -1,0 +1,26 @@
+{
+  "removed_images": [],
+  "removed_kind_images": [],
+  "cache_records": [
+    {
+      "id": "e5o1n0fgu5t3csvcaxrh953ne",
+      "exit": 0,
+      "output": "Total:\t0B\n"
+    },
+    {
+      "id": "tdt4dvxvk6f529w935lgdvpp5",
+      "exit": 0,
+      "output": "Total:\t0B\n"
+    },
+    {
+      "id": "qgi6ewzdkopr6404xpecxiop3",
+      "exit": 0,
+      "output": "ID\t\t\t\t\t\tRECLAIMABLE\tSIZE\t\tLAST ACCESSED\nqgi6ewzdkopr6404xpecxiop3               \ttrue \t\t150.2MB   \t5 minutes ago\nTotal:\t150.2MB\n"
+    },
+    {
+      "id": "4xxl3pelhq24ab6z8ps2aikco",
+      "exit": 0,
+      "output": "ID\t\t\t\t\t\tRECLAIMABLE\tSIZE\t\tLAST ACCESSED\n4xxl3pelhq24ab6z8ps2aikco               \ttrue \t\t150.2MB   \t6 minutes ago\nTotal:\t150.2MB\n"
+    }
+  ]
+}
