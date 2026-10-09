@@ -44,14 +44,14 @@ def run_rate(base,rate,duration=20,traffic='load'):
 
 def fault(base,payload,name):
     key='fault-'+uuid.uuid4().hex;start=time.monotonic();code,r,lat=request(base,'/api/reports',{'subject':'synthetic-'+name,**payload},traffic='fault',key=key);assert code==202,r
-    result,wait=wait_report(base,r['id'],120)
+    result,wait=wait_report(base,r['id'],120,traffic='fault')
     return {'name':name,'report_id':r['id'],'accept_latency_seconds':lat,'completion_wait_seconds':wait,'elapsed_seconds':time.monotonic()-start,'result':result,'timestamp':utc()}
 
 def interruption(base):
     key='fault-'+uuid.uuid4().hex;code,r,_=request(base,'/api/reports',{'subject':'synthetic-interruption','latency_ms':4000},traffic='fault',key=key);assert code==202
     id=r['id'];start=time.monotonic()
     for _ in range(80):
-        _,status,_=request(base,'/api/reports/'+id)
+        _,status,_=request(base,'/api/reports/'+id,traffic='fault')
         if status['state']=='processing':break
         time.sleep(.1)
     else:raise AssertionError('Worker never claimed interruption report')
@@ -67,7 +67,7 @@ def interruption(base):
     inspect=json.loads(subprocess.check_output(['docker','exec','laravel-reliability-lab-control-plane','crictl','inspect',container],text=True))
     pid=int(inspect['info']['pid']);assert pid>1
     subprocess.run(['docker','exec','laravel-reliability-lab-control-plane','kill','-9',str(pid)],check=True)
-    result,wait=wait_report(base,id,100);assert result['state']=='completed' and result['attempts']>=2,result
+    result,wait=wait_report(base,id,100,traffic='fault');assert result['state']=='completed' and result['attempts']>=2,result
     return {'name':'worker-termination','report_id':id,'victim_pod':victim,'container_id':container,'killed_node_pid':pid,'result':result,'recovery_seconds':time.monotonic()-start,'wait_after_delete_seconds':wait,'timestamp':utc()}
 
 def main(mode):
@@ -87,7 +87,7 @@ def main(mode):
             result['fault_alert_history']=history;result['fault_demo_alert_fired']=any(a['labels'].get('alertname')=='LabDemoProcessingMiss' and a['state']=='firing' for a in history[-1]['alerts']);assert result['fault_demo_alert_fired'],'Accelerated alert did not fire'
             save('experiments-progress.json',result)
         result['capacity_steps']=[]
-        for rate in [2,10,30,60,120]:
+        for rate in [2,10,30,60,120,240]:
             step=run_rate(base,rate,20);result['capacity_steps'].append(step);save('experiments-progress.json',result)
             if step['saturation_observed']:break
         result['saturation_observed']=any(s['saturation_observed'] for s in result['capacity_steps'])

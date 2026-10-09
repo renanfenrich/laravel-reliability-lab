@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-09T20:23:42Z",
+  "source_commit": "32d6280d130162a099e8e0c25ac374e8b80a22d5",
+  "client_live_samples_seconds": [
+    0.02982979499938665,
+    0.012004841999441851,
+    0.012541552998300176,
+    0.009560802995110862,
+    0.006988503999309614
+  ],
+  "all_below_500ms": true,
+  "before_fix_first_byte_seconds": 0.008665,
+  "before_fix_total_seconds": 1.011239
+}

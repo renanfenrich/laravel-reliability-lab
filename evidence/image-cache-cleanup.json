@@ -22,5 +22,27 @@
       "exit": 0,
       "output": "ID\t\t\t\t\t\tRECLAIMABLE\tSIZE\t\tLAST ACCESSED\n4xxl3pelhq24ab6z8ps2aikco               \ttrue \t\t150.2MB   \t6 minutes ago\nTotal:\t150.2MB\n"
     }
+  ],
+  "followup": [
+    {
+      "kind_image": "sha256:3a23d8c4e448ed8b88a98ee2fc73d3a380f5488bf15e08738ec3e9b60156c329",
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "kind_image": "sha256:27610689c8dc1c66bcbe97858cdb85311c650e193eb868de74f119dbcea4b8a5",
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "cache": "e5o1n0fgu5t3csvcaxrh953ne",
+      "exit": 0,
+      "output": "ID\t\t\t\t\t\tRECLAIMABLE\tSIZE\t\tLAST ACCESSED\ne5o1n0fgu5t3csvcaxrh953ne               \ttrue \t\t79.7MB    \t6 minutes ago\nTotal:\t79.7MB\n"
+    },
+    {
+      "cache": "tdt4dvxvk6f529w935lgdvpp5",
+      "exit": 0,
+      "output": "ID\t\t\t\t\t\tRECLAIMABLE\tSIZE\t\tLAST ACCESSED\ntdt4dvxvk6f529w935lgdvpp5               \ttrue \t\t79.7MB    \t6 minutes ago\nTotal:\t79.7MB\n"
+    }
   ]
 }

@@ -12,7 +12,7 @@ class Observe {
         try { $response=$next($request); } catch(\Throwable $e) { $response=app(ExceptionHandler::class)->render($request,$e); }
         $route=$request->route()?->uri(); $status=$response->getStatusCode();
         $traffic=$request->attributes->get('traffic','normal');
-        if(in_array($route,['api/reports','api/reports/{id}']) && ($status<400 || $status>=500)) {
+        if(in_array($request->method(),['GET','POST']) && in_array($route,['api/reports','api/reports/{id}']) && ($status<400 || $status>=500)) {
             $elapsed=microtime(true)-$start;
             try { \Illuminate\Support\Facades\DB::transaction(function() use($route,$status,$traffic,$elapsed) {
                 $labels=['route'=>$route==='api/reports'?'submit':'status','traffic'=>$traffic,'class'=>(string)intdiv($status,100).'xx'];
@@ -21,6 +21,8 @@ class Observe {
             }); } catch(\Throwable $e) { Log::error('telemetry.write_failed',['request_id'=>$id]); }
         }
         Log::info('http.response',['request_id'=>$id,'route'=>$route,'status'=>$status,'traffic'=>$traffic,'duration_seconds'=>microtime(true)-$start]);
+        // Length framing avoids waiting for port-forward EOF after the complete buffered response.
+        $response->headers->set('Content-Length',(string)strlen($response->getContent()));
         $response->headers->set('X-Request-ID',$id); return $response;
     }
 }

@@ -91,6 +91,10 @@ class ReportsTest extends TestCase {
         $this->assertEquals(2,$r->attempts);
         $this->assertEquals(1,DB::table('metric_samples')->where('series','lab_completed_total{traffic="normal"}')->value('value'));
     }
+    public function test_buffered_json_has_correct_length_framing(): void {
+        Queue::fake(); $response=$this->submit();
+        $response->assertHeader('Content-Length',(string)strlen($response->getContent()));
+    }
     public function test_liveness_and_readiness_have_distinct_semantics(): void {
         $this->getJson('/api/live')->assertOk();
         \Illuminate\Support\Facades\Redis::shouldReceive('ping')->andThrow(new \RuntimeException('synthetic redis outage'));

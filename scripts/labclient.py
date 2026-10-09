@@ -28,10 +28,10 @@ def forward(service,remote):
         else:raise TimeoutError(service)
         yield f'http://127.0.0.1:{port}'
     finally:proc.terminate();proc.wait(timeout=5)
-def wait_report(base,id,timeout=90):
+def wait_report(base,id,timeout=90,traffic="normal"):
     start=time.monotonic()
     while time.monotonic()-start<timeout:
-        code,r,_=request(base,'/api/reports/'+id)
+        code,r,_=request(base,'/api/reports/'+id,traffic=traffic)
         assert code==200,r
         if r['state'] in ['completed','failed']:return r,time.monotonic()-start
         time.sleep(.25)
