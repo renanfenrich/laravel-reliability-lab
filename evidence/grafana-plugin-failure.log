@@ -1,0 +1,2 @@
+logger=plugin.backgroundinstaller t=2026-10-09T20:52:23.140328256Z level=error msg="Failed to install plugin" pluginId=prometheus version= error="unlinkat /usr/share/grafana/data/plugins-bundled/prometheus: read-only file system"
+logger=plugin.backgroundinstaller t=2026-10-09T20:52:26.740720144Z level=error msg="Failed to install plugin" pluginId=loki version= error="unlinkat /usr/share/grafana/data/plugins-bundled/loki: read-only file system"
