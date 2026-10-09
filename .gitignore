@@ -1,0 +1,12 @@
+/.env
+/vendor/
+/storage/*.key
+/storage/logs/*
+/bootstrap/cache/*.php
+/.terraform/
+/infra/.terraform/
+*.tfstate*
+*.tfvars
+/.kubeconfig
+/.tools/
+/.runtime/
