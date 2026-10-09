@@ -1,0 +1,17 @@
+Unable to find image 'hashicorp/terraform:1.16.5' locally
+1.16.5: Pulling from hashicorp/terraform
+10656845ed6f: Pulling fs layer
+1ec98e9e24d2: Pulling fs layer
+4fdc56a1d49f: Pulling fs layer
+e5ba52079bac: Pulling fs layer
+4fdc56a1d49f: Download complete
+e5ba52079bac: Download complete
+1ec98e9e24d2: Download complete
+e5ba52079bac: Pull complete
+1ec98e9e24d2: Pull complete
+10656845ed6f: Download complete
+10656845ed6f: Pull complete
+Digest: sha256:c7926feace05d0f7e73542842bf3945924e955a1f782cf000ccbb8d18fa42d77
+Status: Downloaded newer image for hashicorp/terraform:1.16.5
+Terraform v1.16.5
+on linux_amd64

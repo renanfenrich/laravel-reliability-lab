@@ -1,0 +1,5 @@
+Observed 2026-10-09 initial Docker build (tool session47661), PHP8.4.13 CLI Bookworm, docker-php-ext-install pdo_pgsql pcntl mbstring dom.
+Exit1; DOM compiler diagnostic:
+/usr/src/php/ext/dom/lexbor/lexbor/selectors-adapted/selectors.c:16:10: fatal error: ext/dom/lexbor/lexbor/selectors-adapted/selectors.h: No such file or directory
+make: *** [Makefile:817: lexbor/lexbor/selectors-adapted/selectors.lo] Error 1
+This is a retained diagnostic excerpt from observed tool output. Complete initial compiler output was truncated and was not saved as a repository log. PHP8.4.26 resolved the failure; successful builds and tests are separately recorded.

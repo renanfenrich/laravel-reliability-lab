@@ -1,0 +1,62 @@
+{
+  "timestamp": "2026-10-09T20:30:55Z",
+  "source_commit": "2b99c860476b58d57596e07c64a7ad890295b5d5",
+  "report_id": "3a68ba24-c849-48b1-9fb0-e9d8b2a2c017",
+  "query": "{namespace=\"lab\",app=~\"worker|scheduler\"} | json report_id=\"context.report_id\" | report_id=\"3a68ba24-c849-48b1-9fb0-e9d8b2a2c017\"",
+  "streams": [
+    {
+      "stream": {
+        "app": "worker",
+        "container": "worker",
+        "detected_level": "error",
+        "instance": "lab/worker-7b9d465fcb-28v72:worker",
+        "job": "loki.source.kubernetes.lab",
+        "namespace": "lab",
+        "report_id": "3a68ba24-c849-48b1-9fb0-e9d8b2a2c017",
+        "service_name": "worker"
+      },
+      "values": [
+        [
+          "1791577534418713635",
+          "{\"message\":\"report.completed\",\"context\":{\"report_id\":\"3a68ba24-c849-48b1-9fb0-e9d8b2a2c017\",\"request_id\":\"43eaec5d-0894-486c-9caa-0fcde8685582\",\"attempt\":2,\"error\":null},\"level\":200,\"level_name\":\"INFO\",\"channel\":\"local\",\"datetime\":\"2026-10-09T20:25:34.418473+00:00\",\"extra\":{}}\n"
+        ]
+      ]
+    },
+    {
+      "stream": {
+        "app": "worker",
+        "container": "worker",
+        "detected_level": "info",
+        "instance": "lab/worker-7b9d465fcb-28v72:worker",
+        "job": "loki.source.kubernetes.lab",
+        "namespace": "lab",
+        "report_id": "3a68ba24-c849-48b1-9fb0-e9d8b2a2c017",
+        "service_name": "worker"
+      },
+      "values": [
+        [
+          "1791577530405609215",
+          "{\"message\":\"report.processing\",\"context\":{\"report_id\":\"3a68ba24-c849-48b1-9fb0-e9d8b2a2c017\",\"request_id\":\"43eaec5d-0894-486c-9caa-0fcde8685582\",\"attempt\":2},\"level\":200,\"level_name\":\"INFO\",\"channel\":\"local\",\"datetime\":\"2026-10-09T20:25:30.405538+00:00\",\"extra\":{}}\n"
+        ]
+      ]
+    },
+    {
+      "stream": {
+        "app": "worker",
+        "container": "worker",
+        "detected_level": "info",
+        "instance": "lab/worker-7b9d465fcb-7sd9j:worker",
+        "job": "loki.source.kubernetes.lab",
+        "namespace": "lab",
+        "report_id": "3a68ba24-c849-48b1-9fb0-e9d8b2a2c017",
+        "service_name": "worker"
+      },
+      "values": [
+        [
+          "1791577515579639262",
+          "{\"message\":\"report.processing\",\"context\":{\"report_id\":\"3a68ba24-c849-48b1-9fb0-e9d8b2a2c017\",\"request_id\":\"43eaec5d-0894-486c-9caa-0fcde8685582\",\"attempt\":1},\"level\":200,\"level_name\":\"INFO\",\"channel\":\"local\",\"datetime\":\"2026-10-09T20:25:15.579506+00:00\",\"extra\":{}}\n"
+        ]
+      ]
+    }
+  ]
+}

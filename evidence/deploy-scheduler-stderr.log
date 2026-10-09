@@ -1,0 +1,255 @@
+NAME                                    STATUS   ROLES           AGE   VERSION
+laravel-reliability-lab-control-plane   Ready    control-plane   53m   v1.34.0
+Image: "laravel-reliability-app:g1" with ID "sha256:10cf0e07b8cda3372767712624e89aec585cf9e23e563a19d0bc6b411467c5c2" not yet present on node "laravel-reliability-lab-control-plane", loading...
+Image: "laravel-reliability-simulator:g1" with ID "sha256:5c44ea06eb89b9c1cef77ee14617d36736a41918b30cf55aaa38992a73a765d3" not yet present on node "laravel-reliability-lab-control-plane", loading...
+[0m[1mInitializing the backend...[0m
+
+[0m[1mInitializing provider plugins...[0m
+- Reusing previous version of hashicorp/kubernetes from the dependency lock file
+- Using previously-installed hashicorp/kubernetes v2.38.0
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
+[0m[1mkubernetes_namespace_v1.lab: Refreshing state... [id=lab][0m
+[0m[1mkubernetes_secret_v1.lab: Refreshing state... [id=lab/lab-secrets][0m
+[0m[1mkubernetes_manifest.lab["configmap-loki"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["rolebinding-alloy"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["rolebinding-kube-state-metrics"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-scheduler"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["persistentvolumeclaim-postgres-data"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-prometheus"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-simulator"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["role-alloy"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-grafana"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-loki"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-prometheus"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-exporter"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["serviceaccount-kube-state-metrics"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-grafana-provider"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["clusterrolebinding-prometheus"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-postgres"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-grafana-dashboard"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-api"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-redis"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-alloy"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-redis"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["serviceaccount-prometheus"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["clusterrole-prometheus"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-alloy"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["role-kube-state-metrics"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-grafana-datasources"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-postgres"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-simulator"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-grafana"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-scheduler"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-exporter"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-kube-state-metrics"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["serviceaccount-alloy"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-worker"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-prometheus"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-alloy"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-kube-state-metrics"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["persistentvolume-laravel-reliability-postgres"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-api"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-loki"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-worker"]: Refreshing state...[0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [33m~[0m update in-place[0m
+
+Terraform will perform the following actions:
+
+[1m  # kubernetes_manifest.lab["deployment-api"][0m will be updated in-place
+[0m  [33m~[0m[0m resource "kubernetes_manifest" "lab" {
+      [33m~[0m[0m manifest        = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations = {
+                          [33m~[0m[0m lab-source-checksum = "a904b9708113457555a75a4dcb1ca32b80462866a2ce5254ce13a0a80b23e989" [33m->[0m[0m "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1"
+                        }
+                        [90m# (1 unchanged attribute hidden)[0m[0m
+                    }
+                    [90m# (1 unchanged attribute hidden)[0m[0m
+                }
+                [90m# (3 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+      [33m~[0m[0m object          = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template                = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations                = {
+                          [31m-[0m[0m "kubectl.kubernetes.io/restartedAt" = "2026-10-09T17:08:45-03:00"
+                          [31m-[0m[0m lab-source-checksum                 = "a904b9708113457555a75a4dcb1ca32b80462866a2ce5254ce13a0a80b23e989"
+                        } -> (known after apply)
+                        name                       = [90mnull[0m[0m
+                        [90m# (13 unchanged attributes hidden)[0m[0m
+                    }
+                    [90m# (1 unchanged attribute hidden)[0m[0m
+                }
+                [90m# (7 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # kubernetes_manifest.lab["deployment-exporter"][0m will be updated in-place
+[0m  [33m~[0m[0m resource "kubernetes_manifest" "lab" {
+      [33m~[0m[0m manifest        = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations = {
+                          [33m~[0m[0m lab-source-checksum = "a904b9708113457555a75a4dcb1ca32b80462866a2ce5254ce13a0a80b23e989" [33m->[0m[0m "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1"
+                        }
+                        [90m# (1 unchanged attribute hidden)[0m[0m
+                    }
+                    [90m# (1 unchanged attribute hidden)[0m[0m
+                }
+                [90m# (3 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+      [33m~[0m[0m object          = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template                = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations                = {
+                          [31m-[0m[0m "kubectl.kubernetes.io/restartedAt" = "2026-10-09T17:08:45-03:00"
+                          [31m-[0m[0m lab-source-checksum                 = "a904b9708113457555a75a4dcb1ca32b80462866a2ce5254ce13a0a80b23e989"
+                        } -> (known after apply)
+                        name                       = [90mnull[0m[0m
+                        [90m# (13 unchanged attributes hidden)[0m[0m
+                    }
+                    [90m# (1 unchanged attribute hidden)[0m[0m
+                }
+                [90m# (7 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # kubernetes_manifest.lab["deployment-scheduler"][0m will be updated in-place
+[0m  [33m~[0m[0m resource "kubernetes_manifest" "lab" {
+      [33m~[0m[0m manifest        = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations = {
+                          [33m~[0m[0m lab-source-checksum = "a904b9708113457555a75a4dcb1ca32b80462866a2ce5254ce13a0a80b23e989" [33m->[0m[0m "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1"
+                        }
+                        [90m# (1 unchanged attribute hidden)[0m[0m
+                    }
+                    [90m# (1 unchanged attribute hidden)[0m[0m
+                }
+                [90m# (3 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+      [33m~[0m[0m object          = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template                = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations                = {
+                          [31m-[0m[0m "kubectl.kubernetes.io/restartedAt" = "2026-10-09T17:08:45-03:00"
+                          [31m-[0m[0m lab-source-checksum                 = "a904b9708113457555a75a4dcb1ca32b80462866a2ce5254ce13a0a80b23e989"
+                        } -> (known after apply)
+                        name                       = [90mnull[0m[0m
+                        [90m# (13 unchanged attributes hidden)[0m[0m
+                    }
+                    [90m# (1 unchanged attribute hidden)[0m[0m
+                }
+                [90m# (7 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # kubernetes_manifest.lab["deployment-worker"][0m will be updated in-place
+[0m  [33m~[0m[0m resource "kubernetes_manifest" "lab" {
+      [33m~[0m[0m manifest        = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations = {
+                          [33m~[0m[0m lab-source-checksum = "a904b9708113457555a75a4dcb1ca32b80462866a2ce5254ce13a0a80b23e989" [33m->[0m[0m "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1"
+                        }
+                        [90m# (1 unchanged attribute hidden)[0m[0m
+                    }
+                    [90m# (1 unchanged attribute hidden)[0m[0m
+                }
+                [90m# (3 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+      [33m~[0m[0m object          = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template                = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations                = {
+                          [31m-[0m[0m "kubectl.kubernetes.io/restartedAt" = "2026-10-09T17:08:45-03:00"
+                          [31m-[0m[0m lab-source-checksum                 = "a904b9708113457555a75a4dcb1ca32b80462866a2ce5254ce13a0a80b23e989"
+                        } -> (known after apply)
+                        name                       = [90mnull[0m[0m
+                        [90m# (13 unchanged attributes hidden)[0m[0m
+                    }
+                    [90m# (1 unchanged attribute hidden)[0m[0m
+                }
+                [90m# (7 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1mPlan:[0m [0m0 to add, 4 to change, 0 to destroy.
+[0m[1mkubernetes_manifest.lab["deployment-worker"]: Modifying...[0m[0m
+[0m[1mkubernetes_manifest.lab["deployment-scheduler"]: Modifying...[0m[0m
+[0m[1mkubernetes_manifest.lab["deployment-exporter"]: Modifying...[0m[0m
+[0m[1mkubernetes_manifest.lab["deployment-api"]: Modifying...[0m[0m
+[0m[1mkubernetes_manifest.lab["deployment-worker"]: Modifications complete after 0s[0m
+[0m[1mkubernetes_manifest.lab["deployment-scheduler"]: Modifications complete after 0s[0m
+[0m[1mkubernetes_manifest.lab["deployment-api"]: Modifications complete after 0s[0m
+[0m[1mkubernetes_manifest.lab["deployment-exporter"]: Modifications complete after 0s[0m
+[0m[1m[32m
+Apply complete! Resources: 0 added, 4 changed, 0 destroyed.[0m
+deployment "postgres" successfully rolled out
+deployment "redis" successfully rolled out
+deployment "simulator" successfully rolled out
+Waiting for deployment "api" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "api" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "api" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "api" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "api" rollout to finish: 1 old replicas are pending termination...
+deployment "api" successfully rolled out
+Waiting for deployment "worker" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "worker" rollout to finish: 1 old replicas are pending termination...
+deployment "worker" successfully rolled out
+deployment "scheduler" successfully rolled out
+deployment "exporter" successfully rolled out
+deployment "prometheus" successfully rolled out
+deployment "loki" successfully rolled out
+deployment "alloy" successfully rolled out
+deployment "grafana" successfully rolled out
+deployment "kube-state-metrics" successfully rolled out
+Defaulted container "api" out of: api, storage-init (init)
+
+   INFO  Nothing to migrate.  
+
+deployment "api" successfully rolled out
+deployment "worker" successfully rolled out
+deployment "scheduler" successfully rolled out
+deployment "exporter" successfully rolled out

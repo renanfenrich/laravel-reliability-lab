@@ -1,0 +1,403 @@
+NAME                                    STATUS   ROLES           AGE   VERSION
+laravel-reliability-lab-control-plane   Ready    control-plane   48m   v1.34.0
+Image: "laravel-reliability-app:g1" with ID "sha256:4854c5e054d8cee1428e79edc5451eaa7f9c8f26677106b510bc4164b4c36638" not yet present on node "laravel-reliability-lab-control-plane", loading...
+Image: "laravel-reliability-simulator:g1" with ID "sha256:222a44c01be829ef410e4c6500898baffc60ec5d668bc782ba8bb850bdd7d467" not yet present on node "laravel-reliability-lab-control-plane", loading...
+[0m[1mInitializing the backend...[0m
+
+[0m[1mInitializing provider plugins...[0m
+- Reusing previous version of hashicorp/kubernetes from the dependency lock file
+- Using previously-installed hashicorp/kubernetes v2.38.0
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
+[0m[1mkubernetes_namespace_v1.lab: Refreshing state... [id=lab][0m
+[0m[1mkubernetes_secret_v1.lab: Refreshing state... [id=lab/lab-secrets][0m
+[0m[1mkubernetes_manifest.lab["serviceaccount-kube-state-metrics"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-alloy"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["persistentvolumeclaim-postgres-data"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-kube-state-metrics"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["role-alloy"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-worker"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-grafana-dashboard"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-kube-state-metrics"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["clusterrole-prometheus"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["serviceaccount-alloy"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-worker"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-grafana"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["clusterrolebinding-prometheus"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-grafana-datasources"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-redis"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-grafana"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-prometheus"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-loki"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-exporter"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-simulator"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-scheduler"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-api"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-prometheus"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-redis"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-alloy"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["role-kube-state-metrics"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-prometheus"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["persistentvolume-laravel-reliability-postgres"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-simulator"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-exporter"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-postgres"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-loki"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-postgres"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-loki"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-grafana-provider"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-scheduler"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["rolebinding-alloy"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-api"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["serviceaccount-prometheus"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-alloy"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["rolebinding-kube-state-metrics"]: Refreshing state...[0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [33m~[0m update in-place[0m
+
+Terraform will perform the following actions:
+
+[1m  # kubernetes_manifest.lab["deployment-api"][0m will be updated in-place
+[0m  [33m~[0m[0m resource "kubernetes_manifest" "lab" {
+      [33m~[0m[0m manifest        = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations = {
+                          [33m~[0m[0m lab-source-checksum = "0942ea1d2dde534324cd126776e3c7a715ec9e229c3bc33a4a48772dbbf50a29" [33m->[0m[0m "a904b9708113457555a75a4dcb1ca32b80462866a2ce5254ce13a0a80b23e989"
+                        }
+                        [90m# (1 unchanged attribute hidden)[0m[0m
+                    }
+                  [33m~[0m[0m spec     = {
+                      [33m~[0m[0m initContainers                = [
+                          [33m~[0m[0m {
+                                name            = "storage-init"
+                              [32m+[0m[0m resources       = {
+                                  [32m+[0m[0m limits   = {
+                                      [32m+[0m[0m cpu    = "100m"
+                                      [32m+[0m[0m memory = "64Mi"
+                                    }
+                                  [32m+[0m[0m requests = {
+                                      [32m+[0m[0m cpu    = "25m"
+                                      [32m+[0m[0m memory = "16Mi"
+                                    }
+                                }
+                                [90m# (5 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                        [90m# (5 unchanged attributes hidden)[0m[0m
+                    }
+                }
+                [90m# (3 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+      [33m~[0m[0m object          = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template                = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations                = {
+                          [31m-[0m[0m "kubectl.kubernetes.io/restartedAt" = "2026-10-09T17:08:45-03:00"
+                          [31m-[0m[0m lab-source-checksum                 = "0942ea1d2dde534324cd126776e3c7a715ec9e229c3bc33a4a48772dbbf50a29"
+                        } -> (known after apply)
+                        name                       = [90mnull[0m[0m
+                        [90m# (13 unchanged attributes hidden)[0m[0m
+                    }
+                  [33m~[0m[0m spec     = {
+                      [33m~[0m[0m initContainers                = [
+                          [33m~[0m[0m {
+                                name                     = "storage-init"
+                              [33m~[0m[0m resources                = {
+                                  [33m~[0m[0m limits   = [90mnull[0m[0m [33m->[0m[0m {
+                                      [32m+[0m[0m cpu    = "100m"
+                                      [32m+[0m[0m memory = "64Mi"
+                                    }
+                                  [33m~[0m[0m requests = [90mnull[0m[0m [33m->[0m[0m {
+                                      [32m+[0m[0m cpu    = "25m"
+                                      [32m+[0m[0m memory = "16Mi"
+                                    }
+                                    [90m# (1 unchanged attribute hidden)[0m[0m
+                                }
+                                [90m# (23 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                        [90m# (40 unchanged attributes hidden)[0m[0m
+                    }
+                }
+                [90m# (7 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # kubernetes_manifest.lab["deployment-exporter"][0m will be updated in-place
+[0m  [33m~[0m[0m resource "kubernetes_manifest" "lab" {
+      [33m~[0m[0m manifest        = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations = {
+                          [33m~[0m[0m lab-source-checksum = "0942ea1d2dde534324cd126776e3c7a715ec9e229c3bc33a4a48772dbbf50a29" [33m->[0m[0m "a904b9708113457555a75a4dcb1ca32b80462866a2ce5254ce13a0a80b23e989"
+                        }
+                        [90m# (1 unchanged attribute hidden)[0m[0m
+                    }
+                  [33m~[0m[0m spec     = {
+                      [33m~[0m[0m initContainers                = [
+                          [33m~[0m[0m {
+                                name            = "storage-init"
+                              [32m+[0m[0m resources       = {
+                                  [32m+[0m[0m limits   = {
+                                      [32m+[0m[0m cpu    = "100m"
+                                      [32m+[0m[0m memory = "64Mi"
+                                    }
+                                  [32m+[0m[0m requests = {
+                                      [32m+[0m[0m cpu    = "25m"
+                                      [32m+[0m[0m memory = "16Mi"
+                                    }
+                                }
+                                [90m# (5 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                        [90m# (5 unchanged attributes hidden)[0m[0m
+                    }
+                }
+                [90m# (3 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+      [33m~[0m[0m object          = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template                = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations                = {
+                          [31m-[0m[0m "kubectl.kubernetes.io/restartedAt" = "2026-10-09T17:08:45-03:00"
+                          [31m-[0m[0m lab-source-checksum                 = "0942ea1d2dde534324cd126776e3c7a715ec9e229c3bc33a4a48772dbbf50a29"
+                        } -> (known after apply)
+                        name                       = [90mnull[0m[0m
+                        [90m# (13 unchanged attributes hidden)[0m[0m
+                    }
+                  [33m~[0m[0m spec     = {
+                      [33m~[0m[0m initContainers                = [
+                          [33m~[0m[0m {
+                                name                     = "storage-init"
+                              [33m~[0m[0m resources                = {
+                                  [33m~[0m[0m limits   = [90mnull[0m[0m [33m->[0m[0m {
+                                      [32m+[0m[0m cpu    = "100m"
+                                      [32m+[0m[0m memory = "64Mi"
+                                    }
+                                  [33m~[0m[0m requests = [90mnull[0m[0m [33m->[0m[0m {
+                                      [32m+[0m[0m cpu    = "25m"
+                                      [32m+[0m[0m memory = "16Mi"
+                                    }
+                                    [90m# (1 unchanged attribute hidden)[0m[0m
+                                }
+                                [90m# (23 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                        [90m# (40 unchanged attributes hidden)[0m[0m
+                    }
+                }
+                [90m# (7 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # kubernetes_manifest.lab["deployment-scheduler"][0m will be updated in-place
+[0m  [33m~[0m[0m resource "kubernetes_manifest" "lab" {
+      [33m~[0m[0m manifest        = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations = {
+                          [33m~[0m[0m lab-source-checksum = "0942ea1d2dde534324cd126776e3c7a715ec9e229c3bc33a4a48772dbbf50a29" [33m->[0m[0m "a904b9708113457555a75a4dcb1ca32b80462866a2ce5254ce13a0a80b23e989"
+                        }
+                        [90m# (1 unchanged attribute hidden)[0m[0m
+                    }
+                  [33m~[0m[0m spec     = {
+                      [33m~[0m[0m initContainers                = [
+                          [33m~[0m[0m {
+                                name            = "storage-init"
+                              [32m+[0m[0m resources       = {
+                                  [32m+[0m[0m limits   = {
+                                      [32m+[0m[0m cpu    = "100m"
+                                      [32m+[0m[0m memory = "64Mi"
+                                    }
+                                  [32m+[0m[0m requests = {
+                                      [32m+[0m[0m cpu    = "25m"
+                                      [32m+[0m[0m memory = "16Mi"
+                                    }
+                                }
+                                [90m# (5 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                        [90m# (5 unchanged attributes hidden)[0m[0m
+                    }
+                }
+                [90m# (3 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+      [33m~[0m[0m object          = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template                = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations                = {
+                          [31m-[0m[0m "kubectl.kubernetes.io/restartedAt" = "2026-10-09T17:08:45-03:00"
+                          [31m-[0m[0m lab-source-checksum                 = "0942ea1d2dde534324cd126776e3c7a715ec9e229c3bc33a4a48772dbbf50a29"
+                        } -> (known after apply)
+                        name                       = [90mnull[0m[0m
+                        [90m# (13 unchanged attributes hidden)[0m[0m
+                    }
+                  [33m~[0m[0m spec     = {
+                      [33m~[0m[0m initContainers                = [
+                          [33m~[0m[0m {
+                                name                     = "storage-init"
+                              [33m~[0m[0m resources                = {
+                                  [33m~[0m[0m limits   = [90mnull[0m[0m [33m->[0m[0m {
+                                      [32m+[0m[0m cpu    = "100m"
+                                      [32m+[0m[0m memory = "64Mi"
+                                    }
+                                  [33m~[0m[0m requests = [90mnull[0m[0m [33m->[0m[0m {
+                                      [32m+[0m[0m cpu    = "25m"
+                                      [32m+[0m[0m memory = "16Mi"
+                                    }
+                                    [90m# (1 unchanged attribute hidden)[0m[0m
+                                }
+                                [90m# (23 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                        [90m# (40 unchanged attributes hidden)[0m[0m
+                    }
+                }
+                [90m# (7 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # kubernetes_manifest.lab["deployment-worker"][0m will be updated in-place
+[0m  [33m~[0m[0m resource "kubernetes_manifest" "lab" {
+      [33m~[0m[0m manifest        = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations = {
+                          [33m~[0m[0m lab-source-checksum = "0942ea1d2dde534324cd126776e3c7a715ec9e229c3bc33a4a48772dbbf50a29" [33m->[0m[0m "a904b9708113457555a75a4dcb1ca32b80462866a2ce5254ce13a0a80b23e989"
+                        }
+                        [90m# (1 unchanged attribute hidden)[0m[0m
+                    }
+                  [33m~[0m[0m spec     = {
+                      [33m~[0m[0m initContainers                = [
+                          [33m~[0m[0m {
+                                name            = "storage-init"
+                              [32m+[0m[0m resources       = {
+                                  [32m+[0m[0m limits   = {
+                                      [32m+[0m[0m cpu    = "100m"
+                                      [32m+[0m[0m memory = "64Mi"
+                                    }
+                                  [32m+[0m[0m requests = {
+                                      [32m+[0m[0m cpu    = "25m"
+                                      [32m+[0m[0m memory = "16Mi"
+                                    }
+                                }
+                                [90m# (5 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                        [90m# (5 unchanged attributes hidden)[0m[0m
+                    }
+                }
+                [90m# (3 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+      [33m~[0m[0m object          = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template                = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations                = {
+                          [31m-[0m[0m "kubectl.kubernetes.io/restartedAt" = "2026-10-09T17:08:45-03:00"
+                          [31m-[0m[0m lab-source-checksum                 = "0942ea1d2dde534324cd126776e3c7a715ec9e229c3bc33a4a48772dbbf50a29"
+                        } -> (known after apply)
+                        name                       = [90mnull[0m[0m
+                        [90m# (13 unchanged attributes hidden)[0m[0m
+                    }
+                  [33m~[0m[0m spec     = {
+                      [33m~[0m[0m initContainers                = [
+                          [33m~[0m[0m {
+                                name                     = "storage-init"
+                              [33m~[0m[0m resources                = {
+                                  [33m~[0m[0m limits   = [90mnull[0m[0m [33m->[0m[0m {
+                                      [32m+[0m[0m cpu    = "100m"
+                                      [32m+[0m[0m memory = "64Mi"
+                                    }
+                                  [33m~[0m[0m requests = [90mnull[0m[0m [33m->[0m[0m {
+                                      [32m+[0m[0m cpu    = "25m"
+                                      [32m+[0m[0m memory = "16Mi"
+                                    }
+                                    [90m# (1 unchanged attribute hidden)[0m[0m
+                                }
+                                [90m# (23 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                        [90m# (40 unchanged attributes hidden)[0m[0m
+                    }
+                }
+                [90m# (7 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1mPlan:[0m [0m0 to add, 4 to change, 0 to destroy.
+[0m[1mkubernetes_manifest.lab["deployment-worker"]: Modifying...[0m[0m
+[0m[1mkubernetes_manifest.lab["deployment-api"]: Modifying...[0m[0m
+[0m[1mkubernetes_manifest.lab["deployment-exporter"]: Modifying...[0m[0m
+[0m[1mkubernetes_manifest.lab["deployment-scheduler"]: Modifying...[0m[0m
+[0m[1mkubernetes_manifest.lab["deployment-api"]: Modifications complete after 0s[0m
+[0m[1mkubernetes_manifest.lab["deployment-worker"]: Modifications complete after 1s[0m
+[0m[1mkubernetes_manifest.lab["deployment-scheduler"]: Modifications complete after 1s[0m
+[0m[1mkubernetes_manifest.lab["deployment-exporter"]: Modifications complete after 1s[0m
+[0m[1m[32m
+Apply complete! Resources: 0 added, 4 changed, 0 destroyed.[0m
+deployment "postgres" successfully rolled out
+deployment "redis" successfully rolled out
+deployment "simulator" successfully rolled out
+Waiting for deployment "api" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "api" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "api" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "api" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "api" rollout to finish: 1 old replicas are pending termination...
+deployment "api" successfully rolled out
+Waiting for deployment "worker" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "worker" rollout to finish: 1 old replicas are pending termination...
+deployment "worker" successfully rolled out
+deployment "scheduler" successfully rolled out
+deployment "exporter" successfully rolled out
+deployment "prometheus" successfully rolled out
+deployment "loki" successfully rolled out
+deployment "alloy" successfully rolled out
+deployment "grafana" successfully rolled out
+deployment "kube-state-metrics" successfully rolled out
+Defaulted container "api" out of: api, storage-init (init)
+
+   INFO  Nothing to migrate.  
+
+deployment "api" successfully rolled out
+deployment "worker" successfully rolled out
+deployment "scheduler" successfully rolled out
+deployment "exporter" successfully rolled out

@@ -1,0 +1,254 @@
+{
+  "timestamp": "2026-10-09T20:18:40Z",
+  "source_commit": "32d6280d130162a099e8e0c25ac374e8b80a22d5",
+  "deployed_images": [
+    {
+      "pod": "alloy-5d58dddd74-6rwfr",
+      "container": "alloy",
+      "image": "docker.io/grafana/alloy:v1.20.1",
+      "image_id": "docker.io/grafana/alloy@sha256:2aa2099af76c0098d4af7a4d6e48f86cb66dc1a000222ad927a1c67c6542d13f",
+      "ready": true,
+      "restarts": 0
+    },
+    {
+      "pod": "api-6fb97bbf7-pp4hm",
+      "container": "api",
+      "image": "docker.io/library/laravel-reliability-app:g1",
+      "image_id": "sha256:d02f62126fb826cbf9f1f190b9108bc2beb683b6a6781f0aff42a0050a9b3b50",
+      "ready": true,
+      "restarts": 0
+    },
+    {
+      "pod": "api-6fb97bbf7-wp6xm",
+      "container": "api",
+      "image": "docker.io/library/laravel-reliability-app:g1",
+      "image_id": "sha256:d02f62126fb826cbf9f1f190b9108bc2beb683b6a6781f0aff42a0050a9b3b50",
+      "ready": true,
+      "restarts": 0
+    },
+    {
+      "pod": "exporter-5569ff6b5d-tqkgm",
+      "container": "exporter",
+      "image": "docker.io/library/laravel-reliability-app:g1",
+      "image_id": "sha256:d02f62126fb826cbf9f1f190b9108bc2beb683b6a6781f0aff42a0050a9b3b50",
+      "ready": true,
+      "restarts": 0
+    },
+    {
+      "pod": "grafana-74c6c7bcdb-x2wdc",
+      "container": "grafana",
+      "image": "docker.io/grafana/grafana:13.2.3",
+      "image_id": "docker.io/grafana/grafana@sha256:b28bae15e219c998fb0e0424ed724930cc61b1f61fb404d47c862f9a23f9e572",
+      "ready": true,
+      "restarts": 0
+    },
+    {
+      "pod": "kube-state-metrics-7f6f6875d7-xhwtz",
+      "container": "kube-state-metrics",
+      "image": "registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.20.0",
+      "image_id": "registry.k8s.io/kube-state-metrics/kube-state-metrics@sha256:42cfe3723a5f058171c627537fb57a3ea0f26e4380fa18555a95cb1a1b4cfc5b",
+      "ready": true,
+      "restarts": 0
+    },
+    {
+      "pod": "loki-7d54b54ffb-8xn25",
+      "container": "loki",
+      "image": "docker.io/grafana/loki:3.7.8",
+      "image_id": "docker.io/grafana/loki@sha256:1107dd5274e0ada47e42472b7a7e71f3b2a2fe878878108f3e2f9e51528f0193",
+      "ready": true,
+      "restarts": 0
+    },
+    {
+      "pod": "postgres-5f7965d6c4-4wx7k",
+      "container": "postgres",
+      "image": "docker.io/library/postgres:18.0-bookworm",
+      "image_id": "docker.io/library/postgres@sha256:3f55f8895c4ed50603e2fbdfc72fffeeaba3173321fee5cb825bbbeb30d9d854",
+      "ready": true,
+      "restarts": 0
+    },
+    {
+      "pod": "prometheus-7db44df76c-2jgwc",
+      "container": "prometheus",
+      "image": "docker.io/prom/prometheus:v3.15.0",
+      "image_id": "docker.io/prom/prometheus@sha256:efd719c99d83b060d9daefdcf00360461adf279f45ef5391f8d111892118753e",
+      "ready": true,
+      "restarts": 0
+    },
+    {
+      "pod": "redis-587dcb4467-tzqm2",
+      "container": "redis",
+      "image": "docker.io/library/redis:8.2.2-bookworm",
+      "image_id": "docker.io/library/redis@sha256:4521b581dbddea6e7d81f8fe95ede93f5648aaa66a9dacd581611bf6fe7527bd",
+      "ready": true,
+      "restarts": 0
+    },
+    {
+      "pod": "scheduler-6bc859f687-h9dr5",
+      "container": "scheduler",
+      "image": "docker.io/library/laravel-reliability-app:g1",
+      "image_id": "sha256:d02f62126fb826cbf9f1f190b9108bc2beb683b6a6781f0aff42a0050a9b3b50",
+      "ready": true,
+      "restarts": 0
+    },
+    {
+      "pod": "simulator-7b7ddd6f6f-fkpf9",
+      "container": "simulator",
+      "image": "docker.io/library/laravel-reliability-simulator:g1",
+      "image_id": "sha256:27227dbe753c9722c6f6a133b2112f4a9d6e5f9b6bdb6db78240a0fb7da53489",
+      "ready": true,
+      "restarts": 0
+    },
+    {
+      "pod": "worker-574778b7cc-fj9vr",
+      "container": "worker",
+      "image": "docker.io/library/laravel-reliability-app:g1",
+      "image_id": "sha256:d02f62126fb826cbf9f1f190b9108bc2beb683b6a6781f0aff42a0050a9b3b50",
+      "ready": true,
+      "restarts": 0
+    },
+    {
+      "pod": "worker-574778b7cc-xvfsj",
+      "container": "worker",
+      "image": "docker.io/library/laravel-reliability-app:g1",
+      "image_id": "sha256:d02f62126fb826cbf9f1f190b9108bc2beb683b6a6781f0aff42a0050a9b3b50",
+      "ready": true,
+      "restarts": 1
+    }
+  ],
+  "composer_packages": {
+    "brick/math": "1.0.0",
+    "carbonphp/carbon-doctrine-types": "3.2.1",
+    "dflydev/dot-access-data": "v3.0.3",
+    "doctrine/inflector": "2.1.0",
+    "doctrine/lexer": "3.0.3",
+    "dragonmantank/cron-expression": "v3.6.0",
+    "egulias/email-validator": "4.0.4",
+    "fruitcake/php-cors": "v1.4.0",
+    "graham-campbell/result-type": "v1.2.0",
+    "guzzlehttp/guzzle": "8.2.0",
+    "guzzlehttp/promises": "3.0.2",
+    "guzzlehttp/psr7": "3.1.0",
+    "guzzlehttp/uri-template": "v2.0.1",
+    "laravel/framework": "v13.34.0",
+    "laravel/prompts": "v0.3.25",
+    "laravel/serializable-closure": "v2.1.0",
+    "league/commonmark": "2.10.3",
+    "league/config": "v1.2.0",
+    "league/flysystem": "3.36.0",
+    "league/flysystem-local": "3.35.3",
+    "league/mime-type-detection": "1.17.0",
+    "league/uri": "7.8.1",
+    "league/uri-interfaces": "7.8.1",
+    "monolog/monolog": "3.12.1",
+    "nesbot/carbon": "3.14.2",
+    "nette/schema": "v1.3.6",
+    "nette/utils": "v4.1.5",
+    "nunomaduro/termwind": "v2.4.0",
+    "phpoption/phpoption": "1.10.0",
+    "predis/predis": "v3.2.0",
+    "psr/clock": "1.0.0",
+    "psr/container": "2.0.2",
+    "psr/event-dispatcher": "1.0.0",
+    "psr/http-client": "1.0.3",
+    "psr/http-factory": "1.1.0",
+    "psr/http-message": "2.0",
+    "psr/log": "3.0.2",
+    "psr/simple-cache": "3.0.0",
+    "ramsey/collection": "2.1.1",
+    "ramsey/uuid": "4.9.4",
+    "symfony/clock": "v8.1.0",
+    "symfony/console": "v8.1.8",
+    "symfony/css-selector": "v8.1.6",
+    "symfony/deprecation-contracts": "v3.7.1",
+    "symfony/error-handler": "v8.1.8",
+    "symfony/event-dispatcher": "v8.1.5",
+    "symfony/event-dispatcher-contracts": "v3.7.1",
+    "symfony/finder": "v8.1.8",
+    "symfony/http-foundation": "v8.1.8",
+    "symfony/http-kernel": "v8.1.8",
+    "symfony/mailer": "v8.1.7",
+    "symfony/mime": "v8.1.7",
+    "symfony/polyfill-ctype": "v1.37.0",
+    "symfony/polyfill-intl-grapheme": "v1.43.0",
+    "symfony/polyfill-intl-idn": "v1.43.0",
+    "symfony/polyfill-intl-normalizer": "v1.43.0",
+    "symfony/polyfill-mbstring": "v1.43.0",
+    "symfony/polyfill-php80": "v1.43.0",
+    "symfony/polyfill-php82": "v1.43.0",
+    "symfony/polyfill-php84": "v1.43.0",
+    "symfony/polyfill-php85": "v1.43.0",
+    "symfony/polyfill-php86": "v1.43.0",
+    "symfony/polyfill-uuid": "v1.43.0",
+    "symfony/process": "v8.1.7",
+    "symfony/routing": "v8.1.8",
+    "symfony/service-contracts": "v3.7.3",
+    "symfony/string": "v8.1.7",
+    "symfony/translation": "v8.1.5",
+    "symfony/translation-contracts": "v3.7.1",
+    "symfony/uid": "v8.1.8",
+    "symfony/var-dumper": "v8.1.7",
+    "tijsverkoyen/css-to-inline-styles": "v2.4.0",
+    "vlucas/phpdotenv": "v5.7.0",
+    "voku/portable-ascii": "2.1.1",
+    "hamcrest/hamcrest-php": "v2.1.1",
+    "mockery/mockery": "1.6.12",
+    "myclabs/deep-copy": "1.14.0",
+    "nikic/php-parser": "v5.9.0",
+    "phar-io/manifest": "2.0.4",
+    "phar-io/version": "3.2.1",
+    "phpunit/php-code-coverage": "12.5.8",
+    "phpunit/php-file-iterator": "6.0.2",
+    "phpunit/php-invoker": "6.0.0",
+    "phpunit/php-text-template": "5.0.1",
+    "phpunit/php-timer": "8.0.0",
+    "phpunit/phpunit": "12.5.12",
+    "sebastian/cli-parser": "4.2.1",
+    "sebastian/comparator": "7.1.8",
+    "sebastian/complexity": "5.0.0",
+    "sebastian/diff": "7.0.1",
+    "sebastian/environment": "8.1.2",
+    "sebastian/exporter": "7.0.3",
+    "sebastian/global-state": "8.0.3",
+    "sebastian/lines-of-code": "4.0.1",
+    "sebastian/object-enumerator": "7.0.0",
+    "sebastian/object-reflector": "5.0.0",
+    "sebastian/recursion-context": "7.0.1",
+    "sebastian/type": "6.0.4",
+    "sebastian/version": "6.0.1",
+    "staabm/side-effects-detector": "1.0.5",
+    "theseer/tokenizer": "2.0.1"
+  },
+  "source_checksums": {
+    "deployment-postgres": null,
+    "deployment-redis": null,
+    "deployment-simulator": {
+      "lab-source-checksum": "0cb06d498f26916fc58474ba50270b100d25946876681d24d52f6bb48314e000"
+    },
+    "deployment-api": {
+      "lab-source-checksum": "e17db02ffb46548fbc4e9a48dc390de577c630f31490ef6541918d488ac0bfa0"
+    },
+    "deployment-worker": {
+      "lab-source-checksum": "e17db02ffb46548fbc4e9a48dc390de577c630f31490ef6541918d488ac0bfa0"
+    },
+    "deployment-scheduler": {
+      "lab-source-checksum": "e17db02ffb46548fbc4e9a48dc390de577c630f31490ef6541918d488ac0bfa0"
+    },
+    "deployment-exporter": {
+      "lab-source-checksum": "e17db02ffb46548fbc4e9a48dc390de577c630f31490ef6541918d488ac0bfa0"
+    },
+    "deployment-prometheus": {
+      "lab-config-checksum": "a31f478f25facc0f5672ff2cd435eda896aab352025a50b4772b54797fabaca2"
+    },
+    "deployment-loki": {
+      "lab-config-checksum": "346bf60bb55c7a2d8f93a8e9ff94a9c93ff30297fca6b40098bea9c57321939d"
+    },
+    "deployment-alloy": {
+      "lab-config-checksum": "939c171073c5989473e168ca34badba3dd70388fb3ce557b764662900f0b62bb"
+    },
+    "deployment-grafana": {
+      "lab-config-checksum": "31ba38c79ee750e0fa48c7567127e146f28393b1df118acb2b68c9d1d87750ee"
+    },
+    "deployment-kube-state-metrics": null
+  },
+  "host_tool_versions": "/usr/bin/docker\n/usr/local/bin/kind\n/usr/bin/terraform\n/home/linuxbrew/.linuxbrew/bin/python3\n/usr/bin/curl\n/usr/bin/git\n29.9.0\nDocker Compose version v5.6.0\nkind v0.30.0 go1.24.6 linux/amd64\nTerraform v1.16.5\non linux_amd64\nCURRENT   NAME        CLUSTER     AUTHINFO    NAMESPACE\n          kind-news   kind-news   kind-news   \nlaravel-reliability-lab\n               total        used        free      shared  buff/cache   available\nMem:            31Gi       6.7Gi        10Gi       738Mi        15Gi        24Gi\nSwap:          8.0Gi          0B       8.0Gi\nFilesystem      Size  Used Avail Use% Mounted on\n/dev/nvme0n1p2  468G  357G   88G  81% /\nState  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess\nLISTEN 0      200        127.0.0.1:5433       0.0.0.0:*          \nLISTEN 0      32        10.10.10.1:53         0.0.0.0:*          \nLISTEN 0      4096       127.0.0.1:631        0.0.0.0:*          \nLISTEN 0      4096       127.0.0.1:18080      0.0.0.0:*          \nLISTEN 0      4096   127.0.0.53%lo:53         0.0.0.0:*          \nLISTEN 0      4096      127.0.0.54:53         0.0.0.0:*          \nLISTEN 0      4096       127.0.0.1:11434      0.0.0.0:*          \nLISTEN 0      4096       127.0.0.1:44737      0.0.0.0:*          \nLISTEN 0      32     192.168.122.1:53         0.0.0.0:*          \nLISTEN 0      4096           [::1]:631           [::]:*          \n"
+}
