@@ -1,0 +1,30 @@
+/usr/bin/docker
+/usr/local/bin/kind
+/usr/bin/terraform
+/home/linuxbrew/.linuxbrew/bin/python3
+/usr/bin/curl
+/usr/bin/git
+29.9.0
+Docker Compose version v5.6.0
+kind v0.30.0 go1.24.6 linux/amd64
+Terraform v1.16.5
+on linux_amd64
+CURRENT   NAME        CLUSTER     AUTHINFO    NAMESPACE
+          kind-news   kind-news   kind-news   
+laravel-reliability-lab
+               total        used        free      shared  buff/cache   available
+Mem:            31Gi       6.7Gi        10Gi       738Mi        15Gi        24Gi
+Swap:          8.0Gi          0B       8.0Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  468G  357G   88G  81% /
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess
+LISTEN 0      200        127.0.0.1:5433       0.0.0.0:*          
+LISTEN 0      32        10.10.10.1:53         0.0.0.0:*          
+LISTEN 0      4096       127.0.0.1:631        0.0.0.0:*          
+LISTEN 0      4096       127.0.0.1:18080      0.0.0.0:*          
+LISTEN 0      4096   127.0.0.53%lo:53         0.0.0.0:*          
+LISTEN 0      4096      127.0.0.54:53         0.0.0.0:*          
+LISTEN 0      4096       127.0.0.1:11434      0.0.0.0:*          
+LISTEN 0      4096       127.0.0.1:44737      0.0.0.0:*          
+LISTEN 0      32     192.168.122.1:53         0.0.0.0:*          
+LISTEN 0      4096           [::1]:631           [::]:*          

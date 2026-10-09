@@ -1,0 +1,22 @@
+{
+  "start": "2026-10-09T19:57:50Z",
+  "end": "2026-10-09T19:57:56Z",
+  "commit": "d3e70b439e68437481356fdae98b77051abd47a5",
+  "concurrent_submissions": 8,
+  "unique_report": "710d0b52-8667-47d2-81f8-33aa76d02baf",
+  "one_created": true,
+  "database_row": "completed|1|347275e8601cc49cfde3a68af27439d426e9e7ac348726e98b4974a98383ae3f",
+  "completed_result": {
+    "id": "710d0b52-8667-47d2-81f8-33aa76d02baf",
+    "state": "completed",
+    "attempts": 1,
+    "result": {
+      "checksum": "347275e8601cc49cfde3a68af27439d426e9e7ac348726e98b4974a98383ae3f"
+    },
+    "error": null,
+    "deadline_met": null,
+    "overdue": false
+  },
+  "completion_wait_seconds": 1.0147937479996472,
+  "result": "PASS"
+}

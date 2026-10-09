@@ -1,0 +1,1505 @@
+{
+  "persistentvolume-laravel-reliability-postgres": {
+    "apiVersion": "v1",
+    "kind": "PersistentVolume",
+    "metadata": {
+      "name": "laravel-reliability-postgres"
+    },
+    "spec": {
+      "capacity": {
+        "storage": "5Gi"
+      },
+      "accessModes": [
+        "ReadWriteOnce"
+      ],
+      "persistentVolumeReclaimPolicy": "Retain",
+      "storageClassName": "lab-static",
+      "hostPath": {
+        "path": "/lab-postgres",
+        "type": "DirectoryOrCreate"
+      },
+      "claimRef": {
+        "namespace": "lab",
+        "name": "postgres-data"
+      }
+    }
+  },
+  "persistentvolumeclaim-postgres-data": {
+    "apiVersion": "v1",
+    "kind": "PersistentVolumeClaim",
+    "metadata": {
+      "name": "postgres-data",
+      "namespace": "lab"
+    },
+    "spec": {
+      "accessModes": [
+        "ReadWriteOnce"
+      ],
+      "storageClassName": "lab-static",
+      "volumeName": "laravel-reliability-postgres",
+      "resources": {
+        "requests": {
+          "storage": "5Gi"
+        }
+      }
+    }
+  },
+  "deployment-postgres": {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "postgres",
+      "namespace": "lab"
+    },
+    "spec": {
+      "replicas": 1,
+      "strategy": {
+        "type": "Recreate"
+      },
+      "selector": {
+        "matchLabels": {
+          "app": "postgres"
+        }
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "app": "postgres"
+          }
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "postgres",
+              "image": "postgres:18.0-bookworm",
+              "imagePullPolicy": "IfNotPresent",
+              "ports": [
+                {
+                  "containerPort": 5432,
+                  "name": "http"
+                }
+              ],
+              "resources": {
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "128Mi"
+                },
+                "limits": {
+                  "cpu": "2",
+                  "memory": "512Mi"
+                }
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ],
+                  "add": [
+                    "CHOWN",
+                    "SETUID",
+                    "SETGID",
+                    "DAC_OVERRIDE",
+                    "FOWNER"
+                  ]
+                },
+                "readOnlyRootFilesystem": false
+              },
+              "env": [
+                {
+                  "name": "POSTGRES_DB",
+                  "value": "lab"
+                },
+                {
+                  "name": "POSTGRES_USER",
+                  "value": "lab"
+                },
+                {
+                  "name": "POSTGRES_PASSWORD",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "name": "lab-secrets",
+                      "key": "POSTGRES_PASSWORD"
+                    }
+                  }
+                }
+              ],
+              "volumeMounts": [
+                {
+                  "name": "data",
+                  "mountPath": "/var/lib/postgresql"
+                }
+              ],
+              "startupProbe": {
+                "exec": {
+                  "command": [
+                    "pg_isready",
+                    "-U",
+                    "lab",
+                    "-d",
+                    "lab"
+                  ]
+                },
+                "failureThreshold": 60,
+                "periodSeconds": 3,
+                "timeoutSeconds": 2
+              },
+              "readinessProbe": {
+                "exec": {
+                  "command": [
+                    "pg_isready",
+                    "-U",
+                    "lab",
+                    "-d",
+                    "lab"
+                  ]
+                },
+                "periodSeconds": 5,
+                "timeoutSeconds": 3
+              },
+              "livenessProbe": {
+                "exec": {
+                  "command": [
+                    "pg_isready",
+                    "-U",
+                    "lab",
+                    "-d",
+                    "lab"
+                  ]
+                },
+                "periodSeconds": 10,
+                "timeoutSeconds": 3,
+                "failureThreshold": 6
+              }
+            }
+          ],
+          "terminationGracePeriodSeconds": 25,
+          "automountServiceAccountToken": false,
+          "securityContext": {
+            "seccompProfile": {
+              "type": "RuntimeDefault"
+            }
+          },
+          "volumes": [
+            {
+              "name": "data",
+              "persistentVolumeClaim": {
+                "claimName": "postgres-data"
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "service-postgres": {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "name": "postgres",
+      "namespace": "lab"
+    },
+    "spec": {
+      "selector": {
+        "app": "postgres"
+      },
+      "ports": [
+        {
+          "port": 5432,
+          "targetPort": 5432,
+          "name": "tcp"
+        }
+      ]
+    }
+  },
+  "deployment-redis": {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "redis",
+      "namespace": "lab"
+    },
+    "spec": {
+      "replicas": 1,
+      "strategy": {
+        "type": "Recreate"
+      },
+      "selector": {
+        "matchLabels": {
+          "app": "redis"
+        }
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "app": "redis"
+          }
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "redis",
+              "image": "redis:8.2.2-bookworm",
+              "imagePullPolicy": "IfNotPresent",
+              "ports": [
+                {
+                  "containerPort": 6379,
+                  "name": "http"
+                }
+              ],
+              "resources": {
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "128Mi"
+                },
+                "limits": {
+                  "cpu": "1",
+                  "memory": "256Mi"
+                }
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ],
+                  "add": [
+                    "CHOWN",
+                    "SETUID",
+                    "SETGID",
+                    "DAC_OVERRIDE",
+                    "FOWNER"
+                  ]
+                },
+                "readOnlyRootFilesystem": false
+              },
+              "command": [
+                "sh",
+                "-c",
+                "exec redis-server --appendonly yes --requirepass \"$REDIS_PASSWORD\""
+              ],
+              "env": [
+                {
+                  "name": "REDIS_PASSWORD",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "name": "lab-secrets",
+                      "key": "REDIS_PASSWORD"
+                    }
+                  }
+                }
+              ],
+              "volumeMounts": [
+                {
+                  "name": "data",
+                  "mountPath": "/data"
+                }
+              ],
+              "startupProbe": {
+                "exec": {
+                  "command": [
+                    "sh",
+                    "-c",
+                    "REDISCLI_AUTH=\"$REDIS_PASSWORD\" redis-cli ping | grep -q PONG"
+                  ]
+                },
+                "failureThreshold": 60,
+                "periodSeconds": 3,
+                "timeoutSeconds": 2
+              },
+              "readinessProbe": {
+                "exec": {
+                  "command": [
+                    "sh",
+                    "-c",
+                    "REDISCLI_AUTH=\"$REDIS_PASSWORD\" redis-cli ping | grep -q PONG"
+                  ]
+                },
+                "periodSeconds": 5,
+                "timeoutSeconds": 3
+              },
+              "livenessProbe": {
+                "exec": {
+                  "command": [
+                    "sh",
+                    "-c",
+                    "REDISCLI_AUTH=\"$REDIS_PASSWORD\" redis-cli ping | grep -q PONG"
+                  ]
+                },
+                "periodSeconds": 10,
+                "timeoutSeconds": 3,
+                "failureThreshold": 6
+              }
+            }
+          ],
+          "terminationGracePeriodSeconds": 25,
+          "automountServiceAccountToken": false,
+          "securityContext": {
+            "seccompProfile": {
+              "type": "RuntimeDefault"
+            }
+          },
+          "volumes": [
+            {
+              "name": "data",
+              "emptyDir": {}
+            }
+          ]
+        }
+      }
+    }
+  },
+  "service-redis": {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "name": "redis",
+      "namespace": "lab"
+    },
+    "spec": {
+      "selector": {
+        "app": "redis"
+      },
+      "ports": [
+        {
+          "port": 6379,
+          "targetPort": 6379,
+          "name": "tcp"
+        }
+      ]
+    }
+  },
+  "deployment-simulator": {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "simulator",
+      "namespace": "lab"
+    },
+    "spec": {
+      "replicas": 1,
+      "strategy": {
+        "type": "RollingUpdate"
+      },
+      "selector": {
+        "matchLabels": {
+          "app": "simulator"
+        }
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "app": "simulator"
+          }
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "simulator",
+              "image": "laravel-reliability-simulator:g1",
+              "imagePullPolicy": "IfNotPresent",
+              "ports": [
+                {
+                  "containerPort": 8081,
+                  "name": "http"
+                }
+              ],
+              "resources": {
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "128Mi"
+                },
+                "limits": {
+                  "cpu": "1",
+                  "memory": "128Mi"
+                }
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                },
+                "readOnlyRootFilesystem": true,
+                "runAsUser": 1000,
+                "runAsNonRoot": true
+              },
+              "startupProbe": {
+                "httpGet": {
+                  "path": "/live",
+                  "port": 8081
+                },
+                "failureThreshold": 60,
+                "periodSeconds": 3,
+                "timeoutSeconds": 2
+              },
+              "readinessProbe": {
+                "httpGet": {
+                  "path": "/live",
+                  "port": 8081
+                },
+                "periodSeconds": 5,
+                "timeoutSeconds": 3
+              },
+              "livenessProbe": {
+                "httpGet": {
+                  "path": "/live",
+                  "port": 8081
+                },
+                "periodSeconds": 10,
+                "timeoutSeconds": 3,
+                "failureThreshold": 6
+              }
+            }
+          ],
+          "terminationGracePeriodSeconds": 25,
+          "automountServiceAccountToken": false,
+          "securityContext": {
+            "seccompProfile": {
+              "type": "RuntimeDefault"
+            },
+            "fsGroup": 1000
+          }
+        }
+      }
+    }
+  },
+  "service-simulator": {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "name": "simulator",
+      "namespace": "lab"
+    },
+    "spec": {
+      "selector": {
+        "app": "simulator"
+      },
+      "ports": [
+        {
+          "port": 8081,
+          "targetPort": 8081,
+          "name": "http"
+        }
+      ]
+    }
+  },
+  "deployment-api": {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "api",
+      "namespace": "lab"
+    },
+    "spec": {
+      "replicas": 2,
+      "strategy": {
+        "type": "RollingUpdate"
+      },
+      "selector": {
+        "matchLabels": {
+          "app": "api"
+        }
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "app": "api"
+          }
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "api",
+              "image": "laravel-reliability-app:g1",
+              "imagePullPolicy": "IfNotPresent",
+              "ports": [
+                {
+                  "containerPort": 8080,
+                  "name": "http"
+                }
+              ],
+              "resources": {
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "128Mi"
+                },
+                "limits": {
+                  "cpu": "1",
+                  "memory": "384Mi"
+                }
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                },
+                "readOnlyRootFilesystem": true,
+                "runAsUser": 1000,
+                "runAsNonRoot": true
+              },
+              "command": [
+                "php",
+                "-S",
+                "0.0.0.0:8080",
+                "-t",
+                "public",
+                "public/index.php"
+              ],
+              "env": [
+                {
+                  "name": "APP_KEY",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "name": "lab-secrets",
+                      "key": "APP_KEY"
+                    }
+                  }
+                },
+                {
+                  "name": "DB_PASSWORD",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "name": "lab-secrets",
+                      "key": "DB_PASSWORD"
+                    }
+                  }
+                },
+                {
+                  "name": "REDIS_PASSWORD",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "name": "lab-secrets",
+                      "key": "REDIS_PASSWORD"
+                    }
+                  }
+                },
+                {
+                  "name": "LAB_TOKEN",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "name": "lab-secrets",
+                      "key": "LAB_TOKEN"
+                    }
+                  }
+                },
+                {
+                  "name": "APP_ENV",
+                  "value": "local"
+                },
+                {
+                  "name": "LAB_FAULTS",
+                  "value": "true"
+                },
+                {
+                  "name": "DB_HOST",
+                  "value": "postgres"
+                },
+                {
+                  "name": "REDIS_HOST",
+                  "value": "redis"
+                },
+                {
+                  "name": "SIMULATOR_URL",
+                  "value": "http://simulator:8081"
+                },
+                {
+                  "name": "LAB_ROLE",
+                  "value": "api"
+                },
+                {
+                  "name": "PHP_CLI_SERVER_WORKERS",
+                  "value": "4"
+                }
+              ],
+              "volumeMounts": [
+                {
+                  "name": "storage",
+                  "mountPath": "/app/storage"
+                },
+                {
+                  "name": "cache",
+                  "mountPath": "/app/bootstrap/cache"
+                },
+                {
+                  "name": "tmp",
+                  "mountPath": "/tmp"
+                }
+              ],
+              "startupProbe": {
+                "httpGet": {
+                  "path": "/api/ready",
+                  "port": 8080
+                },
+                "failureThreshold": 60,
+                "periodSeconds": 3,
+                "timeoutSeconds": 2
+              },
+              "readinessProbe": {
+                "httpGet": {
+                  "path": "/api/ready",
+                  "port": 8080
+                },
+                "periodSeconds": 5,
+                "timeoutSeconds": 3
+              },
+              "livenessProbe": {
+                "httpGet": {
+                  "path": "/api/live",
+                  "port": 8080
+                },
+                "periodSeconds": 10,
+                "failureThreshold": 3
+              }
+            }
+          ],
+          "terminationGracePeriodSeconds": 25,
+          "automountServiceAccountToken": false,
+          "securityContext": {
+            "seccompProfile": {
+              "type": "RuntimeDefault"
+            },
+            "fsGroup": 1000
+          },
+          "volumes": [
+            {
+              "name": "storage",
+              "emptyDir": {}
+            },
+            {
+              "name": "cache",
+              "emptyDir": {}
+            },
+            {
+              "name": "tmp",
+              "emptyDir": {}
+            }
+          ],
+          "initContainers": [
+            {
+              "name": "storage-init",
+              "image": "laravel-reliability-app:g1",
+              "imagePullPolicy": "IfNotPresent",
+              "command": [
+                "sh",
+                "-c",
+                "mkdir -p /app/storage/framework/cache /app/storage/framework/views /app/storage/framework/sessions /app/storage/logs"
+              ],
+              "volumeMounts": [
+                {
+                  "name": "storage",
+                  "mountPath": "/app/storage"
+                },
+                {
+                  "name": "cache",
+                  "mountPath": "/app/bootstrap/cache"
+                },
+                {
+                  "name": "tmp",
+                  "mountPath": "/tmp"
+                }
+              ],
+              "securityContext": {
+                "runAsUser": 1000,
+                "runAsNonRoot": true,
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "service-api": {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "name": "api",
+      "namespace": "lab"
+    },
+    "spec": {
+      "selector": {
+        "app": "api"
+      },
+      "ports": [
+        {
+          "port": 8080,
+          "targetPort": 8080,
+          "name": "http"
+        }
+      ]
+    }
+  },
+  "deployment-worker": {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "worker",
+      "namespace": "lab"
+    },
+    "spec": {
+      "replicas": 2,
+      "strategy": {
+        "type": "RollingUpdate"
+      },
+      "selector": {
+        "matchLabels": {
+          "app": "worker"
+        }
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "app": "worker"
+          }
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "worker",
+              "image": "laravel-reliability-app:g1",
+              "imagePullPolicy": "IfNotPresent",
+              "ports": [
+                {
+                  "containerPort": 8080,
+                  "name": "http"
+                }
+              ],
+              "resources": {
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "128Mi"
+                },
+                "limits": {
+                  "cpu": "1",
+                  "memory": "384Mi"
+                }
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                },
+                "readOnlyRootFilesystem": true,
+                "runAsUser": 1000,
+                "runAsNonRoot": true
+              },
+              "command": [
+                "php",
+                "artisan",
+                "queue:work",
+                "redis",
+                "--queue=reports",
+                "--sleep=1",
+                "--timeout=10",
+                "--tries=1"
+              ],
+              "env": [
+                {
+                  "name": "APP_KEY",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "name": "lab-secrets",
+                      "key": "APP_KEY"
+                    }
+                  }
+                },
+                {
+                  "name": "DB_PASSWORD",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "name": "lab-secrets",
+                      "key": "DB_PASSWORD"
+                    }
+                  }
+                },
+                {
+                  "name": "REDIS_PASSWORD",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "name": "lab-secrets",
+                      "key": "REDIS_PASSWORD"
+                    }
+                  }
+                },
+                {
+                  "name": "LAB_TOKEN",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "name": "lab-secrets",
+                      "key": "LAB_TOKEN"
+                    }
+                  }
+                },
+                {
+                  "name": "APP_ENV",
+                  "value": "local"
+                },
+                {
+                  "name": "LAB_FAULTS",
+                  "value": "true"
+                },
+                {
+                  "name": "DB_HOST",
+                  "value": "postgres"
+                },
+                {
+                  "name": "REDIS_HOST",
+                  "value": "redis"
+                },
+                {
+                  "name": "SIMULATOR_URL",
+                  "value": "http://simulator:8081"
+                },
+                {
+                  "name": "LAB_ROLE",
+                  "value": "worker"
+                }
+              ],
+              "volumeMounts": [
+                {
+                  "name": "storage",
+                  "mountPath": "/app/storage"
+                },
+                {
+                  "name": "cache",
+                  "mountPath": "/app/bootstrap/cache"
+                },
+                {
+                  "name": "tmp",
+                  "mountPath": "/tmp"
+                }
+              ],
+              "startupProbe": {
+                "exec": {
+                  "command": [
+                    "php",
+                    "artisan",
+                    "lab:ready"
+                  ]
+                },
+                "failureThreshold": 60,
+                "periodSeconds": 3,
+                "timeoutSeconds": 2
+              },
+              "readinessProbe": {
+                "exec": {
+                  "command": [
+                    "php",
+                    "artisan",
+                    "lab:ready"
+                  ]
+                },
+                "periodSeconds": 5,
+                "timeoutSeconds": 3
+              },
+              "livenessProbe": {
+                "exec": {
+                  "command": [
+                    "php",
+                    "-r",
+                    "exit(str_contains(file_get_contents('/proc/1/cmdline'), 'artisan') ? 0 : 1);"
+                  ]
+                },
+                "periodSeconds": 10,
+                "failureThreshold": 3
+              }
+            }
+          ],
+          "terminationGracePeriodSeconds": 25,
+          "automountServiceAccountToken": false,
+          "securityContext": {
+            "seccompProfile": {
+              "type": "RuntimeDefault"
+            },
+            "fsGroup": 1000
+          },
+          "volumes": [
+            {
+              "name": "storage",
+              "emptyDir": {}
+            },
+            {
+              "name": "cache",
+              "emptyDir": {}
+            },
+            {
+              "name": "tmp",
+              "emptyDir": {}
+            }
+          ],
+          "initContainers": [
+            {
+              "name": "storage-init",
+              "image": "laravel-reliability-app:g1",
+              "imagePullPolicy": "IfNotPresent",
+              "command": [
+                "sh",
+                "-c",
+                "mkdir -p /app/storage/framework/cache /app/storage/framework/views /app/storage/framework/sessions /app/storage/logs"
+              ],
+              "volumeMounts": [
+                {
+                  "name": "storage",
+                  "mountPath": "/app/storage"
+                },
+                {
+                  "name": "cache",
+                  "mountPath": "/app/bootstrap/cache"
+                },
+                {
+                  "name": "tmp",
+                  "mountPath": "/tmp"
+                }
+              ],
+              "securityContext": {
+                "runAsUser": 1000,
+                "runAsNonRoot": true,
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "service-worker": {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "name": "worker",
+      "namespace": "lab"
+    },
+    "spec": {
+      "selector": {
+        "app": "worker"
+      },
+      "ports": [
+        {
+          "port": 8080,
+          "targetPort": 8080,
+          "name": "http"
+        }
+      ]
+    }
+  },
+  "deployment-scheduler": {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "scheduler",
+      "namespace": "lab"
+    },
+    "spec": {
+      "replicas": 1,
+      "strategy": {
+        "type": "RollingUpdate"
+      },
+      "selector": {
+        "matchLabels": {
+          "app": "scheduler"
+        }
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "app": "scheduler"
+          }
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "scheduler",
+              "image": "laravel-reliability-app:g1",
+              "imagePullPolicy": "IfNotPresent",
+              "ports": [
+                {
+                  "containerPort": 8080,
+                  "name": "http"
+                }
+              ],
+              "resources": {
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "128Mi"
+                },
+                "limits": {
+                  "cpu": "1",
+                  "memory": "384Mi"
+                }
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                },
+                "readOnlyRootFilesystem": true,
+                "runAsUser": 1000,
+                "runAsNonRoot": true
+              },
+              "command": [
+                "php",
+                "artisan",
+                "schedule:work"
+              ],
+              "env": [
+                {
+                  "name": "APP_KEY",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "name": "lab-secrets",
+                      "key": "APP_KEY"
+                    }
+                  }
+                },
+                {
+                  "name": "DB_PASSWORD",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "name": "lab-secrets",
+                      "key": "DB_PASSWORD"
+                    }
+                  }
+                },
+                {
+                  "name": "REDIS_PASSWORD",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "name": "lab-secrets",
+                      "key": "REDIS_PASSWORD"
+                    }
+                  }
+                },
+                {
+                  "name": "LAB_TOKEN",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "name": "lab-secrets",
+                      "key": "LAB_TOKEN"
+                    }
+                  }
+                },
+                {
+                  "name": "APP_ENV",
+                  "value": "local"
+                },
+                {
+                  "name": "LAB_FAULTS",
+                  "value": "true"
+                },
+                {
+                  "name": "DB_HOST",
+                  "value": "postgres"
+                },
+                {
+                  "name": "REDIS_HOST",
+                  "value": "redis"
+                },
+                {
+                  "name": "SIMULATOR_URL",
+                  "value": "http://simulator:8081"
+                },
+                {
+                  "name": "LAB_ROLE",
+                  "value": "scheduler"
+                }
+              ],
+              "volumeMounts": [
+                {
+                  "name": "storage",
+                  "mountPath": "/app/storage"
+                },
+                {
+                  "name": "cache",
+                  "mountPath": "/app/bootstrap/cache"
+                },
+                {
+                  "name": "tmp",
+                  "mountPath": "/tmp"
+                }
+              ],
+              "startupProbe": {
+                "exec": {
+                  "command": [
+                    "php",
+                    "artisan",
+                    "lab:ready"
+                  ]
+                },
+                "failureThreshold": 60,
+                "periodSeconds": 3,
+                "timeoutSeconds": 2
+              },
+              "readinessProbe": {
+                "exec": {
+                  "command": [
+                    "php",
+                    "artisan",
+                    "lab:ready"
+                  ]
+                },
+                "periodSeconds": 5,
+                "timeoutSeconds": 3
+              },
+              "livenessProbe": {
+                "exec": {
+                  "command": [
+                    "php",
+                    "-r",
+                    "exit(str_contains(file_get_contents('/proc/1/cmdline'), 'artisan') ? 0 : 1);"
+                  ]
+                },
+                "periodSeconds": 10,
+                "failureThreshold": 3
+              }
+            }
+          ],
+          "terminationGracePeriodSeconds": 25,
+          "automountServiceAccountToken": false,
+          "securityContext": {
+            "seccompProfile": {
+              "type": "RuntimeDefault"
+            },
+            "fsGroup": 1000
+          },
+          "volumes": [
+            {
+              "name": "storage",
+              "emptyDir": {}
+            },
+            {
+              "name": "cache",
+              "emptyDir": {}
+            },
+            {
+              "name": "tmp",
+              "emptyDir": {}
+            }
+          ],
+          "initContainers": [
+            {
+              "name": "storage-init",
+              "image": "laravel-reliability-app:g1",
+              "imagePullPolicy": "IfNotPresent",
+              "command": [
+                "sh",
+                "-c",
+                "mkdir -p /app/storage/framework/cache /app/storage/framework/views /app/storage/framework/sessions /app/storage/logs"
+              ],
+              "volumeMounts": [
+                {
+                  "name": "storage",
+                  "mountPath": "/app/storage"
+                },
+                {
+                  "name": "cache",
+                  "mountPath": "/app/bootstrap/cache"
+                },
+                {
+                  "name": "tmp",
+                  "mountPath": "/tmp"
+                }
+              ],
+              "securityContext": {
+                "runAsUser": 1000,
+                "runAsNonRoot": true,
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "service-scheduler": {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "name": "scheduler",
+      "namespace": "lab"
+    },
+    "spec": {
+      "selector": {
+        "app": "scheduler"
+      },
+      "ports": [
+        {
+          "port": 8080,
+          "targetPort": 8080,
+          "name": "http"
+        }
+      ]
+    }
+  },
+  "deployment-exporter": {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "exporter",
+      "namespace": "lab"
+    },
+    "spec": {
+      "replicas": 1,
+      "strategy": {
+        "type": "RollingUpdate"
+      },
+      "selector": {
+        "matchLabels": {
+          "app": "exporter"
+        }
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "app": "exporter"
+          }
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "exporter",
+              "image": "laravel-reliability-app:g1",
+              "imagePullPolicy": "IfNotPresent",
+              "ports": [
+                {
+                  "containerPort": 8080,
+                  "name": "http"
+                }
+              ],
+              "resources": {
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "128Mi"
+                },
+                "limits": {
+                  "cpu": "1",
+                  "memory": "384Mi"
+                }
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                },
+                "readOnlyRootFilesystem": true,
+                "runAsUser": 1000,
+                "runAsNonRoot": true
+              },
+              "command": [
+                "php",
+                "-S",
+                "0.0.0.0:8080",
+                "-t",
+                "public",
+                "public/index.php"
+              ],
+              "env": [
+                {
+                  "name": "APP_KEY",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "name": "lab-secrets",
+                      "key": "APP_KEY"
+                    }
+                  }
+                },
+                {
+                  "name": "DB_PASSWORD",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "name": "lab-secrets",
+                      "key": "DB_PASSWORD"
+                    }
+                  }
+                },
+                {
+                  "name": "REDIS_PASSWORD",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "name": "lab-secrets",
+                      "key": "REDIS_PASSWORD"
+                    }
+                  }
+                },
+                {
+                  "name": "LAB_TOKEN",
+                  "valueFrom": {
+                    "secretKeyRef": {
+                      "name": "lab-secrets",
+                      "key": "LAB_TOKEN"
+                    }
+                  }
+                },
+                {
+                  "name": "APP_ENV",
+                  "value": "local"
+                },
+                {
+                  "name": "LAB_FAULTS",
+                  "value": "true"
+                },
+                {
+                  "name": "DB_HOST",
+                  "value": "postgres"
+                },
+                {
+                  "name": "REDIS_HOST",
+                  "value": "redis"
+                },
+                {
+                  "name": "SIMULATOR_URL",
+                  "value": "http://simulator:8081"
+                },
+                {
+                  "name": "LAB_ROLE",
+                  "value": "exporter"
+                }
+              ],
+              "volumeMounts": [
+                {
+                  "name": "storage",
+                  "mountPath": "/app/storage"
+                },
+                {
+                  "name": "cache",
+                  "mountPath": "/app/bootstrap/cache"
+                },
+                {
+                  "name": "tmp",
+                  "mountPath": "/tmp"
+                }
+              ],
+              "startupProbe": {
+                "httpGet": {
+                  "path": "/api/ready",
+                  "port": 8080
+                },
+                "failureThreshold": 60,
+                "periodSeconds": 3,
+                "timeoutSeconds": 2
+              },
+              "readinessProbe": {
+                "httpGet": {
+                  "path": "/api/ready",
+                  "port": 8080
+                },
+                "periodSeconds": 5,
+                "timeoutSeconds": 3
+              },
+              "livenessProbe": {
+                "httpGet": {
+                  "path": "/api/live",
+                  "port": 8080
+                },
+                "periodSeconds": 10,
+                "failureThreshold": 3
+              }
+            }
+          ],
+          "terminationGracePeriodSeconds": 25,
+          "automountServiceAccountToken": false,
+          "securityContext": {
+            "seccompProfile": {
+              "type": "RuntimeDefault"
+            },
+            "fsGroup": 1000
+          },
+          "volumes": [
+            {
+              "name": "storage",
+              "emptyDir": {}
+            },
+            {
+              "name": "cache",
+              "emptyDir": {}
+            },
+            {
+              "name": "tmp",
+              "emptyDir": {}
+            }
+          ],
+          "initContainers": [
+            {
+              "name": "storage-init",
+              "image": "laravel-reliability-app:g1",
+              "imagePullPolicy": "IfNotPresent",
+              "command": [
+                "sh",
+                "-c",
+                "mkdir -p /app/storage/framework/cache /app/storage/framework/views /app/storage/framework/sessions /app/storage/logs"
+              ],
+              "volumeMounts": [
+                {
+                  "name": "storage",
+                  "mountPath": "/app/storage"
+                },
+                {
+                  "name": "cache",
+                  "mountPath": "/app/bootstrap/cache"
+                },
+                {
+                  "name": "tmp",
+                  "mountPath": "/tmp"
+                }
+              ],
+              "securityContext": {
+                "runAsUser": 1000,
+                "runAsNonRoot": true,
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "service-exporter": {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "name": "exporter",
+      "namespace": "lab"
+    },
+    "spec": {
+      "selector": {
+        "app": "exporter"
+      },
+      "ports": [
+        {
+          "port": 8080,
+          "targetPort": 8080,
+          "name": "http"
+        }
+      ]
+    }
+  }
+}
