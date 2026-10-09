@@ -39,6 +39,7 @@ def run_rate(base,rate,duration=20,traffic='load'):
         time.sleep(3)
     result['cohort']=c
     result['processing_timeliness_ratio']=c['deadline_met']/c['expired'] if c['expired'] else None
+    result['generator_limited']=result['arrival_lateness_p99_seconds']>.25
     result['end']=utc();result['saturation_observed']=bad/len(samples)>.01 or result['client_latency_within_500ms_ratio']<.99 or (result['processing_timeliness_ratio'] is not None and result['processing_timeliness_ratio']<.99)
     return result
 
@@ -87,10 +88,11 @@ def main(mode):
             result['fault_alert_history']=history;result['fault_demo_alert_fired']=any(a['labels'].get('alertname')=='LabDemoProcessingMiss' and a['state']=='firing' for a in history[-1]['alerts']);assert result['fault_demo_alert_fired'],'Accelerated alert did not fire'
             save('experiments-progress.json',result)
         result['capacity_steps']=[]
-        for rate in [2,10,30,60,120,240]:
+        for rate in [2,10,30,40,50,60,120,240]:
             step=run_rate(base,rate,20);result['capacity_steps'].append(step);save('experiments-progress.json',result)
-            if step['saturation_observed']:break
-        result['saturation_observed']=any(s['saturation_observed'] for s in result['capacity_steps'])
+            if step['generator_limited'] or step['saturation_observed']:break
+        result['saturation_observed']=any(s['saturation_observed'] and not s['generator_limited'] for s in result['capacity_steps'])
+        result['generator_limited']=any(s['generator_limited'] for s in result['capacity_steps'])
         result['resource_samples']=query_prom(prom,'sum by(pod)(container_memory_working_set_bytes{namespace="lab",container!=""})')
         result['cpu_samples']=query_prom(prom,'sum by(pod)(rate(container_cpu_usage_seconds_total{namespace="lab",container!=""}[1m]))')
         result['resource_history']=request(prom,'/api/v1/query_range?query='+urllib.parse.quote('sum by(pod)(rate(container_cpu_usage_seconds_total{namespace="lab",container!=""}[1m]))')+'&start='+str(time.time()-900)+'&end='+str(time.time())+'&step=15',auth=False)[1]['data']['result']
@@ -102,8 +104,9 @@ def main(mode):
                 if not any(a['labels'].get('alertname')=='LabDemoProcessingMiss' for a in snapshot):break
                 time.sleep(5)
             result['alert_recovery_history']=recovery;result['fault_demo_alert_resolved']=not any(a['labels'].get('alertname')=='LabDemoProcessingMiss' for a in recovery[-1]['alerts']);assert result['fault_demo_alert_resolved'],'Accelerated alert did not resolve within bounded cohort horizon'
-    result['end']=utc();result['result']='PASS';save('experiments.json',result)
-    print('PASS: executed '+mode+' experiments; saturation observed = '+str(result['saturation_observed']))
+    result['end']=utc();result['result']='PARTIAL' if result['generator_limited'] else 'PASS';save('experiments.json',result)
+    print(result['result']+': experiment execution only; saturation observed = '+str(result['saturation_observed'])+'; no 30-day attainment claim')
+    if result['generator_limited']:raise RuntimeError('Client generator limited: capacity remains unestablished for this run')
 if __name__=='__main__':
     import urllib.parse
     try:main(sys.argv[1] if len(sys.argv)>1 else 'all')

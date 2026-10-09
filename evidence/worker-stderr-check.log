@@ -1,0 +1,2 @@
+Defaulted container "worker" out of: worker, storage-init (init)
+PASS: worker termination, recovery and separately framed scheduler JSON logs

@@ -59,7 +59,7 @@ appenv=[secret(n) for n in ['APP_KEY','DB_PASSWORD','REDIS_PASSWORD','LAB_TOKEN'
 vols=[{'name':n,'emptyDir':{}} for n in ['storage','cache','tmp']]
 mounts=[{'name':'storage','mountPath':'/app/storage'},{'name':'cache','mountPath':'/app/bootstrap/cache'},{'name':'tmp','mountPath':'/tmp'}]
 # Mounting empty storage requires framework directories before application boot.
-init=[{'name':'storage-init','image':'laravel-reliability-app:g1','imagePullPolicy':'IfNotPresent','command':['sh','-c','mkdir -p /app/storage/framework/cache /app/storage/framework/views /app/storage/framework/sessions /app/storage/logs'],'volumeMounts':mounts,'securityContext':{'runAsUser':1000,'runAsNonRoot':True,'allowPrivilegeEscalation':False,'capabilities':{'drop':['ALL']}}}]
+init=[{'name':'storage-init','image':'laravel-reliability-app:g1','imagePullPolicy':'IfNotPresent','resources':{'requests':{'cpu':'25m','memory':'16Mi'},'limits':{'cpu':'100m','memory':'64Mi'}},'command':['sh','-c','mkdir -p /app/storage/framework/cache /app/storage/framework/views /app/storage/framework/sessions /app/storage/logs'],'volumeMounts':mounts,'securityContext':{'runAsUser':1000,'runAsNonRoot':True,'allowPrivilegeEscalation':False,'capabilities':{'drop':['ALL']}}}]
 for name in ['api','worker','scheduler','exporter']:
     cmd=['php','-S','0.0.0.0:8080','-t','public','public/index.php'] if name in ['api','exporter'] else ['php','artisan']+(['queue:work','redis','--queue=reports','--sleep=1','--timeout=10','--tries=1'] if name=='worker' else ['schedule:work'])
     env=appenv+[{'name':'LAB_ROLE','value':name}]

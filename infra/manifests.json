@@ -511,7 +511,7 @@
             "app": "api"
           },
           "annotations": {
-            "lab-source-checksum": "e17db02ffb46548fbc4e9a48dc390de577c630f31490ef6541918d488ac0bfa0"
+            "lab-source-checksum": "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1"
           }
         },
         "spec": {
@@ -689,6 +689,16 @@
               "name": "storage-init",
               "image": "laravel-reliability-app:g1",
               "imagePullPolicy": "IfNotPresent",
+              "resources": {
+                "requests": {
+                  "cpu": "25m",
+                  "memory": "16Mi"
+                },
+                "limits": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                }
+              },
               "command": [
                 "sh",
                 "-c",
@@ -767,7 +777,7 @@
             "app": "worker"
           },
           "annotations": {
-            "lab-source-checksum": "e17db02ffb46548fbc4e9a48dc390de577c630f31490ef6541918d488ac0bfa0"
+            "lab-source-checksum": "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1"
           }
         },
         "spec": {
@@ -952,6 +962,16 @@
               "name": "storage-init",
               "image": "laravel-reliability-app:g1",
               "imagePullPolicy": "IfNotPresent",
+              "resources": {
+                "requests": {
+                  "cpu": "25m",
+                  "memory": "16Mi"
+                },
+                "limits": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                }
+              },
               "command": [
                 "sh",
                 "-c",
@@ -1030,7 +1050,7 @@
             "app": "scheduler"
           },
           "annotations": {
-            "lab-source-checksum": "e17db02ffb46548fbc4e9a48dc390de577c630f31490ef6541918d488ac0bfa0"
+            "lab-source-checksum": "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1"
           }
         },
         "spec": {
@@ -1210,6 +1230,16 @@
               "name": "storage-init",
               "image": "laravel-reliability-app:g1",
               "imagePullPolicy": "IfNotPresent",
+              "resources": {
+                "requests": {
+                  "cpu": "25m",
+                  "memory": "16Mi"
+                },
+                "limits": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                }
+              },
               "command": [
                 "sh",
                 "-c",
@@ -1288,7 +1318,7 @@
             "app": "exporter"
           },
           "annotations": {
-            "lab-source-checksum": "e17db02ffb46548fbc4e9a48dc390de577c630f31490ef6541918d488ac0bfa0"
+            "lab-source-checksum": "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1"
           }
         },
         "spec": {
@@ -1462,6 +1492,16 @@
               "name": "storage-init",
               "image": "laravel-reliability-app:g1",
               "imagePullPolicy": "IfNotPresent",
+              "resources": {
+                "requests": {
+                  "cpu": "25m",
+                  "memory": "16Mi"
+                },
+                "limits": {
+                  "cpu": "100m",
+                  "memory": "64Mi"
+                }
+              },
               "command": [
                 "sh",
                 "-c",
