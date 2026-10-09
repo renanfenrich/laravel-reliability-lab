@@ -21,7 +21,7 @@ def run_rate(base,rate,duration=20,traffic='load'):
             code,r,latency=request(base,'/api/reports',{'subject':'synthetic-capacity'},traffic=traffic,key=prefix+str(i))
             return {'status':code,'latency_seconds':latency,'id':r.get('id'),'arrival_lateness_seconds':late}
         except Exception as e:return {'status':0,'latency_seconds':15,'error':type(e).__name__,'arrival_lateness_seconds':late}
-    with concurrent.futures.ThreadPoolExecutor(max_workers=128) as pool:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=512) as pool:
         futures=[]
         for i in range(rate*duration):
             due=start+i/rate
