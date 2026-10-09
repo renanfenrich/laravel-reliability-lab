@@ -1,0 +1,107 @@
+ Container laravel-reliability-lab-api-run-08342919afd7 Creating 
+ Container laravel-reliability-lab-api-run-08342919afd7 Created 
+PHPUnit 12.5.12 by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 8.4.26
+Configuration: /app/phpunit.xml
+
+{"message":"http.response","context":{"request_id":"40d83cee-df68-48ca-938a-99148dbd64d7","route":"api/reports","status":401,"traffic":"normal","duration_seconds":0.005424976348876953},"level":200,"level_name":"INFO","channel":"local","datetime":"2026-10-09T19:50:28.694934+00:00","extra":{}}
+{"message":"http.response","context":{"request_id":"f0c0b579-99f2-48df-a596-cb7ff9ab834d","route":"api/reports","status":401,"traffic":"normal","duration_seconds":9.584426879882812e-5},"level":200,"level_name":"INFO","channel":"local","datetime":"2026-10-09T19:50:28.697022+00:00","extra":{}}
+F{"message":"http.response","context":{"request_id":"33c1ecd8-b1af-4397-99fa-395b6939fd80","route":"api/reports","status":401,"traffic":"normal","duration_seconds":0.0002899169921875},"level":200,"level_name":"INFO","channel":"local","datetime":"2026-10-09T19:50:28.734982+00:00","extra":{}}
+F{"message":"http.response","context":{"request_id":"2bd41e69-e3aa-47e0-a06a-b8e06451eebd","route":"api/reports","status":401,"traffic":"normal","duration_seconds":0.0005488395690917969},"level":200,"level_name":"INFO","channel":"local","datetime":"2026-10-09T19:50:28.797219+00:00","extra":{}}
+F{"message":"http.response","context":{"request_id":"f21d57db-7202-4b44-863b-fb660fe3ae17","route":"api/reports","status":401,"traffic":"normal","duration_seconds":0.0006480216979980469},"level":200,"level_name":"INFO","channel":"local","datetime":"2026-10-09T19:50:28.854030+00:00","extra":{}}
+F{"message":"http.response","context":{"request_id":"f47b99e7-61a1-41c2-a1d7-638b8daafb3f","route":"api/reports","status":401,"traffic":"normal","duration_seconds":0.0006470680236816406},"level":200,"level_name":"INFO","channel":"local","datetime":"2026-10-09T19:50:28.924015+00:00","extra":{}}
+F{"message":"http.response","context":{"request_id":"137aaf7b-ef60-4ad6-a841-3a543edd16c0","route":"api/reports","status":401,"traffic":"normal","duration_seconds":0.0005700588226318359},"level":200,"level_name":"INFO","channel":"local","datetime":"2026-10-09T19:50:28.989773+00:00","extra":{}}
+F{"message":"http.response","context":{"request_id":"45b7fdfd-95c9-4de7-b1e1-a57ec822c9d5","route":"api/reports","status":401,"traffic":"normal","duration_seconds":0.0006771087646484375},"level":200,"level_name":"INFO","channel":"local","datetime":"2026-10-09T19:50:29.051940+00:00","extra":{}}
+F{"message":"http.response","context":{"request_id":"ba9f8cc2-ce7a-4e4c-8717-2a081c40a7d8","route":"api/reports","status":401,"traffic":"normal","duration_seconds":0.000576019287109375},"level":200,"level_name":"INFO","channel":"local","datetime":"2026-10-09T19:50:29.109637+00:00","extra":{}}
+F{"message":"http.response","context":{"request_id":"54f8c5bc-31e6-4e72-b41d-05849f8656d3","route":"api/reports","status":401,"traffic":"normal","duration_seconds":0.0005860328674316406},"level":200,"level_name":"INFO","channel":"local","datetime":"2026-10-09T19:50:29.173295+00:00","extra":{}}
+F{"message":"http.response","context":{"request_id":"354c0db0-7777-4492-8f20-7fa23091cb98","route":"api/live","status":200,"traffic":"normal","duration_seconds":0.0004467964172363281},"level":200,"level_name":"INFO","channel":"local","datetime":"2026-10-09T19:50:29.240852+00:00","extra":{}}
+{"message":"http.response","context":{"request_id":"04a4585e-d517-4672-8b42-789c9d5b458e","route":"api/ready","status":503,"traffic":"normal","duration_seconds":0.0009980201721191406},"level":200,"level_name":"INFO","channel":"local","datetime":"2026-10-09T19:50:29.244791+00:00","extra":{}}
+{"message":"http.response","context":{"request_id":"6b58a185-ebcd-4559-90cb-9aee149082da","route":"api/live","status":200,"traffic":"normal","duration_seconds":0.0002129077911376953},"level":200,"level_name":"INFO","channel":"local","datetime":"2026-10-09T19:50:29.245826+00:00","extra":{}}
+.                                                        10 / 10 (100%)
+
+Time: 00:00.659, Memory: 48.50 MB
+
+There were 9 failures:
+
+1) Tests\Feature\ReportsTest::test_auth_validation_and_fault_controls
+Expected response status code [422] but received 401.
+Failed asserting that 401 is identical to 422.
+
+/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponseAssert.php:46
+/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:183
+/app/tests/Feature/ReportsTest.php:18
+
+2) Tests\Feature\ReportsTest::test_durable_idempotency_and_payload_conflict
+Expected response status code [202] but received 401.
+Failed asserting that 401 is identical to 202.
+
+/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponseAssert.php:46
+/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:183
+/app/tests/Feature/ReportsTest.php:24
+
+3) Tests\Feature\ReportsTest::test_queue_outage_accepts_committed_record_and_reconciles
+Expected response status code [202] but received 401.
+Failed asserting that 401 is identical to 202.
+
+/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponseAssert.php:46
+/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:183
+/app/tests/Feature/ReportsTest.php:32
+
+4) Tests\Feature\ReportsTest::test_crash_before_dispatch_is_recovered
+Expected response status code [202] but received 401.
+Failed asserting that 401 is identical to 202.
+
+/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponseAssert.php:46
+/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:183
+/app/tests/Feature/ReportsTest.php:15
+/app/tests/Feature/ReportsTest.php:37
+
+5) Tests\Feature\ReportsTest::test_duplicate_delivery_has_one_result_and_one_completion
+Expected response status code [202] but received 401.
+Failed asserting that 401 is identical to 202.
+
+/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponseAssert.php:46
+/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:183
+/app/tests/Feature/ReportsTest.php:15
+/app/tests/Feature/ReportsTest.php:41
+
+6) Tests\Feature\ReportsTest::test_retry_exhaustion_is_visible_and_backoff_is_enforced
+Expected response status code [202] but received 401.
+Failed asserting that 401 is identical to 202.
+
+/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponseAssert.php:46
+/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:183
+/app/tests/Feature/ReportsTest.php:15
+/app/tests/Feature/ReportsTest.php:47
+
+7) Tests\Feature\ReportsTest::test_expired_worker_lease_recovers_and_stale_result_is_fenced
+Expected response status code [202] but received 401.
+Failed asserting that 401 is identical to 202.
+
+/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponseAssert.php:46
+/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:183
+/app/tests/Feature/ReportsTest.php:15
+/app/tests/Feature/ReportsTest.php:53
+
+8) Tests\Feature\ReportsTest::test_deadline_misses_include_unfinished_failed_and_late_completion
+Expected response status code [202] but received 401.
+Failed asserting that 401 is identical to 202.
+
+/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponseAssert.php:46
+/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:183
+/app/tests/Feature/ReportsTest.php:15
+/app/tests/Feature/ReportsTest.php:59
+
+9) Tests\Feature\ReportsTest::test_deadline_success_is_counted_once
+Expected response status code [202] but received 401.
+Failed asserting that 401 is identical to 202.
+
+/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponseAssert.php:46
+/app/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:183
+/app/tests/Feature/ReportsTest.php:15
+/app/tests/Feature/ReportsTest.php:68
+
+FAILURES!
+Tests: 10, Assertions: 13, Failures: 9.
+

@@ -1,0 +1,11 @@
+ Container laravel-reliability-lab-api-run-72a65d8e3266 Creating 
+ Container laravel-reliability-lab-api-run-72a65d8e3266 Created 
+
+   INFO  Preparing database.  
+
+  Creating migration table ....................................... 3.51ms DONE
+
+   INFO  Running migrations.  
+
+  2026_10_09_000001_lab ......................................... 92.29ms DONE
+

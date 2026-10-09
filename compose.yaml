@@ -1,0 +1,48 @@
+name: laravel-reliability-lab
+x-app: &app
+  image: laravel-reliability-app:g1
+  env_file: .env
+  environment: {DB_HOST: postgres, REDIS_HOST: redis, SIMULATOR_URL: 'http://simulator:8081'}
+  init: true
+  restart: unless-stopped
+  stop_grace_period: 20s
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  mem_limit: 384m
+  cpus: 1
+services:
+  postgres:
+    image: postgres:18.0-bookworm
+    environment: {POSTGRES_USER: lab, POSTGRES_DB: lab, POSTGRES_PASSWORD: '${DB_PASSWORD}'}
+    volumes: [postgres-data:/var/lib/postgresql]
+    healthcheck: {test: ['CMD-SHELL', 'pg_isready -U lab -d lab'], interval: 3s, timeout: 2s, retries: 30}
+    mem_limit: 512m
+  redis:
+    image: redis:8.2.2-bookworm
+    command: ['sh','-c','exec redis-server --appendonly yes --requirepass "$$REDIS_PASSWORD"']
+    environment: {REDIS_PASSWORD: '${REDIS_PASSWORD}'}
+    volumes: [redis-data:/data]
+    mem_limit: 256m
+  simulator:
+    image: laravel-reliability-simulator:g1
+    init: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 128m
+  api:
+    <<: *app
+    ports: ['127.0.0.1:18080:8080']
+    depends_on: {postgres: {condition: service_healthy}, redis: {condition: service_started}}
+    environment: {DB_HOST: postgres, REDIS_HOST: redis, PHP_CLI_SERVER_WORKERS: 4}
+    healthcheck: {test: ['CMD','php','artisan','lab:ready'], interval: 5s, timeout: 3s, retries: 20}
+  worker:
+    <<: *app
+    command: ['php','artisan','queue:work','redis','--queue=reports','--sleep=1','--timeout=10','--tries=1']
+    depends_on: {api: {condition: service_healthy}}
+  scheduler:
+    <<: *app
+    command: ['php','artisan','schedule:work']
+    depends_on: {api: {condition: service_healthy}}
+volumes:
+  postgres-data:
+  redis-data:

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php" colors="true"><testsuites><testsuite name="Reliability"><directory>tests/Feature</directory></testsuite></testsuites><php><env force="true" name="APP_ENV" value="testing"/><env force="true" name="DB_DATABASE" value="lab_test"/><env force="true" name="LAB_TOKEN" value="synthetic-test-only"/><env force="true" name="LAB_FAULTS" value="true"/></php></phpunit>
