@@ -1,7 +1,7 @@
 {
-  "start": "2026-10-09T23:39:35Z",
-  "end": "2026-10-09T23:39:36Z",
-  "commit": "2fe3527aba8012b7d617785686f6b40db6f9e2f5",
+  "start": "2026-10-10T07:04:32Z",
+  "end": "2026-10-10T07:04:33Z",
+  "commit": "c49537ca4af0a3c3ba4ce2ae24f7554ba4be7c5c",
   "targets": [
     {
       "job": "kube-state-metrics",
@@ -28,7 +28,7 @@
     "kube_pod_container_status_restarts_total{namespace=\"lab\"}": 14
   },
   "searchable_correlated_worker_logs": true,
-  "queried_report_id": "7fa718d6-9deb-4e6b-bc6a-685400f31314",
+  "queried_report_id": "da5f1192-a9ff-4373-be45-7158315e111d",
   "dashboard_panels": 15,
   "grafana_datasource_health": {
     "prometheus": {

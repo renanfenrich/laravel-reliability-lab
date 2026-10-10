@@ -48,3 +48,14 @@ Port-forward with the same explicit kubeconfig/context: service/grafana13000:300
 Destructive separate reset, **only after explicit human authorization**: stop lab with make teardown, then `CONFIRM=DELETE-LAB-DATA make data-reset`. It removes only this project's Compose volumes and mounted PostgreSQL directory contents. It has not been executed as part of G1. For resume read [status](docs/status.md), [checklist](docs/goals/G1.md) and current Git status before repeating discovery.
 
 Architecture/decisions: docs/architecture.md, docs/decisions/. SLOs/budget: docs/slo.md and docs/error-budget-policy.md. Operator response: docs/runbooks/. Evidence, capacity and incident reports: docs/validation.md, docs/capacity.md, docs/incident.md, evidence/. Review boundary: READY FOR HUMAN REVIEW; renanfenrich owns Git flow, octavariumdigitalpartners mandatory reviewer; no push or merge under this goal.
+
+### LAN Grafana access that reconnects after a pod restart
+On this Linux workstation, create a project-scoped transient user service (no root/install needed):
+```bash
+systemd-run --user --unit=laravel-reliability-lab-grafana-forward \
+  --property=Restart=always --property=RestartSec=3 --property=StartLimitIntervalSec=0 \
+  "$PWD/.tools/kubectl" --kubeconfig "$PWD/.kubeconfig" \
+  --context kind-laravel-reliability-lab -n lab port-forward \
+  --address=192.168.1.9 service/grafana 13000:3000
+```
+Use the workstation's current trusted LAN IP if different. Open http://192.168.1.9:13000/d/reliability-lab from the same LAN. Unit is transient, not enabled on reboot. Stop with `systemctl --user stop laravel-reliability-lab-grafana-forward.service`; `make teardown` also stops this unit. Status/logs: `systemctl --user status laravel-reliability-lab-grafana-forward.service` and `journalctl --user -u laravel-reliability-lab-grafana-forward.service`. Existing unit must be stopped/reset before repeating creation; do not create duplicate listeners. Grafana memory limit is1Gi after an observed512Mi OOM; this change does not establish long-term memory stability.

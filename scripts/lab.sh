@@ -75,6 +75,9 @@ PY
   python3 scripts/observability-check.py
   ;;
  teardown)
+  if command -v systemctl >/dev/null && systemctl --user is-active --quiet laravel-reliability-lab-grafana-forward.service; then
+   systemctl --user stop laravel-reliability-lab-grafana-forward.service
+  fi
   docker compose down
   if test -f .kubeconfig && kind get clusters 2>/dev/null | grep -qx "$cluster"; then
    k get nodes >/dev/null

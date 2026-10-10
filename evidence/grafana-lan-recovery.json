@@ -1,0 +1,96 @@
+{
+  "timestamp": "2026-10-10T07:04:53.421057+00:00",
+  "ssid": "NAXI_AP204_2G",
+  "ip": "192.168.1.9",
+  "observed_previous_failure": {
+    "reason": "OOMKilled",
+    "exit_code": 137,
+    "limit": "512Mi",
+    "finished_at": "2026-10-10T01:05:21Z"
+  },
+  "new_limit": "1Gi",
+  "health": {
+    "http_status": 200,
+    "body": {
+      "database": "ok",
+      "version": "13.2.3",
+      "commit": "90ffed056f0884267356c12a0eeb72a022af53f1"
+    }
+  },
+  "supervisor": "Restart=always\nNRestarts=1\nActiveState=active\n",
+  "pods": [
+    {
+      "name": "grafana-7fd797bb9-6q4sh",
+      "status": [
+        {
+          "allocatedResources": {
+            "cpu": "100m",
+            "memory": "128Mi"
+          },
+          "containerID": "containerd://2df2fd823258351529bb1add231c62690138819f746b71977cffe19c4c368dd7",
+          "image": "docker.io/grafana/grafana:13.2.3",
+          "imageID": "docker.io/grafana/grafana@sha256:b28bae15e219c998fb0e0424ed724930cc61b1f61fb404d47c862f9a23f9e572",
+          "lastState": {},
+          "name": "grafana",
+          "ready": true,
+          "resources": {
+            "limits": {
+              "cpu": "1",
+              "memory": "1Gi"
+            },
+            "requests": {
+              "cpu": "100m",
+              "memory": "128Mi"
+            }
+          },
+          "restartCount": 0,
+          "started": true,
+          "state": {
+            "running": {
+              "startedAt": "2026-10-10T07:04:00Z"
+            }
+          },
+          "user": {
+            "linux": {
+              "gid": 0,
+              "supplementalGroups": [
+                0,
+                472
+              ],
+              "uid": 472
+            }
+          },
+          "volumeMounts": [
+            {
+              "mountPath": "/etc/grafana/provisioning/datasources",
+              "name": "grafana-datasources",
+              "readOnly": true,
+              "recursiveReadOnly": "Disabled"
+            },
+            {
+              "mountPath": "/etc/grafana/provisioning/dashboards",
+              "name": "grafana-provider",
+              "readOnly": true,
+              "recursiveReadOnly": "Disabled"
+            },
+            {
+              "mountPath": "/var/lib/grafana/dashboards",
+              "name": "grafana-dashboard",
+              "readOnly": true,
+              "recursiveReadOnly": "Disabled"
+            },
+            {
+              "mountPath": "/var/lib/grafana",
+              "name": "data"
+            },
+            {
+              "mountPath": "/tmp",
+              "name": "tmp"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "long_memory_soak": "unexecuted"
+}
