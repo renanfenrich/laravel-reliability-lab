@@ -8,7 +8,7 @@ g2=importlib.util.module_from_spec(spec);spec.loader.exec_module(g2)
 WAIT_SQL="""SELECT coalesce(json_agg(t),'[]') FROM (
  SELECT CASE WHEN query ILIKE '%metric_samples%' THEN 'metrics' WHEN query ILIKE '%reports%' THEN 'reports' ELSE 'other' END AS operation,
  state,coalesce(wait_event_type,'running') AS wait_type,coalesce(wait_event,'none') AS wait_event,count(*) AS sessions,
- round(max(EXTRACT(EPOCH FROM now()-xact_start))::numeric,3) AS max_transaction_seconds
+ round(GREATEST(0,max(EXTRACT(EPOCH FROM clock_timestamp()-xact_start)))::numeric,3) AS max_transaction_seconds
  FROM pg_stat_activity WHERE datname='lab' AND pid<>pg_backend_pid() AND state<>'idle'
  GROUP BY 1,2,3,4) t"""
 def pods():
@@ -27,7 +27,7 @@ def main(mode):
  def sample():
   while not stop.is_set():
    row={'utc':utc()}
-   try:row['postgres']=json.loads(sql("SET statement_timeout='2s'; "+WAIT_SQL).splitlines()[-1])
+   try:row['postgres']=json.loads(sql("SET statement_timeout='2s'; "+WAIT_SQL).removeprefix("SET\n"))
    except Exception as e:row['error']=type(e).__name__
    diagnostics.append(row);write('diagnostics.json',diagnostics);stop.wait(5)
  thread=threading.Thread(target=sample);thread.start()

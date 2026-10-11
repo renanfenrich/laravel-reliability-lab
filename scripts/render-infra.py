@@ -68,7 +68,7 @@ for name in ['api','worker','scheduler','exporter']:
     c=objects['deployment-'+name]['spec']['template']['spec']['containers'][0]
     c['livenessProbe']={'httpGet':{'path':'/api/live','port':8080},'periodSeconds':10,'failureThreshold':3} if name in ['api','exporter'] else {'exec':{'command':['php','-r',"exit(str_contains(file_get_contents('/proc/1/cmdline'), 'artisan') ? 0 : 1);"]},'periodSeconds':10,'failureThreshold':3}
 
-# NGINX sidecars expose HTTP; FPM stays internal to each pod.
+# NGINX sidecars expose HTTP; FPM/status ports stay internal to each pod.
 config('nginx-api',{'nginx.conf':(root/'runtime/nginx-api.conf').read_text()})
 for name in ['api','exporter']:
     pod=objects['deployment-'+name]['spec']['template']['spec']
@@ -76,8 +76,14 @@ for name in ['api','exporter']:
     pod['containers'][0]['lifecycle']={'preStop':{'exec':{'command':['sh','-c','sleep 3; kill -QUIT 1']}}}
     v,m=configvol('nginx-api','/etc/lab-nginx');pod['volumes'].append(v)
     sidecar={'name':'http','image':'nginx:1.30.5-alpine','imagePullPolicy':'IfNotPresent','command':['nginx','-c','/etc/lab-nginx/nginx.conf','-g','daemon off;'],'ports':[{'containerPort':8080,'name':'http'}],'resources':{'requests':{'cpu':'50m','memory':'32Mi'},'limits':{'cpu':'500m','memory':'128Mi'}},'securityContext':{'runAsUser':1000,'runAsNonRoot':True,'allowPrivilegeEscalation':False,'readOnlyRootFilesystem':True,'capabilities':{'drop':['ALL']}},'volumeMounts':[m,{'name':'tmp','mountPath':'/tmp'}],'lifecycle':{'preStop':{'exec':{'command':['sh','-c','sleep 3; nginx -c /etc/lab-nginx/nginx.conf -s quit']}}}}
-    for probe in ['startupProbe','readinessProbe','livenessProbe']:sidecar[probe]=pod['containers'][0][probe].copy()
+    fpm=pod['containers'][0]
+    fpm['startupProbe']={'httpGet':{'path':'/fpm-live','port':8082},'periodSeconds':3,'timeoutSeconds':2,'failureThreshold':60}
+    fpm['livenessProbe']={'httpGet':{'path':'/fpm-live','port':8082},'periodSeconds':10,'timeoutSeconds':2,'failureThreshold':3}
+    for probe in ['startupProbe','readinessProbe','livenessProbe']:
+        sidecar[probe]={'httpGet':{'path':'/http-live','port':8082},'periodSeconds':5 if probe=='readinessProbe' else 10,'timeoutSeconds':2,'failureThreshold':3}
+    sidecar['startupProbe'].update({'periodSeconds':3,'failureThreshold':60})
     pod['containers'].append(sidecar)
+obj('Service','api-diagnostics',{'clusterIP':'None','publishNotReadyAddresses':True,'selector':{'app':'api'},'ports':[{'port':8082,'targetPort':8082,'name':'diagnostics'}]})
 config('nginx-gateway',{'nginx.conf':(root/'runtime/nginx-gateway.conf').read_text()})
 v,m=configvol('nginx-gateway','/etc/lab-nginx')
 deploy('gateway','nginx:1.30.5-alpine',8080,command=['nginx','-c','/etc/lab-nginx/nginx.conf','-g','daemon off;'],volumes=[v,{'name':'tmp','emptyDir':{}}],mounts=[m,{'name':'tmp','mountPath':'/tmp'}],probe={'httpGet':{'path':'/api/ready','port':8080}},limits={'cpu':'1','memory':'128Mi'})

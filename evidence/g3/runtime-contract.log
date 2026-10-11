@@ -1,0 +1,1 @@
+PASS: native liveness/metrics independent of all four blocked application children; diagnostic path not public

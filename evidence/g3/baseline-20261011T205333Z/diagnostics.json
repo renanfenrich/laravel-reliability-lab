@@ -1,0 +1,329 @@
+[
+  {
+    "utc": "2026-10-11T20:53:33Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:53:38Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:53:43Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:53:48Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": -0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T20:53:53Z",
+    "error": "JSONDecodeError"
+  },
+  {
+    "utc": "2026-10-11T20:53:59Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": -0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T20:54:04Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T20:54:09Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T20:54:14Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:54:19Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:54:24Z",
+    "error": "JSONDecodeError"
+  },
+  {
+    "utc": "2026-10-11T20:54:29Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:54:34Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:54:40Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:54:45Z",
+    "error": "JSONDecodeError"
+  },
+  {
+    "utc": "2026-10-11T20:54:50Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:54:55Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:55:00Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:55:05Z",
+    "error": "JSONDecodeError"
+  },
+  {
+    "utc": "2026-10-11T20:55:10Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalWrite",
+        "sessions": 1,
+        "max_transaction_seconds": -0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T20:55:16Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": -0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T20:55:21Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T20:55:26Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:55:31Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": -0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T20:55:36Z",
+    "error": "JSONDecodeError"
+  },
+  {
+    "utc": "2026-10-11T20:55:41Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T20:55:46Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:55:51Z",
+    "error": "JSONDecodeError"
+  },
+  {
+    "utc": "2026-10-11T20:55:57Z",
+    "error": "JSONDecodeError"
+  },
+  {
+    "utc": "2026-10-11T20:56:02Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:56:07Z",
+    "error": "JSONDecodeError"
+  },
+  {
+    "utc": "2026-10-11T20:56:12Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T20:56:17Z",
+    "error": "JSONDecodeError"
+  },
+  {
+    "utc": "2026-10-11T20:56:22Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": -0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T20:56:28Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.037
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T20:56:33Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "idle in transaction",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T20:56:38Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:56:43Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": -0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T20:56:48Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:56:53Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": -0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T20:56:58Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:57:04Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:57:09Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:57:14Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:57:19Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:57:24Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:57:29Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T20:57:35Z",
+    "postgres": []
+  }
+]

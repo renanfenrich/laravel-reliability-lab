@@ -1,0 +1,234 @@
+[
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T18:57:10Z",
+    "last": "2026-10-11T20:20:43Z",
+    "count": 7,
+    "object": "api-6999769bbf-bqb2z"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: api",
+    "first": "2026-10-11T18:57:10Z",
+    "last": "2026-10-11T20:20:43Z",
+    "count": 7,
+    "object": "api-6999769bbf-bqb2z"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container api",
+    "first": "2026-10-11T18:57:10Z",
+    "last": "2026-10-11T20:20:43Z",
+    "count": 7,
+    "object": "api-6999769bbf-bqb2z"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"nginx:1.30.5-alpine\" already present on machine",
+    "first": "2026-10-11T18:57:10Z",
+    "last": "2026-10-11T20:18:26Z",
+    "count": 6,
+    "object": "api-6999769bbf-bqb2z"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: http",
+    "first": "2026-10-11T18:57:10Z",
+    "last": "2026-10-11T20:18:26Z",
+    "count": 6,
+    "object": "api-6999769bbf-bqb2z"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container http",
+    "first": "2026-10-11T18:57:10Z",
+    "last": "2026-10-11T20:18:26Z",
+    "count": 6,
+    "object": "api-6999769bbf-bqb2z"
+  },
+  {
+    "reason": "Unhealthy",
+    "message": "Liveness probe failed: Get \"http://10.244.0.11:8080/api/live\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+    "first": "2026-10-11T19:18:19Z",
+    "last": "2026-10-11T20:18:19Z",
+    "count": 12,
+    "object": "api-6999769bbf-bqb2z"
+  },
+  {
+    "reason": "Unhealthy",
+    "message": "Liveness probe failed: Get \"http://10.244.0.11:8080/api/live\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+    "first": "2026-10-11T19:18:19Z",
+    "last": "2026-10-11T20:18:19Z",
+    "count": 12,
+    "object": "api-6999769bbf-bqb2z"
+  },
+  {
+    "reason": "Killing",
+    "message": "Container api failed liveness probe, will be restarted",
+    "first": "2026-10-11T19:18:39Z",
+    "last": "2026-10-11T20:20:39Z",
+    "count": 5,
+    "object": "api-6999769bbf-bqb2z"
+  },
+  {
+    "reason": "Killing",
+    "message": "Container http failed liveness probe, will be restarted",
+    "first": "2026-10-11T19:18:42Z",
+    "last": "2026-10-11T20:18:23Z",
+    "count": 4,
+    "object": "api-6999769bbf-bqb2z"
+  },
+  {
+    "reason": "Unhealthy",
+    "message": "Readiness probe failed: HTTP probe failed with statuscode: 502",
+    "first": "2026-10-11T19:18:43Z",
+    "last": "2026-10-11T20:18:25Z",
+    "count": 5,
+    "object": "api-6999769bbf-bqb2z"
+  },
+  {
+    "reason": "Unhealthy",
+    "message": "Readiness probe failed: HTTP probe failed with statuscode: 502",
+    "first": "2026-10-11T19:18:43Z",
+    "last": "2026-10-11T20:18:25Z",
+    "count": 5,
+    "object": "api-6999769bbf-bqb2z"
+  },
+  {
+    "reason": "Unhealthy",
+    "message": "Readiness probe failed: Get \"http://10.244.0.11:8080/api/ready\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+    "first": "2026-10-11T19:20:12Z",
+    "last": "2026-10-11T20:18:38Z",
+    "count": 5,
+    "object": "api-6999769bbf-bqb2z"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T18:57:10Z",
+    "last": "2026-10-11T20:19:02Z",
+    "count": 7,
+    "object": "api-6999769bbf-f7cbr"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: api",
+    "first": "2026-10-11T18:57:10Z",
+    "last": "2026-10-11T20:19:02Z",
+    "count": 7,
+    "object": "api-6999769bbf-f7cbr"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container api",
+    "first": "2026-10-11T18:57:10Z",
+    "last": "2026-10-11T20:19:02Z",
+    "count": 7,
+    "object": "api-6999769bbf-f7cbr"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"nginx:1.30.5-alpine\" already present on machine",
+    "first": "2026-10-11T18:57:10Z",
+    "last": "2026-10-11T20:18:29Z",
+    "count": 6,
+    "object": "api-6999769bbf-f7cbr"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: http",
+    "first": "2026-10-11T18:57:10Z",
+    "last": "2026-10-11T20:18:29Z",
+    "count": 6,
+    "object": "api-6999769bbf-f7cbr"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container http",
+    "first": "2026-10-11T18:57:10Z",
+    "last": "2026-10-11T20:18:29Z",
+    "count": 6,
+    "object": "api-6999769bbf-f7cbr"
+  },
+  {
+    "reason": "Unhealthy",
+    "message": "Liveness probe failed: Get \"http://10.244.0.12:8080/api/live\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+    "first": "2026-10-11T19:17:49Z",
+    "last": "2026-10-11T20:18:39Z",
+    "count": 15,
+    "object": "api-6999769bbf-f7cbr"
+  },
+  {
+    "reason": "Unhealthy",
+    "message": "Liveness probe failed: Get \"http://10.244.0.12:8080/api/live\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+    "first": "2026-10-11T19:17:49Z",
+    "last": "2026-10-11T20:18:19Z",
+    "count": 14,
+    "object": "api-6999769bbf-f7cbr"
+  },
+  {
+    "reason": "Killing",
+    "message": "Container api failed liveness probe, will be restarted",
+    "first": "2026-10-11T19:18:09Z",
+    "last": "2026-10-11T20:18:59Z",
+    "count": 5,
+    "object": "api-6999769bbf-f7cbr"
+  },
+  {
+    "reason": "Killing",
+    "message": "Container http failed liveness probe, will be restarted",
+    "first": "2026-10-11T19:18:12Z",
+    "last": "2026-10-11T20:18:19Z",
+    "count": 4,
+    "object": "api-6999769bbf-f7cbr"
+  },
+  {
+    "reason": "Unhealthy",
+    "message": "Readiness probe failed: Get \"http://10.244.0.12:8080/api/ready\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+    "first": "2026-10-11T19:19:55Z",
+    "last": "2026-10-11T20:18:22Z",
+    "count": 10,
+    "object": "api-6999769bbf-f7cbr"
+  },
+  {
+    "reason": "Unhealthy",
+    "message": "Readiness probe failed: Get \"http://10.244.0.12:8080/api/ready\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+    "first": "2026-10-11T19:19:56Z",
+    "last": "2026-10-11T20:18:24Z",
+    "count": 10,
+    "object": "api-6999769bbf-f7cbr"
+  },
+  {
+    "reason": "Unhealthy",
+    "message": "Readiness probe failed: Get \"http://10.244.0.12:8080/api/ready\": dial tcp 10.244.0.12:8080: connect: connection refused",
+    "first": "2026-10-11T19:20:16Z",
+    "last": "2026-10-11T20:18:24Z",
+    "count": 2,
+    "object": "api-6999769bbf-f7cbr"
+  },
+  {
+    "reason": "Unhealthy",
+    "message": "Readiness probe failed: Get \"http://10.244.0.12:8080/api/ready\": dial tcp 10.244.0.12:8080: connect: connection refused",
+    "first": "2026-10-11T20:18:26Z",
+    "last": "2026-10-11T20:18:26Z",
+    "count": 1,
+    "object": "api-6999769bbf-f7cbr"
+  },
+  {
+    "reason": "Unhealthy",
+    "message": "Readiness probe failed: Get \"http://10.244.0.5:8080/api/ready\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+    "first": "2026-10-11T19:20:12Z",
+    "last": "2026-10-11T20:19:35Z",
+    "count": 14,
+    "object": "gateway-cd9dfc89d-zdmtz"
+  },
+  {
+    "reason": "Unhealthy",
+    "message": "Readiness probe failed: HTTP probe failed with statuscode: 504",
+    "first": "2026-10-11T20:18:29Z",
+    "last": "2026-10-11T20:18:31Z",
+    "count": 2,
+    "object": "gateway-cd9dfc89d-zdmtz"
+  }
+]

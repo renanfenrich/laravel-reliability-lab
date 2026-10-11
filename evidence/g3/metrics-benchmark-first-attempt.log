@@ -1,0 +1,19 @@
+
+In Connection.php line 857:
+                                                                               
+  SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "metric_samples" does   
+  not exist                                                                    
+  LINE 1: delete from "metric_samples" where "series"::text like $1            
+                      ^ (Connection: pgsql, Host: postgres, Port: 5432, Datab  
+  ase: lab_test, SQL: delete from "metric_samples" where "series"::text like   
+  lab_benchmark_%)                                                             
+                                                                               
+
+In Connection.php line 626:
+                                                                               
+  SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "metric_samples" does   
+  not exist                                                                    
+  LINE 1: delete from "metric_samples" where "series"::text like $1            
+                      ^                                                        
+                                                                               
+

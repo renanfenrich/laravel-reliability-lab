@@ -511,8 +511,8 @@
             "app": "api"
           },
           "annotations": {
-            "lab-source-checksum": "0453fd9185f095a840ed8851936bf4679c44c61fa18c1d4725ee1e225cba0d88",
-            "lab-config-checksum": "380e68cd68514c9fd1b76413c42022469a1b3de3f860f498db823b75d8f7f30b"
+            "lab-source-checksum": "ae0a5209848010f513208dd88d98180aded091a8dcf0aae3c77c5a9c8af6e338",
+            "lab-config-checksum": "d176ba5d54c064e86b7113dcb7d29388d60f95862631144da842057e4c6e9bb4"
           }
         },
         "spec": {
@@ -630,12 +630,12 @@
               ],
               "startupProbe": {
                 "httpGet": {
-                  "path": "/api/ready",
-                  "port": 8080
+                  "path": "/fpm-live",
+                  "port": 8082
                 },
-                "failureThreshold": 60,
                 "periodSeconds": 3,
-                "timeoutSeconds": 2
+                "timeoutSeconds": 2,
+                "failureThreshold": 60
               },
               "readinessProbe": {
                 "httpGet": {
@@ -647,10 +647,11 @@
               },
               "livenessProbe": {
                 "httpGet": {
-                  "path": "/api/live",
-                  "port": 8080
+                  "path": "/fpm-live",
+                  "port": 8082
                 },
                 "periodSeconds": 10,
+                "timeoutSeconds": 2,
                 "failureThreshold": 3
               },
               "lifecycle": {
@@ -727,27 +728,29 @@
               },
               "startupProbe": {
                 "httpGet": {
-                  "path": "/api/ready",
-                  "port": 8080
+                  "path": "/http-live",
+                  "port": 8082
                 },
-                "failureThreshold": 60,
                 "periodSeconds": 3,
-                "timeoutSeconds": 2
+                "timeoutSeconds": 2,
+                "failureThreshold": 60
               },
               "readinessProbe": {
                 "httpGet": {
-                  "path": "/api/ready",
-                  "port": 8080
+                  "path": "/http-live",
+                  "port": 8082
                 },
                 "periodSeconds": 5,
-                "timeoutSeconds": 3
+                "timeoutSeconds": 2,
+                "failureThreshold": 3
               },
               "livenessProbe": {
                 "httpGet": {
-                  "path": "/api/live",
-                  "port": 8080
+                  "path": "/http-live",
+                  "port": 8082
                 },
                 "periodSeconds": 10,
+                "timeoutSeconds": 2,
                 "failureThreshold": 3
               }
             }
@@ -873,7 +876,7 @@
             "app": "worker"
           },
           "annotations": {
-            "lab-source-checksum": "0453fd9185f095a840ed8851936bf4679c44c61fa18c1d4725ee1e225cba0d88"
+            "lab-source-checksum": "ae0a5209848010f513208dd88d98180aded091a8dcf0aae3c77c5a9c8af6e338"
           }
         },
         "spec": {
@@ -1146,7 +1149,7 @@
             "app": "scheduler"
           },
           "annotations": {
-            "lab-source-checksum": "0453fd9185f095a840ed8851936bf4679c44c61fa18c1d4725ee1e225cba0d88"
+            "lab-source-checksum": "ae0a5209848010f513208dd88d98180aded091a8dcf0aae3c77c5a9c8af6e338"
           }
         },
         "spec": {
@@ -1414,8 +1417,8 @@
             "app": "exporter"
           },
           "annotations": {
-            "lab-source-checksum": "0453fd9185f095a840ed8851936bf4679c44c61fa18c1d4725ee1e225cba0d88",
-            "lab-config-checksum": "380e68cd68514c9fd1b76413c42022469a1b3de3f860f498db823b75d8f7f30b"
+            "lab-source-checksum": "ae0a5209848010f513208dd88d98180aded091a8dcf0aae3c77c5a9c8af6e338",
+            "lab-config-checksum": "d176ba5d54c064e86b7113dcb7d29388d60f95862631144da842057e4c6e9bb4"
           }
         },
         "spec": {
@@ -1533,12 +1536,12 @@
               ],
               "startupProbe": {
                 "httpGet": {
-                  "path": "/api/ready",
-                  "port": 8080
+                  "path": "/fpm-live",
+                  "port": 8082
                 },
-                "failureThreshold": 60,
                 "periodSeconds": 3,
-                "timeoutSeconds": 2
+                "timeoutSeconds": 2,
+                "failureThreshold": 60
               },
               "readinessProbe": {
                 "httpGet": {
@@ -1550,10 +1553,11 @@
               },
               "livenessProbe": {
                 "httpGet": {
-                  "path": "/api/live",
-                  "port": 8080
+                  "path": "/fpm-live",
+                  "port": 8082
                 },
                 "periodSeconds": 10,
+                "timeoutSeconds": 2,
                 "failureThreshold": 3
               },
               "lifecycle": {
@@ -1630,27 +1634,29 @@
               },
               "startupProbe": {
                 "httpGet": {
-                  "path": "/api/ready",
-                  "port": 8080
+                  "path": "/http-live",
+                  "port": 8082
                 },
-                "failureThreshold": 60,
                 "periodSeconds": 3,
-                "timeoutSeconds": 2
+                "timeoutSeconds": 2,
+                "failureThreshold": 60
               },
               "readinessProbe": {
                 "httpGet": {
-                  "path": "/api/ready",
-                  "port": 8080
+                  "path": "/http-live",
+                  "port": 8082
                 },
                 "periodSeconds": 5,
-                "timeoutSeconds": 3
+                "timeoutSeconds": 2,
+                "failureThreshold": 3
               },
               "livenessProbe": {
                 "httpGet": {
-                  "path": "/api/live",
-                  "port": 8080
+                  "path": "/http-live",
+                  "port": 8082
                 },
                 "periodSeconds": 10,
+                "timeoutSeconds": 2,
                 "failureThreshold": 3
               }
             }
@@ -1761,7 +1767,29 @@
       "namespace": "lab"
     },
     "data": {
-      "nginx.conf": "worker_processes 1;\npid /tmp/nginx.pid;\nerror_log /dev/stderr warn;\nevents { worker_connections 1024; }\nhttp {\n  client_body_temp_path /tmp/client;\n  proxy_temp_path /tmp/proxy;\n  uwsgi_temp_path /tmp/uwsgi;\n  scgi_temp_path /tmp/scgi;\n  fastcgi_temp_path /tmp/fastcgi;\n  log_format lab escape=json '{\"event\":\"http.edge\",\"pod\":\"$hostname\",\"request_id\":\"$sent_http_x_request_id\",\"status\":$status,\"seconds\":$request_time,\"upstream_seconds\":\"$upstream_response_time\",\"traffic\":\"$http_x_lab_traffic\"}';\n  access_log /dev/stdout lab;\n  server {\n    listen 8080;\n    client_max_body_size 8k;\n    client_body_timeout 10s;\n    add_header X-Lab-API-Pod $hostname always;\n    location / {\n      include /etc/nginx/fastcgi_params;\n      fastcgi_param SCRIPT_FILENAME /app/public/index.php;\n      fastcgi_param DOCUMENT_ROOT /app/public;\n      fastcgi_param HTTP_AUTHORIZATION $http_authorization;\n      fastcgi_pass 127.0.0.1:9000;\n      fastcgi_connect_timeout 2s;\n      fastcgi_read_timeout 20s;\n      fastcgi_next_upstream off;\n    }\n  }\n}\n"
+      "nginx.conf": "worker_processes 1;\npid /tmp/nginx.pid;\nerror_log /dev/stderr warn;\nevents { worker_connections 1024; }\nhttp {\n  client_body_temp_path /tmp/client;\n  proxy_temp_path /tmp/proxy;\n  uwsgi_temp_path /tmp/uwsgi;\n  scgi_temp_path /tmp/scgi;\n  fastcgi_temp_path /tmp/fastcgi;\n  log_format lab escape=json '{\"event\":\"http.edge\",\"pod\":\"$hostname\",\"request_id\":\"$sent_http_x_request_id\",\"status\":$status,\"seconds\":$request_time,\"upstream_seconds\":\"$upstream_response_time\",\"traffic\":\"$http_x_lab_traffic\"}';\n  access_log /dev/stdout lab;\n  map $uri $status_format { default json; /fpm-metrics openmetrics; }\n  server {\n    listen 8080;\n    client_max_body_size 8k;\n    client_body_timeout 10s;\n    add_header X-Lab-API-Pod $hostname always;\n    location ~ ^/fpm- { return 404; }\n    location / {\n      include /etc/nginx/fastcgi_params;\n      fastcgi_param SCRIPT_FILENAME /app/public/index.php;\n      fastcgi_param DOCUMENT_ROOT /app/public;\n      fastcgi_param HTTP_AUTHORIZATION $http_authorization;\n      fastcgi_pass 127.0.0.1:9000;\n      fastcgi_connect_timeout 2s;\n      fastcgi_read_timeout 20s;\n      fastcgi_next_upstream off;\n    }\n  }\n  # Internal only: no Service/host publication of this diagnostic port.\n  server {\n    listen 8082;\n    access_log off;\n    location = /http-live { return 200 'alive'; }\n    location ~ ^/fpm-(live|metrics)$ {\n      include /etc/nginx/fastcgi_params;\n      fastcgi_param SCRIPT_FILENAME /fpm-status;\n      fastcgi_param SCRIPT_NAME /fpm-status;\n      fastcgi_param QUERY_STRING $status_format;\n      fastcgi_pass 127.0.0.1:9001;\n      fastcgi_connect_timeout 1s;\n      fastcgi_read_timeout 1s;\n    }\n    location / { return 404; }\n  }\n\n}\n"
+    }
+  },
+  "service-api-diagnostics": {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "name": "api-diagnostics",
+      "namespace": "lab"
+    },
+    "spec": {
+      "clusterIP": "None",
+      "publishNotReadyAddresses": true,
+      "selector": {
+        "app": "api"
+      },
+      "ports": [
+        {
+          "port": 8082,
+          "targetPort": 8082,
+          "name": "diagnostics"
+        }
+      ]
     }
   },
   "configmap-nginx-gateway": {
@@ -1931,7 +1959,7 @@
       "namespace": "lab"
     },
     "data": {
-      "prometheus.yml": "{\n  \"global\": {\n    \"scrape_interval\": \"5s\",\n    \"evaluation_interval\": \"15s\"\n  },\n  \"rule_files\": [\n    \"/etc/prometheus/rules.yml\"\n  ],\n  \"scrape_configs\": [\n    {\n      \"job_name\": \"lab-exporter\",\n      \"metrics_path\": \"/api/metrics\",\n      \"static_configs\": [\n        {\n          \"targets\": [\n            \"exporter:8080\"\n          ]\n        }\n      ]\n    },\n    {\n      \"job_name\": \"kube-state-metrics\",\n      \"static_configs\": [\n        {\n          \"targets\": [\n            \"kube-state-metrics:8080\"\n          ]\n        }\n      ]\n    },\n    {\n      \"job_name\": \"prometheus\",\n      \"static_configs\": [\n        {\n          \"targets\": [\n            \"localhost:9090\"\n          ]\n        }\n      ]\n    },\n    {\n      \"job_name\": \"kubelet-cadvisor\",\n      \"scheme\": \"https\",\n      \"metrics_path\": \"/metrics/cadvisor\",\n      \"kubernetes_sd_configs\": [\n        {\n          \"role\": \"node\"\n        }\n      ],\n      \"authorization\": {\n        \"credentials_file\": \"/var/run/secrets/kubernetes.io/serviceaccount/token\"\n      },\n      \"tls_config\": {\n        \"insecure_skip_verify\": true\n      },\n      \"relabel_configs\": [\n        {\n          \"source_labels\": [\n            \"__meta_kubernetes_node_name\"\n          ],\n          \"target_label\": \"node\"\n        }\n      ]\n    },\n    {\n      \"job_name\": \"lab-host-docker\",\n      \"scrape_interval\": \"10s\",\n      \"scrape_timeout\": \"8s\",\n      \"static_configs\": [\n        {\n          \"targets\": [\n            \"lab-host-metrics:19100\"\n          ]\n        }\n      ]\n    },\n    {\n      \"job_name\": \"alertmanager\",\n      \"static_configs\": [\n        {\n          \"targets\": [\n            \"alertmanager:9093\"\n          ]\n        }\n      ]\n    },\n    {\n      \"job_name\": \"mailpit\",\n      \"static_configs\": [\n        {\n          \"targets\": [\n            \"mailpit:9090\"\n          ]\n        }\n      ]\n    }\n  ],\n  \"alerting\": {\n    \"alertmanagers\": [\n      {\n        \"static_configs\": [\n          {\n            \"targets\": [\n              \"alertmanager:9093\"\n            ]\n          }\n        ]\n      }\n    ]\n  }\n}\n",
+      "prometheus.yml": "{\n  \"global\": {\n    \"scrape_interval\": \"5s\",\n    \"evaluation_interval\": \"15s\"\n  },\n  \"rule_files\": [\n    \"/etc/prometheus/rules.yml\"\n  ],\n  \"scrape_configs\": [\n    {\n      \"job_name\": \"lab-exporter\",\n      \"metrics_path\": \"/api/metrics\",\n      \"static_configs\": [\n        {\n          \"targets\": [\n            \"exporter:8080\"\n          ]\n        }\n      ]\n    },\n    {\n      \"job_name\": \"kube-state-metrics\",\n      \"static_configs\": [\n        {\n          \"targets\": [\n            \"kube-state-metrics:8080\"\n          ]\n        }\n      ]\n    },\n    {\n      \"job_name\": \"prometheus\",\n      \"static_configs\": [\n        {\n          \"targets\": [\n            \"localhost:9090\"\n          ]\n        }\n      ]\n    },\n    {\n      \"job_name\": \"kubelet-cadvisor\",\n      \"scheme\": \"https\",\n      \"metrics_path\": \"/metrics/cadvisor\",\n      \"kubernetes_sd_configs\": [\n        {\n          \"role\": \"node\"\n        }\n      ],\n      \"authorization\": {\n        \"credentials_file\": \"/var/run/secrets/kubernetes.io/serviceaccount/token\"\n      },\n      \"tls_config\": {\n        \"insecure_skip_verify\": true\n      },\n      \"relabel_configs\": [\n        {\n          \"source_labels\": [\n            \"__meta_kubernetes_node_name\"\n          ],\n          \"target_label\": \"node\"\n        }\n      ]\n    },\n    {\n      \"job_name\": \"lab-host-docker\",\n      \"scrape_interval\": \"10s\",\n      \"scrape_timeout\": \"8s\",\n      \"static_configs\": [\n        {\n          \"targets\": [\n            \"lab-host-metrics:19100\"\n          ]\n        }\n      ]\n    },\n    {\n      \"job_name\": \"alertmanager\",\n      \"static_configs\": [\n        {\n          \"targets\": [\n            \"alertmanager:9093\"\n          ]\n        }\n      ]\n    },\n    {\n      \"job_name\": \"mailpit\",\n      \"static_configs\": [\n        {\n          \"targets\": [\n            \"mailpit:9090\"\n          ]\n        }\n      ]\n    },\n    {\n      \"job_name\": \"api-fpm\",\n      \"metrics_path\": \"/fpm-metrics\",\n      \"scrape_timeout\": \"2s\",\n      \"dns_sd_configs\": [\n        {\n          \"names\": [\n            \"api-diagnostics.lab.svc.cluster.local\"\n          ],\n          \"type\": \"A\",\n          \"port\": 8082,\n          \"refresh_interval\": \"5s\"\n        }\n      ]\n    }\n  ],\n  \"alerting\": {\n    \"alertmanagers\": [\n      {\n        \"static_configs\": [\n          {\n            \"targets\": [\n              \"alertmanager:9093\"\n            ]\n          }\n        ]\n      }\n    ]\n  }\n}\n",
       "rules.yml": "{\n  \"groups\": [\n    {\n      \"name\": \"lab-slo\",\n      \"interval\": \"15s\",\n      \"rules\": [\n        {\n          \"record\": \"lab:api_availability_miss_ratio:5m\",\n          \"expr\": \"sum(rate(lab_http_total{traffic=\\\"normal\\\",class=\\\"5xx\\\"}[5m])) / clamp_min(sum(rate(lab_http_total{traffic=\\\"normal\\\"}[5m])), 1e-12)\"\n        },\n        {\n          \"record\": \"lab:api_latency_miss_ratio:5m\",\n          \"expr\": \"clamp_min((sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[5m])) - sum(rate(lab_http_seconds_bucket{traffic=\\\"normal\\\",le=\\\"0.5\\\"}[5m]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[5m])), 1e-12), 0)\"\n        },\n        {\n          \"record\": \"lab:processing_miss_ratio:5m\",\n          \"expr\": \"(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"5m\\\"}) - sum(lab_processing_cohort_met{traffic=\\\"normal\\\",window=\\\"5m\\\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"5m\\\"}), 1)\"\n        },\n        {\n          \"record\": \"lab:api_availability_burn:5m\",\n          \"expr\": \"lab:api_availability_miss_ratio:5m / 0.001\"\n        },\n        {\n          \"record\": \"lab:api_latency_burn:5m\",\n          \"expr\": \"lab:api_latency_miss_ratio:5m / 0.01\"\n        },\n        {\n          \"record\": \"lab:processing_burn:5m\",\n          \"expr\": \"lab:processing_miss_ratio:5m / 0.01\"\n        },\n        {\n          \"record\": \"lab:api_availability_miss_ratio:30m\",\n          \"expr\": \"sum(rate(lab_http_total{traffic=\\\"normal\\\",class=\\\"5xx\\\"}[30m])) / clamp_min(sum(rate(lab_http_total{traffic=\\\"normal\\\"}[30m])), 1e-12)\"\n        },\n        {\n          \"record\": \"lab:api_latency_miss_ratio:30m\",\n          \"expr\": \"clamp_min((sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[30m])) - sum(rate(lab_http_seconds_bucket{traffic=\\\"normal\\\",le=\\\"0.5\\\"}[30m]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[30m])), 1e-12), 0)\"\n        },\n        {\n          \"record\": \"lab:processing_miss_ratio:30m\",\n          \"expr\": \"(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"30m\\\"}) - sum(lab_processing_cohort_met{traffic=\\\"normal\\\",window=\\\"30m\\\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"30m\\\"}), 1)\"\n        },\n        {\n          \"record\": \"lab:api_availability_burn:30m\",\n          \"expr\": \"lab:api_availability_miss_ratio:30m / 0.001\"\n        },\n        {\n          \"record\": \"lab:api_latency_burn:30m\",\n          \"expr\": \"lab:api_latency_miss_ratio:30m / 0.01\"\n        },\n        {\n          \"record\": \"lab:processing_burn:30m\",\n          \"expr\": \"lab:processing_miss_ratio:30m / 0.01\"\n        },\n        {\n          \"record\": \"lab:api_availability_miss_ratio:1h\",\n          \"expr\": \"sum(rate(lab_http_total{traffic=\\\"normal\\\",class=\\\"5xx\\\"}[1h])) / clamp_min(sum(rate(lab_http_total{traffic=\\\"normal\\\"}[1h])), 1e-12)\"\n        },\n        {\n          \"record\": \"lab:api_latency_miss_ratio:1h\",\n          \"expr\": \"clamp_min((sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[1h])) - sum(rate(lab_http_seconds_bucket{traffic=\\\"normal\\\",le=\\\"0.5\\\"}[1h]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[1h])), 1e-12), 0)\"\n        },\n        {\n          \"record\": \"lab:processing_miss_ratio:1h\",\n          \"expr\": \"(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"1h\\\"}) - sum(lab_processing_cohort_met{traffic=\\\"normal\\\",window=\\\"1h\\\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"1h\\\"}), 1)\"\n        },\n        {\n          \"record\": \"lab:api_availability_burn:1h\",\n          \"expr\": \"lab:api_availability_miss_ratio:1h / 0.001\"\n        },\n        {\n          \"record\": \"lab:api_latency_burn:1h\",\n          \"expr\": \"lab:api_latency_miss_ratio:1h / 0.01\"\n        },\n        {\n          \"record\": \"lab:processing_burn:1h\",\n          \"expr\": \"lab:processing_miss_ratio:1h / 0.01\"\n        },\n        {\n          \"record\": \"lab:api_availability_miss_ratio:2h\",\n          \"expr\": \"sum(rate(lab_http_total{traffic=\\\"normal\\\",class=\\\"5xx\\\"}[2h])) / clamp_min(sum(rate(lab_http_total{traffic=\\\"normal\\\"}[2h])), 1e-12)\"\n        },\n        {\n          \"record\": \"lab:api_latency_miss_ratio:2h\",\n          \"expr\": \"clamp_min((sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[2h])) - sum(rate(lab_http_seconds_bucket{traffic=\\\"normal\\\",le=\\\"0.5\\\"}[2h]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[2h])), 1e-12), 0)\"\n        },\n        {\n          \"record\": \"lab:processing_miss_ratio:2h\",\n          \"expr\": \"(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"2h\\\"}) - sum(lab_processing_cohort_met{traffic=\\\"normal\\\",window=\\\"2h\\\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"2h\\\"}), 1)\"\n        },\n        {\n          \"record\": \"lab:api_availability_burn:2h\",\n          \"expr\": \"lab:api_availability_miss_ratio:2h / 0.001\"\n        },\n        {\n          \"record\": \"lab:api_latency_burn:2h\",\n          \"expr\": \"lab:api_latency_miss_ratio:2h / 0.01\"\n        },\n        {\n          \"record\": \"lab:processing_burn:2h\",\n          \"expr\": \"lab:processing_miss_ratio:2h / 0.01\"\n        },\n        {\n          \"record\": \"lab:api_availability_miss_ratio:6h\",\n          \"expr\": \"sum(rate(lab_http_total{traffic=\\\"normal\\\",class=\\\"5xx\\\"}[6h])) / clamp_min(sum(rate(lab_http_total{traffic=\\\"normal\\\"}[6h])), 1e-12)\"\n        },\n        {\n          \"record\": \"lab:api_latency_miss_ratio:6h\",\n          \"expr\": \"clamp_min((sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[6h])) - sum(rate(lab_http_seconds_bucket{traffic=\\\"normal\\\",le=\\\"0.5\\\"}[6h]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[6h])), 1e-12), 0)\"\n        },\n        {\n          \"record\": \"lab:processing_miss_ratio:6h\",\n          \"expr\": \"(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"6h\\\"}) - sum(lab_processing_cohort_met{traffic=\\\"normal\\\",window=\\\"6h\\\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"6h\\\"}), 1)\"\n        },\n        {\n          \"record\": \"lab:api_availability_burn:6h\",\n          \"expr\": \"lab:api_availability_miss_ratio:6h / 0.001\"\n        },\n        {\n          \"record\": \"lab:api_latency_burn:6h\",\n          \"expr\": \"lab:api_latency_miss_ratio:6h / 0.01\"\n        },\n        {\n          \"record\": \"lab:processing_burn:6h\",\n          \"expr\": \"lab:processing_miss_ratio:6h / 0.01\"\n        },\n        {\n          \"record\": \"lab:api_availability_miss_ratio:1d\",\n          \"expr\": \"sum(rate(lab_http_total{traffic=\\\"normal\\\",class=\\\"5xx\\\"}[1d])) / clamp_min(sum(rate(lab_http_total{traffic=\\\"normal\\\"}[1d])), 1e-12)\"\n        },\n        {\n          \"record\": \"lab:api_latency_miss_ratio:1d\",\n          \"expr\": \"clamp_min((sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[1d])) - sum(rate(lab_http_seconds_bucket{traffic=\\\"normal\\\",le=\\\"0.5\\\"}[1d]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[1d])), 1e-12), 0)\"\n        },\n        {\n          \"record\": \"lab:processing_miss_ratio:1d\",\n          \"expr\": \"(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"1d\\\"}) - sum(lab_processing_cohort_met{traffic=\\\"normal\\\",window=\\\"1d\\\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"1d\\\"}), 1)\"\n        },\n        {\n          \"record\": \"lab:api_availability_burn:1d\",\n          \"expr\": \"lab:api_availability_miss_ratio:1d / 0.001\"\n        },\n        {\n          \"record\": \"lab:api_latency_burn:1d\",\n          \"expr\": \"lab:api_latency_miss_ratio:1d / 0.01\"\n        },\n        {\n          \"record\": \"lab:processing_burn:1d\",\n          \"expr\": \"lab:processing_miss_ratio:1d / 0.01\"\n        },\n        {\n          \"record\": \"lab:api_availability_miss_ratio:3d\",\n          \"expr\": \"sum(rate(lab_http_total{traffic=\\\"normal\\\",class=\\\"5xx\\\"}[3d])) / clamp_min(sum(rate(lab_http_total{traffic=\\\"normal\\\"}[3d])), 1e-12)\"\n        },\n        {\n          \"record\": \"lab:api_latency_miss_ratio:3d\",\n          \"expr\": \"clamp_min((sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[3d])) - sum(rate(lab_http_seconds_bucket{traffic=\\\"normal\\\",le=\\\"0.5\\\"}[3d]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[3d])), 1e-12), 0)\"\n        },\n        {\n          \"record\": \"lab:processing_miss_ratio:3d\",\n          \"expr\": \"(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"3d\\\"}) - sum(lab_processing_cohort_met{traffic=\\\"normal\\\",window=\\\"3d\\\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"3d\\\"}), 1)\"\n        },\n        {\n          \"record\": \"lab:api_availability_burn:3d\",\n          \"expr\": \"lab:api_availability_miss_ratio:3d / 0.001\"\n        },\n        {\n          \"record\": \"lab:api_latency_burn:3d\",\n          \"expr\": \"lab:api_latency_miss_ratio:3d / 0.01\"\n        },\n        {\n          \"record\": \"lab:processing_burn:3d\",\n          \"expr\": \"lab:processing_miss_ratio:3d / 0.01\"\n        },\n        {\n          \"record\": \"lab:api_availability_miss_ratio:30d\",\n          \"expr\": \"sum(rate(lab_http_total{traffic=\\\"normal\\\",class=\\\"5xx\\\"}[30d])) / clamp_min(sum(rate(lab_http_total{traffic=\\\"normal\\\"}[30d])), 1e-12)\"\n        },\n        {\n          \"record\": \"lab:api_latency_miss_ratio:30d\",\n          \"expr\": \"clamp_min((sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[30d])) - sum(rate(lab_http_seconds_bucket{traffic=\\\"normal\\\",le=\\\"0.5\\\"}[30d]))) / clamp_min(sum(rate(lab_http_seconds_count{traffic=\\\"normal\\\"}[30d])), 1e-12), 0)\"\n        },\n        {\n          \"record\": \"lab:processing_miss_ratio:30d\",\n          \"expr\": \"(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"30d\\\"}) - sum(lab_processing_cohort_met{traffic=\\\"normal\\\",window=\\\"30d\\\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\\\"normal\\\",window=\\\"30d\\\"}), 1)\"\n        },\n        {\n          \"record\": \"lab:api_availability_burn:30d\",\n          \"expr\": \"lab:api_availability_miss_ratio:30d / 0.001\"\n        },\n        {\n          \"record\": \"lab:api_latency_burn:30d\",\n          \"expr\": \"lab:api_latency_miss_ratio:30d / 0.01\"\n        },\n        {\n          \"record\": \"lab:processing_burn:30d\",\n          \"expr\": \"lab:processing_miss_ratio:30d / 0.01\"\n        },\n        {\n          \"alert\": \"SLOBurnApiAvailability1h\",\n          \"expr\": \"(lab:api_availability_burn:1h > 14.4) and (lab:api_availability_burn:5m > 14.4) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"critical\",\n            \"routing\": \"local-email\",\n            \"sli\": \"api_availability\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnApiAvailability1h\",\n            \"runbook\": \"docs/runbooks/api-errors.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnApiAvailability6h\",\n          \"expr\": \"(lab:api_availability_burn:6h > 6) and (lab:api_availability_burn:30m > 6) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"critical\",\n            \"routing\": \"local-email\",\n            \"sli\": \"api_availability\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnApiAvailability6h\",\n            \"runbook\": \"docs/runbooks/api-errors.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnApiAvailability1d\",\n          \"expr\": \"(lab:api_availability_burn:1d > 3) and (lab:api_availability_burn:2h > 3) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"warning\",\n            \"routing\": \"local-email\",\n            \"sli\": \"api_availability\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnApiAvailability1d\",\n            \"runbook\": \"docs/runbooks/api-errors.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnApiAvailability3d\",\n          \"expr\": \"(lab:api_availability_burn:3d > 1) and (lab:api_availability_burn:6h > 1) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"warning\",\n            \"routing\": \"local-email\",\n            \"sli\": \"api_availability\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnApiAvailability3d\",\n            \"runbook\": \"docs/runbooks/api-errors.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnApiLatency1h\",\n          \"expr\": \"(lab:api_latency_burn:1h > 14.4) and (lab:api_latency_burn:5m > 14.4) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"critical\",\n            \"routing\": \"local-email\",\n            \"sli\": \"api_latency\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnApiLatency1h\",\n            \"runbook\": \"docs/runbooks/api-errors.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnApiLatency6h\",\n          \"expr\": \"(lab:api_latency_burn:6h > 6) and (lab:api_latency_burn:30m > 6) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"critical\",\n            \"routing\": \"local-email\",\n            \"sli\": \"api_latency\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnApiLatency6h\",\n            \"runbook\": \"docs/runbooks/api-errors.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnApiLatency1d\",\n          \"expr\": \"(lab:api_latency_burn:1d > 3) and (lab:api_latency_burn:2h > 3) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"warning\",\n            \"routing\": \"local-email\",\n            \"sli\": \"api_latency\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnApiLatency1d\",\n            \"runbook\": \"docs/runbooks/api-errors.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnApiLatency3d\",\n          \"expr\": \"(lab:api_latency_burn:3d > 1) and (lab:api_latency_burn:6h > 1) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"warning\",\n            \"routing\": \"local-email\",\n            \"sli\": \"api_latency\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnApiLatency3d\",\n            \"runbook\": \"docs/runbooks/api-errors.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnProcessing1h\",\n          \"expr\": \"(lab:processing_burn:1h > 14.4) and (lab:processing_burn:5m > 14.4) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"critical\",\n            \"routing\": \"local-email\",\n            \"sli\": \"processing\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnProcessing1h\",\n            \"runbook\": \"docs/runbooks/slow-processing.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnProcessing6h\",\n          \"expr\": \"(lab:processing_burn:6h > 6) and (lab:processing_burn:30m > 6) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"critical\",\n            \"routing\": \"local-email\",\n            \"sli\": \"processing\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnProcessing6h\",\n            \"runbook\": \"docs/runbooks/slow-processing.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnProcessing1d\",\n          \"expr\": \"(lab:processing_burn:1d > 3) and (lab:processing_burn:2h > 3) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"warning\",\n            \"routing\": \"local-email\",\n            \"sli\": \"processing\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnProcessing1d\",\n            \"runbook\": \"docs/runbooks/slow-processing.md\"\n          }\n        },\n        {\n          \"alert\": \"SLOBurnProcessing3d\",\n          \"expr\": \"(lab:processing_burn:3d > 1) and (lab:processing_burn:6h > 1) and on() (up{job=\\\"lab-exporter\\\"} == 1)\",\n          \"for\": \"2m\",\n          \"labels\": {\n            \"severity\": \"warning\",\n            \"routing\": \"local-email\",\n            \"sli\": \"processing\"\n          },\n          \"annotations\": {\n            \"summary\": \"SLOBurnProcessing3d\",\n            \"runbook\": \"docs/runbooks/slow-processing.md\"\n          }\n        },\n        {\n          \"record\": \"lab:demo_processing_miss_ratio:5m\",\n          \"expr\": \"(sum(lab_processing_cohort_total{traffic=\\\"fault\\\",window=\\\"5m\\\"}) - sum(lab_processing_cohort_met{traffic=\\\"fault\\\",window=\\\"5m\\\"})) / clamp_min(sum(lab_processing_cohort_total{traffic=\\\"fault\\\",window=\\\"5m\\\"}),1)\"\n        },\n        {\n          \"alert\": \"LabDemoProcessingMiss\",\n          \"expr\": \"lab:demo_processing_miss_ratio:5m > 0\",\n          \"for\": \"15s\",\n          \"labels\": {\n            \"severity\": \"info\",\n            \"routing\": \"local-email\",\n            \"mode\": \"accelerated-demonstration\"\n          },\n          \"annotations\": {\n            \"summary\": \"LabDemoProcessingMiss\",\n            \"runbook\": \"docs/runbooks/slow-processing.md\"\n          }\n        },\n        {\n          \"alert\": \"TelemetryUnavailable\",\n          \"expr\": \"(max(up{job=\\\"lab-exporter\\\"}) == 0) or absent(max(up{job=\\\"lab-exporter\\\"})) or absent(max(lab_telemetry_heartbeat_seconds)) or (max(time() - lab_scheduler_heartbeat_seconds) > 30)\",\n          \"for\": \"1m\",\n          \"labels\": {\n            \"severity\": \"warning\",\n            \"routing\": \"local-email\"\n          },\n          \"annotations\": {\n            \"summary\": \"TelemetryUnavailable\",\n            \"runbook\": \"docs/runbooks/telemetry.md\"\n          }\n        },\n        {\n          \"alert\": \"InfrastructureTelemetryUnavailable\",\n          \"expr\": \"up{job=~\\\"lab-host-docker|kube-state-metrics|kubelet-cadvisor|alertmanager|mailpit\\\"} == 0\",\n          \"for\": \"1m\",\n          \"labels\": {\n            \"severity\": \"warning\",\n            \"routing\": \"local-email\"\n          },\n          \"annotations\": {\n            \"summary\": \"InfrastructureTelemetryUnavailable\",\n            \"runbook\": \"docs/runbooks/telemetry.md\"\n          }\n        }\n      ]\n    }\n  ]\n}\n"
     }
   },
@@ -1958,7 +1986,7 @@
             "app": "prometheus"
           },
           "annotations": {
-            "lab-config-checksum": "27d7882f336a44d7a01db9d1f99ea85fb758bab9b5d2249d38387a0d471640ba"
+            "lab-config-checksum": "7dacca6b273d4b537dc0058668cddb6da69bbae5d24d6adf6830f38dc929b189"
           }
         },
         "spec": {

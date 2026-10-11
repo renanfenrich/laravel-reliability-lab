@@ -1,0 +1,367 @@
+{
+  "start": "2026-10-11T20:58:49Z",
+  "source_sha": "8d644e73b1f892e07890dd9d4f083d0d3fc31529",
+  "notes": "Intentional fault: suspend only four main-pool children for 40s; keep native status pool running. Always resume in finally. Then kill only this API container master inside the dedicated kind node; verify recovery and smoke separately.",
+  "pod": "api-5fcc6866c8-gxndx",
+  "before": {
+    "api": {
+      "ready": true,
+      "restarts": 0,
+      "container_id": "containerd://1b6c5cb3265fadf3a8fa3aad97bf71a94fabeeaf28fa039e7b76e8512fe9cfe7"
+    },
+    "http": {
+      "ready": true,
+      "restarts": 0,
+      "container_id": "containerd://78cf8205f1b27447545fd7ac0f3e79e754a9523f1f5691110b2591cbb0947508"
+    }
+  },
+  "children": "14:php-fpm: pool www     \n15:php-fpm: pool www     \n16:php-fpm: pool www     \n17:php-fpm: pool www     \n18:php-fpm: pool www_status \n",
+  "suspended_pids": [
+    14,
+    15,
+    16,
+    17
+  ],
+  "samples": [
+    {
+      "utc": "2026-10-11T20:58:49Z",
+      "liveness": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.00031113624572753906,
+        "body": "{\"pool\":\"www\",\"process manager\":\"static\",\"start time\":1791752310,\"start since\":19,\"accepted conn\":4,\"listen queue\":0,\"max listen queue\":0,\"listen queue len\":4096,\"idle processes\":4,\"active processes\":0,\"total processes\":4,\"max active processes\":1,\"max children reached\":0,\"slow requests\":0,\"memory peak\":8388608}"
+      },
+      "http": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.0002281665802001953,
+        "body": "alive"
+      },
+      "main_pool_readiness": {
+        "status": "timeout",
+        "seconds": 0.8009779453277588,
+        "body": false
+      },
+      "pod": {
+        "api": {
+          "ready": true,
+          "restarts": 0,
+          "container_id": "containerd://1b6c5cb3265fadf3a8fa3aad97bf71a94fabeeaf28fa039e7b76e8512fe9cfe7"
+        },
+        "http": {
+          "ready": true,
+          "restarts": 0,
+          "container_id": "containerd://78cf8205f1b27447545fd7ac0f3e79e754a9523f1f5691110b2591cbb0947508"
+        }
+      }
+    },
+    {
+      "utc": "2026-10-11T20:58:53Z",
+      "liveness": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.0006070137023925781,
+        "body": "{\"pool\":\"www\",\"process manager\":\"static\",\"start time\":1791752310,\"start since\":23,\"accepted conn\":4,\"listen queue\":2,\"max listen queue\":2,\"listen queue len\":4096,\"idle processes\":4,\"active processes\":0,\"total processes\":4,\"max active processes\":1,\"max children reached\":0,\"slow requests\":0,\"memory peak\":8388608}"
+      },
+      "http": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.0003390312194824219,
+        "body": "alive"
+      },
+      "main_pool_readiness": {
+        "status": "timeout",
+        "seconds": 0.8008019924163818,
+        "body": false
+      },
+      "pod": {
+        "api": {
+          "ready": true,
+          "restarts": 0,
+          "container_id": "containerd://1b6c5cb3265fadf3a8fa3aad97bf71a94fabeeaf28fa039e7b76e8512fe9cfe7"
+        },
+        "http": {
+          "ready": true,
+          "restarts": 0,
+          "container_id": "containerd://78cf8205f1b27447545fd7ac0f3e79e754a9523f1f5691110b2591cbb0947508"
+        }
+      }
+    },
+    {
+      "utc": "2026-10-11T20:58:57Z",
+      "liveness": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.0004949569702148438,
+        "body": "{\"pool\":\"www\",\"process manager\":\"static\",\"start time\":1791752310,\"start since\":28,\"accepted conn\":4,\"listen queue\":5,\"max listen queue\":5,\"listen queue len\":4096,\"idle processes\":4,\"active processes\":0,\"total processes\":4,\"max active processes\":1,\"max children reached\":0,\"slow requests\":0,\"memory peak\":8388608}"
+      },
+      "http": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.0001418590545654297,
+        "body": "alive"
+      },
+      "main_pool_readiness": {
+        "status": "timeout",
+        "seconds": 0.8006300926208496,
+        "body": false
+      },
+      "pod": {
+        "api": {
+          "ready": true,
+          "restarts": 0,
+          "container_id": "containerd://1b6c5cb3265fadf3a8fa3aad97bf71a94fabeeaf28fa039e7b76e8512fe9cfe7"
+        },
+        "http": {
+          "ready": true,
+          "restarts": 0,
+          "container_id": "containerd://78cf8205f1b27447545fd7ac0f3e79e754a9523f1f5691110b2591cbb0947508"
+        }
+      }
+    },
+    {
+      "utc": "2026-10-11T20:59:02Z",
+      "liveness": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.00047397613525390625,
+        "body": "{\"pool\":\"www\",\"process manager\":\"static\",\"start time\":1791752310,\"start since\":32,\"accepted conn\":4,\"listen queue\":6,\"max listen queue\":6,\"listen queue len\":4096,\"idle processes\":4,\"active processes\":0,\"total processes\":4,\"max active processes\":1,\"max children reached\":0,\"slow requests\":0,\"memory peak\":8388608}"
+      },
+      "http": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.00019097328186035156,
+        "body": "alive"
+      },
+      "main_pool_readiness": {
+        "status": "timeout",
+        "seconds": 0.8002269268035889,
+        "body": false
+      },
+      "pod": {
+        "api": {
+          "ready": true,
+          "restarts": 0,
+          "container_id": "containerd://1b6c5cb3265fadf3a8fa3aad97bf71a94fabeeaf28fa039e7b76e8512fe9cfe7"
+        },
+        "http": {
+          "ready": true,
+          "restarts": 0,
+          "container_id": "containerd://78cf8205f1b27447545fd7ac0f3e79e754a9523f1f5691110b2591cbb0947508"
+        }
+      }
+    },
+    {
+      "utc": "2026-10-11T20:59:06Z",
+      "liveness": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.00044798851013183594,
+        "body": "{\"pool\":\"www\",\"process manager\":\"static\",\"start time\":1791752310,\"start since\":36,\"accepted conn\":4,\"listen queue\":9,\"max listen queue\":9,\"listen queue len\":4096,\"idle processes\":4,\"active processes\":0,\"total processes\":4,\"max active processes\":1,\"max children reached\":0,\"slow requests\":0,\"memory peak\":8388608}"
+      },
+      "http": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.00017118453979492188,
+        "body": "alive"
+      },
+      "main_pool_readiness": {
+        "status": "timeout",
+        "seconds": 0.8005011081695557,
+        "body": false
+      },
+      "pod": {
+        "api": {
+          "ready": false,
+          "restarts": 0,
+          "container_id": "containerd://1b6c5cb3265fadf3a8fa3aad97bf71a94fabeeaf28fa039e7b76e8512fe9cfe7"
+        },
+        "http": {
+          "ready": true,
+          "restarts": 0,
+          "container_id": "containerd://78cf8205f1b27447545fd7ac0f3e79e754a9523f1f5691110b2591cbb0947508"
+        }
+      }
+    },
+    {
+      "utc": "2026-10-11T20:59:10Z",
+      "liveness": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.0004870891571044922,
+        "body": "{\"pool\":\"www\",\"process manager\":\"static\",\"start time\":1791752310,\"start since\":40,\"accepted conn\":4,\"listen queue\":11,\"max listen queue\":11,\"listen queue len\":4096,\"idle processes\":4,\"active processes\":0,\"total processes\":4,\"max active processes\":1,\"max children reached\":0,\"slow requests\":0,\"memory peak\":8388608}"
+      },
+      "http": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.00013589859008789062,
+        "body": "alive"
+      },
+      "main_pool_readiness": {
+        "status": "timeout",
+        "seconds": 0.801145076751709,
+        "body": false
+      },
+      "pod": {
+        "api": {
+          "ready": false,
+          "restarts": 0,
+          "container_id": "containerd://1b6c5cb3265fadf3a8fa3aad97bf71a94fabeeaf28fa039e7b76e8512fe9cfe7"
+        },
+        "http": {
+          "ready": true,
+          "restarts": 0,
+          "container_id": "containerd://78cf8205f1b27447545fd7ac0f3e79e754a9523f1f5691110b2591cbb0947508"
+        }
+      }
+    },
+    {
+      "utc": "2026-10-11T20:59:14Z",
+      "liveness": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.0005660057067871094,
+        "body": "{\"pool\":\"www\",\"process manager\":\"static\",\"start time\":1791752310,\"start since\":44,\"accepted conn\":4,\"listen queue\":12,\"max listen queue\":12,\"listen queue len\":4096,\"idle processes\":4,\"active processes\":0,\"total processes\":4,\"max active processes\":1,\"max children reached\":0,\"slow requests\":0,\"memory peak\":8388608}"
+      },
+      "http": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.00026488304138183594,
+        "body": "alive"
+      },
+      "main_pool_readiness": {
+        "status": "timeout",
+        "seconds": 0.8006598949432373,
+        "body": false
+      },
+      "pod": {
+        "api": {
+          "ready": false,
+          "restarts": 0,
+          "container_id": "containerd://1b6c5cb3265fadf3a8fa3aad97bf71a94fabeeaf28fa039e7b76e8512fe9cfe7"
+        },
+        "http": {
+          "ready": true,
+          "restarts": 0,
+          "container_id": "containerd://78cf8205f1b27447545fd7ac0f3e79e754a9523f1f5691110b2591cbb0947508"
+        }
+      }
+    },
+    {
+      "utc": "2026-10-11T20:59:18Z",
+      "liveness": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.00039887428283691406,
+        "body": "{\"pool\":\"www\",\"process manager\":\"static\",\"start time\":1791752310,\"start since\":48,\"accepted conn\":4,\"listen queue\":14,\"max listen queue\":14,\"listen queue len\":4096,\"idle processes\":4,\"active processes\":0,\"total processes\":4,\"max active processes\":1,\"max children reached\":0,\"slow requests\":0,\"memory peak\":8388608}"
+      },
+      "http": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.00017905235290527344,
+        "body": "alive"
+      },
+      "main_pool_readiness": {
+        "status": "timeout",
+        "seconds": 0.8004591464996338,
+        "body": false
+      },
+      "pod": {
+        "api": {
+          "ready": false,
+          "restarts": 0,
+          "container_id": "containerd://1b6c5cb3265fadf3a8fa3aad97bf71a94fabeeaf28fa039e7b76e8512fe9cfe7"
+        },
+        "http": {
+          "ready": true,
+          "restarts": 0,
+          "container_id": "containerd://78cf8205f1b27447545fd7ac0f3e79e754a9523f1f5691110b2591cbb0947508"
+        }
+      }
+    },
+    {
+      "utc": "2026-10-11T20:59:22Z",
+      "liveness": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.00047588348388671875,
+        "body": "{\"pool\":\"www\",\"process manager\":\"static\",\"start time\":1791752310,\"start since\":52,\"accepted conn\":4,\"listen queue\":16,\"max listen queue\":16,\"listen queue len\":4096,\"idle processes\":4,\"active processes\":0,\"total processes\":4,\"max active processes\":1,\"max children reached\":0,\"slow requests\":0,\"memory peak\":8388608}"
+      },
+      "http": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.00019598007202148438,
+        "body": "alive"
+      },
+      "main_pool_readiness": {
+        "status": "timeout",
+        "seconds": 0.8008549213409424,
+        "body": false
+      },
+      "pod": {
+        "api": {
+          "ready": false,
+          "restarts": 0,
+          "container_id": "containerd://1b6c5cb3265fadf3a8fa3aad97bf71a94fabeeaf28fa039e7b76e8512fe9cfe7"
+        },
+        "http": {
+          "ready": true,
+          "restarts": 0,
+          "container_id": "containerd://78cf8205f1b27447545fd7ac0f3e79e754a9523f1f5691110b2591cbb0947508"
+        }
+      }
+    },
+    {
+      "utc": "2026-10-11T20:59:27Z",
+      "liveness": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.0007398128509521484,
+        "body": "{\"pool\":\"www\",\"process manager\":\"static\",\"start time\":1791752310,\"start since\":57,\"accepted conn\":4,\"listen queue\":18,\"max listen queue\":18,\"listen queue len\":4096,\"idle processes\":4,\"active processes\":0,\"total processes\":4,\"max active processes\":1,\"max children reached\":0,\"slow requests\":0,\"memory peak\":8388608}"
+      },
+      "http": {
+        "status": "HTTP/1.1 200 OK",
+        "seconds": 0.00012993812561035156,
+        "body": "alive"
+      },
+      "main_pool_readiness": {
+        "status": "timeout",
+        "seconds": 0.8007709980010986,
+        "body": false
+      },
+      "pod": {
+        "api": {
+          "ready": false,
+          "restarts": 0,
+          "container_id": "containerd://1b6c5cb3265fadf3a8fa3aad97bf71a94fabeeaf28fa039e7b76e8512fe9cfe7"
+        },
+        "http": {
+          "ready": true,
+          "restarts": 0,
+          "container_id": "containerd://78cf8205f1b27447545fd7ac0f3e79e754a9523f1f5691110b2591cbb0947508"
+        }
+      }
+    }
+  ],
+  "after_pool_resume": {
+    "api": {
+      "ready": true,
+      "restarts": 0,
+      "container_id": "containerd://1b6c5cb3265fadf3a8fa3aad97bf71a94fabeeaf28fa039e7b76e8512fe9cfe7"
+    },
+    "http": {
+      "ready": true,
+      "restarts": 0,
+      "container_id": "containerd://78cf8205f1b27447545fd7ac0f3e79e754a9523f1f5691110b2591cbb0947508"
+    }
+  },
+  "post_resume_ready": {
+    "status": "HTTP/1.1 200 OK",
+    "seconds": 0.009549856185913086,
+    "body": "{\"status\":\"ready\"}"
+  },
+  "actual_process_failure": {
+    "after": {
+      "api": {
+        "ready": true,
+        "restarts": 1,
+        "container_id": "containerd://8afcecee37cc81c0f9b8c0e9491dcdb9eec8b2e850449296bf9d3795d5c21a13"
+      },
+      "http": {
+        "ready": true,
+        "restarts": 0,
+        "container_id": "containerd://78cf8205f1b27447545fd7ac0f3e79e754a9523f1f5691110b2591cbb0947508"
+      }
+    },
+    "recovery_seconds": 4.176081659999909,
+    "signal": "SIGKILL"
+  },
+  "public_diagnostic_path": {
+    "status": "HTTP/1.1 404 Not Found",
+    "seconds": 0.0001609325408935547,
+    "body": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.30.5</center>\r\n</body>\r\n</html>\r\n"
+  },
+  "end": "2026-10-11T20:59:36Z",
+  "result": "PASS"
+}
