@@ -1,4 +1,5 @@
 # Error-budget policy (provisional local lab)
+
 Every decision first checks telemetry completeness and eligible volume. Zero traffic or missing history is insufficient evidence; missing telemetry triggers investigation, not permission to release. No automation merges, deploys remote systems or rolls back.
 
 A critical multi-window burn (2%/1h or 5%/6h) calls for immediate triage: preserve correlated evidence, identify affected user outcomes, check DB/Redis/workers/dependency, apply a documented reversible local mitigation. Freeze risky lab changes during investigation. A warning (10%/1d or 10%/3d) prioritizes reliability work over features, assigns follow-up and reviews recurrence.

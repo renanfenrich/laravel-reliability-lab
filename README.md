@@ -1,8 +1,10 @@
 # Laravel reliability lab — G1
-A local portfolio lab for durable asynchronous reports, Kubernetes operations, observable outcomes and measured capacity. These experiments are **not production experience**. Short tests do **not** establish a rolling30-day SLO.
+
+A local portfolio lab for durable asynchronous reports, Kubernetes operations, observable outcomes and measured capacity. These experiments are **not production experience**. Short tests do **not** establish a rolling 30-day SLO.
 
 ## Clean start (Linux/amd64)
-Prerequisites: Docker access and Compose (observed29.9.0/5.6.0), kind0.30.0, Terraform1.16.5, Python3, curl, Git, Make; approximately32Gi RAM and >20Gi free disk. No host PHP/Composer required. Docker pulls/builds need network. Do not install privileged system packages through this repository. `make doctor` checks tools/resources/ports and refuses incompatible pinned kind/Terraform. Existing Kubernetes contexts are never selected. Local kubectl1.34.0 is downloaded and verified by cluster-up.
+
+Prerequisites: Docker access and Compose (observed 29.9.0/5.6.0), kind 0.30.0, Terraform 1.16.5, Python 3, curl, Git, Make; approximately 32Gi RAM and >20Gi free disk. No host PHP/Composer required. Docker pulls/builds need network. Do not install privileged system packages through this repository. `make doctor` checks tools/resources/ports and refuses incompatible pinned kind/Terraform. Existing Kubernetes contexts are never selected. Local kubectl 1.34.0 is downloaded and verified by cluster-up.
 
 ```sh
 make doctor
@@ -18,6 +20,7 @@ These commands initialize ignored `.env` with random local bearer/database/Redis
 Development only: `make build dev-up`, use API on `http://127.0.0.1:18080`, then `make dev-down`. Compose named volumes preserve data; tests use separate lab_test database, committed PostgreSQL migrations, never the lab database. Compose and Kubernetes stores are independent.
 
 ## Use the service
+
 Use only synthetic subjects (`synthetic-example`). Read LAB_TOKEN from ignored .env into your local shell, without printing it. With the Kubernetes API loopback port-forward running:
 
 ```sh
@@ -33,23 +36,26 @@ curl -sS -H "Authorization: Bearer $LAB_TOKEN" -H 'Idempotency-Key: synthetic-de
 curl -sS -H "Authorization: Bearer $LAB_TOKEN" http://127.0.0.1:18081/api/reports/UUID
 ```
 
-POST returns202 only after committed acceptance; identical idempotent replay returns200/same ID, conflicting payload returns409. GET exposes pending/processing/completed/failed, attempts, result/error and overdue. Redis publication failure is recovered by scheduler. Attempts use DB leases/fencing; duplicate delivery cannot duplicate completed results. Terminal failures remain visible. X-Request-ID response matches JSON log correlation; supplied IDs are bounded/validated. No frontend.
+POST returns 202 only after committed acceptance; identical idempotent replay returns 200/same ID, conflicting payload returns 409. GET exposes pending/processing/completed/failed, attempts, result/error and overdue. Redis publication failure is recovered by scheduler. Attempts use DB leases/fencing; duplicate delivery cannot duplicate completed results. Terminal failures remain visible. X-Request-ID response matches JSON log correlation; supplied IDs are bounded/validated. No frontend.
 
-Local fault controls: LAB_FAULTS=true, authenticated `X-Lab-Traffic: fault`, optional latency_ms0..4000/fail_attempts0..3. Defaults25ms/no failures. Fault controls are inputs to synthetic lab service, never a public administrative endpoint. Use `normal` for actual baseline/normal requests, `load` for rate experiments, `fault` for intentional disruption. Only normal participates in provisional SLO rules; experiment files retain every class separately. This is trusted local labeling, not a production anti-abuse policy.
+Local fault controls: LAB_FAULTS=true, authenticated `X-Lab-Traffic: fault`, optional latency_ms0..4000/fail_attempts0..3. Defaults 25ms/no failures. Fault controls are inputs to synthetic lab service, never a public administrative endpoint. Use `normal` for actual baseline/normal requests, `load` for rate experiments, `fault` for intentional disruption. Only normal participates in provisional SLO rules; experiment files retain every class separately. This is trusted local labeling, not a production anti-abuse policy.
 
 ## Observe and verify
+
 Port-forward with the same explicit kubeconfig/context: service/grafana13000:3000, service/prometheus19090:9090, service/loki13100:3100. Grafana username `lab`, password local LAB_TOKEN. Provisioned dashboard: `/d/reliability-lab`. Prometheus `/targets` and `/alerts` expose metrics/alerts; local-only email delivery is documented below. Loki Explore: `{namespace="lab",app="worker"} | json`, then use `| json report_id="context.report_id", request_id="context.request_id"` and filter those parsed fields. Stop port-forwards with Ctrl-C.
 
 `make test` runs meaningful application tests; `make rules` runs short/30-day simulated fixtures; `make smoke` verifies concurrent idempotent acceptance -> worker -> committed checksum. `make load-test` runs bounded increasing-rate load; `python3 scripts/experiments.py all` additionally runs baseline, external latency/failure, worker interruption and alert recovery. Full experiment takes several minutes and records raw samples. `make verify` repeats app/rules/Terraform/generated-manifest/smoke/observability checks, failing on the first failed command. Independent schema checks/hosted-CI definition are documented in validation. No hosted CI is implied.
 
 ## Stop/resume and reset
+
 `make teardown` removes only dedicated Compose containers/network and named kind cluster. It preserves Compose volumes, .env, .runtime/postgres and archives Terraform state; observability emptyDir history is removed with cluster. Rebuild/recreate/deploy will reattach preserved PostgreSQL data; Redis loss is recovered from pending rows. This is not a validated backup mechanism. Persistent data on host is owned by PostgreSQL container UID; do not change it casually.
 
 Destructive separate reset, **only after explicit human authorization**: stop lab with make teardown, then `CONFIRM=DELETE-LAB-DATA make data-reset`. It removes only this project's Compose volumes and mounted PostgreSQL directory contents. It has not been executed as part of G1. For resume read [status](docs/status.md), [checklist](docs/goals/G1.md) and current Git status before repeating discovery.
 
-Architecture/decisions: docs/architecture.md, docs/decisions/. SLOs/budget: docs/slo.md and docs/error-budget-policy.md. Operator response: docs/runbooks/. Evidence, capacity and incident reports: docs/validation.md, docs/capacity.md, docs/incident.md, evidence/. Review boundary: READY FOR HUMAN REVIEW; renanfenrich owns Git flow, octavariumdigitalpartners mandatory reviewer; no push or merge under this goal.
+Architecture/decisions: docs/architecture.md, docs/decisions/. SLOs/budget: docs/slo.md and docs/error-budget-policy.md. Operator response: docs/runbooks/. Evidence, capacity and incident reports: docs/validation.md, docs/capacity.md, docs/incident.md, evidence/. Review boundary: READY FOR HUMAN REVIEW. renanfenrich owns Git flow; octavariumdigitalpartners is the mandatory reviewer. Initial repository publication and release 0.1.0 were explicitly authorized; subsequent pushes, publication, and merges require authorization.
 
 ### LAN Grafana access that reconnects after a pod restart
+
 On this Linux workstation, create a project-scoped transient user service (no root/install needed):
 ```bash
 systemd-run --user --unit=laravel-reliability-lab-grafana-forward \
@@ -58,18 +64,20 @@ systemd-run --user --unit=laravel-reliability-lab-grafana-forward \
   --context kind-laravel-reliability-lab -n lab port-forward \
   --address=192.168.1.9 service/grafana 13000:3000
 ```
-Use the workstation's current trusted LAN IP if different. Open http://192.168.1.9:13000/d/reliability-lab from the same LAN. Unit is transient, not enabled on reboot. Stop with `systemctl --user stop laravel-reliability-lab-grafana-forward.service`; `make teardown` also stops this unit. Status/logs: `systemctl --user status laravel-reliability-lab-grafana-forward.service` and `journalctl --user -u laravel-reliability-lab-grafana-forward.service`. Existing unit must be stopped/reset before repeating creation; do not create duplicate listeners. Grafana memory limit is1Gi after an observed512Mi OOM; this change does not establish long-term memory stability.
+Use the workstation's current trusted LAN IP if different. Open http://192.168.1.9:13000/d/reliability-lab from the same LAN. Unit is transient, not enabled on reboot. Stop with `systemctl --user stop laravel-reliability-lab-grafana-forward.service`; `make teardown` also stops this unit. Status/logs: `systemctl --user status laravel-reliability-lab-grafana-forward.service` and `journalctl --user -u laravel-reliability-lab-grafana-forward.service`. Existing unit must be stopped/reset before repeating creation; do not create duplicate listeners. Grafana memory limit is 1Gi after an observed 512Mi OOM; this change does not establish long-term memory stability.
 
-### Dashboard de infraestrutura
-Abra `/d/lab-infrastructure`: **Lab — Sistema, Docker e Kubernetes**. Os40 painéis de métricas cobrem CPU, memória, swap, load, espaço/inodes do filesystem do repositório, IO de discos físicos, interfaces físicas, containers Compose/kind e pods do namespace lab (requests/limits, throttling, readiness, reinícios, OOM, rede e filesystem). O dashboard original continua em `/d/reliability-lab`.
+### Infrastructure dashboard
 
-`make deploy` inicia o coletor nativo do host (Pythonstdlib, DockerCLI já instalado), descobre o gateway da bridge kind e provisiona o scrape via Terraform. Linux com systemd de usuário e Docker acessível é necessário; não instala pacote privilegiado. `make host-metrics-up` / `make host-metrics-down` controlam apenas `laravel-reliability-lab-host-metrics.service`. Após reboot recrie o serviço transitório; `make teardown` o encerra. O listener19100 usa somente o gateway interno, não o IPWi-Fi, e não monta socket Docker nos pods. Caso o gateway mude, execute `make deploy` para regenerar o hostAlias do Prometheus.
+Open `/d/lab-infrastructure`. Its 40 metric panels cover CPU, memory, swap, load, repository filesystem space and inodes, physical disk I/O, physical network interfaces, Compose/kind containers, and pods in the `lab` namespace (requests/limits, throttling, readiness, restarts, OOM events, network, and filesystem usage). The original application dashboard remains at `/d/reliability-lab`.
 
-Host representa o notebook inteiro, incluindo outros processos. Dockerkind já inclui pods: não somar ambos. DockerCLI fornece valores IO arredondados, úteis para tendência, não benchmarking preciso de disco/rede. MemóriaDocker exclui cache inativo; não equivale exatamente ao working setcAdvisor. Sem histórico retroativo do host antes da instalação. Estado do coletor e idade do scrape aparecem nos últimos painéis. Métricas não disponíveis nessa infraestrutura devem permanecer desconhecidas, não convertidas artificialmente em zero.
+`make deploy` starts the native host collector using the Python standard library and the installed Docker CLI, discovers the kind bridge gateway, and provisions scraping through Terraform. Linux with a user systemd session and Docker access is required. No privileged package installation is needed. `make host-metrics-up` and `make host-metrics-down` control only `laravel-reliability-lab-host-metrics.service`. Recreate the transient service after reboot; `make teardown` stops it. Port 19100 binds only to the internal gateway. No Docker socket is mounted in pods. If the gateway changes, run `make deploy` to regenerate the Prometheus hostAlias.
 
-### Alertas e caixa de e-mail local
-Prometheus → Alertmanager0.34.1 → Mailpit1.31.5 → `alerts@lab.test`. A caixa captura e-mails localmente; não envia para Gmail/Outlook nem possui relay/forwarding configurado. SMTP1025 e Alertmanager9093 ficam internos ao cluster; UI/API têm autenticação Basic com usuário `lab` e senha LAB_TOKEN.
+Host metrics cover the entire workstation, including other processes. The kind Docker container already includes pods; do not add those measurements together. Docker CLI I/O values are rounded and useful for trends rather than precise disk/network benchmarks. Docker memory excludes inactive cache and differs from the cAdvisor working set. No host history exists before collector installation. The final panels show collection health and scrape age. Unavailable metrics remain unknown rather than being converted to zero.
 
-`make mail-up` abre a caixa em127.0.0.1:18025. Na rede confiável: `LAB_BIND_ADDRESS=192.168.1.9 make mail-up`, então http://192.168.1.9:18025 . `make mail-down` fecha o acesso; teardown também para o serviço transitório. Mensagens e estado do Alertmanager usam emptyDir: perdem-se após recriação do pod/cluster; o teste exporta e-mails/evidência antes do encerramento. Nunca inserir dados pessoais na caixa do lab.
+### Alerts and local email inbox
 
-`make rules` testa regras; `make alert-test` testa firing/resolved para todos15 alertas via fixtures de notificação e depois3 cenários reais Prometheus. O teste pausa temporariamente somente scheduler/coletores deste lab, registra disparos, restaura serviços em finally e espera o cohort fault5m sair da janela. Dura aproximadamente7min. Não executar durante outros testes e não interromper comSIGKILL. Falhas sintéticas são traffic=fault e não alteram o SLO normal. As fixtures de envio têm mode=notification-fixture-ID e não provam burn rates reais. Mais detalhes em docs/runbooks/alert-email.md.
+Prometheus → Alertmanager 0.34.1 → Mailpit 1.31.5 → `alerts@lab.test`. The inbox captures email locally with no external relay or forwarding. SMTP port 1025 and Alertmanager port 9093 remain internal to the cluster. The UI/API use Basic authentication with username `lab` and the local `LAB_TOKEN` as the password.
+
+`make mail-up` exposes the inbox at `127.0.0.1:18025`. On a trusted LAN, run `LAB_BIND_ADDRESS=192.168.1.9 make mail-up`, then open http://192.168.1.9:18025. `make mail-down` closes access; teardown also stops the transient service. Messages and Alertmanager state use emptyDir and are lost when pods or the cluster are recreated. The test exports messages and evidence. Use synthetic data only.
+
+`make rules` tests the rules. `make alert-test` tests firing and resolved notifications for all 15 alerts using explicit notification fixtures, followed by three real Prometheus scenarios. It temporarily pauses this lab's scheduler and host collector, records alerts, restores services in `finally`, and waits for the five-minute fault cohort to leave the window. Allow approximately seven minutes. Do not run it during other tests or terminate it with SIGKILL. Synthetic failures use `traffic=fault` and do not affect the normal SLO population. Notification fixtures use `mode=notification-fixture-ID` and do not prove actual SLO burn rates. See [the email alert runbook](docs/runbooks/alert-email.md).

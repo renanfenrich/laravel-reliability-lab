@@ -1,4 +1,5 @@
 # ADR 003 — durable shared metric aggregation
+
 PostgreSQL metric rows are keyed only by bounded series labels. Every API and worker replica increments these with atomic upsert. Business transitions and outcome counters share transactions. One dedicated exporter Deployment, one replica, serves aggregate counters. Prometheus must scrape only exporter, never every replica of the API. Use `sum(rate(...))`, not a sum of shared replicas. Histograms include 0.5s API and 60s processing buckets. Counter resets occur only on explicit data reset.
 
 Tradeoff: several database writes per request create measurable overhead and shared-row contention. This lab deliberately measures that cost; no high-throughput exporter claim. Histogram zero buckets are exposed consistently. Identifiers go only to JSON logs. HTTP metrics use route template submit/status, status class and normal/load/fault; reports have traffic classification. A failed metric write produces a structured telemetry.write_failed log; exporter availability alone cannot prove complete HTTP capture during DB failure. Telemetry-loss periods invalidate positive SLO claims.
