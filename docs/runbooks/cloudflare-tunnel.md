@@ -2,7 +2,7 @@
 
 The user authorized Cloudflare Tunnel access separately from G2's local experiments. User-provided tunnel name: `laravel-reliability-lab`. Hostname: `lrl-grafana.octavarium.com.br`. The published HTTP origin should be `http://192.168.1.9:13000`, the current project Grafana forward. No database, Redis, Prometheus, Loki, Docker socket, or SMTP route is authorized.
 
-An unauthenticated Chrome request to the HTTPS hostname displayed the Cloudflare Access email/PIN login for `lrl-grafana`. This confirms an Access challenge, not the allowed-email policy, tunnel health, correct backend routing, or authenticated dashboard access. No account login or connector credential was available locally at this check.
+An unauthenticated Chrome request to the HTTPS hostname displayed the Cloudflare Access email/PIN login for `lrl-grafana`. This confirms an Access challenge, not the allowed-email policy, tunnel health, correct backend routing, or authenticated dashboard access. At the initial check, no account login or connector credential was available locally. The user subsequently supplied a test credential: the connector registered four connections and the public hostname still required Access. See evidence/cloudflare/connection.json. Authenticated external dashboard access and the actual allowed-identity policy remain unverified.
 
 ## Connect the notebook
 
