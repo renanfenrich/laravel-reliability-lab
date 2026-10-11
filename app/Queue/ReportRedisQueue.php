@@ -9,7 +9,7 @@ class ReportRedisQueue extends RedisQueue {
         if (!$job instanceof ProcessReport) return parent::createPayloadArray($job,$queue,$data);
         $job->notificationKey='lab:notification:'.$queue.':'.$job->reportId;
         return array_merge(parent::createPayloadArray($job,$queue,$data),[
-            'notification_key'=>$job->notificationKey,'notification_token'=>$job->notificationToken,
+            'report_id'=>$job->reportId,'notification_key'=>$job->notificationKey,'notification_token'=>$job->notificationToken,
         ]);
     }
     public function pushRaw($payload, $queue=null, array $options=[]) {

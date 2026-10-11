@@ -1,4 +1,4 @@
-name: G1 local reliability validation
+name: Local reliability validation
 on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
@@ -18,7 +18,7 @@ jobs:
           docker run --rm --user 1000:1000 --read-only --tmpfs /tmp:uid=1000,gid=1000 --entrypoint nginx -v "$PWD/runtime/nginx-api.conf:/etc/lab-nginx/nginx.conf:ro" nginx:1.30.5-alpine -t -c /etc/lab-nginx/nginx.conf
       - name: Independent status pool under main-pool suspension
         run: python3 scripts/g3-runtime-contract.py
-      - name: Application tests against PostgreSQL and Redis
+      - name: Application and isolated real-Redis transport tests
         run: make test
       - name: Local secret and image context boundaries
         run: python3 scripts/verify-safety.py

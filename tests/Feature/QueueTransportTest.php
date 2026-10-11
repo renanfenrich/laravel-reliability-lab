@@ -77,6 +77,7 @@ class QueueTransportTest extends TestCase {
         try { app('queue.worker')->process('redis',$redelivered,new \Illuminate\Queue\WorkerOptions(maxTries:1,timeout:10)); }
         catch (\Illuminate\Queue\MaxAttemptsExceededException $e) { /* Native transport rejection precedes handle. */ }
         $this->assertNull(Redis::get($this->guard($id)));
+        $this->assertEquals(1,DB::table('metric_samples')->where('series','lab_notification_failures_total')->value('value'));
         $this->assertDatabaseHas('reports',['id'=>$id,'state'=>'pending','attempts'=>0]);
         app(Reports::class)->reconcile();$this->finish();
         $this->assertDatabaseHas('reports',['id'=>$id,'state'=>'completed','attempts'=>1]);

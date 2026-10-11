@@ -511,7 +511,7 @@
             "app": "api"
           },
           "annotations": {
-            "lab-source-checksum": "853e0a30701a96fa65beb95f47f9e742bf3d0120e14cdfb71e437f89ff172a7b",
+            "lab-source-checksum": "06158c4f73e7a00629646c47511ff6cfae19cb0ab0d78704fc68d78b14205614",
             "lab-config-checksum": "d176ba5d54c064e86b7113dcb7d29388d60f95862631144da842057e4c6e9bb4"
           }
         },
@@ -876,7 +876,7 @@
             "app": "worker"
           },
           "annotations": {
-            "lab-source-checksum": "853e0a30701a96fa65beb95f47f9e742bf3d0120e14cdfb71e437f89ff172a7b"
+            "lab-source-checksum": "06158c4f73e7a00629646c47511ff6cfae19cb0ab0d78704fc68d78b14205614"
           }
         },
         "spec": {
@@ -1149,7 +1149,7 @@
             "app": "scheduler"
           },
           "annotations": {
-            "lab-source-checksum": "853e0a30701a96fa65beb95f47f9e742bf3d0120e14cdfb71e437f89ff172a7b"
+            "lab-source-checksum": "06158c4f73e7a00629646c47511ff6cfae19cb0ab0d78704fc68d78b14205614"
           }
         },
         "spec": {
@@ -1417,7 +1417,7 @@
             "app": "exporter"
           },
           "annotations": {
-            "lab-source-checksum": "853e0a30701a96fa65beb95f47f9e742bf3d0120e14cdfb71e437f89ff172a7b",
+            "lab-source-checksum": "06158c4f73e7a00629646c47511ff6cfae19cb0ab0d78704fc68d78b14205614",
             "lab-config-checksum": "d176ba5d54c064e86b7113dcb7d29388d60f95862631144da842057e4c6e9bb4"
           }
         },

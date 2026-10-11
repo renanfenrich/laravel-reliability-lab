@@ -44,7 +44,7 @@ class Metrics {
             $zero('lab_processing_seconds_count',['traffic'=>$traffic]); $zero('lab_processing_seconds_sum',['traffic'=>$traffic]);
         }
         foreach(['queued','suppressed','error'] as $outcome) $zero('lab_dispatch_total',['outcome'=>$outcome]);
-        $zero('lab_scheduler_heartbeat_seconds');
+        $zero('lab_scheduler_heartbeat_seconds'); $zero('lab_notification_failures_total');
         foreach(DB::table('metric_samples')->get() as $sample) $defaults[$sample->series]=$sample->value;
         $lines=[];
         foreach(['http','external','processing'] as $h) $lines[]='# TYPE lab_'.$h.'_seconds histogram';
