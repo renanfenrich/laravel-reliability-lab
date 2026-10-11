@@ -5,12 +5,14 @@ start=utc()
 with forward('prometheus',9090) as base:
     _,targets,_=request(base,'/api/v1/targets',auth=False)
     active=targets['data']['activeTargets']; assert len(active)>=7 and all(t['health']=='up' for t in active),[(t['labels'],t['health'],t.get('lastError')) for t in active]
+    fpm_targets=[t for t in active if t['labels'].get('job')=='api-fpm']
+    assert len(fpm_targets)==2 and all(t['health']=='up' for t in fpm_targets),fpm_targets
     _,managers,_=request(base,'/api/v1/alertmanagers',auth=False)
     assert any(m['url']=='http://alertmanager:9093/api/v2/alerts' for m in managers['data']['activeAlertmanagers']),managers
     _,rules,_=request(base,'/api/v1/rules',auth=False)
     assert all(r['health']=='ok' for g in rules['data']['groups'] for r in g['rules']),rules
     checks={}
-    for expr in ['lab_accepted_total','lab_completed_total','lab_processing_cohort_total','container_memory_working_set_bytes{namespace="lab"}','kube_pod_container_status_restarts_total{namespace="lab"}']:
+    for expr in ['phpfpm_listen_queue','phpfpm_active_processes','lab_postgres_sessions','lab_postgres_stat_total','lab_redis_queue_jobs','lab_accepted_total','lab_completed_total','lab_processing_cohort_total','container_memory_working_set_bytes{namespace="lab"}','kube_pod_container_status_restarts_total{namespace="lab"}']:
         _,r,_=request(base,'/api/v1/query?query='+urllib.parse.quote(expr),auth=False);assert r['data']['result'],expr;checks[expr]=len(r['data']['result'])
 with forward('mailpit',8025) as base:
     try:
@@ -60,7 +62,7 @@ with forward('grafana',3000) as base:
     assert panel_checks['Reports by state and traffic']>0,panel_checks
     assert panel_checks['Pod working set memory']>0,panel_checks
     assert panel_checks['Structured report logs: filter request_id/report_id in Explore']>0,panel_checks
-    for title in ['Host CPU utilizada','Memória disponível','Docker CPU em cores (1 = um núcleo)','Docker memória usada (cache inativo excluído)','CPU por pod (cores)','Memória working set por pod','Docker coleta bem-sucedida']:
+    for title in ['FPM active children per API pool','FPM queued connections per API pool','PostgreSQL active session waits by bounded operation','PostgreSQL transactions and block reads per second','Redis report queue depth','Scheduler heartbeat age','Host CPU utilizada','Memória disponível','Docker CPU em cores (1 = um núcleo)','Docker memória usada (cache inativo excluído)','CPU por pod (cores)','Memória working set por pod','Docker coleta bem-sucedida']:
         assert panel_checks[title]>0,(title,panel_checks)
 save('observability.json',{'start':start,'end':utc(),'commit':sha(),'targets':[{'job':t['labels'].get('job'),'health':t['health']} for t in active],'active_alertmanagers':managers['data']['activeAlertmanagers'],'rule_health':'PASS','mailbox_authentication':'PASS','mailbox_total':mailbox['total'],'metric_series':checks,'searchable_correlated_worker_logs':True,'queried_report_id':report_id,'dashboard_panels':len(dashboard['dashboard']['panels']),'grafana_datasource_health':datasource_health,'grafana_panel_frames':panel_checks,'result':'PASS'})
 print('PASS: Prometheus targets/resource metrics, Loki correlated worker logs and provisioned Grafana dashboard')

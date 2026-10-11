@@ -16,3 +16,7 @@ Comparable 180-second baseline; independent pool-saturation and actual process-f
 ## Limits and failed attempts
 
 The first baseline PostgreSQL JSON parser selected only the last output line, failing on multiline JSON. Error samples are retained. A corrected supplemental collector runs concurrently; later runs use the corrected parser. Builds and an isolated Compose microbenchmark overlapped the baseline; host CPU is shared and these activities must be disclosed in capacity interpretation. No raw SQL or secret values are exported. No pg_stat_statements extension/restart, tracing service, database reset or live restore was used.
+
+## Phase A/B/C update
+
+The baseline completed with all 10,800 accepted reports timely, zero errors and client p99 424.22 ms at 60 requests/s for 180 seconds. Native probe suspension/actual master termination and standalone Docker contracts passed. Batched histogram fixture preserved all series while reducing SQL statements by 90%; application suite passed 14 tests/55 assertions. Deployment completed through Terraform. A premature observability check during rollout failed on three DNS-discovered API targets; the failed log is retained. No passing stable-target result is inferred from that attempt. Full load comparison, current-source interruption and final checks remain pending.

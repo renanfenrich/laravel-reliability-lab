@@ -2,16 +2,27 @@
 namespace App\Services;
 use Illuminate\Support\Facades\DB;
 class Metrics {
-    public static function add(string $name, array $labels=[], float $value=1): void {
+    private static function series(string $name, array $labels): string {
         ksort($labels); $parts=[];
         foreach ($labels as $k=>$v) $parts[]=$k.'="'.addcslashes((string)$v,"\\\"\n").'"';
-        $series=$name.($parts ? '{'.implode(',',$parts).'}' : '');
-        DB::statement('INSERT INTO metric_samples(series,value) VALUES (?,?) ON CONFLICT(series) DO UPDATE SET value=metric_samples.value+EXCLUDED.value',[$series,$value]);
+        return $name.($parts ? '{'.implode(',',$parts).'}' : '');
+    }
+    private static function increments(array $samples): void {
+        // One atomic statement, with stable lock order for concurrent histogram writers.
+        ksort($samples); $bindings=[];
+        foreach ($samples as $series=>$value) { $bindings[]=$series; $bindings[]=$value; }
+        DB::statement('INSERT INTO metric_samples(series,value) VALUES '.implode(',',array_fill(0,count($samples),'(?,?)')).' ON CONFLICT(series) DO UPDATE SET value=metric_samples.value+EXCLUDED.value',$bindings);
+    }
+    public static function add(string $name, array $labels=[], float $value=1): void {
+        self::increments([self::series($name,$labels)=>$value]);
     }
     public static function observe(string $name, float $value, array $labels, array $buckets): void {
-        foreach ($buckets as $b) if ($value <= $b) self::add($name.'_bucket',array_merge($labels,['le'=>(string)$b]));
-        self::add($name.'_bucket',array_merge($labels,['le'=>'+Inf']));
-        self::add($name.'_count',$labels); self::add($name.'_sum',$labels,$value);
+        $samples=[];
+        foreach ($buckets as $b) if ($value <= $b) $samples[self::series($name.'_bucket',array_merge($labels,['le'=>(string)$b]))]=1;
+        $samples[self::series($name.'_bucket',array_merge($labels,['le'=>'+Inf']))]=1;
+        $samples[self::series($name.'_count',$labels)]=1;
+        $samples[self::series($name.'_sum',$labels)]=$value;
+        self::increments($samples);
     }
     public static function render(): string {
         $defaults=[];
@@ -51,6 +62,14 @@ class Metrics {
                 $lines[]='lab_processing_cohort_met{traffic="'.$traffic.'",window="'.$window.'"} '.(clone $q)->whereNotNull('completed_at')->whereColumn('completed_at','<=','deadline_at')->count();
             }
         }
+        // Native cumulative DB statistics; one authoritative exporter, no raw SQL labels.
+        $stats=DB::selectOne('SELECT xact_commit,xact_rollback,blks_read,blks_hit,deadlocks FROM pg_stat_database WHERE datname=current_database()');
+        foreach ((array)$stats as $kind=>$value) $lines[]='lab_postgres_stat_total{kind="'.$kind.'"} '.$value;
+        $waits=DB::select("SELECT CASE WHEN query ILIKE '%metric_samples%' THEN 'metrics' WHEN query ILIKE '%reports%' THEN 'reports' ELSE 'other' END AS operation, CASE WHEN wait_event_type IN ('Lock','IO','Client') THEN wait_event_type WHEN wait_event_type IS NULL THEN 'running' ELSE 'other' END AS wait_type,count(*) AS sessions FROM pg_stat_activity WHERE datname=current_database() AND pid<>pg_backend_pid() AND state<>'idle' GROUP BY 1,2");
+        $sessions=[];
+        foreach ($waits as $w) $sessions[$w->operation][$w->wait_type]=$w->sessions;
+        foreach (['metrics','reports','other'] as $operation) foreach (['Lock','IO','Client','running','other'] as $type) $lines[]='lab_postgres_sessions{operation="'.$operation.'",wait_type="'.$type.'"} '.($sessions[$operation][$type]??0);
+        $lines[]='lab_redis_queue_jobs '.\Illuminate\Support\Facades\Redis::llen('queues:reports');
         $lines[]='lab_telemetry_heartbeat_seconds '.time();
         return implode("\n",$lines)."\n";
     }

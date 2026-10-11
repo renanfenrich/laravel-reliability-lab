@@ -17,3 +17,7 @@ g3-probes:
 	@python3 -u scripts/g3-probes.py
 g3-runtime:
 	@python3 scripts/g3-runtime-contract.py
+
+.PHONY: g3-interruption
+g3-interruption:
+	@python3 -u scripts/g2-interruption.py g3

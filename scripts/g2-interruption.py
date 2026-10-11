@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 from labclient import *
 from experiments import run_rate
-import concurrent.futures,uuid
-run='interruption-'+uuid.uuid4().hex[:10];folder=ROOT/'evidence/g2'/run;folder.mkdir(parents=True)
+import concurrent.futures,uuid,sys
+run='interruption-'+uuid.uuid4().hex[:10];goal=sys.argv[1] if len(sys.argv)>1 else 'g2';assert goal in ['g2','g3'];folder=ROOT/'evidence'/goal/run;folder.mkdir(parents=True)
 def write(name,data):(folder/name).write_text(json.dumps(data,indent=2)+'\n')
 start=utc();node='laravel-reliability-lab-control-plane'
 def completed_count():
