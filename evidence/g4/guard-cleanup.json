@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-11T23:28:36Z",
+  "source_sha": "8dc1c37e8b3f6c92a255e0f74abc4bfca566a26b",
+  "report_ids": [
+    "d8c64b35-0c58-46a3-a9a0-4845595a1de3",
+    "fdfdf641-c91e-4e80-b491-7a4f148c1cd2",
+    "a9715290-0e6e-4f93-a1c4-1679d7214ad2",
+    "e8024ad3-cb8f-43b8-802c-8a732fdb95a9",
+    "1e57bd7d-25d2-4a4a-9a72-12fe835363ea",
+    "670e3ce2-ccba-4d5d-bacc-c7ae7d7a6065",
+    "162ca62f-734f-4f3b-af01-08f388053964",
+    "02494388-ca4e-4062-a115-d55a0e5968ca",
+    "6ec5fb4a-9add-408c-a333-1e7233aa7c36",
+    "2eb9f2eb-c6ad-4222-a728-9202caa847a9",
+    "c7c297b4-f32f-4df9-8e72-1796f1f31bae",
+    "50138483-8a4b-4738-985d-5dbb3be52f64",
+    "9e648722-e2fc-43ab-948f-0013d0fe58ce",
+    "e4820380-d0b6-4aed-be8f-d085f00407e5",
+    "1d9c2230-0ec6-4a8b-bf7b-66966770cd95",
+    "1c47bbbf-bf6c-4616-bae4-ff24dcf1dc0c",
+    "26e00a57-806c-4eda-9f3a-6579a45559c9",
+    "6e6643bb-4538-4fc1-bddb-fb17c275e11b",
+    "49e87504-4094-4b45-8cd5-33a960a3c65e",
+    "277f6cb6-3493-4ca8-a0b0-8f5a06d36fdf"
+  ],
+  "remaining_guards": 0,
+  "note": "Read-only owned-guard check after the completed pause; no live key deletion."
+}

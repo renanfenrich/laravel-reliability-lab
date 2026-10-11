@@ -31,3 +31,7 @@ g4-load:
 	@python3 -u scripts/g3-load.py comparison g4
 g4-interruption:
 	@python3 -u scripts/g2-interruption.py g4
+
+.PHONY: g4-preclaim
+g4-preclaim:
+	@python3 -u scripts/g4-preclaim.py

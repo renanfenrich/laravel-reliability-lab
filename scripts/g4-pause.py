@@ -39,8 +39,8 @@ def main(stage):
  while time.monotonic()<end:
   if all(v==0 for v in depth().values()):break
   time.sleep(3)
- result['queue_after']=depth();result['end']=utc();result['max_multiplicity']=max(n for s in result['samples'] for n in s['per_report_multiplicity'].values())
- result['result']='PASS' if all(v==0 for v in result['queue_after'].values()) and (stage=='before' and result['max_multiplicity']>1 or stage=='after' and result['max_multiplicity']==1) else 'FAIL'
+ result['queue_after']=depth();result['guard_count_after']=int(redis('EXISTS '+' '.join('lab:notification:queues:reports:'+id for id in result['reports'])));result['end']=utc();result['max_multiplicity']=max(n for s in result['samples'] for n in s['per_report_multiplicity'].values())
+ result['result']='PASS' if result['guard_count_after']==0 and all(v==0 for v in result['queue_after'].values()) and (stage=='before' and result['max_multiplicity']>1 or stage=='after' and result['max_multiplicity']==1) else 'FAIL'
  write();assert result['result']=='PASS',result
  print('PASS:',stage,'multiplicity',result['max_multiplicity'],folder.relative_to(ROOT),flush=True)
 if __name__=='__main__':main(sys.argv[1] if len(sys.argv)>1 else 'after')

@@ -12,7 +12,7 @@ with forward('prometheus',9090) as base:
     _,rules,_=request(base,'/api/v1/rules',auth=False)
     assert all(r['health']=='ok' for g in rules['data']['groups'] for r in g['rules']),rules
     checks={}
-    for expr in ['lab_queue_notifications','phpfpm_listen_queue','phpfpm_active_processes','lab_postgres_sessions','lab_postgres_stat_total','lab_redis_queue_jobs','lab_accepted_total','lab_completed_total','lab_processing_cohort_total','container_memory_working_set_bytes{namespace="lab"}','kube_pod_container_status_restarts_total{namespace="lab"}']:
+    for expr in ['lab_notification_failures_total','lab_queue_notifications','phpfpm_listen_queue','phpfpm_active_processes','lab_postgres_sessions','lab_postgres_stat_total','lab_redis_queue_jobs','lab_accepted_total','lab_completed_total','lab_processing_cohort_total','container_memory_working_set_bytes{namespace="lab"}','kube_pod_container_status_restarts_total{namespace="lab"}']:
         _,r,_=request(base,'/api/v1/query?query='+urllib.parse.quote(expr),auth=False);assert r['data']['result'],expr;checks[expr]=len(r['data']['result'])
 with forward('mailpit',8025) as base:
     try:
