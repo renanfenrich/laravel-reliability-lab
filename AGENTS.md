@@ -1,4 +1,5 @@
 # G1 operating rules
+
 Scope: local asynchronous Laravel report service, dedicated Compose project and kind cluster `laravel-reliability-lab`. No frontend, cloud, AWS, billing, tenancy, AI or remote infrastructure deployment. Pushes/publication require explicit human authorization. Change only this repository and its dedicated resources. Never use an implicit Kubernetes context.
 
 renanfenrich owns development and Git flow; octavariumdigitalpartners is mandatory reviewer/approver. Stop at READY FOR HUMAN REVIEW. No merge without that approval. Conventional Commits per independently validated phase.
@@ -15,4 +16,6 @@ Host metrics: `make host-metrics-up host-metrics-down`; Linux user systemd colle
 
 Local alert email: make rules, make alert-test, make mail-up/mail-down. Mailpit captures alerts@lab.test only; never configure relay/forwarding/external recipients under G1. Notification fixtures are not live SLO evidence. alert-test temporarily pauses scheduler and host collector and must restore both, retaining terminal failed reports and exported messages.
 
-Release authorization: on2026-10-11 the user approved G1 and explicitly requested a public repository under renanfenrich plus release0.1.0. This authorizes initial repository creation, initial pushes and v0.1.0 release publication only. No merge or cloud deployment is authorized; subsequent changes retain the review gate.
+Release authorization: on 2026-10-11 the user approved G1 and explicitly requested a public repository under renanfenrich plus release 0.1.0. This authorizes initial repository creation, initial pushes and v0.1.0 release publication only. No merge or cloud deployment is authorized; subsequent changes retain the review gate.
+
+Documentation language: use US English (en-US) for all new or updated repository documentation. Preserve commands, identifiers, measured values, evidence provenance, and explicit validation limits. Do not translate or rewrite historical raw logs to make them appear newly validated.
