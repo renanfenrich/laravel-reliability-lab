@@ -1,0 +1,2222 @@
+NAME                                    STATUS   ROLES           AGE   VERSION
+laravel-reliability-lab-control-plane   Ready    control-plane   46h   v1.34.0
+Image: "laravel-reliability-app:g2" with ID "sha256:e84bf8a49c2fdbc5116afc5e859e637163c1333dee01b4f741d70484a8f5e644" not yet present on node "laravel-reliability-lab-control-plane", loading...
+Image: "laravel-reliability-simulator:g2" with ID "sha256:b39e21a1f976121ac7a8772ea4fa3571053393276ce1b91248344f28fa2697ba" not yet present on node "laravel-reliability-lab-control-plane", loading...
+docker.io/library/nginx:1.30.5 alpine   	saved	
+application/vnd.oci.image.index.v1+json sha256:0985e772fb9f729e6fa0980da05fca5d9c468e870eed43071545afa9d2e27d94
+Importing	elapsed: 0.5 s	total:   0.0 B	(0.0 B/s)	
+Running as unit: laravel-reliability-lab-host-metrics.service; invocation ID: bfe1cc3d01a842c6851e14dcd6f42988
+Host metrics bound only to kind bridge 172.19.0.1:19100
+[0m[1mInitializing the backend...[0m
+
+[0m[1mInitializing provider plugins...[0m
+- Reusing previous version of hashicorp/kubernetes from the dependency lock file
+- Using previously-installed hashicorp/kubernetes v2.38.0
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
+[0m[1mkubernetes_namespace_v1.lab: Refreshing state... [id=lab][0m
+[0m[1mkubernetes_secret_v1.lab: Refreshing state... [id=lab/lab-secrets][0m
+[0m[1mkubernetes_manifest.lab["rolebinding-alloy"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["clusterrolebinding-prometheus"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-scheduler"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-gateway"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-grafana-dashboard"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-simulator"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-postgres"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-mailpit"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["serviceaccount-alloy"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-gateway"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-loki"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-postgres"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["persistentvolume-laravel-reliability-postgres"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-loki"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-worker"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-mailpit"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-prometheus"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-exporter"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-simulator"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-kube-state-metrics"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-redis"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-scheduler"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-loki"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-exporter"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-grafana"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-grafana-provider"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-api"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-nginx-api"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-alloy"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-worker"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-prometheus"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-alertmanager"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-alloy"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["clusterrole-prometheus"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-api"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-alertmanager"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["persistentvolumeclaim-postgres-data"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["role-alloy"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-grafana"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["serviceaccount-prometheus"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-alertmanager"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-kube-state-metrics"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["role-kube-state-metrics"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["rolebinding-kube-state-metrics"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-nginx-gateway"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["serviceaccount-kube-state-metrics"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-grafana-datasources"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["deployment-prometheus"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["service-redis"]: Refreshing state...[0m
+[0m[1mkubernetes_manifest.lab["configmap-alloy"]: Refreshing state...[0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [33m~[0m update in-place[0m
+
+Terraform will perform the following actions:
+
+[1m  # kubernetes_manifest.lab["deployment-api"][0m will be updated in-place
+[0m  [33m~[0m[0m resource "kubernetes_manifest" "lab" {
+      [33m~[0m[0m manifest        = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations = {
+                          [32m+[0m[0m lab-config-checksum = "380e68cd68514c9fd1b76413c42022469a1b3de3f860f498db823b75d8f7f30b"
+                          [33m~[0m[0m lab-source-checksum = "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1" [33m->[0m[0m "0453fd9185f095a840ed8851936bf4679c44c61fa18c1d4725ee1e225cba0d88"
+                        }
+                        [90m# (1 unchanged attribute hidden)[0m[0m
+                    }
+                  [33m~[0m[0m spec     = {
+                      [33m~[0m[0m containers                    = [
+                          [33m~[0m[0m {
+                              [33m~[0m[0m command         = [
+                                  [31m-[0m[0m "php",
+                                  [31m-[0m[0m "-S",
+                                  [31m-[0m[0m "0.0.0.0:8080",
+                                  [31m-[0m[0m "-t",
+                                  [31m-[0m[0m "public",
+                                  [31m-[0m[0m "public/index.php",
+                                  [32m+[0m[0m "php-fpm",
+                                  [32m+[0m[0m "--nodaemonize",
+                                ]
+                              [33m~[0m[0m env             = [
+                                    [90m# (9 unchanged elements hidden)[0m[0m
+                                    {
+                                        name  = "LAB_ROLE"
+                                        value = "api"
+                                    },
+                                  [31m-[0m[0m {
+                                      [31m-[0m[0m name  = "PHP_CLI_SERVER_WORKERS"
+                                      [31m-[0m[0m value = "4"
+                                    },
+                                ]
+                              [33m~[0m[0m image           = "laravel-reliability-app:g1" [33m->[0m[0m "laravel-reliability-app:g2"
+                              [32m+[0m[0m lifecycle       = {
+                                  [32m+[0m[0m preStop = {
+                                      [32m+[0m[0m exec = {
+                                          [32m+[0m[0m command = [
+                                              [32m+[0m[0m "sh",
+                                              [32m+[0m[0m "-c",
+                                              [32m+[0m[0m "sleep 3; kill -QUIT 1",
+                                            ]
+                                        }
+                                    }
+                                }
+                                name            = "api"
+                              [33m~[0m[0m ports           = [
+                                  [33m~[0m[0m {
+                                      [33m~[0m[0m containerPort = 8080 [33m->[0m[0m 9000
+                                      [33m~[0m[0m name          = "http" [33m->[0m[0m "fastcgi"
+                                    },
+                                ]
+                                [90m# (7 unchanged attributes hidden)[0m[0m
+                            },
+                          [32m+[0m[0m {
+                              [32m+[0m[0m command         = [
+                                  [32m+[0m[0m "nginx",
+                                  [32m+[0m[0m "-c",
+                                  [32m+[0m[0m "/etc/lab-nginx/nginx.conf",
+                                  [32m+[0m[0m "-g",
+                                  [32m+[0m[0m "daemon off;",
+                                ]
+                              [32m+[0m[0m image           = "nginx:1.30.5-alpine"
+                              [32m+[0m[0m imagePullPolicy = "IfNotPresent"
+                              [32m+[0m[0m lifecycle       = {
+                                  [32m+[0m[0m preStop = {
+                                      [32m+[0m[0m exec = {
+                                          [32m+[0m[0m command = [
+                                              [32m+[0m[0m "sh",
+                                              [32m+[0m[0m "-c",
+                                              [32m+[0m[0m "sleep 3; nginx -c /etc/lab-nginx/nginx.conf -s quit",
+                                            ]
+                                        }
+                                    }
+                                }
+                              [32m+[0m[0m livenessProbe   = {
+                                  [32m+[0m[0m failureThreshold = 3
+                                  [32m+[0m[0m httpGet          = {
+                                      [32m+[0m[0m path = "/api/live"
+                                      [32m+[0m[0m port = 8080
+                                    }
+                                  [32m+[0m[0m periodSeconds    = 10
+                                }
+                              [32m+[0m[0m name            = "http"
+                              [32m+[0m[0m ports           = [
+                                  [32m+[0m[0m {
+                                      [32m+[0m[0m containerPort = 8080
+                                      [32m+[0m[0m name          = "http"
+                                    },
+                                ]
+                              [32m+[0m[0m readinessProbe  = {
+                                  [32m+[0m[0m httpGet        = {
+                                      [32m+[0m[0m path = "/api/ready"
+                                      [32m+[0m[0m port = 8080
+                                    }
+                                  [32m+[0m[0m periodSeconds  = 5
+                                  [32m+[0m[0m timeoutSeconds = 3
+                                }
+                              [32m+[0m[0m resources       = {
+                                  [32m+[0m[0m limits   = {
+                                      [32m+[0m[0m cpu    = "500m"
+                                      [32m+[0m[0m memory = "128Mi"
+                                    }
+                                  [32m+[0m[0m requests = {
+                                      [32m+[0m[0m cpu    = "50m"
+                                      [32m+[0m[0m memory = "32Mi"
+                                    }
+                                }
+                              [32m+[0m[0m securityContext = {
+                                  [32m+[0m[0m allowPrivilegeEscalation = false
+                                  [32m+[0m[0m capabilities             = {
+                                      [32m+[0m[0m drop = [
+                                          [32m+[0m[0m "ALL",
+                                        ]
+                                    }
+                                  [32m+[0m[0m readOnlyRootFilesystem   = true
+                                  [32m+[0m[0m runAsNonRoot             = true
+                                  [32m+[0m[0m runAsUser                = 1000
+                                }
+                              [32m+[0m[0m startupProbe    = {
+                                  [32m+[0m[0m failureThreshold = 60
+                                  [32m+[0m[0m httpGet          = {
+                                      [32m+[0m[0m path = "/api/ready"
+                                      [32m+[0m[0m port = 8080
+                                    }
+                                  [32m+[0m[0m periodSeconds    = 3
+                                  [32m+[0m[0m timeoutSeconds   = 2
+                                }
+                              [32m+[0m[0m volumeMounts    = [
+                                  [32m+[0m[0m {
+                                      [32m+[0m[0m mountPath = "/etc/lab-nginx"
+                                      [32m+[0m[0m name      = "nginx-api"
+                                      [32m+[0m[0m readOnly  = true
+                                    },
+                                  [32m+[0m[0m {
+                                      [32m+[0m[0m mountPath = "/tmp"
+                                      [32m+[0m[0m name      = "tmp"
+                                    },
+                                ]
+                            },
+                        ]
+                      [33m~[0m[0m initContainers                = [
+                          [33m~[0m[0m {
+                              [33m~[0m[0m image           = "laravel-reliability-app:g1" [33m->[0m[0m "laravel-reliability-app:g2"
+                                name            = "storage-init"
+                                [90m# (5 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                      [33m~[0m[0m volumes                       = [
+                            [90m# (2 unchanged elements hidden)[0m[0m
+                            {
+                                emptyDir = {}
+                                name     = "tmp"
+                            },
+                          [32m+[0m[0m {
+                              [32m+[0m[0m configMap = {
+                                  [32m+[0m[0m name = "nginx-api"
+                                }
+                              [32m+[0m[0m name      = "nginx-api"
+                            },
+                        ]
+                        [90m# (3 unchanged attributes hidden)[0m[0m
+                    }
+                }
+                [90m# (3 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+      [33m~[0m[0m object          = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template                = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations                = {
+                          [31m-[0m[0m lab-source-checksum = "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1"
+                        } -> (known after apply)
+                        name                       = [90mnull[0m[0m
+                        [90m# (13 unchanged attributes hidden)[0m[0m
+                    }
+                  [33m~[0m[0m spec     = {
+                      [33m~[0m[0m containers                    = [
+                          [33m~[0m[0m {
+                              [33m~[0m[0m command                  = [
+                                  [31m-[0m[0m "php",
+                                  [31m-[0m[0m "-S",
+                                  [31m-[0m[0m "0.0.0.0:8080",
+                                  [31m-[0m[0m "-t",
+                                  [31m-[0m[0m "public",
+                                  [31m-[0m[0m "public/index.php",
+                                  [32m+[0m[0m "php-fpm",
+                                  [32m+[0m[0m "--nodaemonize",
+                                ]
+                              [33m~[0m[0m env                      = [
+                                    [90m# (9 unchanged elements hidden)[0m[0m
+                                    {
+                                        name      = "LAB_ROLE"
+                                        value     = "api"
+                                        valueFrom = {
+                                            configMapKeyRef  = {
+                                                key      = [90mnull[0m[0m
+                                                name     = [90mnull[0m[0m
+                                                optional = [90mnull[0m[0m
+                                            }
+                                            fieldRef         = {
+                                                apiVersion = [90mnull[0m[0m
+                                                fieldPath  = [90mnull[0m[0m
+                                            }
+                                            fileKeyRef       = {
+                                                key        = [90mnull[0m[0m
+                                                optional   = [90mnull[0m[0m
+                                                path       = [90mnull[0m[0m
+                                                volumeName = [90mnull[0m[0m
+                                            }
+                                            resourceFieldRef = {
+                                                containerName = [90mnull[0m[0m
+                                                divisor       = [90mnull[0m[0m
+                                                resource      = [90mnull[0m[0m
+                                            }
+                                            secretKeyRef     = {
+                                                key      = [90mnull[0m[0m
+                                                name     = [90mnull[0m[0m
+                                                optional = [90mnull[0m[0m
+                                            }
+                                        }
+                                    },
+                                  [31m-[0m[0m {
+                                      [31m-[0m[0m name      = "PHP_CLI_SERVER_WORKERS"
+                                      [31m-[0m[0m value     = "4"
+                                      [31m-[0m[0m valueFrom = {
+                                          [31m-[0m[0m configMapKeyRef  = {
+                                              [31m-[0m[0m key      = [90mnull[0m[0m
+                                              [31m-[0m[0m name     = [90mnull[0m[0m
+                                              [31m-[0m[0m optional = [90mnull[0m[0m
+                                            }
+                                          [31m-[0m[0m fieldRef         = {
+                                              [31m-[0m[0m apiVersion = [90mnull[0m[0m
+                                              [31m-[0m[0m fieldPath  = [90mnull[0m[0m
+                                            }
+                                          [31m-[0m[0m fileKeyRef       = {
+                                              [31m-[0m[0m key        = [90mnull[0m[0m
+                                              [31m-[0m[0m optional   = [90mnull[0m[0m
+                                              [31m-[0m[0m path       = [90mnull[0m[0m
+                                              [31m-[0m[0m volumeName = [90mnull[0m[0m
+                                            }
+                                          [31m-[0m[0m resourceFieldRef = {
+                                              [31m-[0m[0m containerName = [90mnull[0m[0m
+                                              [31m-[0m[0m divisor       = [90mnull[0m[0m
+                                              [31m-[0m[0m resource      = [90mnull[0m[0m
+                                            }
+                                          [31m-[0m[0m secretKeyRef     = {
+                                              [31m-[0m[0m key      = [90mnull[0m[0m
+                                              [31m-[0m[0m name     = [90mnull[0m[0m
+                                              [31m-[0m[0m optional = [90mnull[0m[0m
+                                            }
+                                        }
+                                    },
+                                ]
+                              [33m~[0m[0m image                    = "laravel-reliability-app:g1" [33m->[0m[0m "laravel-reliability-app:g2"
+                              [33m~[0m[0m lifecycle                = {
+                                  [33m~[0m[0m preStop    = {
+                                      [33m~[0m[0m exec      = {
+                                          [33m~[0m[0m command = [90mnull[0m[0m [33m->[0m[0m [
+                                              [32m+[0m[0m "sh",
+                                              [32m+[0m[0m "-c",
+                                              [32m+[0m[0m "sleep 3; kill -QUIT 1",
+                                            ]
+                                        }
+                                        [90m# (3 unchanged attributes hidden)[0m[0m
+                                    }
+                                    [90m# (2 unchanged attributes hidden)[0m[0m
+                                }
+                                name                     = "api"
+                              [33m~[0m[0m ports                    = [
+                                  [33m~[0m[0m {
+                                      [33m~[0m[0m containerPort = 8080 [33m->[0m[0m 9000
+                                      [33m~[0m[0m name          = "http" [33m->[0m[0m "fastcgi"
+                                        [90m# (3 unchanged attributes hidden)[0m[0m
+                                    },
+                                ]
+                                [90m# (19 unchanged attributes hidden)[0m[0m
+                            },
+                          [32m+[0m[0m {
+                              [32m+[0m[0m args                     = (known after apply)
+                              [32m+[0m[0m command                  = [
+                                  [32m+[0m[0m "nginx",
+                                  [32m+[0m[0m "-c",
+                                  [32m+[0m[0m "/etc/lab-nginx/nginx.conf",
+                                  [32m+[0m[0m "-g",
+                                  [32m+[0m[0m "daemon off;",
+                                ]
+                              [32m+[0m[0m env                      = (known after apply)
+                              [32m+[0m[0m envFrom                  = (known after apply)
+                              [32m+[0m[0m image                    = "nginx:1.30.5-alpine"
+                              [32m+[0m[0m imagePullPolicy          = "IfNotPresent"
+                              [32m+[0m[0m lifecycle                = {
+                                  [32m+[0m[0m postStart  = {
+                                      [32m+[0m[0m exec      = {
+                                          [32m+[0m[0m command = (known after apply)
+                                        }
+                                      [32m+[0m[0m httpGet   = {
+                                          [32m+[0m[0m host        = (known after apply)
+                                          [32m+[0m[0m httpHeaders = (known after apply)
+                                          [32m+[0m[0m path        = (known after apply)
+                                          [32m+[0m[0m port        = (known after apply)
+                                          [32m+[0m[0m scheme      = (known after apply)
+                                        }
+                                      [32m+[0m[0m sleep     = {
+                                          [32m+[0m[0m seconds = (known after apply)
+                                        }
+                                      [32m+[0m[0m tcpSocket = {
+                                          [32m+[0m[0m host = (known after apply)
+                                          [32m+[0m[0m port = (known after apply)
+                                        }
+                                    }
+                                  [32m+[0m[0m preStop    = {
+                                      [32m+[0m[0m exec      = {
+                                          [32m+[0m[0m command = [
+                                              [32m+[0m[0m "sh",
+                                              [32m+[0m[0m "-c",
+                                              [32m+[0m[0m "sleep 3; nginx -c /etc/lab-nginx/nginx.conf -s quit",
+                                            ]
+                                        }
+                                      [32m+[0m[0m httpGet   = {
+                                          [32m+[0m[0m host        = (known after apply)
+                                          [32m+[0m[0m httpHeaders = (known after apply)
+                                          [32m+[0m[0m path        = (known after apply)
+                                          [32m+[0m[0m port        = (known after apply)
+                                          [32m+[0m[0m scheme      = (known after apply)
+                                        }
+                                      [32m+[0m[0m sleep     = {
+                                          [32m+[0m[0m seconds = (known after apply)
+                                        }
+                                      [32m+[0m[0m tcpSocket = {
+                                          [32m+[0m[0m host = (known after apply)
+                                          [32m+[0m[0m port = (known after apply)
+                                        }
+                                    }
+                                  [32m+[0m[0m stopSignal = (known after apply)
+                                }
+                              [32m+[0m[0m livenessProbe            = {
+                                  [32m+[0m[0m exec                          = {
+                                      [32m+[0m[0m command = (known after apply)
+                                    }
+                                  [32m+[0m[0m failureThreshold              = 3
+                                  [32m+[0m[0m grpc                          = {
+                                      [32m+[0m[0m port    = (known after apply)
+                                      [32m+[0m[0m service = (known after apply)
+                                    }
+                                  [32m+[0m[0m httpGet                       = {
+                                      [32m+[0m[0m host        = (known after apply)
+                                      [32m+[0m[0m httpHeaders = (known after apply)
+                                      [32m+[0m[0m path        = "/api/live"
+                                      [32m+[0m[0m port        = "8080"
+                                      [32m+[0m[0m scheme      = (known after apply)
+                                    }
+                                  [32m+[0m[0m initialDelaySeconds           = (known after apply)
+                                  [32m+[0m[0m periodSeconds                 = 10
+                                  [32m+[0m[0m successThreshold              = (known after apply)
+                                  [32m+[0m[0m tcpSocket                     = {
+                                      [32m+[0m[0m host = (known after apply)
+                                      [32m+[0m[0m port = (known after apply)
+                                    }
+                                  [32m+[0m[0m terminationGracePeriodSeconds = (known after apply)
+                                  [32m+[0m[0m timeoutSeconds                = (known after apply)
+                                }
+                              [32m+[0m[0m name                     = "http"
+                              [32m+[0m[0m ports                    = [
+                                  [32m+[0m[0m {
+                                      [32m+[0m[0m containerPort = 8080
+                                      [32m+[0m[0m hostIP        = (known after apply)
+                                      [32m+[0m[0m hostPort      = (known after apply)
+                                      [32m+[0m[0m name          = "http"
+                                      [32m+[0m[0m protocol      = (known after apply)
+                                    },
+                                ]
+                              [32m+[0m[0m readinessProbe           = {
+                                  [32m+[0m[0m exec                          = {
+                                      [32m+[0m[0m command = (known after apply)
+                                    }
+                                  [32m+[0m[0m failureThreshold              = (known after apply)
+                                  [32m+[0m[0m grpc                          = {
+                                      [32m+[0m[0m port    = (known after apply)
+                                      [32m+[0m[0m service = (known after apply)
+                                    }
+                                  [32m+[0m[0m httpGet                       = {
+                                      [32m+[0m[0m host        = (known after apply)
+                                      [32m+[0m[0m httpHeaders = (known after apply)
+                                      [32m+[0m[0m path        = "/api/ready"
+                                      [32m+[0m[0m port        = "8080"
+                                      [32m+[0m[0m scheme      = (known after apply)
+                                    }
+                                  [32m+[0m[0m initialDelaySeconds           = (known after apply)
+                                  [32m+[0m[0m periodSeconds                 = 5
+                                  [32m+[0m[0m successThreshold              = (known after apply)
+                                  [32m+[0m[0m tcpSocket                     = {
+                                      [32m+[0m[0m host = (known after apply)
+                                      [32m+[0m[0m port = (known after apply)
+                                    }
+                                  [32m+[0m[0m terminationGracePeriodSeconds = (known after apply)
+                                  [32m+[0m[0m timeoutSeconds                = 3
+                                }
+                              [32m+[0m[0m resizePolicy             = (known after apply)
+                              [32m+[0m[0m resources                = {
+                                  [32m+[0m[0m claims   = (known after apply)
+                                  [32m+[0m[0m limits   = {
+                                      [32m+[0m[0m cpu    = "500m"
+                                      [32m+[0m[0m memory = "128Mi"
+                                    }
+                                  [32m+[0m[0m requests = {
+                                      [32m+[0m[0m cpu    = "50m"
+                                      [32m+[0m[0m memory = "32Mi"
+                                    }
+                                }
+                              [32m+[0m[0m restartPolicy            = (known after apply)
+                              [32m+[0m[0m restartPolicyRules       = (known after apply)
+                              [32m+[0m[0m securityContext          = {
+                                  [32m+[0m[0m allowPrivilegeEscalation = false
+                                  [32m+[0m[0m appArmorProfile          = {
+                                      [32m+[0m[0m localhostProfile = (known after apply)
+                                      [32m+[0m[0m type             = (known after apply)
+                                    }
+                                  [32m+[0m[0m capabilities             = {
+                                      [32m+[0m[0m add  = (known after apply)
+                                      [32m+[0m[0m drop = [
+                                          [32m+[0m[0m "ALL",
+                                        ]
+                                    }
+                                  [32m+[0m[0m privileged               = (known after apply)
+                                  [32m+[0m[0m procMount                = (known after apply)
+                                  [32m+[0m[0m readOnlyRootFilesystem   = true
+                                  [32m+[0m[0m runAsGroup               = (known after apply)
+                                  [32m+[0m[0m runAsNonRoot             = true
+                                  [32m+[0m[0m runAsUser                = 1000
+                                  [32m+[0m[0m seLinuxOptions           = {
+                                      [32m+[0m[0m level = (known after apply)
+                                      [32m+[0m[0m role  = (known after apply)
+                                      [32m+[0m[0m type  = (known after apply)
+                                      [32m+[0m[0m user  = (known after apply)
+                                    }
+                                  [32m+[0m[0m seccompProfile           = {
+                                      [32m+[0m[0m localhostProfile = (known after apply)
+                                      [32m+[0m[0m type             = (known after apply)
+                                    }
+                                  [32m+[0m[0m windowsOptions           = {
+                                      [32m+[0m[0m gmsaCredentialSpec     = (known after apply)
+                                      [32m+[0m[0m gmsaCredentialSpecName = (known after apply)
+                                      [32m+[0m[0m hostProcess            = (known after apply)
+                                      [32m+[0m[0m runAsUserName          = (known after apply)
+                                    }
+                                }
+                              [32m+[0m[0m startupProbe             = {
+                                  [32m+[0m[0m exec                          = {
+                                      [32m+[0m[0m command = (known after apply)
+                                    }
+                                  [32m+[0m[0m failureThreshold              = 60
+                                  [32m+[0m[0m grpc                          = {
+                                      [32m+[0m[0m port    = (known after apply)
+                                      [32m+[0m[0m service = (known after apply)
+                                    }
+                                  [32m+[0m[0m httpGet                       = {
+                                      [32m+[0m[0m host        = (known after apply)
+                                      [32m+[0m[0m httpHeaders = (known after apply)
+                                      [32m+[0m[0m path        = "/api/ready"
+                                      [32m+[0m[0m port        = "8080"
+                                      [32m+[0m[0m scheme      = (known after apply)
+                                    }
+                                  [32m+[0m[0m initialDelaySeconds           = (known after apply)
+                                  [32m+[0m[0m periodSeconds                 = 3
+                                  [32m+[0m[0m successThreshold              = (known after apply)
+                                  [32m+[0m[0m tcpSocket                     = {
+                                      [32m+[0m[0m host = (known after apply)
+                                      [32m+[0m[0m port = (known after apply)
+                                    }
+                                  [32m+[0m[0m terminationGracePeriodSeconds = (known after apply)
+                                  [32m+[0m[0m timeoutSeconds                = 2
+                                }
+                              [32m+[0m[0m stdin                    = (known after apply)
+                              [32m+[0m[0m stdinOnce                = (known after apply)
+                              [32m+[0m[0m terminationMessagePath   = (known after apply)
+                              [32m+[0m[0m terminationMessagePolicy = (known after apply)
+                              [32m+[0m[0m tty                      = (known after apply)
+                              [32m+[0m[0m volumeDevices            = (known after apply)
+                              [32m+[0m[0m volumeMounts             = [
+                                  [32m+[0m[0m {
+                                      [32m+[0m[0m mountPath         = "/etc/lab-nginx"
+                                      [32m+[0m[0m mountPropagation  = (known after apply)
+                                      [32m+[0m[0m name              = "nginx-api"
+                                      [32m+[0m[0m readOnly          = true
+                                      [32m+[0m[0m recursiveReadOnly = (known after apply)
+                                      [32m+[0m[0m subPath           = (known after apply)
+                                      [32m+[0m[0m subPathExpr       = (known after apply)
+                                    },
+                                  [32m+[0m[0m {
+                                      [32m+[0m[0m mountPath         = "/tmp"
+                                      [32m+[0m[0m mountPropagation  = (known after apply)
+                                      [32m+[0m[0m name              = "tmp"
+                                      [32m+[0m[0m readOnly          = (known after apply)
+                                      [32m+[0m[0m recursiveReadOnly = (known after apply)
+                                      [32m+[0m[0m subPath           = (known after apply)
+                                      [32m+[0m[0m subPathExpr       = (known after apply)
+                                    },
+                                ]
+                              [32m+[0m[0m workingDir               = (known after apply)
+                            },
+                        ]
+                      [33m~[0m[0m initContainers                = [
+                          [33m~[0m[0m {
+                              [33m~[0m[0m image                    = "laravel-reliability-app:g1" [33m->[0m[0m "laravel-reliability-app:g2"
+                                name                     = "storage-init"
+                                [90m# (23 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                      [33m~[0m[0m volumes                       = [
+                            [90m# (2 unchanged elements hidden)[0m[0m
+                            {
+                                awsElasticBlockStore  = {
+                                    fsType    = [90mnull[0m[0m
+                                    partition = [90mnull[0m[0m
+                                    readOnly  = [90mnull[0m[0m
+                                    volumeID  = [90mnull[0m[0m
+                                }
+                                azureDisk             = {
+                                    cachingMode = [90mnull[0m[0m
+                                    diskName    = [90mnull[0m[0m
+                                    diskURI     = [90mnull[0m[0m
+                                    fsType      = [90mnull[0m[0m
+                                    kind        = [90mnull[0m[0m
+                                    readOnly    = [90mnull[0m[0m
+                                }
+                                azureFile             = {
+                                    readOnly   = [90mnull[0m[0m
+                                    secretName = [90mnull[0m[0m
+                                    shareName  = [90mnull[0m[0m
+                                }
+                                cephfs                = {
+                                    monitors   = [90mnull[0m[0m
+                                    path       = [90mnull[0m[0m
+                                    readOnly   = [90mnull[0m[0m
+                                    secretFile = [90mnull[0m[0m
+                                    secretRef  = {
+                                        name = [90mnull[0m[0m
+                                    }
+                                    user       = [90mnull[0m[0m
+                                }
+                                cinder                = {
+                                    fsType    = [90mnull[0m[0m
+                                    readOnly  = [90mnull[0m[0m
+                                    secretRef = {
+                                        name = [90mnull[0m[0m
+                                    }
+                                    volumeID  = [90mnull[0m[0m
+                                }
+                                configMap             = {
+                                    defaultMode = [90mnull[0m[0m
+                                    items       = [90mnull[0m[0m
+                                    name        = [90mnull[0m[0m
+                                    optional    = [90mnull[0m[0m
+                                }
+                                csi                   = {
+                                    driver               = [90mnull[0m[0m
+                                    fsType               = [90mnull[0m[0m
+                                    nodePublishSecretRef = {
+                                        name = [90mnull[0m[0m
+                                    }
+                                    readOnly             = [90mnull[0m[0m
+                                    volumeAttributes     = [90mnull[0m[0m
+                                }
+                                downwardAPI           = {
+                                    defaultMode = [90mnull[0m[0m
+                                    items       = [90mnull[0m[0m
+                                }
+                                emptyDir              = {
+                                    medium    = [90mnull[0m[0m
+                                    sizeLimit = [90mnull[0m[0m
+                                }
+                                ephemeral             = {
+                                    volumeClaimTemplate = {
+                                        metadata = {
+                                            annotations                = [90mnull[0m[0m
+                                            creationTimestamp          = [90mnull[0m[0m
+                                            deletionGracePeriodSeconds = [90mnull[0m[0m
+                                            deletionTimestamp          = [90mnull[0m[0m
+                                            finalizers                 = [90mnull[0m[0m
+                                            generateName               = [90mnull[0m[0m
+                                            generation                 = [90mnull[0m[0m
+                                            labels                     = [90mnull[0m[0m
+                                            managedFields              = [90mnull[0m[0m
+                                            name                       = [90mnull[0m[0m
+                                            namespace                  = [90mnull[0m[0m
+                                            ownerReferences            = [90mnull[0m[0m
+                                            resourceVersion            = [90mnull[0m[0m
+                                            selfLink                   = [90mnull[0m[0m
+                                            uid                        = [90mnull[0m[0m
+                                        }
+                                        spec     = {
+                                            accessModes               = [90mnull[0m[0m
+                                            dataSource                = {
+                                                apiGroup = [90mnull[0m[0m
+                                                kind     = [90mnull[0m[0m
+                                                name     = [90mnull[0m[0m
+                                            }
+                                            dataSourceRef             = {
+                                                apiGroup  = [90mnull[0m[0m
+                                                kind      = [90mnull[0m[0m
+                                                name      = [90mnull[0m[0m
+                                                namespace = [90mnull[0m[0m
+                                            }
+                                            resources                 = {
+                                                limits   = [90mnull[0m[0m
+                                                requests = [90mnull[0m[0m
+                                            }
+                                            selector                  = {
+                                                matchExpressions = [90mnull[0m[0m
+                                                matchLabels      = [90mnull[0m[0m
+                                            }
+                                            storageClassName          = [90mnull[0m[0m
+                                            volumeAttributesClassName = [90mnull[0m[0m
+                                            volumeMode                = [90mnull[0m[0m
+                                            volumeName                = [90mnull[0m[0m
+                                        }
+                                    }
+                                }
+                                fc                    = {
+                                    fsType     = [90mnull[0m[0m
+                                    lun        = [90mnull[0m[0m
+                                    readOnly   = [90mnull[0m[0m
+                                    targetWWNs = [90mnull[0m[0m
+                                    wwids      = [90mnull[0m[0m
+                                }
+                                flexVolume            = {
+                                    driver    = [90mnull[0m[0m
+                                    fsType    = [90mnull[0m[0m
+                                    options   = [90mnull[0m[0m
+                                    readOnly  = [90mnull[0m[0m
+                                    secretRef = {
+                                        name = [90mnull[0m[0m
+                                    }
+                                }
+                                flocker               = {
+                                    datasetName = [90mnull[0m[0m
+                                    datasetUUID = [90mnull[0m[0m
+                                }
+                                gcePersistentDisk     = {
+                                    fsType    = [90mnull[0m[0m
+                                    partition = [90mnull[0m[0m
+                                    pdName    = [90mnull[0m[0m
+                                    readOnly  = [90mnull[0m[0m
+                                }
+                                gitRepo               = {
+                                    directory  = [90mnull[0m[0m
+                                    repository = [90mnull[0m[0m
+                                    revision   = [90mnull[0m[0m
+                                }
+                                glusterfs             = {
+                                    endpoints = [90mnull[0m[0m
+                                    path      = [90mnull[0m[0m
+                                    readOnly  = [90mnull[0m[0m
+                                }
+                                hostPath              = {
+                                    path = [90mnull[0m[0m
+                                    type = [90mnull[0m[0m
+                                }
+                                image                 = {
+                                    pullPolicy = [90mnull[0m[0m
+                                    reference  = [90mnull[0m[0m
+                                }
+                                iscsi                 = {
+                                    chapAuthDiscovery = [90mnull[0m[0m
+                                    chapAuthSession   = [90mnull[0m[0m
+                                    fsType            = [90mnull[0m[0m
+                                    initiatorName     = [90mnull[0m[0m
+                                    iqn               = [90mnull[0m[0m
+                                    iscsiInterface    = [90mnull[0m[0m
+                                    lun               = [90mnull[0m[0m
+                                    portals           = [90mnull[0m[0m
+                                    readOnly          = [90mnull[0m[0m
+                                    secretRef         = {
+                                        name = [90mnull[0m[0m
+                                    }
+                                    targetPortal      = [90mnull[0m[0m
+                                }
+                                name                  = "tmp"
+                                nfs                   = {
+                                    path     = [90mnull[0m[0m
+                                    readOnly = [90mnull[0m[0m
+                                    server   = [90mnull[0m[0m
+                                }
+                                persistentVolumeClaim = {
+                                    claimName = [90mnull[0m[0m
+                                    readOnly  = [90mnull[0m[0m
+                                }
+                                photonPersistentDisk  = {
+                                    fsType = [90mnull[0m[0m
+                                    pdID   = [90mnull[0m[0m
+                                }
+                                portworxVolume        = {
+                                    fsType   = [90mnull[0m[0m
+                                    readOnly = [90mnull[0m[0m
+                                    volumeID = [90mnull[0m[0m
+                                }
+                                projected             = {
+                                    defaultMode = [90mnull[0m[0m
+                                    sources     = [90mnull[0m[0m
+                                }
+                                quobyte               = {
+                                    group    = [90mnull[0m[0m
+                                    readOnly = [90mnull[0m[0m
+                                    registry = [90mnull[0m[0m
+                                    tenant   = [90mnull[0m[0m
+                                    user     = [90mnull[0m[0m
+                                    volume   = [90mnull[0m[0m
+                                }
+                                rbd                   = {
+                                    fsType    = [90mnull[0m[0m
+                                    image     = [90mnull[0m[0m
+                                    keyring   = [90mnull[0m[0m
+                                    monitors  = [90mnull[0m[0m
+                                    pool      = [90mnull[0m[0m
+                                    readOnly  = [90mnull[0m[0m
+                                    secretRef = {
+                                        name = [90mnull[0m[0m
+                                    }
+                                    user      = [90mnull[0m[0m
+                                }
+                                scaleIO               = {
+                                    fsType           = [90mnull[0m[0m
+                                    gateway          = [90mnull[0m[0m
+                                    protectionDomain = [90mnull[0m[0m
+                                    readOnly         = [90mnull[0m[0m
+                                    secretRef        = {
+                                        name = [90mnull[0m[0m
+                                    }
+                                    sslEnabled       = [90mnull[0m[0m
+                                    storageMode      = [90mnull[0m[0m
+                                    storagePool      = [90mnull[0m[0m
+                                    system           = [90mnull[0m[0m
+                                    volumeName       = [90mnull[0m[0m
+                                }
+                                secret                = {
+                                    defaultMode = [90mnull[0m[0m
+                                    items       = [90mnull[0m[0m
+                                    optional    = [90mnull[0m[0m
+                                    secretName  = [90mnull[0m[0m
+                                }
+                                storageos             = {
+                                    fsType          = [90mnull[0m[0m
+                                    readOnly        = [90mnull[0m[0m
+                                    secretRef       = {
+                                        name = [90mnull[0m[0m
+                                    }
+                                    volumeName      = [90mnull[0m[0m
+                                    volumeNamespace = [90mnull[0m[0m
+                                }
+                                vsphereVolume         = {
+                                    fsType            = [90mnull[0m[0m
+                                    storagePolicyID   = [90mnull[0m[0m
+                                    storagePolicyName = [90mnull[0m[0m
+                                    volumePath        = [90mnull[0m[0m
+                                }
+                            },
+                          [32m+[0m[0m {
+                              [32m+[0m[0m awsElasticBlockStore  = {
+                                  [32m+[0m[0m fsType    = (known after apply)
+                                  [32m+[0m[0m partition = (known after apply)
+                                  [32m+[0m[0m readOnly  = (known after apply)
+                                  [32m+[0m[0m volumeID  = (known after apply)
+                                }
+                              [32m+[0m[0m azureDisk             = {
+                                  [32m+[0m[0m cachingMode = (known after apply)
+                                  [32m+[0m[0m diskName    = (known after apply)
+                                  [32m+[0m[0m diskURI     = (known after apply)
+                                  [32m+[0m[0m fsType      = (known after apply)
+                                  [32m+[0m[0m kind        = (known after apply)
+                                  [32m+[0m[0m readOnly    = (known after apply)
+                                }
+                              [32m+[0m[0m azureFile             = {
+                                  [32m+[0m[0m readOnly   = (known after apply)
+                                  [32m+[0m[0m secretName = (known after apply)
+                                  [32m+[0m[0m shareName  = (known after apply)
+                                }
+                              [32m+[0m[0m cephfs                = {
+                                  [32m+[0m[0m monitors   = (known after apply)
+                                  [32m+[0m[0m path       = (known after apply)
+                                  [32m+[0m[0m readOnly   = (known after apply)
+                                  [32m+[0m[0m secretFile = (known after apply)
+                                  [32m+[0m[0m secretRef  = {
+                                      [32m+[0m[0m name = (known after apply)
+                                    }
+                                  [32m+[0m[0m user       = (known after apply)
+                                }
+                              [32m+[0m[0m cinder                = {
+                                  [32m+[0m[0m fsType    = (known after apply)
+                                  [32m+[0m[0m readOnly  = (known after apply)
+                                  [32m+[0m[0m secretRef = {
+                                      [32m+[0m[0m name = (known after apply)
+                                    }
+                                  [32m+[0m[0m volumeID  = (known after apply)
+                                }
+                              [32m+[0m[0m configMap             = {
+                                  [32m+[0m[0m defaultMode = (known after apply)
+                                  [32m+[0m[0m items       = (known after apply)
+                                  [32m+[0m[0m name        = "nginx-api"
+                                  [32m+[0m[0m optional    = (known after apply)
+                                }
+                              [32m+[0m[0m csi                   = {
+                                  [32m+[0m[0m driver               = (known after apply)
+                                  [32m+[0m[0m fsType               = (known after apply)
+                                  [32m+[0m[0m nodePublishSecretRef = {
+                                      [32m+[0m[0m name = (known after apply)
+                                    }
+                                  [32m+[0m[0m readOnly             = (known after apply)
+                                  [32m+[0m[0m volumeAttributes     = (known after apply)
+                                }
+                              [32m+[0m[0m downwardAPI           = {
+                                  [32m+[0m[0m defaultMode = (known after apply)
+                                  [32m+[0m[0m items       = (known after apply)
+                                }
+                              [32m+[0m[0m emptyDir              = {
+                                  [32m+[0m[0m medium    = (known after apply)
+                                  [32m+[0m[0m sizeLimit = (known after apply)
+                                }
+                              [32m+[0m[0m ephemeral             = {
+                                  [32m+[0m[0m volumeClaimTemplate = {
+                                      [32m+[0m[0m metadata = {
+                                          [32m+[0m[0m annotations                = (known after apply)
+                                          [32m+[0m[0m creationTimestamp          = (known after apply)
+                                          [32m+[0m[0m deletionGracePeriodSeconds = (known after apply)
+                                          [32m+[0m[0m deletionTimestamp          = (known after apply)
+                                          [32m+[0m[0m finalizers                 = (known after apply)
+                                          [32m+[0m[0m generateName               = (known after apply)
+                                          [32m+[0m[0m generation                 = (known after apply)
+                                          [32m+[0m[0m labels                     = (known after apply)
+                                          [32m+[0m[0m managedFields              = (known after apply)
+                                          [32m+[0m[0m name                       = (known after apply)
+                                          [32m+[0m[0m namespace                  = (known after apply)
+                                          [32m+[0m[0m ownerReferences            = (known after apply)
+                                          [32m+[0m[0m resourceVersion            = (known after apply)
+                                          [32m+[0m[0m selfLink                   = (known after apply)
+                                          [32m+[0m[0m uid                        = (known after apply)
+                                        }
+                                      [32m+[0m[0m spec     = {
+                                          [32m+[0m[0m accessModes               = (known after apply)
+                                          [32m+[0m[0m dataSource                = {
+                                              [32m+[0m[0m apiGroup = (known after apply)
+                                              [32m+[0m[0m kind     = (known after apply)
+                                              [32m+[0m[0m name     = (known after apply)
+                                            }
+                                          [32m+[0m[0m dataSourceRef             = {
+                                              [32m+[0m[0m apiGroup  = (known after apply)
+                                              [32m+[0m[0m kind      = (known after apply)
+                                              [32m+[0m[0m name      = (known after apply)
+                                              [32m+[0m[0m namespace = (known after apply)
+                                            }
+                                          [32m+[0m[0m resources                 = {
+                                              [32m+[0m[0m limits   = (known after apply)
+                                              [32m+[0m[0m requests = (known after apply)
+                                            }
+                                          [32m+[0m[0m selector                  = {
+                                              [32m+[0m[0m matchExpressions = (known after apply)
+                                              [32m+[0m[0m matchLabels      = (known after apply)
+                                            }
+                                          [32m+[0m[0m storageClassName          = (known after apply)
+                                          [32m+[0m[0m volumeAttributesClassName = (known after apply)
+                                          [32m+[0m[0m volumeMode                = (known after apply)
+                                          [32m+[0m[0m volumeName                = (known after apply)
+                                        }
+                                    }
+                                }
+                              [32m+[0m[0m fc                    = {
+                                  [32m+[0m[0m fsType     = (known after apply)
+                                  [32m+[0m[0m lun        = (known after apply)
+                                  [32m+[0m[0m readOnly   = (known after apply)
+                                  [32m+[0m[0m targetWWNs = (known after apply)
+                                  [32m+[0m[0m wwids      = (known after apply)
+                                }
+                              [32m+[0m[0m flexVolume            = {
+                                  [32m+[0m[0m driver    = (known after apply)
+                                  [32m+[0m[0m fsType    = (known after apply)
+                                  [32m+[0m[0m options   = (known after apply)
+                                  [32m+[0m[0m readOnly  = (known after apply)
+                                  [32m+[0m[0m secretRef = {
+                                      [32m+[0m[0m name = (known after apply)
+                                    }
+                                }
+                              [32m+[0m[0m flocker               = {
+                                  [32m+[0m[0m datasetName = (known after apply)
+                                  [32m+[0m[0m datasetUUID = (known after apply)
+                                }
+                              [32m+[0m[0m gcePersistentDisk     = {
+                                  [32m+[0m[0m fsType    = (known after apply)
+                                  [32m+[0m[0m partition = (known after apply)
+                                  [32m+[0m[0m pdName    = (known after apply)
+                                  [32m+[0m[0m readOnly  = (known after apply)
+                                }
+                              [32m+[0m[0m gitRepo               = {
+                                  [32m+[0m[0m directory  = (known after apply)
+                                  [32m+[0m[0m repository = (known after apply)
+                                  [32m+[0m[0m revision   = (known after apply)
+                                }
+                              [32m+[0m[0m glusterfs             = {
+                                  [32m+[0m[0m endpoints = (known after apply)
+                                  [32m+[0m[0m path      = (known after apply)
+                                  [32m+[0m[0m readOnly  = (known after apply)
+                                }
+                              [32m+[0m[0m hostPath              = {
+                                  [32m+[0m[0m path = (known after apply)
+                                  [32m+[0m[0m type = (known after apply)
+                                }
+                              [32m+[0m[0m image                 = {
+                                  [32m+[0m[0m pullPolicy = (known after apply)
+                                  [32m+[0m[0m reference  = (known after apply)
+                                }
+                              [32m+[0m[0m iscsi                 = {
+                                  [32m+[0m[0m chapAuthDiscovery = (known after apply)
+                                  [32m+[0m[0m chapAuthSession   = (known after apply)
+                                  [32m+[0m[0m fsType            = (known after apply)
+                                  [32m+[0m[0m initiatorName     = (known after apply)
+                                  [32m+[0m[0m iqn               = (known after apply)
+                                  [32m+[0m[0m iscsiInterface    = (known after apply)
+                                  [32m+[0m[0m lun               = (known after apply)
+                                  [32m+[0m[0m portals           = (known after apply)
+                                  [32m+[0m[0m readOnly          = (known after apply)
+                                  [32m+[0m[0m secretRef         = {
+                                      [32m+[0m[0m name = (known after apply)
+                                    }
+                                  [32m+[0m[0m targetPortal      = (known after apply)
+                                }
+                              [32m+[0m[0m name                  = "nginx-api"
+                              [32m+[0m[0m nfs                   = {
+                                  [32m+[0m[0m path     = (known after apply)
+                                  [32m+[0m[0m readOnly = (known after apply)
+                                  [32m+[0m[0m server   = (known after apply)
+                                }
+                              [32m+[0m[0m persistentVolumeClaim = {
+                                  [32m+[0m[0m claimName = (known after apply)
+                                  [32m+[0m[0m readOnly  = (known after apply)
+                                }
+                              [32m+[0m[0m photonPersistentDisk  = {
+                                  [32m+[0m[0m fsType = (known after apply)
+                                  [32m+[0m[0m pdID   = (known after apply)
+                                }
+                              [32m+[0m[0m portworxVolume        = {
+                                  [32m+[0m[0m fsType   = (known after apply)
+                                  [32m+[0m[0m readOnly = (known after apply)
+                                  [32m+[0m[0m volumeID = (known after apply)
+                                }
+                              [32m+[0m[0m projected             = {
+                                  [32m+[0m[0m defaultMode = (known after apply)
+                                  [32m+[0m[0m sources     = (known after apply)
+                                }
+                              [32m+[0m[0m quobyte               = {
+                                  [32m+[0m[0m group    = (known after apply)
+                                  [32m+[0m[0m readOnly = (known after apply)
+                                  [32m+[0m[0m registry = (known after apply)
+                                  [32m+[0m[0m tenant   = (known after apply)
+                                  [32m+[0m[0m user     = (known after apply)
+                                  [32m+[0m[0m volume   = (known after apply)
+                                }
+                              [32m+[0m[0m rbd                   = {
+                                  [32m+[0m[0m fsType    = (known after apply)
+                                  [32m+[0m[0m image     = (known after apply)
+                                  [32m+[0m[0m keyring   = (known after apply)
+                                  [32m+[0m[0m monitors  = (known after apply)
+                                  [32m+[0m[0m pool      = (known after apply)
+                                  [32m+[0m[0m readOnly  = (known after apply)
+                                  [32m+[0m[0m secretRef = {
+                                      [32m+[0m[0m name = (known after apply)
+                                    }
+                                  [32m+[0m[0m user      = (known after apply)
+                                }
+                              [32m+[0m[0m scaleIO               = {
+                                  [32m+[0m[0m fsType           = (known after apply)
+                                  [32m+[0m[0m gateway          = (known after apply)
+                                  [32m+[0m[0m protectionDomain = (known after apply)
+                                  [32m+[0m[0m readOnly         = (known after apply)
+                                  [32m+[0m[0m secretRef        = {
+                                      [32m+[0m[0m name = (known after apply)
+                                    }
+                                  [32m+[0m[0m sslEnabled       = (known after apply)
+                                  [32m+[0m[0m storageMode      = (known after apply)
+                                  [32m+[0m[0m storagePool      = (known after apply)
+                                  [32m+[0m[0m system           = (known after apply)
+                                  [32m+[0m[0m volumeName       = (known after apply)
+                                }
+                              [32m+[0m[0m secret                = {
+                                  [32m+[0m[0m defaultMode = (known after apply)
+                                  [32m+[0m[0m items       = (known after apply)
+                                  [32m+[0m[0m optional    = (known after apply)
+                                  [32m+[0m[0m secretName  = (known after apply)
+                                }
+                              [32m+[0m[0m storageos             = {
+                                  [32m+[0m[0m fsType          = (known after apply)
+                                  [32m+[0m[0m readOnly        = (known after apply)
+                                  [32m+[0m[0m secretRef       = {
+                                      [32m+[0m[0m name = (known after apply)
+                                    }
+                                  [32m+[0m[0m volumeName      = (known after apply)
+                                  [32m+[0m[0m volumeNamespace = (known after apply)
+                                }
+                              [32m+[0m[0m vsphereVolume         = {
+                                  [32m+[0m[0m fsType            = (known after apply)
+                                  [32m+[0m[0m storagePolicyID   = (known after apply)
+                                  [32m+[0m[0m storagePolicyName = (known after apply)
+                                  [32m+[0m[0m volumePath        = (known after apply)
+                                }
+                            },
+                        ]
+                        [90m# (38 unchanged attributes hidden)[0m[0m
+                    }
+                }
+                [90m# (7 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # kubernetes_manifest.lab["deployment-exporter"][0m will be updated in-place
+[0m  [33m~[0m[0m resource "kubernetes_manifest" "lab" {
+      [33m~[0m[0m manifest        = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations = {
+                          [32m+[0m[0m lab-config-checksum = "380e68cd68514c9fd1b76413c42022469a1b3de3f860f498db823b75d8f7f30b"
+                          [33m~[0m[0m lab-source-checksum = "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1" [33m->[0m[0m "0453fd9185f095a840ed8851936bf4679c44c61fa18c1d4725ee1e225cba0d88"
+                        }
+                        [90m# (1 unchanged attribute hidden)[0m[0m
+                    }
+                  [33m~[0m[0m spec     = {
+                      [33m~[0m[0m containers                    = [
+                          [33m~[0m[0m {
+                              [33m~[0m[0m command         = [
+                                  [31m-[0m[0m "php",
+                                  [31m-[0m[0m "-S",
+                                  [31m-[0m[0m "0.0.0.0:8080",
+                                  [31m-[0m[0m "-t",
+                                  [31m-[0m[0m "public",
+                                  [31m-[0m[0m "public/index.php",
+                                  [32m+[0m[0m "php-fpm",
+                                  [32m+[0m[0m "--nodaemonize",
+                                ]
+                              [33m~[0m[0m image           = "laravel-reliability-app:g1" [33m->[0m[0m "laravel-reliability-app:g2"
+                              [32m+[0m[0m lifecycle       = {
+                                  [32m+[0m[0m preStop = {
+                                      [32m+[0m[0m exec = {
+                                          [32m+[0m[0m command = [
+                                              [32m+[0m[0m "sh",
+                                              [32m+[0m[0m "-c",
+                                              [32m+[0m[0m "sleep 3; kill -QUIT 1",
+                                            ]
+                                        }
+                                    }
+                                }
+                                name            = "exporter"
+                              [33m~[0m[0m ports           = [
+                                  [33m~[0m[0m {
+                                      [33m~[0m[0m containerPort = 8080 [33m->[0m[0m 9000
+                                      [33m~[0m[0m name          = "http" [33m->[0m[0m "fastcgi"
+                                    },
+                                ]
+                                [90m# (8 unchanged attributes hidden)[0m[0m
+                            },
+                          [32m+[0m[0m {
+                              [32m+[0m[0m command         = [
+                                  [32m+[0m[0m "nginx",
+                                  [32m+[0m[0m "-c",
+                                  [32m+[0m[0m "/etc/lab-nginx/nginx.conf",
+                                  [32m+[0m[0m "-g",
+                                  [32m+[0m[0m "daemon off;",
+                                ]
+                              [32m+[0m[0m image           = "nginx:1.30.5-alpine"
+                              [32m+[0m[0m imagePullPolicy = "IfNotPresent"
+                              [32m+[0m[0m lifecycle       = {
+                                  [32m+[0m[0m preStop = {
+                                      [32m+[0m[0m exec = {
+                                          [32m+[0m[0m command = [
+                                              [32m+[0m[0m "sh",
+                                              [32m+[0m[0m "-c",
+                                              [32m+[0m[0m "sleep 3; nginx -c /etc/lab-nginx/nginx.conf -s quit",
+                                            ]
+                                        }
+                                    }
+                                }
+                              [32m+[0m[0m livenessProbe   = {
+                                  [32m+[0m[0m failureThreshold = 3
+                                  [32m+[0m[0m httpGet          = {
+                                      [32m+[0m[0m path = "/api/live"
+                                      [32m+[0m[0m port = 8080
+                                    }
+                                  [32m+[0m[0m periodSeconds    = 10
+                                }
+                              [32m+[0m[0m name            = "http"
+                              [32m+[0m[0m ports           = [
+                                  [32m+[0m[0m {
+                                      [32m+[0m[0m containerPort = 8080
+                                      [32m+[0m[0m name          = "http"
+                                    },
+                                ]
+                              [32m+[0m[0m readinessProbe  = {
+                                  [32m+[0m[0m httpGet        = {
+                                      [32m+[0m[0m path = "/api/ready"
+                                      [32m+[0m[0m port = 8080
+                                    }
+                                  [32m+[0m[0m periodSeconds  = 5
+                                  [32m+[0m[0m timeoutSeconds = 3
+                                }
+                              [32m+[0m[0m resources       = {
+                                  [32m+[0m[0m limits   = {
+                                      [32m+[0m[0m cpu    = "500m"
+                                      [32m+[0m[0m memory = "128Mi"
+                                    }
+                                  [32m+[0m[0m requests = {
+                                      [32m+[0m[0m cpu    = "50m"
+                                      [32m+[0m[0m memory = "32Mi"
+                                    }
+                                }
+                              [32m+[0m[0m securityContext = {
+                                  [32m+[0m[0m allowPrivilegeEscalation = false
+                                  [32m+[0m[0m capabilities             = {
+                                      [32m+[0m[0m drop = [
+                                          [32m+[0m[0m "ALL",
+                                        ]
+                                    }
+                                  [32m+[0m[0m readOnlyRootFilesystem   = true
+                                  [32m+[0m[0m runAsNonRoot             = true
+                                  [32m+[0m[0m runAsUser                = 1000
+                                }
+                              [32m+[0m[0m startupProbe    = {
+                                  [32m+[0m[0m failureThreshold = 60
+                                  [32m+[0m[0m httpGet          = {
+                                      [32m+[0m[0m path = "/api/ready"
+                                      [32m+[0m[0m port = 8080
+                                    }
+                                  [32m+[0m[0m periodSeconds    = 3
+                                  [32m+[0m[0m timeoutSeconds   = 2
+                                }
+                              [32m+[0m[0m volumeMounts    = [
+                                  [32m+[0m[0m {
+                                      [32m+[0m[0m mountPath = "/etc/lab-nginx"
+                                      [32m+[0m[0m name      = "nginx-api"
+                                      [32m+[0m[0m readOnly  = true
+                                    },
+                                  [32m+[0m[0m {
+                                      [32m+[0m[0m mountPath = "/tmp"
+                                      [32m+[0m[0m name      = "tmp"
+                                    },
+                                ]
+                            },
+                        ]
+                      [33m~[0m[0m initContainers                = [
+                          [33m~[0m[0m {
+                              [33m~[0m[0m image           = "laravel-reliability-app:g1" [33m->[0m[0m "laravel-reliability-app:g2"
+                                name            = "storage-init"
+                                [90m# (5 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                      [33m~[0m[0m volumes                       = [
+                            [90m# (2 unchanged elements hidden)[0m[0m
+                            {
+                                emptyDir = {}
+                                name     = "tmp"
+                            },
+                          [32m+[0m[0m {
+                              [32m+[0m[0m configMap = {
+                                  [32m+[0m[0m name = "nginx-api"
+                                }
+                              [32m+[0m[0m name      = "nginx-api"
+                            },
+                        ]
+                        [90m# (3 unchanged attributes hidden)[0m[0m
+                    }
+                }
+                [90m# (3 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+      [33m~[0m[0m object          = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template                = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations                = {
+                          [31m-[0m[0m lab-source-checksum = "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1"
+                        } -> (known after apply)
+                        name                       = [90mnull[0m[0m
+                        [90m# (13 unchanged attributes hidden)[0m[0m
+                    }
+                  [33m~[0m[0m spec     = {
+                      [33m~[0m[0m containers                    = [
+                          [33m~[0m[0m {
+                              [33m~[0m[0m command                  = [
+                                  [31m-[0m[0m "php",
+                                  [31m-[0m[0m "-S",
+                                  [31m-[0m[0m "0.0.0.0:8080",
+                                  [31m-[0m[0m "-t",
+                                  [31m-[0m[0m "public",
+                                  [31m-[0m[0m "public/index.php",
+                                  [32m+[0m[0m "php-fpm",
+                                  [32m+[0m[0m "--nodaemonize",
+                                ]
+                              [33m~[0m[0m image                    = "laravel-reliability-app:g1" [33m->[0m[0m "laravel-reliability-app:g2"
+                              [33m~[0m[0m lifecycle                = {
+                                  [33m~[0m[0m preStop    = {
+                                      [33m~[0m[0m exec      = {
+                                          [33m~[0m[0m command = [90mnull[0m[0m [33m->[0m[0m [
+                                              [32m+[0m[0m "sh",
+                                              [32m+[0m[0m "-c",
+                                              [32m+[0m[0m "sleep 3; kill -QUIT 1",
+                                            ]
+                                        }
+                                        [90m# (3 unchanged attributes hidden)[0m[0m
+                                    }
+                                    [90m# (2 unchanged attributes hidden)[0m[0m
+                                }
+                                name                     = "exporter"
+                              [33m~[0m[0m ports                    = [
+                                  [33m~[0m[0m {
+                                      [33m~[0m[0m containerPort = 8080 [33m->[0m[0m 9000
+                                      [33m~[0m[0m name          = "http" [33m->[0m[0m "fastcgi"
+                                        [90m# (3 unchanged attributes hidden)[0m[0m
+                                    },
+                                ]
+                                [90m# (20 unchanged attributes hidden)[0m[0m
+                            },
+                          [32m+[0m[0m {
+                              [32m+[0m[0m args                     = (known after apply)
+                              [32m+[0m[0m command                  = [
+                                  [32m+[0m[0m "nginx",
+                                  [32m+[0m[0m "-c",
+                                  [32m+[0m[0m "/etc/lab-nginx/nginx.conf",
+                                  [32m+[0m[0m "-g",
+                                  [32m+[0m[0m "daemon off;",
+                                ]
+                              [32m+[0m[0m env                      = (known after apply)
+                              [32m+[0m[0m envFrom                  = (known after apply)
+                              [32m+[0m[0m image                    = "nginx:1.30.5-alpine"
+                              [32m+[0m[0m imagePullPolicy          = "IfNotPresent"
+                              [32m+[0m[0m lifecycle                = {
+                                  [32m+[0m[0m postStart  = {
+                                      [32m+[0m[0m exec      = {
+                                          [32m+[0m[0m command = (known after apply)
+                                        }
+                                      [32m+[0m[0m httpGet   = {
+                                          [32m+[0m[0m host        = (known after apply)
+                                          [32m+[0m[0m httpHeaders = (known after apply)
+                                          [32m+[0m[0m path        = (known after apply)
+                                          [32m+[0m[0m port        = (known after apply)
+                                          [32m+[0m[0m scheme      = (known after apply)
+                                        }
+                                      [32m+[0m[0m sleep     = {
+                                          [32m+[0m[0m seconds = (known after apply)
+                                        }
+                                      [32m+[0m[0m tcpSocket = {
+                                          [32m+[0m[0m host = (known after apply)
+                                          [32m+[0m[0m port = (known after apply)
+                                        }
+                                    }
+                                  [32m+[0m[0m preStop    = {
+                                      [32m+[0m[0m exec      = {
+                                          [32m+[0m[0m command = [
+                                              [32m+[0m[0m "sh",
+                                              [32m+[0m[0m "-c",
+                                              [32m+[0m[0m "sleep 3; nginx -c /etc/lab-nginx/nginx.conf -s quit",
+                                            ]
+                                        }
+                                      [32m+[0m[0m httpGet   = {
+                                          [32m+[0m[0m host        = (known after apply)
+                                          [32m+[0m[0m httpHeaders = (known after apply)
+                                          [32m+[0m[0m path        = (known after apply)
+                                          [32m+[0m[0m port        = (known after apply)
+                                          [32m+[0m[0m scheme      = (known after apply)
+                                        }
+                                      [32m+[0m[0m sleep     = {
+                                          [32m+[0m[0m seconds = (known after apply)
+                                        }
+                                      [32m+[0m[0m tcpSocket = {
+                                          [32m+[0m[0m host = (known after apply)
+                                          [32m+[0m[0m port = (known after apply)
+                                        }
+                                    }
+                                  [32m+[0m[0m stopSignal = (known after apply)
+                                }
+                              [32m+[0m[0m livenessProbe            = {
+                                  [32m+[0m[0m exec                          = {
+                                      [32m+[0m[0m command = (known after apply)
+                                    }
+                                  [32m+[0m[0m failureThreshold              = 3
+                                  [32m+[0m[0m grpc                          = {
+                                      [32m+[0m[0m port    = (known after apply)
+                                      [32m+[0m[0m service = (known after apply)
+                                    }
+                                  [32m+[0m[0m httpGet                       = {
+                                      [32m+[0m[0m host        = (known after apply)
+                                      [32m+[0m[0m httpHeaders = (known after apply)
+                                      [32m+[0m[0m path        = "/api/live"
+                                      [32m+[0m[0m port        = "8080"
+                                      [32m+[0m[0m scheme      = (known after apply)
+                                    }
+                                  [32m+[0m[0m initialDelaySeconds           = (known after apply)
+                                  [32m+[0m[0m periodSeconds                 = 10
+                                  [32m+[0m[0m successThreshold              = (known after apply)
+                                  [32m+[0m[0m tcpSocket                     = {
+                                      [32m+[0m[0m host = (known after apply)
+                                      [32m+[0m[0m port = (known after apply)
+                                    }
+                                  [32m+[0m[0m terminationGracePeriodSeconds = (known after apply)
+                                  [32m+[0m[0m timeoutSeconds                = (known after apply)
+                                }
+                              [32m+[0m[0m name                     = "http"
+                              [32m+[0m[0m ports                    = [
+                                  [32m+[0m[0m {
+                                      [32m+[0m[0m containerPort = 8080
+                                      [32m+[0m[0m hostIP        = (known after apply)
+                                      [32m+[0m[0m hostPort      = (known after apply)
+                                      [32m+[0m[0m name          = "http"
+                                      [32m+[0m[0m protocol      = (known after apply)
+                                    },
+                                ]
+                              [32m+[0m[0m readinessProbe           = {
+                                  [32m+[0m[0m exec                          = {
+                                      [32m+[0m[0m command = (known after apply)
+                                    }
+                                  [32m+[0m[0m failureThreshold              = (known after apply)
+                                  [32m+[0m[0m grpc                          = {
+                                      [32m+[0m[0m port    = (known after apply)
+                                      [32m+[0m[0m service = (known after apply)
+                                    }
+                                  [32m+[0m[0m httpGet                       = {
+                                      [32m+[0m[0m host        = (known after apply)
+                                      [32m+[0m[0m httpHeaders = (known after apply)
+                                      [32m+[0m[0m path        = "/api/ready"
+                                      [32m+[0m[0m port        = "8080"
+                                      [32m+[0m[0m scheme      = (known after apply)
+                                    }
+                                  [32m+[0m[0m initialDelaySeconds           = (known after apply)
+                                  [32m+[0m[0m periodSeconds                 = 5
+                                  [32m+[0m[0m successThreshold              = (known after apply)
+                                  [32m+[0m[0m tcpSocket                     = {
+                                      [32m+[0m[0m host = (known after apply)
+                                      [32m+[0m[0m port = (known after apply)
+                                    }
+                                  [32m+[0m[0m terminationGracePeriodSeconds = (known after apply)
+                                  [32m+[0m[0m timeoutSeconds                = 3
+                                }
+                              [32m+[0m[0m resizePolicy             = (known after apply)
+                              [32m+[0m[0m resources                = {
+                                  [32m+[0m[0m claims   = (known after apply)
+                                  [32m+[0m[0m limits   = {
+                                      [32m+[0m[0m cpu    = "500m"
+                                      [32m+[0m[0m memory = "128Mi"
+                                    }
+                                  [32m+[0m[0m requests = {
+                                      [32m+[0m[0m cpu    = "50m"
+                                      [32m+[0m[0m memory = "32Mi"
+                                    }
+                                }
+                              [32m+[0m[0m restartPolicy            = (known after apply)
+                              [32m+[0m[0m restartPolicyRules       = (known after apply)
+                              [32m+[0m[0m securityContext          = {
+                                  [32m+[0m[0m allowPrivilegeEscalation = false
+                                  [32m+[0m[0m appArmorProfile          = {
+                                      [32m+[0m[0m localhostProfile = (known after apply)
+                                      [32m+[0m[0m type             = (known after apply)
+                                    }
+                                  [32m+[0m[0m capabilities             = {
+                                      [32m+[0m[0m add  = (known after apply)
+                                      [32m+[0m[0m drop = [
+                                          [32m+[0m[0m "ALL",
+                                        ]
+                                    }
+                                  [32m+[0m[0m privileged               = (known after apply)
+                                  [32m+[0m[0m procMount                = (known after apply)
+                                  [32m+[0m[0m readOnlyRootFilesystem   = true
+                                  [32m+[0m[0m runAsGroup               = (known after apply)
+                                  [32m+[0m[0m runAsNonRoot             = true
+                                  [32m+[0m[0m runAsUser                = 1000
+                                  [32m+[0m[0m seLinuxOptions           = {
+                                      [32m+[0m[0m level = (known after apply)
+                                      [32m+[0m[0m role  = (known after apply)
+                                      [32m+[0m[0m type  = (known after apply)
+                                      [32m+[0m[0m user  = (known after apply)
+                                    }
+                                  [32m+[0m[0m seccompProfile           = {
+                                      [32m+[0m[0m localhostProfile = (known after apply)
+                                      [32m+[0m[0m type             = (known after apply)
+                                    }
+                                  [32m+[0m[0m windowsOptions           = {
+                                      [32m+[0m[0m gmsaCredentialSpec     = (known after apply)
+                                      [32m+[0m[0m gmsaCredentialSpecName = (known after apply)
+                                      [32m+[0m[0m hostProcess            = (known after apply)
+                                      [32m+[0m[0m runAsUserName          = (known after apply)
+                                    }
+                                }
+                              [32m+[0m[0m startupProbe             = {
+                                  [32m+[0m[0m exec                          = {
+                                      [32m+[0m[0m command = (known after apply)
+                                    }
+                                  [32m+[0m[0m failureThreshold              = 60
+                                  [32m+[0m[0m grpc                          = {
+                                      [32m+[0m[0m port    = (known after apply)
+                                      [32m+[0m[0m service = (known after apply)
+                                    }
+                                  [32m+[0m[0m httpGet                       = {
+                                      [32m+[0m[0m host        = (known after apply)
+                                      [32m+[0m[0m httpHeaders = (known after apply)
+                                      [32m+[0m[0m path        = "/api/ready"
+                                      [32m+[0m[0m port        = "8080"
+                                      [32m+[0m[0m scheme      = (known after apply)
+                                    }
+                                  [32m+[0m[0m initialDelaySeconds           = (known after apply)
+                                  [32m+[0m[0m periodSeconds                 = 3
+                                  [32m+[0m[0m successThreshold              = (known after apply)
+                                  [32m+[0m[0m tcpSocket                     = {
+                                      [32m+[0m[0m host = (known after apply)
+                                      [32m+[0m[0m port = (known after apply)
+                                    }
+                                  [32m+[0m[0m terminationGracePeriodSeconds = (known after apply)
+                                  [32m+[0m[0m timeoutSeconds                = 2
+                                }
+                              [32m+[0m[0m stdin                    = (known after apply)
+                              [32m+[0m[0m stdinOnce                = (known after apply)
+                              [32m+[0m[0m terminationMessagePath   = (known after apply)
+                              [32m+[0m[0m terminationMessagePolicy = (known after apply)
+                              [32m+[0m[0m tty                      = (known after apply)
+                              [32m+[0m[0m volumeDevices            = (known after apply)
+                              [32m+[0m[0m volumeMounts             = [
+                                  [32m+[0m[0m {
+                                      [32m+[0m[0m mountPath         = "/etc/lab-nginx"
+                                      [32m+[0m[0m mountPropagation  = (known after apply)
+                                      [32m+[0m[0m name              = "nginx-api"
+                                      [32m+[0m[0m readOnly          = true
+                                      [32m+[0m[0m recursiveReadOnly = (known after apply)
+                                      [32m+[0m[0m subPath           = (known after apply)
+                                      [32m+[0m[0m subPathExpr       = (known after apply)
+                                    },
+                                  [32m+[0m[0m {
+                                      [32m+[0m[0m mountPath         = "/tmp"
+                                      [32m+[0m[0m mountPropagation  = (known after apply)
+                                      [32m+[0m[0m name              = "tmp"
+                                      [32m+[0m[0m readOnly          = (known after apply)
+                                      [32m+[0m[0m recursiveReadOnly = (known after apply)
+                                      [32m+[0m[0m subPath           = (known after apply)
+                                      [32m+[0m[0m subPathExpr       = (known after apply)
+                                    },
+                                ]
+                              [32m+[0m[0m workingDir               = (known after apply)
+                            },
+                        ]
+                      [33m~[0m[0m initContainers                = [
+                          [33m~[0m[0m {
+                              [33m~[0m[0m image                    = "laravel-reliability-app:g1" [33m->[0m[0m "laravel-reliability-app:g2"
+                                name                     = "storage-init"
+                                [90m# (23 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                      [33m~[0m[0m volumes                       = [
+                            [90m# (2 unchanged elements hidden)[0m[0m
+                            {
+                                awsElasticBlockStore  = {
+                                    fsType    = [90mnull[0m[0m
+                                    partition = [90mnull[0m[0m
+                                    readOnly  = [90mnull[0m[0m
+                                    volumeID  = [90mnull[0m[0m
+                                }
+                                azureDisk             = {
+                                    cachingMode = [90mnull[0m[0m
+                                    diskName    = [90mnull[0m[0m
+                                    diskURI     = [90mnull[0m[0m
+                                    fsType      = [90mnull[0m[0m
+                                    kind        = [90mnull[0m[0m
+                                    readOnly    = [90mnull[0m[0m
+                                }
+                                azureFile             = {
+                                    readOnly   = [90mnull[0m[0m
+                                    secretName = [90mnull[0m[0m
+                                    shareName  = [90mnull[0m[0m
+                                }
+                                cephfs                = {
+                                    monitors   = [90mnull[0m[0m
+                                    path       = [90mnull[0m[0m
+                                    readOnly   = [90mnull[0m[0m
+                                    secretFile = [90mnull[0m[0m
+                                    secretRef  = {
+                                        name = [90mnull[0m[0m
+                                    }
+                                    user       = [90mnull[0m[0m
+                                }
+                                cinder                = {
+                                    fsType    = [90mnull[0m[0m
+                                    readOnly  = [90mnull[0m[0m
+                                    secretRef = {
+                                        name = [90mnull[0m[0m
+                                    }
+                                    volumeID  = [90mnull[0m[0m
+                                }
+                                configMap             = {
+                                    defaultMode = [90mnull[0m[0m
+                                    items       = [90mnull[0m[0m
+                                    name        = [90mnull[0m[0m
+                                    optional    = [90mnull[0m[0m
+                                }
+                                csi                   = {
+                                    driver               = [90mnull[0m[0m
+                                    fsType               = [90mnull[0m[0m
+                                    nodePublishSecretRef = {
+                                        name = [90mnull[0m[0m
+                                    }
+                                    readOnly             = [90mnull[0m[0m
+                                    volumeAttributes     = [90mnull[0m[0m
+                                }
+                                downwardAPI           = {
+                                    defaultMode = [90mnull[0m[0m
+                                    items       = [90mnull[0m[0m
+                                }
+                                emptyDir              = {
+                                    medium    = [90mnull[0m[0m
+                                    sizeLimit = [90mnull[0m[0m
+                                }
+                                ephemeral             = {
+                                    volumeClaimTemplate = {
+                                        metadata = {
+                                            annotations                = [90mnull[0m[0m
+                                            creationTimestamp          = [90mnull[0m[0m
+                                            deletionGracePeriodSeconds = [90mnull[0m[0m
+                                            deletionTimestamp          = [90mnull[0m[0m
+                                            finalizers                 = [90mnull[0m[0m
+                                            generateName               = [90mnull[0m[0m
+                                            generation                 = [90mnull[0m[0m
+                                            labels                     = [90mnull[0m[0m
+                                            managedFields              = [90mnull[0m[0m
+                                            name                       = [90mnull[0m[0m
+                                            namespace                  = [90mnull[0m[0m
+                                            ownerReferences            = [90mnull[0m[0m
+                                            resourceVersion            = [90mnull[0m[0m
+                                            selfLink                   = [90mnull[0m[0m
+                                            uid                        = [90mnull[0m[0m
+                                        }
+                                        spec     = {
+                                            accessModes               = [90mnull[0m[0m
+                                            dataSource                = {
+                                                apiGroup = [90mnull[0m[0m
+                                                kind     = [90mnull[0m[0m
+                                                name     = [90mnull[0m[0m
+                                            }
+                                            dataSourceRef             = {
+                                                apiGroup  = [90mnull[0m[0m
+                                                kind      = [90mnull[0m[0m
+                                                name      = [90mnull[0m[0m
+                                                namespace = [90mnull[0m[0m
+                                            }
+                                            resources                 = {
+                                                limits   = [90mnull[0m[0m
+                                                requests = [90mnull[0m[0m
+                                            }
+                                            selector                  = {
+                                                matchExpressions = [90mnull[0m[0m
+                                                matchLabels      = [90mnull[0m[0m
+                                            }
+                                            storageClassName          = [90mnull[0m[0m
+                                            volumeAttributesClassName = [90mnull[0m[0m
+                                            volumeMode                = [90mnull[0m[0m
+                                            volumeName                = [90mnull[0m[0m
+                                        }
+                                    }
+                                }
+                                fc                    = {
+                                    fsType     = [90mnull[0m[0m
+                                    lun        = [90mnull[0m[0m
+                                    readOnly   = [90mnull[0m[0m
+                                    targetWWNs = [90mnull[0m[0m
+                                    wwids      = [90mnull[0m[0m
+                                }
+                                flexVolume            = {
+                                    driver    = [90mnull[0m[0m
+                                    fsType    = [90mnull[0m[0m
+                                    options   = [90mnull[0m[0m
+                                    readOnly  = [90mnull[0m[0m
+                                    secretRef = {
+                                        name = [90mnull[0m[0m
+                                    }
+                                }
+                                flocker               = {
+                                    datasetName = [90mnull[0m[0m
+                                    datasetUUID = [90mnull[0m[0m
+                                }
+                                gcePersistentDisk     = {
+                                    fsType    = [90mnull[0m[0m
+                                    partition = [90mnull[0m[0m
+                                    pdName    = [90mnull[0m[0m
+                                    readOnly  = [90mnull[0m[0m
+                                }
+                                gitRepo               = {
+                                    directory  = [90mnull[0m[0m
+                                    repository = [90mnull[0m[0m
+                                    revision   = [90mnull[0m[0m
+                                }
+                                glusterfs             = {
+                                    endpoints = [90mnull[0m[0m
+                                    path      = [90mnull[0m[0m
+                                    readOnly  = [90mnull[0m[0m
+                                }
+                                hostPath              = {
+                                    path = [90mnull[0m[0m
+                                    type = [90mnull[0m[0m
+                                }
+                                image                 = {
+                                    pullPolicy = [90mnull[0m[0m
+                                    reference  = [90mnull[0m[0m
+                                }
+                                iscsi                 = {
+                                    chapAuthDiscovery = [90mnull[0m[0m
+                                    chapAuthSession   = [90mnull[0m[0m
+                                    fsType            = [90mnull[0m[0m
+                                    initiatorName     = [90mnull[0m[0m
+                                    iqn               = [90mnull[0m[0m
+                                    iscsiInterface    = [90mnull[0m[0m
+                                    lun               = [90mnull[0m[0m
+                                    portals           = [90mnull[0m[0m
+                                    readOnly          = [90mnull[0m[0m
+                                    secretRef         = {
+                                        name = [90mnull[0m[0m
+                                    }
+                                    targetPortal      = [90mnull[0m[0m
+                                }
+                                name                  = "tmp"
+                                nfs                   = {
+                                    path     = [90mnull[0m[0m
+                                    readOnly = [90mnull[0m[0m
+                                    server   = [90mnull[0m[0m
+                                }
+                                persistentVolumeClaim = {
+                                    claimName = [90mnull[0m[0m
+                                    readOnly  = [90mnull[0m[0m
+                                }
+                                photonPersistentDisk  = {
+                                    fsType = [90mnull[0m[0m
+                                    pdID   = [90mnull[0m[0m
+                                }
+                                portworxVolume        = {
+                                    fsType   = [90mnull[0m[0m
+                                    readOnly = [90mnull[0m[0m
+                                    volumeID = [90mnull[0m[0m
+                                }
+                                projected             = {
+                                    defaultMode = [90mnull[0m[0m
+                                    sources     = [90mnull[0m[0m
+                                }
+                                quobyte               = {
+                                    group    = [90mnull[0m[0m
+                                    readOnly = [90mnull[0m[0m
+                                    registry = [90mnull[0m[0m
+                                    tenant   = [90mnull[0m[0m
+                                    user     = [90mnull[0m[0m
+                                    volume   = [90mnull[0m[0m
+                                }
+                                rbd                   = {
+                                    fsType    = [90mnull[0m[0m
+                                    image     = [90mnull[0m[0m
+                                    keyring   = [90mnull[0m[0m
+                                    monitors  = [90mnull[0m[0m
+                                    pool      = [90mnull[0m[0m
+                                    readOnly  = [90mnull[0m[0m
+                                    secretRef = {
+                                        name = [90mnull[0m[0m
+                                    }
+                                    user      = [90mnull[0m[0m
+                                }
+                                scaleIO               = {
+                                    fsType           = [90mnull[0m[0m
+                                    gateway          = [90mnull[0m[0m
+                                    protectionDomain = [90mnull[0m[0m
+                                    readOnly         = [90mnull[0m[0m
+                                    secretRef        = {
+                                        name = [90mnull[0m[0m
+                                    }
+                                    sslEnabled       = [90mnull[0m[0m
+                                    storageMode      = [90mnull[0m[0m
+                                    storagePool      = [90mnull[0m[0m
+                                    system           = [90mnull[0m[0m
+                                    volumeName       = [90mnull[0m[0m
+                                }
+                                secret                = {
+                                    defaultMode = [90mnull[0m[0m
+                                    items       = [90mnull[0m[0m
+                                    optional    = [90mnull[0m[0m
+                                    secretName  = [90mnull[0m[0m
+                                }
+                                storageos             = {
+                                    fsType          = [90mnull[0m[0m
+                                    readOnly        = [90mnull[0m[0m
+                                    secretRef       = {
+                                        name = [90mnull[0m[0m
+                                    }
+                                    volumeName      = [90mnull[0m[0m
+                                    volumeNamespace = [90mnull[0m[0m
+                                }
+                                vsphereVolume         = {
+                                    fsType            = [90mnull[0m[0m
+                                    storagePolicyID   = [90mnull[0m[0m
+                                    storagePolicyName = [90mnull[0m[0m
+                                    volumePath        = [90mnull[0m[0m
+                                }
+                            },
+                          [32m+[0m[0m {
+                              [32m+[0m[0m awsElasticBlockStore  = {
+                                  [32m+[0m[0m fsType    = (known after apply)
+                                  [32m+[0m[0m partition = (known after apply)
+                                  [32m+[0m[0m readOnly  = (known after apply)
+                                  [32m+[0m[0m volumeID  = (known after apply)
+                                }
+                              [32m+[0m[0m azureDisk             = {
+                                  [32m+[0m[0m cachingMode = (known after apply)
+                                  [32m+[0m[0m diskName    = (known after apply)
+                                  [32m+[0m[0m diskURI     = (known after apply)
+                                  [32m+[0m[0m fsType      = (known after apply)
+                                  [32m+[0m[0m kind        = (known after apply)
+                                  [32m+[0m[0m readOnly    = (known after apply)
+                                }
+                              [32m+[0m[0m azureFile             = {
+                                  [32m+[0m[0m readOnly   = (known after apply)
+                                  [32m+[0m[0m secretName = (known after apply)
+                                  [32m+[0m[0m shareName  = (known after apply)
+                                }
+                              [32m+[0m[0m cephfs                = {
+                                  [32m+[0m[0m monitors   = (known after apply)
+                                  [32m+[0m[0m path       = (known after apply)
+                                  [32m+[0m[0m readOnly   = (known after apply)
+                                  [32m+[0m[0m secretFile = (known after apply)
+                                  [32m+[0m[0m secretRef  = {
+                                      [32m+[0m[0m name = (known after apply)
+                                    }
+                                  [32m+[0m[0m user       = (known after apply)
+                                }
+                              [32m+[0m[0m cinder                = {
+                                  [32m+[0m[0m fsType    = (known after apply)
+                                  [32m+[0m[0m readOnly  = (known after apply)
+                                  [32m+[0m[0m secretRef = {
+                                      [32m+[0m[0m name = (known after apply)
+                                    }
+                                  [32m+[0m[0m volumeID  = (known after apply)
+                                }
+                              [32m+[0m[0m configMap             = {
+                                  [32m+[0m[0m defaultMode = (known after apply)
+                                  [32m+[0m[0m items       = (known after apply)
+                                  [32m+[0m[0m name        = "nginx-api"
+                                  [32m+[0m[0m optional    = (known after apply)
+                                }
+                              [32m+[0m[0m csi                   = {
+                                  [32m+[0m[0m driver               = (known after apply)
+                                  [32m+[0m[0m fsType               = (known after apply)
+                                  [32m+[0m[0m nodePublishSecretRef = {
+                                      [32m+[0m[0m name = (known after apply)
+                                    }
+                                  [32m+[0m[0m readOnly             = (known after apply)
+                                  [32m+[0m[0m volumeAttributes     = (known after apply)
+                                }
+                              [32m+[0m[0m downwardAPI           = {
+                                  [32m+[0m[0m defaultMode = (known after apply)
+                                  [32m+[0m[0m items       = (known after apply)
+                                }
+                              [32m+[0m[0m emptyDir              = {
+                                  [32m+[0m[0m medium    = (known after apply)
+                                  [32m+[0m[0m sizeLimit = (known after apply)
+                                }
+                              [32m+[0m[0m ephemeral             = {
+                                  [32m+[0m[0m volumeClaimTemplate = {
+                                      [32m+[0m[0m metadata = {
+                                          [32m+[0m[0m annotations                = (known after apply)
+                                          [32m+[0m[0m creationTimestamp          = (known after apply)
+                                          [32m+[0m[0m deletionGracePeriodSeconds = (known after apply)
+                                          [32m+[0m[0m deletionTimestamp          = (known after apply)
+                                          [32m+[0m[0m finalizers                 = (known after apply)
+                                          [32m+[0m[0m generateName               = (known after apply)
+                                          [32m+[0m[0m generation                 = (known after apply)
+                                          [32m+[0m[0m labels                     = (known after apply)
+                                          [32m+[0m[0m managedFields              = (known after apply)
+                                          [32m+[0m[0m name                       = (known after apply)
+                                          [32m+[0m[0m namespace                  = (known after apply)
+                                          [32m+[0m[0m ownerReferences            = (known after apply)
+                                          [32m+[0m[0m resourceVersion            = (known after apply)
+                                          [32m+[0m[0m selfLink                   = (known after apply)
+                                          [32m+[0m[0m uid                        = (known after apply)
+                                        }
+                                      [32m+[0m[0m spec     = {
+                                          [32m+[0m[0m accessModes               = (known after apply)
+                                          [32m+[0m[0m dataSource                = {
+                                              [32m+[0m[0m apiGroup = (known after apply)
+                                              [32m+[0m[0m kind     = (known after apply)
+                                              [32m+[0m[0m name     = (known after apply)
+                                            }
+                                          [32m+[0m[0m dataSourceRef             = {
+                                              [32m+[0m[0m apiGroup  = (known after apply)
+                                              [32m+[0m[0m kind      = (known after apply)
+                                              [32m+[0m[0m name      = (known after apply)
+                                              [32m+[0m[0m namespace = (known after apply)
+                                            }
+                                          [32m+[0m[0m resources                 = {
+                                              [32m+[0m[0m limits   = (known after apply)
+                                              [32m+[0m[0m requests = (known after apply)
+                                            }
+                                          [32m+[0m[0m selector                  = {
+                                              [32m+[0m[0m matchExpressions = (known after apply)
+                                              [32m+[0m[0m matchLabels      = (known after apply)
+                                            }
+                                          [32m+[0m[0m storageClassName          = (known after apply)
+                                          [32m+[0m[0m volumeAttributesClassName = (known after apply)
+                                          [32m+[0m[0m volumeMode                = (known after apply)
+                                          [32m+[0m[0m volumeName                = (known after apply)
+                                        }
+                                    }
+                                }
+                              [32m+[0m[0m fc                    = {
+                                  [32m+[0m[0m fsType     = (known after apply)
+                                  [32m+[0m[0m lun        = (known after apply)
+                                  [32m+[0m[0m readOnly   = (known after apply)
+                                  [32m+[0m[0m targetWWNs = (known after apply)
+                                  [32m+[0m[0m wwids      = (known after apply)
+                                }
+                              [32m+[0m[0m flexVolume            = {
+                                  [32m+[0m[0m driver    = (known after apply)
+                                  [32m+[0m[0m fsType    = (known after apply)
+                                  [32m+[0m[0m options   = (known after apply)
+                                  [32m+[0m[0m readOnly  = (known after apply)
+                                  [32m+[0m[0m secretRef = {
+                                      [32m+[0m[0m name = (known after apply)
+                                    }
+                                }
+                              [32m+[0m[0m flocker               = {
+                                  [32m+[0m[0m datasetName = (known after apply)
+                                  [32m+[0m[0m datasetUUID = (known after apply)
+                                }
+                              [32m+[0m[0m gcePersistentDisk     = {
+                                  [32m+[0m[0m fsType    = (known after apply)
+                                  [32m+[0m[0m partition = (known after apply)
+                                  [32m+[0m[0m pdName    = (known after apply)
+                                  [32m+[0m[0m readOnly  = (known after apply)
+                                }
+                              [32m+[0m[0m gitRepo               = {
+                                  [32m+[0m[0m directory  = (known after apply)
+                                  [32m+[0m[0m repository = (known after apply)
+                                  [32m+[0m[0m revision   = (known after apply)
+                                }
+                              [32m+[0m[0m glusterfs             = {
+                                  [32m+[0m[0m endpoints = (known after apply)
+                                  [32m+[0m[0m path      = (known after apply)
+                                  [32m+[0m[0m readOnly  = (known after apply)
+                                }
+                              [32m+[0m[0m hostPath              = {
+                                  [32m+[0m[0m path = (known after apply)
+                                  [32m+[0m[0m type = (known after apply)
+                                }
+                              [32m+[0m[0m image                 = {
+                                  [32m+[0m[0m pullPolicy = (known after apply)
+                                  [32m+[0m[0m reference  = (known after apply)
+                                }
+                              [32m+[0m[0m iscsi                 = {
+                                  [32m+[0m[0m chapAuthDiscovery = (known after apply)
+                                  [32m+[0m[0m chapAuthSession   = (known after apply)
+                                  [32m+[0m[0m fsType            = (known after apply)
+                                  [32m+[0m[0m initiatorName     = (known after apply)
+                                  [32m+[0m[0m iqn               = (known after apply)
+                                  [32m+[0m[0m iscsiInterface    = (known after apply)
+                                  [32m+[0m[0m lun               = (known after apply)
+                                  [32m+[0m[0m portals           = (known after apply)
+                                  [32m+[0m[0m readOnly          = (known after apply)
+                                  [32m+[0m[0m secretRef         = {
+                                      [32m+[0m[0m name = (known after apply)
+                                    }
+                                  [32m+[0m[0m targetPortal      = (known after apply)
+                                }
+                              [32m+[0m[0m name                  = "nginx-api"
+                              [32m+[0m[0m nfs                   = {
+                                  [32m+[0m[0m path     = (known after apply)
+                                  [32m+[0m[0m readOnly = (known after apply)
+                                  [32m+[0m[0m server   = (known after apply)
+                                }
+                              [32m+[0m[0m persistentVolumeClaim = {
+                                  [32m+[0m[0m claimName = (known after apply)
+                                  [32m+[0m[0m readOnly  = (known after apply)
+                                }
+                              [32m+[0m[0m photonPersistentDisk  = {
+                                  [32m+[0m[0m fsType = (known after apply)
+                                  [32m+[0m[0m pdID   = (known after apply)
+                                }
+                              [32m+[0m[0m portworxVolume        = {
+                                  [32m+[0m[0m fsType   = (known after apply)
+                                  [32m+[0m[0m readOnly = (known after apply)
+                                  [32m+[0m[0m volumeID = (known after apply)
+                                }
+                              [32m+[0m[0m projected             = {
+                                  [32m+[0m[0m defaultMode = (known after apply)
+                                  [32m+[0m[0m sources     = (known after apply)
+                                }
+                              [32m+[0m[0m quobyte               = {
+                                  [32m+[0m[0m group    = (known after apply)
+                                  [32m+[0m[0m readOnly = (known after apply)
+                                  [32m+[0m[0m registry = (known after apply)
+                                  [32m+[0m[0m tenant   = (known after apply)
+                                  [32m+[0m[0m user     = (known after apply)
+                                  [32m+[0m[0m volume   = (known after apply)
+                                }
+                              [32m+[0m[0m rbd                   = {
+                                  [32m+[0m[0m fsType    = (known after apply)
+                                  [32m+[0m[0m image     = (known after apply)
+                                  [32m+[0m[0m keyring   = (known after apply)
+                                  [32m+[0m[0m monitors  = (known after apply)
+                                  [32m+[0m[0m pool      = (known after apply)
+                                  [32m+[0m[0m readOnly  = (known after apply)
+                                  [32m+[0m[0m secretRef = {
+                                      [32m+[0m[0m name = (known after apply)
+                                    }
+                                  [32m+[0m[0m user      = (known after apply)
+                                }
+                              [32m+[0m[0m scaleIO               = {
+                                  [32m+[0m[0m fsType           = (known after apply)
+                                  [32m+[0m[0m gateway          = (known after apply)
+                                  [32m+[0m[0m protectionDomain = (known after apply)
+                                  [32m+[0m[0m readOnly         = (known after apply)
+                                  [32m+[0m[0m secretRef        = {
+                                      [32m+[0m[0m name = (known after apply)
+                                    }
+                                  [32m+[0m[0m sslEnabled       = (known after apply)
+                                  [32m+[0m[0m storageMode      = (known after apply)
+                                  [32m+[0m[0m storagePool      = (known after apply)
+                                  [32m+[0m[0m system           = (known after apply)
+                                  [32m+[0m[0m volumeName       = (known after apply)
+                                }
+                              [32m+[0m[0m secret                = {
+                                  [32m+[0m[0m defaultMode = (known after apply)
+                                  [32m+[0m[0m items       = (known after apply)
+                                  [32m+[0m[0m optional    = (known after apply)
+                                  [32m+[0m[0m secretName  = (known after apply)
+                                }
+                              [32m+[0m[0m storageos             = {
+                                  [32m+[0m[0m fsType          = (known after apply)
+                                  [32m+[0m[0m readOnly        = (known after apply)
+                                  [32m+[0m[0m secretRef       = {
+                                      [32m+[0m[0m name = (known after apply)
+                                    }
+                                  [32m+[0m[0m volumeName      = (known after apply)
+                                  [32m+[0m[0m volumeNamespace = (known after apply)
+                                }
+                              [32m+[0m[0m vsphereVolume         = {
+                                  [32m+[0m[0m fsType            = (known after apply)
+                                  [32m+[0m[0m storagePolicyID   = (known after apply)
+                                  [32m+[0m[0m storagePolicyName = (known after apply)
+                                  [32m+[0m[0m volumePath        = (known after apply)
+                                }
+                            },
+                        ]
+                        [90m# (38 unchanged attributes hidden)[0m[0m
+                    }
+                }
+                [90m# (7 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # kubernetes_manifest.lab["deployment-scheduler"][0m will be updated in-place
+[0m  [33m~[0m[0m resource "kubernetes_manifest" "lab" {
+      [33m~[0m[0m manifest        = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations = {
+                          [33m~[0m[0m lab-source-checksum = "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1" [33m->[0m[0m "0453fd9185f095a840ed8851936bf4679c44c61fa18c1d4725ee1e225cba0d88"
+                        }
+                        [90m# (1 unchanged attribute hidden)[0m[0m
+                    }
+                  [33m~[0m[0m spec     = {
+                      [33m~[0m[0m containers                    = [
+                          [33m~[0m[0m {
+                              [33m~[0m[0m image           = "laravel-reliability-app:g1" [33m->[0m[0m "laravel-reliability-app:g2"
+                                name            = "scheduler"
+                                [90m# (10 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                      [33m~[0m[0m initContainers                = [
+                          [33m~[0m[0m {
+                              [33m~[0m[0m image           = "laravel-reliability-app:g1" [33m->[0m[0m "laravel-reliability-app:g2"
+                                name            = "storage-init"
+                                [90m# (5 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                        [90m# (4 unchanged attributes hidden)[0m[0m
+                    }
+                }
+                [90m# (3 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+      [33m~[0m[0m object          = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template                = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations                = {
+                          [31m-[0m[0m lab-source-checksum = "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1"
+                        } -> (known after apply)
+                        name                       = [90mnull[0m[0m
+                        [90m# (13 unchanged attributes hidden)[0m[0m
+                    }
+                  [33m~[0m[0m spec     = {
+                      [33m~[0m[0m containers                    = [
+                          [33m~[0m[0m {
+                              [33m~[0m[0m image                    = "laravel-reliability-app:g1" [33m->[0m[0m "laravel-reliability-app:g2"
+                                name                     = "scheduler"
+                                [90m# (23 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                      [33m~[0m[0m initContainers                = [
+                          [33m~[0m[0m {
+                              [33m~[0m[0m image                    = "laravel-reliability-app:g1" [33m->[0m[0m "laravel-reliability-app:g2"
+                                name                     = "storage-init"
+                                [90m# (23 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                        [90m# (39 unchanged attributes hidden)[0m[0m
+                    }
+                }
+                [90m# (7 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # kubernetes_manifest.lab["deployment-worker"][0m will be updated in-place
+[0m  [33m~[0m[0m resource "kubernetes_manifest" "lab" {
+      [33m~[0m[0m manifest        = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations = {
+                          [33m~[0m[0m lab-source-checksum = "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1" [33m->[0m[0m "0453fd9185f095a840ed8851936bf4679c44c61fa18c1d4725ee1e225cba0d88"
+                        }
+                        [90m# (1 unchanged attribute hidden)[0m[0m
+                    }
+                  [33m~[0m[0m spec     = {
+                      [33m~[0m[0m containers                    = [
+                          [33m~[0m[0m {
+                              [33m~[0m[0m image           = "laravel-reliability-app:g1" [33m->[0m[0m "laravel-reliability-app:g2"
+                                name            = "worker"
+                                [90m# (10 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                      [33m~[0m[0m initContainers                = [
+                          [33m~[0m[0m {
+                              [33m~[0m[0m image           = "laravel-reliability-app:g1" [33m->[0m[0m "laravel-reliability-app:g2"
+                                name            = "storage-init"
+                                [90m# (5 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                        [90m# (4 unchanged attributes hidden)[0m[0m
+                    }
+                }
+                [90m# (3 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+      [33m~[0m[0m object          = {
+          [33m~[0m[0m spec       = {
+              [33m~[0m[0m template                = {
+                  [33m~[0m[0m metadata = {
+                      [33m~[0m[0m annotations                = {
+                          [31m-[0m[0m lab-source-checksum = "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1"
+                        } -> (known after apply)
+                        name                       = [90mnull[0m[0m
+                        [90m# (13 unchanged attributes hidden)[0m[0m
+                    }
+                  [33m~[0m[0m spec     = {
+                      [33m~[0m[0m containers                    = [
+                          [33m~[0m[0m {
+                              [33m~[0m[0m image                    = "laravel-reliability-app:g1" [33m->[0m[0m "laravel-reliability-app:g2"
+                                name                     = "worker"
+                                [90m# (23 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                      [33m~[0m[0m initContainers                = [
+                          [33m~[0m[0m {
+                              [33m~[0m[0m image                    = "laravel-reliability-app:g1" [33m->[0m[0m "laravel-reliability-app:g2"
+                                name                     = "storage-init"
+                                [90m# (23 unchanged attributes hidden)[0m[0m
+                            },
+                        ]
+                        [90m# (39 unchanged attributes hidden)[0m[0m
+                    }
+                }
+                [90m# (7 unchanged attributes hidden)[0m[0m
+            }
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1mPlan:[0m [0m0 to add, 4 to change, 0 to destroy.
+[0m[1mkubernetes_manifest.lab["deployment-scheduler"]: Modifying...[0m[0m
+[0m[1mkubernetes_manifest.lab["deployment-exporter"]: Modifying...[0m[0m
+[0m[1mkubernetes_manifest.lab["deployment-scheduler"]: Modifications complete after 0s[0m
+[0m[1mkubernetes_manifest.lab["deployment-worker"]: Modifying...[0m[0m
+[0m[1mkubernetes_manifest.lab["deployment-api"]: Modifying...[0m[0m
+[0m[1mkubernetes_manifest.lab["deployment-exporter"]: Modifications complete after 0s[0m
+[0m[1mkubernetes_manifest.lab["deployment-worker"]: Modifications complete after 0s[0m
+[0m[1mkubernetes_manifest.lab["deployment-api"]: Modifications complete after 0s[0m
+[0m[1m[32m
+Apply complete! Resources: 0 added, 4 changed, 0 destroyed.[0m
+deployment "postgres" successfully rolled out
+deployment "redis" successfully rolled out
+deployment "simulator" successfully rolled out
+Waiting for deployment "api" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "api" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "api" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "api" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "api" rollout to finish: 1 old replicas are pending termination...
+deployment "api" successfully rolled out
+Waiting for deployment "worker" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "worker" rollout to finish: 1 old replicas are pending termination...
+deployment "worker" successfully rolled out
+deployment "scheduler" successfully rolled out
+deployment "exporter" successfully rolled out
+deployment "gateway" successfully rolled out
+deployment "prometheus" successfully rolled out
+deployment "alertmanager" successfully rolled out
+deployment "mailpit" successfully rolled out
+deployment "loki" successfully rolled out
+deployment "alloy" successfully rolled out
+deployment "grafana" successfully rolled out
+deployment "kube-state-metrics" successfully rolled out
+Defaulted container "api" out of: api, http, storage-init (init)
+
+   INFO  Nothing to migrate.  
+
+deployment "api" successfully rolled out
+deployment "worker" successfully rolled out
+deployment "scheduler" successfully rolled out
+deployment "exporter" successfully rolled out

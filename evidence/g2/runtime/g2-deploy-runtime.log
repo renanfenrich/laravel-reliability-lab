@@ -1,0 +1,9 @@
+NAME                                    STATUS   ROLES           AGE   VERSION
+laravel-reliability-lab-control-plane   Ready    control-plane   45h   v1.34.0
+Image: "laravel-reliability-app:g2" with ID "sha256:e84bf8a49c2fdbc5116afc5e859e637163c1333dee01b4f741d70484a8f5e644" not yet present on node "laravel-reliability-lab-control-plane", loading...
+Image: "laravel-reliability-simulator:g2" with ID "sha256:b39e21a1f976121ac7a8772ea4fa3571053393276ce1b91248344f28fa2697ba" not yet present on node "laravel-reliability-lab-control-plane", loading...
+Image: "nginx:1.30.5-alpine" with ID "sha256:0985e772fb9f729e6fa0980da05fca5d9c468e870eed43071545afa9d2e27d94" not yet present on node "laravel-reliability-lab-control-plane", loading...
+ERROR: failed to load image: command "docker exec --privileged -i laravel-reliability-lab-control-plane ctr --namespace=k8s.io images import --all-platforms --digests --snapshotter=overlayfs -" failed with error: exit status 1
+
+Command Output: ctr: content digest sha256:2e7697c6a693cad11a728901dbf02c952ad36cdfdce23cd8827ff83d5551c6eb: not found
+make: *** [Makefile:4: deploy] Error 1

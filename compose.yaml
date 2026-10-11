@@ -1,6 +1,6 @@
 name: laravel-reliability-lab
 x-app: &app
-  image: laravel-reliability-app:g1
+  image: laravel-reliability-app:g2
   env_file: .env
   environment: {DB_HOST: postgres, REDIS_HOST: redis, SIMULATOR_URL: 'http://simulator:8081'}
   init: true
@@ -24,17 +24,31 @@ services:
     volumes: [redis-data:/data]
     mem_limit: 256m
   simulator:
-    image: laravel-reliability-simulator:g1
+    image: laravel-reliability-simulator:g2
     init: true
     cap_drop: [ALL]
     security_opt: [no-new-privileges:true]
     mem_limit: 128m
   api:
     <<: *app
-    ports: ['127.0.0.1:18080:8080']
+    stop_signal: SIGQUIT
     depends_on: {postgres: {condition: service_healthy}, redis: {condition: service_started}}
-    environment: {DB_HOST: postgres, REDIS_HOST: redis, PHP_CLI_SERVER_WORKERS: 4}
+    environment: {DB_HOST: postgres, REDIS_HOST: redis}
     healthcheck: {test: ['CMD','php','artisan','lab:ready'], interval: 5s, timeout: 3s, retries: 20}
+  http:
+    image: nginx:1.30.5-alpine
+    user: '1000:1000'
+    entrypoint: ['nginx','-c','/etc/lab-nginx/nginx.conf','-g','daemon off;']
+    ports: ['127.0.0.1:18080:8080']
+    volumes: ['./runtime/nginx-compose.conf:/etc/lab-nginx/nginx.conf:ro']
+    tmpfs: ['/tmp:uid=1000,gid=1000']
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 128m
+    cpus: 0.5
+    depends_on: {api: {condition: service_healthy}}
+    healthcheck: {test: ['CMD','wget','-q','-O','/dev/null','http://127.0.0.1:8080/api/ready'], interval: 5s, timeout: 3s, retries: 20}
   worker:
     <<: *app
     command: ['php','artisan','queue:work','redis','--queue=reports','--sleep=1','--timeout=10','--tries=1']

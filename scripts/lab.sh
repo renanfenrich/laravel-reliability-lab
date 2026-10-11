@@ -14,14 +14,15 @@ case "${1:-}" in
   terraform version -json | python3 -c 'import sys,json; assert json.load(sys.stdin)["terraform_version"] == "1.16.5"'
   ;;
  build)
-  docker build -t laravel-reliability-app:g1 .
-  docker build -t laravel-reliability-simulator:g1 simulator
+  docker pull nginx:1.30.5-alpine
+  docker build -t laravel-reliability-app:g2 .
+  docker build -t laravel-reliability-simulator:g2 simulator
   ;;
  dev-up)
   python3 scripts/init-env.py
   docker compose up -d --wait postgres redis simulator
   docker compose run --rm --no-deps api php artisan migrate --force
-  docker compose up -d --wait api worker scheduler
+  docker compose up -d --wait api http worker scheduler
   ;;
  dev-down) docker compose down ;;
  test)
@@ -61,12 +62,15 @@ PY
  mail-down)
   if systemctl --user is-active --quiet laravel-reliability-lab-mail-forward.service; then systemctl --user stop laravel-reliability-lab-mail-forward.service; fi
   ;;
+ g2-backup) python3 -u scripts/g2-backup.py ;;
+ g2-runtime) python3 scripts/g2-runtime-check.py ;;
  alert-test) python3 -u scripts/alert-email-test.py ;;
  host-metrics-up) python3 scripts/host-metrics-control.py start ;;
  host-metrics-down) python3 scripts/host-metrics-control.py stop ;;
  deploy)
   test -f .kubeconfig; k get nodes
-  kind load docker-image --name "$cluster" laravel-reliability-app:g1 laravel-reliability-simulator:g1
+  kind load docker-image --name "$cluster" laravel-reliability-app:g2 laravel-reliability-simulator:g2
+  docker image save nginx:1.30.5-alpine | docker exec -i "${cluster}-control-plane" ctr --namespace=k8s.io images import --platform linux/amd64 --digests -
   python3 scripts/host-metrics-control.py start
   python3 scripts/render-infra.py
   terraform -chdir=infra init -input=false

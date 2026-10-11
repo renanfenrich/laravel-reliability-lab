@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from pathlib import Path
-import json,hashlib
+import json,hashlib,copy
 root=Path(__file__).resolve().parent.parent
 objects={}
 def source_hash(dirs,files):
@@ -8,7 +8,7 @@ def source_hash(dirs,files):
     for d in dirs:paths.extend((root/d).rglob('*.php'))
     data=b''.join(str(f.relative_to(root)).encode()+b'\0'+f.read_bytes() for f in sorted(paths) if f.is_file() and 'cache' not in f.parts)
     return hashlib.sha256(data).hexdigest()
-apphash=source_hash(['app','bootstrap','config','database','routes','public'],['Dockerfile','.dockerignore','composer.json','composer.lock','artisan'])
+apphash=source_hash(['app','bootstrap','config','database','routes','public'],['Dockerfile','.dockerignore','composer.json','composer.lock','artisan','runtime/php-fpm.conf'])
 simhash=source_hash([],['simulator/Dockerfile','simulator/server.py'])
 def add(o):
     key=o['kind'].lower()+'-'+o['metadata']['name']; objects[key]=o
@@ -32,7 +32,7 @@ def deploy(name,image,port,command=None,args=None,env=None,volumes=None,mounts=N
         c['startupProbe']={**probe,'failureThreshold':60,'periodSeconds':3,'timeoutSeconds':2}
         c['readinessProbe']={**probe,'periodSeconds':5,'timeoutSeconds':3}
         c['livenessProbe']={**probe,'periodSeconds':10,'timeoutSeconds':3,'failureThreshold':6}
-    pod={'containers':[c],'terminationGracePeriodSeconds':25,'automountServiceAccountToken':bool(sa),'securityContext':{'seccompProfile':{'type':'RuntimeDefault'}},'volumes':volumes or []}
+    pod={'containers':[c],'terminationGracePeriodSeconds':25,'automountServiceAccountToken':bool(sa),'securityContext':{'seccompProfile':{'type':'RuntimeDefault'}},'volumes':copy.deepcopy(volumes or [])}
     if not volumes:pod.pop('volumes')
     if user is not None:pod['securityContext']['fsGroup']=user
     if sa:pod['serviceAccountName']=sa
@@ -54,20 +54,34 @@ obj('PersistentVolumeClaim','postgres-data',{'accessModes':['ReadWriteOnce'],'st
 pgprobe={'exec':{'command':['pg_isready','-U','lab','-d','lab']}}
 deploy('postgres','postgres:18.0-bookworm',5432,env=[{'name':'POSTGRES_DB','value':'lab'},{'name':'POSTGRES_USER','value':'lab'},secret('POSTGRES_PASSWORD')],volumes=[{'name':'data','persistentVolumeClaim':{'claimName':'postgres-data'}}],mounts=[{'name':'data','mountPath':'/var/lib/postgresql'}],probe=pgprobe,user=None,limits={'cpu':'2','memory':'512Mi'})
 deploy('redis','redis:8.2.2-bookworm',6379,command=['sh','-c','exec redis-server --appendonly yes --requirepass "$REDIS_PASSWORD"'],env=[secret('REDIS_PASSWORD')],volumes=[{'name':'data','emptyDir':{}}],mounts=[{'name':'data','mountPath':'/data'}],probe={'exec':{'command':['sh','-c','REDISCLI_AUTH="$REDIS_PASSWORD" redis-cli ping | grep -q PONG']}},user=None,limits={'cpu':'1','memory':'256Mi'})
-deploy('simulator','laravel-reliability-simulator:g1',8081,probe={'httpGet':{'path':'/live','port':8081}},limits={'cpu':'1','memory':'128Mi'})
+deploy('simulator','laravel-reliability-simulator:g2',8081,probe={'httpGet':{'path':'/live','port':8081}},limits={'cpu':'1','memory':'128Mi'})
 appenv=[secret(n) for n in ['APP_KEY','DB_PASSWORD','REDIS_PASSWORD','LAB_TOKEN']]+[{'name':'APP_ENV','value':'local'},{'name':'LAB_FAULTS','value':'true'},{'name':'DB_HOST','value':'postgres'},{'name':'REDIS_HOST','value':'redis'},{'name':'SIMULATOR_URL','value':'http://simulator:8081'}]
 vols=[{'name':n,'emptyDir':{}} for n in ['storage','cache','tmp']]
 mounts=[{'name':'storage','mountPath':'/app/storage'},{'name':'cache','mountPath':'/app/bootstrap/cache'},{'name':'tmp','mountPath':'/tmp'}]
 # Mounting empty storage requires framework directories before application boot.
-init=[{'name':'storage-init','image':'laravel-reliability-app:g1','imagePullPolicy':'IfNotPresent','resources':{'requests':{'cpu':'25m','memory':'16Mi'},'limits':{'cpu':'100m','memory':'64Mi'}},'command':['sh','-c','mkdir -p /app/storage/framework/cache /app/storage/framework/views /app/storage/framework/sessions /app/storage/logs'],'volumeMounts':mounts,'securityContext':{'runAsUser':1000,'runAsNonRoot':True,'allowPrivilegeEscalation':False,'capabilities':{'drop':['ALL']}}}]
+init=[{'name':'storage-init','image':'laravel-reliability-app:g2','imagePullPolicy':'IfNotPresent','resources':{'requests':{'cpu':'25m','memory':'16Mi'},'limits':{'cpu':'100m','memory':'64Mi'}},'command':['sh','-c','mkdir -p /app/storage/framework/cache /app/storage/framework/views /app/storage/framework/sessions /app/storage/logs'],'volumeMounts':mounts,'securityContext':{'runAsUser':1000,'runAsNonRoot':True,'allowPrivilegeEscalation':False,'capabilities':{'drop':['ALL']}}}]
 for name in ['api','worker','scheduler','exporter']:
-    cmd=['php','-S','0.0.0.0:8080','-t','public','public/index.php'] if name in ['api','exporter'] else ['php','artisan']+(['queue:work','redis','--queue=reports','--sleep=1','--timeout=10','--tries=1'] if name=='worker' else ['schedule:work'])
+    cmd=['php-fpm','--nodaemonize'] if name in ['api','exporter'] else ['php','artisan']+(['queue:work','redis','--queue=reports','--sleep=1','--timeout=10','--tries=1'] if name=='worker' else ['schedule:work'])
     env=appenv+[{'name':'LAB_ROLE','value':name}]
-    if name=='api':env+=[{'name':'PHP_CLI_SERVER_WORKERS','value':'4'}]
     probe={'httpGet':{'path':'/api/ready','port':8080}} if name in ['api','exporter'] else {'exec':{'command':['php','artisan','lab:ready']}}
-    deploy(name,'laravel-reliability-app:g1',8080,command=cmd,env=env,volumes=vols,mounts=mounts,replicas=2 if name in ['api','worker'] else 1,probe=probe,init=init)
+    deploy(name,'laravel-reliability-app:g2',8080,command=cmd,env=env,volumes=vols,mounts=mounts,replicas=2 if name in ['api','worker'] else 1,probe=probe,init=init)
     c=objects['deployment-'+name]['spec']['template']['spec']['containers'][0]
     c['livenessProbe']={'httpGet':{'path':'/api/live','port':8080},'periodSeconds':10,'failureThreshold':3} if name in ['api','exporter'] else {'exec':{'command':['php','-r',"exit(str_contains(file_get_contents('/proc/1/cmdline'), 'artisan') ? 0 : 1);"]},'periodSeconds':10,'failureThreshold':3}
+
+# NGINX sidecars expose HTTP; FPM stays internal to each pod.
+config('nginx-api',{'nginx.conf':(root/'runtime/nginx-api.conf').read_text()})
+for name in ['api','exporter']:
+    pod=objects['deployment-'+name]['spec']['template']['spec']
+    pod['containers'][0]['ports']=[{'containerPort':9000,'name':'fastcgi'}]
+    pod['containers'][0]['lifecycle']={'preStop':{'exec':{'command':['sh','-c','sleep 3; kill -QUIT 1']}}}
+    v,m=configvol('nginx-api','/etc/lab-nginx');pod['volumes'].append(v)
+    sidecar={'name':'http','image':'nginx:1.30.5-alpine','imagePullPolicy':'IfNotPresent','command':['nginx','-c','/etc/lab-nginx/nginx.conf','-g','daemon off;'],'ports':[{'containerPort':8080,'name':'http'}],'resources':{'requests':{'cpu':'50m','memory':'32Mi'},'limits':{'cpu':'500m','memory':'128Mi'}},'securityContext':{'runAsUser':1000,'runAsNonRoot':True,'allowPrivilegeEscalation':False,'readOnlyRootFilesystem':True,'capabilities':{'drop':['ALL']}},'volumeMounts':[m,{'name':'tmp','mountPath':'/tmp'}],'lifecycle':{'preStop':{'exec':{'command':['sh','-c','sleep 3; nginx -c /etc/lab-nginx/nginx.conf -s quit']}}}}
+    for probe in ['startupProbe','readinessProbe','livenessProbe']:sidecar[probe]=pod['containers'][0][probe].copy()
+    pod['containers'].append(sidecar)
+config('nginx-gateway',{'nginx.conf':(root/'runtime/nginx-gateway.conf').read_text()})
+v,m=configvol('nginx-gateway','/etc/lab-nginx')
+deploy('gateway','nginx:1.30.5-alpine',8080,command=['nginx','-c','/etc/lab-nginx/nginx.conf','-g','daemon off;'],volumes=[v,{'name':'tmp','emptyDir':{}}],mounts=[m,{'name':'tmp','mountPath':'/tmp'}],probe={'httpGet':{'path':'/api/ready','port':8080}},limits={'cpu':'1','memory':'128Mi'})
+objects['deployment-gateway']['spec']['template']['spec']['containers'][0]['livenessProbe']={'httpGet':{'path':'/gateway/live','port':8080},'periodSeconds':10,'failureThreshold':3}
 
 if (root/'observability/prometheus.yml').exists():
     config('prometheus',{'prometheus.yml':(root/'observability/prometheus.yml').read_text(),'rules.yml':(root/'observability/rules.yml').read_text()})

@@ -399,7 +399,7 @@
           "containers": [
             {
               "name": "simulator",
-              "image": "laravel-reliability-simulator:g1",
+              "image": "laravel-reliability-simulator:g2",
               "imagePullPolicy": "IfNotPresent",
               "ports": [
                 {
@@ -511,19 +511,20 @@
             "app": "api"
           },
           "annotations": {
-            "lab-source-checksum": "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1"
+            "lab-source-checksum": "0453fd9185f095a840ed8851936bf4679c44c61fa18c1d4725ee1e225cba0d88",
+            "lab-config-checksum": "380e68cd68514c9fd1b76413c42022469a1b3de3f860f498db823b75d8f7f30b"
           }
         },
         "spec": {
           "containers": [
             {
               "name": "api",
-              "image": "laravel-reliability-app:g1",
+              "image": "laravel-reliability-app:g2",
               "imagePullPolicy": "IfNotPresent",
               "ports": [
                 {
-                  "containerPort": 8080,
-                  "name": "http"
+                  "containerPort": 9000,
+                  "name": "fastcgi"
                 }
               ],
               "resources": {
@@ -548,12 +549,8 @@
                 "runAsNonRoot": true
               },
               "command": [
-                "php",
-                "-S",
-                "0.0.0.0:8080",
-                "-t",
-                "public",
-                "public/index.php"
+                "php-fpm",
+                "--nodaemonize"
               ],
               "env": [
                 {
@@ -615,10 +612,6 @@
                 {
                   "name": "LAB_ROLE",
                   "value": "api"
-                },
-                {
-                  "name": "PHP_CLI_SERVER_WORKERS",
-                  "value": "4"
                 }
               ],
               "volumeMounts": [
@@ -635,6 +628,103 @@
                   "mountPath": "/tmp"
                 }
               ],
+              "startupProbe": {
+                "httpGet": {
+                  "path": "/api/ready",
+                  "port": 8080
+                },
+                "failureThreshold": 60,
+                "periodSeconds": 3,
+                "timeoutSeconds": 2
+              },
+              "readinessProbe": {
+                "httpGet": {
+                  "path": "/api/ready",
+                  "port": 8080
+                },
+                "periodSeconds": 5,
+                "timeoutSeconds": 3
+              },
+              "livenessProbe": {
+                "httpGet": {
+                  "path": "/api/live",
+                  "port": 8080
+                },
+                "periodSeconds": 10,
+                "failureThreshold": 3
+              },
+              "lifecycle": {
+                "preStop": {
+                  "exec": {
+                    "command": [
+                      "sh",
+                      "-c",
+                      "sleep 3; kill -QUIT 1"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "name": "http",
+              "image": "nginx:1.30.5-alpine",
+              "imagePullPolicy": "IfNotPresent",
+              "command": [
+                "nginx",
+                "-c",
+                "/etc/lab-nginx/nginx.conf",
+                "-g",
+                "daemon off;"
+              ],
+              "ports": [
+                {
+                  "containerPort": 8080,
+                  "name": "http"
+                }
+              ],
+              "resources": {
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "32Mi"
+                },
+                "limits": {
+                  "cpu": "500m",
+                  "memory": "128Mi"
+                }
+              },
+              "securityContext": {
+                "runAsUser": 1000,
+                "runAsNonRoot": true,
+                "allowPrivilegeEscalation": false,
+                "readOnlyRootFilesystem": true,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                }
+              },
+              "volumeMounts": [
+                {
+                  "name": "nginx-api",
+                  "mountPath": "/etc/lab-nginx",
+                  "readOnly": true
+                },
+                {
+                  "name": "tmp",
+                  "mountPath": "/tmp"
+                }
+              ],
+              "lifecycle": {
+                "preStop": {
+                  "exec": {
+                    "command": [
+                      "sh",
+                      "-c",
+                      "sleep 3; nginx -c /etc/lab-nginx/nginx.conf -s quit"
+                    ]
+                  }
+                }
+              },
               "startupProbe": {
                 "httpGet": {
                   "path": "/api/ready",
@@ -682,12 +772,18 @@
             {
               "name": "tmp",
               "emptyDir": {}
+            },
+            {
+              "name": "nginx-api",
+              "configMap": {
+                "name": "nginx-api"
+              }
             }
           ],
           "initContainers": [
             {
               "name": "storage-init",
-              "image": "laravel-reliability-app:g1",
+              "image": "laravel-reliability-app:g2",
               "imagePullPolicy": "IfNotPresent",
               "resources": {
                 "requests": {
@@ -777,14 +873,14 @@
             "app": "worker"
           },
           "annotations": {
-            "lab-source-checksum": "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1"
+            "lab-source-checksum": "0453fd9185f095a840ed8851936bf4679c44c61fa18c1d4725ee1e225cba0d88"
           }
         },
         "spec": {
           "containers": [
             {
               "name": "worker",
-              "image": "laravel-reliability-app:g1",
+              "image": "laravel-reliability-app:g2",
               "imagePullPolicy": "IfNotPresent",
               "ports": [
                 {
@@ -960,7 +1056,7 @@
           "initContainers": [
             {
               "name": "storage-init",
-              "image": "laravel-reliability-app:g1",
+              "image": "laravel-reliability-app:g2",
               "imagePullPolicy": "IfNotPresent",
               "resources": {
                 "requests": {
@@ -1050,14 +1146,14 @@
             "app": "scheduler"
           },
           "annotations": {
-            "lab-source-checksum": "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1"
+            "lab-source-checksum": "0453fd9185f095a840ed8851936bf4679c44c61fa18c1d4725ee1e225cba0d88"
           }
         },
         "spec": {
           "containers": [
             {
               "name": "scheduler",
-              "image": "laravel-reliability-app:g1",
+              "image": "laravel-reliability-app:g2",
               "imagePullPolicy": "IfNotPresent",
               "ports": [
                 {
@@ -1228,7 +1324,7 @@
           "initContainers": [
             {
               "name": "storage-init",
-              "image": "laravel-reliability-app:g1",
+              "image": "laravel-reliability-app:g2",
               "imagePullPolicy": "IfNotPresent",
               "resources": {
                 "requests": {
@@ -1318,19 +1414,20 @@
             "app": "exporter"
           },
           "annotations": {
-            "lab-source-checksum": "540e6fe31c0707e06c049730ed40a0e3cb2f74419e60349adad89a3c4d763ba1"
+            "lab-source-checksum": "0453fd9185f095a840ed8851936bf4679c44c61fa18c1d4725ee1e225cba0d88",
+            "lab-config-checksum": "380e68cd68514c9fd1b76413c42022469a1b3de3f860f498db823b75d8f7f30b"
           }
         },
         "spec": {
           "containers": [
             {
               "name": "exporter",
-              "image": "laravel-reliability-app:g1",
+              "image": "laravel-reliability-app:g2",
               "imagePullPolicy": "IfNotPresent",
               "ports": [
                 {
-                  "containerPort": 8080,
-                  "name": "http"
+                  "containerPort": 9000,
+                  "name": "fastcgi"
                 }
               ],
               "resources": {
@@ -1355,12 +1452,8 @@
                 "runAsNonRoot": true
               },
               "command": [
-                "php",
-                "-S",
-                "0.0.0.0:8080",
-                "-t",
-                "public",
-                "public/index.php"
+                "php-fpm",
+                "--nodaemonize"
               ],
               "env": [
                 {
@@ -1462,6 +1555,103 @@
                 },
                 "periodSeconds": 10,
                 "failureThreshold": 3
+              },
+              "lifecycle": {
+                "preStop": {
+                  "exec": {
+                    "command": [
+                      "sh",
+                      "-c",
+                      "sleep 3; kill -QUIT 1"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "name": "http",
+              "image": "nginx:1.30.5-alpine",
+              "imagePullPolicy": "IfNotPresent",
+              "command": [
+                "nginx",
+                "-c",
+                "/etc/lab-nginx/nginx.conf",
+                "-g",
+                "daemon off;"
+              ],
+              "ports": [
+                {
+                  "containerPort": 8080,
+                  "name": "http"
+                }
+              ],
+              "resources": {
+                "requests": {
+                  "cpu": "50m",
+                  "memory": "32Mi"
+                },
+                "limits": {
+                  "cpu": "500m",
+                  "memory": "128Mi"
+                }
+              },
+              "securityContext": {
+                "runAsUser": 1000,
+                "runAsNonRoot": true,
+                "allowPrivilegeEscalation": false,
+                "readOnlyRootFilesystem": true,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                }
+              },
+              "volumeMounts": [
+                {
+                  "name": "nginx-api",
+                  "mountPath": "/etc/lab-nginx",
+                  "readOnly": true
+                },
+                {
+                  "name": "tmp",
+                  "mountPath": "/tmp"
+                }
+              ],
+              "lifecycle": {
+                "preStop": {
+                  "exec": {
+                    "command": [
+                      "sh",
+                      "-c",
+                      "sleep 3; nginx -c /etc/lab-nginx/nginx.conf -s quit"
+                    ]
+                  }
+                }
+              },
+              "startupProbe": {
+                "httpGet": {
+                  "path": "/api/ready",
+                  "port": 8080
+                },
+                "failureThreshold": 60,
+                "periodSeconds": 3,
+                "timeoutSeconds": 2
+              },
+              "readinessProbe": {
+                "httpGet": {
+                  "path": "/api/ready",
+                  "port": 8080
+                },
+                "periodSeconds": 5,
+                "timeoutSeconds": 3
+              },
+              "livenessProbe": {
+                "httpGet": {
+                  "path": "/api/live",
+                  "port": 8080
+                },
+                "periodSeconds": 10,
+                "failureThreshold": 3
               }
             }
           ],
@@ -1485,12 +1675,18 @@
             {
               "name": "tmp",
               "emptyDir": {}
+            },
+            {
+              "name": "nginx-api",
+              "configMap": {
+                "name": "nginx-api"
+              }
             }
           ],
           "initContainers": [
             {
               "name": "storage-init",
-              "image": "laravel-reliability-app:g1",
+              "image": "laravel-reliability-app:g2",
               "imagePullPolicy": "IfNotPresent",
               "resources": {
                 "requests": {
@@ -1547,6 +1743,176 @@
     "spec": {
       "selector": {
         "app": "exporter"
+      },
+      "ports": [
+        {
+          "port": 8080,
+          "targetPort": 8080,
+          "name": "http"
+        }
+      ]
+    }
+  },
+  "configmap-nginx-api": {
+    "apiVersion": "v1",
+    "kind": "ConfigMap",
+    "metadata": {
+      "name": "nginx-api",
+      "namespace": "lab"
+    },
+    "data": {
+      "nginx.conf": "worker_processes 1;\npid /tmp/nginx.pid;\nerror_log /dev/stderr warn;\nevents { worker_connections 1024; }\nhttp {\n  client_body_temp_path /tmp/client;\n  proxy_temp_path /tmp/proxy;\n  uwsgi_temp_path /tmp/uwsgi;\n  scgi_temp_path /tmp/scgi;\n  fastcgi_temp_path /tmp/fastcgi;\n  log_format lab escape=json '{\"event\":\"http.edge\",\"pod\":\"$hostname\",\"request_id\":\"$sent_http_x_request_id\",\"status\":$status,\"seconds\":$request_time,\"upstream_seconds\":\"$upstream_response_time\",\"traffic\":\"$http_x_lab_traffic\"}';\n  access_log /dev/stdout lab;\n  server {\n    listen 8080;\n    client_max_body_size 8k;\n    client_body_timeout 10s;\n    add_header X-Lab-API-Pod $hostname always;\n    location / {\n      include /etc/nginx/fastcgi_params;\n      fastcgi_param SCRIPT_FILENAME /app/public/index.php;\n      fastcgi_param DOCUMENT_ROOT /app/public;\n      fastcgi_param HTTP_AUTHORIZATION $http_authorization;\n      fastcgi_pass 127.0.0.1:9000;\n      fastcgi_connect_timeout 2s;\n      fastcgi_read_timeout 20s;\n      fastcgi_next_upstream off;\n    }\n  }\n}\n"
+    }
+  },
+  "configmap-nginx-gateway": {
+    "apiVersion": "v1",
+    "kind": "ConfigMap",
+    "metadata": {
+      "name": "nginx-gateway",
+      "namespace": "lab"
+    },
+    "data": {
+      "nginx.conf": "worker_processes 1;\npid /tmp/nginx.pid;\nerror_log /dev/stderr warn;\nevents { worker_connections 2048; }\nhttp {\n  client_body_temp_path /tmp/client;\n  proxy_temp_path /tmp/proxy;\n  uwsgi_temp_path /tmp/uwsgi;\n  scgi_temp_path /tmp/scgi;\n  fastcgi_temp_path /tmp/fastcgi;\n  log_format lab escape=json '{\"event\":\"http.gateway\",\"request_id\":\"$sent_http_x_request_id\",\"api_pod\":\"$upstream_http_x_lab_api_pod\",\"status\":$status,\"seconds\":$request_time,\"traffic\":\"$http_x_lab_traffic\"}';\n  access_log /dev/stdout lab;\n  server {\n    listen 8080;\n    client_max_body_size 8k;\n    client_body_timeout 10s;\n    location = /gateway/live { access_log off; return 200 'alive'; }\n    location / {\n      proxy_pass http://api:8080;\n      proxy_http_version 1.1;\n      proxy_set_header Connection close;\n      proxy_set_header Host $host;\n      proxy_connect_timeout 2s;\n      proxy_read_timeout 25s;\n      proxy_next_upstream off;\n    }\n  }\n}\n"
+    }
+  },
+  "deployment-gateway": {
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "gateway",
+      "namespace": "lab"
+    },
+    "spec": {
+      "replicas": 1,
+      "strategy": {
+        "type": "RollingUpdate"
+      },
+      "selector": {
+        "matchLabels": {
+          "app": "gateway"
+        }
+      },
+      "template": {
+        "metadata": {
+          "labels": {
+            "app": "gateway"
+          },
+          "annotations": {
+            "lab-config-checksum": "9b862047759a8eac01f8381aed40ebd8cfcf166fb8153c7082790aea9136b079"
+          }
+        },
+        "spec": {
+          "containers": [
+            {
+              "name": "gateway",
+              "image": "nginx:1.30.5-alpine",
+              "imagePullPolicy": "IfNotPresent",
+              "ports": [
+                {
+                  "containerPort": 8080,
+                  "name": "http"
+                }
+              ],
+              "resources": {
+                "requests": {
+                  "cpu": "100m",
+                  "memory": "128Mi"
+                },
+                "limits": {
+                  "cpu": "1",
+                  "memory": "128Mi"
+                }
+              },
+              "securityContext": {
+                "allowPrivilegeEscalation": false,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ]
+                },
+                "readOnlyRootFilesystem": true,
+                "runAsUser": 1000,
+                "runAsNonRoot": true
+              },
+              "command": [
+                "nginx",
+                "-c",
+                "/etc/lab-nginx/nginx.conf",
+                "-g",
+                "daemon off;"
+              ],
+              "volumeMounts": [
+                {
+                  "name": "nginx-gateway",
+                  "mountPath": "/etc/lab-nginx",
+                  "readOnly": true
+                },
+                {
+                  "name": "tmp",
+                  "mountPath": "/tmp"
+                }
+              ],
+              "startupProbe": {
+                "httpGet": {
+                  "path": "/api/ready",
+                  "port": 8080
+                },
+                "failureThreshold": 60,
+                "periodSeconds": 3,
+                "timeoutSeconds": 2
+              },
+              "readinessProbe": {
+                "httpGet": {
+                  "path": "/api/ready",
+                  "port": 8080
+                },
+                "periodSeconds": 5,
+                "timeoutSeconds": 3
+              },
+              "livenessProbe": {
+                "httpGet": {
+                  "path": "/gateway/live",
+                  "port": 8080
+                },
+                "periodSeconds": 10,
+                "failureThreshold": 3
+              }
+            }
+          ],
+          "terminationGracePeriodSeconds": 25,
+          "automountServiceAccountToken": false,
+          "securityContext": {
+            "seccompProfile": {
+              "type": "RuntimeDefault"
+            },
+            "fsGroup": 1000
+          },
+          "volumes": [
+            {
+              "name": "nginx-gateway",
+              "configMap": {
+                "name": "nginx-gateway"
+              }
+            },
+            {
+              "name": "tmp",
+              "emptyDir": {}
+            }
+          ]
+        }
+      }
+    }
+  },
+  "service-gateway": {
+    "apiVersion": "v1",
+    "kind": "Service",
+    "metadata": {
+      "name": "gateway",
+      "namespace": "lab"
+    },
+    "spec": {
+      "selector": {
+        "app": "gateway"
       },
       "ports": [
         {

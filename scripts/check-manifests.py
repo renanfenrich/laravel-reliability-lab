@@ -4,6 +4,8 @@ p=Path('infra/manifests.json'); before=p.read_text(); subprocess.run(['python3',
 objects=json.loads(before)
 for o in objects.values():
  if o['kind']=='Deployment':
+  volumes=o['spec']['template']['spec'].get('volumes',[])
+  assert len({v['name'] for v in volumes})==len(volumes),o['metadata']['name']
   for c in o['spec']['template']['spec']['containers']+o['spec']['template']['spec'].get('initContainers',[]):
    assert ':' in c['image'] and not c['image'].endswith(':latest')
    assert c['resources']['requests'] and c['resources']['limits']
