@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "/home/renanfenrich/Code/laravel-reliability-lab/scripts/observability-check.py", line 40, in <module>
+    result=grafana('/api/ds/query',{'from':str(int((time.time()-3600)*1000)),'to':str(int(time.time()*1000)),'queries':[query]})['results'][target['refId']]
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/renanfenrich/Code/laravel-reliability-lab/scripts/observability-check.py", line 30, in grafana
+    with urllib.request.urlopen(req,timeout=20) as r:return json.loads(r.read())
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/Cellar/python@3.14/3.14.8_1/lib/python3.14/urllib/request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/Cellar/python@3.14/3.14.8_1/lib/python3.14/urllib/request.py", line 493, in open
+    response = meth(req, response)
+  File "/home/linuxbrew/.linuxbrew/Cellar/python@3.14/3.14.8_1/lib/python3.14/urllib/request.py", line 602, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "/home/linuxbrew/.linuxbrew/Cellar/python@3.14/3.14.8_1/lib/python3.14/urllib/request.py", line 531, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/linuxbrew/.linuxbrew/Cellar/python@3.14/3.14.8_1/lib/python3.14/urllib/request.py", line 464, in _call_chain
+    result = func(*args)
+  File "/home/linuxbrew/.linuxbrew/Cellar/python@3.14/3.14.8_1/lib/python3.14/urllib/request.py", line 611, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 400: Bad Request
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/renanfenrich/Code/laravel-reliability-lab/scripts/observability-check.py", line 42, in <module>
+    raise AssertionError((panel['title'],error.code,error.read().decode())) from error
+AssertionError: ('Rede física — erros e descartes/s', 400, '{"results":{"A":{"error":"execution: vector cannot contain metrics with the same labelset","errorSource":"downstream","status":422,"frames":[{"schema":{"refId":"A","meta":{"typeVersion":[0,0],"custom":{"calculatedMinStep":15000},"executedQueryString":"Expr: rate({__name__=~\\"lab_host_network_.*(errors|drops)_total\\"}[1m])\\nStep: 15s"},"fields":[]},"data":{"values":[]}}]}}}\n')

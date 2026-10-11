@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/renanfenrich/Code/laravel-reliability-lab/scripts/observability-check.py", line 6, in <module>
+    active=targets['data']['activeTargets']; assert len(active)>=4 and all(t['health']=='up' for t in active),[(t['labels'],t['health'],t.get('lastError')) for t in active]
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [({'instance': 'kube-state-metrics:8080', 'job': 'kube-state-metrics'}, 'up', ''), ({'instance': 'laravel-reliability-lab-control-plane', 'job': 'kubelet-cadvisor', 'node': 'laravel-reliability-lab-control-plane'}, 'up', ''), ({'instance': 'exporter:8080', 'job': 'lab-exporter'}, 'up', ''), ({'instance': 'lab-host-metrics:19100', 'job': 'lab-host-docker'}, 'down', 'Get "http://lab-host-metrics:19100/metrics": EOF'), ({'instance': 'localhost:9090', 'job': 'prometheus'}, 'up', '')]

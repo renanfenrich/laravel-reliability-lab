@@ -1,0 +1,7 @@
+{
+  "start": "2026-10-11T17:56:20Z",
+  "commit": "a6a19af342e5efe1fdd13800e828ccb092961d68",
+  "command": "python3 scripts/experiments.py load (save redirected to isolated run directory)",
+  "directory": "evidence/load-20261011T175620Z",
+  "script_sha256": "3ea8009a9995cf635044a7369086d7be9052ca7d21f02aa10c3659f1cb036b82"
+}
