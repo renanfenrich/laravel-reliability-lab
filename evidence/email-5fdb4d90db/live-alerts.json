@@ -1,0 +1,3929 @@
+{
+  "events": [
+    {
+      "timestamp": "2026-10-11T18:21:30Z",
+      "alerts": []
+    },
+    {
+      "timestamp": "2026-10-11T18:21:33Z",
+      "alerts": []
+    },
+    {
+      "timestamp": "2026-10-11T18:21:36Z",
+      "alerts": []
+    },
+    {
+      "timestamp": "2026-10-11T18:21:39Z",
+      "alerts": []
+    },
+    {
+      "timestamp": "2026-10-11T18:21:42Z",
+      "alerts": []
+    },
+    {
+      "timestamp": "2026-10-11T18:21:45Z",
+      "alerts": []
+    },
+    {
+      "timestamp": "2026-10-11T18:21:48Z",
+      "alerts": []
+    },
+    {
+      "timestamp": "2026-10-11T18:21:51Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:21:54Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:21:57Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:00Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:03Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:06Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:09Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:12Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:15Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:18Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:21Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:24Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:27Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:30Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:33Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:36Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "4.041700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:39Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "4.041700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:42Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "4.041700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:45Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "4.041700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:48Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "4.041700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:51Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "5.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:51Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "5.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:54Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "5.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:54Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "5.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:57Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "5.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:22:57Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "5.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:00Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "5.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:00Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "5.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:03Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "5.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:03Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "5.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:06Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "7.041700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:06Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "7.041700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:10Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "7.041700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:10Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "7.041700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:13Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "7.041700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:13Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "7.041700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:16Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "7.041700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:16Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "7.041700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:19Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "7.041700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:19Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "7.041700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:22Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "8.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:22Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "8.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:25Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "8.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:25Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "8.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:28Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "8.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:28Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "8.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:31Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "8.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:31Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "8.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:34Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "8.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:34Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "pending",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "8.541700005531311e+01"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:37Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1.0041700005531311e+02"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:37Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1.0041700005531311e+02"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:37Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1.0041700005531311e+02"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:44Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1.0041700005531311e+02"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:47Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1.0041700005531311e+02"
+        },
+        {
+          "labels": {
+            "alertname": "InfrastructureTelemetryUnavailable",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "InfrastructureTelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:21:50.417974236Z",
+          "value": "0e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:50Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1.1541700005531311e+02"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:53Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1.1541700005531311e+02"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:56Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1.1541700005531311e+02"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:23:59Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1.1541700005531311e+02"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:02Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        },
+        {
+          "labels": {
+            "alertname": "TelemetryUnavailable",
+            "routing": "local-email",
+            "severity": "warning"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/telemetry.md",
+            "summary": "TelemetryUnavailable"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1.1541700005531311e+02"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:05Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:08Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:11Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:14Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:17Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:20Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:23Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:26Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:29Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:32Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:35Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:38Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:41Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:44Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:47Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:50Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:53Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:56Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:24:59Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:25:02Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:25:05Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:25:08Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:25:11Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:25:14Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:25:17Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:25:20Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:25:23Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:25:26Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:25:29Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:25:32Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:25:35Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:25:38Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:25:41Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:25:44Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:25:48Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:25:51Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:25:54Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:25:57Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:00Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:03Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:06Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:09Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:12Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:15Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:18Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:21Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:24Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:27Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:30Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:33Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:36Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:39Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:42Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:45Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:48Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:51Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:54Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:26:57Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:27:00Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:27:03Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:27:06Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:27:09Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:27:12Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:27:15Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:27:18Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:27:21Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:27:24Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:27:27Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:27:30Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:27:33Z",
+      "alerts": [
+        {
+          "labels": {
+            "alertname": "LabDemoProcessingMiss",
+            "mode": "accelerated-demonstration",
+            "routing": "local-email",
+            "severity": "info"
+          },
+          "annotations": {
+            "runbook": "docs/runbooks/slow-processing.md",
+            "summary": "LabDemoProcessingMiss"
+          },
+          "state": "firing",
+          "activeAt": "2026-10-11T18:22:35.417974236Z",
+          "value": "1e+00"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-10-11T18:27:36Z",
+      "alerts": []
+    }
+  ],
+  "report_id": "7b0e6a8c-6ad7-46e9-a8b3-535cb1ff3a74",
+  "firing_and_resolved_email_received": [
+    "LabDemoProcessingMiss",
+    "TelemetryUnavailable",
+    "InfrastructureTelemetryUnavailable"
+  ],
+  "end": "2026-10-11T18:27:36Z",
+  "result": "PASS"
+}

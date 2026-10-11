@@ -1,0 +1,181 @@
+{
+  "timestamp": "2026-10-11T18:28:12.448361+00:00",
+  "pods": [
+    {
+      "pod": "alertmanager-9bd94ccc7-kvhc2",
+      "containers": [
+        {
+          "image": "docker.io/prom/alertmanager:v0.34.1",
+          "imageID": "docker.io/prom/alertmanager@sha256:e9733bafb1bdef9b00e25a21f8f99dc26a22224bf16641ad754d1649f4c3357a",
+          "ready": true,
+          "restarts": 0
+        }
+      ]
+    },
+    {
+      "pod": "alloy-5d58dddd74-9sdm2",
+      "containers": [
+        {
+          "image": "docker.io/grafana/alloy:v1.20.1",
+          "imageID": "docker.io/grafana/alloy@sha256:2aa2099af76c0098d4af7a4d6e48f86cb66dc1a000222ad927a1c67c6542d13f",
+          "ready": true,
+          "restarts": 0
+        }
+      ]
+    },
+    {
+      "pod": "api-65676f8647-5d22l",
+      "containers": [
+        {
+          "image": "docker.io/library/laravel-reliability-app:g1",
+          "imageID": "sha256:608a3295cb3927272f9dbe33ced39577a0275c914d728d868f593ee59dd0db2d",
+          "ready": true,
+          "restarts": 1
+        }
+      ]
+    },
+    {
+      "pod": "api-65676f8647-s5lkg",
+      "containers": [
+        {
+          "image": "docker.io/library/laravel-reliability-app:g1",
+          "imageID": "sha256:608a3295cb3927272f9dbe33ced39577a0275c914d728d868f593ee59dd0db2d",
+          "ready": true,
+          "restarts": 0
+        }
+      ]
+    },
+    {
+      "pod": "exporter-655c7f7fb8-vp8fb",
+      "containers": [
+        {
+          "image": "docker.io/library/laravel-reliability-app:g1",
+          "imageID": "sha256:608a3295cb3927272f9dbe33ced39577a0275c914d728d868f593ee59dd0db2d",
+          "ready": true,
+          "restarts": 0
+        }
+      ]
+    },
+    {
+      "pod": "grafana-56f7f947bb-578w5",
+      "containers": [
+        {
+          "image": "docker.io/grafana/grafana:13.2.3",
+          "imageID": "docker.io/grafana/grafana@sha256:b28bae15e219c998fb0e0424ed724930cc61b1f61fb404d47c862f9a23f9e572",
+          "ready": true,
+          "restarts": 0
+        }
+      ]
+    },
+    {
+      "pod": "kube-state-metrics-7f6f6875d7-4b6vp",
+      "containers": [
+        {
+          "image": "registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.20.0",
+          "imageID": "registry.k8s.io/kube-state-metrics/kube-state-metrics@sha256:42cfe3723a5f058171c627537fb57a3ea0f26e4380fa18555a95cb1a1b4cfc5b",
+          "ready": true,
+          "restarts": 0
+        }
+      ]
+    },
+    {
+      "pod": "loki-7d54b54ffb-gmtg6",
+      "containers": [
+        {
+          "image": "docker.io/grafana/loki:3.7.8",
+          "imageID": "docker.io/grafana/loki@sha256:1107dd5274e0ada47e42472b7a7e71f3b2a2fe878878108f3e2f9e51528f0193",
+          "ready": true,
+          "restarts": 0
+        }
+      ]
+    },
+    {
+      "pod": "mailpit-56d5545868-dzg9s",
+      "containers": [
+        {
+          "image": "docker.io/axllent/mailpit:v1.31.5",
+          "imageID": "docker.io/axllent/mailpit@sha256:94f6b70c1436defae6799d9ac7ff0eeff9540465b842026d5cdb018f1c0234ea",
+          "ready": true,
+          "restarts": 0
+        }
+      ]
+    },
+    {
+      "pod": "postgres-5f7965d6c4-vx5h4",
+      "containers": [
+        {
+          "image": "docker.io/library/postgres:18.0-bookworm",
+          "imageID": "docker.io/library/postgres@sha256:3f55f8895c4ed50603e2fbdfc72fffeeaba3173321fee5cb825bbbeb30d9d854",
+          "ready": true,
+          "restarts": 0
+        }
+      ]
+    },
+    {
+      "pod": "prometheus-7f49d9967c-cmrpk",
+      "containers": [
+        {
+          "image": "docker.io/prom/prometheus:v3.15.0",
+          "imageID": "docker.io/prom/prometheus@sha256:efd719c99d83b060d9daefdcf00360461adf279f45ef5391f8d111892118753e",
+          "ready": true,
+          "restarts": 0
+        }
+      ]
+    },
+    {
+      "pod": "redis-587dcb4467-2vrwb",
+      "containers": [
+        {
+          "image": "docker.io/library/redis:8.2.2-bookworm",
+          "imageID": "docker.io/library/redis@sha256:4521b581dbddea6e7d81f8fe95ede93f5648aaa66a9dacd581611bf6fe7527bd",
+          "ready": true,
+          "restarts": 0
+        }
+      ]
+    },
+    {
+      "pod": "scheduler-568654b5f7-pqvzz",
+      "containers": [
+        {
+          "image": "docker.io/library/laravel-reliability-app:g1",
+          "imageID": "sha256:608a3295cb3927272f9dbe33ced39577a0275c914d728d868f593ee59dd0db2d",
+          "ready": true,
+          "restarts": 0
+        }
+      ]
+    },
+    {
+      "pod": "simulator-7b7ddd6f6f-fz84k",
+      "containers": [
+        {
+          "image": "docker.io/library/laravel-reliability-simulator:g1",
+          "imageID": "sha256:27227dbe753c9722c6f6a133b2112f4a9d6e5f9b6bdb6db78240a0fb7da53489",
+          "ready": true,
+          "restarts": 0
+        }
+      ]
+    },
+    {
+      "pod": "worker-65b8959dbc-q4r7x",
+      "containers": [
+        {
+          "image": "docker.io/library/laravel-reliability-app:g1",
+          "imageID": "sha256:608a3295cb3927272f9dbe33ced39577a0275c914d728d868f593ee59dd0db2d",
+          "ready": true,
+          "restarts": 0
+        }
+      ]
+    },
+    {
+      "pod": "worker-65b8959dbc-qbvbf",
+      "containers": [
+        {
+          "image": "docker.io/library/laravel-reliability-app:g1",
+          "imageID": "sha256:608a3295cb3927272f9dbe33ced39577a0275c914d728d868f593ee59dd0db2d",
+          "ready": true,
+          "restarts": 0
+        }
+      ]
+    }
+  ]
+}

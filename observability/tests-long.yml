@@ -147,6 +147,16 @@
           "eval_time": "30d",
           "alertname": "SLOBurnApiAvailability3d",
           "exp_alerts": []
+        },
+        {
+          "eval_time": "30d",
+          "alertname": "SLOBurnApiLatency3d",
+          "exp_alerts": []
+        },
+        {
+          "eval_time": "30d",
+          "alertname": "SLOBurnProcessing3d",
+          "exp_alerts": []
         }
       ]
     },
@@ -295,12 +305,46 @@
             {
               "exp_labels": {
                 "severity": "warning",
-                "routing": "local-console",
+                "routing": "local-email",
                 "sli": "api_availability"
               },
               "exp_annotations": {
                 "summary": "SLOBurnApiAvailability3d",
                 "runbook": "docs/runbooks/api-errors.md"
+              }
+            }
+          ]
+        },
+        {
+          "eval_time": "30d",
+          "alertname": "SLOBurnApiLatency3d",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "warning",
+                "routing": "local-email",
+                "sli": "api_latency"
+              },
+              "exp_annotations": {
+                "summary": "SLOBurnApiLatency3d",
+                "runbook": "docs/runbooks/api-errors.md"
+              }
+            }
+          ]
+        },
+        {
+          "eval_time": "30d",
+          "alertname": "SLOBurnProcessing3d",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "warning",
+                "routing": "local-email",
+                "sli": "processing"
+              },
+              "exp_annotations": {
+                "summary": "SLOBurnProcessing3d",
+                "runbook": "docs/runbooks/slow-processing.md"
               }
             }
           ]
@@ -448,6 +492,16 @@
         {
           "eval_time": "30d",
           "alertname": "SLOBurnApiAvailability3d",
+          "exp_alerts": []
+        },
+        {
+          "eval_time": "30d",
+          "alertname": "SLOBurnApiLatency3d",
+          "exp_alerts": []
+        },
+        {
+          "eval_time": "30d",
+          "alertname": "SLOBurnProcessing3d",
           "exp_alerts": []
         }
       ]

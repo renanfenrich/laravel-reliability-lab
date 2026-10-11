@@ -21,6 +21,8 @@ jobs:
           docker run --rm -v "$PWD:/work" -w /work/infra hashicorp/terraform:1.16.5 init -backend=false -input=false
           docker run --rm -v "$PWD:/work" -w /work/infra hashicorp/terraform:1.16.5 fmt -check
           docker run --rm -v "$PWD:/work" -w /work/infra hashicorp/terraform:1.16.5 validate
+      - name: Alertmanager local SMTP configuration
+        run: docker run --rm --entrypoint amtool -v "$PWD/observability:/rules:ro" prom/alertmanager:v0.34.1 check-config /rules/alertmanager.yml
       - name: Deterministic manifests and Kubernetes schema validation
         run: |
           python3 scripts/check-manifests.py

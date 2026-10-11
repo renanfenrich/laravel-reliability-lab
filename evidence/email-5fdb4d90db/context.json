@@ -1,0 +1,6 @@
+{
+  "start": "2026-10-11T18:21:10Z",
+  "commit": "1bb2d72faf55c4f2e3573fe03d261a94fa4b205c",
+  "run": "email-5fdb4d90db",
+  "note": "SLO rule unit tests separate from notification-fixture injection. Live fault/telemetry experiments below."
+}

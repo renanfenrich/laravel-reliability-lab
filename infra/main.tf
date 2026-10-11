@@ -26,6 +26,7 @@ resource "kubernetes_secret_v1" "lab" {
   data = merge(var.secrets, {
     POSTGRES_PASSWORD          = var.secrets["DB_PASSWORD"]
     GF_SECURITY_ADMIN_USER     = "lab"
+    MAILPIT_UI_AUTH            = "lab:${var.secrets["LAB_TOKEN"]}"
     GF_SECURITY_ADMIN_PASSWORD = var.secrets["LAB_TOKEN"]
   })
 }

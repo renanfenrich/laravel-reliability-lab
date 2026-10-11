@@ -12,3 +12,5 @@ Tests must exercise durable acceptance, queue failure recovery, duplicate delive
 Resume from docs/status.md and docs/goals/G1.md; inspect Git status and current evidence before rerunning discovery. Update status after every phase, recording blockers and unexecuted checks. Order A application; B runtime; C observability/SLO; D experiments/evidence. Keep progress terse.
 
 Host metrics: `make host-metrics-up host-metrics-down`; Linux user systemd collector reads /proc and project-only Docker stats. Bound to dedicated kind bridge, never expose Docker socket or host metrics to LAN. `make deploy` discovers gateway; teardown stops the project unit. Validate both Grafana dashboards through scripts/observability-check.py.
+
+Local alert email: make rules, make alert-test, make mail-up/mail-down. Mailpit captures alerts@lab.test only; never configure relay/forwarding/external recipients under G1. Notification fixtures are not live SLO evidence. alert-test temporarily pauses scheduler and host collector and must restore both, retaining terminal failed reports and exported messages.

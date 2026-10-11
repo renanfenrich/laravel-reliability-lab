@@ -202,7 +202,7 @@
           "for": "2m",
           "labels": {
             "severity": "critical",
-            "routing": "local-console",
+            "routing": "local-email",
             "sli": "api_availability"
           },
           "annotations": {
@@ -216,7 +216,7 @@
           "for": "2m",
           "labels": {
             "severity": "critical",
-            "routing": "local-console",
+            "routing": "local-email",
             "sli": "api_availability"
           },
           "annotations": {
@@ -230,7 +230,7 @@
           "for": "2m",
           "labels": {
             "severity": "warning",
-            "routing": "local-console",
+            "routing": "local-email",
             "sli": "api_availability"
           },
           "annotations": {
@@ -244,7 +244,7 @@
           "for": "2m",
           "labels": {
             "severity": "warning",
-            "routing": "local-console",
+            "routing": "local-email",
             "sli": "api_availability"
           },
           "annotations": {
@@ -258,7 +258,7 @@
           "for": "2m",
           "labels": {
             "severity": "critical",
-            "routing": "local-console",
+            "routing": "local-email",
             "sli": "api_latency"
           },
           "annotations": {
@@ -272,7 +272,7 @@
           "for": "2m",
           "labels": {
             "severity": "critical",
-            "routing": "local-console",
+            "routing": "local-email",
             "sli": "api_latency"
           },
           "annotations": {
@@ -286,7 +286,7 @@
           "for": "2m",
           "labels": {
             "severity": "warning",
-            "routing": "local-console",
+            "routing": "local-email",
             "sli": "api_latency"
           },
           "annotations": {
@@ -300,7 +300,7 @@
           "for": "2m",
           "labels": {
             "severity": "warning",
-            "routing": "local-console",
+            "routing": "local-email",
             "sli": "api_latency"
           },
           "annotations": {
@@ -314,7 +314,7 @@
           "for": "2m",
           "labels": {
             "severity": "critical",
-            "routing": "local-console",
+            "routing": "local-email",
             "sli": "processing"
           },
           "annotations": {
@@ -328,7 +328,7 @@
           "for": "2m",
           "labels": {
             "severity": "critical",
-            "routing": "local-console",
+            "routing": "local-email",
             "sli": "processing"
           },
           "annotations": {
@@ -342,7 +342,7 @@
           "for": "2m",
           "labels": {
             "severity": "warning",
-            "routing": "local-console",
+            "routing": "local-email",
             "sli": "processing"
           },
           "annotations": {
@@ -356,7 +356,7 @@
           "for": "2m",
           "labels": {
             "severity": "warning",
-            "routing": "local-console",
+            "routing": "local-email",
             "sli": "processing"
           },
           "annotations": {
@@ -374,7 +374,7 @@
           "for": "15s",
           "labels": {
             "severity": "info",
-            "routing": "local-console",
+            "routing": "local-email",
             "mode": "accelerated-demonstration"
           },
           "annotations": {
@@ -388,10 +388,23 @@
           "for": "1m",
           "labels": {
             "severity": "warning",
-            "routing": "local-console"
+            "routing": "local-email"
           },
           "annotations": {
             "summary": "TelemetryUnavailable",
+            "runbook": "docs/runbooks/telemetry.md"
+          }
+        },
+        {
+          "alert": "InfrastructureTelemetryUnavailable",
+          "expr": "up{job=~\"lab-host-docker|kube-state-metrics|kubelet-cadvisor|alertmanager|mailpit\"} == 0",
+          "for": "1m",
+          "labels": {
+            "severity": "warning",
+            "routing": "local-email"
+          },
+          "annotations": {
+            "summary": "InfrastructureTelemetryUnavailable",
             "runbook": "docs/runbooks/telemetry.md"
           }
         }

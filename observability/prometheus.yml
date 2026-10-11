@@ -73,6 +73,39 @@
           ]
         }
       ]
+    },
+    {
+      "job_name": "alertmanager",
+      "static_configs": [
+        {
+          "targets": [
+            "alertmanager:9093"
+          ]
+        }
+      ]
+    },
+    {
+      "job_name": "mailpit",
+      "static_configs": [
+        {
+          "targets": [
+            "mailpit:9090"
+          ]
+        }
+      ]
     }
-  ]
+  ],
+  "alerting": {
+    "alertmanagers": [
+      {
+        "static_configs": [
+          {
+            "targets": [
+              "alertmanager:9093"
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }

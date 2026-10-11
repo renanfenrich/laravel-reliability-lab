@@ -1,0 +1,1190 @@
+[
+  {
+    "ID": "6TUq9fiMUOSzdvWpJcvGvs",
+    "MessageID": "1791743255468148062.2430234139436360245@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[RESOLVED][info] LabDemoProcessingMiss accelerated-demonstration",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:27:35Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "-------------------------------\nresolved: LabDemoProcessingMiss\n-------------------------------\n\nLocal Laravel reliability lab. Mode: accelerated-demonstration\n\nLabDemoProcessingMiss\n\nRunbook: docs/runbooks/slow-processing.md",
+    "HTML": "<h2>resolved: LabDemoProcessingMiss</h2><p>Local Laravel reliability lab. Mode: accelerated-demonstration</p><p>LabDemoProcessingMiss</p><p>Runbook: docs/runbooks/slow-processing.md</p>",
+    "Size": 1003,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "7Jxxt13DAAaBHpuMcWfjR9",
+    "MessageID": "1791743050433385501.7113008988390529939@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[RESOLVED][warning] TelemetryUnavailable",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:24:10Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "------------------------------\nresolved: TelemetryUnavailable\n------------------------------\n\nLocal Laravel reliability lab. Mode:\n\nTelemetryUnavailable\n\nRunbook: docs/runbooks/telemetry.md",
+    "HTML": "<h2>resolved: TelemetryUnavailable</h2><p>Local Laravel reliability lab. Mode: </p><p>TelemetryUnavailable</p><p>Runbook: docs/runbooks/telemetry.md</p>",
+    "Size": 947,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "5O3kRUgmbBJ9iXD7R3dsCS",
+    "MessageID": "1791743035438861156.14916211908524063503@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[RESOLVED][warning] InfrastructureTelemetryUnavailable",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:23:55Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "--------------------------------------------\nresolved: InfrastructureTelemetryUnavailable\n--------------------------------------------\n\nLocal Laravel reliability lab. Mode:\n\nInfrastructureTelemetryUnavailable\n\nRunbook: docs/runbooks/telemetry.md",
+    "HTML": "<h2>resolved: InfrastructureTelemetryUnavailable</h2><p>Local Laravel reliability lab. Mode: </p><p>InfrastructureTelemetryUnavailable</p><p>Runbook: docs/runbooks/telemetry.md</p>",
+    "Size": 990,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "5wsGus9fcIQcGO4JybB3Ew",
+    "MessageID": "1791743020424036237.5045558722977962286@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[FIRING][warning] TelemetryUnavailable",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:23:40Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "----------------------------\nfiring: TelemetryUnavailable\n----------------------------\n\nLocal Laravel reliability lab. Mode:\n\nTelemetryUnavailable\n\nRunbook: docs/runbooks/telemetry.md",
+    "HTML": "<h2>firing: TelemetryUnavailable</h2><p>Local Laravel reliability lab. Mode: </p><p>TelemetryUnavailable</p><p>Runbook: docs/runbooks/telemetry.md</p>",
+    "Size": 940,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "7OLXsT7r2Gq2cymuyvoWxv",
+    "MessageID": "1791742975427404077.1103055744109401120@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[FIRING][warning] InfrastructureTelemetryUnavailable",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:22:55Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "------------------------------------------\nfiring: InfrastructureTelemetryUnavailable\n------------------------------------------\n\nLocal Laravel reliability lab. Mode:\n\nInfrastructureTelemetryUnavailable\n\nRunbook: docs/runbooks/telemetry.md",
+    "HTML": "<h2>firing: InfrastructureTelemetryUnavailable</h2><p>Local Laravel reliability lab. Mode: </p><p>InfrastructureTelemetryUnavailable</p><p>Runbook: docs/runbooks/telemetry.md</p>",
+    "Size": 985,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "4d22XFn3xMk1L6A4yqsnw1",
+    "MessageID": "1791742975426737050.11887812037505632914@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[FIRING][info] LabDemoProcessingMiss accelerated-demonstration",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:22:55Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "-----------------------------\nfiring: LabDemoProcessingMiss\n-----------------------------\n\nLocal Laravel reliability lab. Mode: accelerated-demonstration\n\nLabDemoProcessingMiss\n\nRunbook: docs/runbooks/slow-processing.md",
+    "HTML": "<h2>firing: LabDemoProcessingMiss</h2><p>Local Laravel reliability lab. Mode: accelerated-demonstration</p><p>LabDemoProcessingMiss</p><p>Runbook: docs/runbooks/slow-processing.md</p>",
+    "Size": 1000,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "0AB7mt8sEAsjyuBb0OITh3",
+    "MessageID": "1791742881192593285.9363981454248453306@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[RESOLVED][warning] SLOBurnApiLatency1d notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:21Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "-----------------------------\nresolved: SLOBurnApiLatency1d\n-----------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnApiLatency1d\n\nRunbook: docs/runbooks/api-errors.md",
+    "HTML": "<h2>resolved: SLOBurnApiLatency1d</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnApiLatency1d</p><p>Runbook: docs/runbooks/api-errors.md</p>",
+    "Size": 1041,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "4wFUW1cI14ZmnW2uu2n3QF",
+    "MessageID": "1791742881191860785.5096558594929258346@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[RESOLVED][warning] InfrastructureTelemetryUnavailable notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:21Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "--------------------------------------------\nresolved: InfrastructureTelemetryUnavailable\n--------------------------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: InfrastructureTelemetryUnavailable\n\nRunbook: docs/runbooks/telemetry.md",
+    "HTML": "<h2>resolved: InfrastructureTelemetryUnavailable</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: InfrastructureTelemetryUnavailable</p><p>Runbook: docs/runbooks/telemetry.md</p>",
+    "Size": 1088,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "4QD66NITlamQiNU3B4dAY4",
+    "MessageID": "1791742881192259310.11871246121413460486@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[RESOLVED][warning] SLOBurnProcessing3d notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:21Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "-----------------------------\nresolved: SLOBurnProcessing3d\n-----------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnProcessing3d\n\nRunbook: docs/runbooks/slow-processing.md",
+    "HTML": "<h2>resolved: SLOBurnProcessing3d</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnProcessing3d</p><p>Runbook: docs/runbooks/slow-processing.md</p>",
+    "Size": 1047,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "4HiT3kbChwqEuo618aPNhl",
+    "MessageID": "1791742881191954245.5387706431636683856@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[RESOLVED][critical] SLOBurnApiAvailability1h notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:21Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "----------------------------------\nresolved: SLOBurnApiAvailability1h\n----------------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnApiAvailability1h\n\nRunbook: docs/runbooks/api-errors.md",
+    "HTML": "<h2>resolved: SLOBurnApiAvailability1h</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnApiAvailability1h</p><p>Runbook: docs/runbooks/api-errors.md</p>",
+    "Size": 1057,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "5WPzr9WmPsc1J5ogDWf3r3",
+    "MessageID": "1791742881190852624.15907291940812734457@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[RESOLVED][info] LabDemoProcessingMiss notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:21Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "-------------------------------\nresolved: LabDemoProcessingMiss\n-------------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: LabDemoProcessingMiss\n\nRunbook: docs/runbooks/slow-processing.md",
+    "HTML": "<h2>resolved: LabDemoProcessingMiss</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: LabDemoProcessingMiss</p><p>Runbook: docs/runbooks/slow-processing.md</p>",
+    "Size": 1050,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "5Uan6gJq22YfTvrxU32AqA",
+    "MessageID": "1791742881191264931.7306400481644181321@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[RESOLVED][critical] SLOBurnApiLatency1h notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:21Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "-----------------------------\nresolved: SLOBurnApiLatency1h\n-----------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnApiLatency1h\n\nRunbook: docs/runbooks/api-errors.md",
+    "HTML": "<h2>resolved: SLOBurnApiLatency1h</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnApiLatency1h</p><p>Runbook: docs/runbooks/api-errors.md</p>",
+    "Size": 1042,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "4RLX1X2KVOflOnWiA1DNc5",
+    "MessageID": "1791742881190843819.4322432259548786491@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[RESOLVED][warning] SLOBurnApiLatency3d notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:21Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "-----------------------------\nresolved: SLOBurnApiLatency3d\n-----------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnApiLatency3d\n\nRunbook: docs/runbooks/api-errors.md",
+    "HTML": "<h2>resolved: SLOBurnApiLatency3d</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnApiLatency3d</p><p>Runbook: docs/runbooks/api-errors.md</p>",
+    "Size": 1041,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "1hHlk9exghwvScoSBxbdEd",
+    "MessageID": "1791742881187344135.15651512469963351458@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[RESOLVED][warning] SLOBurnProcessing1d notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:21Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "-----------------------------\nresolved: SLOBurnProcessing1d\n-----------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnProcessing1d\n\nRunbook: docs/runbooks/slow-processing.md",
+    "HTML": "<h2>resolved: SLOBurnProcessing1d</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnProcessing1d</p><p>Runbook: docs/runbooks/slow-processing.md</p>",
+    "Size": 1047,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "1UNo1gsra9XmdflzP2A93X",
+    "MessageID": "1791742881189884539.1841483689211812593@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[RESOLVED][critical] SLOBurnProcessing1h notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:21Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "-----------------------------\nresolved: SLOBurnProcessing1h\n-----------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnProcessing1h\n\nRunbook: docs/runbooks/slow-processing.md",
+    "HTML": "<h2>resolved: SLOBurnProcessing1h</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnProcessing1h</p><p>Runbook: docs/runbooks/slow-processing.md</p>",
+    "Size": 1047,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "5JOC8TiU11hta8W9yV9sD7",
+    "MessageID": "1791742881188629044.6179350954178102132@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[RESOLVED][critical] SLOBurnProcessing6h notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:21Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "-----------------------------\nresolved: SLOBurnProcessing6h\n-----------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnProcessing6h\n\nRunbook: docs/runbooks/slow-processing.md",
+    "HTML": "<h2>resolved: SLOBurnProcessing6h</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnProcessing6h</p><p>Runbook: docs/runbooks/slow-processing.md</p>",
+    "Size": 1047,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "2kpBcYGn1sNpnylDEAskL5",
+    "MessageID": "1791742881188920087.16053980911871573909@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[RESOLVED][critical] SLOBurnApiLatency6h notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:21Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "-----------------------------\nresolved: SLOBurnApiLatency6h\n-----------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnApiLatency6h\n\nRunbook: docs/runbooks/api-errors.md",
+    "HTML": "<h2>resolved: SLOBurnApiLatency6h</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnApiLatency6h</p><p>Runbook: docs/runbooks/api-errors.md</p>",
+    "Size": 1043,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "0NArHV3RSZH0naaJO5z05a",
+    "MessageID": "1791742881188458984.479252461236999304@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[RESOLVED][warning] TelemetryUnavailable notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:21Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "------------------------------\nresolved: TelemetryUnavailable\n------------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: TelemetryUnavailable\n\nRunbook: docs/runbooks/telemetry.md",
+    "HTML": "<h2>resolved: TelemetryUnavailable</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: TelemetryUnavailable</p><p>Runbook: docs/runbooks/telemetry.md</p>",
+    "Size": 1042,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "6ic32pPb5jnorM5v86IaCr",
+    "MessageID": "1791742881187012349.7212893985756302767@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[RESOLVED][warning] SLOBurnApiAvailability1d notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:21Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "----------------------------------\nresolved: SLOBurnApiAvailability1d\n----------------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnApiAvailability1d\n\nRunbook: docs/runbooks/api-errors.md",
+    "HTML": "<h2>resolved: SLOBurnApiAvailability1d</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnApiAvailability1d</p><p>Runbook: docs/runbooks/api-errors.md</p>",
+    "Size": 1056,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "7JUCUe4T8JnkwiiPCYZjc1",
+    "MessageID": "1791742881186974714.17714561434092769201@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[RESOLVED][critical] SLOBurnApiAvailability6h notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:21Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "----------------------------------\nresolved: SLOBurnApiAvailability6h\n----------------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnApiAvailability6h\n\nRunbook: docs/runbooks/api-errors.md",
+    "HTML": "<h2>resolved: SLOBurnApiAvailability6h</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnApiAvailability6h</p><p>Runbook: docs/runbooks/api-errors.md</p>",
+    "Size": 1058,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "5kq2OslHG1EV5XR3zOXrzg",
+    "MessageID": "1791742881186577477.16732241248426241513@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[RESOLVED][warning] SLOBurnApiAvailability3d notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:21Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "----------------------------------\nresolved: SLOBurnApiAvailability3d\n----------------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnApiAvailability3d\n\nRunbook: docs/runbooks/api-errors.md",
+    "HTML": "<h2>resolved: SLOBurnApiAvailability3d</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnApiAvailability3d</p><p>Runbook: docs/runbooks/api-errors.md</p>",
+    "Size": 1057,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "3AzDZaGhmcyTVukVtQrnTJ",
+    "MessageID": "1791742871194009685.17977381449883838502@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[FIRING][warning] TelemetryUnavailable notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:11Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "----------------------------\nfiring: TelemetryUnavailable\n----------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: TelemetryUnavailable\n\nRunbook: docs/runbooks/telemetry.md",
+    "HTML": "<h2>firing: TelemetryUnavailable</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: TelemetryUnavailable</p><p>Runbook: docs/runbooks/telemetry.md</p>",
+    "Size": 1040,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "2rSx9VWiqk056rOsD877L4",
+    "MessageID": "1791742871194212996.15387774606290897283@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[FIRING][warning] SLOBurnApiLatency1d notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:11Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "---------------------------\nfiring: SLOBurnApiLatency1d\n---------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnApiLatency1d\n\nRunbook: docs/runbooks/api-errors.md",
+    "HTML": "<h2>firing: SLOBurnApiLatency1d</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnApiLatency1d</p><p>Runbook: docs/runbooks/api-errors.md</p>",
+    "Size": 1038,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "04uUvciq50C8E0DvxAZSQu",
+    "MessageID": "1791742871193704542.8765187967014367075@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[FIRING][critical] SLOBurnApiAvailability1h notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:11Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "--------------------------------\nfiring: SLOBurnApiAvailability1h\n--------------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnApiAvailability1h\n\nRunbook: docs/runbooks/api-errors.md",
+    "HTML": "<h2>firing: SLOBurnApiAvailability1h</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnApiAvailability1h</p><p>Runbook: docs/runbooks/api-errors.md</p>",
+    "Size": 1053,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "5osp0yMeEAujeF7RXQD8ky",
+    "MessageID": "1791742871192667624.9764263828042647893@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[FIRING][critical] SLOBurnApiAvailability6h notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:11Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "--------------------------------\nfiring: SLOBurnApiAvailability6h\n--------------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnApiAvailability6h\n\nRunbook: docs/runbooks/api-errors.md",
+    "HTML": "<h2>firing: SLOBurnApiAvailability6h</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnApiAvailability6h</p><p>Runbook: docs/runbooks/api-errors.md</p>",
+    "Size": 1053,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "4xZSE0ImeQoqzcf7hTCI7h",
+    "MessageID": "1791742871191858786.6833019536910764605@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[FIRING][warning] SLOBurnApiLatency3d notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:11Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "---------------------------\nfiring: SLOBurnApiLatency3d\n---------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnApiLatency3d\n\nRunbook: docs/runbooks/api-errors.md",
+    "HTML": "<h2>firing: SLOBurnApiLatency3d</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnApiLatency3d</p><p>Runbook: docs/runbooks/api-errors.md</p>",
+    "Size": 1037,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "2vyJnBEKWf6rIMRIgNRCvK",
+    "MessageID": "1791742871192194093.13043443542731451687@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[FIRING][warning] SLOBurnProcessing3d notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:11Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "---------------------------\nfiring: SLOBurnProcessing3d\n---------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnProcessing3d\n\nRunbook: docs/runbooks/slow-processing.md",
+    "HTML": "<h2>firing: SLOBurnProcessing3d</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnProcessing3d</p><p>Runbook: docs/runbooks/slow-processing.md</p>",
+    "Size": 1043,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "2QChTIbr60W0dxx46HWR0n",
+    "MessageID": "1791742871192449785.5823256592450948220@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[FIRING][critical] SLOBurnApiLatency1h notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:11Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "---------------------------\nfiring: SLOBurnApiLatency1h\n---------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnApiLatency1h\n\nRunbook: docs/runbooks/api-errors.md",
+    "HTML": "<h2>firing: SLOBurnApiLatency1h</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnApiLatency1h</p><p>Runbook: docs/runbooks/api-errors.md</p>",
+    "Size": 1038,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "1JJ2GKHGCBd2OwsyW4mrFt",
+    "MessageID": "1791742871191777729.16736050433791246552@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[FIRING][warning] SLOBurnProcessing1d notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:11Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "---------------------------\nfiring: SLOBurnProcessing1d\n---------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnProcessing1d\n\nRunbook: docs/runbooks/slow-processing.md",
+    "HTML": "<h2>firing: SLOBurnProcessing1d</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnProcessing1d</p><p>Runbook: docs/runbooks/slow-processing.md</p>",
+    "Size": 1043,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "7a1DgbIiQ8ybDzNpokhcWF",
+    "MessageID": "1791742871191426460.14515949974101456029@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[FIRING][info] LabDemoProcessingMiss notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:11Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "-----------------------------\nfiring: LabDemoProcessingMiss\n-----------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: LabDemoProcessingMiss\n\nRunbook: docs/runbooks/slow-processing.md",
+    "HTML": "<h2>firing: LabDemoProcessingMiss</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: LabDemoProcessingMiss</p><p>Runbook: docs/runbooks/slow-processing.md</p>",
+    "Size": 1046,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "7JCucy5yeaPu5QWIEwTAfY",
+    "MessageID": "1791742871190757838.4455971120373046589@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[FIRING][warning] SLOBurnApiAvailability3d notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:11Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "--------------------------------\nfiring: SLOBurnApiAvailability3d\n--------------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnApiAvailability3d\n\nRunbook: docs/runbooks/api-errors.md",
+    "HTML": "<h2>firing: SLOBurnApiAvailability3d</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnApiAvailability3d</p><p>Runbook: docs/runbooks/api-errors.md</p>",
+    "Size": 1052,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "0LINx9QvQ0HqxSPBg8wFbR",
+    "MessageID": "1791742871190063486.13853091340118878775@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[FIRING][critical] SLOBurnProcessing6h notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:11Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "---------------------------\nfiring: SLOBurnProcessing6h\n---------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnProcessing6h\n\nRunbook: docs/runbooks/slow-processing.md",
+    "HTML": "<h2>firing: SLOBurnProcessing6h</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnProcessing6h</p><p>Runbook: docs/runbooks/slow-processing.md</p>",
+    "Size": 1044,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "0ZeZH4tdD5IT5Yca5ntKOw",
+    "MessageID": "1791742871188695136.15968297579874615998@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[FIRING][critical] SLOBurnProcessing1h notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:11Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "---------------------------\nfiring: SLOBurnProcessing1h\n---------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnProcessing1h\n\nRunbook: docs/runbooks/slow-processing.md",
+    "HTML": "<h2>firing: SLOBurnProcessing1h</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnProcessing1h</p><p>Runbook: docs/runbooks/slow-processing.md</p>",
+    "Size": 1044,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "0gwjesSNTsEgFmFrFIIxu9",
+    "MessageID": "1791742871187771964.11711607195737904993@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[FIRING][critical] SLOBurnApiLatency6h notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:11Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "---------------------------\nfiring: SLOBurnApiLatency6h\n---------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnApiLatency6h\n\nRunbook: docs/runbooks/api-errors.md",
+    "HTML": "<h2>firing: SLOBurnApiLatency6h</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnApiLatency6h</p><p>Runbook: docs/runbooks/api-errors.md</p>",
+    "Size": 1039,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "7MjIqIfrnknPU87YB59N3u",
+    "MessageID": "1791742871187257662.12574184702352308999@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[FIRING][warning] SLOBurnApiAvailability1d notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:11Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "--------------------------------\nfiring: SLOBurnApiAvailability1d\n--------------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: SLOBurnApiAvailability1d\n\nRunbook: docs/runbooks/api-errors.md",
+    "HTML": "<h2>firing: SLOBurnApiAvailability1d</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: SLOBurnApiAvailability1d</p><p>Runbook: docs/runbooks/api-errors.md</p>",
+    "Size": 1053,
+    "Inline": [],
+    "Attachments": []
+  },
+  {
+    "ID": "4WHr6lVSjqJ6mZ7NUkuMEa",
+    "MessageID": "1791742871185271804.5483550894935347250@alertmanager-9bd94ccc7-kvhc2",
+    "From": {
+      "Name": "",
+      "Address": "alertmanager@lab.test"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "alerts@lab.test"
+      }
+    ],
+    "Cc": [],
+    "Bcc": [],
+    "ReplyTo": [],
+    "ReturnPath": "alertmanager@lab.test",
+    "Subject": "[FIRING][warning] InfrastructureTelemetryUnavailable notification-fixture-email-5fdb4d90db",
+    "ListUnsubscribe": {
+      "Header": "",
+      "Links": [],
+      "Errors": "",
+      "HeaderPost": ""
+    },
+    "Date": "2026-10-11T18:21:11Z",
+    "Tags": [],
+    "Username": "",
+    "Text": "------------------------------------------\nfiring: InfrastructureTelemetryUnavailable\n------------------------------------------\n\nLocal Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db\n\nNOTIFICATION FIXTURE: InfrastructureTelemetryUnavailable\n\nRunbook: docs/runbooks/telemetry.md",
+    "HTML": "<h2>firing: InfrastructureTelemetryUnavailable</h2><p>Local Laravel reliability lab. Mode: notification-fixture-email-5fdb4d90db</p><p>NOTIFICATION FIXTURE: InfrastructureTelemetryUnavailable</p><p>Runbook: docs/runbooks/telemetry.md</p>",
+    "Size": 1084,
+    "Inline": [],
+    "Attachments": []
+  }
+]

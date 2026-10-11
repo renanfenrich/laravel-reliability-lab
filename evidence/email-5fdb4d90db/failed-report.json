@@ -1,0 +1,14 @@
+{
+  "id": "7b0e6a8c-6ad7-46e9-a8b3-535cb1ff3a74",
+  "result": {
+    "id": "7b0e6a8c-6ad7-46e9-a8b3-535cb1ff3a74",
+    "state": "failed",
+    "attempts": 3,
+    "result": null,
+    "error": "Illuminate\\Http\\Client\\RequestException",
+    "deadline_met": null,
+    "overdue": false
+  },
+  "timestamp": "2026-10-11T18:21:30Z",
+  "traffic": "fault"
+}

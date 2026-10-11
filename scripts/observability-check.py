@@ -1,12 +1,27 @@
 from labclient import *
 import urllib.parse
+import base64
 start=utc()
 with forward('prometheus',9090) as base:
     _,targets,_=request(base,'/api/v1/targets',auth=False)
-    active=targets['data']['activeTargets']; assert len(active)>=4 and all(t['health']=='up' for t in active),[(t['labels'],t['health'],t.get('lastError')) for t in active]
+    active=targets['data']['activeTargets']; assert len(active)>=7 and all(t['health']=='up' for t in active),[(t['labels'],t['health'],t.get('lastError')) for t in active]
+    _,managers,_=request(base,'/api/v1/alertmanagers',auth=False)
+    assert any(m['url']=='http://alertmanager:9093/api/v2/alerts' for m in managers['data']['activeAlertmanagers']),managers
+    _,rules,_=request(base,'/api/v1/rules',auth=False)
+    assert all(r['health']=='ok' for g in rules['data']['groups'] for r in g['rules']),rules
     checks={}
     for expr in ['lab_accepted_total','lab_completed_total','lab_processing_cohort_total','container_memory_working_set_bytes{namespace="lab"}','kube_pod_container_status_restarts_total{namespace="lab"}']:
         _,r,_=request(base,'/api/v1/query?query='+urllib.parse.quote(expr),auth=False);assert r['data']['result'],expr;checks[expr]=len(r['data']['result'])
+with forward('mailpit',8025) as base:
+    try:
+        urllib.request.urlopen(base+'/api/v1/messages',timeout=10)
+        raise AssertionError('Mailbox must require authentication')
+    except urllib.error.HTTPError as error:
+        assert error.code==401,error.code
+    req=urllib.request.Request(base+'/api/v1/messages')
+    req.add_header('Authorization','Basic '+base64.b64encode(('lab:'+ENV['LAB_TOKEN']).encode()).decode())
+    with urllib.request.urlopen(req,timeout=10) as response: mailbox=json.loads(response.read())
+    assert isinstance(mailbox['messages'],list),mailbox
 with forward('loki',3100) as base:
     report_id=json.loads((ROOT/'evidence/smoke.json').read_text())['unique_report']
     q='{namespace="lab",app="worker"} | json report_id="context.report_id", request_id="context.request_id" | report_id="'+report_id+'"'
@@ -47,5 +62,5 @@ with forward('grafana',3000) as base:
     assert panel_checks['Structured report logs: filter request_id/report_id in Explore']>0,panel_checks
     for title in ['Host CPU utilizada','Memória disponível','Docker CPU em cores (1 = um núcleo)','Docker memória usada (cache inativo excluído)','CPU por pod (cores)','Memória working set por pod','Docker coleta bem-sucedida']:
         assert panel_checks[title]>0,(title,panel_checks)
-save('observability.json',{'start':start,'end':utc(),'commit':sha(),'targets':[{'job':t['labels'].get('job'),'health':t['health']} for t in active],'metric_series':checks,'searchable_correlated_worker_logs':True,'queried_report_id':report_id,'dashboard_panels':len(dashboard['dashboard']['panels']),'grafana_datasource_health':datasource_health,'grafana_panel_frames':panel_checks,'result':'PASS'})
+save('observability.json',{'start':start,'end':utc(),'commit':sha(),'targets':[{'job':t['labels'].get('job'),'health':t['health']} for t in active],'active_alertmanagers':managers['data']['activeAlertmanagers'],'rule_health':'PASS','mailbox_authentication':'PASS','mailbox_total':mailbox['total'],'metric_series':checks,'searchable_correlated_worker_logs':True,'queried_report_id':report_id,'dashboard_panels':len(dashboard['dashboard']['panels']),'grafana_datasource_health':datasource_health,'grafana_panel_frames':panel_checks,'result':'PASS'})
 print('PASS: Prometheus targets/resource metrics, Loki correlated worker logs and provisioned Grafana dashboard')

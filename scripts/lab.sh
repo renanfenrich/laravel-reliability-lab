@@ -52,6 +52,16 @@ PY
   fi
   k get nodes
   ;;
+ mail-up)
+  if systemctl --user is-active --quiet laravel-reliability-lab-mail-forward.service; then
+   systemctl --user stop laravel-reliability-lab-mail-forward.service
+  fi
+  systemd-run --user --unit=laravel-reliability-lab-mail-forward --property=Restart=always --property=RestartSec=3 --property=StartLimitIntervalSec=0 "$PWD/.tools/kubectl" --kubeconfig "$KUBECONFIG" --context "kind-$cluster" -n lab port-forward --address="${LAB_BIND_ADDRESS:-127.0.0.1}" service/mailpit 18025:8025
+  ;;
+ mail-down)
+  if systemctl --user is-active --quiet laravel-reliability-lab-mail-forward.service; then systemctl --user stop laravel-reliability-lab-mail-forward.service; fi
+  ;;
+ alert-test) python3 -u scripts/alert-email-test.py ;;
  host-metrics-up) python3 scripts/host-metrics-control.py start ;;
  host-metrics-down) python3 scripts/host-metrics-control.py stop ;;
  deploy)
@@ -78,6 +88,7 @@ PY
   python3 scripts/observability-check.py
   ;;
  teardown)
+  "$0" mail-down
   python3 scripts/host-metrics-control.py stop
   if command -v systemctl >/dev/null && systemctl --user is-active --quiet laravel-reliability-lab-grafana-forward.service; then
    systemctl --user stop laravel-reliability-lab-grafana-forward.service

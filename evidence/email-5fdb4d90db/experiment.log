@@ -1,0 +1,20 @@
+EVIDENCE evidence/email-5fdb4d90db
+2026-10-11T18:21:11Z WAIT all fixture firing emails
+PASS: firing email for all 15 alert routes
+2026-10-11T18:21:14Z WAIT all fixture resolved emails
+PASS: resolved email for all notification fixtures
+2026-10-11T18:21:30Z LIVE FAULT: scheduler paused, host collector stopped
+2026-10-11T18:21:30Z WAIT three real Prometheus alerts firing
+2026-10-11T18:22:12Z WAIT three real Prometheus alerts firing
+2026-10-11T18:22:54Z WAIT three real Prometheus alerts firing
+PASS: real fault + telemetry alerts fired and delivered
+Running as unit: laravel-reliability-lab-host-metrics.service; invocation ID: 040093035bbe45cdb624c5eaae4960d7
+Host metrics bound only to kind bridge 172.19.0.1:19100
+2026-10-11T18:23:44Z RESTORED: scheduler and host collector
+2026-10-11T18:23:44Z WAIT real alert recovery / fault cohort aging
+2026-10-11T18:24:26Z WAIT real alert recovery / fault cohort aging
+2026-10-11T18:25:08Z WAIT real alert recovery / fault cohort aging
+2026-10-11T18:25:51Z WAIT real alert recovery / fault cohort aging
+2026-10-11T18:26:33Z WAIT real alert recovery / fault cohort aging
+2026-10-11T18:27:15Z WAIT real alert recovery / fault cohort aging
+PASS: rule-route fixtures and three real firing/resolved deliveries

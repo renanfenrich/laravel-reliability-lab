@@ -318,11 +318,62 @@
             {
               "exp_labels": {
                 "severity": "critical",
-                "routing": "local-console",
+                "routing": "local-email",
                 "sli": "api_availability"
               },
               "exp_annotations": {
                 "summary": "SLOBurnApiAvailability1h",
+                "runbook": "docs/runbooks/api-errors.md"
+              }
+            }
+          ]
+        },
+        {
+          "eval_time": "90m",
+          "alertname": "SLOBurnApiAvailability6h",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "critical",
+                "routing": "local-email",
+                "sli": "api_availability"
+              },
+              "exp_annotations": {
+                "summary": "SLOBurnApiAvailability6h",
+                "runbook": "docs/runbooks/api-errors.md"
+              }
+            }
+          ]
+        },
+        {
+          "eval_time": "90m",
+          "alertname": "SLOBurnApiAvailability1d",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "warning",
+                "routing": "local-email",
+                "sli": "api_availability"
+              },
+              "exp_annotations": {
+                "summary": "SLOBurnApiAvailability1d",
+                "runbook": "docs/runbooks/api-errors.md"
+              }
+            }
+          ]
+        },
+        {
+          "eval_time": "90m",
+          "alertname": "SLOBurnApiAvailability3d",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "warning",
+                "routing": "local-email",
+                "sli": "api_availability"
+              },
+              "exp_annotations": {
+                "summary": "SLOBurnApiAvailability3d",
                 "runbook": "docs/runbooks/api-errors.md"
               }
             }
@@ -455,11 +506,62 @@
             {
               "exp_labels": {
                 "severity": "critical",
-                "routing": "local-console",
+                "routing": "local-email",
                 "sli": "api_latency"
               },
               "exp_annotations": {
                 "summary": "SLOBurnApiLatency1h",
+                "runbook": "docs/runbooks/api-errors.md"
+              }
+            }
+          ]
+        },
+        {
+          "eval_time": "90m",
+          "alertname": "SLOBurnApiLatency6h",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "critical",
+                "routing": "local-email",
+                "sli": "api_latency"
+              },
+              "exp_annotations": {
+                "summary": "SLOBurnApiLatency6h",
+                "runbook": "docs/runbooks/api-errors.md"
+              }
+            }
+          ]
+        },
+        {
+          "eval_time": "90m",
+          "alertname": "SLOBurnApiLatency1d",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "warning",
+                "routing": "local-email",
+                "sli": "api_latency"
+              },
+              "exp_annotations": {
+                "summary": "SLOBurnApiLatency1d",
+                "runbook": "docs/runbooks/api-errors.md"
+              }
+            }
+          ]
+        },
+        {
+          "eval_time": "90m",
+          "alertname": "SLOBurnApiLatency3d",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "warning",
+                "routing": "local-email",
+                "sli": "api_latency"
+              },
+              "exp_annotations": {
+                "summary": "SLOBurnApiLatency3d",
                 "runbook": "docs/runbooks/api-errors.md"
               }
             }
@@ -592,11 +694,62 @@
             {
               "exp_labels": {
                 "severity": "critical",
-                "routing": "local-console",
+                "routing": "local-email",
                 "sli": "processing"
               },
               "exp_annotations": {
                 "summary": "SLOBurnProcessing1h",
+                "runbook": "docs/runbooks/slow-processing.md"
+              }
+            }
+          ]
+        },
+        {
+          "eval_time": "90m",
+          "alertname": "SLOBurnProcessing6h",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "critical",
+                "routing": "local-email",
+                "sli": "processing"
+              },
+              "exp_annotations": {
+                "summary": "SLOBurnProcessing6h",
+                "runbook": "docs/runbooks/slow-processing.md"
+              }
+            }
+          ]
+        },
+        {
+          "eval_time": "90m",
+          "alertname": "SLOBurnProcessing1d",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "warning",
+                "routing": "local-email",
+                "sli": "processing"
+              },
+              "exp_annotations": {
+                "summary": "SLOBurnProcessing1d",
+                "runbook": "docs/runbooks/slow-processing.md"
+              }
+            }
+          ]
+        },
+        {
+          "eval_time": "90m",
+          "alertname": "SLOBurnProcessing3d",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "warning",
+                "routing": "local-email",
+                "sli": "processing"
+              },
+              "exp_annotations": {
+                "summary": "SLOBurnProcessing3d",
                 "runbook": "docs/runbooks/slow-processing.md"
               }
             }
@@ -929,7 +1082,7 @@
             {
               "exp_labels": {
                 "severity": "warning",
-                "routing": "local-console"
+                "routing": "local-email"
               },
               "exp_annotations": {
                 "summary": "TelemetryUnavailable",
@@ -953,7 +1106,7 @@
             {
               "exp_labels": {
                 "severity": "warning",
-                "routing": "local-console"
+                "routing": "local-email"
               },
               "exp_annotations": {
                 "summary": "TelemetryUnavailable",
@@ -1203,7 +1356,7 @@
             {
               "exp_labels": {
                 "severity": "info",
-                "routing": "local-console",
+                "routing": "local-email",
                 "mode": "accelerated-demonstration"
               },
               "exp_annotations": {
@@ -1224,6 +1377,41 @@
               "value": 0
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "infrastructure telemetry down and recovered",
+      "interval": "15s",
+      "input_series": [
+        {
+          "series": "up{job=\"lab-host-docker\",instance=\"host:19100\"}",
+          "values": "0+0x12 1+0x20"
+        }
+      ],
+      "alert_rule_test": [
+        {
+          "eval_time": "2m",
+          "alertname": "InfrastructureTelemetryUnavailable",
+          "exp_alerts": [
+            {
+              "exp_labels": {
+                "severity": "warning",
+                "routing": "local-email",
+                "job": "lab-host-docker",
+                "instance": "host:19100"
+              },
+              "exp_annotations": {
+                "summary": "InfrastructureTelemetryUnavailable",
+                "runbook": "docs/runbooks/telemetry.md"
+              }
+            }
+          ]
+        },
+        {
+          "eval_time": "5m",
+          "alertname": "InfrastructureTelemetryUnavailable",
+          "exp_alerts": []
         }
       ]
     }

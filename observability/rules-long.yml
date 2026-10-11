@@ -82,7 +82,7 @@
           "for": "2m",
           "labels": {
             "severity": "warning",
-            "routing": "local-console",
+            "routing": "local-email",
             "sli": "api_availability"
           },
           "annotations": {
@@ -96,7 +96,7 @@
           "for": "2m",
           "labels": {
             "severity": "warning",
-            "routing": "local-console",
+            "routing": "local-email",
             "sli": "api_latency"
           },
           "annotations": {
@@ -110,7 +110,7 @@
           "for": "2m",
           "labels": {
             "severity": "warning",
-            "routing": "local-console",
+            "routing": "local-email",
             "sli": "processing"
           },
           "annotations": {
