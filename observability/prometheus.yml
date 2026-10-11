@@ -61,6 +61,18 @@
           "target_label": "node"
         }
       ]
+    },
+    {
+      "job_name": "lab-host-docker",
+      "scrape_interval": "10s",
+      "scrape_timeout": "8s",
+      "static_configs": [
+        {
+          "targets": [
+            "lab-host-metrics:19100"
+          ]
+        }
+      ]
     }
   ]
 }

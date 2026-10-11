@@ -10,3 +10,5 @@ Commands: `make doctor dev-up dev-down cluster-up build deploy test smoke load-t
 Tests must exercise durable acceptance, queue failure recovery, duplicate delivery, retries and interruption against PostgreSQL/Redis. Save actual commands, UTC times, SHA, versions and outputs in evidence. Never fabricate results, hide failures, claim hosted CI passed without a run, describe this lab as production experience, or claim a short experiment achieves a 30-day SLO.
 
 Resume from docs/status.md and docs/goals/G1.md; inspect Git status and current evidence before rerunning discovery. Update status after every phase, recording blockers and unexecuted checks. Order A application; B runtime; C observability/SLO; D experiments/evidence. Keep progress terse.
+
+Host metrics: `make host-metrics-up host-metrics-down`; Linux user systemd collector reads /proc and project-only Docker stats. Bound to dedicated kind bridge, never expose Docker socket or host metrics to LAN. `make deploy` discovers gateway; teardown stops the project unit. Validate both Grafana dashboards through scripts/observability-check.py.

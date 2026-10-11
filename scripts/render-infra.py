@@ -72,6 +72,8 @@ for name in ['api','worker','scheduler','exporter']:
 if (root/'observability/prometheus.yml').exists():
     config('prometheus',{'prometheus.yml':(root/'observability/prometheus.yml').read_text(),'rules.yml':(root/'observability/rules.yml').read_text()})
     v,m=configvol('prometheus','/etc/prometheus'); deploy('prometheus','prom/prometheus:v3.15.0',9090,args=['--config.file=/etc/prometheus/prometheus.yml','--storage.tsdb.path=/prometheus','--storage.tsdb.retention.time=31d'],volumes=[v,{'name':'data','emptyDir':{}}],mounts=[m,{'name':'data','mountPath':'/prometheus'}],user=65534,probe={'httpGet':{'path':'/-/ready','port':9090}},limits={'cpu':'2','memory':'768Mi'},sa='prometheus')
+    host_address=(root/'.runtime/host-metrics-address').read_text().strip() if (root/'.runtime/host-metrics-address').exists() else '172.19.0.1'
+    objects['deployment-prometheus']['spec']['template']['spec']['hostAliases']=[{'ip':host_address,'hostnames':['lab-host-metrics']}]
     role('prometheus',[{'apiGroups':[''],'resources':['nodes'],'verbs':['get','list','watch']},{'apiGroups':[''],'resources':['nodes/metrics'],'verbs':['get']}],True)
     config('loki',{'loki.yml':(root/'observability/loki.yml').read_text()})
     v,m=configvol('loki','/etc/loki');deploy('loki','grafana/loki:3.7.8',3100,args=['-config.file=/etc/loki/loki.yml'],volumes=[v,{'name':'data','emptyDir':{}},{'name':'tmp','emptyDir':{}}],mounts=[m,{'name':'data','mountPath':'/loki'},{'name':'tmp','mountPath':'/tmp'}],user=10001,probe={'httpGet':{'path':'/ready','port':3100}},limits={'cpu':'1','memory':'512Mi'})
@@ -80,7 +82,7 @@ if (root/'observability/prometheus.yml').exists():
     role('alloy',[{'apiGroups':[''],'resources':['pods'],'verbs':['get','list','watch']},{'apiGroups':[''],'resources':['pods/log'],'verbs':['get']}])
     config('grafana-datasources',{'datasources.yml':(root/'observability/datasources.yml').read_text()})
     config('grafana-provider',{'dashboards.yml':(root/'observability/dashboards.yml').read_text()})
-    config('grafana-dashboard',{'lab.json':(root/'observability/dashboard.json').read_text()})
+    config('grafana-dashboard',{'lab.json':(root/'observability/dashboard.json').read_text(),'infrastructure.json':(root/'observability/infrastructure-dashboard.json').read_text()})
     pairs=[configvol(n,path) for n,path in [('grafana-datasources','/etc/grafana/provisioning/datasources'),('grafana-provider','/etc/grafana/provisioning/dashboards'),('grafana-dashboard','/var/lib/grafana/dashboards')]]
     deploy('grafana','grafana/grafana:13.2.3',3000,env=[secret('GF_SECURITY_ADMIN_USER'),secret('GF_SECURITY_ADMIN_PASSWORD'),{'name':'GF_PLUGINS_PREINSTALL_DISABLED','value':'true'},{'name':'GF_PLUGINS_PREINSTALL_AUTO_UPDATE','value':'false'},{'name':'GF_ANALYTICS_REPORTING_ENABLED','value':'false'},{'name':'GF_ANALYTICS_CHECK_FOR_UPDATES','value':'false'}],volumes=[x[0] for x in pairs]+[{'name':'data','emptyDir':{}},{'name':'tmp','emptyDir':{}}],mounts=[x[1] for x in pairs]+[{'name':'data','mountPath':'/var/lib/grafana'},{'name':'tmp','mountPath':'/tmp'}],user=472,probe={'httpGet':{'path':'/api/health','port':3000}},limits={'cpu':'1','memory':'1Gi'})
     role('kube-state-metrics',[{'apiGroups':[''],'resources':['pods'],'verbs':['list','watch']},{'apiGroups':['apps'],'resources':['deployments'],'verbs':['list','watch']}])

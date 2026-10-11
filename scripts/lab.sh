@@ -52,9 +52,12 @@ PY
   fi
   k get nodes
   ;;
+ host-metrics-up) python3 scripts/host-metrics-control.py start ;;
+ host-metrics-down) python3 scripts/host-metrics-control.py stop ;;
  deploy)
   test -f .kubeconfig; k get nodes
   kind load docker-image --name "$cluster" laravel-reliability-app:g1 laravel-reliability-simulator:g1
+  python3 scripts/host-metrics-control.py start
   python3 scripts/render-infra.py
   terraform -chdir=infra init -input=false
   python3 scripts/tf-secrets.py
@@ -75,6 +78,7 @@ PY
   python3 scripts/observability-check.py
   ;;
  teardown)
+  python3 scripts/host-metrics-control.py stop
   if command -v systemctl >/dev/null && systemctl --user is-active --quiet laravel-reliability-lab-grafana-forward.service; then
    systemctl --user stop laravel-reliability-lab-grafana-forward.service
   fi

@@ -30,15 +30,22 @@ with forward('grafana',3000) as base:
         with urllib.request.urlopen(req,timeout=20) as r:return json.loads(r.read())
     datasource_health={uid:grafana('/api/datasources/uid/'+uid+'/health') for uid in ['prometheus','loki']}
     assert all(r.get('status')=='OK' for r in datasource_health.values()),datasource_health
+    infrastructure=grafana('/api/dashboards/uid/lab-infrastructure')
     panel_checks={}
-    for panel in dashboard['dashboard']['panels']:
+    for panel in dashboard['dashboard']['panels']+infrastructure['dashboard']['panels']:
+        if panel['type']=='row':continue
         target=panel['targets'][0]
         query={**target,'datasource':panel['datasource'],'intervalMs':15000,'maxDataPoints':240,'range':True}
-        result=grafana('/api/ds/query',{'from':str(int((time.time()-3600)*1000)),'to':str(int(time.time()*1000)),'queries':[query]})['results'][target['refId']]
+        try:
+            result=grafana('/api/ds/query',{'from':str(int((time.time()-3600)*1000)),'to':str(int(time.time()*1000)),'queries':[query]})['results'][target['refId']]
+        except urllib.error.HTTPError as error:
+            raise AssertionError((panel['title'],error.code,error.read().decode())) from error
         assert not result.get('error') and result.get('status',200)==200,(panel['title'],result)
         panel_checks[panel['title']]=len(result.get('frames',[]))
     assert panel_checks['Reports by state and traffic']>0,panel_checks
     assert panel_checks['Pod working set memory']>0,panel_checks
     assert panel_checks['Structured report logs: filter request_id/report_id in Explore']>0,panel_checks
+    for title in ['Host CPU utilizada','Memória disponível','Docker CPU em cores (1 = um núcleo)','Docker memória usada (cache inativo excluído)','CPU por pod (cores)','Memória working set por pod','Docker coleta bem-sucedida']:
+        assert panel_checks[title]>0,(title,panel_checks)
 save('observability.json',{'start':start,'end':utc(),'commit':sha(),'targets':[{'job':t['labels'].get('job'),'health':t['health']} for t in active],'metric_series':checks,'searchable_correlated_worker_logs':True,'queried_report_id':report_id,'dashboard_panels':len(dashboard['dashboard']['panels']),'grafana_datasource_health':datasource_health,'grafana_panel_frames':panel_checks,'result':'PASS'})
 print('PASS: Prometheus targets/resource metrics, Loki correlated worker logs and provisioned Grafana dashboard')
