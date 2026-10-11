@@ -1,0 +1,1 @@
+PASS: Prometheus targets/resource metrics, Loki correlated worker logs and provisioned Grafana dashboard

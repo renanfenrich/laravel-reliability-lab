@@ -1,0 +1,966 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "count": 7,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T18:57:10Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{api}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-bqb2z",
+                "namespace": "lab",
+                "resourceVersion": "836",
+                "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:20:43Z",
+            "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T18:57:10Z",
+                "name": "api-6999769bbf-bqb2z.18dd8e9ca5331cbe",
+                "namespace": "lab",
+                "resourceVersion": "8804",
+                "uid": "71806a23-9e46-4129-9a28-54af774073e3"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 7,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T18:57:10Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{api}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-bqb2z",
+                "namespace": "lab",
+                "resourceVersion": "836",
+                "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:20:43Z",
+            "message": "Created container: api",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T18:57:10Z",
+                "name": "api-6999769bbf-bqb2z.18dd8e9ca607974a",
+                "namespace": "lab",
+                "resourceVersion": "8805",
+                "uid": "92db5eb2-e251-4556-a21d-8e2a9a791926"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 7,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T18:57:10Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{api}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-bqb2z",
+                "namespace": "lab",
+                "resourceVersion": "836",
+                "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:20:43Z",
+            "message": "Started container api",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T18:57:10Z",
+                "name": "api-6999769bbf-bqb2z.18dd8e9ca9df4f0f",
+                "namespace": "lab",
+                "resourceVersion": "8806",
+                "uid": "3945dbdd-876c-4fbe-b880-80214b224a69"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 6,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T18:57:10Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{http}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-bqb2z",
+                "namespace": "lab",
+                "resourceVersion": "836",
+                "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:26Z",
+            "message": "Container image \"nginx:1.30.5-alpine\" already present on machine",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T18:57:10Z",
+                "name": "api-6999769bbf-bqb2z.18dd8e9ca9e50c5c",
+                "namespace": "lab",
+                "resourceVersion": "8451",
+                "uid": "1b61244f-b8e6-4551-a7e7-0d59722f598f"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 6,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T18:57:10Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{http}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-bqb2z",
+                "namespace": "lab",
+                "resourceVersion": "836",
+                "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:26Z",
+            "message": "Created container: http",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T18:57:10Z",
+                "name": "api-6999769bbf-bqb2z.18dd8e9caf296ddd",
+                "namespace": "lab",
+                "resourceVersion": "8452",
+                "uid": "b0f2470c-118a-437a-b040-c572f7eb019b"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 6,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T18:57:10Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{http}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-bqb2z",
+                "namespace": "lab",
+                "resourceVersion": "836",
+                "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:26Z",
+            "message": "Started container http",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T18:57:10Z",
+                "name": "api-6999769bbf-bqb2z.18dd8e9cb5d62c22",
+                "namespace": "lab",
+                "resourceVersion": "8453",
+                "uid": "fff68ef5-84dc-42c2-aac2-362a8cb32c27"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 12,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T19:18:19Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{api}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-bqb2z",
+                "namespace": "lab",
+                "resourceVersion": "836",
+                "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:19Z",
+            "message": "Liveness probe failed: Get \"http://10.244.0.11:8080/api/live\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T19:18:19Z",
+                "name": "api-6999769bbf-bqb2z.18dd8fc43a06277b",
+                "namespace": "lab",
+                "resourceVersion": "8415",
+                "uid": "5956238e-616b-49ed-9e53-bd982f6931f2"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 12,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T19:18:19Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{http}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-bqb2z",
+                "namespace": "lab",
+                "resourceVersion": "836",
+                "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:19Z",
+            "message": "Liveness probe failed: Get \"http://10.244.0.11:8080/api/live\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T19:18:19Z",
+                "name": "api-6999769bbf-bqb2z.18dd8fc43a08163f",
+                "namespace": "lab",
+                "resourceVersion": "8414",
+                "uid": "b746721b-d52d-4ff8-b472-742eab94a534"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 5,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T19:18:39Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{api}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-bqb2z",
+                "namespace": "lab",
+                "resourceVersion": "836",
+                "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:20:39Z",
+            "message": "Container api failed liveness probe, will be restarted",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T19:18:39Z",
+                "name": "api-6999769bbf-bqb2z.18dd8fc8e2266b60",
+                "namespace": "lab",
+                "resourceVersion": "8793",
+                "uid": "dc9c15f7-9398-4656-bdf0-62680eb359e7"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 4,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T19:18:42Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{http}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-bqb2z",
+                "namespace": "lab",
+                "resourceVersion": "836",
+                "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:23Z",
+            "message": "Container http failed liveness probe, will be restarted",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T19:18:43Z",
+                "name": "api-6999769bbf-bqb2z.18dd8fc9a60256f0",
+                "namespace": "lab",
+                "resourceVersion": "8429",
+                "uid": "9125ee36-8a68-4572-aa8d-5c815181ddd5"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 5,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T19:18:43Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{api}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-bqb2z",
+                "namespace": "lab",
+                "resourceVersion": "836",
+                "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:25Z",
+            "message": "Readiness probe failed: HTTP probe failed with statuscode: 502",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T20:18:22Z",
+                "name": "api-6999769bbf-bqb2z.18dd8fc9baf1434f",
+                "namespace": "lab",
+                "resourceVersion": "8437",
+                "uid": "d5dc00dd-35f4-4d4f-8384-22851efbc335"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 5,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T19:18:43Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{http}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-bqb2z",
+                "namespace": "lab",
+                "resourceVersion": "836",
+                "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:25Z",
+            "message": "Readiness probe failed: HTTP probe failed with statuscode: 502",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T20:18:22Z",
+                "name": "api-6999769bbf-bqb2z.18dd8fc9d082ae1b",
+                "namespace": "lab",
+                "resourceVersion": "8438",
+                "uid": "4f26cfd6-0ef2-44f9-9151-48c1af035e29"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 5,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T19:20:12Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{api}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-bqb2z",
+                "namespace": "lab",
+                "resourceVersion": "836",
+                "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:38Z",
+            "message": "Readiness probe failed: Get \"http://10.244.0.11:8080/api/ready\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T20:18:18Z",
+                "name": "api-6999769bbf-bqb2z.18dd8fde63da9638",
+                "namespace": "lab",
+                "resourceVersion": "8511",
+                "uid": "072b9e97-7cf2-400c-a5ae-3d081d04fc3d"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 7,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T18:57:10Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{api}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-f7cbr",
+                "namespace": "lab",
+                "resourceVersion": "840",
+                "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:19:02Z",
+            "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T18:57:10Z",
+                "name": "api-6999769bbf-f7cbr.18dd8e9ca5213aa9",
+                "namespace": "lab",
+                "resourceVersion": "8559",
+                "uid": "805f0221-9a87-4d23-ac7e-d8e1a81b7923"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 7,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T18:57:10Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{api}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-f7cbr",
+                "namespace": "lab",
+                "resourceVersion": "840",
+                "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:19:02Z",
+            "message": "Created container: api",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T18:57:10Z",
+                "name": "api-6999769bbf-f7cbr.18dd8e9ca62000a1",
+                "namespace": "lab",
+                "resourceVersion": "8560",
+                "uid": "28f0d8e3-cbd1-4f5c-8ec1-6748fc266ee0"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 7,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T18:57:10Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{api}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-f7cbr",
+                "namespace": "lab",
+                "resourceVersion": "840",
+                "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:19:02Z",
+            "message": "Started container api",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T18:57:10Z",
+                "name": "api-6999769bbf-f7cbr.18dd8e9caa0f4416",
+                "namespace": "lab",
+                "resourceVersion": "8561",
+                "uid": "c490f2af-9f84-49dc-be43-785eb6f4dfdc"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 6,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T18:57:10Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{http}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-f7cbr",
+                "namespace": "lab",
+                "resourceVersion": "840",
+                "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:29Z",
+            "message": "Container image \"nginx:1.30.5-alpine\" already present on machine",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T18:57:10Z",
+                "name": "api-6999769bbf-f7cbr.18dd8e9caa14429c",
+                "namespace": "lab",
+                "resourceVersion": "8467",
+                "uid": "e442aa1a-98a7-45dc-afaf-c7780bc0333e"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 6,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T18:57:10Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{http}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-f7cbr",
+                "namespace": "lab",
+                "resourceVersion": "840",
+                "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:29Z",
+            "message": "Created container: http",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T18:57:10Z",
+                "name": "api-6999769bbf-f7cbr.18dd8e9caf4e4ac3",
+                "namespace": "lab",
+                "resourceVersion": "8468",
+                "uid": "2e9e8a97-b615-43e5-97a7-61e6182b84ec"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 6,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T18:57:10Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{http}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-f7cbr",
+                "namespace": "lab",
+                "resourceVersion": "840",
+                "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:29Z",
+            "message": "Started container http",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T18:57:10Z",
+                "name": "api-6999769bbf-f7cbr.18dd8e9cb5d9b87a",
+                "namespace": "lab",
+                "resourceVersion": "8475",
+                "uid": "5923e20f-ad1d-41d5-b8b5-f286d54c178b"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 15,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T19:17:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{api}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-f7cbr",
+                "namespace": "lab",
+                "resourceVersion": "840",
+                "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:39Z",
+            "message": "Liveness probe failed: Get \"http://10.244.0.12:8080/api/live\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T19:17:49Z",
+                "name": "api-6999769bbf-f7cbr.18dd8fbd3e96eabc",
+                "namespace": "lab",
+                "resourceVersion": "8512",
+                "uid": "418814aa-2870-4a00-85a3-d1f5f38193bc"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 14,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T19:17:49Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{http}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-f7cbr",
+                "namespace": "lab",
+                "resourceVersion": "840",
+                "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:19Z",
+            "message": "Liveness probe failed: Get \"http://10.244.0.12:8080/api/live\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T19:17:49Z",
+                "name": "api-6999769bbf-f7cbr.18dd8fbd3e976b13",
+                "namespace": "lab",
+                "resourceVersion": "8418",
+                "uid": "543c1248-aefe-4a79-965e-8ac8fd8e9c29"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 5,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T19:18:09Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{api}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-f7cbr",
+                "namespace": "lab",
+                "resourceVersion": "840",
+                "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:59Z",
+            "message": "Container api failed liveness probe, will be restarted",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T19:18:09Z",
+                "name": "api-6999769bbf-f7cbr.18dd8fc1e6bfcabb",
+                "namespace": "lab",
+                "resourceVersion": "8554",
+                "uid": "6b0eb15b-2992-4f7c-8bc9-d7f63fe4465c"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 4,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T19:18:12Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{http}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-f7cbr",
+                "namespace": "lab",
+                "resourceVersion": "840",
+                "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:19Z",
+            "message": "Container http failed liveness probe, will be restarted",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T19:18:12Z",
+                "name": "api-6999769bbf-f7cbr.18dd8fc2a3e689cc",
+                "namespace": "lab",
+                "resourceVersion": "8419",
+                "uid": "65498fb1-b9cb-4d17-ade7-7bbbd85364b8"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 10,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T19:19:55Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{api}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-f7cbr",
+                "namespace": "lab",
+                "resourceVersion": "840",
+                "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:22Z",
+            "message": "Readiness probe failed: Get \"http://10.244.0.12:8080/api/ready\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T20:18:22Z",
+                "name": "api-6999769bbf-f7cbr.18dd8fda9fa769d6",
+                "namespace": "lab",
+                "resourceVersion": "8426",
+                "uid": "1491d489-93f5-4f6b-8fd0-eabbb7bad767"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 10,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T19:19:56Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{http}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-f7cbr",
+                "namespace": "lab",
+                "resourceVersion": "840",
+                "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:24Z",
+            "message": "Readiness probe failed: Get \"http://10.244.0.12:8080/api/ready\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T20:18:19Z",
+                "name": "api-6999769bbf-f7cbr.18dd8fdab40c4469",
+                "namespace": "lab",
+                "resourceVersion": "8435",
+                "uid": "f07bf237-cb12-4b54-a92b-2c5b56652e3a"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 2,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T19:20:16Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{api}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-f7cbr",
+                "namespace": "lab",
+                "resourceVersion": "840",
+                "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:24Z",
+            "message": "Readiness probe failed: Get \"http://10.244.0.12:8080/api/ready\": dial tcp 10.244.0.12:8080: connect: connection refused",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T20:18:24Z",
+                "name": "api-6999769bbf-f7cbr.18dd8fdf5ec7e544",
+                "namespace": "lab",
+                "resourceVersion": "8433",
+                "uid": "4cd7cb3d-8593-4d5b-ba46-c2558e8b2f12"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T20:18:26Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{http}",
+                "kind": "Pod",
+                "name": "api-6999769bbf-f7cbr",
+                "namespace": "lab",
+                "resourceVersion": "840",
+                "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:26Z",
+            "message": "Readiness probe failed: Get \"http://10.244.0.12:8080/api/ready\": dial tcp 10.244.0.12:8080: connect: connection refused",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T20:18:26Z",
+                "name": "api-6999769bbf-f7cbr.18dd930c101d79ab",
+                "namespace": "lab",
+                "resourceVersion": "8454",
+                "uid": "8064d345-e27e-403b-9ad4-a2114e0ba3a7"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 14,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T19:20:12Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{gateway}",
+                "kind": "Pod",
+                "name": "gateway-cd9dfc89d-zdmtz",
+                "namespace": "lab",
+                "resourceVersion": "662",
+                "uid": "c46f5ae3-7c4f-4704-8a44-27a93fa81def"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:19:35Z",
+            "message": "Readiness probe failed: Get \"http://10.244.0.5:8080/api/ready\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T19:20:12Z",
+                "name": "gateway-cd9dfc89d-zdmtz.18dd8fde7228df01",
+                "namespace": "lab",
+                "resourceVersion": "8642",
+                "uid": "81437389-170f-4a33-8d53-3fcf52a0ff16"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 2,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-11T20:18:29Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{gateway}",
+                "kind": "Pod",
+                "name": "gateway-cd9dfc89d-zdmtz",
+                "namespace": "lab",
+                "resourceVersion": "662",
+                "uid": "c46f5ae3-7c4f-4704-8a44-27a93fa81def"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-11T20:18:31Z",
+            "message": "Readiness probe failed: HTTP probe failed with statuscode: 504",
+            "metadata": {
+                "creationTimestamp": "2026-10-11T20:18:29Z",
+                "name": "gateway-cd9dfc89d-zdmtz.18dd930ca7aeabc2",
+                "namespace": "lab",
+                "resourceVersion": "8486",
+                "uid": "6f8c2336-1d59-4c19-bb71-71376ab51a37"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "laravel-reliability-lab-control-plane",
+            "source": {
+                "component": "kubelet",
+                "host": "laravel-reliability-lab-control-plane"
+            },
+            "type": "Warning"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

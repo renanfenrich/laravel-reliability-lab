@@ -33,3 +33,7 @@ During the ten-minute confirmation, FPM maxima were 0.396/0.410 cores, PostgreSQ
 The original reports history query mistakenly used lab_reports_current and returned no series. That artifact is preserved; supplemental-history.json captures the correct lab_reports and overdue metrics, per-container CPU, readiness, restarts, and firing alerts over the identical interval. Future harness runs use the corrected name. resource-summary.json separates measured submission intervals. No firing alert series was observed over this load interval; normal SLO burn alerts exclude this synthetic traffic, and successful recovery does not prove notification delivery for every failure mode. G1 deterministic alert and local email evidence remains separate.
 
 Recommended follow-up: isolate lightweight process probes from the application request pool, profile PostgreSQL transaction/metric contention, and repeat the same fixture with one configuration change at a time. Preserve the failed 60 requests/s cohort and ambiguous acknowledgments. Do not claim 60 requests/s is sustainable or invent an interpolated capacity ceiling.
+
+## Live viewing rerun
+
+A subsequent user-requested rerun with external Grafana viewing again confirmed 30 requests/s for ten minutes: 18,000 acceptances, zero errors, client p99 89.00 ms, completion p99 22.89 seconds, all deadlines met. Its 60 requests/s step failed and was generator-limited; preserve both runs rather than averaging away failure. See [rerun report](load-rerun-20261011.md) and evidence/g2/load-20261011T200936Z/.
