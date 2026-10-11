@@ -5,6 +5,25 @@ export KUBECONFIG="$PWD/.kubeconfig"
 cluster=laravel-reliability-lab
 k() { "$PWD/.tools/kubectl" --kubeconfig "$KUBECONFIG" --context "kind-$cluster" "$@"; }
 case "${1:-}" in
+ tunnel-up)
+  test -x .tools/cloudflared
+  token_file="$PWD/.runtime/cloudflare/tunnel-token"
+  test -f "$token_file" || { echo 'Missing private tunnel token; run make tunnel-token interactively on the notebook.' >&2; exit 1; }
+  python3 - "$token_file" <<'PY'
+from pathlib import Path
+import os,stat,sys
+p=Path(sys.argv[1]); assert not p.is_symlink() and p.resolve()==Path.cwd()/'.runtime/cloudflare/tunnel-token', 'Unsafe credential path'
+assert p.stat().st_uid==os.getuid() and stat.S_IMODE(p.stat().st_mode)==0o600 and p.stat().st_size>0, 'Token must be nonempty, owned by this user, and mode 0600'
+PY
+  test "$(sha256sum .tools/cloudflared | cut -d' ' -f1)" = d33ff2d14475178d2012c2c56beba87389ac5ded27649519f198a7d3134a99db
+  curl -fsS --max-time 5 http://192.168.1.9:13000/api/health >/dev/null
+  if ! systemctl --user is-active --quiet laravel-reliability-lab-tunnel.service; then
+   systemd-run --user --unit=laravel-reliability-lab-tunnel --property=Restart=always --property=RestartSec=5 --property=StartLimitIntervalSec=0 --property=UMask=0077 "$PWD/.tools/cloudflared" tunnel --no-autoupdate run --token-file "$token_file"
+  fi
+  ;;
+ tunnel-down)
+  if systemctl --user is-active --quiet laravel-reliability-lab-tunnel.service; then systemctl --user stop laravel-reliability-lab-tunnel.service; fi
+  ;;
  doctor)
   for t in docker kind terraform python3 curl git; do command -v "$t"; done
   docker info --format '{{.ServerVersion}}'; docker compose version; kind version; terraform version
@@ -96,6 +115,7 @@ PY
   python3 scripts/observability-check.py
   ;;
  teardown)
+  "$0" tunnel-down
   "$0" mail-down
   python3 scripts/host-metrics-control.py stop
   if command -v systemctl >/dev/null && systemctl --user is-active --quiet laravel-reliability-lab-grafana-forward.service; then
