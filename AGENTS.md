@@ -27,3 +27,5 @@ External-access authorization: on 2026-10-11 the user requested Cloudflare Tunne
 G2 publication authorization: on 2026-10-11 the user confirmed G2 completion and authorized publication and merge. Publish the completed G2 branch and open a ready PR under renanfenrich. The owner subsequently removed the separate reviewer requirement and explicitly authorized merging PR #2; check final-head CI before merging. The next request authorizes a G3 plan only, not G3 execution, deployment, or publication.
 
 Reviewer policy update (2026-10-11): the owner explicitly removed the separate-account reviewer requirement for this project. Earlier reviewer-gate statements are superseded. This does not authorize G3 implementation or publication.
+
+G3 authorization (2026-10-11): the owner explicitly authorized execution of docs/goals/G3.md locally. Use feat/g3-overload-resilience, preserve G1/G2 evidence and project data, measure before choosing a correction, and retain failed/generator-limited observations. No G3 push, PR, merge or release is authorized. The removed separate reviewer requirement remains removed.
