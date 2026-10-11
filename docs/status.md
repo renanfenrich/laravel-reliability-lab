@@ -70,3 +70,7 @@ Documentation validation: PASS for all 26 tracked Markdown files: no remaining P
 
 ## Documentation integration authorization (2026-10-11)
 The user explicitly stated “Approved, push and merge” for the US English documentation changes. Integrate through a pull request under the personal account without inventing a separate octavariumdigitalpartners review. This direct authorization applies to this documentation change only; the normal reviewer requirement remains for subsequent work. GitHub publication/integration results are available in the linked pull request after execution.
+
+## G2 active (2026-10-11)
+
+User authorized definition and local execution of G2. Branch: feat/g2-capacity-recovery; base 71327a4. Scope/checklist: docs/goals/G2.md. Initial host: 31 GiB RAM, 20 GiB available, 84 GiB free disk; existing dedicated lab workloads ready. No implementation or experiment acceptance claimed yet. Next: pin NGINX stable runtime, preserve CLI worker commands, add gateway and verify both API replicas before sustained tests. No push/merge/publication authorized for G2. No tool blocker observed.
