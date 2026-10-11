@@ -84,7 +84,7 @@ Prometheus → Alertmanager 0.34.1 → Mailpit 1.31.5 → `alerts@lab.test`. The
 
 ## Goals and G2 execution
 
-[G1](docs/goals/G1.md) is complete and published as 0.1.0. [G2](docs/goals/G2.md) adds sustained capacity and recovery validation locally; publication requires separate approval. See [current status](docs/status.md).
+[G1](docs/goals/G1.md) is complete and published as 0.1.0. [G2](docs/goals/G2.md) completed local capacity and recovery validation and is published in [PR #2](https://github.com/renanfenrich/laravel-reliability-lab/pull/2), merged under explicit owner authorization. [G3](docs/goals/G3.md) plans overload resilience and bottleneck attribution; implementation is not yet authorized. See [current status](docs/status.md).
 
 The G2 runtime uses NGINX 1.30.5 and PHP 8.4.26 FPM. `make dev-up` exposes the Compose HTTP container on loopback port 18080. Kubernetes API/exporter pods use nonroot HTTP sidecars; the gateway Service exercises both API replicas. Port-forward `service/gateway 18081:8080` for application access. The `X-Lab-API-Pod` response header supports experiment distribution checks. Client measurements include admission/network/metric-write overhead omitted by the original middleware SLI.
 

@@ -1,4 +1,6 @@
-# G1 resume state — READY FOR HUMAN REVIEW
+# Lab resume state — G2 merged; G3 planned
+
+Current summary (2026-10-11): G2 is complete, published and merged in PR #2. G3 is planned locally only; implementation and publication are not authorized. Earlier entries preserve historical states and are superseded by the latest entry below.
 
 Goal status: G1 complete and approved; release 0.1.0 published under explicit authorization. All phases A/B/C/D are complete. No PR, merge, or AWS/cloud resource was created. Hosted CI was in progress at the publication check; its final result is not established here. The documentation follow-up was reviewed and explicitly approved by the user for push and merge. renanfenrich owns Git flow. The former separate reviewer requirement was removed by the owner; see the latest status entry.
 
@@ -128,3 +130,11 @@ The user confirmed G2 completion and explicitly authorized publication and merge
 The owner explicitly removed the separate reviewer account from this project's review policy and authorized merging PR #2 now. Earlier mandatory-review and collaborator-access blockers are superseded; no reviewer identity was impersonated and no collaborator permissions were changed. AGENTS.md, README, goal, validation and error-budget documentation now reflect owner-controlled Git authorization. Recheck final-head hosted CI after publishing this documentation-only policy update, then merge the existing G2 PR. Record the actual merge SHA/result after execution.
 
 The G3 plan remains in the local docs/g3-overload-resilience branch and is not part of this G2 PR. Preserve it and align it with merged main afterward. G3 implementation and publication remain unauthorized. The running lab resources and retained evidence require no change for this Git operation.
+
+## G2 merged; G3 local plan preserved (2026-10-11)
+
+The owner explicitly removed the separate-account review requirement and authorized immediate integration. No collaborator permission was changed and no reviewer account was impersonated. G2 PR #2 is MERGED at 2026-10-11T20:48:40Z: https://github.com/renanfenrich/laravel-reliability-lab/pull/2. Final source head 6d973625123f1eb7f52c60193fcfb7ee9c7fbf2f passed both hosted validation runs: https://github.com/renanfenrich/laravel-reliability-lab/actions/runs/38173560270 and https://github.com/renanfenrich/laravel-reliability-lab/actions/runs/38173563458. GitGuardian reported NEUTRAL, not a validation success. The repository rejected merge-commit integration because that method is disabled; squash merge succeeded with cba42678bbca21b9a7eb60c5c6a68e69486c3a82. No version tag or release was created.
+
+The documentation-only local branch docs/g3-overload-resilience was rebased onto the merged origin/main, preserving docs/goals/G3.md and updating its review policy. G3 plans overload resilience and bottleneck attribution: probe contracts, bounded measurements, the smallest evidence-based change, and comparable load/recovery validation. It has not been pushed or implemented. Request explicit G3 execution authorization before application, infrastructure or experiment work; future publication/merge also requires owner authorization. No separate reviewer account is required for this project.
+
+Documentation whitespace and actual runtime credential exclusion checks passed. The G3 plan and current status are local follow-up documentation; hosted CI above covers the G2 source head, not this unpushed documentation commit or a separate merge-SHA test. Keep the dedicated lab, tunnel and retained data running; no service or resource change was needed. Resume from this entry, docs/goals/G3.md and Git status without repeating completed G2 discovery or load tests.
