@@ -29,3 +29,5 @@ G2 publication authorization: on 2026-10-11 the user confirmed G2 completion and
 Reviewer policy update (2026-10-11): the owner explicitly removed the separate-account reviewer requirement for this project. Earlier reviewer-gate statements are superseded. This does not authorize G3 implementation or publication.
 
 G3 authorization (2026-10-11): the owner explicitly authorized execution of docs/goals/G3.md locally. Use feat/g3-overload-resilience, preserve G1/G2 evidence and project data, measure before choosing a correction, and retain failed/generator-limited observations. No G3 push, PR, merge or release is authorized. The removed separate reviewer requirement remains removed.
+
+G3 publication and G4 authorization (2026-10-11): the owner approved G3 and explicitly authorized push and merge after final-head CI. Open a ready PR and squash-merge it without a separate reviewer requirement. No release version/tag was requested. After confirmed G3 integration, define and execute G4 locally to address measured dispatch notification amplification while preserving durable acceptance, fencing, recovery and SLI populations. G4 publication/merge remains unauthorized.
