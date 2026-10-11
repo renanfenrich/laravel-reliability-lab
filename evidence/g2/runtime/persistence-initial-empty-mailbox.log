@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/renanfenrich/Code/laravel-reliability-lab/scripts/g2-persistence.py", line 28, in <module>
+    messages=basic(inbox,'/api/v1/messages')['messages'];assert messages
+                                                                ^^^^^^^^
+AssertionError

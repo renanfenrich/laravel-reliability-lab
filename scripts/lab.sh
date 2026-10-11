@@ -34,7 +34,7 @@ case "${1:-}" in
  cluster-up)
   test "$(kind version | awk '{print $2}')" = v0.30.0
   python3 scripts/init-env.py
-  mkdir -p .tools .runtime/postgres
+  mkdir -p .tools .runtime/postgres .runtime/observability
   if ! test -x .tools/kubectl; then
    curl -fsSL https://dl.k8s.io/release/v1.34.0/bin/linux/amd64/kubectl -o .tools/kubectl
    curl -fsSL https://dl.k8s.io/release/v1.34.0/bin/linux/amd64/kubectl.sha256 -o .tools/kubectl.sha256
@@ -43,7 +43,7 @@ case "${1:-}" in
   .tools/kubectl version --client -o json | python3 -c 'import sys,json; assert json.load(sys.stdin)["clientVersion"]["gitVersion"]=="v1.34.0"'
   python3 - <<'PY'
 import json,os
-config={'kind':'Cluster','apiVersion':'kind.x-k8s.io/v1alpha4','name':'laravel-reliability-lab','networking':{'apiServerAddress':'127.0.0.1'},'nodes':[{'role':'control-plane','extraMounts':[{'hostPath':os.path.abspath('.runtime/postgres'),'containerPath':'/lab-postgres'}]}]}
+config={'kind':'Cluster','apiVersion':'kind.x-k8s.io/v1alpha4','name':'laravel-reliability-lab','networking':{'apiServerAddress':'127.0.0.1'},'nodes':[{'role':'control-plane','extraMounts':[{'hostPath':os.path.abspath('.runtime/postgres'),'containerPath':'/lab-postgres'},{'hostPath':os.path.abspath('.runtime/observability'),'containerPath':'/lab-observability'}]}]}
 open('.runtime/kind.json','w').write(json.dumps(config))
 PY
   if kind get clusters 2>/dev/null | grep -qx "$cluster"; then
@@ -64,19 +64,22 @@ PY
   ;;
  g2-backup) python3 -u scripts/g2-backup.py ;;
  g2-runtime) python3 scripts/g2-runtime-check.py ;;
+ g2-load) python3 -u scripts/g2-load.py ;;
+ g2-interruption) python3 -u scripts/g2-interruption.py ;;
  alert-test) python3 -u scripts/alert-email-test.py ;;
  host-metrics-up) python3 scripts/host-metrics-control.py start ;;
  host-metrics-down) python3 scripts/host-metrics-control.py stop ;;
  deploy)
   test -f .kubeconfig; k get nodes
-  kind load docker-image --name "$cluster" laravel-reliability-app:g2 laravel-reliability-simulator:g2
-  docker image save nginx:1.30.5-alpine | docker exec -i "${cluster}-control-plane" ctr --namespace=k8s.io images import --platform linux/amd64 --digests -
+  docker inspect "${cluster}-control-plane" --format '{{json .Mounts}}' | python3 -c 'import json,sys,pathlib; mounts=json.load(sys.stdin); expected=str(pathlib.Path(".runtime/observability").resolve()); assert any(m["Destination"]=="/lab-observability" and m["Source"]==expected for m in mounts), "Dedicated cluster lacks the G2 retained-storage mount; export telemetry, back up PostgreSQL, then recreate only the lab cluster"'
+  python3 scripts/render-infra.py
+  python3 scripts/load-cluster-images.py
   python3 scripts/host-metrics-control.py start
   python3 scripts/render-infra.py
   terraform -chdir=infra init -input=false
   python3 scripts/tf-secrets.py
   terraform -chdir=infra apply -auto-approve -input=false -var-file=local.tfvars.json
-  for name in $(python3 -c 'import json; print(" ".join(x["metadata"]["name"] for x in json.load(open("infra/manifests.json")).values() if x["kind"]=="Deployment"))'); do k -n lab rollout status deployment/"$name" --timeout=180s; done
+  for name in $(python3 -c 'import json; print(" ".join(x["metadata"]["name"] for x in json.load(open("infra/manifests.json")).values() if x["kind"]=="Deployment"))'); do k -n lab rollout status deployment/"$name" --timeout=360s; done
   k -n lab exec deployment/api -- php artisan migrate --force
   for name in api worker scheduler exporter; do k -n lab rollout status deployment/"$name" --timeout=120s; done
   ;;
@@ -105,7 +108,7 @@ PY
    for file in infra/terraform.tfstate infra/terraform.tfstate.backup; do if test -f "$file"; then mv "$file" ".runtime/old-state/$(basename "$file").$(date +%s)"; fi; done
    rm -f .kubeconfig
   fi
-  echo 'Preserved Compose volumes and .runtime/postgres. Observability ephemeral data removed with cluster.'
+  echo 'Preserved Compose volumes, .runtime/postgres and .runtime/observability. Transient Redis data removed with cluster.'
   ;;
  data-reset) ./scripts/reset-data.sh ;;
  *) echo 'Unknown lab command' >&2; exit 2 ;;

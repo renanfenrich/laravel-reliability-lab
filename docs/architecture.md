@@ -19,3 +19,7 @@ stateDiagram-v2
 State and metrics outcomes commit together. Redis notifications are replaceable; report data isn't. The report row is the outbox and the unique result storage. Reconciler materializes deadline outcomes independently of successful completion. Fencing protects against a delayed old attempt after a newer worker takes over. A real mutating dependency would need downstream idempotency; this simulator is deterministic/pure.
 
 Terraform owns resource manifests after kind bootstrap. Transient smoke/load/fault commands operate on existing lab resources; they never deploy to another context. Code checksums force rollout before migrations; configuration checksums refresh observability pods. No manual restart annotations are introduced by the final deploy command. Preserved local PostgreSQL storage differs from ephemeral Redis/observability data. The CLI HTTP server and single-node database/cluster explicitly limit conclusions.
+
+## G2 runtime and persistence
+
+NGINX/PHP-FPM replaces the G1 development HTTP server. An internal gateway opens independent connections through the API ClusterIP; both ready replicas are verified with serving-pod response headers. PostgreSQL still owns durable business/metric state; no queue semantics changed. Six single-writer Recreate deployments mount retained local telemetry PVCs backed by a project-only kind host bind mount. G2 backup restoration uses a new isolated logical database, never overwrites live PostgreSQL. See ADRs009/010 and docs/g2/ for measured limits and commands.

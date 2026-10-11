@@ -1,0 +1,38 @@
+{
+  "start": "2026-10-11T19:04:50Z",
+  "end": "2026-10-11T19:05:14Z",
+  "commit": "2ebfc06db0e4b3abb3a77ee21706ddba3adf9d86",
+  "old_pods": [
+    "alertmanager-c9474ff4f-sn6km",
+    "alloy-6d6fc9cf66-skws7",
+    "grafana-6647b4bc55-74lk9",
+    "loki-597488bd7d-xgvfp",
+    "mailpit-55c5466dc-vvsjf",
+    "prometheus-65d764bdfc-8qf74"
+  ],
+  "new_pods": [
+    "alertmanager-c9474ff4f-slgvf",
+    "alloy-6d6fc9cf66-b8xtc",
+    "grafana-6647b4bc55-qzpp8",
+    "loki-597488bd7d-hrbbn",
+    "mailpit-55c5466dc-r8n2d",
+    "prometheus-65d764bdfc-dsmdj"
+  ],
+  "old_uids": [
+    "4ee04239-6c05-49d8-8773-6c190b9b1054",
+    "ab279b72-a985-4fc6-81fd-3ddc1721d110",
+    "c093af56-aee1-4192-94c3-d95512322308",
+    "4b02cdb6-2d58-4f12-b4e3-1cd339976d56",
+    "02d9e036-7995-445d-b193-0be4f4566401",
+    "970e9e3e-4255-487d-bd9e-a196ef10ab61"
+  ],
+  "new_uids": [
+    "7c9ad2ff-2602-411f-960c-f4a9d5a6387a",
+    "61bbddb0-52e3-41d2-9e99-c3a56f32c5d6",
+    "3f2a2b27-57f0-4704-ae13-2f0371f2d093",
+    "e977cdc2-6595-409e-bfe3-dfe4e0a93033",
+    "da123b32-5de8-491c-bbe8-974a2658de80",
+    "dfe80f15-60f7-4d86-80df-d99838a99307"
+  ],
+  "result": "PASS"
+}

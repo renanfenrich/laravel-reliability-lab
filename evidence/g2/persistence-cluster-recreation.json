@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-10-11T19:05:31Z",
+  "commit": "2ebfc06db0e4b3abb3a77ee21706ddba3adf9d86",
+  "historical_up_preserved": true,
+  "correlated_completed_log_preserved": true,
+  "mail_message_preserved": "2peT6kB6ToNeI7eDy6zZfw",
+  "grafana_annotation_preserved": 1,
+  "bound_claims": {
+    "alertmanager-data": "Bound",
+    "alloy-data": "Bound",
+    "grafana-data": "Bound",
+    "loki-data": "Bound",
+    "mailpit-data": "Bound",
+    "postgres-data": "Bound",
+    "prometheus-data": "Bound"
+  },
+  "result": "PASS"
+}

@@ -1945,7 +1945,7 @@
     "spec": {
       "replicas": 1,
       "strategy": {
-        "type": "RollingUpdate"
+        "type": "Recreate"
       },
       "selector": {
         "matchLabels": {
@@ -1997,7 +1997,8 @@
               "args": [
                 "--config.file=/etc/prometheus/prometheus.yml",
                 "--storage.tsdb.path=/prometheus",
-                "--storage.tsdb.retention.time=31d"
+                "--storage.tsdb.retention.time=31d",
+                "--storage.tsdb.retention.size=2GB"
               ],
               "volumeMounts": [
                 {
@@ -2055,7 +2056,9 @@
             },
             {
               "name": "data",
-              "emptyDir": {}
+              "persistentVolumeClaim": {
+                "claimName": "prometheus-data"
+              }
             }
           ],
           "serviceAccountName": "prometheus",
@@ -2065,6 +2068,48 @@
               "hostnames": [
                 "lab-host-metrics"
               ]
+            }
+          ],
+          "initContainers": [
+            {
+              "name": "data-owner",
+              "image": "nginx:1.30.5-alpine",
+              "imagePullPolicy": "IfNotPresent",
+              "command": [
+                "sh",
+                "-c",
+                "chown 65534:65534 /data && chmod 750 /data"
+              ],
+              "resources": {
+                "requests": {
+                  "cpu": "10m",
+                  "memory": "16Mi"
+                },
+                "limits": {
+                  "cpu": "100m",
+                  "memory": "32Mi"
+                }
+              },
+              "volumeMounts": [
+                {
+                  "name": "data",
+                  "mountPath": "/data"
+                }
+              ],
+              "securityContext": {
+                "runAsUser": 0,
+                "allowPrivilegeEscalation": false,
+                "readOnlyRootFilesystem": true,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ],
+                  "add": [
+                    "CHOWN",
+                    "FOWNER"
+                  ]
+                }
+              }
             }
           ]
         }
@@ -2172,7 +2217,7 @@
     "spec": {
       "replicas": 1,
       "strategy": {
-        "type": "RollingUpdate"
+        "type": "Recreate"
       },
       "selector": {
         "matchLabels": {
@@ -2282,7 +2327,51 @@
             },
             {
               "name": "data",
-              "emptyDir": {}
+              "persistentVolumeClaim": {
+                "claimName": "alertmanager-data"
+              }
+            }
+          ],
+          "initContainers": [
+            {
+              "name": "data-owner",
+              "image": "nginx:1.30.5-alpine",
+              "imagePullPolicy": "IfNotPresent",
+              "command": [
+                "sh",
+                "-c",
+                "chown 65534:65534 /data && chmod 750 /data"
+              ],
+              "resources": {
+                "requests": {
+                  "cpu": "10m",
+                  "memory": "16Mi"
+                },
+                "limits": {
+                  "cpu": "100m",
+                  "memory": "32Mi"
+                }
+              },
+              "volumeMounts": [
+                {
+                  "name": "data",
+                  "mountPath": "/data"
+                }
+              ],
+              "securityContext": {
+                "runAsUser": 0,
+                "allowPrivilegeEscalation": false,
+                "readOnlyRootFilesystem": true,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ],
+                  "add": [
+                    "CHOWN",
+                    "FOWNER"
+                  ]
+                }
+              }
             }
           ]
         }
@@ -2319,7 +2408,7 @@
     "spec": {
       "replicas": 1,
       "strategy": {
-        "type": "RollingUpdate"
+        "type": "Recreate"
       },
       "selector": {
         "matchLabels": {
@@ -2446,7 +2535,9 @@
           "volumes": [
             {
               "name": "data",
-              "emptyDir": {}
+              "persistentVolumeClaim": {
+                "claimName": "mailpit-data"
+              }
             },
             {
               "name": "auth",
@@ -2458,6 +2549,48 @@
                     "path": "MAILPIT_UI_AUTH"
                   }
                 ]
+              }
+            }
+          ],
+          "initContainers": [
+            {
+              "name": "data-owner",
+              "image": "nginx:1.30.5-alpine",
+              "imagePullPolicy": "IfNotPresent",
+              "command": [
+                "sh",
+                "-c",
+                "chown 1000:1000 /data && chmod 750 /data"
+              ],
+              "resources": {
+                "requests": {
+                  "cpu": "10m",
+                  "memory": "16Mi"
+                },
+                "limits": {
+                  "cpu": "100m",
+                  "memory": "32Mi"
+                }
+              },
+              "volumeMounts": [
+                {
+                  "name": "data",
+                  "mountPath": "/data"
+                }
+              ],
+              "securityContext": {
+                "runAsUser": 0,
+                "allowPrivilegeEscalation": false,
+                "readOnlyRootFilesystem": true,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ],
+                  "add": [
+                    "CHOWN",
+                    "FOWNER"
+                  ]
+                }
               }
             }
           ]
@@ -2516,7 +2649,7 @@
     "spec": {
       "replicas": 1,
       "strategy": {
-        "type": "RollingUpdate"
+        "type": "Recreate"
       },
       "selector": {
         "matchLabels": {
@@ -2628,11 +2761,55 @@
             },
             {
               "name": "data",
-              "emptyDir": {}
+              "persistentVolumeClaim": {
+                "claimName": "loki-data"
+              }
             },
             {
               "name": "tmp",
               "emptyDir": {}
+            }
+          ],
+          "initContainers": [
+            {
+              "name": "data-owner",
+              "image": "nginx:1.30.5-alpine",
+              "imagePullPolicy": "IfNotPresent",
+              "command": [
+                "sh",
+                "-c",
+                "chown 10001:10001 /data && chmod 750 /data"
+              ],
+              "resources": {
+                "requests": {
+                  "cpu": "10m",
+                  "memory": "16Mi"
+                },
+                "limits": {
+                  "cpu": "100m",
+                  "memory": "32Mi"
+                }
+              },
+              "volumeMounts": [
+                {
+                  "name": "data",
+                  "mountPath": "/data"
+                }
+              ],
+              "securityContext": {
+                "runAsUser": 0,
+                "allowPrivilegeEscalation": false,
+                "readOnlyRootFilesystem": true,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ],
+                  "add": [
+                    "CHOWN",
+                    "FOWNER"
+                  ]
+                }
+              }
             }
           ]
         }
@@ -2680,7 +2857,7 @@
     "spec": {
       "replicas": 1,
       "strategy": {
-        "type": "RollingUpdate"
+        "type": "Recreate"
       },
       "selector": {
         "matchLabels": {
@@ -2791,10 +2968,54 @@
             },
             {
               "name": "data",
-              "emptyDir": {}
+              "persistentVolumeClaim": {
+                "claimName": "alloy-data"
+              }
             }
           ],
-          "serviceAccountName": "alloy"
+          "serviceAccountName": "alloy",
+          "initContainers": [
+            {
+              "name": "data-owner",
+              "image": "nginx:1.30.5-alpine",
+              "imagePullPolicy": "IfNotPresent",
+              "command": [
+                "sh",
+                "-c",
+                "chown 1000:1000 /data && chmod 750 /data"
+              ],
+              "resources": {
+                "requests": {
+                  "cpu": "10m",
+                  "memory": "16Mi"
+                },
+                "limits": {
+                  "cpu": "100m",
+                  "memory": "32Mi"
+                }
+              },
+              "volumeMounts": [
+                {
+                  "name": "data",
+                  "mountPath": "/data"
+                }
+              ],
+              "securityContext": {
+                "runAsUser": 0,
+                "allowPrivilegeEscalation": false,
+                "readOnlyRootFilesystem": true,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ],
+                  "add": [
+                    "CHOWN",
+                    "FOWNER"
+                  ]
+                }
+              }
+            }
+          ]
         }
       }
     }
@@ -2925,7 +3146,7 @@
     "spec": {
       "replicas": 1,
       "strategy": {
-        "type": "RollingUpdate"
+        "type": "Recreate"
       },
       "selector": {
         "matchLabels": {
@@ -3092,11 +3313,55 @@
             },
             {
               "name": "data",
-              "emptyDir": {}
+              "persistentVolumeClaim": {
+                "claimName": "grafana-data"
+              }
             },
             {
               "name": "tmp",
               "emptyDir": {}
+            }
+          ],
+          "initContainers": [
+            {
+              "name": "data-owner",
+              "image": "nginx:1.30.5-alpine",
+              "imagePullPolicy": "IfNotPresent",
+              "command": [
+                "sh",
+                "-c",
+                "chown 472:472 /data && chmod 750 /data"
+              ],
+              "resources": {
+                "requests": {
+                  "cpu": "10m",
+                  "memory": "16Mi"
+                },
+                "limits": {
+                  "cpu": "100m",
+                  "memory": "32Mi"
+                }
+              },
+              "volumeMounts": [
+                {
+                  "name": "data",
+                  "mountPath": "/data"
+                }
+              ],
+              "securityContext": {
+                "runAsUser": 0,
+                "allowPrivilegeEscalation": false,
+                "readOnlyRootFilesystem": true,
+                "capabilities": {
+                  "drop": [
+                    "ALL"
+                  ],
+                  "add": [
+                    "CHOWN",
+                    "FOWNER"
+                  ]
+                }
+              }
             }
           ]
         }
@@ -3304,6 +3569,276 @@
           "name": "http"
         }
       ]
+    }
+  },
+  "persistentvolume-laravel-reliability-prometheus": {
+    "apiVersion": "v1",
+    "kind": "PersistentVolume",
+    "metadata": {
+      "name": "laravel-reliability-prometheus"
+    },
+    "spec": {
+      "capacity": {
+        "storage": "3Gi"
+      },
+      "accessModes": [
+        "ReadWriteOnce"
+      ],
+      "persistentVolumeReclaimPolicy": "Retain",
+      "storageClassName": "lab-static",
+      "hostPath": {
+        "path": "/lab-observability/prometheus",
+        "type": "DirectoryOrCreate"
+      },
+      "claimRef": {
+        "namespace": "lab",
+        "name": "prometheus-data"
+      }
+    }
+  },
+  "persistentvolumeclaim-prometheus-data": {
+    "apiVersion": "v1",
+    "kind": "PersistentVolumeClaim",
+    "metadata": {
+      "name": "prometheus-data",
+      "namespace": "lab"
+    },
+    "spec": {
+      "accessModes": [
+        "ReadWriteOnce"
+      ],
+      "storageClassName": "lab-static",
+      "volumeName": "laravel-reliability-prometheus",
+      "resources": {
+        "requests": {
+          "storage": "3Gi"
+        }
+      }
+    }
+  },
+  "persistentvolume-laravel-reliability-loki": {
+    "apiVersion": "v1",
+    "kind": "PersistentVolume",
+    "metadata": {
+      "name": "laravel-reliability-loki"
+    },
+    "spec": {
+      "capacity": {
+        "storage": "3Gi"
+      },
+      "accessModes": [
+        "ReadWriteOnce"
+      ],
+      "persistentVolumeReclaimPolicy": "Retain",
+      "storageClassName": "lab-static",
+      "hostPath": {
+        "path": "/lab-observability/loki",
+        "type": "DirectoryOrCreate"
+      },
+      "claimRef": {
+        "namespace": "lab",
+        "name": "loki-data"
+      }
+    }
+  },
+  "persistentvolumeclaim-loki-data": {
+    "apiVersion": "v1",
+    "kind": "PersistentVolumeClaim",
+    "metadata": {
+      "name": "loki-data",
+      "namespace": "lab"
+    },
+    "spec": {
+      "accessModes": [
+        "ReadWriteOnce"
+      ],
+      "storageClassName": "lab-static",
+      "volumeName": "laravel-reliability-loki",
+      "resources": {
+        "requests": {
+          "storage": "3Gi"
+        }
+      }
+    }
+  },
+  "persistentvolume-laravel-reliability-grafana": {
+    "apiVersion": "v1",
+    "kind": "PersistentVolume",
+    "metadata": {
+      "name": "laravel-reliability-grafana"
+    },
+    "spec": {
+      "capacity": {
+        "storage": "1Gi"
+      },
+      "accessModes": [
+        "ReadWriteOnce"
+      ],
+      "persistentVolumeReclaimPolicy": "Retain",
+      "storageClassName": "lab-static",
+      "hostPath": {
+        "path": "/lab-observability/grafana",
+        "type": "DirectoryOrCreate"
+      },
+      "claimRef": {
+        "namespace": "lab",
+        "name": "grafana-data"
+      }
+    }
+  },
+  "persistentvolumeclaim-grafana-data": {
+    "apiVersion": "v1",
+    "kind": "PersistentVolumeClaim",
+    "metadata": {
+      "name": "grafana-data",
+      "namespace": "lab"
+    },
+    "spec": {
+      "accessModes": [
+        "ReadWriteOnce"
+      ],
+      "storageClassName": "lab-static",
+      "volumeName": "laravel-reliability-grafana",
+      "resources": {
+        "requests": {
+          "storage": "1Gi"
+        }
+      }
+    }
+  },
+  "persistentvolume-laravel-reliability-alertmanager": {
+    "apiVersion": "v1",
+    "kind": "PersistentVolume",
+    "metadata": {
+      "name": "laravel-reliability-alertmanager"
+    },
+    "spec": {
+      "capacity": {
+        "storage": "256Mi"
+      },
+      "accessModes": [
+        "ReadWriteOnce"
+      ],
+      "persistentVolumeReclaimPolicy": "Retain",
+      "storageClassName": "lab-static",
+      "hostPath": {
+        "path": "/lab-observability/alertmanager",
+        "type": "DirectoryOrCreate"
+      },
+      "claimRef": {
+        "namespace": "lab",
+        "name": "alertmanager-data"
+      }
+    }
+  },
+  "persistentvolumeclaim-alertmanager-data": {
+    "apiVersion": "v1",
+    "kind": "PersistentVolumeClaim",
+    "metadata": {
+      "name": "alertmanager-data",
+      "namespace": "lab"
+    },
+    "spec": {
+      "accessModes": [
+        "ReadWriteOnce"
+      ],
+      "storageClassName": "lab-static",
+      "volumeName": "laravel-reliability-alertmanager",
+      "resources": {
+        "requests": {
+          "storage": "256Mi"
+        }
+      }
+    }
+  },
+  "persistentvolume-laravel-reliability-mailpit": {
+    "apiVersion": "v1",
+    "kind": "PersistentVolume",
+    "metadata": {
+      "name": "laravel-reliability-mailpit"
+    },
+    "spec": {
+      "capacity": {
+        "storage": "1Gi"
+      },
+      "accessModes": [
+        "ReadWriteOnce"
+      ],
+      "persistentVolumeReclaimPolicy": "Retain",
+      "storageClassName": "lab-static",
+      "hostPath": {
+        "path": "/lab-observability/mailpit",
+        "type": "DirectoryOrCreate"
+      },
+      "claimRef": {
+        "namespace": "lab",
+        "name": "mailpit-data"
+      }
+    }
+  },
+  "persistentvolumeclaim-mailpit-data": {
+    "apiVersion": "v1",
+    "kind": "PersistentVolumeClaim",
+    "metadata": {
+      "name": "mailpit-data",
+      "namespace": "lab"
+    },
+    "spec": {
+      "accessModes": [
+        "ReadWriteOnce"
+      ],
+      "storageClassName": "lab-static",
+      "volumeName": "laravel-reliability-mailpit",
+      "resources": {
+        "requests": {
+          "storage": "1Gi"
+        }
+      }
+    }
+  },
+  "persistentvolume-laravel-reliability-alloy": {
+    "apiVersion": "v1",
+    "kind": "PersistentVolume",
+    "metadata": {
+      "name": "laravel-reliability-alloy"
+    },
+    "spec": {
+      "capacity": {
+        "storage": "256Mi"
+      },
+      "accessModes": [
+        "ReadWriteOnce"
+      ],
+      "persistentVolumeReclaimPolicy": "Retain",
+      "storageClassName": "lab-static",
+      "hostPath": {
+        "path": "/lab-observability/alloy",
+        "type": "DirectoryOrCreate"
+      },
+      "claimRef": {
+        "namespace": "lab",
+        "name": "alloy-data"
+      }
+    }
+  },
+  "persistentvolumeclaim-alloy-data": {
+    "apiVersion": "v1",
+    "kind": "PersistentVolumeClaim",
+    "metadata": {
+      "name": "alloy-data",
+      "namespace": "lab"
+    },
+    "spec": {
+      "accessModes": [
+        "ReadWriteOnce"
+      ],
+      "storageClassName": "lab-static",
+      "volumeName": "laravel-reliability-alloy",
+      "resources": {
+        "requests": {
+          "storage": "256Mi"
+        }
+      }
     }
   }
 }

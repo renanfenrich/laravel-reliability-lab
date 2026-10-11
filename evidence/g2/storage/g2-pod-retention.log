@@ -1,0 +1,2 @@
+PASS: historical Prometheus/Loki/Mailpit/Grafana markers and six retained claims pod-recreation
+PASS: six replacement telemetry pods ready and historical markers preserved

@@ -107,6 +107,21 @@ if (root/'observability/prometheus.yml').exists():
     deploy('grafana','grafana/grafana:13.2.3',3000,env=[secret('GF_SECURITY_ADMIN_USER'),secret('GF_SECURITY_ADMIN_PASSWORD'),{'name':'GF_PLUGINS_PREINSTALL_DISABLED','value':'true'},{'name':'GF_PLUGINS_PREINSTALL_AUTO_UPDATE','value':'false'},{'name':'GF_ANALYTICS_REPORTING_ENABLED','value':'false'},{'name':'GF_ANALYTICS_CHECK_FOR_UPDATES','value':'false'}],volumes=[x[0] for x in pairs]+[{'name':'data','emptyDir':{}},{'name':'tmp','emptyDir':{}}],mounts=[x[1] for x in pairs]+[{'name':'data','mountPath':'/var/lib/grafana'},{'name':'tmp','mountPath':'/tmp'}],user=472,probe={'httpGet':{'path':'/api/health','port':3000}},limits={'cpu':'1','memory':'1Gi'})
     role('kube-state-metrics',[{'apiGroups':[''],'resources':['pods'],'verbs':['list','watch']},{'apiGroups':['apps'],'resources':['deployments'],'verbs':['list','watch']}])
     deploy('kube-state-metrics','registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.20.0',8080,args=['--namespaces=lab','--resources=pods,deployments'],user=65534,probe={'httpGet':{'path':'/healthz','port':8080}},sa='kube-state-metrics',limits={'cpu':'500m','memory':'128Mi'})
+# Static retained host storage. Only the dedicated kind node receives this
+# project-owned host bind mount; PVCs advertise capacity, not a disk quota.
+for name,capacity in [('prometheus','3Gi'),('loki','3Gi'),('grafana','1Gi'),('alertmanager','256Mi'),('mailpit','1Gi'),('alloy','256Mi')]:
+    pvname='laravel-reliability-'+name
+    pv=obj('PersistentVolume',pvname,{'capacity':{'storage':capacity},'accessModes':['ReadWriteOnce'],'persistentVolumeReclaimPolicy':'Retain','storageClassName':'lab-static','hostPath':{'path':'/lab-observability/'+name,'type':'DirectoryOrCreate'},'claimRef':{'namespace':'lab','name':name+'-data'}});pv['metadata'].pop('namespace')
+    obj('PersistentVolumeClaim',name+'-data',{'accessModes':['ReadWriteOnce'],'storageClassName':'lab-static','volumeName':pvname,'resources':{'requests':{'storage':capacity}}})
+    pod=objects['deployment-'+name]['spec']['template']['spec']
+    pod['volumes']=[{'name':'data','persistentVolumeClaim':{'claimName':name+'-data'}} if v['name']=='data' else v for v in pod['volumes']]
+    # Local file-based databases/TSDBs must never have two writers on the PVC.
+    objects['deployment-'+name]['spec']['strategy']={'type':'Recreate'}
+    # New directories from a clean checkout need only project-volume ownership.
+    uid=pod['containers'][0]['securityContext']['runAsUser']
+    pod.setdefault('initContainers',[]).append({'name':'data-owner','image':'nginx:1.30.5-alpine','imagePullPolicy':'IfNotPresent','command':['sh','-c',f'chown {uid}:{uid} /data && chmod 750 /data'],'resources':{'requests':{'cpu':'10m','memory':'16Mi'},'limits':{'cpu':'100m','memory':'32Mi'}},'volumeMounts':[{'name':'data','mountPath':'/data'}],'securityContext':{'runAsUser':0,'allowPrivilegeEscalation':False,'readOnlyRootFilesystem':True,'capabilities':{'drop':['ALL'],'add':['CHOWN','FOWNER']}}})
+objects['deployment-prometheus']['spec']['template']['spec']['containers'][0]['args'].append('--storage.tsdb.retention.size=2GB')
+
 for o in objects.values():
     if o['kind']=='Deployment':
         if o['metadata']['name'] in ['api','worker','scheduler','exporter','simulator']:

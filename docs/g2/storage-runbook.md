@@ -1,0 +1,9 @@
+# Retained storage and migration
+
+Clean checkout: `make cluster-up` creates dedicated PostgreSQL and observability host bind mounts; `make deploy` creates retained PV/PVCs. Bootstrap and deployment operate only on laravel-reliability-lab. Never adopt another cluster or overwrite an existing project data directory.
+
+For the initial G1 upgrade, record markers with `python3 scripts/g2-persistence.py mark`, run the private consistent PostgreSQL backup, and run `python3 scripts/g2-storage-export.py`. The exporter refuses an existing destination rather than overwriting prior state. It creates private archives and populates fresh project component directories while briefly freezing/resuming one service at a time. Preserve all output and confirm PASS before teardown. Then run `make teardown cluster-up deploy dev-up` and `python3 scripts/g2-persistence.py verify cluster-recreation`. This is a one-time migration, not an everyday backup command. Do not rerun mark over existing evidence.
+
+For pod retention, delete only the six observability pods using the explicit project kubeconfig/context, wait for replacements, then run `python3 scripts/g2-persistence.py verify pod-recreation`. Do not delete PVCs or host files. Validate new smoke and observability data. Restore documented LAN forwards after full teardown; supervisor units are transient and stopped by teardown.
+
+If a service cannot recover, preserve its data/export and logs, stop only that deployment to prevent further writes, and investigate. Do not remove WAL/SQLite state to make verification pass. A declared PV size is not a quota; inspect host disk usage. `make teardown` preserves telemetry; the existing explicit database data-reset command does not reset telemetry. No telemetry reset was requested or executed. Dumps, SQLite credentials/sessions, and archives remain ignored/private and must never enter Git.
