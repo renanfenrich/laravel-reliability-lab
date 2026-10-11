@@ -176,3 +176,9 @@ Next session: read this entry, docs/goals/G3.md, docs/g3/validation.md and Git s
 ## G3 publication authorized; G4 execution requested (2026-10-11)
 
 The owner approved G3 and authorized push and merge, then execution of the next goal. Publish feat/g3-overload-resilience as a ready PR, check hosted CI for its final head, and squash-merge only after success. No separate reviewer is required and no release/tag was requested. G4 will be defined and executed locally after integration, addressing the measured queue-notification amplification with preserved acceptance/recovery invariants. No G4 publication or merge is authorized.
+
+## G3 merged; G4 defined and executing (2026-10-11)
+
+G3 PR #3 https://github.com/renanfenrich/laravel-reliability-lab/pull/3 merged at 23:13:50Z, squash 1aa19b4260ff6eaf6f8a1b0c1a7d6ca5ed0be752, source f327fdcb990f129cfd502373c2f26ff1694f45ba. Both hosted validate runs passed for that head: 38183309962 and 38183312225; GitGuardian was NEUTRAL. No release/tag was requested or created.
+
+The owner authorized the next goal's local execution. Current branch feat/g4-dispatch-deduplication from merged main; plan docs/goals/G4.md. G4 addresses notification amplification with a narrowly scoped atomic Redis publication guard and owner-fenced recovery, preserving native consumption and PostgreSQL truth. No G4 publication/merge is authorized. First reproduce multiplicity with a bounded worker pause, restore it, then implement/test before rollout; all later G4 acceptance checks are pending.
