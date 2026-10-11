@@ -1,0 +1,4874 @@
+{
+  "step-10": {
+    "cpu": [
+      {
+        "labels": {
+          "pod": "alertmanager-c9474ff4f-slgvf"
+        },
+        "min": 0.0012419706420492339,
+        "max": 0.0019066489931970148,
+        "median": 0.0015870804153586087
+      },
+      {
+        "labels": {
+          "pod": "alloy-6d6fc9cf66-b8xtc"
+        },
+        "min": 0.008431946221568665,
+        "max": 0.027200043809210896,
+        "median": 0.026417934049579088
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 0.04205671883764284,
+        "max": 0.15044353327294718,
+        "median": 0.1430282405380511
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 0.0425394934203934,
+        "max": 0.1597401147249972,
+        "median": 0.14638457061442678
+      },
+      {
+        "labels": {
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 0.012354192808840914,
+        "max": 0.01769539742579357,
+        "median": 0.015241627973719675
+      },
+      {
+        "labels": {
+          "pod": "gateway-cd9dfc89d-zdmtz"
+        },
+        "min": 0.0018970274650290007,
+        "max": 0.00687149035337352,
+        "median": 0.006573608701767545
+      },
+      {
+        "labels": {
+          "pod": "grafana-6647b4bc55-qzpp8"
+        },
+        "min": 0.009843745559473656,
+        "max": 0.013329258766651888,
+        "median": 0.012126427919245206
+      },
+      {
+        "labels": {
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+        },
+        "min": 0.0005537456757601232,
+        "max": 0.000935073050898591,
+        "median": 0.0007224462556866652
+      },
+      {
+        "labels": {
+          "pod": "loki-597488bd7d-hrbbn"
+        },
+        "min": 0.01140071058719842,
+        "max": 0.014748301225919441,
+        "median": 0.013490136001939719
+      },
+      {
+        "labels": {
+          "pod": "mailpit-55c5466dc-r8n2d"
+        },
+        "min": 0.00027381712874238707,
+        "max": 0.000428202940149723,
+        "median": 0.0003255957836846929
+      },
+      {
+        "labels": {
+          "pod": "postgres-5f7965d6c4-rwngq"
+        },
+        "min": 0.08112481469189071,
+        "max": 0.2537664577714829,
+        "median": 0.2495888033763655
+      },
+      {
+        "labels": {
+          "pod": "prometheus-65d764bdfc-dsmdj"
+        },
+        "min": 0.011222344405808398,
+        "max": 0.013782965676187342,
+        "median": 0.012732714282855372
+      },
+      {
+        "labels": {
+          "pod": "redis-587dcb4467-nmtb2"
+        },
+        "min": 0.01544885389053486,
+        "max": 0.026163287258645734,
+        "median": 0.024424438848133147
+      },
+      {
+        "labels": {
+          "pod": "scheduler-5bb4b6679b-nnnsc"
+        },
+        "min": 0.042040856578320476,
+        "max": 0.056848456018266824,
+        "median": 0.05432862749933222
+      },
+      {
+        "labels": {
+          "pod": "simulator-d4bb56bcd-cfxm2"
+        },
+        "min": 0.0035073522345026413,
+        "max": 0.01622435403683214,
+        "median": 0.01568642137298853
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-cfmb5"
+        },
+        "min": 0.03315925086018142,
+        "max": 0.07710274441755331,
+        "median": 0.07390018608978831
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-xwzh6"
+        },
+        "min": 0.036937698202421536,
+        "max": 0.07883109734087355,
+        "median": 0.07547327789754647
+      }
+    ],
+    "memory": [
+      {
+        "labels": {
+          "pod": "alertmanager-c9474ff4f-slgvf"
+        },
+        "min": 16740352.0,
+        "max": 18948096.0,
+        "median": 17555456.0
+      },
+      {
+        "labels": {
+          "pod": "alloy-6d6fc9cf66-b8xtc"
+        },
+        "min": 48033792.0,
+        "max": 52948992.0,
+        "median": 50642944.0
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 44711936.0,
+        "max": 47017984.0,
+        "median": 45084672.0
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 43827200.0,
+        "max": 45535232.0,
+        "median": 44441600.0
+      },
+      {
+        "labels": {
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 40603648.0,
+        "max": 40628224.0,
+        "median": 40624128.0
+      },
+      {
+        "labels": {
+          "pod": "gateway-cd9dfc89d-zdmtz"
+        },
+        "min": 3080192.0,
+        "max": 3866624.0,
+        "median": 3592192.0
+      },
+      {
+        "labels": {
+          "pod": "grafana-6647b4bc55-qzpp8"
+        },
+        "min": 210362368.0,
+        "max": 259280896.0,
+        "median": 213999616.0
+      },
+      {
+        "labels": {
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+        },
+        "min": 10919936.0,
+        "max": 10928128.0,
+        "median": 10919936.0
+      },
+      {
+        "labels": {
+          "pod": "loki-597488bd7d-hrbbn"
+        },
+        "min": 78262272.0,
+        "max": 87982080.0,
+        "median": 81010688.0
+      },
+      {
+        "labels": {
+          "pod": "mailpit-55c5466dc-r8n2d"
+        },
+        "min": 7200768.0,
+        "max": 8097792.0,
+        "median": 7208960.0
+      },
+      {
+        "labels": {
+          "pod": "postgres-5f7965d6c4-rwngq"
+        },
+        "min": 50733056.0,
+        "max": 55808000.0,
+        "median": 52035584.0
+      },
+      {
+        "labels": {
+          "pod": "prometheus-65d764bdfc-dsmdj"
+        },
+        "min": 105758720.0,
+        "max": 109015040.0,
+        "median": 108515328.0
+      },
+      {
+        "labels": {
+          "pod": "redis-587dcb4467-nmtb2"
+        },
+        "min": 3842048.0,
+        "max": 5152768.0,
+        "median": 4108288.0
+      },
+      {
+        "labels": {
+          "pod": "scheduler-5bb4b6679b-nnnsc"
+        },
+        "min": 61317120.0,
+        "max": 83513344.0,
+        "median": 61390848.0
+      },
+      {
+        "labels": {
+          "pod": "simulator-d4bb56bcd-cfxm2"
+        },
+        "min": 19382272.0,
+        "max": 19906560.0,
+        "median": 19415040.0
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-cfmb5"
+        },
+        "min": 38649856.0,
+        "max": 78798848.0,
+        "median": 77234176.0
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-xwzh6"
+        },
+        "min": 39186432.0,
+        "max": 70885376.0,
+        "median": 70287360.0
+      }
+    ],
+    "throttling": [
+      {
+        "labels": {
+          "pod": "alertmanager-c9474ff4f-slgvf"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "alloy-6d6fc9cf66-b8xtc"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "gateway-cd9dfc89d-zdmtz"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "grafana-6647b4bc55-qzpp8"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "loki-597488bd7d-hrbbn"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "mailpit-55c5466dc-r8n2d"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "postgres-5f7965d6c4-rwngq"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "prometheus-65d764bdfc-dsmdj"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "redis-587dcb4467-nmtb2"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "scheduler-5bb4b6679b-nnnsc"
+        },
+        "min": 0.0,
+        "max": 0.00011305316951179732,
+        "median": 1.6533012718370663e-06
+      },
+      {
+        "labels": {
+          "pod": "simulator-d4bb56bcd-cfxm2"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-cfmb5"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-xwzh6"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      }
+    ],
+    "host_cpu": [
+      {
+        "labels": {},
+        "min": 1.8510000000000102,
+        "max": 2.5436000000000107,
+        "median": 2.498199999999964
+      }
+    ],
+    "host_memory": [
+      {
+        "labels": {
+          "__name__": "lab_host_memory_bytes",
+          "instance": "lab-host-metrics:19100",
+          "job": "lab-host-docker",
+          "kind": "MemAvailable"
+        },
+        "min": 22392250368.0,
+        "max": 22449008640.0,
+        "median": 22422929408.0
+      }
+    ],
+    "cpu_by_container": [
+      {
+        "labels": {
+          "container": "alertmanager",
+          "pod": "alertmanager-c9474ff4f-slgvf"
+        },
+        "min": 0.0012419706420492339,
+        "max": 0.0019066489931970148,
+        "median": 0.0015870804153586087
+      },
+      {
+        "labels": {
+          "container": "alloy",
+          "pod": "alloy-6d6fc9cf66-b8xtc"
+        },
+        "min": 0.008431946221568665,
+        "max": 0.027200043809210896,
+        "median": 0.026417934049579088
+      },
+      {
+        "labels": {
+          "container": "api",
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 0.04141360181706997,
+        "max": 0.14757306497987344,
+        "median": 0.14023671451658906
+      },
+      {
+        "labels": {
+          "container": "api",
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 0.041659911555470094,
+        "max": 0.15675499150643787,
+        "median": 0.1434661309747093
+      },
+      {
+        "labels": {
+          "container": "exporter",
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 0.012040252291909227,
+        "max": 0.017355529244612807,
+        "median": 0.014915321769963272
+      },
+      {
+        "labels": {
+          "container": "gateway",
+          "pod": "gateway-cd9dfc89d-zdmtz"
+        },
+        "min": 0.0018970274650290007,
+        "max": 0.00687149035337352,
+        "median": 0.006573608701767545
+      },
+      {
+        "labels": {
+          "container": "grafana",
+          "pod": "grafana-6647b4bc55-qzpp8"
+        },
+        "min": 0.009843745559473656,
+        "max": 0.013329258766651888,
+        "median": 0.012126427919245206
+      },
+      {
+        "labels": {
+          "container": "http",
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 0.0006431170205728656,
+        "max": 0.002951544985469425,
+        "median": 0.0027915260214620378
+      },
+      {
+        "labels": {
+          "container": "http",
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 0.0008795818649233019,
+        "max": 0.003041093180340841,
+        "median": 0.002916694800810263
+      },
+      {
+        "labels": {
+          "container": "http",
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 0.00028677980503693905,
+        "max": 0.00034517903629844253,
+        "median": 0.0003173122962219844
+      },
+      {
+        "labels": {
+          "container": "kube-state-metrics",
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+        },
+        "min": 0.0005537456757601232,
+        "max": 0.000935073050898591,
+        "median": 0.0007224462556866652
+      },
+      {
+        "labels": {
+          "container": "loki",
+          "pod": "loki-597488bd7d-hrbbn"
+        },
+        "min": 0.01140071058719842,
+        "max": 0.014748301225919441,
+        "median": 0.013490136001939719
+      },
+      {
+        "labels": {
+          "container": "mailpit",
+          "pod": "mailpit-55c5466dc-r8n2d"
+        },
+        "min": 0.00027381712874238707,
+        "max": 0.000428202940149723,
+        "median": 0.0003255957836846929
+      },
+      {
+        "labels": {
+          "container": "postgres",
+          "pod": "postgres-5f7965d6c4-rwngq"
+        },
+        "min": 0.08112481469189071,
+        "max": 0.2537664577714829,
+        "median": 0.2495888033763655
+      },
+      {
+        "labels": {
+          "container": "prometheus",
+          "pod": "prometheus-65d764bdfc-dsmdj"
+        },
+        "min": 0.011222344405808398,
+        "max": 0.013782965676187342,
+        "median": 0.012732714282855372
+      },
+      {
+        "labels": {
+          "container": "redis",
+          "pod": "redis-587dcb4467-nmtb2"
+        },
+        "min": 0.01544885389053486,
+        "max": 0.026163287258645734,
+        "median": 0.024424438848133147
+      },
+      {
+        "labels": {
+          "container": "scheduler",
+          "pod": "scheduler-5bb4b6679b-nnnsc"
+        },
+        "min": 0.042040856578320476,
+        "max": 0.056848456018266824,
+        "median": 0.05432862749933222
+      },
+      {
+        "labels": {
+          "container": "simulator",
+          "pod": "simulator-d4bb56bcd-cfxm2"
+        },
+        "min": 0.0035073522345026413,
+        "max": 0.01622435403683214,
+        "median": 0.01568642137298853
+      },
+      {
+        "labels": {
+          "container": "worker",
+          "pod": "worker-6467fcf4b4-cfmb5"
+        },
+        "min": 0.03315925086018142,
+        "max": 0.07710274441755331,
+        "median": 0.07390018608978831
+      },
+      {
+        "labels": {
+          "container": "worker",
+          "pod": "worker-6467fcf4b4-xwzh6"
+        },
+        "min": 0.036937698202421536,
+        "max": 0.07883109734087355,
+        "median": 0.07547327789754647
+      }
+    ],
+    "ready": [
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alertmanager-c9474ff4f-slgvf",
+          "uid": "7c9ad2ff-2602-411f-960c-f4a9d5a6387a"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alertmanager-c9474ff4f-sn6km",
+          "uid": "4ee04239-6c05-49d8-8773-6c190b9b1054"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alloy-6d6fc9cf66-b8xtc",
+          "uid": "61bbddb0-52e3-41d2-9e99-c3a56f32c5d6"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alloy-6d6fc9cf66-skws7",
+          "uid": "ab279b72-a985-4fc6-81fd-3ddc1721d110"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-bqb2z",
+          "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-f7cbr",
+          "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "exporter-645997d8bd-tpjgf",
+          "uid": "84fb4b35-6e7d-4fa8-83a9-d376135d4822"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "gateway-cd9dfc89d-zdmtz",
+          "uid": "c46f5ae3-7c4f-4704-8a44-27a93fa81def"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "grafana-6647b4bc55-74lk9",
+          "uid": "c093af56-aee1-4192-94c3-d95512322308"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "grafana-6647b4bc55-qzpp8",
+          "uid": "3f2a2b27-57f0-4704-ae13-2f0371f2d093"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm",
+          "uid": "82adffff-a057-46ca-a1cb-ed3283727741"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "loki-597488bd7d-hrbbn",
+          "uid": "e977cdc2-6595-409e-bfe3-dfe4e0a93033"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "loki-597488bd7d-xgvfp",
+          "uid": "4b02cdb6-2d58-4f12-b4e3-1cd339976d56"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "mailpit-55c5466dc-r8n2d",
+          "uid": "da123b32-5de8-491c-bbe8-974a2658de80"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "mailpit-55c5466dc-vvsjf",
+          "uid": "02d9e036-7995-445d-b193-0be4f4566401"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "postgres-5f7965d6c4-rwngq",
+          "uid": "3cda8f8e-bd92-44d9-901d-c9b556cdbbb0"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "prometheus-65d764bdfc-8qf74",
+          "uid": "970e9e3e-4255-487d-bd9e-a196ef10ab61"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "prometheus-65d764bdfc-dsmdj",
+          "uid": "dfe80f15-60f7-4d86-80df-d99838a99307"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "redis-587dcb4467-nmtb2",
+          "uid": "74a0bf1d-eae7-4e66-8185-f5dac9a07c66"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "scheduler-5bb4b6679b-nnnsc",
+          "uid": "7674dd75-ee73-48c2-8f4f-ec3b29ae26b8"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "simulator-d4bb56bcd-cfxm2",
+          "uid": "f7075496-628a-4792-8c1b-c21409229a71"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "worker-6467fcf4b4-cfmb5",
+          "uid": "1a33927e-1106-4e5b-a39a-49e806fcd17d"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "worker-6467fcf4b4-xwzh6",
+          "uid": "cd9406ad-8f8a-42bb-a973-38c3f1b2f234"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      }
+    ],
+    "restarts": [
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "alertmanager",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alertmanager-c9474ff4f-slgvf",
+          "uid": "7c9ad2ff-2602-411f-960c-f4a9d5a6387a"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "alertmanager",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alertmanager-c9474ff4f-sn6km",
+          "uid": "4ee04239-6c05-49d8-8773-6c190b9b1054"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "alloy",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alloy-6d6fc9cf66-b8xtc",
+          "uid": "61bbddb0-52e3-41d2-9e99-c3a56f32c5d6"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "alloy",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alloy-6d6fc9cf66-skws7",
+          "uid": "ab279b72-a985-4fc6-81fd-3ddc1721d110"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "api",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-bqb2z",
+          "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "api",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-f7cbr",
+          "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "exporter",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "exporter-645997d8bd-tpjgf",
+          "uid": "84fb4b35-6e7d-4fa8-83a9-d376135d4822"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "gateway",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "gateway-cd9dfc89d-zdmtz",
+          "uid": "c46f5ae3-7c4f-4704-8a44-27a93fa81def"
+        },
+        "min": 3.0,
+        "max": 3.0,
+        "median": 3.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "grafana",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "grafana-6647b4bc55-74lk9",
+          "uid": "c093af56-aee1-4192-94c3-d95512322308"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "grafana",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "grafana-6647b4bc55-qzpp8",
+          "uid": "3f2a2b27-57f0-4704-ae13-2f0371f2d093"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "http",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-bqb2z",
+          "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "http",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-f7cbr",
+          "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "http",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "exporter-645997d8bd-tpjgf",
+          "uid": "84fb4b35-6e7d-4fa8-83a9-d376135d4822"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "kube-state-metrics",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm",
+          "uid": "82adffff-a057-46ca-a1cb-ed3283727741"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "loki",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "loki-597488bd7d-hrbbn",
+          "uid": "e977cdc2-6595-409e-bfe3-dfe4e0a93033"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "loki",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "loki-597488bd7d-xgvfp",
+          "uid": "4b02cdb6-2d58-4f12-b4e3-1cd339976d56"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "mailpit",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "mailpit-55c5466dc-r8n2d",
+          "uid": "da123b32-5de8-491c-bbe8-974a2658de80"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "mailpit",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "mailpit-55c5466dc-vvsjf",
+          "uid": "02d9e036-7995-445d-b193-0be4f4566401"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "postgres",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "postgres-5f7965d6c4-rwngq",
+          "uid": "3cda8f8e-bd92-44d9-901d-c9b556cdbbb0"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "prometheus",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "prometheus-65d764bdfc-8qf74",
+          "uid": "970e9e3e-4255-487d-bd9e-a196ef10ab61"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "prometheus",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "prometheus-65d764bdfc-dsmdj",
+          "uid": "dfe80f15-60f7-4d86-80df-d99838a99307"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "redis",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "redis-587dcb4467-nmtb2",
+          "uid": "74a0bf1d-eae7-4e66-8185-f5dac9a07c66"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "scheduler",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "scheduler-5bb4b6679b-nnnsc",
+          "uid": "7674dd75-ee73-48c2-8f4f-ec3b29ae26b8"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "simulator",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "simulator-d4bb56bcd-cfxm2",
+          "uid": "f7075496-628a-4792-8c1b-c21409229a71"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "worker",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "worker-6467fcf4b4-cfmb5",
+          "uid": "1a33927e-1106-4e5b-a39a-49e806fcd17d"
+        },
+        "min": 2.0,
+        "max": 2.0,
+        "median": 2.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "worker",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "worker-6467fcf4b4-xwzh6",
+          "uid": "cd9406ad-8f8a-42bb-a973-38c3f1b2f234"
+        },
+        "min": 2.0,
+        "max": 2.0,
+        "median": 2.0
+      }
+    ],
+    "overdue": [
+      {
+        "labels": {
+          "__name__": "lab_overdue_reports",
+          "instance": "exporter:8080",
+          "job": "lab-exporter",
+          "traffic": "fault"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "lab_overdue_reports",
+          "instance": "exporter:8080",
+          "job": "lab-exporter",
+          "traffic": "load"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "lab_overdue_reports",
+          "instance": "exporter:8080",
+          "job": "lab-exporter",
+          "traffic": "normal"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      }
+    ]
+  },
+  "step-30": {
+    "cpu": [
+      {
+        "labels": {
+          "pod": "alertmanager-c9474ff4f-slgvf"
+        },
+        "min": 0.0013230199033499874,
+        "max": 0.00179919085392186,
+        "median": 0.001552389490528879
+      },
+      {
+        "labels": {
+          "pod": "alloy-6d6fc9cf66-b8xtc"
+        },
+        "min": 0.01632938318690548,
+        "max": 0.05695251680286252,
+        "median": 0.055194785558624
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 0.009314753105964873,
+        "max": 0.39580059339828655,
+        "median": 0.35273715142638534
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 0.03521802292221823,
+        "max": 0.38226339015427035,
+        "median": 0.37288024363623196
+      },
+      {
+        "labels": {
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 0.012659104198644432,
+        "max": 0.015925817221144205,
+        "median": 0.01382132839544458
+      },
+      {
+        "labels": {
+          "pod": "gateway-cd9dfc89d-zdmtz"
+        },
+        "min": 0.00016394483362521577,
+        "max": 0.016838084770213646,
+        "median": 0.016371121904318584
+      },
+      {
+        "labels": {
+          "pod": "grafana-6647b4bc55-qzpp8"
+        },
+        "min": 0.0098486214429911,
+        "max": 0.012273158255879248,
+        "median": 0.010871941560402394
+      },
+      {
+        "labels": {
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+        },
+        "min": 0.00038896025519836655,
+        "max": 0.0009251694232500822,
+        "median": 0.0005056068295446812
+      },
+      {
+        "labels": {
+          "pod": "loki-597488bd7d-hrbbn"
+        },
+        "min": 0.01095755042324171,
+        "max": 0.014397361494307537,
+        "median": 0.012826652168729979
+      },
+      {
+        "labels": {
+          "pod": "mailpit-55c5466dc-r8n2d"
+        },
+        "min": 0.00019018062437649742,
+        "max": 0.0003149501833979354,
+        "median": 0.00024278295910333856
+      },
+      {
+        "labels": {
+          "pod": "postgres-5f7965d6c4-rwngq"
+        },
+        "min": 0.160837913154709,
+        "max": 0.6144664537440119,
+        "median": 0.6069870534368055
+      },
+      {
+        "labels": {
+          "pod": "prometheus-65d764bdfc-dsmdj"
+        },
+        "min": 0.010214399657151034,
+        "max": 0.01258729539339919,
+        "median": 0.01144061314847632
+      },
+      {
+        "labels": {
+          "pod": "redis-587dcb4467-nmtb2"
+        },
+        "min": 0.014688855434830004,
+        "max": 0.04335305349117288,
+        "median": 0.041259683520857335
+      },
+      {
+        "labels": {
+          "pod": "scheduler-5bb4b6679b-nnnsc"
+        },
+        "min": 0.05157789452458931,
+        "max": 0.06537545825145906,
+        "median": 0.05806286513085976
+      },
+      {
+        "labels": {
+          "pod": "simulator-d4bb56bcd-cfxm2"
+        },
+        "min": 0.008907184487538938,
+        "max": 0.03810104800348703,
+        "median": 0.0378089189426145
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-cfmb5"
+        },
+        "min": 0.033472867217062253,
+        "max": 0.1647900485122058,
+        "median": 0.15390256088806348
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-xwzh6"
+        },
+        "min": 0.04250590134167251,
+        "max": 0.16678191672925838,
+        "median": 0.15870575999894831
+      }
+    ],
+    "memory": [
+      {
+        "labels": {
+          "pod": "alertmanager-c9474ff4f-slgvf"
+        },
+        "min": 17575936.0,
+        "max": 18284544.0,
+        "median": 17582080.0
+      },
+      {
+        "labels": {
+          "pod": "alloy-6d6fc9cf66-b8xtc"
+        },
+        "min": 52862976.0,
+        "max": 59568128.0,
+        "median": 58363904.0
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 42397696.0,
+        "max": 44920832.0,
+        "median": 42915840.0
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 42004480.0,
+        "max": 46432256.0,
+        "median": 43042816.0
+      },
+      {
+        "labels": {
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 40624128.0,
+        "max": 40628224.0,
+        "median": 40628224.0
+      },
+      {
+        "labels": {
+          "pod": "gateway-cd9dfc89d-zdmtz"
+        },
+        "min": 3092480.0,
+        "max": 4395008.0,
+        "median": 3624960.0
+      },
+      {
+        "labels": {
+          "pod": "grafana-6647b4bc55-qzpp8"
+        },
+        "min": 210407424.0,
+        "max": 210735104.0,
+        "median": 210440192.0
+      },
+      {
+        "labels": {
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+        },
+        "min": 10928128.0,
+        "max": 10940416.0,
+        "median": 10936320.0
+      },
+      {
+        "labels": {
+          "pod": "loki-597488bd7d-hrbbn"
+        },
+        "min": 94576640.0,
+        "max": 120258560.0,
+        "median": 97480704.0
+      },
+      {
+        "labels": {
+          "pod": "mailpit-55c5466dc-r8n2d"
+        },
+        "min": 7294976.0,
+        "max": 7368704.0,
+        "median": 7356416.0
+      },
+      {
+        "labels": {
+          "pod": "postgres-5f7965d6c4-rwngq"
+        },
+        "min": 53817344.0,
+        "max": 60239872.0,
+        "median": 57559040.0
+      },
+      {
+        "labels": {
+          "pod": "prometheus-65d764bdfc-dsmdj"
+        },
+        "min": 109379584.0,
+        "max": 111611904.0,
+        "median": 109780992.0
+      },
+      {
+        "labels": {
+          "pod": "redis-587dcb4467-nmtb2"
+        },
+        "min": 4075520.0,
+        "max": 4669440.0,
+        "median": 4370432.0
+      },
+      {
+        "labels": {
+          "pod": "scheduler-5bb4b6679b-nnnsc"
+        },
+        "min": 61329408.0,
+        "max": 61431808.0,
+        "median": 61376512.0
+      },
+      {
+        "labels": {
+          "pod": "simulator-d4bb56bcd-cfxm2"
+        },
+        "min": 19406848.0,
+        "max": 19714048.0,
+        "median": 19568640.0
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-cfmb5"
+        },
+        "min": 38645760.0,
+        "max": 39391232.0,
+        "median": 38926336.0
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-xwzh6"
+        },
+        "min": 39186432.0,
+        "max": 40255488.0,
+        "median": 39456768.0
+      }
+    ],
+    "throttling": [
+      {
+        "labels": {
+          "pod": "alertmanager-c9474ff4f-slgvf"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "alloy-6d6fc9cf66-b8xtc"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 0.0,
+        "max": 0.012269139159891602,
+        "median": 0.0033277988219495387
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 0.0,
+        "max": 0.0012479732468585326,
+        "median": 0.0002132165695509896
+      },
+      {
+        "labels": {
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "gateway-cd9dfc89d-zdmtz"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "grafana-6647b4bc55-qzpp8"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "loki-597488bd7d-hrbbn"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "mailpit-55c5466dc-r8n2d"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "postgres-5f7965d6c4-rwngq"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "prometheus-65d764bdfc-dsmdj"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "redis-587dcb4467-nmtb2"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "scheduler-5bb4b6679b-nnnsc"
+        },
+        "min": 0.0,
+        "max": 0.000431479403750601,
+        "median": 2.1911139917503396e-06
+      },
+      {
+        "labels": {
+          "pod": "simulator-d4bb56bcd-cfxm2"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-cfmb5"
+        },
+        "min": 0.0,
+        "max": 0.0010795257472715426,
+        "median": 0.0002611302183904537
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-xwzh6"
+        },
+        "min": 0.0,
+        "max": 7.719660034928728e-05,
+        "median": 0.0
+      }
+    ],
+    "host_cpu": [
+      {
+        "labels": {},
+        "min": 2.099200000000034,
+        "max": 4.103200000000075,
+        "median": 3.9913000000000003
+      }
+    ],
+    "host_memory": [
+      {
+        "labels": {
+          "__name__": "lab_host_memory_bytes",
+          "instance": "lab-host-metrics:19100",
+          "job": "lab-host-docker",
+          "kind": "MemAvailable"
+        },
+        "min": 22302216192.0,
+        "max": 22404157440.0,
+        "median": 22334183424.0
+      }
+    ],
+    "cpu_by_container": [
+      {
+        "labels": {
+          "container": "alertmanager",
+          "pod": "alertmanager-c9474ff4f-slgvf"
+        },
+        "min": 0.0013230199033499874,
+        "max": 0.00179919085392186,
+        "median": 0.001552389490528879
+      },
+      {
+        "labels": {
+          "container": "alloy",
+          "pod": "alloy-6d6fc9cf66-b8xtc"
+        },
+        "min": 0.01632938318690548,
+        "max": 0.05695251680286252,
+        "median": 0.055194785558624
+      },
+      {
+        "labels": {
+          "container": "api",
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 0.00859865521370457,
+        "max": 0.38846296482109544,
+        "median": 0.3456188793808046
+      },
+      {
+        "labels": {
+          "container": "api",
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 0.033282523364486,
+        "max": 0.37532500474113406,
+        "median": 0.3661285969364926
+      },
+      {
+        "labels": {
+          "container": "exporter",
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 0.01241126834632119,
+        "max": 0.01561263956407926,
+        "median": 0.013578005029964615
+      },
+      {
+        "labels": {
+          "container": "gateway",
+          "pod": "gateway-cd9dfc89d-zdmtz"
+        },
+        "min": 0.00016394483362521577,
+        "max": 0.016838084770213646,
+        "median": 0.016371121904318584
+      },
+      {
+        "labels": {
+          "container": "grafana",
+          "pod": "grafana-6647b4bc55-qzpp8"
+        },
+        "min": 0.0098486214429911,
+        "max": 0.012273158255879248,
+        "median": 0.010871941560402394
+      },
+      {
+        "labels": {
+          "container": "http",
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 0.0007160978922603021,
+        "max": 0.007337628577191132,
+        "median": 0.006983142697779926
+      },
+      {
+        "labels": {
+          "container": "http",
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 0.0019354995577322276,
+        "max": 0.007118615733446064,
+        "median": 0.006856625499897304
+      },
+      {
+        "labels": {
+          "container": "http",
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 0.00023053492862973023,
+        "max": 0.0003131776570649471,
+        "median": 0.00025953837275278005
+      },
+      {
+        "labels": {
+          "container": "kube-state-metrics",
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+        },
+        "min": 0.00038896025519836655,
+        "max": 0.0009251694232500822,
+        "median": 0.0005056068295446812
+      },
+      {
+        "labels": {
+          "container": "loki",
+          "pod": "loki-597488bd7d-hrbbn"
+        },
+        "min": 0.01095755042324171,
+        "max": 0.014397361494307537,
+        "median": 0.012826652168729979
+      },
+      {
+        "labels": {
+          "container": "mailpit",
+          "pod": "mailpit-55c5466dc-r8n2d"
+        },
+        "min": 0.00019018062437649742,
+        "max": 0.0003149501833979354,
+        "median": 0.00024278295910333856
+      },
+      {
+        "labels": {
+          "container": "postgres",
+          "pod": "postgres-5f7965d6c4-rwngq"
+        },
+        "min": 0.160837913154709,
+        "max": 0.6144664537440119,
+        "median": 0.6069870534368055
+      },
+      {
+        "labels": {
+          "container": "prometheus",
+          "pod": "prometheus-65d764bdfc-dsmdj"
+        },
+        "min": 0.010214399657151034,
+        "max": 0.01258729539339919,
+        "median": 0.01144061314847632
+      },
+      {
+        "labels": {
+          "container": "redis",
+          "pod": "redis-587dcb4467-nmtb2"
+        },
+        "min": 0.014688855434830004,
+        "max": 0.04335305349117288,
+        "median": 0.041259683520857335
+      },
+      {
+        "labels": {
+          "container": "scheduler",
+          "pod": "scheduler-5bb4b6679b-nnnsc"
+        },
+        "min": 0.05157789452458931,
+        "max": 0.06537545825145906,
+        "median": 0.05806286513085976
+      },
+      {
+        "labels": {
+          "container": "simulator",
+          "pod": "simulator-d4bb56bcd-cfxm2"
+        },
+        "min": 0.008907184487538938,
+        "max": 0.03810104800348703,
+        "median": 0.0378089189426145
+      },
+      {
+        "labels": {
+          "container": "worker",
+          "pod": "worker-6467fcf4b4-cfmb5"
+        },
+        "min": 0.033472867217062253,
+        "max": 0.1647900485122058,
+        "median": 0.15390256088806348
+      },
+      {
+        "labels": {
+          "container": "worker",
+          "pod": "worker-6467fcf4b4-xwzh6"
+        },
+        "min": 0.04250590134167251,
+        "max": 0.16678191672925838,
+        "median": 0.15870575999894831
+      }
+    ],
+    "ready": [
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alertmanager-c9474ff4f-slgvf",
+          "uid": "7c9ad2ff-2602-411f-960c-f4a9d5a6387a"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alloy-6d6fc9cf66-b8xtc",
+          "uid": "61bbddb0-52e3-41d2-9e99-c3a56f32c5d6"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-bqb2z",
+          "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-f7cbr",
+          "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "exporter-645997d8bd-tpjgf",
+          "uid": "84fb4b35-6e7d-4fa8-83a9-d376135d4822"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "gateway-cd9dfc89d-zdmtz",
+          "uid": "c46f5ae3-7c4f-4704-8a44-27a93fa81def"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "grafana-6647b4bc55-qzpp8",
+          "uid": "3f2a2b27-57f0-4704-ae13-2f0371f2d093"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm",
+          "uid": "82adffff-a057-46ca-a1cb-ed3283727741"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "loki-597488bd7d-hrbbn",
+          "uid": "e977cdc2-6595-409e-bfe3-dfe4e0a93033"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "mailpit-55c5466dc-r8n2d",
+          "uid": "da123b32-5de8-491c-bbe8-974a2658de80"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "postgres-5f7965d6c4-rwngq",
+          "uid": "3cda8f8e-bd92-44d9-901d-c9b556cdbbb0"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "prometheus-65d764bdfc-dsmdj",
+          "uid": "dfe80f15-60f7-4d86-80df-d99838a99307"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "redis-587dcb4467-nmtb2",
+          "uid": "74a0bf1d-eae7-4e66-8185-f5dac9a07c66"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "scheduler-5bb4b6679b-nnnsc",
+          "uid": "7674dd75-ee73-48c2-8f4f-ec3b29ae26b8"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "simulator-d4bb56bcd-cfxm2",
+          "uid": "f7075496-628a-4792-8c1b-c21409229a71"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "worker-6467fcf4b4-cfmb5",
+          "uid": "1a33927e-1106-4e5b-a39a-49e806fcd17d"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "worker-6467fcf4b4-xwzh6",
+          "uid": "cd9406ad-8f8a-42bb-a973-38c3f1b2f234"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      }
+    ],
+    "restarts": [
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "alertmanager",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alertmanager-c9474ff4f-slgvf",
+          "uid": "7c9ad2ff-2602-411f-960c-f4a9d5a6387a"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "alloy",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alloy-6d6fc9cf66-b8xtc",
+          "uid": "61bbddb0-52e3-41d2-9e99-c3a56f32c5d6"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "api",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-bqb2z",
+          "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "api",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-f7cbr",
+          "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "exporter",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "exporter-645997d8bd-tpjgf",
+          "uid": "84fb4b35-6e7d-4fa8-83a9-d376135d4822"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "gateway",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "gateway-cd9dfc89d-zdmtz",
+          "uid": "c46f5ae3-7c4f-4704-8a44-27a93fa81def"
+        },
+        "min": 3.0,
+        "max": 3.0,
+        "median": 3.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "grafana",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "grafana-6647b4bc55-qzpp8",
+          "uid": "3f2a2b27-57f0-4704-ae13-2f0371f2d093"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "http",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-bqb2z",
+          "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "http",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-f7cbr",
+          "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "http",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "exporter-645997d8bd-tpjgf",
+          "uid": "84fb4b35-6e7d-4fa8-83a9-d376135d4822"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "kube-state-metrics",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm",
+          "uid": "82adffff-a057-46ca-a1cb-ed3283727741"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "loki",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "loki-597488bd7d-hrbbn",
+          "uid": "e977cdc2-6595-409e-bfe3-dfe4e0a93033"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "mailpit",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "mailpit-55c5466dc-r8n2d",
+          "uid": "da123b32-5de8-491c-bbe8-974a2658de80"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "postgres",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "postgres-5f7965d6c4-rwngq",
+          "uid": "3cda8f8e-bd92-44d9-901d-c9b556cdbbb0"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "prometheus",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "prometheus-65d764bdfc-dsmdj",
+          "uid": "dfe80f15-60f7-4d86-80df-d99838a99307"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "redis",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "redis-587dcb4467-nmtb2",
+          "uid": "74a0bf1d-eae7-4e66-8185-f5dac9a07c66"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "scheduler",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "scheduler-5bb4b6679b-nnnsc",
+          "uid": "7674dd75-ee73-48c2-8f4f-ec3b29ae26b8"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "simulator",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "simulator-d4bb56bcd-cfxm2",
+          "uid": "f7075496-628a-4792-8c1b-c21409229a71"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "worker",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "worker-6467fcf4b4-cfmb5",
+          "uid": "1a33927e-1106-4e5b-a39a-49e806fcd17d"
+        },
+        "min": 2.0,
+        "max": 2.0,
+        "median": 2.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "worker",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "worker-6467fcf4b4-xwzh6",
+          "uid": "cd9406ad-8f8a-42bb-a973-38c3f1b2f234"
+        },
+        "min": 2.0,
+        "max": 2.0,
+        "median": 2.0
+      }
+    ],
+    "overdue": [
+      {
+        "labels": {
+          "__name__": "lab_overdue_reports",
+          "instance": "exporter:8080",
+          "job": "lab-exporter",
+          "traffic": "fault"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "lab_overdue_reports",
+          "instance": "exporter:8080",
+          "job": "lab-exporter",
+          "traffic": "load"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "lab_overdue_reports",
+          "instance": "exporter:8080",
+          "job": "lab-exporter",
+          "traffic": "normal"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      }
+    ]
+  },
+  "step-60": {
+    "cpu": [
+      {
+        "labels": {
+          "pod": "alertmanager-c9474ff4f-slgvf"
+        },
+        "min": 0.0009797354689964843,
+        "max": 0.001965667406512514,
+        "median": 0.0013333831741971572
+      },
+      {
+        "labels": {
+          "pod": "alloy-6d6fc9cf66-b8xtc"
+        },
+        "min": 0.010231535379916284,
+        "max": 0.11376765334424596,
+        "median": 0.10899237185044947
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 0.009376166852057099,
+        "max": 0.9453473619528375,
+        "median": 0.6018423888956071
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 0.14800537468490244,
+        "max": 0.7381940475128568,
+        "median": 0.4744658322130308
+      },
+      {
+        "labels": {
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 0.01467613244018578,
+        "max": 0.02305498449453878,
+        "median": 0.020201935160982242
+      },
+      {
+        "labels": {
+          "pod": "gateway-cd9dfc89d-zdmtz"
+        },
+        "min": 0.005664868561008956,
+        "max": 0.037469054873357346,
+        "median": 0.03609715368617446
+      },
+      {
+        "labels": {
+          "pod": "grafana-6647b4bc55-qzpp8"
+        },
+        "min": 0.010126582329317294,
+        "max": 0.013079801443323645,
+        "median": 0.012192011545933572
+      },
+      {
+        "labels": {
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+        },
+        "min": 0.0005000759406597043,
+        "max": 0.0010077807780778075,
+        "median": 0.000679667747852035
+      },
+      {
+        "labels": {
+          "pod": "loki-597488bd7d-hrbbn"
+        },
+        "min": 0.011630637132901937,
+        "max": 0.021629416180886755,
+        "median": 0.01793346843285166
+      },
+      {
+        "labels": {
+          "pod": "mailpit-55c5466dc-r8n2d"
+        },
+        "min": 0.00016167388167388156,
+        "max": 0.0003598367063319727,
+        "median": 0.0002969985892436718
+      },
+      {
+        "labels": {
+          "pod": "postgres-5f7965d6c4-rwngq"
+        },
+        "min": 0.2061986946538663,
+        "max": 1.5297764616441036,
+        "median": 1.4490839169252787
+      },
+      {
+        "labels": {
+          "pod": "prometheus-65d764bdfc-dsmdj"
+        },
+        "min": 0.011775481754331692,
+        "max": 0.014448171813986483,
+        "median": 0.013247328568689726
+      },
+      {
+        "labels": {
+          "pod": "redis-587dcb4467-nmtb2"
+        },
+        "min": 0.013098043121047629,
+        "max": 0.10288911270017113,
+        "median": 0.09265250949477292
+      },
+      {
+        "labels": {
+          "pod": "scheduler-5bb4b6679b-nnnsc"
+        },
+        "min": 0.04884870398603849,
+        "max": 0.1748933914877645,
+        "median": 0.12295718982507159
+      },
+      {
+        "labels": {
+          "pod": "simulator-d4bb56bcd-cfxm2"
+        },
+        "min": 0.0076857108273316165,
+        "max": 0.05457133483806623,
+        "median": 0.04695604002970849
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-cfmb5"
+        },
+        "min": 0.047086894669050416,
+        "max": 0.30335846112091186,
+        "median": 0.2786941337546862
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-xwzh6"
+        },
+        "min": 0.026268788470199655,
+        "max": 0.298329125839716,
+        "median": 0.2800432378071772
+      }
+    ],
+    "memory": [
+      {
+        "labels": {
+          "pod": "alertmanager-c9474ff4f-slgvf"
+        },
+        "min": 18305024.0,
+        "max": 18989056.0,
+        "median": 18644992.0
+      },
+      {
+        "labels": {
+          "pod": "alloy-6d6fc9cf66-b8xtc"
+        },
+        "min": 59310080.0,
+        "max": 65105920.0,
+        "median": 59932672.0
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 41943040.0,
+        "max": 155373568.0,
+        "median": 72075264.0
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 41893888.0,
+        "max": 154406912.0,
+        "median": 92610560.0
+      },
+      {
+        "labels": {
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 40599552.0,
+        "max": 40648704.0,
+        "median": 40624128.0
+      },
+      {
+        "labels": {
+          "pod": "gateway-cd9dfc89d-zdmtz"
+        },
+        "min": 3919872.0,
+        "max": 9162752.0,
+        "median": 5095424.0
+      },
+      {
+        "labels": {
+          "pod": "grafana-6647b4bc55-qzpp8"
+        },
+        "min": 210440192.0,
+        "max": 210509824.0,
+        "median": 210468864.0
+      },
+      {
+        "labels": {
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+        },
+        "min": 10940416.0,
+        "max": 12320768.0,
+        "median": 11429888.0
+      },
+      {
+        "labels": {
+          "pod": "loki-597488bd7d-hrbbn"
+        },
+        "min": 119934976.0,
+        "max": 131764224.0,
+        "median": 128108544.0
+      },
+      {
+        "labels": {
+          "pod": "mailpit-55c5466dc-r8n2d"
+        },
+        "min": 7376896.0,
+        "max": 7434240.0,
+        "median": 7391232.0
+      },
+      {
+        "labels": {
+          "pod": "postgres-5f7965d6c4-rwngq"
+        },
+        "min": 66064384.0,
+        "max": 83034112.0,
+        "median": 73416704.0
+      },
+      {
+        "labels": {
+          "pod": "prometheus-65d764bdfc-dsmdj"
+        },
+        "min": 110002176.0,
+        "max": 113676288.0,
+        "median": 111339520.0
+      },
+      {
+        "labels": {
+          "pod": "redis-587dcb4467-nmtb2"
+        },
+        "min": 4534272.0,
+        "max": 10592256.0,
+        "median": 6934528.0
+      },
+      {
+        "labels": {
+          "pod": "scheduler-5bb4b6679b-nnnsc"
+        },
+        "min": 61329408.0,
+        "max": 95272960.0,
+        "median": 62056448.0
+      },
+      {
+        "labels": {
+          "pod": "simulator-d4bb56bcd-cfxm2"
+        },
+        "min": 19382272.0,
+        "max": 21348352.0,
+        "median": 19648512.0
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-cfmb5"
+        },
+        "min": 38649856.0,
+        "max": 56045568.0,
+        "median": 38674432.0
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-xwzh6"
+        },
+        "min": 39186432.0,
+        "max": 40505344.0,
+        "median": 39458816.0
+      }
+    ],
+    "throttling": [
+      {
+        "labels": {
+          "pod": "alertmanager-c9474ff4f-slgvf"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "alloy-6d6fc9cf66-b8xtc"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 0.0,
+        "max": 1.2999674738224916,
+        "median": 0.815716058788078
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 0.11187344321557148,
+        "max": 0.8072740373359637,
+        "median": 0.49098319361253223
+      },
+      {
+        "labels": {
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "gateway-cd9dfc89d-zdmtz"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "grafana-6647b4bc55-qzpp8"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "loki-597488bd7d-hrbbn"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "mailpit-55c5466dc-r8n2d"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "postgres-5f7965d6c4-rwngq"
+        },
+        "min": 0.0,
+        "max": 0.2563681559306701,
+        "median": 0.09959994802648522
+      },
+      {
+        "labels": {
+          "pod": "prometheus-65d764bdfc-dsmdj"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "redis-587dcb4467-nmtb2"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "scheduler-5bb4b6679b-nnnsc"
+        },
+        "min": 0.0,
+        "max": 0.0008162694481673562,
+        "median": 0.00010205022068583065
+      },
+      {
+        "labels": {
+          "pod": "simulator-d4bb56bcd-cfxm2"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-cfmb5"
+        },
+        "min": 0.0,
+        "max": 0.0035825937641211026,
+        "median": 0.002590681524637964
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-xwzh6"
+        },
+        "min": 0.0,
+        "max": 0.0005853569472338871,
+        "median": 0.00010047277260060038
+      }
+    ],
+    "host_cpu": [
+      {
+        "labels": {},
+        "min": 2.476200000000015,
+        "max": 7.963999999999976,
+        "median": 7.7977999999999685
+      }
+    ],
+    "host_memory": [
+      {
+        "labels": {
+          "__name__": "lab_host_memory_bytes",
+          "instance": "lab-host-metrics:19100",
+          "job": "lab-host-docker",
+          "kind": "MemAvailable"
+        },
+        "min": 21958266880.0,
+        "max": 22284967936.0,
+        "median": 22064177152.0
+      }
+    ],
+    "cpu_by_container": [
+      {
+        "labels": {
+          "container": "alertmanager",
+          "pod": "alertmanager-c9474ff4f-slgvf"
+        },
+        "min": 0.0009797354689964843,
+        "max": 0.001965667406512514,
+        "median": 0.0013333831741971572
+      },
+      {
+        "labels": {
+          "container": "alloy",
+          "pod": "alloy-6d6fc9cf66-b8xtc"
+        },
+        "min": 0.010231535379916284,
+        "max": 0.11376765334424596,
+        "median": 0.10899237185044947
+      },
+      {
+        "labels": {
+          "container": "api",
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 0.009143717634823311,
+        "max": 0.9317113143056553,
+        "median": 0.5916782247725545
+      },
+      {
+        "labels": {
+          "container": "api",
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 0.14772879605505929,
+        "max": 0.7217990749999998,
+        "median": 0.46184974672964485
+      },
+      {
+        "labels": {
+          "container": "exporter",
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 0.014381154840563048,
+        "max": 0.022736173808623715,
+        "median": 0.019847098380718818
+      },
+      {
+        "labels": {
+          "container": "gateway",
+          "pod": "gateway-cd9dfc89d-zdmtz"
+        },
+        "min": 0.005664868561008956,
+        "max": 0.037469054873357346,
+        "median": 0.03609715368617446
+      },
+      {
+        "labels": {
+          "container": "grafana",
+          "pod": "grafana-6647b4bc55-qzpp8"
+        },
+        "min": 0.010126582329317294,
+        "max": 0.013079801443323645,
+        "median": 0.012192011545933572
+      },
+      {
+        "labels": {
+          "container": "http",
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 0.0002324492172337881,
+        "max": 0.01696828648867832,
+        "median": 0.013129370155550314
+      },
+      {
+        "labels": {
+          "container": "http",
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 0.0002765786298431385,
+        "max": 0.01843195476604696,
+        "median": 0.014630198632932327
+      },
+      {
+        "labels": {
+          "container": "http",
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 0.00029497759962273095,
+        "max": 0.00041370900911566277,
+        "median": 0.0003783166145175357
+      },
+      {
+        "labels": {
+          "container": "kube-state-metrics",
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+        },
+        "min": 0.0005000759406597043,
+        "max": 0.0010077807780778075,
+        "median": 0.000679667747852035
+      },
+      {
+        "labels": {
+          "container": "loki",
+          "pod": "loki-597488bd7d-hrbbn"
+        },
+        "min": 0.011630637132901937,
+        "max": 0.021629416180886755,
+        "median": 0.01793346843285166
+      },
+      {
+        "labels": {
+          "container": "mailpit",
+          "pod": "mailpit-55c5466dc-r8n2d"
+        },
+        "min": 0.00016167388167388156,
+        "max": 0.0003598367063319727,
+        "median": 0.0002969985892436718
+      },
+      {
+        "labels": {
+          "container": "postgres",
+          "pod": "postgres-5f7965d6c4-rwngq"
+        },
+        "min": 0.2061986946538663,
+        "max": 1.5297764616441036,
+        "median": 1.4490839169252787
+      },
+      {
+        "labels": {
+          "container": "prometheus",
+          "pod": "prometheus-65d764bdfc-dsmdj"
+        },
+        "min": 0.011775481754331692,
+        "max": 0.014448171813986483,
+        "median": 0.013247328568689726
+      },
+      {
+        "labels": {
+          "container": "redis",
+          "pod": "redis-587dcb4467-nmtb2"
+        },
+        "min": 0.013098043121047629,
+        "max": 0.10288911270017113,
+        "median": 0.09265250949477292
+      },
+      {
+        "labels": {
+          "container": "scheduler",
+          "pod": "scheduler-5bb4b6679b-nnnsc"
+        },
+        "min": 0.04884870398603849,
+        "max": 0.1748933914877645,
+        "median": 0.12295718982507159
+      },
+      {
+        "labels": {
+          "container": "simulator",
+          "pod": "simulator-d4bb56bcd-cfxm2"
+        },
+        "min": 0.0076857108273316165,
+        "max": 0.05457133483806623,
+        "median": 0.04695604002970849
+      },
+      {
+        "labels": {
+          "container": "worker",
+          "pod": "worker-6467fcf4b4-cfmb5"
+        },
+        "min": 0.047086894669050416,
+        "max": 0.30335846112091186,
+        "median": 0.2786941337546862
+      },
+      {
+        "labels": {
+          "container": "worker",
+          "pod": "worker-6467fcf4b4-xwzh6"
+        },
+        "min": 0.026268788470199655,
+        "max": 0.298329125839716,
+        "median": 0.2800432378071772
+      }
+    ],
+    "ready": [
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alertmanager-c9474ff4f-slgvf",
+          "uid": "7c9ad2ff-2602-411f-960c-f4a9d5a6387a"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alloy-6d6fc9cf66-b8xtc",
+          "uid": "61bbddb0-52e3-41d2-9e99-c3a56f32c5d6"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-bqb2z",
+          "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+        },
+        "min": 0.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-f7cbr",
+          "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "exporter-645997d8bd-tpjgf",
+          "uid": "84fb4b35-6e7d-4fa8-83a9-d376135d4822"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "gateway-cd9dfc89d-zdmtz",
+          "uid": "c46f5ae3-7c4f-4704-8a44-27a93fa81def"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "grafana-6647b4bc55-qzpp8",
+          "uid": "3f2a2b27-57f0-4704-ae13-2f0371f2d093"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm",
+          "uid": "82adffff-a057-46ca-a1cb-ed3283727741"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "loki-597488bd7d-hrbbn",
+          "uid": "e977cdc2-6595-409e-bfe3-dfe4e0a93033"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "mailpit-55c5466dc-r8n2d",
+          "uid": "da123b32-5de8-491c-bbe8-974a2658de80"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "postgres-5f7965d6c4-rwngq",
+          "uid": "3cda8f8e-bd92-44d9-901d-c9b556cdbbb0"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "prometheus-65d764bdfc-dsmdj",
+          "uid": "dfe80f15-60f7-4d86-80df-d99838a99307"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "redis-587dcb4467-nmtb2",
+          "uid": "74a0bf1d-eae7-4e66-8185-f5dac9a07c66"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "scheduler-5bb4b6679b-nnnsc",
+          "uid": "7674dd75-ee73-48c2-8f4f-ec3b29ae26b8"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "simulator-d4bb56bcd-cfxm2",
+          "uid": "f7075496-628a-4792-8c1b-c21409229a71"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "worker-6467fcf4b4-cfmb5",
+          "uid": "1a33927e-1106-4e5b-a39a-49e806fcd17d"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "worker-6467fcf4b4-xwzh6",
+          "uid": "cd9406ad-8f8a-42bb-a973-38c3f1b2f234"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      }
+    ],
+    "restarts": [
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "alertmanager",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alertmanager-c9474ff4f-slgvf",
+          "uid": "7c9ad2ff-2602-411f-960c-f4a9d5a6387a"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "alloy",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alloy-6d6fc9cf66-b8xtc",
+          "uid": "61bbddb0-52e3-41d2-9e99-c3a56f32c5d6"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "api",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-bqb2z",
+          "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+        },
+        "min": 1.0,
+        "max": 4.0,
+        "median": 2.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "api",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-f7cbr",
+          "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+        },
+        "min": 1.0,
+        "max": 4.0,
+        "median": 2.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "exporter",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "exporter-645997d8bd-tpjgf",
+          "uid": "84fb4b35-6e7d-4fa8-83a9-d376135d4822"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "gateway",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "gateway-cd9dfc89d-zdmtz",
+          "uid": "c46f5ae3-7c4f-4704-8a44-27a93fa81def"
+        },
+        "min": 3.0,
+        "max": 3.0,
+        "median": 3.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "grafana",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "grafana-6647b4bc55-qzpp8",
+          "uid": "3f2a2b27-57f0-4704-ae13-2f0371f2d093"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "http",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-bqb2z",
+          "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+        },
+        "min": 1.0,
+        "max": 4.0,
+        "median": 2.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "http",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-f7cbr",
+          "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+        },
+        "min": 1.0,
+        "max": 4.0,
+        "median": 2.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "http",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "exporter-645997d8bd-tpjgf",
+          "uid": "84fb4b35-6e7d-4fa8-83a9-d376135d4822"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "kube-state-metrics",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm",
+          "uid": "82adffff-a057-46ca-a1cb-ed3283727741"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "loki",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "loki-597488bd7d-hrbbn",
+          "uid": "e977cdc2-6595-409e-bfe3-dfe4e0a93033"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "mailpit",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "mailpit-55c5466dc-r8n2d",
+          "uid": "da123b32-5de8-491c-bbe8-974a2658de80"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "postgres",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "postgres-5f7965d6c4-rwngq",
+          "uid": "3cda8f8e-bd92-44d9-901d-c9b556cdbbb0"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "prometheus",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "prometheus-65d764bdfc-dsmdj",
+          "uid": "dfe80f15-60f7-4d86-80df-d99838a99307"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "redis",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "redis-587dcb4467-nmtb2",
+          "uid": "74a0bf1d-eae7-4e66-8185-f5dac9a07c66"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "scheduler",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "scheduler-5bb4b6679b-nnnsc",
+          "uid": "7674dd75-ee73-48c2-8f4f-ec3b29ae26b8"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "simulator",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "simulator-d4bb56bcd-cfxm2",
+          "uid": "f7075496-628a-4792-8c1b-c21409229a71"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "worker",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "worker-6467fcf4b4-cfmb5",
+          "uid": "1a33927e-1106-4e5b-a39a-49e806fcd17d"
+        },
+        "min": 2.0,
+        "max": 2.0,
+        "median": 2.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "worker",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "worker-6467fcf4b4-xwzh6",
+          "uid": "cd9406ad-8f8a-42bb-a973-38c3f1b2f234"
+        },
+        "min": 2.0,
+        "max": 2.0,
+        "median": 2.0
+      }
+    ],
+    "overdue": [
+      {
+        "labels": {
+          "__name__": "lab_overdue_reports",
+          "instance": "exporter:8080",
+          "job": "lab-exporter",
+          "traffic": "fault"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "lab_overdue_reports",
+          "instance": "exporter:8080",
+          "job": "lab-exporter",
+          "traffic": "load"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "lab_overdue_reports",
+          "instance": "exporter:8080",
+          "job": "lab-exporter",
+          "traffic": "normal"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      }
+    ]
+  },
+  "confirmation-30": {
+    "cpu": [
+      {
+        "labels": {
+          "pod": "alertmanager-c9474ff4f-slgvf"
+        },
+        "min": 0.0011342632393397526,
+        "max": 0.0019763871403568026,
+        "median": 0.0015035052898111734
+      },
+      {
+        "labels": {
+          "pod": "alloy-6d6fc9cf66-b8xtc"
+        },
+        "min": 0.0453010068889831,
+        "max": 0.10191965577267259,
+        "median": 0.05505095014325234
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 0.021746942423756726,
+        "max": 0.4029608485959213,
+        "median": 0.3751015495393869
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 0.10148211665595333,
+        "max": 0.4170753872016471,
+        "median": 0.3797765926178965
+      },
+      {
+        "labels": {
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 0.012471904057272394,
+        "max": 0.018160052887910717,
+        "median": 0.01594369654029689
+      },
+      {
+        "labels": {
+          "pod": "gateway-cd9dfc89d-zdmtz"
+        },
+        "min": 0.003596320524801624,
+        "max": 0.01751257717230471,
+        "median": 0.016339622141625355
+      },
+      {
+        "labels": {
+          "pod": "grafana-6647b4bc55-qzpp8"
+        },
+        "min": 0.009137350948366482,
+        "max": 0.013447398376040351,
+        "median": 0.010696681974553238
+      },
+      {
+        "labels": {
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+        },
+        "min": 0.0003861238532110076,
+        "max": 0.0008159880129334166,
+        "median": 0.00056821983932177
+      },
+      {
+        "labels": {
+          "pod": "loki-597488bd7d-hrbbn"
+        },
+        "min": 0.010367794804278026,
+        "max": 0.015780368490833467,
+        "median": 0.013198429679265981
+      },
+      {
+        "labels": {
+          "pod": "mailpit-55c5466dc-r8n2d"
+        },
+        "min": 0.00016726156967746583,
+        "max": 0.00035191073066340547,
+        "median": 0.0002352482436825181
+      },
+      {
+        "labels": {
+          "pod": "postgres-5f7965d6c4-rwngq"
+        },
+        "min": 0.49812898664853006,
+        "max": 0.789574695832805,
+        "median": 0.6652346958595341
+      },
+      {
+        "labels": {
+          "pod": "prometheus-65d764bdfc-dsmdj"
+        },
+        "min": 0.009254670612165774,
+        "max": 0.014358383065438412,
+        "median": 0.012062752929201701
+      },
+      {
+        "labels": {
+          "pod": "redis-587dcb4467-nmtb2"
+        },
+        "min": 0.03327910816866191,
+        "max": 0.11168388480093551,
+        "median": 0.04228963467672058
+      },
+      {
+        "labels": {
+          "pod": "scheduler-5bb4b6679b-nnnsc"
+        },
+        "min": 0.04883420761893891,
+        "max": 0.1324523740014328,
+        "median": 0.060002476671401295
+      },
+      {
+        "labels": {
+          "pod": "simulator-d4bb56bcd-cfxm2"
+        },
+        "min": 0.02195855533326318,
+        "max": 0.04753589894935665,
+        "median": 0.03836445840131357
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-cfmb5"
+        },
+        "min": 0.12906377517721254,
+        "max": 0.32293620306324106,
+        "median": 0.1648910079924738
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-xwzh6"
+        },
+        "min": 0.1281324866176273,
+        "max": 0.33610714377390427,
+        "median": 0.16642638802101678
+      }
+    ],
+    "memory": [
+      {
+        "labels": {
+          "pod": "alertmanager-c9474ff4f-slgvf"
+        },
+        "min": 17960960.0,
+        "max": 19972096.0,
+        "median": 18472960.0
+      },
+      {
+        "labels": {
+          "pod": "alloy-6d6fc9cf66-b8xtc"
+        },
+        "min": 67989504.0,
+        "max": 69926912.0,
+        "median": 68937728.0
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 41713664.0,
+        "max": 190136320.0,
+        "median": 42817536.0
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 41869312.0,
+        "max": 188071936.0,
+        "median": 43079680.0
+      },
+      {
+        "labels": {
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 40603648.0,
+        "max": 41156608.0,
+        "median": 40628224.0
+      },
+      {
+        "labels": {
+          "pod": "gateway-cd9dfc89d-zdmtz"
+        },
+        "min": 3121152.0,
+        "max": 4427776.0,
+        "median": 3657728.0
+      },
+      {
+        "labels": {
+          "pod": "grafana-6647b4bc55-qzpp8"
+        },
+        "min": 210173952.0,
+        "max": 210919424.0,
+        "median": 210415616.0
+      },
+      {
+        "labels": {
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+        },
+        "min": 11112448.0,
+        "max": 13447168.0,
+        "median": 11128832.0
+      },
+      {
+        "labels": {
+          "pod": "loki-597488bd7d-hrbbn"
+        },
+        "min": 133455872.0,
+        "max": 154001408.0,
+        "median": 144721920.0
+      },
+      {
+        "labels": {
+          "pod": "mailpit-55c5466dc-r8n2d"
+        },
+        "min": 7393280.0,
+        "max": 7696384.0,
+        "median": 7417856.0
+      },
+      {
+        "labels": {
+          "pod": "postgres-5f7965d6c4-rwngq"
+        },
+        "min": 71041024.0,
+        "max": 88965120.0,
+        "median": 78215168.0
+      },
+      {
+        "labels": {
+          "pod": "prometheus-65d764bdfc-dsmdj"
+        },
+        "min": 110817280.0,
+        "max": 119361536.0,
+        "median": 114573312.0
+      },
+      {
+        "labels": {
+          "pod": "redis-587dcb4467-nmtb2"
+        },
+        "min": 4100096.0,
+        "max": 9039872.0,
+        "median": 4712448.0
+      },
+      {
+        "labels": {
+          "pod": "scheduler-5bb4b6679b-nnnsc"
+        },
+        "min": 62365696.0,
+        "max": 95059968.0,
+        "median": 62437376.0
+      },
+      {
+        "labels": {
+          "pod": "simulator-d4bb56bcd-cfxm2"
+        },
+        "min": 22122496.0,
+        "max": 23322624.0,
+        "median": 22544384.0
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-cfmb5"
+        },
+        "min": 38645760.0,
+        "max": 39907328.0,
+        "median": 38924288.0
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-xwzh6"
+        },
+        "min": 39186432.0,
+        "max": 53751808.0,
+        "median": 39483392.0
+      }
+    ],
+    "throttling": [
+      {
+        "labels": {
+          "pod": "alertmanager-c9474ff4f-slgvf"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "alloy-6d6fc9cf66-b8xtc"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 0.0,
+        "max": 0.011590250266872255,
+        "median": 0.003994207423664506
+      },
+      {
+        "labels": {
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 0.0,
+        "max": 0.002425398174659916,
+        "median": 0.000406590617493674
+      },
+      {
+        "labels": {
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "gateway-cd9dfc89d-zdmtz"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "grafana-6647b4bc55-qzpp8"
+        },
+        "min": 0.0,
+        "max": 7.158576379226917e-06,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "loki-597488bd7d-hrbbn"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "mailpit-55c5466dc-r8n2d"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "postgres-5f7965d6c4-rwngq"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "prometheus-65d764bdfc-dsmdj"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "redis-587dcb4467-nmtb2"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "scheduler-5bb4b6679b-nnnsc"
+        },
+        "min": 0.0,
+        "max": 0.0005905676902253243,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "simulator-d4bb56bcd-cfxm2"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-cfmb5"
+        },
+        "min": 0.00020231213872832566,
+        "max": 0.00386131131277173,
+        "median": 0.0009003212891970452
+      },
+      {
+        "labels": {
+          "pod": "worker-6467fcf4b4-xwzh6"
+        },
+        "min": 0.0,
+        "max": 0.0005332546140616577,
+        "median": 5.7798268300910885e-06
+      }
+    ],
+    "host_cpu": [
+      {
+        "labels": {},
+        "min": 4.225999999999985,
+        "max": 5.748400000000033,
+        "median": 4.382000000000039
+      }
+    ],
+    "host_memory": [
+      {
+        "labels": {
+          "__name__": "lab_host_memory_bytes",
+          "instance": "lab-host-metrics:19100",
+          "job": "lab-host-docker",
+          "kind": "MemAvailable"
+        },
+        "min": 21616570368.0,
+        "max": 22202175488.0,
+        "median": 21906790400.0
+      }
+    ],
+    "cpu_by_container": [
+      {
+        "labels": {
+          "container": "alertmanager",
+          "pod": "alertmanager-c9474ff4f-slgvf"
+        },
+        "min": 0.0011342632393397526,
+        "max": 0.0019763871403568026,
+        "median": 0.0015035052898111734
+      },
+      {
+        "labels": {
+          "container": "alloy",
+          "pod": "alloy-6d6fc9cf66-b8xtc"
+        },
+        "min": 0.0453010068889831,
+        "max": 0.10191965577267259,
+        "median": 0.05505095014325234
+      },
+      {
+        "labels": {
+          "container": "api",
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 0.020385256891558495,
+        "max": 0.395698817418926,
+        "median": 0.3682549886659504
+      },
+      {
+        "labels": {
+          "container": "api",
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 0.09942082111436944,
+        "max": 0.40958335732105183,
+        "median": 0.37336784290728764
+      },
+      {
+        "labels": {
+          "container": "exporter",
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 0.01223752985974787,
+        "max": 0.01787880680280611,
+        "median": 0.015637205189507487
+      },
+      {
+        "labels": {
+          "container": "gateway",
+          "pod": "gateway-cd9dfc89d-zdmtz"
+        },
+        "min": 0.003596320524801624,
+        "max": 0.01751257717230471,
+        "median": 0.016339622141625355
+      },
+      {
+        "labels": {
+          "container": "grafana",
+          "pod": "grafana-6647b4bc55-qzpp8"
+        },
+        "min": 0.009137350948366482,
+        "max": 0.013447398376040351,
+        "median": 0.010696681974553238
+      },
+      {
+        "labels": {
+          "container": "http",
+          "pod": "api-6999769bbf-bqb2z"
+        },
+        "min": 0.0013616855321982309,
+        "max": 0.0074402042298999035,
+        "median": 0.00682861344906934
+      },
+      {
+        "labels": {
+          "container": "http",
+          "pod": "api-6999769bbf-f7cbr"
+        },
+        "min": 0.0020612955415838957,
+        "max": 0.007818419297465538,
+        "median": 0.006949684860104833
+      },
+      {
+        "labels": {
+          "container": "http",
+          "pod": "exporter-645997d8bd-tpjgf"
+        },
+        "min": 0.0001916056393501976,
+        "max": 0.0003184670072453924,
+        "median": 0.00028071511937670775
+      },
+      {
+        "labels": {
+          "container": "kube-state-metrics",
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+        },
+        "min": 0.0003861238532110076,
+        "max": 0.0008159880129334166,
+        "median": 0.00056821983932177
+      },
+      {
+        "labels": {
+          "container": "loki",
+          "pod": "loki-597488bd7d-hrbbn"
+        },
+        "min": 0.010367794804278026,
+        "max": 0.015780368490833467,
+        "median": 0.013198429679265981
+      },
+      {
+        "labels": {
+          "container": "mailpit",
+          "pod": "mailpit-55c5466dc-r8n2d"
+        },
+        "min": 0.00016726156967746583,
+        "max": 0.00035191073066340547,
+        "median": 0.0002352482436825181
+      },
+      {
+        "labels": {
+          "container": "postgres",
+          "pod": "postgres-5f7965d6c4-rwngq"
+        },
+        "min": 0.49812898664853006,
+        "max": 0.789574695832805,
+        "median": 0.6652346958595341
+      },
+      {
+        "labels": {
+          "container": "prometheus",
+          "pod": "prometheus-65d764bdfc-dsmdj"
+        },
+        "min": 0.009254670612165774,
+        "max": 0.014358383065438412,
+        "median": 0.012062752929201701
+      },
+      {
+        "labels": {
+          "container": "redis",
+          "pod": "redis-587dcb4467-nmtb2"
+        },
+        "min": 0.03327910816866191,
+        "max": 0.11168388480093551,
+        "median": 0.04228963467672058
+      },
+      {
+        "labels": {
+          "container": "scheduler",
+          "pod": "scheduler-5bb4b6679b-nnnsc"
+        },
+        "min": 0.04883420761893891,
+        "max": 0.1324523740014328,
+        "median": 0.060002476671401295
+      },
+      {
+        "labels": {
+          "container": "simulator",
+          "pod": "simulator-d4bb56bcd-cfxm2"
+        },
+        "min": 0.02195855533326318,
+        "max": 0.04753589894935665,
+        "median": 0.03836445840131357
+      },
+      {
+        "labels": {
+          "container": "worker",
+          "pod": "worker-6467fcf4b4-cfmb5"
+        },
+        "min": 0.12906377517721254,
+        "max": 0.32293620306324106,
+        "median": 0.1648910079924738
+      },
+      {
+        "labels": {
+          "container": "worker",
+          "pod": "worker-6467fcf4b4-xwzh6"
+        },
+        "min": 0.1281324866176273,
+        "max": 0.33610714377390427,
+        "median": 0.16642638802101678
+      }
+    ],
+    "ready": [
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alertmanager-c9474ff4f-slgvf",
+          "uid": "7c9ad2ff-2602-411f-960c-f4a9d5a6387a"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alloy-6d6fc9cf66-b8xtc",
+          "uid": "61bbddb0-52e3-41d2-9e99-c3a56f32c5d6"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-bqb2z",
+          "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-f7cbr",
+          "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "exporter-645997d8bd-tpjgf",
+          "uid": "84fb4b35-6e7d-4fa8-83a9-d376135d4822"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "gateway-cd9dfc89d-zdmtz",
+          "uid": "c46f5ae3-7c4f-4704-8a44-27a93fa81def"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "grafana-6647b4bc55-qzpp8",
+          "uid": "3f2a2b27-57f0-4704-ae13-2f0371f2d093"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm",
+          "uid": "82adffff-a057-46ca-a1cb-ed3283727741"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "loki-597488bd7d-hrbbn",
+          "uid": "e977cdc2-6595-409e-bfe3-dfe4e0a93033"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "mailpit-55c5466dc-r8n2d",
+          "uid": "da123b32-5de8-491c-bbe8-974a2658de80"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "postgres-5f7965d6c4-rwngq",
+          "uid": "3cda8f8e-bd92-44d9-901d-c9b556cdbbb0"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "prometheus-65d764bdfc-dsmdj",
+          "uid": "dfe80f15-60f7-4d86-80df-d99838a99307"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "redis-587dcb4467-nmtb2",
+          "uid": "74a0bf1d-eae7-4e66-8185-f5dac9a07c66"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "scheduler-5bb4b6679b-nnnsc",
+          "uid": "7674dd75-ee73-48c2-8f4f-ec3b29ae26b8"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "simulator-d4bb56bcd-cfxm2",
+          "uid": "f7075496-628a-4792-8c1b-c21409229a71"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "worker-6467fcf4b4-cfmb5",
+          "uid": "1a33927e-1106-4e5b-a39a-49e806fcd17d"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_status_ready",
+          "condition": "true",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "worker-6467fcf4b4-xwzh6",
+          "uid": "cd9406ad-8f8a-42bb-a973-38c3f1b2f234"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      }
+    ],
+    "restarts": [
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "alertmanager",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alertmanager-c9474ff4f-slgvf",
+          "uid": "7c9ad2ff-2602-411f-960c-f4a9d5a6387a"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "alloy",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "alloy-6d6fc9cf66-b8xtc",
+          "uid": "61bbddb0-52e3-41d2-9e99-c3a56f32c5d6"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "api",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-bqb2z",
+          "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+        },
+        "min": 4.0,
+        "max": 4.0,
+        "median": 4.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "api",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-f7cbr",
+          "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+        },
+        "min": 4.0,
+        "max": 4.0,
+        "median": 4.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "exporter",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "exporter-645997d8bd-tpjgf",
+          "uid": "84fb4b35-6e7d-4fa8-83a9-d376135d4822"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "gateway",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "gateway-cd9dfc89d-zdmtz",
+          "uid": "c46f5ae3-7c4f-4704-8a44-27a93fa81def"
+        },
+        "min": 3.0,
+        "max": 3.0,
+        "median": 3.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "grafana",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "grafana-6647b4bc55-qzpp8",
+          "uid": "3f2a2b27-57f0-4704-ae13-2f0371f2d093"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "http",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-bqb2z",
+          "uid": "f8eb730e-1a94-4d11-bfbb-89e6271c1879"
+        },
+        "min": 4.0,
+        "max": 4.0,
+        "median": 4.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "http",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "api-6999769bbf-f7cbr",
+          "uid": "d99dac55-b672-456d-9f61-cd951e4d5eeb"
+        },
+        "min": 4.0,
+        "max": 4.0,
+        "median": 4.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "http",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "exporter-645997d8bd-tpjgf",
+          "uid": "84fb4b35-6e7d-4fa8-83a9-d376135d4822"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "kube-state-metrics",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "kube-state-metrics-7f6f6875d7-fpwwm",
+          "uid": "82adffff-a057-46ca-a1cb-ed3283727741"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "loki",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "loki-597488bd7d-hrbbn",
+          "uid": "e977cdc2-6595-409e-bfe3-dfe4e0a93033"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "mailpit",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "mailpit-55c5466dc-r8n2d",
+          "uid": "da123b32-5de8-491c-bbe8-974a2658de80"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "postgres",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "postgres-5f7965d6c4-rwngq",
+          "uid": "3cda8f8e-bd92-44d9-901d-c9b556cdbbb0"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "prometheus",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "prometheus-65d764bdfc-dsmdj",
+          "uid": "dfe80f15-60f7-4d86-80df-d99838a99307"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "redis",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "redis-587dcb4467-nmtb2",
+          "uid": "74a0bf1d-eae7-4e66-8185-f5dac9a07c66"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "scheduler",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "scheduler-5bb4b6679b-nnnsc",
+          "uid": "7674dd75-ee73-48c2-8f4f-ec3b29ae26b8"
+        },
+        "min": 1.0,
+        "max": 1.0,
+        "median": 1.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "simulator",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "simulator-d4bb56bcd-cfxm2",
+          "uid": "f7075496-628a-4792-8c1b-c21409229a71"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "worker",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "worker-6467fcf4b4-cfmb5",
+          "uid": "1a33927e-1106-4e5b-a39a-49e806fcd17d"
+        },
+        "min": 2.0,
+        "max": 2.0,
+        "median": 2.0
+      },
+      {
+        "labels": {
+          "__name__": "kube_pod_container_status_restarts_total",
+          "container": "worker",
+          "instance": "kube-state-metrics:8080",
+          "job": "kube-state-metrics",
+          "namespace": "lab",
+          "pod": "worker-6467fcf4b4-xwzh6",
+          "uid": "cd9406ad-8f8a-42bb-a973-38c3f1b2f234"
+        },
+        "min": 2.0,
+        "max": 2.0,
+        "median": 2.0
+      }
+    ],
+    "overdue": [
+      {
+        "labels": {
+          "__name__": "lab_overdue_reports",
+          "instance": "exporter:8080",
+          "job": "lab-exporter",
+          "traffic": "fault"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "lab_overdue_reports",
+          "instance": "exporter:8080",
+          "job": "lab-exporter",
+          "traffic": "load"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      },
+      {
+        "labels": {
+          "__name__": "lab_overdue_reports",
+          "instance": "exporter:8080",
+          "job": "lab-exporter",
+          "traffic": "normal"
+        },
+        "min": 0.0,
+        "max": 0.0,
+        "median": 0.0
+      }
+    ]
+  }
+}

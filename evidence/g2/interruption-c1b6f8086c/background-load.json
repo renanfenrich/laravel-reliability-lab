@@ -1,0 +1,3636 @@
+{
+  "start": "2026-10-11T19:06:26Z",
+  "end_requests": "2026-10-11T19:07:26Z",
+  "commit": "254f936503db97ffc1362e1e54b3d9ef80a99df1",
+  "prefix": "exp-d7d7ce08ee504f5f862c026c29c7f9e8-",
+  "traffic": "load",
+  "offered_rate_rps": 10,
+  "offered_duration_seconds": 60,
+  "requests": 600,
+  "elapsed_client_seconds": 59.9552427729941,
+  "throughput_rps": 10.007465106458724,
+  "acceptance_rps": 10.007465106458724,
+  "http_error_ratio": 0.0,
+  "client_latency_p50_seconds": 0.04438909699092619,
+  "client_latency_p95_seconds": 0.05983741697855294,
+  "client_latency_p99_seconds": 0.06445723201613873,
+  "client_latency_within_500ms_ratio": 1.0,
+  "arrival_lateness_p99_seconds": 0.000540414999704808,
+  "request_samples": [
+    {
+      "status": 202,
+      "latency_seconds": 0.04290260100970045,
+      "id": "5c6e6d6c-419f-4290-84ec-7285dadd2866",
+      "arrival_lateness_seconds": 0.0022475660080090165
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0469187920098193,
+      "id": "d9cabd19-077b-4c1d-9da8-dff5a4068216",
+      "arrival_lateness_seconds": 0.00019733799854293466
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.026731987978564575,
+      "id": "9c5f7027-af82-4924-90b6-8ea201b7a9c0",
+      "arrival_lateness_seconds": 0.0001760869927238673
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03881662501953542,
+      "id": "180cf7eb-5e23-4eeb-8633-e082fecf8e17",
+      "arrival_lateness_seconds": 0.00014180300058797002
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.017479914997238666,
+      "id": "4e989c7f-2eab-421e-b1a0-e6264dfc012c",
+      "arrival_lateness_seconds": 0.00015432300278916955
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04896024300251156,
+      "id": "65edb428-fd7e-44fe-b21d-49ed03a77e84",
+      "arrival_lateness_seconds": 0.00019927098765037954
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0649833969946485,
+      "id": "f2560b8b-3704-44ac-a3ee-abbe62384270",
+      "arrival_lateness_seconds": 0.0005502449930645525
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04003600700525567,
+      "id": "b39dcd4a-78a8-4968-bef6-3bc22667d5f0",
+      "arrival_lateness_seconds": 0.00023582199355587363
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.039768542017554864,
+      "id": "1a6f1be3-3f00-4838-84b6-6aa2dd6a04e2",
+      "arrival_lateness_seconds": 0.0002872589975595474
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04804906400386244,
+      "id": "875eb9fc-24b0-4983-b2da-b5dba745b81e",
+      "arrival_lateness_seconds": 0.00030733400490134954
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04904915200313553,
+      "id": "0111606d-f7fa-42ca-8f0e-ba9381ebe20c",
+      "arrival_lateness_seconds": 0.0002901949919760227
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04915622799308039,
+      "id": "81dac596-e31e-4138-bf9e-42ba601f466f",
+      "arrival_lateness_seconds": 0.00032567698508501053
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.019284800975583494,
+      "id": "d6b3e801-ff85-441c-94fe-e110204c3c49",
+      "arrival_lateness_seconds": 0.0001346999779343605
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.018381385976681486,
+      "id": "a4387ee6-a3ee-4295-a223-4aa0fa51af22",
+      "arrival_lateness_seconds": 0.0001578899973537773
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02935048201470636,
+      "id": "83b46011-9546-4ae3-b3ad-74f7f31e4bc1",
+      "arrival_lateness_seconds": 0.00019620999228209257
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04715786699671298,
+      "id": "53b6dd09-9e8a-49bc-afc2-f2c18646d882",
+      "arrival_lateness_seconds": 0.00025086800451390445
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04930868200608529,
+      "id": "28ae97bf-2022-440f-9128-de9ce99d4b6b",
+      "arrival_lateness_seconds": 0.00021317097707651556
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.021089747024234384,
+      "id": "fad9d426-2b84-40a6-83a0-7a095b610449",
+      "arrival_lateness_seconds": 0.00016561397933401167
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04361244398751296,
+      "id": "1eec8b3e-6a7d-4f4c-8cc5-e336bee84c39",
+      "arrival_lateness_seconds": 0.00017685300554148853
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04912076599430293,
+      "id": "836dc4ed-0be5-4bbb-9373-6e39914faae1",
+      "arrival_lateness_seconds": 0.00035878701601177454
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05158439101069234,
+      "id": "9b211c39-b20e-4aba-b65a-68529afa9d52",
+      "arrival_lateness_seconds": 0.00028379299328662455
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0374147119873669,
+      "id": "29fad044-aebf-40f7-974f-8ab80a08b826",
+      "arrival_lateness_seconds": 0.0002538510016165674
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.050298113987082615,
+      "id": "b24b57b6-68ac-4eef-a5d2-85872f3a5cae",
+      "arrival_lateness_seconds": 0.00020241699530743062
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03829317900817841,
+      "id": "3196b056-7ece-49e6-9a69-b092adac7a0e",
+      "arrival_lateness_seconds": 0.00018952001119032502
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03628713099169545,
+      "id": "400d999f-21d3-4585-8433-8770855ed140",
+      "arrival_lateness_seconds": 0.00021613200078718364
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05466816999251023,
+      "id": "dc0195b7-299f-4d94-a3c8-2cdbb970e862",
+      "arrival_lateness_seconds": 0.00028622898389585316
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05046972900163382,
+      "id": "97f63346-dc04-4593-83df-a2d7513ce3be",
+      "arrival_lateness_seconds": 0.00023125100415199995
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04356067001936026,
+      "id": "cb4470ae-253e-4ba9-b2ed-135ac840d97a",
+      "arrival_lateness_seconds": 0.0002618249855004251
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05655391199979931,
+      "id": "92d6b012-181f-45e6-a898-103ce5b53f27",
+      "arrival_lateness_seconds": 0.00025414800620637834
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03592446999391541,
+      "id": "1fc519cf-cd25-447f-8c84-8cecf9d54b34",
+      "arrival_lateness_seconds": 0.00020760699408128858
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05805570297525264,
+      "id": "7be050bb-da60-483f-b9c3-1e2ba08e66d4",
+      "arrival_lateness_seconds": 0.00044451700523495674
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.051796776009723544,
+      "id": "bceb2108-e86c-4762-9aa7-85b398feb7e0",
+      "arrival_lateness_seconds": 0.0002569379867054522
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05745091399876401,
+      "id": "2c59431b-bab1-48c7-9a6d-4260ec83f79e",
+      "arrival_lateness_seconds": 0.00030860197148285806
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.026268335001077503,
+      "id": "a07da752-8f59-451a-bfa8-3625661dc801",
+      "arrival_lateness_seconds": 0.00021240999922156334
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.022447489987825975,
+      "id": "736d01db-9df4-4557-8811-c9b8ad77aaed",
+      "arrival_lateness_seconds": 0.00013898199540562928
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.044292116013821214,
+      "id": "7d1bea28-1442-4416-9eef-d874c830debb",
+      "arrival_lateness_seconds": 0.000244669005041942
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04091686400352046,
+      "id": "add5da5e-d0de-47b9-b652-4029f63a41d7",
+      "arrival_lateness_seconds": 0.00037745098234154284
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02172303100815043,
+      "id": "a555ba19-f46c-4dfc-9bc0-be34abd9362d",
+      "arrival_lateness_seconds": 0.00013956299517303705
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.051154089014744386,
+      "id": "5fdf2699-9945-44c1-afcc-d25041d834e7",
+      "arrival_lateness_seconds": 0.0003106210206169635
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.043555572017794475,
+      "id": "b0224080-9953-49a2-8992-a8079d07e6fa",
+      "arrival_lateness_seconds": 0.0002564390015322715
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02945402797195129,
+      "id": "0feb0937-2366-4548-9af3-74dca0d7d244",
+      "arrival_lateness_seconds": 0.00025558998459018767
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.019715461996383965,
+      "id": "d15112bd-cfcc-4670-a5ca-3c3e5a8e6485",
+      "arrival_lateness_seconds": 0.00015151099069043994
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.021985323022818193,
+      "id": "739bc870-5830-427b-bdc8-2e130847aea5",
+      "arrival_lateness_seconds": 0.00016519398195669055
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.045357901020906866,
+      "id": "cd8aae51-bcec-4aca-9564-f641e45ca9c9",
+      "arrival_lateness_seconds": 0.00028921201010234654
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.041494873992633075,
+      "id": "f2d16da7-5f0a-4d2a-9d2a-12500e7b0044",
+      "arrival_lateness_seconds": 0.0003078909940086305
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0472488829982467,
+      "id": "6a202816-90fd-45f1-9417-c0c9408f5898",
+      "arrival_lateness_seconds": 0.00033288999111391604
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.048029375000623986,
+      "id": "e269cef2-ca6c-400b-8bcd-ea46023a9d2c",
+      "arrival_lateness_seconds": 0.0002425829879939556
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.046214719011913985,
+      "id": "295f78d9-9c5b-4747-9e73-9ccac592eab3",
+      "arrival_lateness_seconds": 0.00024013797519728541
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0479406870144885,
+      "id": "548d8716-33c0-47a2-b993-b50c34fd0873",
+      "arrival_lateness_seconds": 0.000301240012049675
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.038630597991868854,
+      "id": "e2f11ec9-80c4-406f-a385-80fadd797360",
+      "arrival_lateness_seconds": 0.00028517699684016407
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05001383597846143,
+      "id": "522ff192-b453-4372-8a6b-2cdf0c133754",
+      "arrival_lateness_seconds": 0.00032595699303783476
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.047423308016732335,
+      "id": "1677539d-084b-44d6-b759-2f814de312ba",
+      "arrival_lateness_seconds": 0.00029962300322949886
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.049441149982158095,
+      "id": "ca4c5e8d-6e27-4bc1-b1b0-c9b241ca11cb",
+      "arrival_lateness_seconds": 0.0003446799819357693
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04584192598122172,
+      "id": "ff85dd76-1baa-49db-95bf-612379ed0ae2",
+      "arrival_lateness_seconds": 0.0003599580086302012
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.01872273100889288,
+      "id": "965da097-03f2-480e-a293-9282cf5be2ae",
+      "arrival_lateness_seconds": 0.00016426999354735017
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.042352730000857264,
+      "id": "846579cc-283f-4f70-bd2f-6cdf2f95a304",
+      "arrival_lateness_seconds": 0.0002336750039830804
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05604185999254696,
+      "id": "d850af15-8861-4321-aca9-b0ed9d7a7e16",
+      "arrival_lateness_seconds": 0.0002963900042232126
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.043462653004098684,
+      "id": "1ce5d3f5-59ec-4447-b9ab-e22d3b80cb6a",
+      "arrival_lateness_seconds": 0.00027124397456645966
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05879363801795989,
+      "id": "7d9df327-6d17-4cfc-8a59-b60383ae1ed7",
+      "arrival_lateness_seconds": 0.00031424101325683296
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.055817287997342646,
+      "id": "07c6c329-8f30-466c-bc1d-2d8ffa9be353",
+      "arrival_lateness_seconds": 0.00023394799791276455
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05097929199109785,
+      "id": "958b8ce6-eb01-4da5-9ca0-e13d5ea6735a",
+      "arrival_lateness_seconds": 0.00023683998733758926
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05334337500971742,
+      "id": "b25382de-f4d9-4bc2-98a4-ab9458351e13",
+      "arrival_lateness_seconds": 0.000277248997008428
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05753625099896453,
+      "id": "7be1a920-7fd6-4f8d-a164-c0c8f4c42d4a",
+      "arrival_lateness_seconds": 0.00025650698808021843
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02480032600578852,
+      "id": "16a2e63c-e42e-4bf5-afed-1ffd8da00b90",
+      "arrival_lateness_seconds": 0.0002252160047646612
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03029804100515321,
+      "id": "84126586-8270-4940-86ba-743bac2e4530",
+      "arrival_lateness_seconds": 0.00024438000400550663
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.040145807986846194,
+      "id": "3aa45c5c-5690-497c-91bc-6ec15def0d73",
+      "arrival_lateness_seconds": 0.00026747299125418067
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.06253910198574886,
+      "id": "2d7593a0-6fa1-4305-9e16-741a349bc955",
+      "arrival_lateness_seconds": 0.0002995999820996076
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02723115499247797,
+      "id": "01943a95-e29a-410d-b47f-c89c51e9dca8",
+      "arrival_lateness_seconds": 0.0002441749966237694
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02345181198325008,
+      "id": "12861824-b5ce-464e-bd0b-a91dc25fa58f",
+      "arrival_lateness_seconds": 0.00013717799447476864
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05420707701705396,
+      "id": "0a603246-2d64-48a5-a129-1ab905ddba83",
+      "arrival_lateness_seconds": 0.00035285900230519474
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05854370302404277,
+      "id": "7bf9dd90-7d17-43fd-90c4-e05ae8654e82",
+      "arrival_lateness_seconds": 0.00031994300661608577
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03578483700403012,
+      "id": "6a6a0418-aa7e-4c72-9200-a4a3c43cb62c",
+      "arrival_lateness_seconds": 0.0002818469947669655
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04928210299112834,
+      "id": "d7f3444e-f681-4c57-9c0f-08503e71790d",
+      "arrival_lateness_seconds": 0.00034226299612782896
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.055549092998262495,
+      "id": "a3401515-393e-4ed5-93eb-e7ca5fd07324",
+      "arrival_lateness_seconds": 0.00020878200302831829
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04665399302029982,
+      "id": "374f754e-1be6-4b5a-b1d3-b9db05efc99d",
+      "arrival_lateness_seconds": 0.0001623010030016303
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03743902101996355,
+      "id": "82435b75-21b5-48ce-9087-f1ac8e30d369",
+      "arrival_lateness_seconds": 0.0002912580093834549
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.060050531988963485,
+      "id": "d318a53a-f177-46f7-9a8d-fd3fbc85ea9e",
+      "arrival_lateness_seconds": 0.00034531799610704184
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.051443342003040016,
+      "id": "19fd79f8-e183-4f34-8b5c-c81ea270e1f9",
+      "arrival_lateness_seconds": 0.0002794239844661206
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03710748298908584,
+      "id": "edd7e8c7-36c6-4e5a-99fe-bd3cf5658466",
+      "arrival_lateness_seconds": 0.00028008202207274735
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04540748099680059,
+      "id": "1da6dc23-792b-4b15-ad78-e39263df41f2",
+      "arrival_lateness_seconds": 0.00031038999441079795
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.055983978003496304,
+      "id": "1c2ac490-cabe-40d1-ac67-b26645c91970",
+      "arrival_lateness_seconds": 0.0002889600000344217
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0577121099922806,
+      "id": "52a2b0e5-b608-43d9-9f9c-2fb10283a6f2",
+      "arrival_lateness_seconds": 0.0002497200039215386
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.042827538010897115,
+      "id": "58555963-c2df-4a4a-9e8a-b0a593997ea3",
+      "arrival_lateness_seconds": 0.00024367799051105976
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04789474798599258,
+      "id": "f5db3fb9-82c7-4675-ae66-9c902a1720fd",
+      "arrival_lateness_seconds": 0.00029305199859663844
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04419506000704132,
+      "id": "87681dd5-53a5-4ecf-8914-a5ecb48bcccd",
+      "arrival_lateness_seconds": 0.0002771299914456904
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05088005799916573,
+      "id": "4e5c64d5-7ed7-4d14-ab97-a2d458b2e7d0",
+      "arrival_lateness_seconds": 0.00024858000688254833
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.057133110996801406,
+      "id": "1b7fe185-0bd7-4688-8838-6c4ccc14330e",
+      "arrival_lateness_seconds": 0.0002782439987640828
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.032400304975453764,
+      "id": "94cb96c0-cc9e-424f-8c0a-d780c6d76fda",
+      "arrival_lateness_seconds": 0.000316781981382519
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03195360698737204,
+      "id": "f4a0e53b-077b-43ff-91d7-2d9903f194f9",
+      "arrival_lateness_seconds": 0.00012252602027729154
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05652689898852259,
+      "id": "c776a65c-b131-4fde-858e-eb8cd7e5adb9",
+      "arrival_lateness_seconds": 0.00023402200895361602
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05155817401828244,
+      "id": "4032f168-6bcd-44fa-8739-8427367b05cc",
+      "arrival_lateness_seconds": 0.00027423599385656416
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03904660799889825,
+      "id": "0a07d56f-d869-4dcf-b7c0-f2718caf6724",
+      "arrival_lateness_seconds": 0.0001837989839259535
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02246535601443611,
+      "id": "b611316e-aacb-448b-8210-1cd858e7953f",
+      "arrival_lateness_seconds": 0.00015213899314403534
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.044818263995694,
+      "id": "9be9915c-6c2b-4f17-b354-780ba02a61ef",
+      "arrival_lateness_seconds": 0.0004026590031571686
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02485679998062551,
+      "id": "24389e72-f0fd-4394-b55f-edd806b6edce",
+      "arrival_lateness_seconds": 0.0002496980014257133
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05032754800049588,
+      "id": "347ed1cf-166e-4dfc-b714-733d8e37fb6a",
+      "arrival_lateness_seconds": 0.00021133600967004895
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05406758398748934,
+      "id": "19cf19d2-daf6-435e-a6d5-9546928bb6a7",
+      "arrival_lateness_seconds": 0.00031379598658531904
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05136206699535251,
+      "id": "a63cabeb-7b86-41f6-8326-ab035af4c01d",
+      "arrival_lateness_seconds": 0.00030330399749800563
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04165231200749986,
+      "id": "c4e1bfa8-494e-47e3-8e98-a4ffa4c1d369",
+      "arrival_lateness_seconds": 0.0003131660050712526
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05506792297819629,
+      "id": "6bcdf71a-c648-485d-95ba-8286f480fd2c",
+      "arrival_lateness_seconds": 0.00021134898997843266
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.06445723201613873,
+      "id": "09dacaee-f753-44cd-ab39-3ef7e298773f",
+      "arrival_lateness_seconds": 0.00025505200028419495
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.054817736003315076,
+      "id": "0bc61d3a-c95b-4084-9dde-c4f4aa252fe6",
+      "arrival_lateness_seconds": 0.0002518989786040038
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04223494598409161,
+      "id": "8321de49-8e33-4564-b2cb-130dbe8a806f",
+      "arrival_lateness_seconds": 0.0002633559925016016
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.043250271992292255,
+      "id": "3742ee97-ce77-4e42-96e3-e4966e395a86",
+      "arrival_lateness_seconds": 0.00018805800937116146
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03220995599986054,
+      "id": "d6bdda91-32fb-4965-937c-ee8a85367f51",
+      "arrival_lateness_seconds": 0.00021144800120964646
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.042324897018261254,
+      "id": "553bf1c5-18b4-4bd4-ac8a-8fc57402396b",
+      "arrival_lateness_seconds": 0.0002152299857698381
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04945523201604374,
+      "id": "0cad1ed9-3dab-45fc-a79c-4c01738aace9",
+      "arrival_lateness_seconds": 0.0002742100041359663
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.044317099993349984,
+      "id": "8a8e89eb-585f-4937-9a3c-98b4678294bb",
+      "arrival_lateness_seconds": 0.00020062699331901968
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.049263963010162115,
+      "id": "cc0891d0-a88f-4c23-8c69-321cb19a5b29",
+      "arrival_lateness_seconds": 0.0003386370080988854
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.051974050991702825,
+      "id": "5510aac9-ed72-4d0c-82a2-61a830b3b305",
+      "arrival_lateness_seconds": 0.00030067499028518796
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05983741697855294,
+      "id": "b5b9042b-23e8-4712-9e45-633aedd8f177",
+      "arrival_lateness_seconds": 0.0003673940082080662
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05896805602242239,
+      "id": "dc94e8ff-1fb1-4952-bf90-6c602b652f3e",
+      "arrival_lateness_seconds": 0.00028385798214003444
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.049663219979265705,
+      "id": "e8a88122-41f5-4007-83af-51b5b41480a6",
+      "arrival_lateness_seconds": 0.00027642599889077246
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.046523480996256694,
+      "id": "4c5c4347-a3ac-4c89-bd6b-2578f45a3e31",
+      "arrival_lateness_seconds": 0.00030476500978693366
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.026239934988552704,
+      "id": "95c4c4bd-1bee-4db5-b1fe-524e2ade190d",
+      "arrival_lateness_seconds": 0.0002336240140721202
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04802155098877847,
+      "id": "6c44ebdc-4037-40a0-960b-83cf6606893a",
+      "arrival_lateness_seconds": 0.0002877649967558682
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03912889800267294,
+      "id": "c07c4a64-308d-4949-b886-4e0bd3562b5f",
+      "arrival_lateness_seconds": 0.00021067599300295115
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0312688639969565,
+      "id": "756141b8-60c2-4aad-b807-4952e26cce79",
+      "arrival_lateness_seconds": 0.00017186399782076478
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.01919632698991336,
+      "id": "f06e4c9c-fd6c-4c1b-8a35-f38370181a91",
+      "arrival_lateness_seconds": 0.00020435699843801558
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.06012998297228478,
+      "id": "86a4d46d-c0a0-4388-9eab-80dafcff5d89",
+      "arrival_lateness_seconds": 0.00019049301045015454
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02265112000168301,
+      "id": "7a6dd1f4-7394-4866-a492-5fb260ab5023",
+      "arrival_lateness_seconds": 0.00019099400378763676
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03989040298620239,
+      "id": "bb8ef82d-0399-46dd-b271-ae24deadb838",
+      "arrival_lateness_seconds": 0.000156034977408126
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05256629400537349,
+      "id": "fae06e89-5305-4a67-9363-d0ebe8d339d0",
+      "arrival_lateness_seconds": 0.0002172109961975366
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05247843099641614,
+      "id": "d7e02e32-8b67-49ba-a159-804d8522edda",
+      "arrival_lateness_seconds": 0.000304904009681195
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04976909697870724,
+      "id": "c3bb03e3-0c6b-42b5-b742-d41f8900ce83",
+      "arrival_lateness_seconds": 0.00027675600722432137
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.019700447999639437,
+      "id": "10411ecf-796f-4ea0-b881-e5167d02ab60",
+      "arrival_lateness_seconds": 0.00016611098544672132
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05447581401676871,
+      "id": "7bca4115-ba2d-4a02-b66a-f870c55c0918",
+      "arrival_lateness_seconds": 0.00030335900373756886
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.033743248000973836,
+      "id": "6f69a005-aa70-42d1-a934-a1cc5e23bce6",
+      "arrival_lateness_seconds": 0.00022891099797561765
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04566757901920937,
+      "id": "725d387c-4e22-4907-b4e4-59f4fe5115b0",
+      "arrival_lateness_seconds": 0.00029614201048389077
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.050601774972165,
+      "id": "638571fb-30d1-4250-bdfe-5a4a003f294a",
+      "arrival_lateness_seconds": 0.000276351987849921
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0298881380003877,
+      "id": "646f4f07-6d7f-441b-9db3-16462ab88e6f",
+      "arrival_lateness_seconds": 0.00020121200941503048
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04193919600220397,
+      "id": "bfa07c1c-b46d-4b3d-ae86-98f33ff4be99",
+      "arrival_lateness_seconds": 0.00025635698693804443
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.050250944012077525,
+      "id": "7e6eb5b9-7dfd-41c7-9b8f-3eb986309fe0",
+      "arrival_lateness_seconds": 0.00025698699755594134
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0373593200056348,
+      "id": "7907bbb2-1a76-45e1-a114-480b4c7a1c2f",
+      "arrival_lateness_seconds": 0.00020784599473699927
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04866506301914342,
+      "id": "76064eb1-aa1c-4c6d-890d-8d3e4d77e290",
+      "arrival_lateness_seconds": 0.0002623150066938251
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.055784771975595504,
+      "id": "17439212-7af3-42c1-882c-cfa6efd50784",
+      "arrival_lateness_seconds": 0.0003259899967815727
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03579399999580346,
+      "id": "0ac931c2-49fd-4135-9eba-919b16fda995",
+      "arrival_lateness_seconds": 0.000540414999704808
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03704187201219611,
+      "id": "6de7c9b3-0517-45cf-8750-6adfa389bef6",
+      "arrival_lateness_seconds": 0.0001970129960682243
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.018179701000917703,
+      "id": "2a644eda-7bef-4a1f-a18e-22e6c14308d5",
+      "arrival_lateness_seconds": 0.00012884699390269816
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.046596927975770086,
+      "id": "6ebd7075-ad6c-4138-aff3-340af3915ac2",
+      "arrival_lateness_seconds": 0.00036012299824506044
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04943668100167997,
+      "id": "faee8dd4-624c-485a-8a8a-d454bc47cecb",
+      "arrival_lateness_seconds": 0.00029065998387522995
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.065368509007385,
+      "id": "c202e6f2-1c79-4a52-a664-08e678191c3a",
+      "arrival_lateness_seconds": 0.0002540519926697016
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.021293976984452456,
+      "id": "4e97aeac-9907-4ad2-b48e-c3fc0f798775",
+      "arrival_lateness_seconds": 0.00014723799540661275
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02203186199767515,
+      "id": "c357f87b-4090-46a2-ad1d-fbc426f848af",
+      "arrival_lateness_seconds": 0.00017221600865013897
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.052106194983934984,
+      "id": "870bd80b-c652-4dc3-b7f7-3d83753a7b73",
+      "arrival_lateness_seconds": 0.00018601701594889164
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.053980144002707675,
+      "id": "d257126c-88a6-436c-9c96-c1bab6a73bd4",
+      "arrival_lateness_seconds": 0.0002768079866655171
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04577872500522062,
+      "id": "d5b95c63-1373-4da6-99bc-8b61b748a2b2",
+      "arrival_lateness_seconds": 0.00032700298470444977
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.044886317977216095,
+      "id": "54ebb2dd-8c42-4503-af86-36583a7f95d2",
+      "arrival_lateness_seconds": 0.0003078989975620061
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04809504299191758,
+      "id": "0d1bb43c-1d3b-4cb7-9a1a-47c38b3fca36",
+      "arrival_lateness_seconds": 0.00022365100448951125
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.049646141997072846,
+      "id": "29ef7241-5160-4097-8865-0024b3fa4211",
+      "arrival_lateness_seconds": 0.00027981100720353425
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04044677299680188,
+      "id": "ba70778f-8188-4b05-b37b-d205e44ba064",
+      "arrival_lateness_seconds": 0.00020601798314601183
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04908330200123601,
+      "id": "468da0c4-3c66-4b00-91a5-f2357d36efd5",
+      "arrival_lateness_seconds": 0.00029500797973014414
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04704542100080289,
+      "id": "12a0b58f-546e-427a-bb4d-ce2d0f4af815",
+      "arrival_lateness_seconds": 0.00031355497776530683
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.046627780015114695,
+      "id": "629f56a3-be9e-4d73-bac0-e8323ed068cd",
+      "arrival_lateness_seconds": 0.00021029802155680954
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.027223810990108177,
+      "id": "8cb85300-ec7c-4484-8965-3b8cdeee717b",
+      "arrival_lateness_seconds": 0.00019107700791209936
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04787265899358317,
+      "id": "b7afac26-0b5e-4c2b-849d-3c0b205a0bdf",
+      "arrival_lateness_seconds": 0.0002303939836565405
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04068581399042159,
+      "id": "46ab09ec-8416-4c64-a3f7-81579e6c9a46",
+      "arrival_lateness_seconds": 0.0001821699843276292
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.048968609975418076,
+      "id": "33b2fef7-ea50-450d-a4e5-ee91a50f4a8e",
+      "arrival_lateness_seconds": 0.00022383799660019577
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05372958100633696,
+      "id": "f41d374c-3346-4b15-876d-8e956a41bdf1",
+      "arrival_lateness_seconds": 0.0003195909957867116
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05361072701634839,
+      "id": "133e025a-466f-4723-bbe9-28f3d228f64c",
+      "arrival_lateness_seconds": 0.0002905509900301695
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04733520999434404,
+      "id": "3e534cbc-6c55-4fa0-af7c-49061c778514",
+      "arrival_lateness_seconds": 0.0002893279888667166
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04319261200726032,
+      "id": "adfdee39-8ac3-419f-8b67-39fcd8f57316",
+      "arrival_lateness_seconds": 0.00030149100348353386
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05423699499806389,
+      "id": "9fa7720d-7c87-49b2-99a3-9d26fccca9a4",
+      "arrival_lateness_seconds": 0.000289805990178138
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02452714098035358,
+      "id": "14bf256d-62b1-448c-8557-4288d9697603",
+      "arrival_lateness_seconds": 0.00020400001085363328
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05719327999395318,
+      "id": "5cae30e4-00d8-4c46-9075-8a7d02ad51ea",
+      "arrival_lateness_seconds": 0.0002476919908076525
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.042066235007951036,
+      "id": "4239a03b-3cce-4f20-a1ec-36c04b82c8df",
+      "arrival_lateness_seconds": 0.00020176198449917138
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04605283698765561,
+      "id": "da647cce-40c9-454a-b312-92dcd7a63f3d",
+      "arrival_lateness_seconds": 0.00019102697842754424
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.01768014399567619,
+      "id": "5c9ab025-a0ff-4215-91c2-24356922df0f",
+      "arrival_lateness_seconds": 9.691299055702984e-05
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04400742900907062,
+      "id": "7878ef30-8e76-407b-8499-3c553f706b6c",
+      "arrival_lateness_seconds": 0.00021785800345242023
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0435563949868083,
+      "id": "90e3c7ba-6ee2-4f9e-b9f3-4fec33e68327",
+      "arrival_lateness_seconds": 0.0003661210066638887
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.041688395984238014,
+      "id": "4bcca8b0-7c66-4a87-aae1-12b8aa1b3cf9",
+      "arrival_lateness_seconds": 0.000208985002245754
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03668761902372353,
+      "id": "14aebd87-9547-4fe0-b29c-d3e1c2b5ed4a",
+      "arrival_lateness_seconds": 0.00022856699069961905
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05094405799172819,
+      "id": "e460a127-c75b-42c2-8163-45d237caeead",
+      "arrival_lateness_seconds": 0.0002668179804459214
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.057227533019613475,
+      "id": "203df391-7a10-403a-8d54-1f2c565a0b59",
+      "arrival_lateness_seconds": 0.00022471300326287746
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04458172500017099,
+      "id": "8f07a819-44bf-4508-8468-55fcaf1471d1",
+      "arrival_lateness_seconds": 9.959700400941074e-05
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.06775849900441244,
+      "id": "cca02717-cf6c-4e51-8eb6-629d3dc96100",
+      "arrival_lateness_seconds": 0.0002670559915713966
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.06365871298476122,
+      "id": "122bd9b2-5c5e-41b1-9412-a47e063b3aa2",
+      "arrival_lateness_seconds": 0.00020714499987661839
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.030382299999473616,
+      "id": "7e1556fa-ecef-415a-8443-a59f515c6b61",
+      "arrival_lateness_seconds": 0.00018043798627331853
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04854372501722537,
+      "id": "ba2d524c-678e-4414-bcfc-3897d372829a",
+      "arrival_lateness_seconds": 0.0002456350193824619
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05347467798856087,
+      "id": "bfdb94e7-1e46-4a7d-944b-863505eebebd",
+      "arrival_lateness_seconds": 0.0003480179875623435
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.060976582986768335,
+      "id": "da45be6c-087b-4359-b2f1-dbfc9c0c3b7f",
+      "arrival_lateness_seconds": 0.00028633198235183954
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05512279097456485,
+      "id": "a6f4fe79-a2ba-4430-ab06-249bbf1872da",
+      "arrival_lateness_seconds": 0.00022791698575019836
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04541633900953457,
+      "id": "e0c7ba5b-0ee5-4ffd-bd36-1833f3640e33",
+      "arrival_lateness_seconds": 0.00019951598369516432
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04830978499376215,
+      "id": "928bf8d5-8819-4ca4-8478-0075e488a29e",
+      "arrival_lateness_seconds": 0.0002488650206942111
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03974380099680275,
+      "id": "8dc66118-0116-445c-b355-3cfe3b30f216",
+      "arrival_lateness_seconds": 0.0002969630004372448
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.06371814900194295,
+      "id": "d5ec9b52-429c-4874-82ac-0412b193c2b9",
+      "arrival_lateness_seconds": 0.000249075994361192
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03409014598582871,
+      "id": "6226bdb8-237e-45c8-a719-c66b451b5f2a",
+      "arrival_lateness_seconds": 0.00019918600446544588
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03594480798346922,
+      "id": "f3d7526b-50e6-4b2b-b95a-bb4c85b550af",
+      "arrival_lateness_seconds": 0.0004659059923142195
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.018717709986958653,
+      "id": "178a85a5-d862-4691-8dbd-d1f5ec46eb92",
+      "arrival_lateness_seconds": 0.0002542220172472298
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05927860701922327,
+      "id": "06d64122-305d-4eaf-a42a-b53f8ac97554",
+      "arrival_lateness_seconds": 0.0003228590067010373
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03903540701139718,
+      "id": "03d59955-d75e-4e8b-b277-4282c02df63e",
+      "arrival_lateness_seconds": 0.0002936020027846098
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03872960901935585,
+      "id": "e4e4a34e-8e37-42f9-8223-d8162e6829fa",
+      "arrival_lateness_seconds": 0.00014778299373574555
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.01813163299812004,
+      "id": "86868445-da3e-4862-84ec-e576809744fb",
+      "arrival_lateness_seconds": 0.00021099497098475695
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04169731098227203,
+      "id": "99208481-c2c0-44f3-ba28-29b0a6093065",
+      "arrival_lateness_seconds": 0.00019147401326335967
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05030256000463851,
+      "id": "339ed069-8143-430d-8f68-8e04aa3e9979",
+      "arrival_lateness_seconds": 0.000330907991155982
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.020547126012388617,
+      "id": "4a244dc5-1357-4b09-a7fc-e1a2e1518c48",
+      "arrival_lateness_seconds": 0.0001636369852349162
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0500426159997005,
+      "id": "6f98cd59-70c2-4c2b-b2d2-e53b41e12afa",
+      "arrival_lateness_seconds": 0.00019564200192689896
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.053785969997989014,
+      "id": "45b1dda4-6017-45de-8c94-686d30126e17",
+      "arrival_lateness_seconds": 0.00026827299734577537
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04602011200040579,
+      "id": "e705e5e8-89fb-46c9-8dbe-9365ae8cf947",
+      "arrival_lateness_seconds": 0.0003060630115214735
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04688964498927817,
+      "id": "33b2680a-cde8-4ab5-86fd-a4d053f3f4cb",
+      "arrival_lateness_seconds": 0.00031071199919097126
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05729634402086958,
+      "id": "fc954b96-94de-4439-a7d0-b74ace4a8293",
+      "arrival_lateness_seconds": 0.0002844620030373335
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.044751028006430715,
+      "id": "a026fdd5-7434-48de-95cd-db4374a53e9b",
+      "arrival_lateness_seconds": 0.00026064799749292433
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03671814501285553,
+      "id": "26cf5059-0dd7-478b-9463-38cea4eafdaf",
+      "arrival_lateness_seconds": 0.0003108469827566296
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04495188899454661,
+      "id": "7f88affc-a7bd-4f0a-898a-c8c2786acb08",
+      "arrival_lateness_seconds": 0.00016877701273187995
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02826520099188201,
+      "id": "9cb19eea-16fe-4b2d-a71f-ade05b832adb",
+      "arrival_lateness_seconds": 0.0002133870148099959
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03237925301073119,
+      "id": "32982a73-2152-40c8-9cea-aff7a60f8dcd",
+      "arrival_lateness_seconds": 0.0002703439968172461
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.051436084002489224,
+      "id": "eba7aa6d-a00f-491d-b6f1-f9de0dcc147b",
+      "arrival_lateness_seconds": 0.0003040339797735214
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03983007001806982,
+      "id": "a615f94f-5395-4b35-b51d-69443b9419c0",
+      "arrival_lateness_seconds": 0.00021717598428949714
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.051983240991830826,
+      "id": "d1151d4a-4e62-4c0c-a182-b8c51af876c6",
+      "arrival_lateness_seconds": 0.0003570200060494244
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05172314398805611,
+      "id": "ba28bd90-f9c7-4b5d-a3ae-3a48068a26cd",
+      "arrival_lateness_seconds": 0.0004160570097155869
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04532231000484899,
+      "id": "40aceb66-cd70-4ceb-9b6a-b827aebd44ac",
+      "arrival_lateness_seconds": 0.00018897198606282473
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05866201198659837,
+      "id": "4810a270-4a15-4328-ba24-ba40a6ac3ab8",
+      "arrival_lateness_seconds": 0.00027258897898718715
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03845919101149775,
+      "id": "49d19da1-d01c-409c-8855-77f014bdc8a9",
+      "arrival_lateness_seconds": 0.0002797539927996695
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04472239801543765,
+      "id": "d4802dce-5923-43bb-92e1-05250483a48b",
+      "arrival_lateness_seconds": 0.00024541199672967196
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.035470514005282894,
+      "id": "917c51b4-763e-4552-a7be-c8e10fbee3a5",
+      "arrival_lateness_seconds": 0.0003633860033005476
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.058687416021712124,
+      "id": "e3fc2711-5267-42c0-b4f8-21d0c73f74c4",
+      "arrival_lateness_seconds": 0.0002334520104341209
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04958964200341143,
+      "id": "bb9b8507-a513-48b0-86ea-d98f085a2afa",
+      "arrival_lateness_seconds": 0.0002744619851000607
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.021800511982291937,
+      "id": "08aa2ab9-de7f-413a-873f-302631645984",
+      "arrival_lateness_seconds": 0.00013299999409355223
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05030504398746416,
+      "id": "4c220c6b-a3dc-4e89-b46d-9c09f232616f",
+      "arrival_lateness_seconds": 0.0002476730151101947
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05103562801377848,
+      "id": "b6a6df28-6603-4bb6-917c-73d6c9324ef6",
+      "arrival_lateness_seconds": 0.0002676899894140661
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0567531910201069,
+      "id": "7f913819-8478-45c1-ba7c-aca224b34ca1",
+      "arrival_lateness_seconds": 0.00021812200429849327
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03004545098519884,
+      "id": "3be45f9e-db26-449c-874e-97e1b44aaeb5",
+      "arrival_lateness_seconds": 0.0002607039932627231
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.053993676003301516,
+      "id": "a7ca8435-5a2f-406d-b938-d0d1fe1cefe2",
+      "arrival_lateness_seconds": 0.0002538729750085622
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04229808601667173,
+      "id": "b2d40608-8144-4527-a556-f9b7e4a4fbfb",
+      "arrival_lateness_seconds": 0.0002716029994189739
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04344518599100411,
+      "id": "8d16b48d-a429-4d7f-816e-fbc1c5f3baad",
+      "arrival_lateness_seconds": 0.0002744650118984282
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05874374500126578,
+      "id": "16cd98dd-f6ef-478f-9b04-2d14e2d4d80c",
+      "arrival_lateness_seconds": 0.00024183400091715157
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05074627400608733,
+      "id": "3fed6a25-ecdb-4f3c-9764-7544ad0499f8",
+      "arrival_lateness_seconds": 0.0002712099812924862
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03130908601451665,
+      "id": "a5cdc4da-412c-4ab5-b333-15f94ecad788",
+      "arrival_lateness_seconds": 0.000174607994267717
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04340163999586366,
+      "id": "908f4438-3e32-4188-ba06-aeb479861992",
+      "arrival_lateness_seconds": 0.00024195399601012468
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05803390598157421,
+      "id": "8056594d-968a-418f-8b87-378270c5883d",
+      "arrival_lateness_seconds": 0.0003510240057948977
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.020240489015122876,
+      "id": "54ca0f8d-b512-4f6e-8c0d-8792c813c4dd",
+      "arrival_lateness_seconds": 0.00016749498900026083
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.01922283199382946,
+      "id": "14376a63-6043-4165-8356-900e9743088d",
+      "arrival_lateness_seconds": 0.000141614000312984
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02483648300403729,
+      "id": "fd57d78f-1d2e-4dd7-b34b-6930f0abcbbd",
+      "arrival_lateness_seconds": 0.0003447359777055681
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03545579899218865,
+      "id": "b1476138-81c5-4008-a046-2f2e2a890e46",
+      "arrival_lateness_seconds": 0.0001716350088827312
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.054686993011273444,
+      "id": "b5f817ca-ac6e-4fab-8fd0-7c2012fa9cd5",
+      "arrival_lateness_seconds": 0.00021225001546554267
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05459519600844942,
+      "id": "47397f64-0379-4def-bb4b-cd1a852bd43c",
+      "arrival_lateness_seconds": 0.0003580499906092882
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05564408400095999,
+      "id": "e2bfb2de-f64c-494c-85ff-4e3ccb05004a",
+      "arrival_lateness_seconds": 0.00022894199355505407
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04624885300290771,
+      "id": "333dde06-9849-4870-826e-51d8c2009e40",
+      "arrival_lateness_seconds": 0.00018790498143061996
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.021615541976643726,
+      "id": "5ed1266f-e54f-4420-b7ea-a3704aa3f94d",
+      "arrival_lateness_seconds": 0.00011653700494207442
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03038546399329789,
+      "id": "9fc8564d-45ba-47b8-9c2a-1520c72ea88c",
+      "arrival_lateness_seconds": 0.00014963699504733086
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.043223406013567,
+      "id": "e7a6a3b1-eaeb-4e35-a19d-bd28819d1ada",
+      "arrival_lateness_seconds": 0.00031210598535835743
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04765249401680194,
+      "id": "7c2ceb11-b2e5-437b-95b9-83d63031e7fa",
+      "arrival_lateness_seconds": 0.00029754199204035103
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.020614932000171393,
+      "id": "3920dc67-ad76-4a3f-8028-28842a3c6ce5",
+      "arrival_lateness_seconds": 0.00013214399223215878
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05237684698658995,
+      "id": "a88107e9-40c3-45bc-b993-250b7ec18aae",
+      "arrival_lateness_seconds": 0.0002953289949800819
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0613025659986306,
+      "id": "3e3e7191-75de-4f05-873e-417fa261450c",
+      "arrival_lateness_seconds": 0.0003182700020261109
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05449892100295983,
+      "id": "667825be-0198-4708-855d-e9c6994ee07b",
+      "arrival_lateness_seconds": 0.00030561399762518704
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.028901931014843285,
+      "id": "3aea4572-aaae-4795-a0cc-eb9fe49f23a7",
+      "arrival_lateness_seconds": 0.00033055400126613677
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03750192001461983,
+      "id": "166d4b2e-9225-41d9-9089-39d98fdcb90d",
+      "arrival_lateness_seconds": 0.00011881199316121638
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04410666797775775,
+      "id": "78bb68ec-e4ee-41e7-b32c-e9ef1ee65a3c",
+      "arrival_lateness_seconds": 0.0002015430072788149
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0587802920199465,
+      "id": "36b2c65c-cae0-4bd7-a02e-33f1023efb15",
+      "arrival_lateness_seconds": 0.0002906970039475709
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.054446621012175456,
+      "id": "7b945e8b-a376-4b0b-8b23-ece86cd22b0c",
+      "arrival_lateness_seconds": 0.0002809939906001091
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05644729299820028,
+      "id": "5f2464a0-3ef1-454a-ad81-8d3b471e96b2",
+      "arrival_lateness_seconds": 0.0003107379889115691
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03792535699903965,
+      "id": "b656fbee-3103-4d29-a507-029d424bb2c8",
+      "arrival_lateness_seconds": 0.00023395699099637568
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0502073600073345,
+      "id": "33d27992-5626-4d13-8a69-a95de2ff9f7c",
+      "arrival_lateness_seconds": 0.00033136102138087153
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04097259498666972,
+      "id": "bfc1711c-b638-45b1-9108-b693be9f3c19",
+      "arrival_lateness_seconds": 0.00022781200823374093
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05766947701340541,
+      "id": "f7988e3d-b288-419e-84ba-1916d8e7b570",
+      "arrival_lateness_seconds": 0.0003234269970562309
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.056012317014392465,
+      "id": "c4570b92-34cd-4bf1-99d2-4c9262bfea90",
+      "arrival_lateness_seconds": 0.00025729398475959897
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03958492900710553,
+      "id": "e6796f25-8c1c-4b33-aff3-d521af577918",
+      "arrival_lateness_seconds": 0.00033015699591487646
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04574364301515743,
+      "id": "141debbb-2b2f-49ba-bed6-bb52b9481e9b",
+      "arrival_lateness_seconds": 0.0002948740147985518
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0546720820129849,
+      "id": "37629af2-0356-4585-95cc-88bc5c04843f",
+      "arrival_lateness_seconds": 0.00023570601479150355
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05248458101414144,
+      "id": "e5da93fd-6f0c-4a50-b293-990138a1d1cb",
+      "arrival_lateness_seconds": 0.00023712599067948759
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04493562801508233,
+      "id": "4e9532e8-6847-4050-8d6f-391812d0d6b8",
+      "arrival_lateness_seconds": 0.0002441529941279441
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.06636198700289242,
+      "id": "30829c15-4c40-4bc3-87c8-095746e07595",
+      "arrival_lateness_seconds": 0.00017990899505093694
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03538414399372414,
+      "id": "e3e4d3fc-adc9-4d4c-baec-dbb5baaeedf9",
+      "arrival_lateness_seconds": 0.0001676070096436888
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04219460499007255,
+      "id": "fa527fdc-e546-40ed-85fb-53ba902ec454",
+      "arrival_lateness_seconds": 0.00020670300000347197
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05160388600779697,
+      "id": "ade8a64a-328f-4841-9ab1-11879711460d",
+      "arrival_lateness_seconds": 0.00024751698947511613
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05792834999738261,
+      "id": "e68c4139-5a77-47ea-aee1-3e1485652bba",
+      "arrival_lateness_seconds": 0.00023026700364425778
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.021615798003040254,
+      "id": "13d111ed-484c-4332-839c-fd815a55c91c",
+      "arrival_lateness_seconds": 0.0001577099901624024
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.018591238011140376,
+      "id": "d82b06bc-4895-4e61-8764-0f918e92884e",
+      "arrival_lateness_seconds": 0.00012831500498577952
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03469638098613359,
+      "id": "e686c174-ffb4-4669-b736-04009a99be48",
+      "arrival_lateness_seconds": 0.00017314701108261943
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.053315541008487344,
+      "id": "212c00f8-f5f8-4ec8-a86d-6fdaaca9b420",
+      "arrival_lateness_seconds": 0.00033134198747575283
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.06092791000264697,
+      "id": "10bdc738-6ceb-447c-8555-daa19c24e13d",
+      "arrival_lateness_seconds": 0.0002743509830906987
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05629101500380784,
+      "id": "24225eba-a5b1-4569-9813-1b458786521c",
+      "arrival_lateness_seconds": 0.00026380797498859465
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.09095951999188401,
+      "id": "31d96243-8f00-4245-b253-18de5b9c4060",
+      "arrival_lateness_seconds": 0.0002653030096553266
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04241018000175245,
+      "id": "002158ff-d8b3-4058-bf5a-f55b0ade76ea",
+      "arrival_lateness_seconds": 0.00020693198894150555
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05159767699660733,
+      "id": "d66ee127-21a2-40a4-9b43-628757af12ff",
+      "arrival_lateness_seconds": 0.001164824003353715
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.022812584007624537,
+      "id": "878eae6f-ac2c-4dd2-a1bc-5f156381ea77",
+      "arrival_lateness_seconds": 0.00014910398749634624
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.01944691000971943,
+      "id": "3976858c-5fd3-4d48-972f-da5be8959b8a",
+      "arrival_lateness_seconds": 0.00017014797776937485
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.022330968000460416,
+      "id": "84c3157a-e30a-4d26-b207-8aa8607dc4e3",
+      "arrival_lateness_seconds": 0.000142995995702222
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.021421715995529667,
+      "id": "1687585d-5410-4779-8993-ebc4864746a4",
+      "arrival_lateness_seconds": 0.00014437700156122446
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0225567200104706,
+      "id": "b59be145-f703-4cd1-a40b-269931021376",
+      "arrival_lateness_seconds": 0.0001977969950530678
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.018098373024258763,
+      "id": "a697cee0-2ef0-48b8-bfc8-7b275c08d3ce",
+      "arrival_lateness_seconds": 0.00013028399553149939
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02024321400676854,
+      "id": "5efbe856-5ed2-462a-87e9-9c2783adb4c9",
+      "arrival_lateness_seconds": 0.00013631698675453663
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.018099084991263226,
+      "id": "61cd1b5e-88b4-42ca-ae4f-1b9fe7b8e383",
+      "arrival_lateness_seconds": 0.00015178101602941751
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02284255000995472,
+      "id": "32ae23e2-d294-46f8-abb9-e4e8815892de",
+      "arrival_lateness_seconds": 0.00017050799215212464
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.018149230018025264,
+      "id": "73f0f592-7ab4-407b-a405-0961dcf2ff6b",
+      "arrival_lateness_seconds": 0.000136755988933146
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.017909007001435384,
+      "id": "099f615c-8960-4fdf-99a1-36ecaa0a0326",
+      "arrival_lateness_seconds": 0.0001481240033172071
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.020326608995674178,
+      "id": "73c80893-ff25-4790-a75f-ecc6db2b8c0e",
+      "arrival_lateness_seconds": 0.00010773297981359065
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.022725691000232473,
+      "id": "96d1990d-0699-4078-b7e8-badd1b979975",
+      "arrival_lateness_seconds": 0.00016688602045178413
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02136704997974448,
+      "id": "b896af52-6d9e-46bf-9cd6-593861e87ee2",
+      "arrival_lateness_seconds": 0.00011222600005567074
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.029067833005683497,
+      "id": "e1b076e3-541d-4308-a2ca-0312f5140291",
+      "arrival_lateness_seconds": 0.00018756100325845182
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.01992680100374855,
+      "id": "d5d79438-72cc-4f74-9678-61c9f4675985",
+      "arrival_lateness_seconds": 0.00015377398813143373
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02060239401180297,
+      "id": "7f5329b0-bbed-4894-ae1e-6fba471eb5ed",
+      "arrival_lateness_seconds": 0.00013044197112321854
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.019410720007726923,
+      "id": "53e05593-165e-4adc-884e-da6cbe6e4957",
+      "arrival_lateness_seconds": 0.00016134901670739055
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.019241553993197158,
+      "id": "02031412-84e0-408d-9058-d4a119a59c54",
+      "arrival_lateness_seconds": 0.00014893800835125148
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.01831473599304445,
+      "id": "94913af1-7ecf-494a-a211-b04a2a5c9733",
+      "arrival_lateness_seconds": 0.00011512398486956954
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02306612001848407,
+      "id": "6af5dbf8-f5a0-4bbf-935b-53dfa3ad2077",
+      "arrival_lateness_seconds": 0.00015511098899878561
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0212249539908953,
+      "id": "dbbd06db-5b9b-48ea-a075-0a2306fa9e10",
+      "arrival_lateness_seconds": 0.0001503859821241349
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.017782217997591943,
+      "id": "92eb7e42-04ff-49fd-b8d7-b21cb1ca0e13",
+      "arrival_lateness_seconds": 0.00011415602057240903
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.018304268014617264,
+      "id": "fed1086e-3fe4-43c1-acf1-234c231aa754",
+      "arrival_lateness_seconds": 0.00017506201402284205
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.021271053003147244,
+      "id": "f9f16554-ca51-4971-a2ee-866a4155aa7f",
+      "arrival_lateness_seconds": 0.00022199700470082462
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.01896431398927234,
+      "id": "c67782fe-85f4-4a28-9f9b-1118331db452",
+      "arrival_lateness_seconds": 0.00013119197683408856
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.018779525998979807,
+      "id": "eb7c93b9-c2ff-482f-ae0f-45e81c7bc942",
+      "arrival_lateness_seconds": 0.00018835198716260493
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.019194925000192598,
+      "id": "57d26dfb-0d75-4632-a71d-e3832bb77f01",
+      "arrival_lateness_seconds": 0.00016050299745984375
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.022288362990366295,
+      "id": "2bcb519a-3aa5-4b7c-afec-97e931bcfa3d",
+      "arrival_lateness_seconds": 0.00017458500224165618
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.01828135398682207,
+      "id": "b71f360f-b07b-4ba7-bd88-0b086ed88e6d",
+      "arrival_lateness_seconds": 0.00014040098176337779
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02151926700025797,
+      "id": "430ca1a9-f4a9-48c1-b184-4b919ab5e55d",
+      "arrival_lateness_seconds": 0.00019488998805172741
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.018633913015946746,
+      "id": "396e5316-a216-4bce-8649-e787369c949b",
+      "arrival_lateness_seconds": 0.00013267697067931294
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02192655301769264,
+      "id": "4b849293-a480-4624-a6fe-768ef2023a8c",
+      "arrival_lateness_seconds": 0.0001822760095819831
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.023108808003598824,
+      "id": "6111b56d-8f3a-497c-81e8-7c942fd88ac4",
+      "arrival_lateness_seconds": 0.00014106600428931415
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.021251446014503017,
+      "id": "faa29c47-0297-4072-b818-fd93b751f3a6",
+      "arrival_lateness_seconds": 0.00018750299932435155
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.019859107007505372,
+      "id": "fb6fc705-7f1d-4d78-9421-e2017afd4a77",
+      "arrival_lateness_seconds": 0.00012933698599226773
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0231176019879058,
+      "id": "e1b5274e-6982-4f2a-89e3-1ca5f4ff8e85",
+      "arrival_lateness_seconds": 0.00016515798051841557
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.030704063014127314,
+      "id": "544e0220-0dea-4ed4-84e8-cc050f8db6fa",
+      "arrival_lateness_seconds": 0.0001853319990914315
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02059318299870938,
+      "id": "8fa90b48-ff4b-4674-a427-000a955c54c8",
+      "arrival_lateness_seconds": 0.00011004801490344107
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02457967898226343,
+      "id": "f49fe137-fd77-4155-a353-cc9b3b9250c2",
+      "arrival_lateness_seconds": 0.00023762398632243276
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.023312222998356447,
+      "id": "a9572ed6-3512-4035-ad94-fa4751af421b",
+      "arrival_lateness_seconds": 0.0002886709989979863
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.022764469002140686,
+      "id": "4dd88e7e-96b4-4f1c-991e-cf7fb068eeb0",
+      "arrival_lateness_seconds": 0.00017604598542675376
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.024156248022336513,
+      "id": "fac397d4-eea2-4a89-bb20-730d5ae55c60",
+      "arrival_lateness_seconds": 0.00014314500731416047
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.023408123990520835,
+      "id": "2e78c837-ddfb-49e5-83ac-fd3994ea8cb3",
+      "arrival_lateness_seconds": 0.00019056399469263852
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.01946395100094378,
+      "id": "89aa7382-1083-4b0a-a1f4-51da8a27b745",
+      "arrival_lateness_seconds": 0.00018228500266559422
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02325241401558742,
+      "id": "c5dc24fe-9015-403a-80f1-4b70bd5ff554",
+      "arrival_lateness_seconds": 0.00016588097787462175
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.029106925998348743,
+      "id": "5e310aec-54c7-4c0b-863e-3b93187e1725",
+      "arrival_lateness_seconds": 0.00015253599849529564
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02319972901022993,
+      "id": "2b678e5e-f94e-4e47-9631-a122afdbb1ff",
+      "arrival_lateness_seconds": 0.0003641880175564438
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.024682164017576724,
+      "id": "3301badc-27f7-43a8-b2ff-da3ca5d8e54b",
+      "arrival_lateness_seconds": 0.0001284469908569008
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0277011220168788,
+      "id": "909961da-750e-42b5-b2d4-582398be0982",
+      "arrival_lateness_seconds": 0.00019356899429112673
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.022128448996227235,
+      "id": "faebb19c-b184-4849-97ae-ef9cd3e4b0f8",
+      "arrival_lateness_seconds": 0.00019454199355095625
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.022890055988682434,
+      "id": "255f36b1-d8a2-4ec1-b75d-1fd6ac3b1a5a",
+      "arrival_lateness_seconds": 0.00018351397011429071
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.023774376983055845,
+      "id": "5706fd8e-cccb-4ec2-aa03-0fd305ce1761",
+      "arrival_lateness_seconds": 0.0001647520111873746
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02177178199053742,
+      "id": "2c9905eb-8c76-49ec-b96c-3eb214a5fa55",
+      "arrival_lateness_seconds": 0.00016640601097606122
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.025392092007678002,
+      "id": "312b8c77-565f-493a-8b55-45d79b360b2f",
+      "arrival_lateness_seconds": 0.00014610699145123363
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02036739300820045,
+      "id": "8ad39e18-d703-4cf1-9b2c-b9da19808f8b",
+      "arrival_lateness_seconds": 0.0002744189987424761
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.018669364013476297,
+      "id": "2b11413a-d28c-41a5-abdb-b581c6cd3a5b",
+      "arrival_lateness_seconds": 0.00021697598276659846
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.021801789000164717,
+      "id": "cfa7bfcb-ca77-4495-84db-b3c617e8b43b",
+      "arrival_lateness_seconds": 0.00014836800983175635
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.024899922020267695,
+      "id": "65f582ba-3480-448c-a344-59ea793c4bd0",
+      "arrival_lateness_seconds": 0.00016241800040006638
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.021793773979879916,
+      "id": "b98ffb9e-f293-49a3-9a1f-57469b49a6af",
+      "arrival_lateness_seconds": 0.00026856199838221073
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.019622217980213463,
+      "id": "a59b28b0-29e2-445b-8758-6dca260a159b",
+      "arrival_lateness_seconds": 0.00028117900365032256
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02352210399112664,
+      "id": "f2ecae20-6964-4648-a6cd-118801d03f16",
+      "arrival_lateness_seconds": 0.00016286098980344832
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02319432099466212,
+      "id": "26e1fd9f-b74f-432d-a8e2-04edf98e002c",
+      "arrival_lateness_seconds": 0.00031745299929752946
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02065888899960555,
+      "id": "3cca39b5-ab69-4e96-8666-166299227b88",
+      "arrival_lateness_seconds": 0.00013231599587015808
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.024217380007030442,
+      "id": "e5b5d420-4469-42bb-8002-85988cc82cf6",
+      "arrival_lateness_seconds": 0.00016921799397096038
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.01723473600577563,
+      "id": "31739a27-4a5a-47d0-84dc-9b490194ae9e",
+      "arrival_lateness_seconds": 0.001022951997583732
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02357887601829134,
+      "id": "2f21fc5c-9623-463a-b7a0-d8e259dc9bff",
+      "arrival_lateness_seconds": 0.00017927098087966442
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.018390501994872466,
+      "id": "44ea351f-1d26-42cd-8b49-e3504525d7f7",
+      "arrival_lateness_seconds": 0.0001533350150566548
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02377661201171577,
+      "id": "50611dfb-2fdd-44ee-80c9-653f7e3e5207",
+      "arrival_lateness_seconds": 0.00015524501213803887
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.019387160980841145,
+      "id": "10a84202-7ab3-42e7-bbfa-153decd7767c",
+      "arrival_lateness_seconds": 0.00023188299383036792
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.048240392992738634,
+      "id": "8e1b1518-3532-4109-ac5d-9c7b1a371ae7",
+      "arrival_lateness_seconds": 0.0002566909824963659
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04449513400322758,
+      "id": "9400a98d-8562-4502-9340-6ecf7ea57c39",
+      "arrival_lateness_seconds": 0.0002898729871958494
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.054157040984136984,
+      "id": "fe5a85db-a2d5-454e-940d-3e4f4cdfda27",
+      "arrival_lateness_seconds": 0.00031732101342640817
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.017645081999944523,
+      "id": "19e1c04b-a3bb-4a51-b498-56ce873e83fa",
+      "arrival_lateness_seconds": 0.00016498699551448226
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0323688329954166,
+      "id": "17ccf35d-3197-4aa5-ad63-9e7ee4ff05bc",
+      "arrival_lateness_seconds": 0.00021660400670953095
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02151299300021492,
+      "id": "e3c03471-c31f-4327-90d3-4cee3fc54635",
+      "arrival_lateness_seconds": 0.00018947900389321148
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.026819406979484484,
+      "id": "f2ade6ec-26e8-432b-88ce-7391f74aa2ca",
+      "arrival_lateness_seconds": 0.00023823697119951248
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.026907962979748845,
+      "id": "35a2f151-07ff-44a9-b9bb-0b3eb2540ad8",
+      "arrival_lateness_seconds": 0.00015046901535242796
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.018990618002135307,
+      "id": "0a2466de-30be-421a-8862-ae878337b6eb",
+      "arrival_lateness_seconds": 0.00011190501390956342
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.025387934991158545,
+      "id": "927420be-892b-4143-a115-e52821d604f0",
+      "arrival_lateness_seconds": 0.0001862150093074888
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.022340315976180136,
+      "id": "10e4eef3-ba05-4928-bce8-dcaa8e9f9224",
+      "arrival_lateness_seconds": 0.00016637699445709586
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.026285803003702313,
+      "id": "14991f64-8c9a-4d8f-951c-ad63dc7f78a0",
+      "arrival_lateness_seconds": 0.00018074898980557919
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.021432170004118234,
+      "id": "f09ae27b-b5ff-4b9d-9bd6-a4fde2aa6758",
+      "arrival_lateness_seconds": 0.00014740502228960395
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.01934534398606047,
+      "id": "dda0b8b7-c543-43a8-bcee-f0172cfa36a3",
+      "arrival_lateness_seconds": 0.0001665150048211217
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05599111597985029,
+      "id": "e975d05a-89d5-421a-af2e-1789381922f8",
+      "arrival_lateness_seconds": 0.00025836698478087783
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05370467697503045,
+      "id": "225d43d5-d89f-481b-add2-87de1334e9f0",
+      "arrival_lateness_seconds": 0.00029260499286465347
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04694135900354013,
+      "id": "9abba026-4370-4483-9db4-632fe7ed7c8f",
+      "arrival_lateness_seconds": 0.0002685189829207957
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.019482458010315895,
+      "id": "14759268-c94a-4f25-88db-a43e2fd82a78",
+      "arrival_lateness_seconds": 0.00015478700515814126
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.027480972988996655,
+      "id": "47fb31e1-39d7-4f24-a0e6-c6fdba5d2e60",
+      "arrival_lateness_seconds": 0.00013287001638673246
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02042263699695468,
+      "id": "1e685891-c474-4060-8bdb-cfb747fbe465",
+      "arrival_lateness_seconds": 0.0001373619888909161
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.020173099997919053,
+      "id": "8df60358-8f6d-4686-9595-f7736a1607d1",
+      "arrival_lateness_seconds": 0.00017606199253350496
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.024158750020433217,
+      "id": "a66a7f9f-9e5e-40df-88c0-81c5fc0d35c9",
+      "arrival_lateness_seconds": 0.00014730499242432415
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02122473600320518,
+      "id": "419dd1b7-92f5-4395-aa8b-9b308f5b9d9b",
+      "arrival_lateness_seconds": 0.00015257002087309957
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.044912237994140014,
+      "id": "e5718c59-ef96-437c-aa54-15d408dfda18",
+      "arrival_lateness_seconds": 0.00046795399975962937
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.045263592997798696,
+      "id": "bfe19b42-e1b8-440f-b72d-4c1ea9b04073",
+      "arrival_lateness_seconds": 0.0002955439849756658
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05003709701122716,
+      "id": "f9b469f0-ff85-4bd0-83b0-989e9d984ad8",
+      "arrival_lateness_seconds": 0.00023452399182133377
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04768528800923377,
+      "id": "206b56b2-8fc1-4857-a70f-1858149af06c",
+      "arrival_lateness_seconds": 0.00032270498923026025
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05537282899604179,
+      "id": "0a5bfce3-2f8f-4a0b-9a47-0404301df652",
+      "arrival_lateness_seconds": 0.0001891140127554536
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03323627999634482,
+      "id": "a14ee755-87d1-4fc4-a39b-414f0547893e",
+      "arrival_lateness_seconds": 0.0001870600099209696
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0389989830146078,
+      "id": "28098882-2693-49e3-b3fa-f170d57539ff",
+      "arrival_lateness_seconds": 0.00019473099382594228
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.057358718011528254,
+      "id": "7be6a261-80a6-4c19-b98b-d92b53fab13c",
+      "arrival_lateness_seconds": 0.0002590349758975208
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.036972469999454916,
+      "id": "5e33c8ef-1e04-4e14-b736-3b416a864aa4",
+      "arrival_lateness_seconds": 0.0002214159758295864
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05019381199963391,
+      "id": "d7c7710f-52a5-49cf-a5f9-8be773f0ba78",
+      "arrival_lateness_seconds": 0.0002819660003297031
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05728183500468731,
+      "id": "61bcac6d-6e13-4032-8e1f-c268f7df7a8e",
+      "arrival_lateness_seconds": 0.00025309898774139583
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04872306698234752,
+      "id": "3b4e5c91-fefc-4a0a-8a10-9e8cbb84a002",
+      "arrival_lateness_seconds": 0.0003222959931008518
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05295556300552562,
+      "id": "5ab40bfe-c4ba-4711-bd25-4389551e7fba",
+      "arrival_lateness_seconds": 0.00030223900103010237
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04774406101205386,
+      "id": "ea8d41fc-eba6-49a5-a00a-534b33f9c5e4",
+      "arrival_lateness_seconds": 0.00025127397384494543
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04862128300010227,
+      "id": "c21457bf-f9f2-4ccc-84e0-884baac15a03",
+      "arrival_lateness_seconds": 0.00030989100923761725
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05011866200948134,
+      "id": "78cc94db-df13-40f1-aa76-863a49b1045e",
+      "arrival_lateness_seconds": 0.0002760619972832501
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.059156650997465476,
+      "id": "176aafab-5660-484c-acc3-c1a07a37a1ca",
+      "arrival_lateness_seconds": 0.0002576200058683753
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02089240899658762,
+      "id": "22b26fc4-639a-4343-855f-c97f2cd54349",
+      "arrival_lateness_seconds": 0.00015319098019972444
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.042340962012531236,
+      "id": "a2a25572-6864-4d40-ad03-71cca8b285a8",
+      "arrival_lateness_seconds": 0.0002656199794728309
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.030071332992520183,
+      "id": "426f0812-f837-4341-8498-7fb7e5418ebb",
+      "arrival_lateness_seconds": 0.00013512099394574761
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05159228399861604,
+      "id": "3ca2eede-7c47-4aa2-a7b7-df895792f7c2",
+      "arrival_lateness_seconds": 0.00026586599415168166
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.01766566699370742,
+      "id": "9a36e4dc-b87e-4cbb-b935-80bb38a086b6",
+      "arrival_lateness_seconds": 0.000136605987790972
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04662572802044451,
+      "id": "2f0c701d-0c53-4302-b9d9-02a2544948a0",
+      "arrival_lateness_seconds": 0.0001532869937364012
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.01965305200428702,
+      "id": "bf8d2421-5b90-4f5d-b778-065d0b9d70f2",
+      "arrival_lateness_seconds": 0.00014117598766461015
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04743000099551864,
+      "id": "fc36e32e-7387-4211-a53d-698b1e3e539a",
+      "arrival_lateness_seconds": 0.0002964450104627758
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.059419453027658165,
+      "id": "9aa9d467-8a0b-4e41-92b0-1a2e0eb7a294",
+      "arrival_lateness_seconds": 0.0002839399967342615
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03794441599166021,
+      "id": "afbf8b46-d0f7-4580-ac99-7a19d89552a4",
+      "arrival_lateness_seconds": 0.00027227698592469096
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.047086654987651855,
+      "id": "5d61d54e-163d-41b7-8626-2ca97bb08137",
+      "arrival_lateness_seconds": 0.00023279699962586164
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.06041230700793676,
+      "id": "e94f8cad-39cc-4b9f-a226-b214aeb19985",
+      "arrival_lateness_seconds": 0.0003086119832005352
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04843650301336311,
+      "id": "38244303-3caf-474a-afb1-fd386738cc30",
+      "arrival_lateness_seconds": 0.00025447801453992724
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.036100686993449926,
+      "id": "d3885650-d55a-4108-b20e-f00a5f896a75",
+      "arrival_lateness_seconds": 0.00029031099984422326
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0202897569979541,
+      "id": "60c78401-5522-476b-8c51-529e6a252c99",
+      "arrival_lateness_seconds": 0.0001819079916458577
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0307344579778146,
+      "id": "afcd0e99-9a92-4678-a723-1f5247f06981",
+      "arrival_lateness_seconds": 0.00013958397903479636
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04806591200758703,
+      "id": "30434f43-9c2b-4e2b-97aa-abbf3c1475f9",
+      "arrival_lateness_seconds": 0.00032146097510121763
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.022230448987102136,
+      "id": "0cffb248-3dc6-4dcc-ba41-780ed8951c7f",
+      "arrival_lateness_seconds": 0.00012636600877158344
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.037352093000663444,
+      "id": "0ef8788c-7721-4ce0-83c1-5ac71238927f",
+      "arrival_lateness_seconds": 0.00020377000328153372
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.050960555992787704,
+      "id": "dcc86812-5894-47f7-8c40-ffc148d96148",
+      "arrival_lateness_seconds": 0.00033486500615254045
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.036105115985265,
+      "id": "bb9efefd-166b-45fe-ab40-af0bcfe0b35a",
+      "arrival_lateness_seconds": 0.0003149129915982485
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.038303930981783196,
+      "id": "878d7b41-35e7-405a-a7d8-3b79c34dfad7",
+      "arrival_lateness_seconds": 0.00021034697419963777
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05287875299109146,
+      "id": "33fe02c6-6980-42ab-be0a-6c12b60250fe",
+      "arrival_lateness_seconds": 0.0003152080171275884
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.043413430015789345,
+      "id": "f719c640-ba7b-4ea7-8292-75693864a6f2",
+      "arrival_lateness_seconds": 0.0002555900136940181
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.054848550993483514,
+      "id": "8f7daa49-2d87-4e6c-9b77-6d51e9e34ac0",
+      "arrival_lateness_seconds": 0.0002972130023408681
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.055414530012058094,
+      "id": "2e5f3553-8aef-4743-8aad-c824098a6bc6",
+      "arrival_lateness_seconds": 0.0002775290049612522
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05428917100653052,
+      "id": "9fad65e9-b0b7-468e-9a4d-6f55ac892486",
+      "arrival_lateness_seconds": 0.0002888599701691419
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05186299199704081,
+      "id": "ac07134c-706b-4f30-8c8f-a3de419512d9",
+      "arrival_lateness_seconds": 0.0002737519971560687
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.036769900005310774,
+      "id": "c7c7a792-c678-4475-81e6-75eb15e4b2c5",
+      "arrival_lateness_seconds": 0.0002458849921822548
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05856119797681458,
+      "id": "5e125229-96d5-4605-8231-eea5c858807d",
+      "arrival_lateness_seconds": 0.00028499800828285515
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05741743600810878,
+      "id": "00174d36-23aa-4806-a375-422ca7ff66b7",
+      "arrival_lateness_seconds": 0.00027858599787577987
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02938037400599569,
+      "id": "2a848b40-ce88-4cf3-b27b-13d2c74ce1fd",
+      "arrival_lateness_seconds": 0.00024027697509154677
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.016633730003377423,
+      "id": "daa38c29-e728-4844-a06e-bdc1ae3d08ea",
+      "arrival_lateness_seconds": 0.0002437650109641254
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.06024500701460056,
+      "id": "0a5e0e74-d5af-4921-8b4d-c0723dceede1",
+      "arrival_lateness_seconds": 0.00026018000789918005
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.048842658987268806,
+      "id": "39fe2fe1-2ed5-4f6a-9383-c1b81d25119f",
+      "arrival_lateness_seconds": 0.00026801700005307794
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.08232073101680726,
+      "id": "ec41a438-8034-4bd0-b665-552364c68453",
+      "arrival_lateness_seconds": 0.00022682998678646982
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03826081700390205,
+      "id": "953865ea-7ca4-43cf-a1b1-d759d0e66239",
+      "arrival_lateness_seconds": 0.00025894297868944705
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04582894398481585,
+      "id": "c5c02698-ffd9-43d1-ab2c-27425dc8c129",
+      "arrival_lateness_seconds": 0.00032562101841904223
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0617425819800701,
+      "id": "e86c9469-a0eb-40cf-83d8-463ef184d99c",
+      "arrival_lateness_seconds": 0.00036548898788169026
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.050524134014267474,
+      "id": "45b80e00-0050-4135-b279-279286653e44",
+      "arrival_lateness_seconds": 0.00030944999889470637
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04745666097733192,
+      "id": "55857a60-1aa6-4812-9d44-bba227543171",
+      "arrival_lateness_seconds": 0.0002692609850782901
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.040998893993673846,
+      "id": "fb22ef77-7bd3-4130-8519-00742be8742e",
+      "arrival_lateness_seconds": 0.00024227899848483503
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05332164600258693,
+      "id": "5eef06e6-bad5-478b-87df-dcf854dc705c",
+      "arrival_lateness_seconds": 0.00031189501169137657
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.046754720009630546,
+      "id": "b295fece-8bf1-4bb0-8dec-bd49f14f45e3",
+      "arrival_lateness_seconds": 0.00023370501003228128
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.027326801005983725,
+      "id": "3b1ec441-f4c0-47f0-a192-d7a1f72d66df",
+      "arrival_lateness_seconds": 0.00014978399849496782
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.029261869989568368,
+      "id": "b6a7edaa-cc85-4d0f-a65f-623cbb71cc1c",
+      "arrival_lateness_seconds": 0.00015090598026290536
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04695998301031068,
+      "id": "8095531d-3731-4bf1-a0d2-4bc6b64f86a1",
+      "arrival_lateness_seconds": 0.000253035977948457
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04763467900920659,
+      "id": "1584a092-563a-4cfb-ba99-31e7816a89b2",
+      "arrival_lateness_seconds": 0.0002475660003256053
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.052111691009486094,
+      "id": "631ce011-f210-4ed6-a4e8-e4dc0c0c6914",
+      "arrival_lateness_seconds": 0.0003020110016223043
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05063003100804053,
+      "id": "00cbc610-796f-46ed-8fc4-6adce8c79540",
+      "arrival_lateness_seconds": 0.00034309300826862454
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.038070681010140106,
+      "id": "edba4af2-3c3b-4615-a4d7-952c4b1806eb",
+      "arrival_lateness_seconds": 0.0002470809849910438
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.018461205007042736,
+      "id": "f14eb1b0-3b69-4c80-bd4f-9cc429008d7b",
+      "arrival_lateness_seconds": 0.00017074498464353383
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04739130902453326,
+      "id": "d4bfc78b-35f6-4651-b506-f59bdaf96c3f",
+      "arrival_lateness_seconds": 0.00024989599478431046
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.051506931020412594,
+      "id": "0b9625f4-7f1a-4eb0-abf7-72d35ea64a69",
+      "arrival_lateness_seconds": 0.00031184899853542447
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.050411974982125685,
+      "id": "c0f640d7-2684-443e-a051-be7dfdec0858",
+      "arrival_lateness_seconds": 0.00029777700547128916
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.037839364988030866,
+      "id": "6c5329ee-d327-418a-87da-2661dbcb1466",
+      "arrival_lateness_seconds": 0.0002496980014257133
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.022184653003932908,
+      "id": "aa6b1f61-50d6-41a4-8e59-ec20c87e52a4",
+      "arrival_lateness_seconds": 0.0001276319962926209
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04680801200447604,
+      "id": "10b16a42-49fa-4665-b35b-cb272ee72a4c",
+      "arrival_lateness_seconds": 0.0005217060097493231
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05920976400375366,
+      "id": "2ce36cb2-47d1-43d0-998b-95f8762f4bff",
+      "arrival_lateness_seconds": 0.00027555201086215675
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.061493536981288344,
+      "id": "4370ccf6-126b-4ced-84b3-9a19f1463043",
+      "arrival_lateness_seconds": 0.00025660000392235816
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.044690739014185965,
+      "id": "b1c2ac92-b601-40d9-aab9-7f3b6c7c00d7",
+      "arrival_lateness_seconds": 0.0003193669836036861
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05434714799048379,
+      "id": "2a8658e1-fe1a-4519-9a49-99a620d1485d",
+      "arrival_lateness_seconds": 0.0002767709956970066
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05942765899817459,
+      "id": "b7dd51e7-daa7-4a21-928e-fa17510752d9",
+      "arrival_lateness_seconds": 0.0003002150042448193
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05002408899599686,
+      "id": "97f1fd0a-41bf-4e1b-bbdb-669675abae2a",
+      "arrival_lateness_seconds": 0.0002240879985038191
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05479195900261402,
+      "id": "76bfd133-7187-4dc5-b31b-7e035f129ecd",
+      "arrival_lateness_seconds": 0.000256511993939057
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.049098054994829,
+      "id": "d88cc3b0-47e3-4c0f-b3c3-ad61e18a745b",
+      "arrival_lateness_seconds": 0.0002774119784589857
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.019579494022764266,
+      "id": "1d90c655-d533-4027-acb1-203f5958918e",
+      "arrival_lateness_seconds": 6.609299452975392e-05
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.053095501993084326,
+      "id": "dd46dfa2-9f6a-44d6-a08a-bc6e5dca5523",
+      "arrival_lateness_seconds": 0.0003215220058336854
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.030985246994532645,
+      "id": "9713bf0a-321d-4133-a69c-963b0cd2ab18",
+      "arrival_lateness_seconds": 0.00019275900558568537
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05081748100928962,
+      "id": "ee0500aa-2c3b-4341-aa44-1d23f584340c",
+      "arrival_lateness_seconds": 0.0003083609917666763
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.056104355986462906,
+      "id": "4373d1f9-7708-4279-b7d8-28d688a75d23",
+      "arrival_lateness_seconds": 0.00035633298102766275
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.040804238989949226,
+      "id": "7f1f806e-2482-4fd0-a81f-3d5731cfabff",
+      "arrival_lateness_seconds": 0.0002244429779238999
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0597183849895373,
+      "id": "05583ec5-95d2-43db-915f-ec9cfd8f9ecc",
+      "arrival_lateness_seconds": 0.00033673900179564953
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.047386491001816466,
+      "id": "f48c1a27-03ff-4cda-889e-0f2ec90aa51c",
+      "arrival_lateness_seconds": 0.000279681000392884
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05306416901294142,
+      "id": "50e077c8-8099-4088-a3da-39a5d44a8bbc",
+      "arrival_lateness_seconds": 0.0003551270056050271
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05154045298695564,
+      "id": "f6c96d0b-e9a3-484c-8c7a-b5a5439639ab",
+      "arrival_lateness_seconds": 0.0003482890024315566
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04331900001852773,
+      "id": "2d6aeb87-5f4c-48fb-882e-8766d1e97121",
+      "arrival_lateness_seconds": 0.00018361298134550452
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.028170179983135313,
+      "id": "64a5c053-716d-4626-8def-1ad646652fe5",
+      "arrival_lateness_seconds": 0.00018623800133354962
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03280014399206266,
+      "id": "632d465e-d255-4ff5-9075-fb465759b539",
+      "arrival_lateness_seconds": 0.00020830301218666136
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.061144189996412024,
+      "id": "de9ed73e-b47e-48d1-80ee-7ea329dea4b7",
+      "arrival_lateness_seconds": 0.00028790399665012956
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03313941301894374,
+      "id": "1a325bf2-74e0-4fea-8a13-a8d90820cdd1",
+      "arrival_lateness_seconds": 0.00017108998144976795
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.020273900998290628,
+      "id": "b3e34b63-402e-464e-a4a0-8f5cd0590063",
+      "arrival_lateness_seconds": 0.00015194498701021075
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.042804413998965174,
+      "id": "dfe537b8-c15b-4da5-b558-33063e6f28fc",
+      "arrival_lateness_seconds": 0.00018904701573774219
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.057759563002036884,
+      "id": "b541b713-bb54-49e3-bf6e-06eb8caeb6a6",
+      "arrival_lateness_seconds": 0.0003253899922128767
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05576958801248111,
+      "id": "c9a540aa-71bf-4074-a92e-33df5c471250",
+      "arrival_lateness_seconds": 0.00030235800659283996
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.028679395996732637,
+      "id": "be19891e-fc52-4d48-8d7e-587284147bfb",
+      "arrival_lateness_seconds": 0.0001640639966353774
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04363552498398349,
+      "id": "b0231818-66ea-40a4-a5f2-0261e11f190a",
+      "arrival_lateness_seconds": 0.00022630399325862527
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0497887620003894,
+      "id": "61b98cae-8e7f-418a-b036-00257bfe5837",
+      "arrival_lateness_seconds": 0.00020088499877601862
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04029652100871317,
+      "id": "68f69c04-7fec-46a3-9473-25f4318b7dfe",
+      "arrival_lateness_seconds": 0.0003610230050981045
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.050446283974451944,
+      "id": "31bafa3f-a38a-46de-ab30-fa12c2f20b9f",
+      "arrival_lateness_seconds": 0.00026382398209534585
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.06052712700329721,
+      "id": "26e00f30-3e0c-45e2-a291-67b5c9e00962",
+      "arrival_lateness_seconds": 0.000288719980744645
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.032707892009057105,
+      "id": "ec120063-f30b-4144-aac1-6aec2722ab9e",
+      "arrival_lateness_seconds": 0.00017302099149674177
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05756547499913722,
+      "id": "17ca38fd-0f81-4272-bf81-d9cc6a01ca22",
+      "arrival_lateness_seconds": 0.0002903380081988871
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.049401697993744165,
+      "id": "2edf2774-78ba-426e-800e-6cfebc4c027c",
+      "arrival_lateness_seconds": 0.0003032340027857572
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05506792600499466,
+      "id": "7c952a9b-7e1d-4bbd-955f-37693aa2fe28",
+      "arrival_lateness_seconds": 0.00029334600549191236
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03643722500419244,
+      "id": "f0dea358-113d-4378-bbbb-0a6ce016b07c",
+      "arrival_lateness_seconds": 0.00031250398023985326
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05542761099059135,
+      "id": "ce39d13b-3054-4c8a-afe6-736e73133287",
+      "arrival_lateness_seconds": 0.00034357799449935555
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0408774679817725,
+      "id": "7c8e6d7c-35fb-4c28-800e-8d6e483c3bd8",
+      "arrival_lateness_seconds": 0.00025189999723806977
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.050758034019963816,
+      "id": "88ac008b-b670-492e-aa94-ddbc36c023a1",
+      "arrival_lateness_seconds": 0.00026155399973504245
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04682170902378857,
+      "id": "0f3772dc-57bf-4c85-b96d-4dcbce5a63c8",
+      "arrival_lateness_seconds": 0.0002717879833653569
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02767963698715903,
+      "id": "6b508773-297e-4393-8ce6-a00ba0fecd66",
+      "arrival_lateness_seconds": 0.00021657897741533816
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.020009400002891198,
+      "id": "79653510-37fd-4d03-94ff-53f71c2ee7b9",
+      "arrival_lateness_seconds": 0.0002585749898571521
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.040964129992062226,
+      "id": "fb18614b-6bd8-4a7d-b718-b28a0498fbc4",
+      "arrival_lateness_seconds": 0.000287564005702734
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04836416500620544,
+      "id": "b56edc92-f27f-4ba6-a124-d6d55558f018",
+      "arrival_lateness_seconds": 0.0003361910057719797
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.040110786008881405,
+      "id": "6053d311-1602-467d-9a75-2ddeb5e73cdc",
+      "arrival_lateness_seconds": 0.00028881599428132176
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05174881499260664,
+      "id": "066cb701-771a-4ea4-ac29-744a4d117aa0",
+      "arrival_lateness_seconds": 0.00017022999236360192
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.01745758199831471,
+      "id": "bb7d8680-3c6c-4c8a-85b1-ac12d7feaad9",
+      "arrival_lateness_seconds": 0.00016524098464287817
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.041643999982625246,
+      "id": "f8897ae8-671e-4b26-a487-4992f993c331",
+      "arrival_lateness_seconds": 0.0002822359965648502
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05259162199217826,
+      "id": "77124d2b-1d77-492c-8b5e-3a48cbeb00e6",
+      "arrival_lateness_seconds": 0.00029883699608035386
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.035145330999512225,
+      "id": "a987d024-39ba-4cf6-8a9d-4f8cac63d91a",
+      "arrival_lateness_seconds": 0.00021850198390893638
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.051624745974550024,
+      "id": "af9e1716-795f-418e-acac-f6dbd050d635",
+      "arrival_lateness_seconds": 0.00028286498854868114
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.047595451993402094,
+      "id": "8b098204-8596-4544-9ce2-b69b08a3ff6f",
+      "arrival_lateness_seconds": 0.00045064897858537734
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.044936355989193544,
+      "id": "880b23ff-1eb6-4374-ae7b-8193e279b514",
+      "arrival_lateness_seconds": 0.0003263560065533966
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04863326100166887,
+      "id": "135561c3-37cd-4052-bf5d-bb4091846df2",
+      "arrival_lateness_seconds": 0.00035747900255955756
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03844681798364036,
+      "id": "b64bcf7e-6d78-476e-9be0-ac4466ac76c7",
+      "arrival_lateness_seconds": 0.000152263994095847
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04117066602339037,
+      "id": "83247faf-11c3-4e27-b146-7129376ef232",
+      "arrival_lateness_seconds": 0.0003163579967804253
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0446317020105198,
+      "id": "e812fde9-2c38-4be0-b09d-f70997e69d8e",
+      "arrival_lateness_seconds": 0.00019137898925691843
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.022368409001501277,
+      "id": "a873da81-2990-43e6-bdfa-d82a4635b785",
+      "arrival_lateness_seconds": 0.00019223301205784082
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04803549000644125,
+      "id": "9afc9145-f256-4f7e-8420-15eeb53d43e1",
+      "arrival_lateness_seconds": 0.0001649530022405088
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04829494500881992,
+      "id": "149e3e56-5ffe-4c83-955d-a7c75687ab76",
+      "arrival_lateness_seconds": 0.0002737449831329286
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04513919400051236,
+      "id": "da176caa-8755-49d1-9fe9-29440af7074d",
+      "arrival_lateness_seconds": 0.00024299698998220265
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03678439199575223,
+      "id": "24e88a88-5bf6-4719-b9ee-9b7c34bc85c9",
+      "arrival_lateness_seconds": 0.00017090598703362048
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.047329517983598635,
+      "id": "9a6a1571-c4d0-4679-a770-428856338850",
+      "arrival_lateness_seconds": 0.00030921201687306166
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04291733799618669,
+      "id": "304c9c40-3adf-4eeb-b02d-82bb2c29c09e",
+      "arrival_lateness_seconds": 0.00030446398886851966
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04593112599104643,
+      "id": "26b2a1bd-2732-4da0-9ba6-eec4fd37597a",
+      "arrival_lateness_seconds": 0.00030306499684229493
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03945962697616778,
+      "id": "5e5f768c-9f85-4166-ae1f-f7e763769c06",
+      "arrival_lateness_seconds": 0.0003037569986190647
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.043992112012347206,
+      "id": "0d99fcde-4a0e-4838-a329-10d60de5a897",
+      "arrival_lateness_seconds": 0.00037631599116139114
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04450037999777123,
+      "id": "5f391862-3526-4eb3-9ade-fcd50dd27d05",
+      "arrival_lateness_seconds": 0.00034113001311197877
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04521075601223856,
+      "id": "08950235-c893-4dab-abed-c973bb21aceb",
+      "arrival_lateness_seconds": 0.00022342099691741168
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05010183900594711,
+      "id": "7f026584-8450-4447-b543-768d4fc80919",
+      "arrival_lateness_seconds": 0.00023120400146581233
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04559260999667458,
+      "id": "c9f52019-b913-444b-9157-2275b5b25875",
+      "arrival_lateness_seconds": 0.00024329699226655066
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02808633999666199,
+      "id": "92decbca-1e06-4b44-a000-0f319c7eefe2",
+      "arrival_lateness_seconds": 0.00018429197371006012
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03599850399768911,
+      "id": "8f8df630-2db8-4ddd-b02d-254f9592a704",
+      "arrival_lateness_seconds": 0.00016048402176238596
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.051859648985555395,
+      "id": "7dae296b-1313-43b8-ad14-268cf76a24b3",
+      "arrival_lateness_seconds": 0.0003360869886819273
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05215047000092454,
+      "id": "1537783c-1450-4ad1-851f-f64d1189d99b",
+      "arrival_lateness_seconds": 0.0004032849974464625
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.022747173003153875,
+      "id": "dd8b5b5e-f6bb-43ed-a84c-250879f8ba2f",
+      "arrival_lateness_seconds": 0.00017419099458493292
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.051146543002687395,
+      "id": "a872c409-e3eb-408c-8571-327620408e91",
+      "arrival_lateness_seconds": 0.0002871659817174077
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.024156147992471233,
+      "id": "3a39506c-6590-42c3-826f-008282b9c1bc",
+      "arrival_lateness_seconds": 0.00014179002027958632
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04342721801367588,
+      "id": "338f2efe-c7b4-4711-b5ad-19dbe5acf812",
+      "arrival_lateness_seconds": 0.00019438599701970816
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.040943940985016525,
+      "id": "3d6a5c2a-2ac2-4f86-870b-1c3102a6207a",
+      "arrival_lateness_seconds": 0.0003173569857608527
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05060376998153515,
+      "id": "5683f11d-369b-482e-9c6e-8cadb1a95b12",
+      "arrival_lateness_seconds": 0.00027809900348074734
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.048147961002541706,
+      "id": "b253bd7a-c89b-4550-bd4b-781e3ed5a320",
+      "arrival_lateness_seconds": 0.00021791798644699156
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05109079898102209,
+      "id": "f6335fe4-cc8f-4d1d-8026-f72c89dac8ba",
+      "arrival_lateness_seconds": 0.0003279480151832104
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03787897800793871,
+      "id": "f8fbed4b-0a36-40fd-ab60-2dc287343350",
+      "arrival_lateness_seconds": 0.00028885601204819977
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.055432029999792576,
+      "id": "2db09496-80c6-47b6-b189-99f4711dff26",
+      "arrival_lateness_seconds": 0.0002911280025728047
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04788027401082218,
+      "id": "408c6f05-b5d2-4cc9-a31e-dbf5dda7370c",
+      "arrival_lateness_seconds": 0.0002967239997815341
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.044763239013263956,
+      "id": "4a6e640a-409a-4ff8-ad56-b1fe736af292",
+      "arrival_lateness_seconds": 0.00024479598505422473
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04825559401069768,
+      "id": "a839be76-231e-4bb0-94ad-f6a7be1f181d",
+      "arrival_lateness_seconds": 0.00036055801319889724
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04981836801744066,
+      "id": "02953351-14c5-431f-b4ad-5e53d38d56f6",
+      "arrival_lateness_seconds": 0.0002722039935179055
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03926781102200039,
+      "id": "a025896f-4555-496d-8a2d-efb93c9c8ef5",
+      "arrival_lateness_seconds": 0.00029495000489987433
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05291838000994176,
+      "id": "1b8845f8-498e-4575-8e33-d970f06c66f1",
+      "arrival_lateness_seconds": 0.00023409599089063704
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.026629789994331077,
+      "id": "218254ae-8333-40b3-bebf-3f95160ae01c",
+      "arrival_lateness_seconds": 0.0001848139800131321
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03236270399065688,
+      "id": "4e19aeca-233e-4a65-88f2-aa56b9960607",
+      "arrival_lateness_seconds": 0.00017275099526159465
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.046290897007565945,
+      "id": "f8934330-d755-4cde-bec4-89c9429ad6b7",
+      "arrival_lateness_seconds": 0.00026325101498514414
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.06056518599507399,
+      "id": "9d2d860b-143b-44c9-a1f2-509bc0b84c6b",
+      "arrival_lateness_seconds": 0.00029902299866080284
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05981129698920995,
+      "id": "988213bd-7e39-43eb-ad73-b00ba982b18e",
+      "arrival_lateness_seconds": 0.00024843300343491137
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.020781644998351112,
+      "id": "0fa1fa1a-5a8c-42fa-bcc4-95f7d6e7c1b1",
+      "arrival_lateness_seconds": 0.00016129299183376133
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.049649502005195245,
+      "id": "2da02805-3b1c-4444-b08b-859b55a25f61",
+      "arrival_lateness_seconds": 0.00023863601381890476
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03939459699904546,
+      "id": "742bc38d-7141-4c8c-9df0-6b569ba35167",
+      "arrival_lateness_seconds": 0.00033510298817418516
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.06365811100113206,
+      "id": "e3ac01a9-458d-4c97-bf2f-223e7cb6b48d",
+      "arrival_lateness_seconds": 0.0002734909940045327
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04446018999442458,
+      "id": "68282fb1-7051-44e8-92de-4c70e2799a58",
+      "arrival_lateness_seconds": 0.00023920898092910647
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04881792899686843,
+      "id": "b39c1767-7a8d-4844-8f6a-3c188cc64e98",
+      "arrival_lateness_seconds": 0.0002774869790300727
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03129278801498003,
+      "id": "a8f70dc5-57b8-4273-bb6b-7ca2c56568b4",
+      "arrival_lateness_seconds": 0.00023012500605545938
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.021922336018178612,
+      "id": "082ca592-9c78-44d0-8cbf-078b47aa4f29",
+      "arrival_lateness_seconds": 9.026398765854537e-05
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.033032647013897076,
+      "id": "7b5a2f23-c01b-473d-94b0-03f9d782cee7",
+      "arrival_lateness_seconds": 0.0001678449916653335
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03600066000944935,
+      "id": "8ea030ea-3f4d-4086-80e6-b0c403ce71e0",
+      "arrival_lateness_seconds": 0.00017936399672180414
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05111664399737492,
+      "id": "a7a6284c-f82c-4f3f-8ff6-4da9e914ac25",
+      "arrival_lateness_seconds": 0.0002490079787094146
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.046695369004737586,
+      "id": "3b07e156-c7a0-43b5-91e7-df093562ef0f",
+      "arrival_lateness_seconds": 0.00024111699895001948
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.019039567006984726,
+      "id": "0d54af40-3e92-4149-bfdc-19841ed2a714",
+      "arrival_lateness_seconds": 0.00013714400120079517
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04859191499417648,
+      "id": "b6b80834-d1c1-4175-b4cb-2808843395dc",
+      "arrival_lateness_seconds": 0.0002001429966185242
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02473351001390256,
+      "id": "34f04517-0f63-4abf-a968-49a17ec14937",
+      "arrival_lateness_seconds": 0.00019564598915167153
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.038757357018766925,
+      "id": "ca19c522-d89c-4abd-a10d-849b874d17cb",
+      "arrival_lateness_seconds": 0.00024223097716458142
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.029696746001718566,
+      "id": "bbf0eaf7-8b9a-4ca8-8b56-e55603dabeeb",
+      "arrival_lateness_seconds": 0.0001969840086530894
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.050412098004017025,
+      "id": "109cf5cb-cb79-41bc-bbb3-3ea3723fb3e4",
+      "arrival_lateness_seconds": 0.00023725599749013782
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03170243400381878,
+      "id": "e82ce04e-9055-4aaf-bd21-6b5d2528b26b",
+      "arrival_lateness_seconds": 0.0001870059932116419
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02036577498074621,
+      "id": "5752b56c-a9de-4c77-a30d-83af12cf404a",
+      "arrival_lateness_seconds": 0.00016425398644059896
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05068519900669344,
+      "id": "f0cb137c-2e3f-4155-a535-bd659a758d4e",
+      "arrival_lateness_seconds": 0.00022267797612585127
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.021911891002673656,
+      "id": "dec2e14b-c6d0-4c1d-8a9e-2e4117f9bf54",
+      "arrival_lateness_seconds": 0.00020618201233446598
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.033513458009110764,
+      "id": "3e785a36-f1df-4f03-8e5f-edea5d58ac39",
+      "arrival_lateness_seconds": 0.00028547400142997503
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.051814503996865824,
+      "id": "f1f1aecd-53a6-4fd8-83cd-2ab0bb303f59",
+      "arrival_lateness_seconds": 0.00035725999623537064
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0598467499949038,
+      "id": "2700728b-2f8e-4136-9d40-8daf431c99e0",
+      "arrival_lateness_seconds": 0.0002969119814224541
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.023285559000214562,
+      "id": "04efb346-f3ec-4ce2-bb6c-7aeae286692e",
+      "arrival_lateness_seconds": 0.0001649009936954826
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.03336465498432517,
+      "id": "c1de6c3c-8637-4f08-bfee-100333915875",
+      "arrival_lateness_seconds": 0.0001603880082257092
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.043192465003812686,
+      "id": "dfe295f2-3133-4f38-9c45-49aad9235afc",
+      "arrival_lateness_seconds": 0.0002316939935553819
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05055988600361161,
+      "id": "a234b491-ebf3-4306-b31e-835d7cc9af18",
+      "arrival_lateness_seconds": 0.0003764349967241287
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.052587532001780346,
+      "id": "68645a7a-6208-48f0-b3f6-c7be40f75a69",
+      "arrival_lateness_seconds": 0.0002666819782461971
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.056353994994424284,
+      "id": "937272b9-efcb-48f0-9b12-6b37e12f9c57",
+      "arrival_lateness_seconds": 0.0003116719890385866
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05387373501434922,
+      "id": "ede79a1b-c1ba-41c5-8e59-b4fcc5187886",
+      "arrival_lateness_seconds": 0.00017878401558846235
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04110405899700709,
+      "id": "311b44ab-1ceb-46da-9b23-7867dddb1985",
+      "arrival_lateness_seconds": 0.0001275300164707005
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.061816219007596374,
+      "id": "8619395c-133b-4b01-a4a2-7977797796ad",
+      "arrival_lateness_seconds": 0.00023060900275595486
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05011485598515719,
+      "id": "ff4ec1c0-310d-41b0-884b-ef9e72a89525",
+      "arrival_lateness_seconds": 0.00019658097880892456
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.056803927989676595,
+      "id": "c3dfaec2-5535-4c77-84d5-fc2854a26675",
+      "arrival_lateness_seconds": 0.00023687697830609977
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.06066330100293271,
+      "id": "6fd1e4b6-b013-4fc2-81c3-f9c5bc21afa1",
+      "arrival_lateness_seconds": 0.0003648650017566979
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04045104401302524,
+      "id": "ff6dc3c3-d06d-4b94-9f43-bff5b3a2750a",
+      "arrival_lateness_seconds": 0.0002219729940406978
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0594354769855272,
+      "id": "f006c31c-aa21-4781-b43b-89fc1f6b5eb8",
+      "arrival_lateness_seconds": 0.0002870559983421117
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02074066799832508,
+      "id": "9b526b66-f228-43ca-b7a5-220e9e2a0122",
+      "arrival_lateness_seconds": 0.00015658498159609735
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.061059533996740356,
+      "id": "bc23590b-1c05-4214-b9f9-9e00f131e28d",
+      "arrival_lateness_seconds": 0.00029854997410438955
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04888678700081073,
+      "id": "0cb4823a-da91-43dc-ad69-e68d32456213",
+      "arrival_lateness_seconds": 0.00023328702081926167
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04438909699092619,
+      "id": "9908525c-36a1-4e2e-bc06-3d7f7357ce27",
+      "arrival_lateness_seconds": 0.00022318901028484106
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.05083470599493012,
+      "id": "b63bc417-5b8c-481c-933d-d55d28f78d90",
+      "arrival_lateness_seconds": 0.00027360100648365915
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.059689790999982506,
+      "id": "f81831fb-a596-4f37-9654-3df565e10806",
+      "arrival_lateness_seconds": 0.00020584798767231405
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.031147831992711872,
+      "id": "41f50473-5ae4-4498-93c3-30b068fee0cc",
+      "arrival_lateness_seconds": 0.00023666597553528845
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.02062584098894149,
+      "id": "cf52d283-5825-45a9-8af0-a8b2406ae65d",
+      "arrival_lateness_seconds": 0.00012428101035766304
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.06282137401285581,
+      "id": "fa29452b-8b48-46a8-8413-f48709c648cd",
+      "arrival_lateness_seconds": 0.00028610898880288005
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.036685964005300775,
+      "id": "4b5d21b0-3eb2-41d8-b46d-89994e4f9663",
+      "arrival_lateness_seconds": 0.00021137899602763355
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.036544686008710414,
+      "id": "9210880f-4e4a-4325-b00a-3ae6e403f59f",
+      "arrival_lateness_seconds": 0.0006721119862049818
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.023168579005869105,
+      "id": "e8be0c37-bbb4-443e-8b17-6709cd01b784",
+      "arrival_lateness_seconds": 0.00015890199574641883
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04739585900097154,
+      "id": "0062ddcd-3bb3-4a3b-94d4-b935e83e626d",
+      "arrival_lateness_seconds": 0.0003472310199867934
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.06039669900201261,
+      "id": "31cdcf13-d8b8-45d3-ac34-ab2868a672b7",
+      "arrival_lateness_seconds": 0.00034390599466860294
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.057822851988021284,
+      "id": "4948e9f3-346e-4bc4-9101-391d5117fb73",
+      "arrival_lateness_seconds": 0.00030282200896181166
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.060281228012172505,
+      "id": "52807b42-a15e-4b84-95d8-bc9ba48a9224",
+      "arrival_lateness_seconds": 0.0003687150019686669
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04636950898566283,
+      "id": "f1d52ee7-c5ed-4f53-aa99-eeee29e82845",
+      "arrival_lateness_seconds": 0.0002816019987221807
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.04766604900942184,
+      "id": "f970b9db-d8f9-4b70-be94-3ab4b626df75",
+      "arrival_lateness_seconds": 0.0002932579955086112
+    },
+    {
+      "status": 202,
+      "latency_seconds": 0.0529509249900002,
+      "id": "7f7cd921-dbbf-479c-8e3b-2638b5703bcc",
+      "arrival_lateness_seconds": 0.0012275770131964236
+    }
+  ],
+  "cohort": {
+    "accepted": 600,
+    "completed": 600,
+    "failed": 0,
+    "unfinished": 0,
+    "expired": 600,
+    "deadline_met": 600,
+    "deadline_miss": 0,
+    "e2e_p99_seconds": 3.5291523899999993,
+    "latest_deadline_seconds": 0
+  },
+  "processing_timeliness_ratio": 1.0,
+  "generator_limited": false,
+  "end": "2026-10-11T19:08:29Z",
+  "saturation_observed": false
+}

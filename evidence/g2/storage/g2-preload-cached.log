@@ -1,0 +1,15 @@
+docker.io/library/postgres:18.0 bookworm	saved	
+application/vnd.oci.image.index.v1+json sha256:3f55f8895c4ed50603e2fbdfc72fffeeaba3173321fee5cb825bbbeb30d9d854
+Importing	elapsed: 13.8s	total:   0.0 B	(0.0 B/s)	
+docker.io/library/postgres:18.0 bookworm	saved	
+docker.io/prom/prometheus:v3.15.0       	saved	
+application/vnd.oci.image.index.v1+json sha256:3f55f8895c4ed50603e2fbdfc72fffeeaba3173321fee5cb825bbbeb30d9d854
+application/vnd.docker.distribution.manifest.list.v2+json sha256:efd719c99d83b060d9daefdcf00360461adf279f45ef5391f8d111892118753e
+Importing	elapsed: 13.8s	total:   0.0 B	(0.0 B/s)	
+docker.io/library/postgres:18.0 bookworm	saved	
+docker.io/prom/prometheus:v3.15.0       	saved	
+docker.io/grafana/grafana:13.2.3        	saved	
+application/vnd.oci.image.index.v1+json sha256:3f55f8895c4ed50603e2fbdfc72fffeeaba3173321fee5cb825bbbeb30d9d854
+application/vnd.docker.distribution.manifest.list.v2+json sha256:efd719c99d83b060d9daefdcf00360461adf279f45ef5391f8d111892118753e
+application/vnd.docker.distribution.manifest.list.v2+json sha256:b28bae15e219c998fb0e0424ed724930cc61b1f61fb404d47c862f9a23f9e572
+Importing	elapsed: 13.9s	total:   0.0 B	(0.0 B/s)	

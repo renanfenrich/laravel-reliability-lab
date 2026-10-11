@@ -1,0 +1,75 @@
+{
+  "start": "2026-10-11T19:06:26Z",
+  "end": "2026-10-11T19:08:29Z",
+  "commit": "254f936503db97ffc1362e1e54b3d9ef80a99df1",
+  "kill_timestamp": "2026-10-11T19:06:27Z",
+  "fault_completed_counter_delta": 2.0,
+  "recovered": {
+    "856ad75f-765d-49a8-ae5c-89716d81493a": {
+      "result": {
+        "id": "856ad75f-765d-49a8-ae5c-89716d81493a",
+        "state": "completed",
+        "attempts": 2,
+        "result": {
+          "checksum": "ac9b70b66d3017ac3cb9847bedad5f376b89c0e3bbc9428edbc8d666ef9e9b8b"
+        },
+        "error": null,
+        "deadline_met": null,
+        "overdue": false
+      },
+      "row": "1|2|ac9b70b66d3017ac3cb9847bedad5f376b89c0e3bbc9428edbc8d666ef9e9b8b",
+      "observed_recovery_seconds": 22.571096503001172
+    },
+    "2fccd375-ca14-4e43-aa27-f7afde874658": {
+      "result": {
+        "id": "2fccd375-ca14-4e43-aa27-f7afde874658",
+        "state": "completed",
+        "attempts": 2,
+        "result": {
+          "checksum": "ac9b70b66d3017ac3cb9847bedad5f376b89c0e3bbc9428edbc8d666ef9e9b8b"
+        },
+        "error": null,
+        "deadline_met": null,
+        "overdue": false
+      },
+      "row": "1|2|ac9b70b66d3017ac3cb9847bedad5f376b89c0e3bbc9428edbc8d666ef9e9b8b",
+      "observed_recovery_seconds": 22.701823263982078
+    }
+  },
+  "background_load": {
+    "start": "2026-10-11T19:06:26Z",
+    "end_requests": "2026-10-11T19:07:26Z",
+    "commit": "254f936503db97ffc1362e1e54b3d9ef80a99df1",
+    "prefix": "exp-d7d7ce08ee504f5f862c026c29c7f9e8-",
+    "traffic": "load",
+    "offered_rate_rps": 10,
+    "offered_duration_seconds": 60,
+    "requests": 600,
+    "elapsed_client_seconds": 59.9552427729941,
+    "throughput_rps": 10.007465106458724,
+    "acceptance_rps": 10.007465106458724,
+    "http_error_ratio": 0.0,
+    "client_latency_p50_seconds": 0.04438909699092619,
+    "client_latency_p95_seconds": 0.05983741697855294,
+    "client_latency_p99_seconds": 0.06445723201613873,
+    "client_latency_within_500ms_ratio": 1.0,
+    "arrival_lateness_p99_seconds": 0.000540414999704808,
+    "cohort": {
+      "accepted": 600,
+      "completed": 600,
+      "failed": 0,
+      "unfinished": 0,
+      "expired": 600,
+      "deadline_met": 600,
+      "deadline_miss": 0,
+      "e2e_p99_seconds": 3.5291523899999993,
+      "latest_deadline_seconds": 0
+    },
+    "processing_timeliness_ratio": 1.0,
+    "generator_limited": false,
+    "end": "2026-10-11T19:08:29Z",
+    "saturation_observed": false
+  },
+  "result": "PASS",
+  "limitations": "Two correlated SIGKILL events under one bounded 10rps/60s load cohort. No arbitrary node/database failure or production recovery probability claim."
+}

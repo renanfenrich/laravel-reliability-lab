@@ -1,0 +1,69 @@
+{
+  "start": "2026-10-11T18:54:45Z",
+  "commit": "2ebfc06db0e4b3abb3a77ee21706ddba3adf9d86",
+  "method": "Process-frozen crash-consistent filesystem copies; includes WAL/state. No application-consistent/off-host backup claim. Processes resumed in finally.",
+  "components": {
+    "prometheus": {
+      "pod": "prometheus-7f49d9967c-cmrpk",
+      "container_id": "b779cb20269dbcc86e44b92f910f9795a91e4d5b924d4ec5b02e4d07024f0083",
+      "archive_bytes": 21299200,
+      "archive_sha256": "e8ceab12ea36dba788dc10ae1d436231b1f5982dfc9ca38d101f4827f4ee8227",
+      "copy_seconds": 0.5196141790074762,
+      "private_archive": ".runtime/backups/storage-export-cfb1dd3aba/prometheus.tar",
+      "persistent_host_path": ".runtime/observability/prometheus",
+      "uid": 65534
+    },
+    "loki": {
+      "pod": "loki-7d54b54ffb-gmtg6",
+      "container_id": "a12c5983497a03d2e059471fd3386e4eb61e96b21fffd6c9777179530b83fdad",
+      "archive_bytes": 22958080,
+      "archive_sha256": "8c5765316607a1c86b37112cb10f0db1303fa14e7401cae5dd33b155099f6020",
+      "copy_seconds": 0.6621273630007636,
+      "private_archive": ".runtime/backups/storage-export-cfb1dd3aba/loki.tar",
+      "persistent_host_path": ".runtime/observability/loki",
+      "uid": 10001
+    },
+    "grafana": {
+      "pod": "grafana-56f7f947bb-578w5",
+      "container_id": "85351ff62c3098104abf4bf731888659f954e12f75e4309f918012e430c123f5",
+      "archive_bytes": 1751040,
+      "archive_sha256": "403fdd639d2ea785ba94bd1ae70028f6e276b21d074d54a1c9f64507b3f13dd1",
+      "copy_seconds": 0.4477511990116909,
+      "private_archive": ".runtime/backups/storage-export-cfb1dd3aba/grafana.tar",
+      "persistent_host_path": ".runtime/observability/grafana",
+      "uid": 472
+    },
+    "alertmanager": {
+      "pod": "alertmanager-9bd94ccc7-kvhc2",
+      "container_id": "2e6417947cf4d1e248d077445738eeed6c17f8f5d8413a7fc5c05de318d637ce",
+      "archive_bytes": 10240,
+      "archive_sha256": "81acee9adf1f97afefab45dcadca5cb4194242c2fda970e53e66569c2aefcd95",
+      "copy_seconds": 0.5198040840041358,
+      "private_archive": ".runtime/backups/storage-export-cfb1dd3aba/alertmanager.tar",
+      "persistent_host_path": ".runtime/observability/alertmanager",
+      "uid": 65534
+    },
+    "mailpit": {
+      "pod": "mailpit-56d5545868-dzg9s",
+      "container_id": "0e10e934a7581d11ca2ad73f6ede96fcf4308e774d9d5c06d7e0a7772b705df3",
+      "archive_bytes": 174080,
+      "archive_sha256": "16f4e758da5c6730f8f7c7698fa54fe621f717e98f59e6e97597b8f3f0357880",
+      "copy_seconds": 0.41059866797877476,
+      "private_archive": ".runtime/backups/storage-export-cfb1dd3aba/mailpit.tar",
+      "persistent_host_path": ".runtime/observability/mailpit",
+      "uid": 1000
+    },
+    "alloy": {
+      "pod": "alloy-5d58dddd74-9sdm2",
+      "container_id": "bc44d6e12f0bbce4ffbbdaca8ec43e8fd311f07d82440ecf0da9c6fe0d9967e1",
+      "archive_bytes": 20480,
+      "archive_sha256": "f1cc75d338720359974ff9ee1031b27d20d0639361e4a7583656078e6519a4fa",
+      "copy_seconds": 0.6193053059978411,
+      "private_archive": ".runtime/backups/storage-export-cfb1dd3aba/alloy.tar",
+      "persistent_host_path": ".runtime/observability/alloy",
+      "uid": 1000
+    }
+  },
+  "end": "2026-10-11T18:54:48Z",
+  "result": "PASS"
+}

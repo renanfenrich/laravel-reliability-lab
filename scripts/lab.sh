@@ -5,6 +5,25 @@ export KUBECONFIG="$PWD/.kubeconfig"
 cluster=laravel-reliability-lab
 k() { "$PWD/.tools/kubectl" --kubeconfig "$KUBECONFIG" --context "kind-$cluster" "$@"; }
 case "${1:-}" in
+ tunnel-up)
+  test -x .tools/cloudflared
+  token_file="$PWD/.runtime/cloudflare/tunnel-token"
+  test -f "$token_file" || { echo 'Missing private tunnel token; run make tunnel-token interactively on the notebook.' >&2; exit 1; }
+  python3 - "$token_file" <<'PY'
+from pathlib import Path
+import os,stat,sys
+p=Path(sys.argv[1]); assert not p.is_symlink() and p.resolve()==Path.cwd()/'.runtime/cloudflare/tunnel-token', 'Unsafe credential path'
+assert p.stat().st_uid==os.getuid() and stat.S_IMODE(p.stat().st_mode)==0o600 and p.stat().st_size>0, 'Token must be nonempty, owned by this user, and mode 0600'
+PY
+  test "$(sha256sum .tools/cloudflared | cut -d' ' -f1)" = d33ff2d14475178d2012c2c56beba87389ac5ded27649519f198a7d3134a99db
+  curl -fsS --max-time 5 http://192.168.1.9:13000/api/health >/dev/null
+  if ! systemctl --user is-active --quiet laravel-reliability-lab-tunnel.service; then
+   systemd-run --user --unit=laravel-reliability-lab-tunnel --property=Restart=always --property=RestartSec=5 --property=StartLimitIntervalSec=0 --property=UMask=0077 "$PWD/.tools/cloudflared" tunnel --no-autoupdate run --token-file "$token_file"
+  fi
+  ;;
+ tunnel-down)
+  if systemctl --user is-active --quiet laravel-reliability-lab-tunnel.service; then systemctl --user stop laravel-reliability-lab-tunnel.service; fi
+  ;;
  doctor)
   for t in docker kind terraform python3 curl git; do command -v "$t"; done
   docker info --format '{{.ServerVersion}}'; docker compose version; kind version; terraform version
@@ -14,14 +33,15 @@ case "${1:-}" in
   terraform version -json | python3 -c 'import sys,json; assert json.load(sys.stdin)["terraform_version"] == "1.16.5"'
   ;;
  build)
-  docker build -t laravel-reliability-app:g1 .
-  docker build -t laravel-reliability-simulator:g1 simulator
+  docker pull nginx:1.30.5-alpine
+  docker build -t laravel-reliability-app:g2 .
+  docker build -t laravel-reliability-simulator:g2 simulator
   ;;
  dev-up)
   python3 scripts/init-env.py
   docker compose up -d --wait postgres redis simulator
   docker compose run --rm --no-deps api php artisan migrate --force
-  docker compose up -d --wait api worker scheduler
+  docker compose up -d --wait api http worker scheduler
   ;;
  dev-down) docker compose down ;;
  test)
@@ -33,7 +53,8 @@ case "${1:-}" in
  cluster-up)
   test "$(kind version | awk '{print $2}')" = v0.30.0
   python3 scripts/init-env.py
-  mkdir -p .tools .runtime/postgres
+  mkdir -p .tools .runtime/postgres .runtime/observability
+  python3 -c 'from pathlib import Path; p=Path(".runtime/observability"); assert not p.is_symlink() and p.resolve()==Path.cwd()/".runtime/observability", "Unsafe observability path"'
   if ! test -x .tools/kubectl; then
    curl -fsSL https://dl.k8s.io/release/v1.34.0/bin/linux/amd64/kubectl -o .tools/kubectl
    curl -fsSL https://dl.k8s.io/release/v1.34.0/bin/linux/amd64/kubectl.sha256 -o .tools/kubectl.sha256
@@ -42,7 +63,7 @@ case "${1:-}" in
   .tools/kubectl version --client -o json | python3 -c 'import sys,json; assert json.load(sys.stdin)["clientVersion"]["gitVersion"]=="v1.34.0"'
   python3 - <<'PY'
 import json,os
-config={'kind':'Cluster','apiVersion':'kind.x-k8s.io/v1alpha4','name':'laravel-reliability-lab','networking':{'apiServerAddress':'127.0.0.1'},'nodes':[{'role':'control-plane','extraMounts':[{'hostPath':os.path.abspath('.runtime/postgres'),'containerPath':'/lab-postgres'}]}]}
+config={'kind':'Cluster','apiVersion':'kind.x-k8s.io/v1alpha4','name':'laravel-reliability-lab','networking':{'apiServerAddress':'127.0.0.1'},'nodes':[{'role':'control-plane','extraMounts':[{'hostPath':os.path.abspath('.runtime/postgres'),'containerPath':'/lab-postgres'},{'hostPath':os.path.abspath('.runtime/observability'),'containerPath':'/lab-observability'}]}]}
 open('.runtime/kind.json','w').write(json.dumps(config))
 PY
   if kind get clusters 2>/dev/null | grep -qx "$cluster"; then
@@ -61,18 +82,24 @@ PY
  mail-down)
   if systemctl --user is-active --quiet laravel-reliability-lab-mail-forward.service; then systemctl --user stop laravel-reliability-lab-mail-forward.service; fi
   ;;
+ g2-backup) python3 -u scripts/g2-backup.py ;;
+ g2-runtime) python3 scripts/g2-runtime-check.py ;;
+ g2-load) python3 -u scripts/g2-load.py ;;
+ g2-interruption) python3 -u scripts/g2-interruption.py ;;
  alert-test) python3 -u scripts/alert-email-test.py ;;
  host-metrics-up) python3 scripts/host-metrics-control.py start ;;
  host-metrics-down) python3 scripts/host-metrics-control.py stop ;;
  deploy)
   test -f .kubeconfig; k get nodes
-  kind load docker-image --name "$cluster" laravel-reliability-app:g1 laravel-reliability-simulator:g1
+  docker inspect "${cluster}-control-plane" --format '{{json .Mounts}}' | python3 -c 'import json,sys,pathlib; mounts=json.load(sys.stdin); expected=str(pathlib.Path(".runtime/observability").resolve()); assert any(m["Destination"]=="/lab-observability" and m["Source"]==expected for m in mounts), "Dedicated cluster lacks the G2 retained-storage mount; export telemetry, back up PostgreSQL, then recreate only the lab cluster"'
+  python3 scripts/render-infra.py
+  python3 scripts/load-cluster-images.py
   python3 scripts/host-metrics-control.py start
   python3 scripts/render-infra.py
   terraform -chdir=infra init -input=false
   python3 scripts/tf-secrets.py
   terraform -chdir=infra apply -auto-approve -input=false -var-file=local.tfvars.json
-  for name in $(python3 -c 'import json; print(" ".join(x["metadata"]["name"] for x in json.load(open("infra/manifests.json")).values() if x["kind"]=="Deployment"))'); do k -n lab rollout status deployment/"$name" --timeout=180s; done
+  for name in $(python3 -c 'import json; print(" ".join(x["metadata"]["name"] for x in json.load(open("infra/manifests.json")).values() if x["kind"]=="Deployment"))'); do k -n lab rollout status deployment/"$name" --timeout=360s; done
   k -n lab exec deployment/api -- php artisan migrate --force
   for name in api worker scheduler exporter; do k -n lab rollout status deployment/"$name" --timeout=120s; done
   ;;
@@ -88,6 +115,7 @@ PY
   python3 scripts/observability-check.py
   ;;
  teardown)
+  "$0" tunnel-down
   "$0" mail-down
   python3 scripts/host-metrics-control.py stop
   if command -v systemctl >/dev/null && systemctl --user is-active --quiet laravel-reliability-lab-grafana-forward.service; then
@@ -101,7 +129,7 @@ PY
    for file in infra/terraform.tfstate infra/terraform.tfstate.backup; do if test -f "$file"; then mv "$file" ".runtime/old-state/$(basename "$file").$(date +%s)"; fi; done
    rm -f .kubeconfig
   fi
-  echo 'Preserved Compose volumes and .runtime/postgres. Observability ephemeral data removed with cluster.'
+  echo 'Preserved Compose volumes, .runtime/postgres and .runtime/observability. Transient Redis data removed with cluster.'
   ;;
  data-reset) ./scripts/reset-data.sh ;;
  *) echo 'Unknown lab command' >&2; exit 2 ;;

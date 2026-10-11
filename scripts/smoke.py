@@ -1,7 +1,7 @@
 from labclient import *
 import concurrent.futures,uuid
 started=utc(); key='smoke-'+uuid.uuid4().hex
-with forward('api',8080) as base:
+with forward('gateway',8080) as base:
     assert request(base,'/api/live',auth=False)[0]==200
     assert request(base,'/api/ready',auth=False)[0]==200
     assert request(base,'/api/reports',{'subject':'synthetic-smoke'},auth=False,key=key)[0]==401

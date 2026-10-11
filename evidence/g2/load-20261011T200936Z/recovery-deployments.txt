@@ -1,0 +1,15 @@
+alertmanager         1/1   1     1     97m
+alloy                1/1   1     1     96m
+api                  2/2   2     2     97m
+exporter             1/1   1     1     97m
+gateway              1/1   1     1     97m
+grafana              1/1   1     1     97m
+kube-state-metrics   1/1   1     1     96m
+loki                 1/1   1     1     97m
+mailpit              1/1   1     1     97m
+postgres             1/1   1     1     97m
+prometheus           1/1   1     1     97m
+redis                1/1   1     1     97m
+scheduler            1/1   1     1     97m
+simulator            1/1   1     1     97m
+worker               2/2   2     2     97m

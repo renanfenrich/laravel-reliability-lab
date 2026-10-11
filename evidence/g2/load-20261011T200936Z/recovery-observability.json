@@ -1,0 +1,127 @@
+{
+  "start": "2026-10-11T20:34:10Z",
+  "end": "2026-10-11T20:34:12Z",
+  "commit": "0b6e905aa1d4a08fb3d8247abf6e732e5d21b522",
+  "targets": [
+    {
+      "job": "alertmanager",
+      "health": "up"
+    },
+    {
+      "job": "kube-state-metrics",
+      "health": "up"
+    },
+    {
+      "job": "kubelet-cadvisor",
+      "health": "up"
+    },
+    {
+      "job": "lab-exporter",
+      "health": "up"
+    },
+    {
+      "job": "lab-host-docker",
+      "health": "up"
+    },
+    {
+      "job": "mailpit",
+      "health": "up"
+    },
+    {
+      "job": "prometheus",
+      "health": "up"
+    }
+  ],
+  "active_alertmanagers": [
+    {
+      "url": "http://alertmanager:9093/api/v2/alerts"
+    }
+  ],
+  "rule_health": "PASS",
+  "mailbox_authentication": "PASS",
+  "mailbox_total": 1,
+  "metric_series": {
+    "lab_accepted_total": 3,
+    "lab_completed_total": 3,
+    "lab_processing_cohort_total": 24,
+    "container_memory_working_set_bytes{namespace=\"lab\"}": 54,
+    "kube_pod_container_status_restarts_total{namespace=\"lab\"}": 20
+  },
+  "searchable_correlated_worker_logs": true,
+  "queried_report_id": "bc470657-e6f3-41b8-a87e-22e06a96157b",
+  "dashboard_panels": 15,
+  "grafana_datasource_health": {
+    "prometheus": {
+      "details": {
+        "application": "Prometheus",
+        "features": {
+          "rulerApiEnabled": false
+        }
+      },
+      "message": "Successfully queried the Prometheus API.",
+      "status": "OK"
+    },
+    "loki": {
+      "message": "Data source successfully connected.",
+      "status": "OK"
+    }
+  },
+  "grafana_panel_frames": {
+    "API request rate by traffic and status class": 6,
+    "API p99 latency \u2014 500ms provisional threshold": 3,
+    "Processing cohorts: misses include unfinished/failed at deadline": 1,
+    "30-day intended SLI window \u2014 incomplete history until 30d": 1,
+    "Reports by state and traffic": 12,
+    "Overdue unfinished reports": 3,
+    "Completion p99 (completed only; diagnostic, NOT processing SLI)": 3,
+    "Retries and lease recovery": 3,
+    "External dependency latency": 3,
+    "External dependency errors": 3,
+    "Pod CPU \u2014 measured kubelet counters": 17,
+    "Pod working set memory": 17,
+    "Pod restarts": 20,
+    "Active alerts and routing severity": 1,
+    "Structured report logs: filter request_id/report_id in Explore": 1,
+    "Host CPU utilizada": 1,
+    "Mem\u00f3ria host usada / dispon\u00edvel": 1,
+    "Mem\u00f3ria dispon\u00edvel": 1,
+    "Swap utilizada": 1,
+    "Load average (1 / 5 / 15 minutos)": 3,
+    "Filesystem do reposit\u00f3rio \u2014 espa\u00e7o dispon\u00edvel": 1,
+    "Filesystem do reposit\u00f3rio \u2014 uso %": 1,
+    "Inodes dispon\u00edveis": 1,
+    "Discos f\u00edsicos \u2014 leitura bytes/s": 1,
+    "Discos f\u00edsicos \u2014 escrita bytes/s": 1,
+    "Discos f\u00edsicos \u2014 tempo ocupado %": 1,
+    "Rede f\u00edsica \u2014 recep\u00e7\u00e3o bytes/s": 2,
+    "Rede f\u00edsica \u2014 transmiss\u00e3o bytes/s": 2,
+    "Rede f\u00edsica \u2014 erros e descartes/s": 2,
+    "Docker CPU em cores (1 = um n\u00facleo)": 8,
+    "Docker mem\u00f3ria usada (cache inativo exclu\u00eddo)": 8,
+    "Docker mem\u00f3ria / limite %": 8,
+    "Docker processos e threads": 8,
+    "Docker rede recebida/s (CLI arredondado)": 8,
+    "Docker rede transmitida/s (CLI arredondado)": 8,
+    "Docker leitura de disco/s (CLI arredondado)": 8,
+    "Docker escrita de disco/s (CLI arredondado)": 8,
+    "CPU por pod (cores)": 17,
+    "Mem\u00f3ria working set por pod": 17,
+    "CPU requests por pod": 17,
+    "CPU limits por pod": 17,
+    "CPU throttled periods %": 17,
+    "Mem\u00f3ria / limite por pod %": 17,
+    "Pods prontos": 20,
+    "Rein\u00edcios por pod": 20,
+    "\u00daltima termina\u00e7\u00e3o OOMKilled": 1,
+    "R\u00e9plicas dispon\u00edveis / desejadas": 15,
+    "Rede recebida por pod/s": 17,
+    "Rede transmitida por pod/s": 17,
+    "Leitura filesystem por pod/s": 17,
+    "Escrita filesystem por pod/s": 17,
+    "Scrape targets up": 7,
+    "Docker coleta bem-sucedida": 1,
+    "Idade da coleta do host (segundos)": 1,
+    "Dura\u00e7\u00e3o dos scrapes": 7
+  },
+  "result": "PASS"
+}

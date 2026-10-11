@@ -12,7 +12,7 @@ def quantity(text):
  if not m:raise ValueError(text)
  units={'B':1,'kB':1000,'MB':1000**2,'GB':1000**3,'TB':1000**4,'KiB':1024,'MiB':1024**2,'GiB':1024**3,'TiB':1024**4}
  return float(m[1])*units[m[2]]
-def allowed(name):return name==PROJECT+'-control-plane' or re.fullmatch(PROJECT+r'-(api|worker|scheduler|simulator|postgres|redis)-\d+',name) is not None
+def allowed(name):return name==PROJECT+'-control-plane' or re.fullmatch(PROJECT+r'-(api|http|worker|scheduler|simulator|postgres|redis)-\d+',name) is not None
 
 def collect():
  lines=[]
@@ -74,7 +74,7 @@ if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--bind');p.add_argument('--test',action='store_true');args=p.parse_args()
  if args.test:
   assert quantity('2.352MiB')==2.352*1024**2 and quantity('1.16GB')==1.16e9
-  assert allowed(PROJECT+'-api-1') and allowed(PROJECT+'-control-plane')
+  assert allowed(PROJECT+'-http-1') and allowed(PROJECT+'-api-1') and allowed(PROJECT+'-control-plane')
   assert not allowed('unrelated-api-1') and not allowed(PROJECT+'-api-run-random')
   body=collect();assert 'lab_host_cpu_seconds_total' in body and 'lab_host_docker_collection_success 1' in body
   print('PASS: units, project-only Docker selection and actual collection')

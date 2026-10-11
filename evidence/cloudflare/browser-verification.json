@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-11T20:25:54.025050+00:00",
+  "method": "Chrome local browser extension, read-only visible UI",
+  "hostname": "lrl-grafana.octavarium.com.br",
+  "account_dashboard_authenticated": true,
+  "tunnel_name": "laravel-reliability-lab",
+  "tunnel_status": "Healthy",
+  "replicas": 1,
+  "connector_version": "2026.10.0",
+  "published_application_routes": 1,
+  "access_application": "lrl-grafana",
+  "access_policy": "Local tunnel access email",
+  "action": "Allow",
+  "include_selector": "Emails",
+  "configured_identity_matches_direct_user_request": true,
+  "personal_identity": "Excluded from Git; expected identity stored only in ignored private runtime file",
+  "external_grafana_authenticated": true,
+  "dashboard": "reliability-lab",
+  "load_series_visible": true,
+  "refresh_seconds": 5,
+  "remote_changes_made": false,
+  "limits": "Infrastructure dashboard external browser rendering, disallowed-identity attempts and full panel query audit over Cloudflare not independently executed."
+}

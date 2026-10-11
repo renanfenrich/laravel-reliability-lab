@@ -1,4 +1,4 @@
-# Laravel reliability lab — G1
+# Laravel reliability lab
 
 A local portfolio lab for durable asynchronous reports, Kubernetes operations, observable outcomes and measured capacity. These experiments are **not production experience**. Short tests do **not** establish a rolling 30-day SLO.
 
@@ -15,7 +15,7 @@ make verify
 python3 scripts/experiments.py all
 ```
 
-These commands initialize ignored `.env` with random local bearer/database/Redis credentials. Terraform stores secrets in ignored local state/tfvars; keep permissions and files private. Never commit/copy them into evidence. No remote repository or cloud credential is needed. build creates app/simulator images locally, cluster-up bootstraps only laravel-reliability-lab, and Terraform deploys all resource objects after bootstrap. deploy is repeatable, runs migrations, and rolls out code changes using source checksums. ConfigMap checksums trigger observability rollout on configuration changes. API readiness checks PostgreSQL and Redis; liveness only establishes process response. Worker/scheduler liveness checks process presence, not progress; scheduler heartbeat and processing SLI detect stalls.
+These commands initialize ignored `.env` with random local bearer/database/Redis credentials. Terraform stores secrets in ignored local state/tfvars; keep permissions and files private. Never commit/copy them into evidence. No remote repository or cloud credential is needed. build creates app/simulator images locally, cluster-up bootstraps only laravel-reliability-lab, and Terraform deploys all resource objects after bootstrap. deploy is repeatable, runs migrations, and rolls out code changes using source checksums. ConfigMap checksums trigger observability rollout on configuration changes. G2 uses NGINX/PHP-FPM for HTTP and an internal gateway to reach both API replicas. API readiness checks PostgreSQL and Redis; liveness only establishes process response. Worker/scheduler liveness checks process presence, not progress; scheduler heartbeat and processing SLI detect stalls.
 
 Development only: `make build dev-up`, use API on `http://127.0.0.1:18080`, then `make dev-down`. Compose named volumes preserve data; tests use separate lab_test database, committed PostgreSQL migrations, never the lab database. Compose and Kubernetes stores are independent.
 
@@ -24,7 +24,7 @@ Development only: `make build dev-up`, use API on `http://127.0.0.1:18080`, then
 Use only synthetic subjects (`synthetic-example`). Read LAB_TOKEN from ignored .env into your local shell, without printing it. With the Kubernetes API loopback port-forward running:
 
 ```sh
-.tools/kubectl --kubeconfig .kubeconfig --context kind-laravel-reliability-lab -n lab port-forward --address=127.0.0.1 service/api 18081:8080
+.tools/kubectl --kubeconfig .kubeconfig --context kind-laravel-reliability-lab -n lab port-forward --address=127.0.0.1 service/gateway 18081:8080
 ```
 
 In another shell:
@@ -48,11 +48,11 @@ Port-forward with the same explicit kubeconfig/context: service/grafana13000:300
 
 ## Stop/resume and reset
 
-`make teardown` removes only dedicated Compose containers/network and named kind cluster. It preserves Compose volumes, .env, .runtime/postgres and archives Terraform state; observability emptyDir history is removed with cluster. Rebuild/recreate/deploy will reattach preserved PostgreSQL data; Redis loss is recovered from pending rows. This is not a validated backup mechanism. Persistent data on host is owned by PostgreSQL container UID; do not change it casually.
+`make teardown` removes only dedicated Compose containers/network and named kind cluster. It preserves Compose volumes, .env, .runtime/postgres and archives Terraform state; G2 retained observability data under .runtime/observability also survives cluster removal. Redis and temporary files remain ephemeral. Rebuild/recreate/deploy will reattach preserved PostgreSQL data; Redis loss is recovered from pending rows. This is not a validated backup mechanism. Persistent data on host is owned by PostgreSQL container UID; do not change it casually.
 
 Destructive separate reset, **only after explicit human authorization**: stop lab with make teardown, then `CONFIRM=DELETE-LAB-DATA make data-reset`. It removes only this project's Compose volumes and mounted PostgreSQL directory contents. It has not been executed as part of G1. For resume read [status](docs/status.md), [checklist](docs/goals/G1.md) and current Git status before repeating discovery.
 
-Architecture/decisions: docs/architecture.md, docs/decisions/. SLOs/budget: docs/slo.md and docs/error-budget-policy.md. Operator response: docs/runbooks/. Evidence, capacity and incident reports: docs/validation.md, docs/capacity.md, docs/incident.md, evidence/. Review boundary: READY FOR HUMAN REVIEW. renanfenrich owns Git flow; octavariumdigitalpartners is the mandatory reviewer. Initial repository publication and release 0.1.0 were explicitly authorized; subsequent pushes, publication, and merges require authorization.
+Architecture/decisions: docs/architecture.md, docs/decisions/. SLOs/budget: docs/slo.md and docs/error-budget-policy.md. Operator response: docs/runbooks/. Evidence, capacity and incident reports: docs/validation.md, docs/capacity.md, docs/incident.md, evidence/. Review boundary: READY FOR HUMAN REVIEW. renanfenrich owns Git flow and authorizes publication and merges; no separate reviewer account is required. Initial repository publication and release 0.1.0 were explicitly authorized; subsequent pushes, publication, and merges require authorization.
 
 ### LAN Grafana access that reconnects after a pod restart
 
@@ -78,6 +78,18 @@ Host metrics cover the entire workstation, including other processes. The kind D
 
 Prometheus → Alertmanager 0.34.1 → Mailpit 1.31.5 → `alerts@lab.test`. The inbox captures email locally with no external relay or forwarding. SMTP port 1025 and Alertmanager port 9093 remain internal to the cluster. The UI/API use Basic authentication with username `lab` and the local `LAB_TOKEN` as the password.
 
-`make mail-up` exposes the inbox at `127.0.0.1:18025`. On a trusted LAN, run `LAB_BIND_ADDRESS=192.168.1.9 make mail-up`, then open http://192.168.1.9:18025. `make mail-down` closes access; teardown also stops the transient service. Messages and Alertmanager state use emptyDir and are lost when pods or the cluster are recreated. The test exports messages and evidence. Use synthetic data only.
+`make mail-up` exposes the inbox at `127.0.0.1:18025`. On a trusted LAN, run `LAB_BIND_ADDRESS=192.168.1.9 make mail-up`, then open http://192.168.1.9:18025. `make mail-down` closes access; teardown also stops the transient service. G2 retains inbox and Alertmanager state in project-local PVCs across pod and dedicated cluster recreation. Retained local disk is not a backup or HA; tests still export messages and evidence. Use synthetic data only.
 
 `make rules` tests the rules. `make alert-test` tests firing and resolved notifications for all 15 alerts using explicit notification fixtures, followed by three real Prometheus scenarios. It temporarily pauses this lab's scheduler and host collector, records alerts, restores services in `finally`, and waits for the five-minute fault cohort to leave the window. Allow approximately seven minutes. Do not run it during other tests or terminate it with SIGKILL. Synthetic failures use `traffic=fault` and do not affect the normal SLO population. Notification fixtures use `mode=notification-fixture-ID` and do not prove actual SLO burn rates. See [the email alert runbook](docs/runbooks/alert-email.md).
+
+## Goals and G2 execution
+
+[G1](docs/goals/G1.md) is complete and published as 0.1.0. [G2](docs/goals/G2.md) adds sustained capacity and recovery validation locally; publication requires separate approval. See [current status](docs/status.md).
+
+The G2 runtime uses NGINX 1.30.5 and PHP 8.4.26 FPM. `make dev-up` exposes the Compose HTTP container on loopback port 18080. Kubernetes API/exporter pods use nonroot HTTP sidecars; the gateway Service exercises both API replicas. Port-forward `service/gateway 18081:8080` for application access. The `X-Lab-API-Pod` response header supports experiment distribution checks. Client measurements include admission/network/metric-write overhead omitted by the original middleware SLI.
+
+`make g2-runtime` validates distribution and the asynchronous journey. `make g2-backup` creates a private consistent logical dump, restores it only into a new isolated database, compares canonical fingerprints, and checks application readiness. `make g2-load` runs bounded three-minute rate steps and a ten-minute passing-rate confirmation. `make g2-interruption` kills both correlated worker processes during a separate load cohort and verifies leased-attempt recovery. See [load methodology](docs/g2/load-method.md) and [backup recovery](docs/g2/backup-recovery.md). Do not run experiments concurrently with other fault/capacity tests.
+
+G2 bootstrap mounts ignored `.runtime/observability` into only the named kind node. Six Retain PVCs preserve Prometheus, Loki, Grafana, Alertmanager, Mailpit, and Alloy data. Deploy imports pinned Linux/amd64 images through the host Docker cache and refuses nodes without the project bind mount. Clean checkout needs network once for pinned images; pulls/imports complete before rollout verification. Static PV sizes are not quotas; monitor free disk. Prometheus uses time and size retention, without claiming an actual 30-day history. `make teardown` preserves PostgreSQL, telemetry, and Compose volumes. No telemetry reset is performed by the separate database reset command. See [the storage runbook](docs/g2/storage-runbook.md) for the one-time G1 migration and retention checks.
+
+G2 measured results: [capacity](docs/g2/capacity.md), [recovery](docs/g2/recovery-report.md), and [validation](docs/g2/validation.md). The ten-minute 30 requests/s confirmation passed; the failed 60 requests/s step and generator limits remain documented. No rolling 30-day outcome is claimed.

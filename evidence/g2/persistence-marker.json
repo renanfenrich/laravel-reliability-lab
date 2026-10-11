@@ -1,0 +1,104 @@
+{
+  "timestamp": "2026-10-11T18:54:45Z",
+  "commit": "2ebfc06db0e4b3abb3a77ee21706ddba3adf9d86",
+  "start_epoch": 1791744883.3345375,
+  "historical_query_time": 1791744864.3260713,
+  "historical_up": [
+    {
+      "metric": {
+        "__name__": "up",
+        "instance": "laravel-reliability-lab-control-plane",
+        "job": "kubelet-cadvisor",
+        "node": "laravel-reliability-lab-control-plane"
+      },
+      "value": [
+        1791744864.326,
+        "1"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "up",
+        "instance": "kube-state-metrics:8080",
+        "job": "kube-state-metrics"
+      },
+      "value": [
+        1791744864.326,
+        "1"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "up",
+        "instance": "exporter:8080",
+        "job": "lab-exporter"
+      },
+      "value": [
+        1791744864.326,
+        "1"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "up",
+        "instance": "localhost:9090",
+        "job": "prometheus"
+      },
+      "value": [
+        1791744864.326,
+        "1"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "up",
+        "instance": "alertmanager:9093",
+        "job": "alertmanager"
+      },
+      "value": [
+        1791744864.326,
+        "1"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "up",
+        "instance": "mailpit:9090",
+        "job": "mailpit"
+      },
+      "value": [
+        1791744864.326,
+        "1"
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "up",
+        "instance": "lab-host-metrics:19100",
+        "job": "lab-host-docker"
+      },
+      "value": [
+        1791744864.326,
+        "1"
+      ]
+    }
+  ],
+  "report_id": "d0b2f5f8-7f6d-4c1d-883d-5958459d9cdd",
+  "completed_result": {
+    "id": "d0b2f5f8-7f6d-4c1d-883d-5958459d9cdd",
+    "state": "completed",
+    "attempts": 1,
+    "result": {
+      "checksum": "e398303ce8705692bca9723e6370b47a59a96b904687b67b9a220ee4834c7fc0"
+    },
+    "error": null,
+    "deadline_met": null,
+    "overdue": false
+  },
+  "mail_id": "2peT6kB6ToNeI7eDy6zZfw",
+  "mail_subject": "[FIRING][info] G2PersistenceMarker notification-fixture",
+  "inbox_initially_empty": true,
+  "grafana_annotation_id": 1,
+  "log_lines": 2,
+  "purpose": "Markers recorded before telemetry migration; check same historical outcomes after pod/cluster recreation."
+}

@@ -1,0 +1,13 @@
+{
+  "start": "2026-10-11T19:34:21Z",
+  "end": "2026-10-11T19:34:23Z",
+  "commit": "739bcf0fbdda655f23a339f5a4e9aff6fd4fbb62",
+  "gateway": "gateway -> API ClusterIP -> two NGINX/FPM pods",
+  "serving_pods": {
+    "api-6999769bbf-bqb2z": 39,
+    "api-6999769bbf-f7cbr": 41
+  },
+  "report_id": "18f98dc7-ef35-487d-a8a5-75d63d8172d2",
+  "database_result": "completed|1|092a361c907d8c81d3b1458c5a7615e4bff353a83d2082572572a852bf0b56f0",
+  "result": "PASS"
+}

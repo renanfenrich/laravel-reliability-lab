@@ -12,6 +12,10 @@ jobs:
           persist-credentials: false
       - name: Build pinned application and simulator images
         run: make build
+      - name: Restricted HTTP runtime configuration
+        run: |
+          docker run --rm --entrypoint php-fpm laravel-reliability-app:g2 -t
+          docker run --rm --user 1000:1000 --read-only --tmpfs /tmp:uid=1000,gid=1000 --entrypoint nginx -v "$PWD/runtime/nginx-api.conf:/etc/lab-nginx/nginx.conf:ro" nginx:1.30.5-alpine -t -c /etc/lab-nginx/nginx.conf
       - name: Application tests against PostgreSQL and Redis
         run: make test
       - name: Local secret and image context boundaries

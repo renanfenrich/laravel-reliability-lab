@@ -2,7 +2,7 @@
 
 Scope: local asynchronous Laravel report service, dedicated Compose project and kind cluster `laravel-reliability-lab`. No frontend, cloud, AWS, billing, tenancy, AI or remote infrastructure deployment. Pushes/publication require explicit human authorization. Change only this repository and its dedicated resources. Never use an implicit Kubernetes context.
 
-renanfenrich owns development and Git flow; octavariumdigitalpartners is mandatory reviewer/approver. Stop at READY FOR HUMAN REVIEW. No merge without that approval. Conventional Commits per independently validated phase.
+renanfenrich owns development and Git flow. No separate reviewer account is required for this project. Stop at READY FOR HUMAN REVIEW unless the owner explicitly authorizes publication or merge; verify final-head CI before an authorized merge. Conventional Commits per independently validated phase.
 
 No secrets or personal data in Git. Synthetic inputs only. Generate local credentials into ignored `.env` and Terraform secret inputs. Never print them in evidence.
 
@@ -19,3 +19,11 @@ Local alert email: make rules, make alert-test, make mail-up/mail-down. Mailpit 
 Release authorization: on 2026-10-11 the user approved G1 and explicitly requested a public repository under renanfenrich plus release 0.1.0. This authorizes initial repository creation, initial pushes and v0.1.0 release publication only. No merge or cloud deployment is authorized; subsequent changes retain the review gate.
 
 Documentation language: use US English (en-US) for all new or updated repository documentation. Preserve commands, identifiers, measured values, evidence provenance, and explicit validation limits. Do not translate or rewrite historical raw logs to make them appear newly validated.
+
+G2 authorization: define and execute docs/goals/G2.md locally on feat/g2-capacity-recovery. Preserve G1 evidence. Scope includes a supported HTTP runtime, service-wide local load tests, simultaneous worker interruption, private logical backup restored into a fresh isolated DB, and retained observability storage. Controlled recreation of only the named kind cluster is allowed after PostgreSQL backup and telemetry export; no live DB overwrite/data-reset. Never dump secrets or commit private backups. Resume G2 from docs/status.md; stop READY FOR HUMAN REVIEW without push/merge/publication.
+
+External-access authorization: on 2026-10-11 the user requested Cloudflare Tunnel access to this project. This narrowly supersedes the local-only boundary for a project-specific tunnel and its access policy; it does not authorize AWS, public databases, external SMTP, unrelated account resources, or Git publication. Confirm the hostname, intended services, and authorized identities before publishing a named route. Keep tunnel credentials ignored and private. Preserve the G2 baseline experiment without external traffic until measurement ends.
+
+G2 publication authorization: on 2026-10-11 the user confirmed G2 completion and authorized publication and merge. Publish the completed G2 branch and open a ready PR under renanfenrich. The owner subsequently removed the separate reviewer requirement and explicitly authorized merging PR #2; check final-head CI before merging. The next request authorizes a G3 plan only, not G3 execution, deployment, or publication.
+
+Reviewer policy update (2026-10-11): the owner explicitly removed the separate-account reviewer requirement for this project. Earlier reviewer-gate statements are superseded. This does not authorize G3 implementation or publication.

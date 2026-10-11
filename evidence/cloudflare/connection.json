@@ -1,0 +1,16 @@
+{
+  "registered_connections": 4,
+  "credential_rejection_observed": false,
+  "public_response": "HTTP/2 302 ",
+  "redirect_host": "visual-metronome-app-pages.cloudflareaccess.com",
+  "redirect_path": "/cdn-cgi/access/login/lrl-grafana.octavarium.com.br",
+  "authenticated_external_dashboard": "Unexecuted; requires allowed user Access login",
+  "checked_at": "2026-10-11T20:08:23.897348+00:00",
+  "source_commit": "2889f7bb6073c079a7b331f551b4d771341ab015",
+  "hostname": "lrl-grafana.octavarium.com.br",
+  "tunnel_name": "laravel-reliability-lab",
+  "connector_version": "2026.10.0",
+  "credential_value": "Excluded from this evidence",
+  "local_service": "http://192.168.1.9:13000",
+  "service": "laravel-reliability-lab-tunnel.service"
+}
