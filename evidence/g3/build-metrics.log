@@ -1,0 +1,106 @@
+1.30.5-alpine: Pulling from library/nginx
+Digest: sha256:0985e772fb9f729e6fa0980da05fca5d9c468e870eed43071545afa9d2e27d94
+Status: Image is up to date for nginx:1.30.5-alpine
+docker.io/library/nginx:1.30.5-alpine
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 815B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/php:8.4.26-fpm-bookworm
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/composer:2.8.12
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 186B done
+#4 DONE 0.0s
+
+#5 [composer 1/1] FROM docker.io/library/composer:2.8.12@sha256:5248900ab8b5f7f880c2d62180e40960cd87f60149ec9a1abfd62ac72a02577c
+#5 resolve docker.io/library/composer:2.8.12@sha256:5248900ab8b5f7f880c2d62180e40960cd87f60149ec9a1abfd62ac72a02577c 0.0s done
+#5 DONE 0.0s
+
+#6 [stage-1  1/10] FROM docker.io/library/php:8.4.26-fpm-bookworm@sha256:6bfef8e416977aa41f48e3e42a40c1e08050d24e4a938c6edb421400bff24601
+#6 resolve docker.io/library/php:8.4.26-fpm-bookworm@sha256:6bfef8e416977aa41f48e3e42a40c1e08050d24e4a938c6edb421400bff24601 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 36.40kB done
+#7 DONE 0.0s
+
+#8 [stage-1  5/10] RUN rm /usr/local/etc/php-fpm.d/www.conf
+#8 CACHED
+
+#9 [stage-1  7/10] COPY composer.json composer.lock* ./
+#9 CACHED
+
+#10 [stage-1  4/10] COPY runtime/php-fpm.conf /usr/local/etc/php-fpm.conf
+#10 CACHED
+
+#11 [stage-1  3/10] COPY --from=composer /usr/bin/composer /usr/local/bin/composer
+#11 CACHED
+
+#12 [stage-1  6/10] WORKDIR /app
+#12 CACHED
+
+#13 [stage-1  2/10] RUN apt-get update && apt-get install -y --no-install-recommends libpq-dev libxml2-dev libonig-dev unzip && docker-php-ext-install -j4 pdo_pgsql pcntl mbstring dom xml xmlwriter && rm -rf /var/lib/apt/lists/*
+#13 CACHED
+
+#14 [stage-1  8/10] RUN composer install --no-scripts --no-interaction --prefer-dist
+#14 CACHED
+
+#15 [stage-1  9/10] COPY . .
+#15 DONE 0.0s
+
+#16 [stage-1 10/10] RUN mkdir -p storage/framework/cache storage/framework/sessions storage/framework/views storage/logs bootstrap/cache && chown -R 1000:1000 /app
+#16 DONE 9.6s
+
+#17 exporting to image
+#17 exporting layers
+#17 exporting layers 0.8s done
+#17 exporting manifest sha256:6fff3ce451190da49d386fa49451fdc816706ea200747d699d7de8c3ba9e6b53 done
+#17 exporting config sha256:adc10cd1319c6a5adc60f825d1c5e9f882f33bd8fde01ebb982441b6b90fafbb done
+#17 exporting attestation manifest sha256:9412c24042bf6aa0006a872bc96bef02a6884df5d17c9bfe1bdabc095bcf9ac5 done
+#17 exporting manifest list sha256:8165ac3f6d74621cb70bd72105062718aef9dfab280bf832904770448d142abd done
+#17 naming to docker.io/library/laravel-reliability-app:g2 done
+#17 unpacking to docker.io/library/laravel-reliability-app:g2
+#17 unpacking to docker.io/library/laravel-reliability-app:g2 0.8s done
+#17 DONE 1.6s
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 159B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.13.7-slim-bookworm
+#2 DONE 0.7s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 31B done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.13.7-slim-bookworm@sha256:adafcc17694d715c905b4c7bebd96907a1fd5cf183395f0ebc4d3428bd22d92d
+#5 resolve docker.io/library/python:3.13.7-slim-bookworm@sha256:adafcc17694d715c905b4c7bebd96907a1fd5cf183395f0ebc4d3428bd22d92d done
+#5 DONE 0.0s
+
+#6 [2/3] WORKDIR /app
+#6 CACHED
+
+#7 [3/3] COPY server.py .
+#7 CACHED
+
+#8 exporting to image
+#8 exporting layers done
+#8 exporting manifest sha256:e1b039956ba1a629e92088465ab77c4e805b2fa5416008a9be6618a88514551a done
+#8 exporting config sha256:27227dbe753c9722c6f6a133b2112f4a9d6e5f9b6bdb6db78240a0fb7da53489 done
+#8 exporting attestation manifest sha256:e27f325c676ff7552426fff6371022a65d6f57b1323ff632d0b7b2e66b7ad1fc done
+#8 exporting manifest list sha256:d88b4c3f086cb68b7ae0aca935dda3e713c4a43b534fd28dc88da3d34bc431b3 done
+#8 naming to docker.io/library/laravel-reliability-simulator:g2 done
+#8 unpacking to docker.io/library/laravel-reliability-simulator:g2 done
+#8 DONE 0.0s

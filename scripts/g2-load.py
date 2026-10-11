@@ -3,8 +3,6 @@ from labclient import *
 from experiments import cohort,percentile
 from collections import Counter
 import concurrent.futures,uuid,urllib.parse,sys
-run='load-'+time.strftime('%Y%m%dT%H%M%SZ',time.gmtime())
-folder=ROOT/'evidence/g2'/run;folder.mkdir(parents=True)
 def write(name,data):(folder/name).write_text(json.dumps(data,indent=2)+'\n')
 def promquery(base,expr,start,end):
  path='/api/v1/query_range?query='+urllib.parse.quote(expr)+'&start='+str(start)+'&end='+str(end)+'&step=15'
@@ -41,33 +39,38 @@ def rate(base,rps,seconds):
  result['saturation_observed']=result['http_error_ratio']>.01 or result['client_latency_within_500ms_ratio']<.99 or timely is None or timely<.99
  result['both_replicas_used']=len(distribution)==2
  return result
-result={'start':utc(),'commit':sha(),'notes':'G2 local scheduled-arrival load through gateway and API Service, no upstream automatic retries. 180-second steps plus a 600-second confirmation; not production capacity/30-day compliance. Private runtime credentials excluded.','steps':[],'configuration':json.loads((ROOT/'infra/manifests.json').read_text()),'host':subprocess.check_output(['sh','-c','free -b; df -B1 .; lscpu'],text=True)}
-write('progress.json',result)
-with forward('gateway',8080) as base,forward('prometheus',9090) as prom:
- for rps in [10,30,60,90,120,180,240]:
-  print(utc(),'START',rps,'rps x180s',flush=True)
-  step=rate(base,rps,180);write('step-'+str(rps)+'.json',step)
-  result['steps'].append({k:v for k,v in step.items() if k!='samples'})
-  print(utc(),'STEP',rps,'p99',round(step['client_latency_p99_seconds'],4),'errors',step['http_error_ratio'],'timely',step['processing_timeliness_ratio'],'pods',step['serving_api_pods'],'generator_limited',step['generator_limited'],flush=True)
-  write('progress.json',result)
-  if step['saturation_observed'] or step['generator_limited']:break
- passing=[s for s in result['steps'] if not s['saturation_observed'] and not s['generator_limited'] and s['both_replicas_used']]
- assert passing,'No passing offered rate; preserve failure and investigate'
- selected=passing[-1]['offered_rate_rps']
- # Do not start a confirmation while a saturated cohort still has work.
- drain=time.monotonic()+180
- while time.monotonic()<drain:
-  if all(cohort(s['prefix'])['unfinished']==0 for s in result['steps']):break
-  time.sleep(3)
- assert all(cohort(s['prefix'])['unfinished']==0 for s in result['steps']),'Saturated backlog did not drain; confirmation unexecuted'
- print(utc(),'CONFIRM',selected,'rps x600s',flush=True)
- confirmation=rate(base,selected,600);write('confirmation.json',confirmation)
- result['confirmation']={k:v for k,v in confirmation.items() if k!='samples'}
- end=time.time();start=min(s['start_epoch'] for s in result['steps'])
- expressions={'cpu':'sum by(pod)(rate(container_cpu_usage_seconds_total{namespace="lab",container!=""}[1m]))','memory':'sum by(pod)(container_memory_working_set_bytes{namespace="lab",container!=""})','throttling':'sum by(pod)(rate(container_cpu_cfs_throttled_seconds_total{namespace="lab",container!=""}[1m]))','reports':'lab_reports','host_cpu':'sum(rate(lab_host_cpu_seconds_total{mode!="idle"}[1m]))','host_memory':'lab_host_memory_bytes{kind="MemAvailable"}'}
- result['resource_history']={name:promquery(prom,expr,start,end) for name,expr in expressions.items()}
- result['end']=utc();result['result']='PASS' if not confirmation['saturation_observed'] and not confirmation['generator_limited'] and confirmation['both_replicas_used'] else 'FAIL'
- result['saturation_observed']=any(s['saturation_observed'] and not s['generator_limited'] for s in result['steps'])
- write('result.json',result)
- assert result['result']=='PASS',result['confirmation']
-print('PASS: sustained capacity experiment',folder.relative_to(ROOT),flush=True)
+def main():
+ run='load-'+time.strftime('%Y%m%dT%H%M%SZ',time.gmtime())
+ global folder
+ folder=ROOT/'evidence/g2'/run;folder.mkdir(parents=True)
+ result={'start':utc(),'commit':sha(),'notes':'G2 local scheduled-arrival load through gateway and API Service, no upstream automatic retries. 180-second steps plus a 600-second confirmation; not production capacity/30-day compliance. Private runtime credentials excluded.','steps':[],'configuration':json.loads((ROOT/'infra/manifests.json').read_text()),'host':subprocess.check_output(['sh','-c','free -b; df -B1 .; lscpu'],text=True)}
+ write('progress.json',result)
+ with forward('gateway',8080) as base,forward('prometheus',9090) as prom:
+  for rps in [10,30,60,90,120,180,240]:
+   print(utc(),'START',rps,'rps x180s',flush=True)
+   step=rate(base,rps,180);write('step-'+str(rps)+'.json',step)
+   result['steps'].append({k:v for k,v in step.items() if k!='samples'})
+   print(utc(),'STEP',rps,'p99',round(step['client_latency_p99_seconds'],4),'errors',step['http_error_ratio'],'timely',step['processing_timeliness_ratio'],'pods',step['serving_api_pods'],'generator_limited',step['generator_limited'],flush=True)
+   write('progress.json',result)
+   if step['saturation_observed'] or step['generator_limited']:break
+  passing=[s for s in result['steps'] if not s['saturation_observed'] and not s['generator_limited'] and s['both_replicas_used']]
+  assert passing,'No passing offered rate; preserve failure and investigate'
+  selected=passing[-1]['offered_rate_rps']
+  # Do not start a confirmation while a saturated cohort still has work.
+  drain=time.monotonic()+180
+  while time.monotonic()<drain:
+   if all(cohort(s['prefix'])['unfinished']==0 for s in result['steps']):break
+   time.sleep(3)
+  assert all(cohort(s['prefix'])['unfinished']==0 for s in result['steps']),'Saturated backlog did not drain; confirmation unexecuted'
+  print(utc(),'CONFIRM',selected,'rps x600s',flush=True)
+  confirmation=rate(base,selected,600);write('confirmation.json',confirmation)
+  result['confirmation']={k:v for k,v in confirmation.items() if k!='samples'}
+  end=time.time();start=min(s['start_epoch'] for s in result['steps'])
+  expressions={'cpu':'sum by(pod)(rate(container_cpu_usage_seconds_total{namespace="lab",container!=""}[1m]))','memory':'sum by(pod)(container_memory_working_set_bytes{namespace="lab",container!=""})','throttling':'sum by(pod)(rate(container_cpu_cfs_throttled_seconds_total{namespace="lab",container!=""}[1m]))','reports':'lab_reports','host_cpu':'sum(rate(lab_host_cpu_seconds_total{mode!="idle"}[1m]))','host_memory':'lab_host_memory_bytes{kind="MemAvailable"}'}
+  result['resource_history']={name:promquery(prom,expr,start,end) for name,expr in expressions.items()}
+  result['end']=utc();result['result']='PASS' if not confirmation['saturation_observed'] and not confirmation['generator_limited'] and confirmation['both_replicas_used'] else 'FAIL'
+  result['saturation_observed']=any(s['saturation_observed'] and not s['generator_limited'] for s in result['steps'])
+  write('result.json',result)
+  assert result['result']=='PASS',result['confirmation']
+ print('PASS: sustained capacity experiment',folder.relative_to(ROOT),flush=True)
+if __name__=='__main__':main()

@@ -93,6 +93,21 @@
           ]
         }
       ]
+    },
+    {
+      "job_name": "api-fpm",
+      "metrics_path": "/fpm-metrics",
+      "scrape_timeout": "2s",
+      "dns_sd_configs": [
+        {
+          "names": [
+            "api-diagnostics.lab.svc.cluster.local"
+          ],
+          "type": "A",
+          "port": 8082,
+          "refresh_interval": "5s"
+        }
+      ]
     }
   ],
   "alerting": {

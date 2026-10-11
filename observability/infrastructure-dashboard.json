@@ -1,9 +1,9 @@
 {
   "uid": "lab-infrastructure",
-  "title": "Lab — Sistema, Docker e Kubernetes",
-  "description": "Recursos medidos do notebook e do projeto. Host inclui outros processos; kind inclui pods: nunca somar estas camadas. Docker CLI arredonda IO. Ausência de tráfego pode produzir séries vazias; consulte saúde de coleta. Não representa produção.",
+  "title": "Lab \u2014 Sistema, Docker e Kubernetes",
+  "description": "Recursos medidos do notebook e do projeto. Host inclui outros processos; kind inclui pods: nunca somar estas camadas. Docker CLI arredonda IO. Aus\u00eancia de tr\u00e1fego pode produzir s\u00e9ries vazias; consulte sa\u00fade de coleta. N\u00e3o representa produ\u00e7\u00e3o.",
   "schemaVersion": 39,
-  "version": 1,
+  "version": 2,
   "tags": [
     "local-lab",
     "infrastructure"
@@ -17,7 +17,7 @@
     {
       "id": 1,
       "type": "row",
-      "title": "Notebook inteiro — inclui outros processos; não atribuir tudo ao projeto",
+      "title": "Notebook inteiro \u2014 inclui outros processos; n\u00e3o atribuir tudo ao projeto",
       "collapsed": false,
       "gridPos": {
         "x": 0,
@@ -65,7 +65,7 @@
     },
     {
       "id": 3,
-      "title": "Memória host usada / disponível",
+      "title": "Mem\u00f3ria host usada / dispon\u00edvel",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -102,7 +102,7 @@
     },
     {
       "id": 4,
-      "title": "Memória disponível",
+      "title": "Mem\u00f3ria dispon\u00edvel",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -213,7 +213,7 @@
     },
     {
       "id": 7,
-      "title": "Filesystem do repositório — espaço disponível",
+      "title": "Filesystem do reposit\u00f3rio \u2014 espa\u00e7o dispon\u00edvel",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -250,7 +250,7 @@
     },
     {
       "id": 8,
-      "title": "Filesystem do repositório — uso %",
+      "title": "Filesystem do reposit\u00f3rio \u2014 uso %",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -287,7 +287,7 @@
     },
     {
       "id": 9,
-      "title": "Inodes disponíveis",
+      "title": "Inodes dispon\u00edveis",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -324,7 +324,7 @@
     },
     {
       "id": 10,
-      "title": "Discos físicos — leitura bytes/s",
+      "title": "Discos f\u00edsicos \u2014 leitura bytes/s",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -361,7 +361,7 @@
     },
     {
       "id": 11,
-      "title": "Discos físicos — escrita bytes/s",
+      "title": "Discos f\u00edsicos \u2014 escrita bytes/s",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -398,7 +398,7 @@
     },
     {
       "id": 12,
-      "title": "Discos físicos — tempo ocupado %",
+      "title": "Discos f\u00edsicos \u2014 tempo ocupado %",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -435,7 +435,7 @@
     },
     {
       "id": 13,
-      "title": "Rede física — recepção bytes/s",
+      "title": "Rede f\u00edsica \u2014 recep\u00e7\u00e3o bytes/s",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -472,7 +472,7 @@
     },
     {
       "id": 14,
-      "title": "Rede física — transmissão bytes/s",
+      "title": "Rede f\u00edsica \u2014 transmiss\u00e3o bytes/s",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -509,7 +509,7 @@
     },
     {
       "id": 15,
-      "title": "Rede física — erros e descartes/s",
+      "title": "Rede f\u00edsica \u2014 erros e descartes/s",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -547,7 +547,7 @@
     {
       "id": 16,
       "type": "row",
-      "title": "Docker do projeto — kind inclui Kubernetes; não somar novamente aos pods",
+      "title": "Docker do projeto \u2014 kind inclui Kubernetes; n\u00e3o somar novamente aos pods",
       "collapsed": false,
       "gridPos": {
         "x": 0,
@@ -558,7 +558,7 @@
     },
     {
       "id": 17,
-      "title": "Docker CPU em cores (1 = um núcleo)",
+      "title": "Docker CPU em cores (1 = um n\u00facleo)",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -595,7 +595,7 @@
     },
     {
       "id": 18,
-      "title": "Docker memória usada (cache inativo excluído)",
+      "title": "Docker mem\u00f3ria usada (cache inativo exclu\u00eddo)",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -632,7 +632,7 @@
     },
     {
       "id": 19,
-      "title": "Docker memória / limite %",
+      "title": "Docker mem\u00f3ria / limite %",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -855,7 +855,7 @@
     {
       "id": 25,
       "type": "row",
-      "title": "Kubernetes — somente namespace lab",
+      "title": "Kubernetes \u2014 somente namespace lab",
       "collapsed": false,
       "gridPos": {
         "x": 0,
@@ -903,7 +903,7 @@
     },
     {
       "id": 27,
-      "title": "Memória working set por pod",
+      "title": "Mem\u00f3ria working set por pod",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -1051,7 +1051,7 @@
     },
     {
       "id": 31,
-      "title": "Memória / limite por pod %",
+      "title": "Mem\u00f3ria / limite por pod %",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -1125,7 +1125,7 @@
     },
     {
       "id": 33,
-      "title": "Reinícios por pod",
+      "title": "Rein\u00edcios por pod",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -1162,7 +1162,7 @@
     },
     {
       "id": 34,
-      "title": "Última terminação OOMKilled",
+      "title": "\u00daltima termina\u00e7\u00e3o OOMKilled",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -1199,7 +1199,7 @@
     },
     {
       "id": 35,
-      "title": "Réplicas disponíveis / desejadas",
+      "title": "R\u00e9plicas dispon\u00edveis / desejadas",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -1385,7 +1385,7 @@
     {
       "id": 40,
       "type": "row",
-      "title": "Saúde da coleta — dados ausentes não significam uso zero",
+      "title": "Sa\u00fade da coleta \u2014 dados ausentes n\u00e3o significam uso zero",
       "collapsed": false,
       "gridPos": {
         "x": 0,
@@ -1507,7 +1507,7 @@
     },
     {
       "id": 44,
-      "title": "Duração dos scrapes",
+      "title": "Dura\u00e7\u00e3o dos scrapes",
       "type": "timeseries",
       "datasource": {
         "uid": "prometheus",
@@ -1539,6 +1539,192 @@
         },
         "tooltip": {
           "mode": "multi"
+        }
+      }
+    },
+    {
+      "id": 45,
+      "title": "FPM active children per API pool",
+      "type": "timeseries",
+      "datasource": {
+        "uid": "prometheus",
+        "type": "prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 164,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "phpfpm_active_processes{job=\"api-fpm\"}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 46,
+      "title": "FPM queued connections per API pool",
+      "type": "timeseries",
+      "datasource": {
+        "uid": "prometheus",
+        "type": "prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 164,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "phpfpm_listen_queue{job=\"api-fpm\"}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 47,
+      "title": "PostgreSQL active session waits by bounded operation",
+      "type": "timeseries",
+      "datasource": {
+        "uid": "prometheus",
+        "type": "prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 172,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum by(operation,wait_type)(lab_postgres_sessions)"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 48,
+      "title": "PostgreSQL transactions and block reads per second",
+      "type": "timeseries",
+      "datasource": {
+        "uid": "prometheus",
+        "type": "prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 172,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "rate(lab_postgres_stat_total[1m])"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 49,
+      "title": "Redis report queue depth",
+      "type": "timeseries",
+      "datasource": {
+        "uid": "prometheus",
+        "type": "prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 180,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "lab_redis_queue_jobs"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 50,
+      "title": "Scheduler heartbeat age",
+      "type": "timeseries",
+      "datasource": {
+        "uid": "prometheus",
+        "type": "prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 180,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "time() - lab_scheduler_heartbeat_seconds"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
         }
       }
     }

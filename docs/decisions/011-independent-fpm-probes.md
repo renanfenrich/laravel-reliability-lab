@@ -1,0 +1,13 @@
+# Independent FPM status probes and native diagnostics
+
+G2 overload episodes made the Laravel liveness route wait behind report requests in the same four-child FPM pool. Kubernetes restarted responsive but overloaded containers. G3's separate 60 requests/s baseline later passed; both results are retained, so rate alone does not explain every failure.
+
+Keep PHP 8.4.26, NGINX 1.30.5, four main children, CPU/memory limits, timeouts, acceptance and SLO populations unchanged. Use PHP's native pm.status_listen with its independent status pool. NGINX's unadvertised port 8082 exposes fixed /fpm-live (summary JSON), /fpm-metrics (OpenMetrics) and /http-live (NGINX response). Client query parameters cannot enable full per-request status. Port 8080 rejects /fpm-*; no host or tunnel mapping publishes diagnostics. FastCGI is never a host-published service.
+
+API/exporter startup and liveness use the status pool; NGINX probes use its own response. API readiness still traverses the main application pool and checks dependencies, so an unavailable/saturated API leaves serving endpoints without creating a liveness restart cascade. Native liveness does not prove queue progress, all main workers are useful, or dependency health. Existing readiness, scheduler heartbeat, deadline metrics and external HTTP monitoring provide those distinct signals.
+
+Terraform owns the headless api-diagnostics Service; it publishes the two API pod addresses even when unready, preserving diagnostic visibility. Prometheus DNS discovery scrapes both pools separately. Native pool gauges can be summed; rate each counter before aggregation because process replacement resets it. PostgreSQL-backed application outcome metrics remain scraped once and must never be summed across duplicate replicas. No new exporter binary or image is required.
+
+Primary references: [PHP configuration](https://www.php.net/manual/en/install.fpm.configuration.php), [PHP status formats](https://www.php.net/manual/en/fpm.status.php), [Kubernetes probe semantics](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/). Version choices are inherited pinned G2 dependencies; no dependency upgrade occurs.
+
+Validation: restricted configuration checks, a bounded four-child suspension with status response/readiness removal/no restart, and actual master-process termination/recovery. See docs/g3/validation.md and evidence/g3/. Pending checks are not established until their recorded execution completes. Rollback restores the G2 FPM/NGINX configuration and probe definitions through Terraform without resetting data; this restores the documented shared-pool limitation as well.

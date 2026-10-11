@@ -100,4 +100,18 @@ class ReportsTest extends TestCase {
         \Illuminate\Support\Facades\Redis::shouldReceive('ping')->andThrow(new \RuntimeException('synthetic redis outage'));
         $this->getJson('/api/ready')->assertStatus(503); $this->getJson('/api/live')->assertOk();
     }
+    public function test_histogram_is_cumulative_and_rolls_back_with_its_transaction(): void {
+        \App\Services\Metrics::observe('lab_test_seconds',0.25,['traffic'=>'normal'],[.1,.25,.5]);
+        \App\Services\Metrics::observe('lab_test_seconds',2,['traffic'=>'normal'],[.1,.25,.5]);
+        $samples=DB::table('metric_samples')->where('series','like','lab_test_seconds%')->pluck('value','series');
+        $this->assertArrayNotHasKey('lab_test_seconds_bucket{le="0.1",traffic="normal"}',$samples->all());
+        $this->assertEquals(1,$samples['lab_test_seconds_bucket{le="0.25",traffic="normal"}']);
+        $this->assertEquals(1,$samples['lab_test_seconds_bucket{le="0.5",traffic="normal"}']);
+        $this->assertEquals(2,$samples['lab_test_seconds_bucket{le="+Inf",traffic="normal"}']);
+        $this->assertEquals(2,$samples['lab_test_seconds_count{traffic="normal"}']);
+        $this->assertEquals(2.25,$samples['lab_test_seconds_sum{traffic="normal"}']);
+        try { DB::transaction(function() { \App\Services\Metrics::observe('lab_test_seconds',0.1,['traffic'=>'normal'],[.1,.25,.5]); throw new \RuntimeException('synthetic rollback'); }); }
+        catch (\RuntimeException $e) { $this->assertSame('synthetic rollback',$e->getMessage()); }
+        $this->assertEquals($samples->all(),DB::table('metric_samples')->where('series','like','lab_test_seconds%')->pluck('value','series')->all());
+    }
 }

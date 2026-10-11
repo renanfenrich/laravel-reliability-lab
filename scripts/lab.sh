@@ -109,6 +109,7 @@ PY
  verify)
   "$0" test
   "$0" rules
+  python3 scripts/g3-runtime-contract.py
   terraform -chdir=infra fmt -check; terraform -chdir=infra validate
   python3 scripts/check-manifests.py
   "$0" smoke
