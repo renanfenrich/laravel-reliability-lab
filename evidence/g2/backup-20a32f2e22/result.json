@@ -1,0 +1,49 @@
+{
+  "start": "2026-10-11T18:46:08Z",
+  "end": "2026-10-11T18:46:09Z",
+  "commit": "c80146891a2a6f5708ad699147cc60010e806d0b",
+  "snapshot": "00000018-000142A7-1",
+  "private_dump": ".runtime/backups/backup-20a32f2e22.dump",
+  "dump_bytes": 552092,
+  "dump_sha256": "f9689d6697b1672b4e5ac7c824bc0e37f9146bffd5ec7ee0934c9605f7325387",
+  "backup_seconds": 0.33189708698773757,
+  "restore_seconds": 0.6237665189837571,
+  "restored_database": "g2_restore_ce13935a7934",
+  "expected_fingerprints": {
+    "reports": {
+      "count": 7872,
+      "checksum": "0281943d16c45703b44fafcfc18d197f"
+    },
+    "metrics": {
+      "count": 127,
+      "checksum": "1a984c20d3fb0755d04dcae4673a3e14"
+    },
+    "migrations": {
+      "count": 2,
+      "checksum": "1225d3c0a2ff2c4ba3c24fb8077e8dbe"
+    }
+  },
+  "restored_fingerprints": {
+    "reports": {
+      "count": 7872,
+      "checksum": "0281943d16c45703b44fafcfc18d197f"
+    },
+    "metrics": {
+      "count": 127,
+      "checksum": "1a984c20d3fb0755d04dcae4673a3e14"
+    },
+    "migrations": {
+      "count": 2,
+      "checksum": "1225d3c0a2ff2c4ba3c24fb8077e8dbe"
+    }
+  },
+  "completed_result": {
+    "id": "b22fa29e-63e4-4abd-98ae-2d6d245ff812",
+    "state": "completed",
+    "attempts": 1,
+    "checksum": "347275e8601cc49cfde3a68af27439d426e9e7ac348726e98b4974a98383ae3f"
+  },
+  "application_readiness": "PASS",
+  "result": "PASS",
+  "limitations": "Logical snapshot; isolated DB on same PostgreSQL instance. No live DB overwrite, off-host backup, PITR or arbitrary disaster proof. Private dump and restored DB retained; metrics/report fingerprints include snapshot data only."
+}

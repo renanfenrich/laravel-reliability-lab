@@ -74,3 +74,5 @@ The user explicitly stated “Approved, push and merge” for the US English doc
 ## G2 active (2026-10-11)
 
 User authorized definition and local execution of G2. Branch: feat/g2-capacity-recovery; base 71327a4. Scope/checklist: docs/goals/G2.md. Initial host: 31 GiB RAM, 20 GiB available, 84 GiB free disk; existing dedicated lab workloads ready. No implementation or experiment acceptance claimed yet. Next: pin NGINX stable runtime, preserve CLI worker commands, add gateway and verify both API replicas before sustained tests. No push/merge/publication authorized for G2. No tool blocker observed.
+
+G2 E passed before runtime migration: evidence/g2/backup-20a32f2e22 contains a consistent snapshot restored to a fresh isolated database, matching report/metric/migration checksums and application readiness. Private dump is ignored and retained. No live overwrite. A/B runtime build and gateway implementation are in progress; acceptance remains unexecuted.
