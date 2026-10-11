@@ -1,6 +1,6 @@
 # G2 validation record
 
-G2 implementation and local acceptance are complete; Git flow stops at READY FOR HUMAN REVIEW. The separately requested Cloudflare named tunnel is pending account/input access. G1 evidence is preserved. PASS refers to each stated local check, never production experience or a 30-day SLO.
+G2 implementation and local acceptance are complete; Git flow stops at READY FOR HUMAN REVIEW. The separately requested Cloudflare named tunnel is connected; external authenticated Grafana, Healthy status, and the requested Access identity were verified read-only. G1 evidence is preserved. PASS refers to each stated local check, never production experience or a 30-day SLO.
 
 | Check | Observed result | Evidence |
 |---|---|---|
@@ -23,6 +23,8 @@ NGINX default temporary paths failed on read-only root; configure every temp dir
 
 ## Boundaries
 
-Same-host logical backup/retained telemetry is not off-host backup, PITR, HA, or arbitrary disaster recovery. Frozen filesystem migration copies are crash-consistent and verified with selected markers, not proof of completeness of every historical sample. Single-node Kubernetes, shared PostgreSQL metrics, short samples, host background activity, and local forwarding constrain capacity interpretation. External SMTP, distributed tracing, AWS, actual 30-day outcomes, and G2 publication remain excluded/unexecuted. The later Cloudflare Tunnel request is tracked separately in docs/status.md.
+Same-host logical backup/retained telemetry is not off-host backup, PITR, HA, or arbitrary disaster recovery. Frozen filesystem migration copies are crash-consistent and verified with selected markers, not proof of completeness of every historical sample. Single-node Kubernetes, shared PostgreSQL metrics, short samples, host background activity, and local forwarding constrain capacity interpretation. External SMTP, distributed tracing, AWS, and actual 30-day outcomes remain excluded/unexecuted. G2 publication was subsequently authorized; merge still requires the mandatory reviewer approval. The later Cloudflare Tunnel request is tracked separately in docs/status.md.
 
 Final verification: make verify passed (13 application tests/47 assertions, 13 promtool fixtures, Terraform format/validation, deterministic manifests, committed smoke journey, seven healthy Prometheus targets and 55 dashboard queries). Dedicated runtime distribution and post-capacity retention were rechecked. Local secret exclusion and restricted container configuration were checked separately. See evidence/g2/checks/. Hosted CI did not run for G2.
+
+Publication preparation: the outgoing branch history was scanned for the actual application/database/Redis/tunnel credentials and private requested identity. No private values were included in publication evidence. Hosted CI and human approval are recorded separately once observed; do not treat an open PR as a passed workflow or approved review.
