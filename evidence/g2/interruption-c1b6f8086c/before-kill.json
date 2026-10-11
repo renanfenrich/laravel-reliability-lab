@@ -1,0 +1,40 @@
+{
+  "start": "2026-10-11T19:06:26Z",
+  "commit": "254f936503db97ffc1362e1e54b3d9ef80a99df1",
+  "ids": [
+    "856ad75f-765d-49a8-ae5c-89716d81493a",
+    "2fccd375-ca14-4e43-aa27-f7afde874658"
+  ],
+  "victims": {
+    "2fccd375-ca14-4e43-aa27-f7afde874658": {
+      "pod": "worker-6467fcf4b4-cfmb5",
+      "container": "7b70f434b73de84f063dfdbb3b848b72c106a9fbf02f2e7db0623e6778a20ef4",
+      "node_pid": 12687,
+      "before_log": "  2026-10-11 19:04:06 App\\Jobs\\ProcessReport ......................... RUNNING\n{\"message\":\"report.processing\",\"context\":{\"report_id\":\"f61329ce-55a0-41f6-8ef9-d9ee96ffd312\",\"request_id\":\"6beadbc0-2457-44d4-80e6-c3d96e1be526\",\"attempt\":1},\"level\":200,\"level_name\":\"INFO\",\"channel\":\"local\",\"datetime\":\"2026-10-11T19:04:06.962744+00:00\",\"extra\":{}}\n{\"message\":\"report.completed\",\"context\":{\"report_id\":\"f61329ce-55a0-41f6-8ef9-d9ee96ffd312\",\"request_id\":\"6beadbc0-2457-44d4-80e6-c3d96e1be526\",\"attempt\":1,\"error\":null},\"level\":200,\"level_name\":\"INFO\",\"channel\":\"local\",\"datetime\":\"2026-10-11T19:04:07.014104+00:00\",\"extra\":{}}\n  2026-10-11 19:04:07 App\\Jobs\\ProcessReport .................... 70.03ms DONE\n  2026-10-11 19:06:23 App\\Jobs\\ProcessReport ......................... RUNNING\n{\"message\":\"report.processing\",\"context\":{\"report_id\":\"d090cdfc-8dc1-4997-a5c3-710bedee68e2\",\"request_id\":\"36de9eef-bc4e-4537-9b9e-04b1ddd004d8\",\"attempt\":1},\"level\":200,\"level_name\":\"INFO\",\"channel\":\"local\",\"datetime\":\"2026-10-11T19:06:23.942913+00:00\",\"extra\":{}}\n{\"message\":\"report.completed\",\"context\":{\"report_id\":\"d090cdfc-8dc1-4997-a5c3-710bedee68e2\",\"request_id\":\"36de9eef-bc4e-4537-9b9e-04b1ddd004d8\",\"attempt\":1,\"error\":null},\"level\":200,\"level_name\":\"INFO\",\"channel\":\"local\",\"datetime\":\"2026-10-11T19:06:23.981875+00:00\",\"extra\":{}}\n  2026-10-11 19:06:23 App\\Jobs\\ProcessReport .................... 44.26ms DONE\n  2026-10-11 19:06:26 App\\Jobs\\ProcessReport ......................... RUNNING\n{\"message\":\"report.processing\",\"context\":{\"report_id\":\"2fccd375-ca14-4e43-aa27-f7afde874658\",\"request_id\":\"4149deb5-ae78-4f43-b3b9-827f25f5b5eb\",\"attempt\":1},\"level\":200,\"level_name\":\"INFO\",\"channel\":\"local\",\"datetime\":\"2026-10-11T19:06:26.675279+00:00\",\"extra\":{}}\n",
+      "before_state": {
+        "id": "2fccd375-ca14-4e43-aa27-f7afde874658",
+        "state": "processing",
+        "attempts": 1,
+        "result": null,
+        "error": null,
+        "deadline_met": null,
+        "overdue": false
+      }
+    },
+    "856ad75f-765d-49a8-ae5c-89716d81493a": {
+      "pod": "worker-6467fcf4b4-xwzh6",
+      "container": "9d1f352ab4eede77a11a16ba8261862bd58ae07baf42913c674de2051957b57c",
+      "node_pid": 12868,
+      "before_log": "  2026-10-11 19:06:26 App\\Jobs\\ProcessReport ......................... RUNNING\n{\"message\":\"report.processing\",\"context\":{\"report_id\":\"856ad75f-765d-49a8-ae5c-89716d81493a\",\"request_id\":\"20caddc6-703a-4847-980a-2c1cc73efacc\",\"attempt\":1},\"level\":200,\"level_name\":\"INFO\",\"channel\":\"local\",\"datetime\":\"2026-10-11T19:06:26.710368+00:00\",\"extra\":{}}\n",
+      "before_state": {
+        "id": "856ad75f-765d-49a8-ae5c-89716d81493a",
+        "state": "processing",
+        "attempts": 1,
+        "result": null,
+        "error": null,
+        "deadline_met": null,
+        "overdue": false
+      }
+    }
+  }
+}

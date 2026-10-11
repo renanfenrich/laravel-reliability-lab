@@ -1,0 +1,4 @@
+Defaulted container "worker" out of: worker, storage-init (init)
+Defaulted container "worker" out of: worker, storage-init (init)
+2026-10-11T19:06:27Z KILLED both correlated worker processes
+PASS: both interrupted reports completed on attempt2 with one result under concurrent load evidence/g2/interruption-c1b6f8086c

@@ -35,6 +35,7 @@ case "${1:-}" in
   test "$(kind version | awk '{print $2}')" = v0.30.0
   python3 scripts/init-env.py
   mkdir -p .tools .runtime/postgres .runtime/observability
+  python3 -c 'from pathlib import Path; p=Path(".runtime/observability"); assert not p.is_symlink() and p.resolve()==Path.cwd()/".runtime/observability", "Unsafe observability path"'
   if ! test -x .tools/kubectl; then
    curl -fsSL https://dl.k8s.io/release/v1.34.0/bin/linux/amd64/kubectl -o .tools/kubectl
    curl -fsSL https://dl.k8s.io/release/v1.34.0/bin/linux/amd64/kubectl.sha256 -o .tools/kubectl.sha256

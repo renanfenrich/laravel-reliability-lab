@@ -48,6 +48,8 @@ if mode=='mark':
  print('PASS: historical metric/log/inbox/Grafana markers recorded')
 elif mode=='verify':
  m=json.loads(marker.read_text())
+ with forward('gateway',8080) as api:
+  code,report,_=request(api,'/api/reports/'+m['report_id'],traffic='load');assert code==200 and report['state']=='completed' and report['result']==m['completed_result']['result'],report
  with forward('prometheus',9090) as prom:
   actual=promquery(prom,m['historical_query_time']);assert sorted(actual,key=lambda x:json.dumps(x['metric'],sort_keys=True))==sorted(m['historical_up'],key=lambda x:json.dumps(x['metric'],sort_keys=True)),(actual,m['historical_up'])
  with forward('loki',3100) as loki:
@@ -59,6 +61,6 @@ elif mode=='verify':
   annotations=basic(graf,'/api/annotations?from='+str(int((m['start_epoch']-60)*1000))+'&to='+str(int(time.time()*1000))+'&tags=g2-persistence');assert any(a['id']==m['grafana_annotation_id'] for a in annotations),annotations
  pvcs=json.loads(kube('get','pvc','-o','json'))['items'];claims={p['metadata']['name']:p['status']['phase'] for p in pvcs}
  for name in ['prometheus','loki','grafana','alertmanager','mailpit','alloy']:assert claims.get(name+'-data')=='Bound',claims
- save('g2/persistence-'+sys.argv[2]+'.json',{'timestamp':utc(),'commit':sha(),'historical_up_preserved':True,'correlated_completed_log_preserved':True,'mail_message_preserved':m['mail_id'],'grafana_annotation_preserved':m['grafana_annotation_id'],'bound_claims':claims,'result':'PASS'})
+ save('g2/persistence-'+sys.argv[2]+'.json',{'timestamp':utc(),'commit':sha(),'historical_up_preserved':True,'committed_report_result_preserved':True,'correlated_completed_log_preserved':True,'mail_message_preserved':m['mail_id'],'grafana_annotation_preserved':m['grafana_annotation_id'],'bound_claims':claims,'result':'PASS'})
  print('PASS: historical Prometheus/Loki/Mailpit/Grafana markers and six retained claims',sys.argv[2])
 else:raise SystemExit('mark or verify STAGE required')
