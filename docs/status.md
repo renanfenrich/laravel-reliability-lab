@@ -1,6 +1,6 @@
 # G1 resume state — READY FOR HUMAN REVIEW
 
-Goal status: G1 complete and approved; release 0.1.0 published under explicit authorization. All phases A/B/C/D are complete. No PR, merge, or AWS/cloud resource was created. Hosted CI was in progress at the publication check; its final result is not established here. The documentation follow-up was reviewed and explicitly approved by the user for push and merge. renanfenrich owns Git flow; octavariumdigitalpartners is the mandatory reviewer/approver.
+Goal status: G1 complete and approved; release 0.1.0 published under explicit authorization. All phases A/B/C/D are complete. No PR, merge, or AWS/cloud resource was created. Hosted CI was in progress at the publication check; its final result is not established here. The documentation follow-up was reviewed and explicitly approved by the user for push and merge. renanfenrich owns Git flow. The former separate reviewer requirement was removed by the owner; see the latest status entry.
 
 ## Current resources
 
@@ -69,7 +69,7 @@ The user requested US English throughout repository documentation. Work is on `d
 Documentation validation: PASS for all 26 tracked Markdown files: no remaining Portuguese prose or flagged non-US spellings, all three local Markdown links resolve, fenced shell/diagram blocks unchanged, and Git whitespace checks pass. Runtime credential exclusion also passed. Application tests were not rerun because only documentation changed. Historical evidence files were not modified.
 
 ## Documentation integration authorization (2026-10-11)
-The user explicitly stated “Approved, push and merge” for the US English documentation changes. Integrate through a pull request under the personal account without inventing a separate octavariumdigitalpartners review. This direct authorization applies to this documentation change only; the normal reviewer requirement remains for subsequent work. GitHub publication/integration results are available in the linked pull request after execution.
+The user explicitly stated “Approved, push and merge” for the US English documentation changes. Integrate through a pull request under the personal account without inventing a separate the previously designated reviewer review. This direct authorization applies to this documentation change only; the normal reviewer requirement remains for subsequent work. GitHub publication/integration results are available in the linked pull request after execution.
 
 ## G2 active (2026-10-11)
 
@@ -121,4 +121,10 @@ make g2-load exited 0, evidence/g2/load-20261011T200936Z/, source 0b6e905, 20:09
 
 ## G2 publication and merge authorized; review gate retained (2026-10-11)
 
-The user confirmed G2 completion and explicitly authorized publication and merge, then requested a G3 plan. Local acceptance is complete: existing reliability suite, simulated rules, manifests, smoke/dashboards, worker interruption, isolated restores, persistent telemetry recreation and two ten-minute30 requests/s confirmations passed; failed60 requests/s observations remain preserved. Publish feat/g2-capacity-recovery as a ready PR under renanfenrich and request octavariumdigitalpartners review. Mandatory approval remains required by AGENTS.md; no automated review posted under a human account may substitute it. Hosted CI for the final PR head must be observed before merge. No formal release version/tag was requested in this follow-up. G3 planning is authorized; G3 implementation remains unauthorized.
+The user confirmed G2 completion and explicitly authorized publication and merge, then requested a G3 plan. Local acceptance is complete: existing reliability suite, simulated rules, manifests, smoke/dashboards, worker interruption, isolated restores, persistent telemetry recreation and two ten-minute30 requests/s confirmations passed; failed60 requests/s observations remain preserved. Publish feat/g2-capacity-recovery as a ready PR under renanfenrich and request the previously designated reviewer review. Mandatory approval remains required by AGENTS.md; no automated review posted under a human account may substitute it. Hosted CI for the final PR head must be observed before merge. No formal release version/tag was requested in this follow-up. G3 planning is authorized; G3 implementation remains unauthorized.
+
+## Separate reviewer requirement removed; G2 merge authorized (2026-10-11)
+
+The owner explicitly removed the separate reviewer account from this project's review policy and authorized merging PR #2 now. Earlier mandatory-review and collaborator-access blockers are superseded; no reviewer identity was impersonated and no collaborator permissions were changed. AGENTS.md, README, goal, validation and error-budget documentation now reflect owner-controlled Git authorization. Recheck final-head hosted CI after publishing this documentation-only policy update, then merge the existing G2 PR. Record the actual merge SHA/result after execution.
+
+The G3 plan remains in the local docs/g3-overload-resilience branch and is not part of this G2 PR. Preserve it and align it with merged main afterward. G3 implementation and publication remain unauthorized. The running lab resources and retained evidence require no change for this Git operation.

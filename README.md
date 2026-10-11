@@ -52,7 +52,7 @@ Port-forward with the same explicit kubeconfig/context: service/grafana13000:300
 
 Destructive separate reset, **only after explicit human authorization**: stop lab with make teardown, then `CONFIRM=DELETE-LAB-DATA make data-reset`. It removes only this project's Compose volumes and mounted PostgreSQL directory contents. It has not been executed as part of G1. For resume read [status](docs/status.md), [checklist](docs/goals/G1.md) and current Git status before repeating discovery.
 
-Architecture/decisions: docs/architecture.md, docs/decisions/. SLOs/budget: docs/slo.md and docs/error-budget-policy.md. Operator response: docs/runbooks/. Evidence, capacity and incident reports: docs/validation.md, docs/capacity.md, docs/incident.md, evidence/. Review boundary: READY FOR HUMAN REVIEW. renanfenrich owns Git flow; octavariumdigitalpartners is the mandatory reviewer. Initial repository publication and release 0.1.0 were explicitly authorized; subsequent pushes, publication, and merges require authorization.
+Architecture/decisions: docs/architecture.md, docs/decisions/. SLOs/budget: docs/slo.md and docs/error-budget-policy.md. Operator response: docs/runbooks/. Evidence, capacity and incident reports: docs/validation.md, docs/capacity.md, docs/incident.md, evidence/. Review boundary: READY FOR HUMAN REVIEW. renanfenrich owns Git flow and authorizes publication and merges; no separate reviewer account is required. Initial repository publication and release 0.1.0 were explicitly authorized; subsequent pushes, publication, and merges require authorization.
 
 ### LAN Grafana access that reconnects after a pod restart
 

@@ -2,7 +2,7 @@
 
 Scope: local asynchronous Laravel report service, dedicated Compose project and kind cluster `laravel-reliability-lab`. No frontend, cloud, AWS, billing, tenancy, AI or remote infrastructure deployment. Pushes/publication require explicit human authorization. Change only this repository and its dedicated resources. Never use an implicit Kubernetes context.
 
-renanfenrich owns development and Git flow; octavariumdigitalpartners is mandatory reviewer/approver. Stop at READY FOR HUMAN REVIEW. No merge without that approval. Conventional Commits per independently validated phase.
+renanfenrich owns development and Git flow. No separate reviewer account is required for this project. Stop at READY FOR HUMAN REVIEW unless the owner explicitly authorizes publication or merge; verify final-head CI before an authorized merge. Conventional Commits per independently validated phase.
 
 No secrets or personal data in Git. Synthetic inputs only. Generate local credentials into ignored `.env` and Terraform secret inputs. Never print them in evidence.
 
@@ -24,4 +24,6 @@ G2 authorization: define and execute docs/goals/G2.md locally on feat/g2-capacit
 
 External-access authorization: on 2026-10-11 the user requested Cloudflare Tunnel access to this project. This narrowly supersedes the local-only boundary for a project-specific tunnel and its access policy; it does not authorize AWS, public databases, external SMTP, unrelated account resources, or Git publication. Confirm the hostname, intended services, and authorized identities before publishing a named route. Keep tunnel credentials ignored and private. Preserve the G2 baseline experiment without external traffic until measurement ends.
 
-G2 publication authorization: on 2026-10-11 the user confirmed G2 completion and authorized publication and merge. Publish the completed G2 branch and open a ready PR under renanfenrich; request octavariumdigitalpartners review. Merge authorization does not fabricate or substitute the mandatory reviewer approval. Check actual review state and final-head CI before merging. The next request authorizes a G3 plan only, not G3 execution, deployment, or publication.
+G2 publication authorization: on 2026-10-11 the user confirmed G2 completion and authorized publication and merge. Publish the completed G2 branch and open a ready PR under renanfenrich. The owner subsequently removed the separate reviewer requirement and explicitly authorized merging PR #2; check final-head CI before merging. The next request authorizes a G3 plan only, not G3 execution, deployment, or publication.
+
+Reviewer policy update (2026-10-11): the owner explicitly removed the separate-account reviewer requirement for this project. Earlier reviewer-gate statements are superseded. This does not authorize G3 implementation or publication.
