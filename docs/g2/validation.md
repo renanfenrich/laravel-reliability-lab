@@ -1,6 +1,6 @@
 # G2 validation record
 
-G2 remains active until all checklist items pass or blockers are explicitly recorded. G1 evidence is preserved. PASS refers to each stated local check, never production experience or a 30-day SLO.
+G2 implementation and local acceptance are complete; Git flow stops at READY FOR HUMAN REVIEW. The separately requested Cloudflare named tunnel is pending account/input access. G1 evidence is preserved. PASS refers to each stated local check, never production experience or a 30-day SLO.
 
 | Check | Observed result | Evidence |
 |---|---|---|
@@ -11,10 +11,10 @@ G2 remains active until all checklist items pass or blockers are explicitly reco
 | Full cluster recreation | PASS: old Prometheus up-vector, correlated completed log, inbox message and Grafana annotation survived | evidence/g2/persistence-cluster-recreation.json |
 | Six telemetry pod replacements | PASS: new pod UIDs, all claims Bound, historical markers survived | evidence/g2/pod-recreation.json and persistence-pod-recreation.json |
 | Final retained committed result | PASS: previously accepted completed result remains identical | evidence/g2/persistence-final-retention.json |
-| Strict Kubernetes schema | PASS: 62 valid objects, zero errors/skips | executed kubeconform0.7.0 with Kubernetes1.34 schema |
-| Promtool | PASS: 13 existing short/long-window simulated fixtures | local g2-rules.log |
-| Simultaneous worker interruption | PASS: both processing attempt-one workers killed; both completed on attempt two with one result, completed counter delta2, background load passed | evidence/g2/interruption-c1b6f8086c/ |
-| Sustained capacity and ten-minute confirmation | Unexecuted | pending |
+| Strict Kubernetes schema | PASS: 62 valid objects, zero errors/skips | evidence/g2/checks/final-schema.log |
+| Promtool | PASS: 13 existing short/long-window simulated fixtures | evidence/g2/checks/g2-rules.log |
+| Simultaneous worker interruption | PASS: both processing attempt-one workers killed; both completed on attempt two with one result, completed counter delta 2, background load passed | evidence/g2/interruption-c1b6f8086c/ |
+| Sustained capacity and ten-minute confirmation | PASS: three-minute 10/30 steps, failed 60 step retained, ten-minute 30 requests/s confirmation with 18,000 on-time completions | evidence/g2/load-20261011T190929Z/ |
 | Hosted CI for G2 | Unexecuted; definition updated, no G2 push | .github/workflows/validate.yml |
 
 ## Failed attempts retained
@@ -23,4 +23,6 @@ NGINX default temporary paths failed on read-only root; configure every temp dir
 
 ## Boundaries
 
-Same-host logical backup/retained telemetry is not off-host backup, PITR, HA, or arbitrary disaster recovery. Frozen filesystem migration copies are crash-consistent and verified with selected markers, not proof of completeness of every historical sample. Single-node Kubernetes, shared PostgreSQL metrics, short samples, host background activity, and local forwarding constrain capacity interpretation. External email, distributed tracing, cloud operations, actual 30-day outcomes, and G2 publication remain excluded/unexecuted.
+Same-host logical backup/retained telemetry is not off-host backup, PITR, HA, or arbitrary disaster recovery. Frozen filesystem migration copies are crash-consistent and verified with selected markers, not proof of completeness of every historical sample. Single-node Kubernetes, shared PostgreSQL metrics, short samples, host background activity, and local forwarding constrain capacity interpretation. External SMTP, distributed tracing, AWS, actual 30-day outcomes, and G2 publication remain excluded/unexecuted. The later Cloudflare Tunnel request is tracked separately in docs/status.md.
+
+Final verification: make verify passed (13 application tests/47 assertions, 13 promtool fixtures, Terraform format/validation, deterministic manifests, committed smoke journey, seven healthy Prometheus targets and 55 dashboard queries). Dedicated runtime distribution and post-capacity retention were rechecked. Local secret exclusion and restricted container configuration were checked separately. See evidence/g2/checks/. Hosted CI did not run for G2.

@@ -1,0 +1,7 @@
+{
+  "version": "2026.10.0",
+  "official_release": "https://github.com/cloudflare/cloudflared/releases/tag/2026.10.0",
+  "artifact": "https://github.com/cloudflare/cloudflared/releases/download/2026.10.0/cloudflared-linux-amd64",
+  "sha256": "d33ff2d14475178d2012c2c56beba87389ac5ded27649519f198a7d3134a99db",
+  "state": "Installed project-locally and SHA256 verified; not started. Named hostname/services/identity and account login pending."
+}

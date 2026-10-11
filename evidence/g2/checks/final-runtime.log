@@ -1,0 +1,1 @@
+PASS: NGINX/FPM gateway reached both API replicas, authenticated durable journey and idempotent replay {'api-6999769bbf-bqb2z': 39, 'api-6999769bbf-f7cbr': 41}

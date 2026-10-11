@@ -64,7 +64,7 @@ with forward('gateway',8080) as base,forward('prometheus',9090) as prom:
  confirmation=rate(base,selected,600);write('confirmation.json',confirmation)
  result['confirmation']={k:v for k,v in confirmation.items() if k!='samples'}
  end=time.time();start=min(s['start_epoch'] for s in result['steps'])
- expressions={'cpu':'sum by(pod)(rate(container_cpu_usage_seconds_total{namespace="lab",container!=""}[1m]))','memory':'sum by(pod)(container_memory_working_set_bytes{namespace="lab",container!=""})','throttling':'sum by(pod)(rate(container_cpu_cfs_throttled_seconds_total{namespace="lab",container!=""}[1m]))','reports':'lab_reports_current','host_cpu':'sum(rate(lab_host_cpu_seconds_total{mode!="idle"}[1m]))','host_memory':'lab_host_memory_bytes{kind="MemAvailable"}'}
+ expressions={'cpu':'sum by(pod)(rate(container_cpu_usage_seconds_total{namespace="lab",container!=""}[1m]))','memory':'sum by(pod)(container_memory_working_set_bytes{namespace="lab",container!=""})','throttling':'sum by(pod)(rate(container_cpu_cfs_throttled_seconds_total{namespace="lab",container!=""}[1m]))','reports':'lab_reports','host_cpu':'sum(rate(lab_host_cpu_seconds_total{mode!="idle"}[1m]))','host_memory':'lab_host_memory_bytes{kind="MemAvailable"}'}
  result['resource_history']={name:promquery(prom,expr,start,end) for name,expr in expressions.items()}
  result['end']=utc();result['result']='PASS' if not confirmation['saturation_observed'] and not confirmation['generator_limited'] and confirmation['both_replicas_used'] else 'FAIL'
  result['saturation_observed']=any(s['saturation_observed'] and not s['generator_limited'] for s in result['steps'])

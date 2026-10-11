@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-10-11T19:16:52Z",
+  "commit": "739bcf0fbdda655f23a339f5a4e9aff6fd4fbb62",
+  "report_id": "d090cdfc-8dc1-4997-a5c3-710bedee68e2",
+  "lines": [
+    "{\"message\":\"report.accepted\",\"context\":{\"report_id\":\"d090cdfc-8dc1-4997-a5c3-710bedee68e2\",\"request_id\":\"36de9eef-bc4e-4537-9b9e-04b1ddd004d8\",\"traffic\":\"normal\",\"duplicate\":false},\"level\":200,\"level_name\":\"INFO\",\"channel\":\"local\",\"datetime\":\"2026-10-11T19:06:23.819705+00:00\",\"extra\":{}}\n",
+    "{\"message\":\"report.accepted\",\"context\":{\"report_id\":\"d090cdfc-8dc1-4997-a5c3-710bedee68e2\",\"request_id\":\"3df16d53-1a15-4f1a-8ab9-149a1a5de4ff\",\"traffic\":\"normal\",\"duplicate\":true},\"level\":200,\"level_name\":\"INFO\",\"channel\":\"local\",\"datetime\":\"2026-10-11T19:06:23.740356+00:00\",\"extra\":{}}\n",
+    "{\"message\":\"report.accepted\",\"context\":{\"report_id\":\"d090cdfc-8dc1-4997-a5c3-710bedee68e2\",\"request_id\":\"1bf091b7-ab61-4006-9c49-ef10ca2f1c07\",\"traffic\":\"normal\",\"duplicate\":true},\"level\":200,\"level_name\":\"INFO\",\"channel\":\"local\",\"datetime\":\"2026-10-11T19:06:23.739545+00:00\",\"extra\":{}}\n",
+    "{\"message\":\"report.accepted\",\"context\":{\"report_id\":\"d090cdfc-8dc1-4997-a5c3-710bedee68e2\",\"request_id\":\"f7a20023-4529-4ca8-bd39-7be89bd32561\",\"traffic\":\"normal\",\"duplicate\":true},\"level\":200,\"level_name\":\"INFO\",\"channel\":\"local\",\"datetime\":\"2026-10-11T19:06:23.739545+00:00\",\"extra\":{}}\n",
+    "{\"message\":\"report.accepted\",\"context\":{\"report_id\":\"d090cdfc-8dc1-4997-a5c3-710bedee68e2\",\"request_id\":\"5cb81247-416b-436d-8912-1b9316d951b2\",\"traffic\":\"normal\",\"duplicate\":true},\"level\":200,\"level_name\":\"INFO\",\"channel\":\"local\",\"datetime\":\"2026-10-11T19:06:23.763812+00:00\",\"extra\":{}}\n",
+    "{\"message\":\"report.accepted\",\"context\":{\"report_id\":\"d090cdfc-8dc1-4997-a5c3-710bedee68e2\",\"request_id\":\"e1e1dc1b-5081-4924-bf1d-fd0f615a66e8\",\"traffic\":\"normal\",\"duplicate\":true},\"level\":200,\"level_name\":\"INFO\",\"channel\":\"local\",\"datetime\":\"2026-10-11T19:06:23.763526+00:00\",\"extra\":{}}\n",
+    "{\"message\":\"report.accepted\",\"context\":{\"report_id\":\"d090cdfc-8dc1-4997-a5c3-710bedee68e2\",\"request_id\":\"805d3eaa-a48e-4244-89fd-129e42292294\",\"traffic\":\"normal\",\"duplicate\":true},\"level\":200,\"level_name\":\"INFO\",\"channel\":\"local\",\"datetime\":\"2026-10-11T19:06:23.762498+00:00\",\"extra\":{}}\n",
+    "{\"message\":\"report.accepted\",\"context\":{\"report_id\":\"d090cdfc-8dc1-4997-a5c3-710bedee68e2\",\"request_id\":\"b73b4fff-8703-47da-8f13-a4428bb1934e\",\"traffic\":\"normal\",\"duplicate\":true},\"level\":200,\"level_name\":\"INFO\",\"channel\":\"local\",\"datetime\":\"2026-10-11T19:06:23.761938+00:00\",\"extra\":{}}\n"
+  ],
+  "result": "PASS"
+}

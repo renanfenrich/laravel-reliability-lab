@@ -1,0 +1,30 @@
+{
+  "laravel-reliability-app:g2": {
+    "id": "sha256:e84bf8a49c2fdbc5116afc5e859e637163c1333dee01b4f741d70484a8f5e644",
+    "repo_digests": [
+      "laravel-reliability-app@sha256:e84bf8a49c2fdbc5116afc5e859e637163c1333dee01b4f741d70484a8f5e644"
+    ],
+    "created": "2026-10-11T15:46:59.959193018-03:00"
+  },
+  "laravel-reliability-simulator:g2": {
+    "id": "sha256:b39e21a1f976121ac7a8772ea4fa3571053393276ce1b91248344f28fa2697ba",
+    "repo_digests": [
+      "laravel-reliability-simulator@sha256:b39e21a1f976121ac7a8772ea4fa3571053393276ce1b91248344f28fa2697ba"
+    ],
+    "created": "2026-10-09T16:48:39.866878696-03:00"
+  },
+  "nginx:1.30.5-alpine": {
+    "id": "sha256:0985e772fb9f729e6fa0980da05fca5d9c468e870eed43071545afa9d2e27d94",
+    "repo_digests": [
+      "nginx@sha256:0985e772fb9f729e6fa0980da05fca5d9c468e870eed43071545afa9d2e27d94"
+    ],
+    "created": "2026-09-22T22:10:35.538281979Z"
+  },
+  "php:8.4.26-fpm-bookworm": {
+    "id": "sha256:6bfef8e416977aa41f48e3e42a40c1e08050d24e4a938c6edb421400bff24601",
+    "repo_digests": [
+      "php@sha256:6bfef8e416977aa41f48e3e42a40c1e08050d24e4a938c6edb421400bff24601"
+    ],
+    "created": "2026-10-06T01:28:31.998802539Z"
+  }
+}
