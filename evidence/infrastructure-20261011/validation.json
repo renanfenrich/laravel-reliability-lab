@@ -62,5 +62,6 @@
     "Duração dos scrapes": 5
   },
   "limits": "No retroactive host history; Docker IO rounded; all-host totals include unrelated processes; kind includes Kubernetes pods.",
-  "verified_commit": "8e421be4cdd99752025bc9d1afb6df60c57de40a"
+  "verified_commit": "c54a895ad8091db25e14e4cbbf7e640d3faa3b6a",
+  "collector_restart": "Immediate check observed EOF/down during restart; subsequent scrape and full validation passed. See collector-restart-transient-failure.log."
 }
