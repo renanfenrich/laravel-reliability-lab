@@ -1,0 +1,3357 @@
+[
+  {
+    "utc": "2026-10-11T21:03:20Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:03:25Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:03:30Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:03:35Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:03:40Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:03:45Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:03:50Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:03:56Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:04:01Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:04:06Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:04:11Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:04:16Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:04:21Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:04:26Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:04:32Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:04:37Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:04:42Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:04:47Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:04:52Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:04:57Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:05:02Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:05:07Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:05:13Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.007
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:05:18Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:05:23Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:05:28Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:05:33Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:05:38Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:05:43Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:05:48Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:05:54Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:05:59Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:06:04Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:06:09Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:06:14Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:06:19Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:06:24Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:06:30Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:06:35Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:06:40Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:06:45Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:06:50Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:06:55Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:07:00Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:07:05Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:07:11Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:07:16Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:07:21Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:07:26Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:07:31Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:07:36Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:07:41Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:07:46Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:07:52Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:07:57Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:08:02Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:08:07Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:08:12Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:08:17Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.008
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:08:22Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.006
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:08:27Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.006
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:08:33Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 3,
+        "max_transaction_seconds": 0.005
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:08:38Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:08:43Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:08:48Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:08:53Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:08:58Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.241
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:09:03Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:09:08Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:09:13Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:09:19Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:09:24Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:09:29Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:09:34Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:09:39Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:09:44Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:09:49Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:09:55Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:10:00Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.044
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:10:05Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.05
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:10:10Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:10:15Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:10:20Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:10:25Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:10:30Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:10:35Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:10:41Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:10:46Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:10:51Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:10:56Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:11:01Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:11:06Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:11:11Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:11:17Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:11:22Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:11:27Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.037
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:11:32Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:11:37Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.026
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:11:42Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 2,
+        "max_transaction_seconds": 0.006
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:11:47Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.012
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:11:53Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "metrics",
+        "state": "idle in transaction",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.005
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.061
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:11:58Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.005
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.006
+      },
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.008
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 2,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "Timeout",
+        "wait_event": "VacuumDelay",
+        "sessions": 1,
+        "max_transaction_seconds": 0.104
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:12:03Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 2,
+        "max_transaction_seconds": 0.003
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:12:09Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.006
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 3,
+        "max_transaction_seconds": 0.02
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:12:14Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.019
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:12:20Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:12:25Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      },
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:12:30Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "Lock",
+        "wait_event": "transactionid",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:12:35Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "reports",
+        "state": "idle in transaction",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.014
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:12:40Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.091
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:12:45Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.163
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:12:50Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:12:55Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:13:01Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:13:06Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:13:11Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      },
+      {
+        "operation": "metrics",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.024
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:13:16Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:13:21Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.061
+      },
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:13:26Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:13:32Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 2,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:13:37Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:13:42Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:13:47Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:13:52Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:13:57Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 2,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 3,
+        "max_transaction_seconds": 0.087
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:14:03Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.062
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:14:08Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.011
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:14:14Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      },
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "Lock",
+        "wait_event": "transactionid",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      },
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:14:19Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "Lock",
+        "wait_event": "transactionid",
+        "sessions": 1,
+        "max_transaction_seconds": 0.007
+      },
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.042
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 2,
+        "max_transaction_seconds": 0.086
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:14:24Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "Lock",
+        "wait_event": "transactionid",
+        "sessions": 1,
+        "max_transaction_seconds": 0.007
+      },
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.007
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "Lock",
+        "wait_event": "transactionid",
+        "sessions": 2,
+        "max_transaction_seconds": 0.255
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 6,
+        "max_transaction_seconds": 1.047
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:14:29Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.005
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:14:35Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:14:40Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "Lock",
+        "wait_event": "transactionid",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:14:45Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:14:50Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      },
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:14:55Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:15:00Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:15:05Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:15:10Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:15:16Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:15:21Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:15:26Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:15:31Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      },
+      {
+        "operation": "reports",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:15:36Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:15:41Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:15:46Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.005
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:15:52Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:15:57Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:16:02Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:16:07Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:16:12Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.015
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:16:17Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.005
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 2,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:16:22Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 2,
+        "max_transaction_seconds": 0.005
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.009
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:16:27Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.014
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:16:33Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.008
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 3,
+        "max_transaction_seconds": 0.049
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:16:38Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.042
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 4,
+        "max_transaction_seconds": 0.088
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:16:43Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:16:49Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:16:54Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:16:59Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:17:04Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:17:09Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:17:14Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:17:19Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:17:25Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:17:30Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:17:35Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:17:40Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.006
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:17:45Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.013
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:17:50Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:17:55Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:18:00Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:18:06Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:18:11Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:18:16Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:18:21Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:18:26Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.008
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:18:31Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:18:36Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:18:41Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:18:47Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 2,
+        "max_transaction_seconds": 0.003
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:18:52Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:18:57Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:19:02Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:19:07Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:19:12Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:19:17Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.006
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:19:22Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:19:28Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.009
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.008
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:19:33Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IPC",
+        "wait_event": "BgworkerShutdown",
+        "sessions": 1,
+        "max_transaction_seconds": 0.009
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:19:38Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.036
+      },
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 3,
+        "max_transaction_seconds": 0.042
+      },
+      {
+        "operation": "reports",
+        "state": "idle in transaction",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.005
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:19:43Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 3,
+        "max_transaction_seconds": 0.014
+      },
+      {
+        "operation": "reports",
+        "state": "idle in transaction",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:19:48Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.031
+      },
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 2,
+        "max_transaction_seconds": 0.028
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 3,
+        "max_transaction_seconds": 0.034
+      },
+      {
+        "operation": "reports",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:19:54Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:19:59Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.681
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:20:04Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 2,
+        "max_transaction_seconds": 0.006
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:20:09Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:20:14Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:20:19Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:20:25Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:20:30Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:20:35Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:20:40Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:20:45Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:20:50Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:20:55Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.01
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:21:00Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:21:05Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:21:11Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:21:16Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:21:21Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:21:26Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:21:31Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:21:36Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:21:41Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:21:47Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:21:52Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:21:57Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:22:02Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:22:07Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:22:12Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.007
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:22:17Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 2,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:22:22Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.005
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:22:28Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IPC",
+        "wait_event": "BgworkerShutdown",
+        "sessions": 1,
+        "max_transaction_seconds": 0.009
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:22:33Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 2,
+        "max_transaction_seconds": 0.007
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IPC",
+        "wait_event": "BgworkerShutdown",
+        "sessions": 1,
+        "max_transaction_seconds": 0.055
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:22:38Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IPC",
+        "wait_event": "BgworkerShutdown",
+        "sessions": 1,
+        "max_transaction_seconds": 0.062
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:22:43Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.037
+      },
+      {
+        "operation": "metrics",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      },
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.021
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.038
+      },
+      {
+        "operation": "reports",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:22:49Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:22:54Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:22:59Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:23:04Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:23:09Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "idle in transaction",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:23:14Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.006
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:23:20Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:23:25Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:23:30Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      },
+      {
+        "operation": "reports",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:23:35Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 2,
+        "max_transaction_seconds": 0.003
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:23:40Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:23:45Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:23:50Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:23:55Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:24:00Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:24:06Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:24:11Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:24:16Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:24:21Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.033
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.007
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.028
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:24:26Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:24:31Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:24:36Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:24:41Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.006
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:24:47Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.005
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:24:52Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:24:57Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:25:02Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:25:07Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:25:12Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 3,
+        "max_transaction_seconds": 0.007
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:25:17Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.0
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.008
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:25:22Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.01
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:25:28Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.008
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:25:33Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.005
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 3,
+        "max_transaction_seconds": 0.014
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:25:38Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "Lock",
+        "wait_event": "transactionid",
+        "sessions": 1,
+        "max_transaction_seconds": 0.008
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 2,
+        "max_transaction_seconds": 0.01
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      },
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 3,
+        "max_transaction_seconds": 0.04
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:25:43Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:25:49Z",
+    "postgres": [
+      {
+        "operation": "metrics",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.002
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.004
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:25:54Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:25:59Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:26:04Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "idle in transaction",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:26:09Z",
+    "postgres": [
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "sessions": 1,
+        "max_transaction_seconds": 0.003
+      },
+      {
+        "operation": "other",
+        "state": "active",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "sessions": 1,
+        "max_transaction_seconds": 0.001
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:26:14Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:26:20Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:26:25Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:26:30Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:26:35Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:26:40Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:26:45Z",
+    "postgres": [
+      {
+        "operation": "reports",
+        "state": "active",
+        "wait_type": "running",
+        "wait_event": "none",
+        "sessions": 1,
+        "max_transaction_seconds": 0.01
+      }
+    ]
+  },
+  {
+    "utc": "2026-10-11T21:26:50Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:26:55Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:27:01Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:27:06Z",
+    "postgres": []
+  },
+  {
+    "utc": "2026-10-11T21:27:11Z",
+    "postgres": []
+  }
+]

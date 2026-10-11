@@ -27,6 +27,8 @@ try:
   assert '200' in get('/http-live')['status']
   assert get('/api/live',8080)['status']=='timeout','Application pool was not actually blocked'
   assert 'phpfpm_listen_queue' in get('/fpm-metrics')['body']
+  assert 'processes' not in json.loads(get('/fpm-live?full')['body']),'Full request details must stay unavailable'
+  assert 'phpfpm_listen_queue' in get('/fpm-metrics?full')['body'],'Client query must not replace fixed OpenMetrics format'
   assert '404' in get('/fpm-metrics?full',8080)['status']
  finally:docker('exec',FPM,'sh','-c','kill -CONT '+' '.join(map(str,pids)))
  print('PASS: native liveness/metrics independent of all four blocked application children; diagnostic path not public')

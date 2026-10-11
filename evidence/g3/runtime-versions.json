@@ -1,0 +1,320 @@
+{
+  "utc": "2026-10-11T21:03:50.563879+00:00",
+  "source_sha": "1fb4be9b01ac89ec27caa5604a1162775cd33117",
+  "pods": [
+    {
+      "name": "alertmanager-c9474ff4f-slgvf",
+      "source_annotations": {
+        "lab-config-checksum": "f26da9bd2d5fd8f2dd237771e05546212bb264f9e9ddc944595faa6164b8b217"
+      },
+      "images": [
+        {
+          "container": "alertmanager",
+          "image": "docker.io/prom/alertmanager:v0.34.1",
+          "image_id": "docker.io/prom/alertmanager@sha256:e9733bafb1bdef9b00e25a21f8f99dc26a22224bf16641ad754d1649f4c3357a"
+        }
+      ]
+    },
+    {
+      "name": "alloy-6d6fc9cf66-b8xtc",
+      "source_annotations": {
+        "lab-config-checksum": "939c171073c5989473e168ca34badba3dd70388fb3ce557b764662900f0b62bb"
+      },
+      "images": [
+        {
+          "container": "alloy",
+          "image": "docker.io/grafana/alloy:v1.20.1",
+          "image_id": "docker.io/grafana/alloy@sha256:2aa2099af76c0098d4af7a4d6e48f86cb66dc1a000222ad927a1c67c6542d13f"
+        }
+      ]
+    },
+    {
+      "name": "api-7b675ddfb-85htx",
+      "source_annotations": {
+        "lab-config-checksum": "d176ba5d54c064e86b7113dcb7d29388d60f95862631144da842057e4c6e9bb4",
+        "lab-source-checksum": "eccbb190653e9be4ea354c9f7eece485bd4b00fa3551ef12a338ea84f1fc2597"
+      },
+      "images": [
+        {
+          "container": "api",
+          "image": "docker.io/library/laravel-reliability-app:g2",
+          "image_id": "sha256:adc10cd1319c6a5adc60f825d1c5e9f882f33bd8fde01ebb982441b6b90fafbb"
+        },
+        {
+          "container": "http",
+          "image": "docker.io/library/nginx:1.30.5-alpine",
+          "image_id": "sha256:43d9d8c1f8968f09df8c1aa6c136ecc617e62d64fe4c0b24c97de4eb210bd973"
+        }
+      ]
+    },
+    {
+      "name": "api-7b675ddfb-st87r",
+      "source_annotations": {
+        "lab-config-checksum": "d176ba5d54c064e86b7113dcb7d29388d60f95862631144da842057e4c6e9bb4",
+        "lab-source-checksum": "eccbb190653e9be4ea354c9f7eece485bd4b00fa3551ef12a338ea84f1fc2597"
+      },
+      "images": [
+        {
+          "container": "api",
+          "image": "docker.io/library/laravel-reliability-app:g2",
+          "image_id": "sha256:adc10cd1319c6a5adc60f825d1c5e9f882f33bd8fde01ebb982441b6b90fafbb"
+        },
+        {
+          "container": "http",
+          "image": "docker.io/library/nginx:1.30.5-alpine",
+          "image_id": "sha256:43d9d8c1f8968f09df8c1aa6c136ecc617e62d64fe4c0b24c97de4eb210bd973"
+        }
+      ]
+    },
+    {
+      "name": "exporter-7cf67b46d5-4rdxf",
+      "source_annotations": {
+        "lab-config-checksum": "d176ba5d54c064e86b7113dcb7d29388d60f95862631144da842057e4c6e9bb4",
+        "lab-source-checksum": "eccbb190653e9be4ea354c9f7eece485bd4b00fa3551ef12a338ea84f1fc2597"
+      },
+      "images": [
+        {
+          "container": "exporter",
+          "image": "docker.io/library/laravel-reliability-app:g2",
+          "image_id": "sha256:adc10cd1319c6a5adc60f825d1c5e9f882f33bd8fde01ebb982441b6b90fafbb"
+        },
+        {
+          "container": "http",
+          "image": "docker.io/library/nginx:1.30.5-alpine",
+          "image_id": "sha256:43d9d8c1f8968f09df8c1aa6c136ecc617e62d64fe4c0b24c97de4eb210bd973"
+        }
+      ]
+    },
+    {
+      "name": "gateway-cd9dfc89d-zdmtz",
+      "source_annotations": {
+        "lab-config-checksum": "9b862047759a8eac01f8381aed40ebd8cfcf166fb8153c7082790aea9136b079"
+      },
+      "images": [
+        {
+          "container": "gateway",
+          "image": "docker.io/library/nginx:1.30.5-alpine",
+          "image_id": "sha256:43d9d8c1f8968f09df8c1aa6c136ecc617e62d64fe4c0b24c97de4eb210bd973"
+        }
+      ]
+    },
+    {
+      "name": "grafana-684677fb4-kw7j9",
+      "source_annotations": {
+        "lab-config-checksum": "46f13fd0ebacca3d08db88bbebf03dc4cb1ada6832047faff1787a063f70e9af"
+      },
+      "images": [
+        {
+          "container": "grafana",
+          "image": "docker.io/grafana/grafana:13.2.3",
+          "image_id": "docker.io/grafana/grafana@sha256:b28bae15e219c998fb0e0424ed724930cc61b1f61fb404d47c862f9a23f9e572"
+        }
+      ]
+    },
+    {
+      "name": "kube-state-metrics-7f6f6875d7-fpwwm",
+      "source_annotations": {},
+      "images": [
+        {
+          "container": "kube-state-metrics",
+          "image": "registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.20.0",
+          "image_id": "registry.k8s.io/kube-state-metrics/kube-state-metrics@sha256:42cfe3723a5f058171c627537fb57a3ea0f26e4380fa18555a95cb1a1b4cfc5b"
+        }
+      ]
+    },
+    {
+      "name": "loki-597488bd7d-hrbbn",
+      "source_annotations": {
+        "lab-config-checksum": "346bf60bb55c7a2d8f93a8e9ff94a9c93ff30297fca6b40098bea9c57321939d"
+      },
+      "images": [
+        {
+          "container": "loki",
+          "image": "docker.io/grafana/loki:3.7.8",
+          "image_id": "docker.io/grafana/loki@sha256:1107dd5274e0ada47e42472b7a7e71f3b2a2fe878878108f3e2f9e51528f0193"
+        }
+      ]
+    },
+    {
+      "name": "mailpit-55c5466dc-r8n2d",
+      "source_annotations": {},
+      "images": [
+        {
+          "container": "mailpit",
+          "image": "docker.io/axllent/mailpit:v1.31.5",
+          "image_id": "docker.io/axllent/mailpit@sha256:94f6b70c1436defae6799d9ac7ff0eeff9540465b842026d5cdb018f1c0234ea"
+        }
+      ]
+    },
+    {
+      "name": "postgres-5f7965d6c4-rwngq",
+      "source_annotations": {},
+      "images": [
+        {
+          "container": "postgres",
+          "image": "docker.io/library/postgres:18.0-bookworm",
+          "image_id": "docker.io/library/postgres@sha256:3f55f8895c4ed50603e2fbdfc72fffeeaba3173321fee5cb825bbbeb30d9d854"
+        }
+      ]
+    },
+    {
+      "name": "prometheus-5497f6dd5c-qqg5h",
+      "source_annotations": {
+        "lab-config-checksum": "7dacca6b273d4b537dc0058668cddb6da69bbae5d24d6adf6830f38dc929b189"
+      },
+      "images": [
+        {
+          "container": "prometheus",
+          "image": "docker.io/prom/prometheus:v3.15.0",
+          "image_id": "docker.io/prom/prometheus@sha256:efd719c99d83b060d9daefdcf00360461adf279f45ef5391f8d111892118753e"
+        }
+      ]
+    },
+    {
+      "name": "redis-587dcb4467-nmtb2",
+      "source_annotations": {},
+      "images": [
+        {
+          "container": "redis",
+          "image": "docker.io/library/redis:8.2.2-bookworm",
+          "image_id": "docker.io/library/redis@sha256:4521b581dbddea6e7d81f8fe95ede93f5648aaa66a9dacd581611bf6fe7527bd"
+        }
+      ]
+    },
+    {
+      "name": "scheduler-84978b7dcb-n5cw2",
+      "source_annotations": {
+        "lab-source-checksum": "eccbb190653e9be4ea354c9f7eece485bd4b00fa3551ef12a338ea84f1fc2597"
+      },
+      "images": [
+        {
+          "container": "scheduler",
+          "image": "docker.io/library/laravel-reliability-app:g2",
+          "image_id": "sha256:adc10cd1319c6a5adc60f825d1c5e9f882f33bd8fde01ebb982441b6b90fafbb"
+        }
+      ]
+    },
+    {
+      "name": "simulator-d4bb56bcd-cfxm2",
+      "source_annotations": {
+        "lab-source-checksum": "0cb06d498f26916fc58474ba50270b100d25946876681d24d52f6bb48314e000"
+      },
+      "images": [
+        {
+          "container": "simulator",
+          "image": "docker.io/library/laravel-reliability-simulator:g2",
+          "image_id": "sha256:27227dbe753c9722c6f6a133b2112f4a9d6e5f9b6bdb6db78240a0fb7da53489"
+        }
+      ]
+    },
+    {
+      "name": "worker-b7794db7b-5sdn4",
+      "source_annotations": {
+        "lab-source-checksum": "eccbb190653e9be4ea354c9f7eece485bd4b00fa3551ef12a338ea84f1fc2597"
+      },
+      "images": [
+        {
+          "container": "worker",
+          "image": "docker.io/library/laravel-reliability-app:g2",
+          "image_id": "sha256:adc10cd1319c6a5adc60f825d1c5e9f882f33bd8fde01ebb982441b6b90fafbb"
+        }
+      ]
+    },
+    {
+      "name": "worker-b7794db7b-nhcbn",
+      "source_annotations": {
+        "lab-source-checksum": "eccbb190653e9be4ea354c9f7eece485bd4b00fa3551ef12a338ea84f1fc2597"
+      },
+      "images": [
+        {
+          "container": "worker",
+          "image": "docker.io/library/laravel-reliability-app:g2",
+          "image_id": "sha256:adc10cd1319c6a5adc60f825d1c5e9f882f33bd8fde01ebb982441b6b90fafbb"
+        }
+      ]
+    }
+  ],
+  "dependencies": {
+    "brick/math": "1.0.0",
+    "carbonphp/carbon-doctrine-types": "3.2.1",
+    "dflydev/dot-access-data": "v3.0.3",
+    "doctrine/inflector": "2.1.0",
+    "doctrine/lexer": "3.0.3",
+    "dragonmantank/cron-expression": "v3.6.0",
+    "egulias/email-validator": "4.0.4",
+    "fruitcake/php-cors": "v1.4.0",
+    "graham-campbell/result-type": "v1.2.0",
+    "guzzlehttp/guzzle": "8.2.0",
+    "guzzlehttp/promises": "3.0.2",
+    "guzzlehttp/psr7": "3.1.0",
+    "guzzlehttp/uri-template": "v2.0.1",
+    "laravel/framework": "v13.34.0",
+    "laravel/prompts": "v0.3.25",
+    "laravel/serializable-closure": "v2.1.0",
+    "league/commonmark": "2.10.3",
+    "league/config": "v1.2.0",
+    "league/flysystem": "3.36.0",
+    "league/flysystem-local": "3.35.3",
+    "league/mime-type-detection": "1.17.0",
+    "league/uri": "7.8.1",
+    "league/uri-interfaces": "7.8.1",
+    "monolog/monolog": "3.12.1",
+    "nesbot/carbon": "3.14.2",
+    "nette/schema": "v1.3.6",
+    "nette/utils": "v4.1.5",
+    "nunomaduro/termwind": "v2.4.0",
+    "phpoption/phpoption": "1.10.0",
+    "predis/predis": "v3.2.0",
+    "psr/clock": "1.0.0",
+    "psr/container": "2.0.2",
+    "psr/event-dispatcher": "1.0.0",
+    "psr/http-client": "1.0.3",
+    "psr/http-factory": "1.1.0",
+    "psr/http-message": "2.0",
+    "psr/log": "3.0.2",
+    "psr/simple-cache": "3.0.0",
+    "ramsey/collection": "2.1.1",
+    "ramsey/uuid": "4.9.4",
+    "symfony/clock": "v8.1.0",
+    "symfony/console": "v8.1.8",
+    "symfony/css-selector": "v8.1.6",
+    "symfony/deprecation-contracts": "v3.7.1",
+    "symfony/error-handler": "v8.1.8",
+    "symfony/event-dispatcher": "v8.1.5",
+    "symfony/event-dispatcher-contracts": "v3.7.1",
+    "symfony/finder": "v8.1.8",
+    "symfony/http-foundation": "v8.1.8",
+    "symfony/http-kernel": "v8.1.8",
+    "symfony/mailer": "v8.1.7",
+    "symfony/mime": "v8.1.7",
+    "symfony/polyfill-ctype": "v1.37.0",
+    "symfony/polyfill-intl-grapheme": "v1.43.0",
+    "symfony/polyfill-intl-idn": "v1.43.0",
+    "symfony/polyfill-intl-normalizer": "v1.43.0",
+    "symfony/polyfill-mbstring": "v1.43.0",
+    "symfony/polyfill-php80": "v1.43.0",
+    "symfony/polyfill-php82": "v1.43.0",
+    "symfony/polyfill-php84": "v1.43.0",
+    "symfony/polyfill-php85": "v1.43.0",
+    "symfony/polyfill-php86": "v1.43.0",
+    "symfony/polyfill-uuid": "v1.43.0",
+    "symfony/process": "v8.1.7",
+    "symfony/routing": "v8.1.8",
+    "symfony/service-contracts": "v3.7.3",
+    "symfony/string": "v8.1.7",
+    "symfony/translation": "v8.1.5",
+    "symfony/translation-contracts": "v3.7.1",
+    "symfony/uid": "v8.1.8",
+    "symfony/var-dumper": "v8.1.7",
+    "tijsverkoyen/css-to-inline-styles": "v2.4.0",
+    "vlucas/phpdotenv": "v5.7.0",
+    "voku/portable-ascii": "2.1.1"
+  },
+  "tool_versions": {
+    "docker --version": "Docker version 29.9.0, build f415da8\n",
+    "docker compose version": "Docker Compose version v5.6.0\n",
+    "kind version": "kind v0.30.0 go1.24.6 linux/amd64\n",
+    "terraform version": "Terraform v1.16.5\non linux_amd64\n"
+  },
+  "notes": "Read-only version/configuration capture during 10rps comparison step. No raw credentials or host personal identities."
+}

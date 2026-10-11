@@ -1,0 +1,127 @@
+{
+  "recorded_utc": "2026-10-11T23:08:07.496316+00:00",
+  "code_source_sha": "1fb4be9b01ac89ec27caa5604a1162775cd33117",
+  "notes": "Times come from command-owned JSON artifacts when available; null timing is unknown, not invented. Logs copied after execution retain actual output. Ignored runtime logs are local-only; core results are committed under evidence/g3. Final documentation/verification additions follow this code source without changing the deployed PHP/NGINX configuration.",
+  "commands": [
+    {
+      "command": "make doctor",
+      "result": "completed",
+      "artifact": ".runtime/g3-doctor.log",
+      "start_utc": null,
+      "end_utc": null,
+      "artifact_mtime_utc": "2026-10-11T20:53:02.933270+00:00"
+    },
+    {
+      "command": "make build (independent probes)",
+      "result": "passed",
+      "artifact": "evidence/g3/build-probes.log",
+      "start_utc": null,
+      "end_utc": null,
+      "artifact_mtime_utc": "2026-10-11T23:08:07.158375+00:00"
+    },
+    {
+      "command": "make deploy (independent probes)",
+      "result": "passed",
+      "artifact": ".runtime/g3-deploy-probes.log",
+      "start_utc": null,
+      "end_utc": null,
+      "artifact_mtime_utc": "2026-10-11T20:58:37.280849+00:00"
+    },
+    {
+      "command": "python3 scripts/g3-load.py baseline",
+      "result": "executed: step passed, comparison limitations retained",
+      "artifact": "evidence/g3/baseline-20261011T205333Z/result.json",
+      "start_utc": "2026-10-11T20:53:33Z",
+      "end_utc": "2026-10-11T20:57:37Z",
+      "artifact_mtime_utc": "2026-10-11T20:57:37.169413+00:00"
+    },
+    {
+      "command": "make g3-probes",
+      "result": "passed",
+      "artifact": "evidence/g3/probes-20261011T205849Z/result.json",
+      "start_utc": "2026-10-11T20:58:49Z",
+      "end_utc": "2026-10-11T20:59:36Z",
+      "artifact_mtime_utc": "2026-10-11T20:59:36.049764+00:00"
+    },
+    {
+      "command": "make build (batched metrics)",
+      "result": "passed",
+      "artifact": "evidence/g3/build-metrics.log",
+      "start_utc": null,
+      "end_utc": null,
+      "artifact_mtime_utc": "2026-10-11T23:08:07.159264+00:00"
+    },
+    {
+      "command": "make test",
+      "result": "14 tests/55 assertions passed",
+      "artifact": "evidence/g3/application-tests.log",
+      "start_utc": null,
+      "end_utc": null,
+      "artifact_mtime_utc": "2026-10-11T21:01:18.199212+00:00"
+    },
+    {
+      "command": "make deploy (batched metrics/diagnostics)",
+      "result": "passed",
+      "artifact": ".runtime/g3-deploy-metrics.log",
+      "start_utc": null,
+      "end_utc": null,
+      "artifact_mtime_utc": "2026-10-11T21:02:41.219178+00:00"
+    },
+    {
+      "command": "make g3-load",
+      "result": "executed: 60rps failed; 30rps 600s confirmation passed",
+      "artifact": "evidence/g3/comparison-20261011T210320Z/result.json",
+      "start_utc": "2026-10-11T21:03:20Z",
+      "end_utc": "2026-10-11T21:27:16Z",
+      "artifact_mtime_utc": "2026-10-11T21:27:16.379149+00:00"
+    },
+    {
+      "command": "make g3-interruption",
+      "result": "passed",
+      "artifact": "evidence/g3/interruption-57134aaa30/result.json",
+      "start_utc": "2026-10-11T23:00:49Z",
+      "end_utc": "2026-10-11T23:02:52Z",
+      "artifact_mtime_utc": "2026-10-11T23:02:52.548385+00:00"
+    },
+    {
+      "command": "make verify",
+      "result": "passed: app/rules/native contract/Terraform/manifests/smoke/observability",
+      "artifact": "evidence/g3/final-verify.log",
+      "start_utc": null,
+      "end_utc": "2026-10-11T23:03:52Z",
+      "artifact_mtime_utc": "2026-10-11T23:03:52.384393+00:00"
+    },
+    {
+      "command": "docker run --rm -i ghcr.io/yannh/kubeconform:v0.7.0 -strict -summary -kubernetes-version 1.34.0 < .runtime/g3-manifest-list.json",
+      "result": "63 valid/0 errors/0 skipped",
+      "artifact": "evidence/g3/schema-validation.log",
+      "start_utc": null,
+      "end_utc": null,
+      "artifact_mtime_utc": "2026-10-11T23:04:05.745536+00:00"
+    },
+    {
+      "command": ".tools/kubectl --kubeconfig .kubeconfig --context kind-laravel-reliability-lab -n lab apply --dry-run=server -f .runtime/g3-manifest-list.json",
+      "result": "passed",
+      "artifact": "evidence/g3/server-dry-run.log",
+      "start_utc": null,
+      "end_utc": null,
+      "artifact_mtime_utc": "2026-10-11T23:04:08.367528+00:00"
+    },
+    {
+      "command": "python3 scripts/g3-runtime-contract.py",
+      "result": "passed including fixed-format/full-query restrictions",
+      "artifact": "evidence/g3/runtime-contract-final.log",
+      "start_utc": null,
+      "end_utc": null,
+      "artifact_mtime_utc": "2026-10-11T23:08:07.152903+00:00"
+    },
+    {
+      "command": "python3 scripts/verify-safety.py",
+      "result": "passed",
+      "artifact": "evidence/g3/safety.log",
+      "start_utc": null,
+      "end_utc": null,
+      "artifact_mtime_utc": "2026-10-11T23:08:07.466902+00:00"
+    }
+  ]
+}

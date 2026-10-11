@@ -3,3 +3,5 @@
 Confirm exporter/telemetry health and affected traffic class first. Normal traffic SLO excludes local load/fault traffic. Check Prometheus request status classes, request rate, latency buckets, API readiness/available replicas, DB resource contention and Redis availability. Correlate JSON http.response/report.accepted using X-Request-ID and report ID in Loki Explore: `{namespace="lab",app="api"} | json request_id="context.request_id" | request_id="..."`. IDs are log fields, not stream labels.
 
 Check pod events/logs with `.tools/kubectl --kubeconfig .kubeconfig --context kind-laravel-reliability-lab -n lab ...`. Stop increasing load if latency/errors cross measured thresholds. Preserve reports and evidence; never reset data to clear an alert. Restart only the affected lab workload if supported by logs and pending-row durability. Retest readiness, committed acceptance, worker completion and database result. Record client-side errors separately from middleware SLI. Escalate unknown cause; do not infer DB or dependency failure solely from an alert.
+
+For shared-pool saturation, native FPM probes and bounded reproduction, see [the overload runbook](overload.md).

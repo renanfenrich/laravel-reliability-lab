@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-11T21:08:41Z",
+  "source_sha": "1fb4be9b01ac89ec27caa5604a1162775cd33117",
+  "notes": "Read-only point plans during the 30rps comparison step; no schema change. Diagnostic queries themselves add bounded DB/host work. Plans cannot establish capacity attribution alone.",
+  "queries": [
+    {
+      "statement": "SELECT count(*),pg_size_pretty(pg_total_relation_size('reports')) FROM reports",
+      "output": "SET\n93545|65 MB\n"
+    },
+    {
+      "statement": "EXPLAIN (ANALYZE,BUFFERS) SELECT * FROM reports WHERE deadline_met IS NULL AND deadline_at<=now()",
+      "output": "SET\nSeq Scan on reports  (cost=0.00..6682.70 rows=602 width=462) (actual time=3.933..9.707 rows=53.00 loops=1)\n  Filter: ((deadline_met IS NULL) AND (deadline_at <= now()))\n  Rows Removed by Filter: 93496\n  Buffers: shared hit=5318\nPlanning:\n  Buffers: shared hit=198\nPlanning Time: 0.301 ms\nExecution Time: 9.733 ms\n"
+    },
+    {
+      "statement": "EXPLAIN (ANALYZE,BUFFERS) SELECT * FROM reports WHERE state='processing' AND lease_until<=now()",
+      "output": "SET\nSeq Scan on reports  (cost=0.00..6910.15 rows=1 width=462) (actual time=8.865..8.865 rows=0.00 loops=1)\n  Filter: (((state)::text = 'processing'::text) AND (lease_until <= now()))\n  Rows Removed by Filter: 93552\n  Buffers: shared hit=5318\nPlanning:\n  Buffers: shared hit=189\nPlanning Time: 0.276 ms\nExecution Time: 8.875 ms\n"
+    },
+    {
+      "statement": "EXPLAIN (ANALYZE,BUFFERS) SELECT count(*) FROM reports WHERE traffic='load' AND state='completed'",
+      "output": "SET\nAggregate  (cost=6909.77..6909.78 rows=1 width=8) (actual time=13.918..13.919 rows=1.00 loops=1)\n  Buffers: shared hit=5318\n  ->  Seq Scan on reports  (cost=0.00..6682.70 rows=90828 width=0) (actual time=0.010..11.488 rows=93398.00 loops=1)\n        Filter: (((traffic)::text = 'load'::text) AND ((state)::text = 'completed'::text))\n        Rows Removed by Filter: 158\n        Buffers: shared hit=5318\nPlanning:\n  Buffers: shared hit=117\nPlanning Time: 0.160 ms\nExecution Time: 13.943 ms\n"
+    }
+  ]
+}
