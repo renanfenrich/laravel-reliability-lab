@@ -1,0 +1,442 @@
+{
+  "start": "2026-10-11T23:16:33Z",
+  "source_sha": "32ebeb0f6d03db415315d673fe541cb9597ebd2c",
+  "stage": "before",
+  "samples": [
+    {
+      "utc": "2026-10-11T23:16:37Z",
+      "queue": {
+        "ready": 20,
+        "reserved": 0,
+        "delayed": 0
+      },
+      "per_report_multiplicity": {
+        "cb27016a-1af7-453e-97c5-795a290d4d17": 1,
+        "464007c7-3a5c-4e83-89f6-140d43dc35c2": 1,
+        "c82cb510-bc3b-49cd-9fbc-8e2e1da3db9d": 1,
+        "5b17bf16-21e1-484f-9e73-af243fcd327d": 1,
+        "515f2dc8-9bc2-43eb-9749-a727577f68d8": 1,
+        "0594f7f0-8c40-43f0-8193-b8b78e4409c4": 1,
+        "bf1c2a62-286a-402e-8a06-f248c7585ff3": 1,
+        "d8d69bdb-a425-4288-b179-4b918fbb9cba": 1,
+        "b4f5fd46-9d2e-4f56-8fbe-464bc2ade6ce": 1,
+        "d7b85635-e2c0-48c5-9b69-87c7fba08f60": 1,
+        "ca72e2e6-86db-468a-bb30-959fd3c13466": 1,
+        "edbc2c3c-5210-4b60-8fb3-8d48be5b0798": 1,
+        "708a32fa-dd7e-4dee-9ec5-5db6d16d261d": 1,
+        "0e6723e7-4edf-4801-b463-6f1a3787f1f2": 1,
+        "0e833a5a-1670-4b21-b840-97278e91a04a": 1,
+        "2bda30b4-43f6-46cc-b15d-afdbe0aef727": 1,
+        "28deb419-378d-4971-bfca-0fe9939f080c": 1,
+        "a3710a33-e7d8-40a3-95dd-7137517d434b": 1,
+        "e123a56e-a110-494a-8bbb-f6936250940b": 1,
+        "8e70c882-0056-40ca-959c-00cdd2e1fcf1": 1
+      }
+    },
+    {
+      "utc": "2026-10-11T23:16:42Z",
+      "queue": {
+        "ready": 20,
+        "reserved": 0,
+        "delayed": 0
+      },
+      "per_report_multiplicity": {
+        "cb27016a-1af7-453e-97c5-795a290d4d17": 1,
+        "464007c7-3a5c-4e83-89f6-140d43dc35c2": 1,
+        "c82cb510-bc3b-49cd-9fbc-8e2e1da3db9d": 1,
+        "5b17bf16-21e1-484f-9e73-af243fcd327d": 1,
+        "515f2dc8-9bc2-43eb-9749-a727577f68d8": 1,
+        "0594f7f0-8c40-43f0-8193-b8b78e4409c4": 1,
+        "bf1c2a62-286a-402e-8a06-f248c7585ff3": 1,
+        "d8d69bdb-a425-4288-b179-4b918fbb9cba": 1,
+        "b4f5fd46-9d2e-4f56-8fbe-464bc2ade6ce": 1,
+        "d7b85635-e2c0-48c5-9b69-87c7fba08f60": 1,
+        "ca72e2e6-86db-468a-bb30-959fd3c13466": 1,
+        "edbc2c3c-5210-4b60-8fb3-8d48be5b0798": 1,
+        "708a32fa-dd7e-4dee-9ec5-5db6d16d261d": 1,
+        "0e6723e7-4edf-4801-b463-6f1a3787f1f2": 1,
+        "0e833a5a-1670-4b21-b840-97278e91a04a": 1,
+        "2bda30b4-43f6-46cc-b15d-afdbe0aef727": 1,
+        "28deb419-378d-4971-bfca-0fe9939f080c": 1,
+        "a3710a33-e7d8-40a3-95dd-7137517d434b": 1,
+        "e123a56e-a110-494a-8bbb-f6936250940b": 1,
+        "8e70c882-0056-40ca-959c-00cdd2e1fcf1": 1
+      }
+    },
+    {
+      "utc": "2026-10-11T23:16:48Z",
+      "queue": {
+        "ready": 40,
+        "reserved": 0,
+        "delayed": 0
+      },
+      "per_report_multiplicity": {
+        "cb27016a-1af7-453e-97c5-795a290d4d17": 2,
+        "464007c7-3a5c-4e83-89f6-140d43dc35c2": 2,
+        "c82cb510-bc3b-49cd-9fbc-8e2e1da3db9d": 2,
+        "5b17bf16-21e1-484f-9e73-af243fcd327d": 2,
+        "515f2dc8-9bc2-43eb-9749-a727577f68d8": 2,
+        "0594f7f0-8c40-43f0-8193-b8b78e4409c4": 2,
+        "bf1c2a62-286a-402e-8a06-f248c7585ff3": 2,
+        "d8d69bdb-a425-4288-b179-4b918fbb9cba": 2,
+        "b4f5fd46-9d2e-4f56-8fbe-464bc2ade6ce": 2,
+        "d7b85635-e2c0-48c5-9b69-87c7fba08f60": 2,
+        "ca72e2e6-86db-468a-bb30-959fd3c13466": 2,
+        "edbc2c3c-5210-4b60-8fb3-8d48be5b0798": 2,
+        "708a32fa-dd7e-4dee-9ec5-5db6d16d261d": 2,
+        "0e6723e7-4edf-4801-b463-6f1a3787f1f2": 2,
+        "0e833a5a-1670-4b21-b840-97278e91a04a": 2,
+        "2bda30b4-43f6-46cc-b15d-afdbe0aef727": 2,
+        "28deb419-378d-4971-bfca-0fe9939f080c": 2,
+        "a3710a33-e7d8-40a3-95dd-7137517d434b": 2,
+        "e123a56e-a110-494a-8bbb-f6936250940b": 2,
+        "8e70c882-0056-40ca-959c-00cdd2e1fcf1": 2
+      }
+    },
+    {
+      "utc": "2026-10-11T23:16:53Z",
+      "queue": {
+        "ready": 60,
+        "reserved": 0,
+        "delayed": 0
+      },
+      "per_report_multiplicity": {
+        "cb27016a-1af7-453e-97c5-795a290d4d17": 3,
+        "464007c7-3a5c-4e83-89f6-140d43dc35c2": 3,
+        "c82cb510-bc3b-49cd-9fbc-8e2e1da3db9d": 3,
+        "5b17bf16-21e1-484f-9e73-af243fcd327d": 3,
+        "515f2dc8-9bc2-43eb-9749-a727577f68d8": 3,
+        "0594f7f0-8c40-43f0-8193-b8b78e4409c4": 3,
+        "bf1c2a62-286a-402e-8a06-f248c7585ff3": 3,
+        "d8d69bdb-a425-4288-b179-4b918fbb9cba": 3,
+        "b4f5fd46-9d2e-4f56-8fbe-464bc2ade6ce": 3,
+        "d7b85635-e2c0-48c5-9b69-87c7fba08f60": 3,
+        "ca72e2e6-86db-468a-bb30-959fd3c13466": 3,
+        "edbc2c3c-5210-4b60-8fb3-8d48be5b0798": 3,
+        "708a32fa-dd7e-4dee-9ec5-5db6d16d261d": 3,
+        "0e6723e7-4edf-4801-b463-6f1a3787f1f2": 3,
+        "0e833a5a-1670-4b21-b840-97278e91a04a": 3,
+        "2bda30b4-43f6-46cc-b15d-afdbe0aef727": 3,
+        "28deb419-378d-4971-bfca-0fe9939f080c": 3,
+        "a3710a33-e7d8-40a3-95dd-7137517d434b": 3,
+        "e123a56e-a110-494a-8bbb-f6936250940b": 3,
+        "8e70c882-0056-40ca-959c-00cdd2e1fcf1": 3
+      }
+    },
+    {
+      "utc": "2026-10-11T23:16:59Z",
+      "queue": {
+        "ready": 80,
+        "reserved": 0,
+        "delayed": 0
+      },
+      "per_report_multiplicity": {
+        "cb27016a-1af7-453e-97c5-795a290d4d17": 4,
+        "464007c7-3a5c-4e83-89f6-140d43dc35c2": 4,
+        "c82cb510-bc3b-49cd-9fbc-8e2e1da3db9d": 4,
+        "5b17bf16-21e1-484f-9e73-af243fcd327d": 4,
+        "515f2dc8-9bc2-43eb-9749-a727577f68d8": 4,
+        "0594f7f0-8c40-43f0-8193-b8b78e4409c4": 4,
+        "bf1c2a62-286a-402e-8a06-f248c7585ff3": 4,
+        "d8d69bdb-a425-4288-b179-4b918fbb9cba": 4,
+        "b4f5fd46-9d2e-4f56-8fbe-464bc2ade6ce": 4,
+        "d7b85635-e2c0-48c5-9b69-87c7fba08f60": 4,
+        "ca72e2e6-86db-468a-bb30-959fd3c13466": 4,
+        "edbc2c3c-5210-4b60-8fb3-8d48be5b0798": 4,
+        "708a32fa-dd7e-4dee-9ec5-5db6d16d261d": 4,
+        "0e6723e7-4edf-4801-b463-6f1a3787f1f2": 4,
+        "0e833a5a-1670-4b21-b840-97278e91a04a": 4,
+        "2bda30b4-43f6-46cc-b15d-afdbe0aef727": 4,
+        "28deb419-378d-4971-bfca-0fe9939f080c": 4,
+        "a3710a33-e7d8-40a3-95dd-7137517d434b": 4,
+        "e123a56e-a110-494a-8bbb-f6936250940b": 4,
+        "8e70c882-0056-40ca-959c-00cdd2e1fcf1": 4
+      }
+    },
+    {
+      "utc": "2026-10-11T23:17:04Z",
+      "queue": {
+        "ready": 100,
+        "reserved": 0,
+        "delayed": 0
+      },
+      "per_report_multiplicity": {
+        "cb27016a-1af7-453e-97c5-795a290d4d17": 5,
+        "464007c7-3a5c-4e83-89f6-140d43dc35c2": 5,
+        "c82cb510-bc3b-49cd-9fbc-8e2e1da3db9d": 5,
+        "5b17bf16-21e1-484f-9e73-af243fcd327d": 5,
+        "515f2dc8-9bc2-43eb-9749-a727577f68d8": 5,
+        "0594f7f0-8c40-43f0-8193-b8b78e4409c4": 5,
+        "bf1c2a62-286a-402e-8a06-f248c7585ff3": 5,
+        "d8d69bdb-a425-4288-b179-4b918fbb9cba": 5,
+        "b4f5fd46-9d2e-4f56-8fbe-464bc2ade6ce": 5,
+        "d7b85635-e2c0-48c5-9b69-87c7fba08f60": 5,
+        "ca72e2e6-86db-468a-bb30-959fd3c13466": 5,
+        "edbc2c3c-5210-4b60-8fb3-8d48be5b0798": 5,
+        "708a32fa-dd7e-4dee-9ec5-5db6d16d261d": 5,
+        "0e6723e7-4edf-4801-b463-6f1a3787f1f2": 5,
+        "0e833a5a-1670-4b21-b840-97278e91a04a": 5,
+        "2bda30b4-43f6-46cc-b15d-afdbe0aef727": 5,
+        "28deb419-378d-4971-bfca-0fe9939f080c": 5,
+        "a3710a33-e7d8-40a3-95dd-7137517d434b": 5,
+        "e123a56e-a110-494a-8bbb-f6936250940b": 5,
+        "8e70c882-0056-40ca-959c-00cdd2e1fcf1": 5
+      }
+    }
+  ],
+  "notes": "Pause project workers for 30s, submit 20 synthetic fault reports, inspect at most 500 waiting payloads in memory only; export report multiplicities and queue counts, never raw payloads. Restore original replica count in finally.",
+  "original_worker_replicas": 2,
+  "reports": [
+    "cb27016a-1af7-453e-97c5-795a290d4d17",
+    "464007c7-3a5c-4e83-89f6-140d43dc35c2",
+    "c82cb510-bc3b-49cd-9fbc-8e2e1da3db9d",
+    "5b17bf16-21e1-484f-9e73-af243fcd327d",
+    "515f2dc8-9bc2-43eb-9749-a727577f68d8",
+    "0594f7f0-8c40-43f0-8193-b8b78e4409c4",
+    "bf1c2a62-286a-402e-8a06-f248c7585ff3",
+    "d8d69bdb-a425-4288-b179-4b918fbb9cba",
+    "b4f5fd46-9d2e-4f56-8fbe-464bc2ade6ce",
+    "d7b85635-e2c0-48c5-9b69-87c7fba08f60",
+    "ca72e2e6-86db-468a-bb30-959fd3c13466",
+    "edbc2c3c-5210-4b60-8fb3-8d48be5b0798",
+    "708a32fa-dd7e-4dee-9ec5-5db6d16d261d",
+    "0e6723e7-4edf-4801-b463-6f1a3787f1f2",
+    "0e833a5a-1670-4b21-b840-97278e91a04a",
+    "2bda30b4-43f6-46cc-b15d-afdbe0aef727",
+    "28deb419-378d-4971-bfca-0fe9939f080c",
+    "a3710a33-e7d8-40a3-95dd-7137517d434b",
+    "e123a56e-a110-494a-8bbb-f6936250940b",
+    "8e70c882-0056-40ca-959c-00cdd2e1fcf1"
+  ],
+  "restored": "2026-10-11T23:17:14Z",
+  "completed": {
+    "cb27016a-1af7-453e-97c5-795a290d4d17": {
+      "id": "cb27016a-1af7-453e-97c5-795a290d4d17",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    },
+    "464007c7-3a5c-4e83-89f6-140d43dc35c2": {
+      "id": "464007c7-3a5c-4e83-89f6-140d43dc35c2",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    },
+    "c82cb510-bc3b-49cd-9fbc-8e2e1da3db9d": {
+      "id": "c82cb510-bc3b-49cd-9fbc-8e2e1da3db9d",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    },
+    "5b17bf16-21e1-484f-9e73-af243fcd327d": {
+      "id": "5b17bf16-21e1-484f-9e73-af243fcd327d",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    },
+    "515f2dc8-9bc2-43eb-9749-a727577f68d8": {
+      "id": "515f2dc8-9bc2-43eb-9749-a727577f68d8",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    },
+    "0594f7f0-8c40-43f0-8193-b8b78e4409c4": {
+      "id": "0594f7f0-8c40-43f0-8193-b8b78e4409c4",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    },
+    "bf1c2a62-286a-402e-8a06-f248c7585ff3": {
+      "id": "bf1c2a62-286a-402e-8a06-f248c7585ff3",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    },
+    "d8d69bdb-a425-4288-b179-4b918fbb9cba": {
+      "id": "d8d69bdb-a425-4288-b179-4b918fbb9cba",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    },
+    "b4f5fd46-9d2e-4f56-8fbe-464bc2ade6ce": {
+      "id": "b4f5fd46-9d2e-4f56-8fbe-464bc2ade6ce",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    },
+    "d7b85635-e2c0-48c5-9b69-87c7fba08f60": {
+      "id": "d7b85635-e2c0-48c5-9b69-87c7fba08f60",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    },
+    "ca72e2e6-86db-468a-bb30-959fd3c13466": {
+      "id": "ca72e2e6-86db-468a-bb30-959fd3c13466",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    },
+    "edbc2c3c-5210-4b60-8fb3-8d48be5b0798": {
+      "id": "edbc2c3c-5210-4b60-8fb3-8d48be5b0798",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    },
+    "708a32fa-dd7e-4dee-9ec5-5db6d16d261d": {
+      "id": "708a32fa-dd7e-4dee-9ec5-5db6d16d261d",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    },
+    "0e6723e7-4edf-4801-b463-6f1a3787f1f2": {
+      "id": "0e6723e7-4edf-4801-b463-6f1a3787f1f2",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    },
+    "0e833a5a-1670-4b21-b840-97278e91a04a": {
+      "id": "0e833a5a-1670-4b21-b840-97278e91a04a",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    },
+    "2bda30b4-43f6-46cc-b15d-afdbe0aef727": {
+      "id": "2bda30b4-43f6-46cc-b15d-afdbe0aef727",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    },
+    "28deb419-378d-4971-bfca-0fe9939f080c": {
+      "id": "28deb419-378d-4971-bfca-0fe9939f080c",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    },
+    "a3710a33-e7d8-40a3-95dd-7137517d434b": {
+      "id": "a3710a33-e7d8-40a3-95dd-7137517d434b",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    },
+    "e123a56e-a110-494a-8bbb-f6936250940b": {
+      "id": "e123a56e-a110-494a-8bbb-f6936250940b",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    },
+    "8e70c882-0056-40ca-959c-00cdd2e1fcf1": {
+      "id": "8e70c882-0056-40ca-959c-00cdd2e1fcf1",
+      "state": "completed",
+      "attempts": 1,
+      "result": {
+        "checksum": "8978a3539e10b4f289ba2571ba93a376e24706f140dbf1eb8d9185202a91c410"
+      },
+      "error": null,
+      "deadline_met": null,
+      "overdue": false
+    }
+  },
+  "queue_after": {
+    "ready": 0,
+    "reserved": 0,
+    "delayed": 0
+  },
+  "end": "2026-10-11T23:17:15Z",
+  "max_multiplicity": 5,
+  "result": "PASS"
+}

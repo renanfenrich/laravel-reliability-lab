@@ -1,0 +1,3272 @@
+{
+  "10rps-180s": {
+    "sample_count": 35,
+    "sample_errors": 0,
+    "max_transaction_seconds": 0.026,
+    "session_sample_counts": [
+      {
+        "operation": "reports",
+        "wait_type": "running",
+        "wait_event": "none",
+        "count": 8
+      },
+      {
+        "operation": "reports",
+        "wait_type": "IPC",
+        "wait_event": "BgworkerShutdown",
+        "count": 1
+      },
+      {
+        "operation": "metrics",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "count": 1
+      },
+      {
+        "operation": "metrics",
+        "wait_type": "running",
+        "wait_event": "none",
+        "count": 1
+      }
+    ],
+    "resources": {
+      "cpu": [
+        {
+          "labels": {
+            "container": "alertmanager",
+            "pod": "alertmanager-c9474ff4f-slgvf"
+          },
+          "min": 0.0010227134517149204,
+          "max": 0.0016231481097232184,
+          "mean": 0.0013264046359330788
+        },
+        {
+          "labels": {
+            "container": "alloy",
+            "pod": "alloy-6d6fc9cf66-b8xtc"
+          },
+          "min": 0.01071022175461285,
+          "max": 0.02516263209024784,
+          "mean": 0.0222993401823893
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 0.034565969581749054,
+          "max": 0.130652700291374,
+          "mean": 0.10923703260791334
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 0.03466493968893759,
+          "max": 0.12503525883043878,
+          "mean": 0.10689235135079404
+        },
+        {
+          "labels": {
+            "container": "exporter",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 0.011102350710900474,
+          "max": 0.013435137786878264,
+          "mean": 0.012416602427897255
+        },
+        {
+          "labels": {
+            "container": "gateway",
+            "pod": "gateway-cd9dfc89d-zdmtz"
+          },
+          "min": 0.0003768106200638697,
+          "max": 0.006411901555038767,
+          "mean": 0.005233245011255215
+        },
+        {
+          "labels": {
+            "container": "grafana",
+            "pod": "grafana-5cddf4777f-g6xk4"
+          },
+          "min": 0.01852314037248534,
+          "max": 0.048542332979851555,
+          "mean": 0.02915127374548073
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 0.0006794985381412245,
+          "max": 0.0029119435456878276,
+          "mean": 0.002457026783092793
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 0.0009951690821256036,
+          "max": 0.0029708096254148888,
+          "mean": 0.002481079242716511
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 0.00024520240900954653,
+          "max": 0.00032251390493591637,
+          "mean": 0.0002955396055764661
+        },
+        {
+          "labels": {
+            "container": "kube-state-metrics",
+            "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+          },
+          "min": 0.0004766066689742529,
+          "max": 0.0007504499871432363,
+          "mean": 0.0005803916920909739
+        },
+        {
+          "labels": {
+            "container": "loki",
+            "pod": "loki-597488bd7d-hrbbn"
+          },
+          "min": 0.010963354163836037,
+          "max": 0.017975347006422376,
+          "mean": 0.013457938812387481
+        },
+        {
+          "labels": {
+            "container": "mailpit",
+            "pod": "mailpit-55c5466dc-r8n2d"
+          },
+          "min": 0.00023691853187119655,
+          "max": 0.00039471059098319017,
+          "mean": 0.0003069150204737572
+        },
+        {
+          "labels": {
+            "container": "postgres",
+            "pod": "postgres-5f7965d6c4-rwngq"
+          },
+          "min": 0.30776795731291406,
+          "max": 0.49338105536332183,
+          "mean": 0.4272315294416071
+        },
+        {
+          "labels": {
+            "container": "prometheus",
+            "pod": "prometheus-5497f6dd5c-qqg5h"
+          },
+          "min": 0.01283473585420577,
+          "max": 0.024620443087552797,
+          "mean": 0.017785743103809207
+        },
+        {
+          "labels": {
+            "container": "redis",
+            "pod": "redis-587dcb4467-nmtb2"
+          },
+          "min": 0.016558011488997673,
+          "max": 0.02850338197957232,
+          "mean": 0.02546413938311477
+        },
+        {
+          "labels": {
+            "container": "scheduler",
+            "pod": "scheduler-659c7b8689-gnflg"
+          },
+          "min": 0.050079840613931496,
+          "max": 0.05646153846153849,
+          "mean": 0.05327878661431864
+        },
+        {
+          "labels": {
+            "container": "simulator",
+            "pod": "simulator-d4bb56bcd-cfxm2"
+          },
+          "min": 0.0020831598553742803,
+          "max": 0.014722105263158133,
+          "mean": 0.012018953288890912
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-flb5l"
+          },
+          "min": 0.038582948708845176,
+          "max": 0.07403729922941232,
+          "mean": 0.06620716445102458
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-p2qln"
+          },
+          "min": 0.03248410047175825,
+          "max": 0.07704866591954984,
+          "mean": 0.06443048831828008
+        }
+      ],
+      "throttling": [
+        {
+          "labels": {
+            "container": "alertmanager",
+            "pod": "alertmanager-c9474ff4f-slgvf"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "alloy",
+            "pod": "alloy-6d6fc9cf66-b8xtc"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 0.0,
+          "max": 0.003177077258976375,
+          "mean": 0.0008417514975197107
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 0.0,
+          "max": 0.0006960156716122181,
+          "mean": 0.00018607404416340164
+        },
+        {
+          "labels": {
+            "container": "exporter",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "gateway",
+            "pod": "gateway-cd9dfc89d-zdmtz"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "grafana",
+            "pod": "grafana-5cddf4777f-g6xk4"
+          },
+          "min": 0.0,
+          "max": 0.003345675125920184,
+          "mean": 0.0009224506501733689
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "kube-state-metrics",
+            "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "loki",
+            "pod": "loki-597488bd7d-hrbbn"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "mailpit",
+            "pod": "mailpit-55c5466dc-r8n2d"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "postgres",
+            "pod": "postgres-5f7965d6c4-rwngq"
+          },
+          "min": 0.007199311658779808,
+          "max": 0.02095255144115688,
+          "mean": 0.014800053603232529
+        },
+        {
+          "labels": {
+            "container": "prometheus",
+            "pod": "prometheus-5497f6dd5c-qqg5h"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "redis",
+            "pod": "redis-587dcb4467-nmtb2"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "scheduler",
+            "pod": "scheduler-659c7b8689-gnflg"
+          },
+          "min": 0.0,
+          "max": 0.0005389953734302709,
+          "mean": 0.00029766285326888667
+        },
+        {
+          "labels": {
+            "container": "simulator",
+            "pod": "simulator-d4bb56bcd-cfxm2"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-flb5l"
+          },
+          "min": 0.0,
+          "max": 0.00026545045956735675,
+          "mean": 0.00012860215314654667
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-p2qln"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        }
+      ],
+      "memory": [
+        {
+          "labels": {
+            "container": "alertmanager",
+            "pod": "alertmanager-c9474ff4f-slgvf"
+          },
+          "min": 19705856.0,
+          "max": 21217280.0,
+          "mean": 20073378.90909091
+        },
+        {
+          "labels": {
+            "container": "alloy",
+            "pod": "alloy-6d6fc9cf66-b8xtc"
+          },
+          "min": 56967168.0,
+          "max": 58732544.0,
+          "mean": 57850042.18181818
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-85dfd54d44-b87sf"
+          },
+          "min": 39870464.0,
+          "max": 39870464.0,
+          "mean": 39870464.0
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-85dfd54d44-rbz9s"
+          },
+          "min": 37650432.0,
+          "max": 37650432.0,
+          "mean": 37650432.0
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 42991616.0,
+          "max": 45428736.0,
+          "mean": 43927365.81818182
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 42434560.0,
+          "max": 43274240.0,
+          "mean": 42775272.72727273
+        },
+        {
+          "labels": {
+            "container": "exporter",
+            "pod": "exporter-85fcd69cd5-jkhss"
+          },
+          "min": 39571456.0,
+          "max": 39571456.0,
+          "mean": 39571456.0
+        },
+        {
+          "labels": {
+            "container": "exporter",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 39522304.0,
+          "max": 40337408.0,
+          "mean": 39616512.0
+        },
+        {
+          "labels": {
+            "container": "gateway",
+            "pod": "gateway-cd9dfc89d-zdmtz"
+          },
+          "min": 3354624.0,
+          "max": 3887104.0,
+          "mean": 3623842.909090909
+        },
+        {
+          "labels": {
+            "container": "grafana",
+            "pod": "grafana-5cddf4777f-g6xk4"
+          },
+          "min": 605392896.0,
+          "max": 681062400.0,
+          "mean": 636871773.0909091
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-85dfd54d44-b87sf"
+          },
+          "min": 3084288.0,
+          "max": 3084288.0,
+          "mean": 3084288.0
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-85dfd54d44-rbz9s"
+          },
+          "min": 2736128.0,
+          "max": 2736128.0,
+          "mean": 2736128.0
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 2748416.0,
+          "max": 3276800.0,
+          "mean": 3060456.727272727
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 2744320.0,
+          "max": 3264512.0,
+          "mean": 3025826.909090909
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "exporter-85fcd69cd5-jkhss"
+          },
+          "min": 3346432.0,
+          "max": 3346432.0,
+          "mean": 3346432.0
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 2736128.0,
+          "max": 2740224.0,
+          "mean": 2736872.727272727
+        },
+        {
+          "labels": {
+            "container": "kube-state-metrics",
+            "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+          },
+          "min": 12025856.0,
+          "max": 14299136.0,
+          "mean": 12598923.636363637
+        },
+        {
+          "labels": {
+            "container": "loki",
+            "pod": "loki-597488bd7d-hrbbn"
+          },
+          "min": 106782720.0,
+          "max": 120504320.0,
+          "mean": 114775505.45454545
+        },
+        {
+          "labels": {
+            "container": "mailpit",
+            "pod": "mailpit-55c5466dc-r8n2d"
+          },
+          "min": 7692288.0,
+          "max": 7954432.0,
+          "mean": 7716119.2727272725
+        },
+        {
+          "labels": {
+            "container": "postgres",
+            "pod": "postgres-5f7965d6c4-rwngq"
+          },
+          "min": 148729856.0,
+          "max": 156475392.0,
+          "mean": 150511243.63636363
+        },
+        {
+          "labels": {
+            "container": "prometheus",
+            "pod": "prometheus-5497f6dd5c-qqg5h"
+          },
+          "min": 125952000.0,
+          "max": 138018816.0,
+          "mean": 131652514.9090909
+        },
+        {
+          "labels": {
+            "container": "redis",
+            "pod": "redis-587dcb4467-nmtb2"
+          },
+          "min": 5402624.0,
+          "max": 7729152.0,
+          "mean": 6010693.818181818
+        },
+        {
+          "labels": {
+            "container": "scheduler",
+            "pod": "scheduler-659c7b8689-gnflg"
+          },
+          "min": 61128704.0,
+          "max": 85086208.0,
+          "mean": 63381504.0
+        },
+        {
+          "labels": {
+            "container": "scheduler",
+            "pod": "scheduler-7b84bdd8b8-ltds8"
+          },
+          "min": 61153280.0,
+          "max": 61153280.0,
+          "mean": 61153280.0
+        },
+        {
+          "labels": {
+            "container": "simulator",
+            "pod": "simulator-d4bb56bcd-cfxm2"
+          },
+          "min": 22351872.0,
+          "max": 22867968.0,
+          "mean": 22544384.0
+        },
+        {
+          "labels": {
+            "container": "storage-init",
+            "pod": "worker-6c64d49769-78x72"
+          },
+          "min": 3936256.0,
+          "max": 3936256.0,
+          "mean": 3936256.0
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-54cc9d5b96-8xg26"
+          },
+          "min": 31596544.0,
+          "max": 31596544.0,
+          "mean": 31596544.0
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-54cc9d5b96-n9qzm"
+          },
+          "min": 31313920.0,
+          "max": 31313920.0,
+          "mean": 31313920.0
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-78x72"
+          },
+          "min": 38891520.0,
+          "max": 38891520.0,
+          "mean": 38891520.0
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-f5wrp"
+          },
+          "min": 38752256.0,
+          "max": 38752256.0,
+          "mean": 38752256.0
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-flb5l"
+          },
+          "min": 39227392.0,
+          "max": 40828928.0,
+          "mean": 39740881.45454545
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-p2qln"
+          },
+          "min": 38756352.0,
+          "max": 39510016.0,
+          "mean": 39141376.0
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-qglrr"
+          },
+          "min": 17551360.0,
+          "max": 17551360.0,
+          "mean": 17551360.0
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-qxxqv"
+          },
+          "min": 5738496.0,
+          "max": 5738496.0,
+          "mean": 5738496.0
+        }
+      ],
+      "notifications": [
+        {
+          "labels": {
+            "__name__": "lab_queue_notifications",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "state": "delayed"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "__name__": "lab_queue_notifications",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "state": "ready"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "__name__": "lab_queue_notifications",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "state": "reserved"
+          },
+          "min": 0.0,
+          "max": 1.0,
+          "mean": 0.45454545454545453
+        }
+      ],
+      "fpm_queue": [
+        {
+          "labels": {
+            "__name__": "phpfpm_listen_queue",
+            "instance": "10.244.0.54:8082",
+            "job": "api-fpm"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "__name__": "phpfpm_listen_queue",
+            "instance": "10.244.0.56:8082",
+            "job": "api-fpm"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        }
+      ],
+      "fpm_active": [
+        {
+          "labels": {
+            "__name__": "phpfpm_active_processes",
+            "instance": "10.244.0.54:8082",
+            "job": "api-fpm"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "__name__": "phpfpm_active_processes",
+            "instance": "10.244.0.56:8082",
+            "job": "api-fpm"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        }
+      ],
+      "redis_queue": [
+        {
+          "labels": {
+            "__name__": "lab_redis_queue_jobs",
+            "instance": "exporter:8080",
+            "job": "lab-exporter"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        }
+      ],
+      "host_cpu": [
+        {
+          "labels": {},
+          "min": 1.7669999999999344,
+          "max": 2.6249999999998805,
+          "mean": 2.4180545454545195
+        }
+      ],
+      "host_memory": [
+        {
+          "labels": {
+            "__name__": "lab_host_memory_bytes",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "kind": "MemAvailable"
+          },
+          "min": 21190692864.0,
+          "max": 21368406016.0,
+          "mean": 21294533538.909092
+        }
+      ],
+      "transport_failures": [
+        {
+          "labels": {
+            "__name__": "lab_notification_failures_total",
+            "instance": "exporter:8080",
+            "job": "lab-exporter"
+          },
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0
+        }
+      ],
+      "dispatch": [
+        {
+          "labels": {
+            "__name__": "lab_dispatch_total",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "outcome": "error"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "__name__": "lab_dispatch_total",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "outcome": "queued"
+          },
+          "min": 219382.0,
+          "max": 220883.0,
+          "mean": 220132.72727272726
+        },
+        {
+          "labels": {
+            "__name__": "lab_dispatch_total",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "outcome": "suppressed"
+          },
+          "min": 63.0,
+          "max": 63.0,
+          "mean": 63.0
+        }
+      ]
+    }
+  },
+  "30rps-180s": {
+    "sample_count": 35,
+    "sample_errors": 0,
+    "max_transaction_seconds": 0.081,
+    "session_sample_counts": [
+      {
+        "operation": "reports",
+        "wait_type": "running",
+        "wait_event": "none",
+        "count": 20
+      },
+      {
+        "operation": "metrics",
+        "wait_type": "running",
+        "wait_event": "none",
+        "count": 8
+      },
+      {
+        "operation": "other",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "count": 1
+      },
+      {
+        "operation": "other",
+        "wait_type": "running",
+        "wait_event": "none",
+        "count": 3
+      },
+      {
+        "operation": "reports",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "count": 2
+      },
+      {
+        "operation": "metrics",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "count": 1
+      },
+      {
+        "operation": "metrics",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "count": 1
+      },
+      {
+        "operation": "other",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "count": 1
+      },
+      {
+        "operation": "metrics",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "count": 1
+      }
+    ],
+    "resources": {
+      "cpu": [
+        {
+          "labels": {
+            "container": "alertmanager",
+            "pod": "alertmanager-c9474ff4f-slgvf"
+          },
+          "min": 0.0011860768301071103,
+          "max": 0.00184847312493552,
+          "mean": 0.0014594414714219827
+        },
+        {
+          "labels": {
+            "container": "alloy",
+            "pod": "alloy-6d6fc9cf66-b8xtc"
+          },
+          "min": 0.01900238511687092,
+          "max": 0.06590784562932425,
+          "mean": 0.055880939546863746
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 0.06947026822659581,
+          "max": 0.4443052558824412,
+          "mean": 0.36121636007801633
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 0.023363321941779557,
+          "max": 0.43904713323811484,
+          "mean": 0.3528931298882216
+        },
+        {
+          "labels": {
+            "container": "exporter",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 0.010612550806896558,
+          "max": 0.018941021180804235,
+          "mean": 0.015874242404659532
+        },
+        {
+          "labels": {
+            "container": "gateway",
+            "pod": "gateway-cd9dfc89d-zdmtz"
+          },
+          "min": 0.0016519750601019822,
+          "max": 0.021002343511987105,
+          "mean": 0.017159715364514033
+        },
+        {
+          "labels": {
+            "container": "grafana",
+            "pod": "grafana-5cddf4777f-g6xk4"
+          },
+          "min": 0.0261594327229833,
+          "max": 0.03265800554137487,
+          "mean": 0.029951292809133816
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 0.000310643792658182,
+          "max": 0.00935852999359171,
+          "mean": 0.007595071455812283
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 0.0006564510443288954,
+          "max": 0.00966742522756827,
+          "mean": 0.0074916137424827466
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 0.000215425164567378,
+          "max": 0.00040847364135431126,
+          "mean": 0.000329995061346972
+        },
+        {
+          "labels": {
+            "container": "kube-state-metrics",
+            "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+          },
+          "min": 0.00047881551986251757,
+          "max": 0.0008810095085755088,
+          "mean": 0.0006237195518429004
+        },
+        {
+          "labels": {
+            "container": "loki",
+            "pod": "loki-597488bd7d-hrbbn"
+          },
+          "min": 0.010545081130148338,
+          "max": 0.01443736630667266,
+          "mean": 0.013215750322106486
+        },
+        {
+          "labels": {
+            "container": "mailpit",
+            "pod": "mailpit-55c5466dc-r8n2d"
+          },
+          "min": 0.0002485716328625494,
+          "max": 0.00042006269592476635,
+          "mean": 0.0003363278757859852
+        },
+        {
+          "labels": {
+            "container": "postgres",
+            "pod": "postgres-5f7965d6c4-rwngq"
+          },
+          "min": 0.25275528251078094,
+          "max": 1.2368654005345043,
+          "mean": 1.0396216135556575
+        },
+        {
+          "labels": {
+            "container": "prometheus",
+            "pod": "prometheus-5497f6dd5c-qqg5h"
+          },
+          "min": 0.018284546107519725,
+          "max": 0.023214668860727167,
+          "mean": 0.02072958075553527
+        },
+        {
+          "labels": {
+            "container": "redis",
+            "pod": "redis-587dcb4467-nmtb2"
+          },
+          "min": 0.02015744931093613,
+          "max": 0.05841682671788316,
+          "mean": 0.0509548608684634
+        },
+        {
+          "labels": {
+            "container": "scheduler",
+            "pod": "scheduler-659c7b8689-gnflg"
+          },
+          "min": 0.05395533369667542,
+          "max": 0.07257350212601471,
+          "mean": 0.06391755190679964
+        },
+        {
+          "labels": {
+            "container": "simulator",
+            "pod": "simulator-d4bb56bcd-cfxm2"
+          },
+          "min": 0.005473774198885679,
+          "max": 0.042022417631344955,
+          "mean": 0.03551652927017336
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-flb5l"
+          },
+          "min": 0.062067166056946024,
+          "max": 0.16797529688194576,
+          "mean": 0.14514457768905878
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-p2qln"
+          },
+          "min": 0.05228118772855673,
+          "max": 0.16954424941696333,
+          "mean": 0.136970056510275
+        }
+      ],
+      "throttling": [
+        {
+          "labels": {
+            "container": "alertmanager",
+            "pod": "alertmanager-c9474ff4f-slgvf"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "alloy",
+            "pod": "alloy-6d6fc9cf66-b8xtc"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 0.0,
+          "max": 0.008020963893039542,
+          "mean": 0.0033210999555016367
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 0.0,
+          "max": 0.012893997964749222,
+          "mean": 0.007121529147856538
+        },
+        {
+          "labels": {
+            "container": "exporter",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "gateway",
+            "pod": "gateway-cd9dfc89d-zdmtz"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "grafana",
+            "pod": "grafana-5cddf4777f-g6xk4"
+          },
+          "min": 0.0,
+          "max": 0.001312956781639286,
+          "mean": 0.0004993731748801213
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "kube-state-metrics",
+            "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "loki",
+            "pod": "loki-597488bd7d-hrbbn"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "mailpit",
+            "pod": "mailpit-55c5466dc-r8n2d"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "postgres",
+            "pod": "postgres-5f7965d6c4-rwngq"
+          },
+          "min": 0.01206042364953275,
+          "max": 0.449376426751182,
+          "mean": 0.3354380254524448
+        },
+        {
+          "labels": {
+            "container": "prometheus",
+            "pod": "prometheus-5497f6dd5c-qqg5h"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "redis",
+            "pod": "redis-587dcb4467-nmtb2"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "scheduler",
+            "pod": "scheduler-659c7b8689-gnflg"
+          },
+          "min": 0.0,
+          "max": 0.00034691617761045316,
+          "mean": 0.00010152930878961135
+        },
+        {
+          "labels": {
+            "container": "simulator",
+            "pod": "simulator-d4bb56bcd-cfxm2"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-flb5l"
+          },
+          "min": 0.0003243520507907013,
+          "max": 0.002269323820068069,
+          "mean": 0.0011579035063881222
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-p2qln"
+          },
+          "min": 0.0,
+          "max": 0.0003197120813529347,
+          "mean": 5.243058943678251e-05
+        }
+      ],
+      "memory": [
+        {
+          "labels": {
+            "container": "alertmanager",
+            "pod": "alertmanager-c9474ff4f-slgvf"
+          },
+          "min": 19492864.0,
+          "max": 19537920.0,
+          "mean": 19513344.0
+        },
+        {
+          "labels": {
+            "container": "alloy",
+            "pod": "alloy-6d6fc9cf66-b8xtc"
+          },
+          "min": 59265024.0,
+          "max": 71323648.0,
+          "mean": 66839210.666666664
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 41455616.0,
+          "max": 44478464.0,
+          "mean": 42351616.0
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 40394752.0,
+          "max": 44228608.0,
+          "mean": 41860778.666666664
+        },
+        {
+          "labels": {
+            "container": "exporter",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 39555072.0,
+          "max": 40824832.0,
+          "mean": 40053760.0
+        },
+        {
+          "labels": {
+            "container": "gateway",
+            "pod": "gateway-cd9dfc89d-zdmtz"
+          },
+          "min": 3452928.0,
+          "max": 4222976.0,
+          "mean": 3855360.0
+        },
+        {
+          "labels": {
+            "container": "grafana",
+            "pod": "grafana-5cddf4777f-g6xk4"
+          },
+          "min": 632643584.0,
+          "max": 774598656.0,
+          "mean": 686567424.0
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 2748416.0,
+          "max": 3604480.0,
+          "mean": 3011584.0
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 2744320.0,
+          "max": 3534848.0,
+          "mean": 2946048.0
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 2736128.0,
+          "max": 2740224.0,
+          "mean": 2737493.3333333335
+        },
+        {
+          "labels": {
+            "container": "kube-state-metrics",
+            "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+          },
+          "min": 11698176.0,
+          "max": 11698176.0,
+          "mean": 11698176.0
+        },
+        {
+          "labels": {
+            "container": "loki",
+            "pod": "loki-597488bd7d-hrbbn"
+          },
+          "min": 91623424.0,
+          "max": 119095296.0,
+          "mean": 109374122.66666667
+        },
+        {
+          "labels": {
+            "container": "mailpit",
+            "pod": "mailpit-55c5466dc-r8n2d"
+          },
+          "min": 7692288.0,
+          "max": 7950336.0,
+          "mean": 7713792.0
+        },
+        {
+          "labels": {
+            "container": "postgres",
+            "pod": "postgres-5f7965d6c4-rwngq"
+          },
+          "min": 149352448.0,
+          "max": 166342656.0,
+          "mean": 157214037.33333334
+        },
+        {
+          "labels": {
+            "container": "prometheus",
+            "pod": "prometheus-5497f6dd5c-qqg5h"
+          },
+          "min": 122941440.0,
+          "max": 129093632.0,
+          "mean": 126210389.33333333
+        },
+        {
+          "labels": {
+            "container": "redis",
+            "pod": "redis-587dcb4467-nmtb2"
+          },
+          "min": 5410816.0,
+          "max": 6766592.0,
+          "mean": 6136832.0
+        },
+        {
+          "labels": {
+            "container": "scheduler",
+            "pod": "scheduler-659c7b8689-gnflg"
+          },
+          "min": 61140992.0,
+          "max": 62091264.0,
+          "mean": 61258069.333333336
+        },
+        {
+          "labels": {
+            "container": "simulator",
+            "pod": "simulator-d4bb56bcd-cfxm2"
+          },
+          "min": 22380544.0,
+          "max": 23138304.0,
+          "mean": 22751914.666666668
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-flb5l"
+          },
+          "min": 39243776.0,
+          "max": 40042496.0,
+          "mean": 39643477.333333336
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-p2qln"
+          },
+          "min": 38764544.0,
+          "max": 39567360.0,
+          "mean": 39159125.333333336
+        }
+      ],
+      "notifications": [
+        {
+          "labels": {
+            "__name__": "lab_queue_notifications",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "state": "delayed"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "__name__": "lab_queue_notifications",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "state": "ready"
+          },
+          "min": 0.0,
+          "max": 18.0,
+          "mean": 7.75
+        },
+        {
+          "labels": {
+            "__name__": "lab_queue_notifications",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "state": "reserved"
+          },
+          "min": 1.0,
+          "max": 2.0,
+          "mean": 1.8333333333333333
+        }
+      ],
+      "fpm_queue": [
+        {
+          "labels": {
+            "__name__": "phpfpm_listen_queue",
+            "instance": "10.244.0.54:8082",
+            "job": "api-fpm"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "__name__": "phpfpm_listen_queue",
+            "instance": "10.244.0.56:8082",
+            "job": "api-fpm"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        }
+      ],
+      "fpm_active": [
+        {
+          "labels": {
+            "__name__": "phpfpm_active_processes",
+            "instance": "10.244.0.54:8082",
+            "job": "api-fpm"
+          },
+          "min": 0.0,
+          "max": 2.0,
+          "mean": 0.6666666666666666
+        },
+        {
+          "labels": {
+            "__name__": "phpfpm_active_processes",
+            "instance": "10.244.0.56:8082",
+            "job": "api-fpm"
+          },
+          "min": 0.0,
+          "max": 3.0,
+          "mean": 0.9166666666666666
+        }
+      ],
+      "redis_queue": [
+        {
+          "labels": {
+            "__name__": "lab_redis_queue_jobs",
+            "instance": "exporter:8080",
+            "job": "lab-exporter"
+          },
+          "min": 0.0,
+          "max": 18.0,
+          "mean": 7.75
+        }
+      ],
+      "host_cpu": [
+        {
+          "labels": {},
+          "min": 1.6941999999999748,
+          "max": 5.090400000000046,
+          "mean": 4.452049999999997
+        }
+      ],
+      "host_memory": [
+        {
+          "labels": {
+            "__name__": "lab_host_memory_bytes",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "kind": "MemAvailable"
+          },
+          "min": 21122949120.0,
+          "max": 21349859328.0,
+          "mean": 21186714624.0
+        }
+      ],
+      "transport_failures": [
+        {
+          "labels": {
+            "__name__": "lab_notification_failures_total",
+            "instance": "exporter:8080",
+            "job": "lab-exporter"
+          },
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0
+        }
+      ],
+      "dispatch": [
+        {
+          "labels": {
+            "__name__": "lab_dispatch_total",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "outcome": "error"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "__name__": "lab_dispatch_total",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "outcome": "queued"
+          },
+          "min": 221300.0,
+          "max": 226251.0,
+          "mean": 223775.5
+        },
+        {
+          "labels": {
+            "__name__": "lab_dispatch_total",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "outcome": "suppressed"
+          },
+          "min": 63.0,
+          "max": 63.0,
+          "mean": 63.0
+        }
+      ]
+    }
+  },
+  "60rps-180s": {
+    "sample_count": 51,
+    "sample_errors": 0,
+    "max_transaction_seconds": 8.009,
+    "session_sample_counts": [
+      {
+        "operation": "metrics",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "count": 6
+      },
+      {
+        "operation": "metrics",
+        "wait_type": "Lock",
+        "wait_event": "transactionid",
+        "count": 25
+      },
+      {
+        "operation": "metrics",
+        "wait_type": "running",
+        "wait_event": "none",
+        "count": 32
+      },
+      {
+        "operation": "other",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "count": 26
+      },
+      {
+        "operation": "other",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "count": 13
+      },
+      {
+        "operation": "other",
+        "wait_type": "running",
+        "wait_event": "none",
+        "count": 31
+      },
+      {
+        "operation": "reports",
+        "wait_type": "running",
+        "wait_event": "none",
+        "count": 165
+      },
+      {
+        "operation": "other",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "count": 12
+      },
+      {
+        "operation": "reports",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "count": 5
+      },
+      {
+        "operation": "metrics",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "count": 3
+      },
+      {
+        "operation": "metrics",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "count": 10
+      },
+      {
+        "operation": "reports",
+        "wait_type": "IPC",
+        "wait_event": "ExecuteGather",
+        "count": 2
+      },
+      {
+        "operation": "reports",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "count": 5
+      },
+      {
+        "operation": "reports",
+        "wait_type": "IPC",
+        "wait_event": "BgworkerShutdown",
+        "count": 7
+      },
+      {
+        "operation": "metrics",
+        "wait_type": "LWLock",
+        "wait_event": "LockManager",
+        "count": 1
+      },
+      {
+        "operation": "reports",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "count": 10
+      },
+      {
+        "operation": "reports",
+        "wait_type": "Lock",
+        "wait_event": "transactionid",
+        "count": 2
+      },
+      {
+        "operation": "metrics",
+        "wait_type": "Timeout",
+        "wait_event": "VacuumDelay",
+        "count": 1
+      },
+      {
+        "operation": "metrics",
+        "wait_type": "IO",
+        "wait_event": "WalWrite",
+        "count": 1
+      }
+    ],
+    "resources": {
+      "cpu": [
+        {
+          "labels": {
+            "container": "alertmanager",
+            "pod": "alertmanager-c9474ff4f-slgvf"
+          },
+          "min": 0.0015542840303529033,
+          "max": 0.0028031618982742863,
+          "mean": 0.0022257976313702853
+        },
+        {
+          "labels": {
+            "container": "alloy",
+            "pod": "alloy-6d6fc9cf66-b8xtc"
+          },
+          "min": 0.015801018938576064,
+          "max": 0.07211388410785999,
+          "mean": 0.056496054233357074
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 0.010158263607349192,
+          "max": 0.8044592723419289,
+          "mean": 0.6593971745240271
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 0.13998501708760497,
+          "max": 0.7658504362451384,
+          "mean": 0.6742468691138964
+        },
+        {
+          "labels": {
+            "container": "exporter",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 0.01147710720218068,
+          "max": 0.022697863494629864,
+          "mean": 0.020479282313483484
+        },
+        {
+          "labels": {
+            "container": "gateway",
+            "pod": "gateway-cd9dfc89d-zdmtz"
+          },
+          "min": 0.007392998908981186,
+          "max": 0.03184293873312566,
+          "mean": 0.025809326471930672
+        },
+        {
+          "labels": {
+            "container": "grafana",
+            "pod": "grafana-5cddf4777f-g6xk4"
+          },
+          "min": 0.022310524655657138,
+          "max": 0.03679593972829764,
+          "mean": 0.03067149788390222
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 0.002777637373157189,
+          "max": 0.015676407869049416,
+          "mean": 0.012255108433194398
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 0.00033879537393437,
+          "max": 0.015222874202182416,
+          "mean": 0.012468188922227494
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 0.00030854404765759,
+          "max": 0.00040654740023689923,
+          "mean": 0.00037204820529040315
+        },
+        {
+          "labels": {
+            "container": "kube-state-metrics",
+            "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+          },
+          "min": 0.0005750413662084064,
+          "max": 0.0012730576407862268,
+          "mean": 0.0009399077567932195
+        },
+        {
+          "labels": {
+            "container": "loki",
+            "pod": "loki-597488bd7d-hrbbn"
+          },
+          "min": 0.010374761262779437,
+          "max": 0.018391724257583376,
+          "mean": 0.0160025883659339
+        },
+        {
+          "labels": {
+            "container": "mailpit",
+            "pod": "mailpit-55c5466dc-r8n2d"
+          },
+          "min": 0.0003262997017280096,
+          "max": 0.00063359490884733,
+          "mean": 0.00045792347667298396
+        },
+        {
+          "labels": {
+            "container": "postgres",
+            "pod": "postgres-5f7965d6c4-rwngq"
+          },
+          "min": 0.34518208251867,
+          "max": 2.000505365941461,
+          "mean": 1.7657226196304008
+        },
+        {
+          "labels": {
+            "container": "prometheus",
+            "pod": "prometheus-5497f6dd5c-qqg5h"
+          },
+          "min": 0.017624086178232783,
+          "max": 0.025574317910774576,
+          "mean": 0.021706435761712873
+        },
+        {
+          "labels": {
+            "container": "redis",
+            "pod": "redis-587dcb4467-nmtb2"
+          },
+          "min": 0.01170942428374798,
+          "max": 0.07710770629098311,
+          "mean": 0.06483816919932937
+        },
+        {
+          "labels": {
+            "container": "scheduler",
+            "pod": "scheduler-659c7b8689-gnflg"
+          },
+          "min": 0.05744629011900471,
+          "max": 0.15275435942868237,
+          "mean": 0.12448569690680567
+        },
+        {
+          "labels": {
+            "container": "simulator",
+            "pod": "simulator-d4bb56bcd-cfxm2"
+          },
+          "min": 0.003917712338544768,
+          "max": 0.03259535162056245,
+          "mean": 0.026622764246930563
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-flb5l"
+          },
+          "min": 0.04127395969761724,
+          "max": 0.15968129907209136,
+          "mean": 0.13899555970243685
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-p2qln"
+          },
+          "min": 0.025105791631721178,
+          "max": 0.16104705001987693,
+          "mean": 0.1342958629572228
+        }
+      ],
+      "throttling": [
+        {
+          "labels": {
+            "container": "alertmanager",
+            "pod": "alertmanager-c9474ff4f-slgvf"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "alloy",
+            "pod": "alloy-6d6fc9cf66-b8xtc"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 0.00041531527645993326,
+          "max": 0.16447344872247735,
+          "mean": 0.08814141579979323
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 0.04727950737684421,
+          "max": 0.20383607760049333,
+          "mean": 0.12849841771315648
+        },
+        {
+          "labels": {
+            "container": "exporter",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "gateway",
+            "pod": "gateway-cd9dfc89d-zdmtz"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "grafana",
+            "pod": "grafana-5cddf4777f-g6xk4"
+          },
+          "min": 0.0,
+          "max": 0.00685499677627337,
+          "mean": 0.002454191780305691
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "kube-state-metrics",
+            "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "loki",
+            "pod": "loki-597488bd7d-hrbbn"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "mailpit",
+            "pod": "mailpit-55c5466dc-r8n2d"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "postgres",
+            "pod": "postgres-5f7965d6c4-rwngq"
+          },
+          "min": 0.03225076452599366,
+          "max": 2.67639122045345,
+          "mean": 2.2043178913335137
+        },
+        {
+          "labels": {
+            "container": "prometheus",
+            "pod": "prometheus-5497f6dd5c-qqg5h"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "redis",
+            "pod": "redis-587dcb4467-nmtb2"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "scheduler",
+            "pod": "scheduler-659c7b8689-gnflg"
+          },
+          "min": 0.0,
+          "max": 0.00468512177789263,
+          "mean": 0.0009934105146635636
+        },
+        {
+          "labels": {
+            "container": "simulator",
+            "pod": "simulator-d4bb56bcd-cfxm2"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-flb5l"
+          },
+          "min": 0.00015807016433558999,
+          "max": 0.001237609878610297,
+          "mean": 0.00068014257373616
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-p2qln"
+          },
+          "min": 0.0,
+          "max": 0.000407716921929852,
+          "mean": 0.00013817119648458926
+        }
+      ],
+      "memory": [
+        {
+          "labels": {
+            "container": "alertmanager",
+            "pod": "alertmanager-c9474ff4f-slgvf"
+          },
+          "min": 19038208.0,
+          "max": 20078592.0,
+          "mean": 19488768.0
+        },
+        {
+          "labels": {
+            "container": "alloy",
+            "pod": "alloy-6d6fc9cf66-b8xtc"
+          },
+          "min": 70832128.0,
+          "max": 72429568.0,
+          "mean": 71441354.10526316
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 41824256.0,
+          "max": 43462656.0,
+          "mean": 42379587.368421055
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 40685568.0,
+          "max": 42225664.0,
+          "mean": 41433195.78947368
+        },
+        {
+          "labels": {
+            "container": "exporter",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 40030208.0,
+          "max": 40591360.0,
+          "mean": 40153088.0
+        },
+        {
+          "labels": {
+            "container": "gateway",
+            "pod": "gateway-cd9dfc89d-zdmtz"
+          },
+          "min": 5754880.0,
+          "max": 9555968.0,
+          "mean": 8675974.736842105
+        },
+        {
+          "labels": {
+            "container": "grafana",
+            "pod": "grafana-5cddf4777f-g6xk4"
+          },
+          "min": 802959360.0,
+          "max": 824311808.0,
+          "mean": 814095306.1052631
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 3026944.0,
+          "max": 8880128.0,
+          "mean": 6554031.157894737
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 3006464.0,
+          "max": 9437184.0,
+          "mean": 6107136.0
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 2740224.0,
+          "max": 2998272.0,
+          "mean": 2753805.4736842103
+        },
+        {
+          "labels": {
+            "container": "kube-state-metrics",
+            "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+          },
+          "min": 11698176.0,
+          "max": 13512704.0,
+          "mean": 12622147.368421054
+        },
+        {
+          "labels": {
+            "container": "loki",
+            "pod": "loki-597488bd7d-hrbbn"
+          },
+          "min": 120680448.0,
+          "max": 130170880.0,
+          "mean": 126834149.05263157
+        },
+        {
+          "labels": {
+            "container": "mailpit",
+            "pod": "mailpit-55c5466dc-r8n2d"
+          },
+          "min": 7692288.0,
+          "max": 8101888.0,
+          "mean": 7948611.368421053
+        },
+        {
+          "labels": {
+            "container": "postgres",
+            "pod": "postgres-5f7965d6c4-rwngq"
+          },
+          "min": 155598848.0,
+          "max": 194109440.0,
+          "mean": 182373537.68421054
+        },
+        {
+          "labels": {
+            "container": "prometheus",
+            "pod": "prometheus-5497f6dd5c-qqg5h"
+          },
+          "min": 122679296.0,
+          "max": 136617984.0,
+          "mean": 129581487.15789473
+        },
+        {
+          "labels": {
+            "container": "redis",
+            "pod": "redis-587dcb4467-nmtb2"
+          },
+          "min": 5906432.0,
+          "max": 13312000.0,
+          "mean": 9586795.789473685
+        },
+        {
+          "labels": {
+            "container": "scheduler",
+            "pod": "scheduler-659c7b8689-gnflg"
+          },
+          "min": 61259776.0,
+          "max": 157548544.0,
+          "mean": 97028419.36842105
+        },
+        {
+          "labels": {
+            "container": "simulator",
+            "pod": "simulator-d4bb56bcd-cfxm2"
+          },
+          "min": 22351872.0,
+          "max": 23199744.0,
+          "mean": 22531018.10526316
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-flb5l"
+          },
+          "min": 39239680.0,
+          "max": 65007616.0,
+          "mean": 40772877.473684214
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-p2qln"
+          },
+          "min": 38764544.0,
+          "max": 56311808.0,
+          "mean": 39854726.7368421
+        }
+      ],
+      "notifications": [
+        {
+          "labels": {
+            "__name__": "lab_queue_notifications",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "state": "delayed"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "__name__": "lab_queue_notifications",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "state": "ready"
+          },
+          "min": 278.0,
+          "max": 278.0,
+          "mean": 278.0
+        },
+        {
+          "labels": {
+            "__name__": "lab_queue_notifications",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "state": "reserved"
+          },
+          "min": 2.0,
+          "max": 2.0,
+          "mean": 2.0
+        }
+      ],
+      "fpm_queue": [
+        {
+          "labels": {
+            "__name__": "phpfpm_listen_queue",
+            "instance": "10.244.0.54:8082",
+            "job": "api-fpm"
+          },
+          "min": 24.0,
+          "max": 252.0,
+          "mean": 119.05263157894737
+        },
+        {
+          "labels": {
+            "__name__": "phpfpm_listen_queue",
+            "instance": "10.244.0.56:8082",
+            "job": "api-fpm"
+          },
+          "min": 0.0,
+          "max": 227.0,
+          "mean": 124.05263157894737
+        }
+      ],
+      "fpm_active": [
+        {
+          "labels": {
+            "__name__": "phpfpm_active_processes",
+            "instance": "10.244.0.54:8082",
+            "job": "api-fpm"
+          },
+          "min": 4.0,
+          "max": 4.0,
+          "mean": 4.0
+        },
+        {
+          "labels": {
+            "__name__": "phpfpm_active_processes",
+            "instance": "10.244.0.56:8082",
+            "job": "api-fpm"
+          },
+          "min": 2.0,
+          "max": 4.0,
+          "mean": 3.8947368421052633
+        }
+      ],
+      "redis_queue": [
+        {
+          "labels": {
+            "__name__": "lab_redis_queue_jobs",
+            "instance": "exporter:8080",
+            "job": "lab-exporter"
+          },
+          "min": 278.0,
+          "max": 278.0,
+          "mean": 278.0
+        }
+      ],
+      "host_cpu": [
+        {
+          "labels": {},
+          "min": 1.7334000000000667,
+          "max": 7.277999999999972,
+          "mean": 6.42946331861282
+        }
+      ],
+      "host_memory": [
+        {
+          "labels": {
+            "__name__": "lab_host_memory_bytes",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "kind": "MemAvailable"
+          },
+          "min": 20722200576.0,
+          "max": 21049917440.0,
+          "mean": 20807760410.94737
+        }
+      ],
+      "transport_failures": [
+        {
+          "labels": {
+            "__name__": "lab_notification_failures_total",
+            "instance": "exporter:8080",
+            "job": "lab-exporter"
+          },
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0
+        }
+      ],
+      "dispatch": [
+        {
+          "labels": {
+            "__name__": "lab_dispatch_total",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "outcome": "error"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "__name__": "lab_dispatch_total",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "outcome": "queued"
+          },
+          "min": 226841.0,
+          "max": 226841.0,
+          "mean": 226841.0
+        },
+        {
+          "labels": {
+            "__name__": "lab_dispatch_total",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "outcome": "suppressed"
+          },
+          "min": 63.0,
+          "max": 63.0,
+          "mean": 63.0
+        }
+      ]
+    }
+  },
+  "30rps-600s": {
+    "sample_count": 115,
+    "sample_errors": 0,
+    "max_transaction_seconds": 4.289,
+    "session_sample_counts": [
+      {
+        "operation": "reports",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "count": 6
+      },
+      {
+        "operation": "other",
+        "wait_type": "running",
+        "wait_event": "none",
+        "count": 8
+      },
+      {
+        "operation": "reports",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "count": 13
+      },
+      {
+        "operation": "other",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "count": 35
+      },
+      {
+        "operation": "other",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "count": 29
+      },
+      {
+        "operation": "reports",
+        "wait_type": "running",
+        "wait_event": "none",
+        "count": 91
+      },
+      {
+        "operation": "reports",
+        "wait_type": "IPC",
+        "wait_event": "BgworkerShutdown",
+        "count": 5
+      },
+      {
+        "operation": "metrics",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "count": 5
+      },
+      {
+        "operation": "metrics",
+        "wait_type": "IO",
+        "wait_event": "WalSync",
+        "count": 6
+      },
+      {
+        "operation": "other",
+        "wait_type": "Client",
+        "wait_event": "ClientRead",
+        "count": 22
+      },
+      {
+        "operation": "metrics",
+        "wait_type": "Lock",
+        "wait_event": "transactionid",
+        "count": 13
+      },
+      {
+        "operation": "metrics",
+        "wait_type": "running",
+        "wait_event": "none",
+        "count": 8
+      },
+      {
+        "operation": "reports",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "count": 3
+      },
+      {
+        "operation": "metrics",
+        "wait_type": "LWLock",
+        "wait_event": "WALWrite",
+        "count": 4
+      },
+      {
+        "operation": "reports",
+        "wait_type": "IO",
+        "wait_event": "WalWrite",
+        "count": 2
+      },
+      {
+        "operation": "other",
+        "wait_type": "IO",
+        "wait_event": "WalWrite",
+        "count": 1
+      }
+    ],
+    "resources": {
+      "cpu": [
+        {
+          "labels": {
+            "container": "alertmanager",
+            "pod": "alertmanager-c9474ff4f-slgvf"
+          },
+          "min": 0.0008733906454179356,
+          "max": 0.001738287921919532,
+          "mean": 0.0013389727229099146
+        },
+        {
+          "labels": {
+            "container": "alloy",
+            "pod": "alloy-6d6fc9cf66-b8xtc"
+          },
+          "min": 0.04456709085528258,
+          "max": 0.07507954411591437,
+          "mean": 0.06180051483387468
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 0.017204998472771668,
+          "max": 0.5171357578856555,
+          "mean": 0.3962668510458579
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 0.003860380479735395,
+          "max": 0.4822407429072835,
+          "mean": 0.37887742025609483
+        },
+        {
+          "labels": {
+            "container": "exporter",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 0.011572640428279381,
+          "max": 0.01839967815475395,
+          "mean": 0.014832769365530189
+        },
+        {
+          "labels": {
+            "container": "gateway",
+            "pod": "gateway-cd9dfc89d-zdmtz"
+          },
+          "min": 0.0006809138439770651,
+          "max": 0.02154503271115932,
+          "mean": 0.017408361164408408
+        },
+        {
+          "labels": {
+            "container": "grafana",
+            "pod": "grafana-5cddf4777f-g6xk4"
+          },
+          "min": 0.01563479999999995,
+          "max": 0.0308615795415853,
+          "mean": 0.024409157769182892
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 0.00031402017006130784,
+          "max": 0.010000648208167462,
+          "mean": 0.007995096456928641
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 0.00028044941946510355,
+          "max": 0.009791548332807414,
+          "mean": 0.007700997402169664
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 0.00025484044264917935,
+          "max": 0.00040154352315284713,
+          "mean": 0.0003217686139304687
+        },
+        {
+          "labels": {
+            "container": "kube-state-metrics",
+            "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+          },
+          "min": 0.0004416607805050314,
+          "max": 0.0008518959003777832,
+          "mean": 0.0005918296383696717
+        },
+        {
+          "labels": {
+            "container": "loki",
+            "pod": "loki-597488bd7d-hrbbn"
+          },
+          "min": 0.01073710978510738,
+          "max": 0.015437641615188393,
+          "mean": 0.013676741025667294
+        },
+        {
+          "labels": {
+            "container": "mailpit",
+            "pod": "mailpit-55c5466dc-r8n2d"
+          },
+          "min": 0.00020911278195489348,
+          "max": 0.00046841286028663905,
+          "mean": 0.0002886986230328752
+        },
+        {
+          "labels": {
+            "container": "postgres",
+            "pod": "postgres-5f7965d6c4-rwngq"
+          },
+          "min": 0.6890329749999865,
+          "max": 1.5446369264847342,
+          "mean": 1.1883974840830391
+        },
+        {
+          "labels": {
+            "container": "prometheus",
+            "pod": "prometheus-5497f6dd5c-qqg5h"
+          },
+          "min": 0.013010244566156164,
+          "max": 0.0219820497478415,
+          "mean": 0.018001746813196842
+        },
+        {
+          "labels": {
+            "container": "redis",
+            "pod": "redis-587dcb4467-nmtb2"
+          },
+          "min": 0.04254621297896725,
+          "max": 0.06745570349507006,
+          "mean": 0.054816819425799336
+        },
+        {
+          "labels": {
+            "container": "scheduler",
+            "pod": "scheduler-659c7b8689-gnflg"
+          },
+          "min": 0.056815126158645375,
+          "max": 0.13478545896000563,
+          "mean": 0.07065658285293454
+        },
+        {
+          "labels": {
+            "container": "simulator",
+            "pod": "simulator-d4bb56bcd-cfxm2"
+          },
+          "min": 0.03191069832010932,
+          "max": 0.05514746174746205,
+          "mean": 0.04044140191596341
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-flb5l"
+          },
+          "min": 0.12961500414465446,
+          "max": 0.18611397747627192,
+          "mean": 0.1591537701179339
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-p2qln"
+          },
+          "min": 0.09658712499999994,
+          "max": 0.18241286754788216,
+          "mean": 0.15281361031817528
+        }
+      ],
+      "throttling": [
+        {
+          "labels": {
+            "container": "alertmanager",
+            "pod": "alertmanager-c9474ff4f-slgvf"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "alloy",
+            "pod": "alloy-6d6fc9cf66-b8xtc"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 0.0,
+          "max": 0.0318346989772199,
+          "mean": 0.004634723836255261
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 0.0,
+          "max": 0.026229940216552033,
+          "mean": 0.008521836230332818
+        },
+        {
+          "labels": {
+            "container": "exporter",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "gateway",
+            "pod": "gateway-cd9dfc89d-zdmtz"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "grafana",
+            "pod": "grafana-5cddf4777f-g6xk4"
+          },
+          "min": 0.0,
+          "max": 0.0025129960779099935,
+          "mean": 0.0006201640000682097
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "kube-state-metrics",
+            "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "loki",
+            "pod": "loki-597488bd7d-hrbbn"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "mailpit",
+            "pod": "mailpit-55c5466dc-r8n2d"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "postgres",
+            "pod": "postgres-5f7965d6c4-rwngq"
+          },
+          "min": 0.12497926396413304,
+          "max": 0.8421839787933251,
+          "mean": 0.4730680531553363
+        },
+        {
+          "labels": {
+            "container": "prometheus",
+            "pod": "prometheus-5497f6dd5c-qqg5h"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "redis",
+            "pod": "redis-587dcb4467-nmtb2"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "scheduler",
+            "pod": "scheduler-659c7b8689-gnflg"
+          },
+          "min": 0.0,
+          "max": 0.0008994358377361867,
+          "mean": 0.0001765632582108356
+        },
+        {
+          "labels": {
+            "container": "simulator",
+            "pod": "simulator-d4bb56bcd-cfxm2"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-flb5l"
+          },
+          "min": 0.00053042033916468,
+          "max": 0.002041381424338405,
+          "mean": 0.0014716683204282271
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-p2qln"
+          },
+          "min": 0.0,
+          "max": 0.00018513110539845749,
+          "mean": 3.2047927310061935e-05
+        }
+      ],
+      "memory": [
+        {
+          "labels": {
+            "container": "alertmanager",
+            "pod": "alertmanager-c9474ff4f-slgvf"
+          },
+          "min": 19681280.0,
+          "max": 20992000.0,
+          "mean": 19956224.0
+        },
+        {
+          "labels": {
+            "container": "alloy",
+            "pod": "alloy-6d6fc9cf66-b8xtc"
+          },
+          "min": 71229440.0,
+          "max": 72302592.0,
+          "mean": 71687372.8
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 40972288.0,
+          "max": 43327488.0,
+          "mean": 42060902.4
+        },
+        {
+          "labels": {
+            "container": "api",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 40144896.0,
+          "max": 42864640.0,
+          "mean": 41468108.8
+        },
+        {
+          "labels": {
+            "container": "exporter",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 40042496.0,
+          "max": 40321024.0,
+          "mean": 40102502.4
+        },
+        {
+          "labels": {
+            "container": "gateway",
+            "pod": "gateway-cd9dfc89d-zdmtz"
+          },
+          "min": 3117056.0,
+          "max": 4497408.0,
+          "mean": 3720396.8
+        },
+        {
+          "labels": {
+            "container": "grafana",
+            "pod": "grafana-5cddf4777f-g6xk4"
+          },
+          "min": 677797888.0,
+          "max": 805908480.0,
+          "mean": 729669939.2
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-9jlnc"
+          },
+          "min": 2760704.0,
+          "max": 3801088.0,
+          "mean": 3013120.0
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "api-9db5b5c4c-fsw2h"
+          },
+          "min": 2756608.0,
+          "max": 3588096.0,
+          "mean": 2952396.8
+        },
+        {
+          "labels": {
+            "container": "http",
+            "pod": "exporter-db47bbd74-6c5vc"
+          },
+          "min": 2736128.0,
+          "max": 2973696.0,
+          "mean": 2749849.6
+        },
+        {
+          "labels": {
+            "container": "kube-state-metrics",
+            "pod": "kube-state-metrics-7f6f6875d7-fpwwm"
+          },
+          "min": 11673600.0,
+          "max": 12111872.0,
+          "mean": 11777638.4
+        },
+        {
+          "labels": {
+            "container": "loki",
+            "pod": "loki-597488bd7d-hrbbn"
+          },
+          "min": 134950912.0,
+          "max": 151744512.0,
+          "mean": 144739225.6
+        },
+        {
+          "labels": {
+            "container": "mailpit",
+            "pod": "mailpit-55c5466dc-r8n2d"
+          },
+          "min": 8417280.0,
+          "max": 8421376.0,
+          "mean": 8420659.2
+        },
+        {
+          "labels": {
+            "container": "postgres",
+            "pod": "postgres-5f7965d6c4-rwngq"
+          },
+          "min": 164151296.0,
+          "max": 194351104.0,
+          "mean": 175171686.4
+        },
+        {
+          "labels": {
+            "container": "prometheus",
+            "pod": "prometheus-5497f6dd5c-qqg5h"
+          },
+          "min": 121733120.0,
+          "max": 136298496.0,
+          "mean": 128796057.6
+        },
+        {
+          "labels": {
+            "container": "redis",
+            "pod": "redis-587dcb4467-nmtb2"
+          },
+          "min": 5505024.0,
+          "max": 7782400.0,
+          "mean": 6195404.8
+        },
+        {
+          "labels": {
+            "container": "scheduler",
+            "pod": "scheduler-659c7b8689-gnflg"
+          },
+          "min": 61132800.0,
+          "max": 92786688.0,
+          "mean": 62241484.8
+        },
+        {
+          "labels": {
+            "container": "simulator",
+            "pod": "simulator-d4bb56bcd-cfxm2"
+          },
+          "min": 22351872.0,
+          "max": 23461888.0,
+          "mean": 22749696.0
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-flb5l"
+          },
+          "min": 39555072.0,
+          "max": 69738496.0,
+          "mean": 42161459.2
+        },
+        {
+          "labels": {
+            "container": "worker",
+            "pod": "worker-6c64d49769-p2qln"
+          },
+          "min": 38834176.0,
+          "max": 71770112.0,
+          "mean": 41237708.8
+        }
+      ],
+      "notifications": [
+        {
+          "labels": {
+            "__name__": "lab_queue_notifications",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "state": "delayed"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "__name__": "lab_queue_notifications",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "state": "ready"
+          },
+          "min": 0.0,
+          "max": 40.0,
+          "mean": 9.475
+        },
+        {
+          "labels": {
+            "__name__": "lab_queue_notifications",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "state": "reserved"
+          },
+          "min": 0.0,
+          "max": 2.0,
+          "mean": 1.825
+        }
+      ],
+      "fpm_queue": [
+        {
+          "labels": {
+            "__name__": "phpfpm_listen_queue",
+            "instance": "10.244.0.54:8082",
+            "job": "api-fpm"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "__name__": "phpfpm_listen_queue",
+            "instance": "10.244.0.56:8082",
+            "job": "api-fpm"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        }
+      ],
+      "fpm_active": [
+        {
+          "labels": {
+            "__name__": "phpfpm_active_processes",
+            "instance": "10.244.0.54:8082",
+            "job": "api-fpm"
+          },
+          "min": 0.0,
+          "max": 4.0,
+          "mean": 1.575
+        },
+        {
+          "labels": {
+            "__name__": "phpfpm_active_processes",
+            "instance": "10.244.0.56:8082",
+            "job": "api-fpm"
+          },
+          "min": 0.0,
+          "max": 4.0,
+          "mean": 0.95
+        }
+      ],
+      "redis_queue": [
+        {
+          "labels": {
+            "__name__": "lab_redis_queue_jobs",
+            "instance": "exporter:8080",
+            "job": "lab-exporter"
+          },
+          "min": 0.0,
+          "max": 40.0,
+          "mean": 9.425
+        }
+      ],
+      "host_cpu": [
+        {
+          "labels": {},
+          "min": 3.6088000000000116,
+          "max": 6.243200000000042,
+          "mean": 5.229270000000004
+        }
+      ],
+      "host_memory": [
+        {
+          "labels": {
+            "__name__": "lab_host_memory_bytes",
+            "instance": "lab-host-metrics:19100",
+            "job": "lab-host-docker",
+            "kind": "MemAvailable"
+          },
+          "min": 19639439360.0,
+          "max": 21006336000.0,
+          "mean": 20361003827.2
+        }
+      ],
+      "transport_failures": [
+        {
+          "labels": {
+            "__name__": "lab_notification_failures_total",
+            "instance": "exporter:8080",
+            "job": "lab-exporter"
+          },
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0
+        }
+      ],
+      "dispatch": [
+        {
+          "labels": {
+            "__name__": "lab_dispatch_total",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "outcome": "error"
+          },
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        {
+          "labels": {
+            "__name__": "lab_dispatch_total",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "outcome": "queued"
+          },
+          "min": 237274.0,
+          "max": 254786.0,
+          "mean": 246011.85
+        },
+        {
+          "labels": {
+            "__name__": "lab_dispatch_total",
+            "instance": "exporter:8080",
+            "job": "lab-exporter",
+            "outcome": "suppressed"
+          },
+          "min": 20050.0,
+          "max": 20050.0,
+          "mean": 20050.0
+        }
+      ]
+    }
+  }
+}

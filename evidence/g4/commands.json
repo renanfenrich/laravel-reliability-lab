@@ -1,0 +1,103 @@
+{
+  "recorded_utc": "2026-10-12T00:02:39.796149+00:00",
+  "application_and_experiment_source": "0fb29426c42cbe87a673fe2e629cc6b8c1c568c0",
+  "notes": "Times from command-owned artifacts; null is unknown rather than invented. Later documentation follows this tested/deployed application source. Preserve failed loads and raw logs.",
+  "commands": [
+    {
+      "command": "make build",
+      "result": "passed",
+      "artifact": "evidence/g4/build-final.log",
+      "start_utc": null,
+      "end_utc": null,
+      "artifact_mtime_utc": "2026-10-12T00:02:39.753646+00:00"
+    },
+    {
+      "command": "make test",
+      "result": "20 tests/96 assertions passed",
+      "artifact": "evidence/g4/application-tests.log",
+      "start_utc": null,
+      "end_utc": null,
+      "artifact_mtime_utc": "2026-10-11T23:23:28.555710+00:00"
+    },
+    {
+      "command": "make g4-pause-before",
+      "result": "passed: five waiting copies/report",
+      "artifact": "evidence/g4/pause-before-20261011T231633Z/result.json",
+      "start_utc": "2026-10-11T23:16:33Z",
+      "end_utc": "2026-10-11T23:17:15Z",
+      "artifact_mtime_utc": "2026-10-11T23:17:15.618958+00:00"
+    },
+    {
+      "command": "make g4-pause",
+      "result": "passed: one waiting copy/report",
+      "artifact": "evidence/g4/pause-after-20261011T232524Z/result.json",
+      "start_utc": "2026-10-11T23:25:24Z",
+      "end_utc": "2026-10-11T23:26:08Z",
+      "artifact_mtime_utc": "2026-10-11T23:26:08.082282+00:00"
+    },
+    {
+      "command": "make g4-preclaim",
+      "result": "passed: real pre-claim SIGKILL/recovery",
+      "artifact": "evidence/g4/preclaim-20261011T232706Z/result.json",
+      "start_utc": "2026-10-11T23:27:06Z",
+      "end_utc": "2026-10-11T23:27:32Z",
+      "artifact_mtime_utc": "2026-10-11T23:27:32.365425+00:00"
+    },
+    {
+      "command": "make g4-load",
+      "result": "executed: failed/generator-limited 60 step; 30rps confirmation passed",
+      "artifact": "evidence/g4/comparison-20261011T232836Z/result.json",
+      "start_utc": "2026-10-11T23:28:36Z",
+      "end_utc": "2026-10-11T23:54:34Z",
+      "artifact_mtime_utc": "2026-10-11T23:54:34.662966+00:00"
+    },
+    {
+      "command": "make g4-interruption",
+      "result": "passed: both workers/one result each",
+      "artifact": "evidence/g4/interruption-47498840da/result.json",
+      "start_utc": "2026-10-11T23:55:11Z",
+      "end_utc": "2026-10-11T23:57:14Z",
+      "artifact_mtime_utc": "2026-10-11T23:57:14.770940+00:00"
+    },
+    {
+      "command": "make dev-up",
+      "result": "passed; stores preserved",
+      "artifact": "evidence/g4/dev-up.log",
+      "start_utc": null,
+      "end_utc": null,
+      "artifact_mtime_utc": "2026-10-11T23:57:51.073481+00:00"
+    },
+    {
+      "command": "make verify",
+      "result": "passed: app/rules/native/Terraform/manifests/smoke/observability",
+      "artifact": "evidence/g4/final-verify.log",
+      "start_utc": null,
+      "end_utc": "2026-10-11T23:58:11Z",
+      "artifact_mtime_utc": "2026-10-11T23:58:11.166084+00:00"
+    },
+    {
+      "command": "strict kubeconform v0.7.0 / Kubernetes 1.34.0",
+      "result": "63 valid/0 skipped",
+      "artifact": "evidence/g4/schema-validation.log",
+      "start_utc": null,
+      "end_utc": null,
+      "artifact_mtime_utc": "2026-10-11T23:58:12.838007+00:00"
+    },
+    {
+      "command": "kubectl --kubeconfig .kubeconfig --context kind-laravel-reliability-lab -n lab apply --dry-run=server -f .runtime/g4-manifests.json",
+      "result": "passed",
+      "artifact": "evidence/g4/server-dry-run.log",
+      "start_utc": null,
+      "end_utc": null,
+      "artifact_mtime_utc": "2026-10-11T23:58:15.161005+00:00"
+    },
+    {
+      "command": "python3 scripts/verify-safety.py",
+      "result": "passed",
+      "artifact": "evidence/g4/safety.log",
+      "start_utc": null,
+      "end_utc": null,
+      "artifact_mtime_utc": "2026-10-12T00:01:51.409825+00:00"
+    }
+  ]
+}

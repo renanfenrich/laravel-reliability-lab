@@ -3,7 +3,7 @@
   "title": "Lab \u2014 Sistema, Docker e Kubernetes",
   "description": "Recursos medidos do notebook e do projeto. Host inclui outros processos; kind inclui pods: nunca somar estas camadas. Docker CLI arredonda IO. Aus\u00eancia de tr\u00e1fego pode produzir s\u00e9ries vazias; consulte sa\u00fade de coleta. N\u00e3o representa produ\u00e7\u00e3o.",
   "schemaVersion": 39,
-  "version": 2,
+  "version": 3,
   "tags": [
     "local-lab",
     "infrastructure"
@@ -1720,6 +1720,68 @@
       "fieldConfig": {
         "defaults": {
           "unit": "s"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 51,
+      "title": "Report notification queue: ready, reserved and delayed",
+      "type": "timeseries",
+      "datasource": {
+        "uid": "prometheus",
+        "type": "prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 188,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "lab_queue_notifications"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short"
+        }
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list"
+        }
+      }
+    },
+    {
+      "id": 52,
+      "title": "Actual dispatch publication, suppression and errors",
+      "type": "timeseries",
+      "datasource": {
+        "uid": "prometheus",
+        "type": "prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 188,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum by(outcome)(rate(lab_dispatch_total[1m]))"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short"
         }
       },
       "options": {

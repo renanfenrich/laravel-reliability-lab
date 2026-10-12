@@ -24,7 +24,7 @@ class Reports {
         // Record a short dispatch reservation first; a crash or Redis loss is repaired after 5 seconds.
         $n=DB::table('reports')->where('id',$id)->where('state','pending')->where('available_at','<=',now())->where('dispatch_after','<=',now())->update(['dispatch_after'=>now()->addSeconds(5)]);
         if (!$n) return;
-        try { ProcessReport::dispatch($id); Metrics::add('lab_dispatch_total',['outcome'=>'queued']); }
+        try { \Illuminate\Support\Facades\Queue::connection()->push(new ProcessReport($id)); }
         catch (\Throwable $e) { Metrics::add('lab_dispatch_total',['outcome'=>'error']); Log::warning('dispatch.failed',['report_id'=>$id,'exception'=>get_class($e)]); }
     }
     public function reconcile(): void {

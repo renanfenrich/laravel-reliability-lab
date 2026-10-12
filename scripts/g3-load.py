@@ -16,13 +16,17 @@ def pods():
  return [{'pod':p['metadata']['name'],'app':p['metadata']['labels'].get('app'),
           'containers':[{'name':c['name'],'ready':c['ready'],'restarts':c['restartCount'],'state':c['state'],'last_state':c.get('lastState')} for c in p['status'].get('containerStatuses',[])]}
          for p in data['items']]
-def main(mode):
+def notification_depth():
+ command="REDISCLI_AUTH=\"$REDIS_PASSWORD\" redis-cli --raw EVAL 'return cjson.encode({ready=redis.call(\"LLEN\",KEYS[1]),reserved=redis.call(\"ZCARD\",KEYS[2]),delayed=redis.call(\"ZCARD\",KEYS[3])})' 3 queues:reports queues:reports:reserved queues:reports:delayed"
+ return json.loads(kube('exec','deployment/redis','--','sh','-c',command))
+def main(mode,goal='g3'):
+ assert goal in ['g3','g4']
  assert mode in ['baseline','comparison']
- folder=ROOT/'evidence/g3'/(mode+'-'+time.strftime('%Y%m%dT%H%M%SZ',time.gmtime()));folder.mkdir(parents=True)
+ folder=ROOT/'evidence'/goal/(mode+'-'+time.strftime('%Y%m%dT%H%M%SZ',time.gmtime()));folder.mkdir(parents=True)
  def write(name,value):(folder/name).write_text(json.dumps(value,indent=2)+'\n')
  result={'start':utc(),'source_sha':sha(),'mode':mode,'configuration':json.loads((ROOT/'infra/manifests.json').read_text()),'pods_before':pods(),
          'host':subprocess.check_output(['sh','-c','free -b; df -B1 .; lscpu'],text=True),'steps':[],
-         'notes':'Same G2 arrival generator/256 threads/15s client timeout/cohort semantics. PostgreSQL active waits sampled every 5s via bounded statement_timeout=2s; no raw SQL or identities exported. Instrumentation overhead not isolated. Local load traffic only; no 30-day attainment.'}
+         'goal':goal,'notes':'Same G2 arrival generator/256 threads/15s client timeout/cohort semantics. PostgreSQL active waits sampled every 5s via bounded statement_timeout=2s; no raw SQL or identities exported. Instrumentation overhead not isolated. Local load traffic only; no 30-day attainment.'}
  write('progress.json',result);stop=threading.Event();diagnostics=[]
  def sample():
   while not stop.is_set():
@@ -32,6 +36,7 @@ def main(mode):
    diagnostics.append(row);write('diagnostics.json',diagnostics);stop.wait(5)
  thread=threading.Thread(target=sample);thread.start()
  try:
+  if goal=='g4':assert all(v==0 for v in notification_depth().values()),'Start with physically drained notification state'
   with forward('gateway',8080) as base,forward('prometheus',9090) as prom:
    for rps in ([60] if mode=='baseline' else [10,30,60]):
     print(utc(),'START',mode,rps,'rps x180s',flush=True)
@@ -41,9 +46,12 @@ def main(mode):
     if step['saturation_observed'] or step['generator_limited']:break
    drain=time.monotonic()+300
    while time.monotonic()<drain:
-    if all(cohort(s['prefix'])['unfinished']==0 for s in result['steps']):break
+    if all(cohort(s['prefix'])['unfinished']==0 for s in result['steps']) and (goal!='g4' or all(v==0 for v in notification_depth().values())):break
     time.sleep(3)
    result['backlog_drained']=all(cohort(s['prefix'])['unfinished']==0 for s in result['steps'])
+   if goal=='g4':
+    result['notification_depth_before_confirmation']=notification_depth()
+    assert all(v==0 for v in result['notification_depth_before_confirmation'].values()),'Notifications did not drain; confirmation unexecuted'
    result['drained_cohorts']=[cohort(s['prefix']) for s in result['steps']]
    assert result['backlog_drained'],'Backlog did not drain within 300s'
    if mode=='comparison':
@@ -53,9 +61,13 @@ def main(mode):
     c=g2.rate(base,selected,600);write('confirmation.json',c);result['confirmation']={k:v for k,v in c.items() if k!='samples'}
     result['confirmation_passed']=not c['saturation_observed'] and not c['generator_limited'] and c['both_replicas_used']
    end=time.time();start=min(s['start_epoch'] for s in result['steps'])
-   expressions={'fpm_queue':'phpfpm_listen_queue{job="api-fpm"}','fpm_active':'phpfpm_active_processes{job="api-fpm"}','pg_waits':'lab_postgres_sessions','pg_stats':'rate(lab_postgres_stat_total[1m])','redis_queue':'lab_redis_queue_jobs','cpu':'sum by(pod,container)(rate(container_cpu_usage_seconds_total{namespace="lab",container!=""}[1m]))','throttling':'sum by(pod,container)(rate(container_cpu_cfs_throttled_seconds_total{namespace="lab",container!=""}[1m]))','memory':'sum by(pod,container)(container_memory_working_set_bytes{namespace="lab",container!=""})','reports':'lab_reports','host_cpu':'sum(rate(lab_host_cpu_seconds_total{mode!="idle"}[1m]))','host_memory':'lab_host_memory_bytes{kind="MemAvailable"}'}
+   expressions={'notifications':'lab_queue_notifications','dispatch':'lab_dispatch_total','transport_failures':'lab_notification_failures_total','fpm_queue':'phpfpm_listen_queue{job="api-fpm"}','fpm_active':'phpfpm_active_processes{job="api-fpm"}','pg_waits':'lab_postgres_sessions','pg_stats':'rate(lab_postgres_stat_total[1m])','redis_queue':'lab_redis_queue_jobs','cpu':'sum by(pod,container)(rate(container_cpu_usage_seconds_total{namespace="lab",container!=""}[1m]))','throttling':'sum by(pod,container)(rate(container_cpu_cfs_throttled_seconds_total{namespace="lab",container!=""}[1m]))','memory':'sum by(pod,container)(container_memory_working_set_bytes{namespace="lab",container!=""})','reports':'lab_reports','host_cpu':'sum(rate(lab_host_cpu_seconds_total{mode!="idle"}[1m]))','host_memory':'lab_host_memory_bytes{kind="MemAvailable"}'}
+   if goal=='g3':
+    for name in ['notifications','transport_failures']:expressions.pop(name)
    result['resource_history']={name:g2.promquery(prom,expr,start,end) for name,expr in expressions.items()}
+   result['missing_resource_history']=[name for name,values in result['resource_history'].items() if not values]
    result['pods_after']=pods();result['end']=utc();write('result.json',result)
+   if goal=='g4':assert not result['missing_resource_history'],'Missing diagnostics; retain failure'
    if mode=='comparison':assert result['confirmation_passed'],'Confirmation failed; retained evidence'
  finally:
   stop.set();thread.join(timeout=10)
@@ -64,4 +76,4 @@ def main(mode):
   write('events.json',[{'reason':e.get('reason'),'message':e.get('message'),'first':e.get('firstTimestamp'),'last':e.get('lastTimestamp'),'count':e.get('count'),'object':e.get('involvedObject',{}).get('name')} for e in events['items']])
   result['end']=utc();write('progress.json',result)
  print('EXECUTED:',folder.relative_to(ROOT),flush=True)
-if __name__=='__main__':main(sys.argv[1] if len(sys.argv)>1 else 'comparison')
+if __name__=='__main__':main(sys.argv[1] if len(sys.argv)>1 else 'comparison',sys.argv[2] if len(sys.argv)>2 else 'g3')

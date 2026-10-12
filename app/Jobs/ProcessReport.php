@@ -10,7 +10,8 @@ use Illuminate\Support\Str;
 class ProcessReport implements ShouldQueue {
     use Queueable;
     public int $tries=1; public int $timeout=10;
-    public function __construct(public string $reportId) {}
+    public string $notificationKey=''; public string $notificationToken='';
+    public function __construct(public string $reportId) { $this->notificationToken=(string)Str::uuid(); }
     public function handle(): void {
         $token=(string)Str::uuid();
         $r=DB::transaction(function() use($token) {
@@ -20,6 +21,8 @@ class ProcessReport implements ShouldQueue {
             DB::table('reports')->where('id',$r->id)->update(['state'=>'processing','attempts'=>$r->attempts+1,'lease_token'=>$token,'lease_until'=>now()->addSeconds(15)]);
             $r->attempts++; Metrics::add('lab_attempts_total',['traffic'=>$r->traffic]); return $r;
         });
+        // SQL claim/no-op is committed before clearing only this delivery's guard.
+        \App\Queue\ReportRedisQueue::releaseGuard($this->notificationKey,$this->notificationToken);
         if(!$r) return;
         Log::info('report.processing',['report_id'=>$r->id,'request_id'=>$r->request_id,'attempt'=>$r->attempts]);
         $start=microtime(true); $error=null; $result=null;

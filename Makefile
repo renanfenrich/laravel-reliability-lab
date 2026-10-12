@@ -21,3 +21,17 @@ g3-runtime:
 .PHONY: g3-interruption
 g3-interruption:
 	@python3 -u scripts/g2-interruption.py g3
+
+.PHONY: g4-pause-before g4-pause g4-load g4-interruption
+g4-pause-before:
+	@python3 -u scripts/g4-pause.py before
+g4-pause:
+	@python3 -u scripts/g4-pause.py after
+g4-load:
+	@python3 -u scripts/g3-load.py comparison g4
+g4-interruption:
+	@python3 -u scripts/g2-interruption.py g4
+
+.PHONY: g4-preclaim
+g4-preclaim:
+	@python3 -u scripts/g4-preclaim.py

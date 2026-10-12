@@ -1,0 +1,2050 @@
+[
+  {
+    "reason": "Killing",
+    "message": "Stopping container api",
+    "first": "2026-10-11T23:22:30Z",
+    "last": "2026-10-11T23:22:30Z",
+    "count": 1,
+    "object": "api-7b675ddfb-85htx"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container http",
+    "first": "2026-10-11T23:22:30Z",
+    "last": "2026-10-11T23:22:30Z",
+    "count": 1,
+    "object": "api-7b675ddfb-85htx"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container api",
+    "first": "2026-10-11T23:22:34Z",
+    "last": "2026-10-11T23:22:34Z",
+    "count": 1,
+    "object": "api-7b675ddfb-st87r"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container http",
+    "first": "2026-10-11T23:22:34Z",
+    "last": "2026-10-11T23:22:34Z",
+    "count": 1,
+    "object": "api-7b675ddfb-st87r"
+  },
+  {
+    "reason": "SuccessfulDelete",
+    "message": "Deleted pod: api-7b675ddfb-85htx",
+    "first": "2026-10-11T23:22:30Z",
+    "last": "2026-10-11T23:22:30Z",
+    "count": 1,
+    "object": "api-7b675ddfb"
+  },
+  {
+    "reason": "SuccessfulDelete",
+    "message": "Deleted pod: api-7b675ddfb-st87r",
+    "first": "2026-10-11T23:22:34Z",
+    "last": "2026-10-11T23:22:34Z",
+    "count": 1,
+    "object": "api-7b675ddfb"
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned lab/api-85dfd54d44-b87sf to laravel-reliability-lab-control-plane",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "api-85dfd54d44-b87sf"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "api-85dfd54d44-b87sf"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: storage-init",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "api-85dfd54d44-b87sf"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container storage-init",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "api-85dfd54d44-b87sf"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "api-85dfd54d44-b87sf"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: api",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "api-85dfd54d44-b87sf"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container api",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "api-85dfd54d44-b87sf"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"nginx:1.30.5-alpine\" already present on machine",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "api-85dfd54d44-b87sf"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: http",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "api-85dfd54d44-b87sf"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container http",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "api-85dfd54d44-b87sf"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container api",
+    "first": "2026-10-11T23:25:23Z",
+    "last": "2026-10-11T23:25:23Z",
+    "count": 1,
+    "object": "api-85dfd54d44-b87sf"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container http",
+    "first": "2026-10-11T23:25:23Z",
+    "last": "2026-10-11T23:25:23Z",
+    "count": 1,
+    "object": "api-85dfd54d44-b87sf"
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned lab/api-85dfd54d44-rbz9s to laravel-reliability-lab-control-plane",
+    "first": "2026-10-11T23:22:30Z",
+    "last": "2026-10-11T23:22:30Z",
+    "count": 1,
+    "object": "api-85dfd54d44-rbz9s"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:22:31Z",
+    "last": "2026-10-11T23:22:31Z",
+    "count": 1,
+    "object": "api-85dfd54d44-rbz9s"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: storage-init",
+    "first": "2026-10-11T23:22:31Z",
+    "last": "2026-10-11T23:22:31Z",
+    "count": 1,
+    "object": "api-85dfd54d44-rbz9s"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container storage-init",
+    "first": "2026-10-11T23:22:31Z",
+    "last": "2026-10-11T23:22:31Z",
+    "count": 1,
+    "object": "api-85dfd54d44-rbz9s"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:22:32Z",
+    "last": "2026-10-11T23:22:32Z",
+    "count": 1,
+    "object": "api-85dfd54d44-rbz9s"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: api",
+    "first": "2026-10-11T23:22:32Z",
+    "last": "2026-10-11T23:22:32Z",
+    "count": 1,
+    "object": "api-85dfd54d44-rbz9s"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container api",
+    "first": "2026-10-11T23:22:32Z",
+    "last": "2026-10-11T23:22:32Z",
+    "count": 1,
+    "object": "api-85dfd54d44-rbz9s"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"nginx:1.30.5-alpine\" already present on machine",
+    "first": "2026-10-11T23:22:32Z",
+    "last": "2026-10-11T23:22:32Z",
+    "count": 1,
+    "object": "api-85dfd54d44-rbz9s"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: http",
+    "first": "2026-10-11T23:22:32Z",
+    "last": "2026-10-11T23:22:32Z",
+    "count": 1,
+    "object": "api-85dfd54d44-rbz9s"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container http",
+    "first": "2026-10-11T23:22:32Z",
+    "last": "2026-10-11T23:22:32Z",
+    "count": 1,
+    "object": "api-85dfd54d44-rbz9s"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container api",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "api-85dfd54d44-rbz9s"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container http",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "api-85dfd54d44-rbz9s"
+  },
+  {
+    "reason": "SuccessfulCreate",
+    "message": "Created pod: api-85dfd54d44-b87sf",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "api-85dfd54d44"
+  },
+  {
+    "reason": "SuccessfulCreate",
+    "message": "Created pod: api-85dfd54d44-rbz9s",
+    "first": "2026-10-11T23:22:30Z",
+    "last": "2026-10-11T23:22:30Z",
+    "count": 1,
+    "object": "api-85dfd54d44"
+  },
+  {
+    "reason": "SuccessfulDelete",
+    "message": "Deleted pod: api-85dfd54d44-rbz9s",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "api-85dfd54d44"
+  },
+  {
+    "reason": "SuccessfulDelete",
+    "message": "Deleted pod: api-85dfd54d44-b87sf",
+    "first": "2026-10-11T23:25:23Z",
+    "last": "2026-10-11T23:25:23Z",
+    "count": 1,
+    "object": "api-85dfd54d44"
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned lab/api-9db5b5c4c-9jlnc to laravel-reliability-lab-control-plane",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-9jlnc"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-9jlnc"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: storage-init",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-9jlnc"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container storage-init",
+    "first": "2026-10-11T23:25:20Z",
+    "last": "2026-10-11T23:25:20Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-9jlnc"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:25:21Z",
+    "last": "2026-10-11T23:25:21Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-9jlnc"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: api",
+    "first": "2026-10-11T23:25:21Z",
+    "last": "2026-10-11T23:25:21Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-9jlnc"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container api",
+    "first": "2026-10-11T23:25:21Z",
+    "last": "2026-10-11T23:25:21Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-9jlnc"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"nginx:1.30.5-alpine\" already present on machine",
+    "first": "2026-10-11T23:25:21Z",
+    "last": "2026-10-11T23:25:21Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-9jlnc"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: http",
+    "first": "2026-10-11T23:25:21Z",
+    "last": "2026-10-11T23:25:21Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-9jlnc"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container http",
+    "first": "2026-10-11T23:25:21Z",
+    "last": "2026-10-11T23:25:21Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-9jlnc"
+  },
+  {
+    "reason": "Unhealthy",
+    "message": "Readiness probe failed: Get \"http://10.244.0.56:8080/api/ready\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+    "first": "2026-10-11T23:36:56Z",
+    "last": "2026-10-11T23:39:16Z",
+    "count": 25,
+    "object": "api-9db5b5c4c-9jlnc"
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned lab/api-9db5b5c4c-fsw2h to laravel-reliability-lab-control-plane",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-fsw2h"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-fsw2h"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: storage-init",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-fsw2h"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container storage-init",
+    "first": "2026-10-11T23:25:16Z",
+    "last": "2026-10-11T23:25:16Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-fsw2h"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:25:17Z",
+    "last": "2026-10-11T23:25:17Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-fsw2h"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: api",
+    "first": "2026-10-11T23:25:17Z",
+    "last": "2026-10-11T23:25:17Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-fsw2h"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container api",
+    "first": "2026-10-11T23:25:17Z",
+    "last": "2026-10-11T23:25:17Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-fsw2h"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"nginx:1.30.5-alpine\" already present on machine",
+    "first": "2026-10-11T23:25:17Z",
+    "last": "2026-10-11T23:25:17Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-fsw2h"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: http",
+    "first": "2026-10-11T23:25:17Z",
+    "last": "2026-10-11T23:25:17Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-fsw2h"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container http",
+    "first": "2026-10-11T23:25:17Z",
+    "last": "2026-10-11T23:25:17Z",
+    "count": 1,
+    "object": "api-9db5b5c4c-fsw2h"
+  },
+  {
+    "reason": "Unhealthy",
+    "message": "Readiness probe failed: Get \"http://10.244.0.54:8080/api/ready\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+    "first": "2026-10-11T23:37:02Z",
+    "last": "2026-10-11T23:39:29Z",
+    "count": 25,
+    "object": "api-9db5b5c4c-fsw2h"
+  },
+  {
+    "reason": "SuccessfulCreate",
+    "message": "Created pod: api-9db5b5c4c-fsw2h",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "api-9db5b5c4c"
+  },
+  {
+    "reason": "SuccessfulCreate",
+    "message": "Created pod: api-9db5b5c4c-9jlnc",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "api-9db5b5c4c"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled up replica set api-85dfd54d44 from 0 to 1",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "api"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled down replica set api-7b675ddfb from 2 to 1",
+    "first": "2026-10-11T23:22:30Z",
+    "last": "2026-10-11T23:22:30Z",
+    "count": 1,
+    "object": "api"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled up replica set api-85dfd54d44 from 1 to 2",
+    "first": "2026-10-11T23:22:30Z",
+    "last": "2026-10-11T23:22:30Z",
+    "count": 1,
+    "object": "api"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled down replica set api-7b675ddfb from 1 to 0",
+    "first": "2026-10-11T23:22:34Z",
+    "last": "2026-10-11T23:22:34Z",
+    "count": 1,
+    "object": "api"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled up replica set api-9db5b5c4c from 0 to 1",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "api"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled down replica set api-85dfd54d44 from 2 to 1",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "api"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled up replica set api-9db5b5c4c from 1 to 2",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "api"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled down replica set api-85dfd54d44 from 1 to 0",
+    "first": "2026-10-11T23:25:23Z",
+    "last": "2026-10-11T23:25:23Z",
+    "count": 1,
+    "object": "api"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container exporter",
+    "first": "2026-10-11T23:22:29Z",
+    "last": "2026-10-11T23:22:29Z",
+    "count": 1,
+    "object": "exporter-7cf67b46d5-4rdxf"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container http",
+    "first": "2026-10-11T23:22:29Z",
+    "last": "2026-10-11T23:22:29Z",
+    "count": 1,
+    "object": "exporter-7cf67b46d5-4rdxf"
+  },
+  {
+    "reason": "SuccessfulDelete",
+    "message": "Deleted pod: exporter-7cf67b46d5-4rdxf",
+    "first": "2026-10-11T23:22:29Z",
+    "last": "2026-10-11T23:22:29Z",
+    "count": 1,
+    "object": "exporter-7cf67b46d5"
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned lab/exporter-85fcd69cd5-jkhss to laravel-reliability-lab-control-plane",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "exporter-85fcd69cd5-jkhss"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "exporter-85fcd69cd5-jkhss"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: storage-init",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "exporter-85fcd69cd5-jkhss"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container storage-init",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "exporter-85fcd69cd5-jkhss"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "exporter-85fcd69cd5-jkhss"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: exporter",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "exporter-85fcd69cd5-jkhss"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container exporter",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "exporter-85fcd69cd5-jkhss"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"nginx:1.30.5-alpine\" already present on machine",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "exporter-85fcd69cd5-jkhss"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: http",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "exporter-85fcd69cd5-jkhss"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container http",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "exporter-85fcd69cd5-jkhss"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container exporter",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "exporter-85fcd69cd5-jkhss"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container http",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "exporter-85fcd69cd5-jkhss"
+  },
+  {
+    "reason": "SuccessfulCreate",
+    "message": "Created pod: exporter-85fcd69cd5-jkhss",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "exporter-85fcd69cd5"
+  },
+  {
+    "reason": "SuccessfulDelete",
+    "message": "Deleted pod: exporter-85fcd69cd5-jkhss",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "exporter-85fcd69cd5"
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned lab/exporter-db47bbd74-6c5vc to laravel-reliability-lab-control-plane",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "exporter-db47bbd74-6c5vc"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "exporter-db47bbd74-6c5vc"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: storage-init",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "exporter-db47bbd74-6c5vc"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container storage-init",
+    "first": "2026-10-11T23:25:16Z",
+    "last": "2026-10-11T23:25:16Z",
+    "count": 1,
+    "object": "exporter-db47bbd74-6c5vc"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:25:17Z",
+    "last": "2026-10-11T23:25:17Z",
+    "count": 1,
+    "object": "exporter-db47bbd74-6c5vc"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: exporter",
+    "first": "2026-10-11T23:25:17Z",
+    "last": "2026-10-11T23:25:17Z",
+    "count": 1,
+    "object": "exporter-db47bbd74-6c5vc"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container exporter",
+    "first": "2026-10-11T23:25:17Z",
+    "last": "2026-10-11T23:25:17Z",
+    "count": 1,
+    "object": "exporter-db47bbd74-6c5vc"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"nginx:1.30.5-alpine\" already present on machine",
+    "first": "2026-10-11T23:25:17Z",
+    "last": "2026-10-11T23:25:17Z",
+    "count": 1,
+    "object": "exporter-db47bbd74-6c5vc"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: http",
+    "first": "2026-10-11T23:25:17Z",
+    "last": "2026-10-11T23:25:17Z",
+    "count": 1,
+    "object": "exporter-db47bbd74-6c5vc"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container http",
+    "first": "2026-10-11T23:25:17Z",
+    "last": "2026-10-11T23:25:17Z",
+    "count": 1,
+    "object": "exporter-db47bbd74-6c5vc"
+  },
+  {
+    "reason": "SuccessfulCreate",
+    "message": "Created pod: exporter-db47bbd74-6c5vc",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "exporter-db47bbd74"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled up replica set exporter-85fcd69cd5 from 0 to 1",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "exporter"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled down replica set exporter-7cf67b46d5 from 1 to 0",
+    "first": "2026-10-11T23:22:29Z",
+    "last": "2026-10-11T23:22:29Z",
+    "count": 1,
+    "object": "exporter"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled up replica set exporter-db47bbd74 from 0 to 1",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "exporter"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled down replica set exporter-85fcd69cd5 from 1 to 0",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "exporter"
+  },
+  {
+    "reason": "Unhealthy",
+    "message": "Readiness probe failed: Get \"http://10.244.0.5:8080/api/ready\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+    "first": "2026-10-11T19:20:12Z",
+    "last": "2026-10-11T23:39:23Z",
+    "count": 56,
+    "object": "gateway-cd9dfc89d-zdmtz"
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned lab/grafana-5cddf4777f-g6xk4 to laravel-reliability-lab-control-plane",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "grafana-5cddf4777f-g6xk4"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"nginx:1.30.5-alpine\" already present on machine",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "grafana-5cddf4777f-g6xk4"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: data-owner",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "grafana-5cddf4777f-g6xk4"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container data-owner",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "grafana-5cddf4777f-g6xk4"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"grafana/grafana:13.2.3\" already present on machine",
+    "first": "2026-10-11T23:22:28Z",
+    "last": "2026-10-11T23:22:28Z",
+    "count": 1,
+    "object": "grafana-5cddf4777f-g6xk4"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: grafana",
+    "first": "2026-10-11T23:22:28Z",
+    "last": "2026-10-11T23:22:28Z",
+    "count": 1,
+    "object": "grafana-5cddf4777f-g6xk4"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container grafana",
+    "first": "2026-10-11T23:22:28Z",
+    "last": "2026-10-11T23:22:28Z",
+    "count": 1,
+    "object": "grafana-5cddf4777f-g6xk4"
+  },
+  {
+    "reason": "Unhealthy",
+    "message": "Startup probe failed: Get \"http://10.244.0.48:3000/api/health\": dial tcp 10.244.0.48:3000: connect: connection refused",
+    "first": "2026-10-11T23:22:29Z",
+    "last": "2026-10-11T23:22:29Z",
+    "count": 1,
+    "object": "grafana-5cddf4777f-g6xk4"
+  },
+  {
+    "reason": "SuccessfulCreate",
+    "message": "Created pod: grafana-5cddf4777f-g6xk4",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "grafana-5cddf4777f"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container grafana",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "grafana-684677fb4-kw7j9"
+  },
+  {
+    "reason": "SuccessfulDelete",
+    "message": "Deleted pod: grafana-684677fb4-kw7j9",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "grafana-684677fb4"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled down replica set grafana-684677fb4 from 1 to 0",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "grafana"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled up replica set grafana-5cddf4777f from 0 to 1",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "grafana"
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned lab/scheduler-659c7b8689-gnflg to laravel-reliability-lab-control-plane",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "scheduler-659c7b8689-gnflg"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "scheduler-659c7b8689-gnflg"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: storage-init",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "scheduler-659c7b8689-gnflg"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container storage-init",
+    "first": "2026-10-11T23:25:16Z",
+    "last": "2026-10-11T23:25:16Z",
+    "count": 1,
+    "object": "scheduler-659c7b8689-gnflg"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:25:16Z",
+    "last": "2026-10-11T23:25:16Z",
+    "count": 1,
+    "object": "scheduler-659c7b8689-gnflg"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: scheduler",
+    "first": "2026-10-11T23:25:16Z",
+    "last": "2026-10-11T23:25:16Z",
+    "count": 1,
+    "object": "scheduler-659c7b8689-gnflg"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container scheduler",
+    "first": "2026-10-11T23:25:16Z",
+    "last": "2026-10-11T23:25:16Z",
+    "count": 1,
+    "object": "scheduler-659c7b8689-gnflg"
+  },
+  {
+    "reason": "SuccessfulCreate",
+    "message": "Created pod: scheduler-659c7b8689-gnflg",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "scheduler-659c7b8689"
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned lab/scheduler-7b84bdd8b8-ltds8 to laravel-reliability-lab-control-plane",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "scheduler-7b84bdd8b8-ltds8"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "scheduler-7b84bdd8b8-ltds8"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: storage-init",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "scheduler-7b84bdd8b8-ltds8"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container storage-init",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "scheduler-7b84bdd8b8-ltds8"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "scheduler-7b84bdd8b8-ltds8"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: scheduler",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "scheduler-7b84bdd8b8-ltds8"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container scheduler",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "scheduler-7b84bdd8b8-ltds8"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container scheduler",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "scheduler-7b84bdd8b8-ltds8"
+  },
+  {
+    "reason": "Unhealthy",
+    "message": "Readiness probe errored and resulted in unknown state: rpc error: code = NotFound desc = failed to exec in container: failed to load task: no running task found: task eb39c64395c1d79c3a3aa79028001a4c2fa3026435f8d7dceb84d1d1c14b06df not found",
+    "first": "2026-10-11T23:25:44Z",
+    "last": "2026-10-11T23:25:44Z",
+    "count": 1,
+    "object": "scheduler-7b84bdd8b8-ltds8"
+  },
+  {
+    "reason": "SuccessfulCreate",
+    "message": "Created pod: scheduler-7b84bdd8b8-ltds8",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "scheduler-7b84bdd8b8"
+  },
+  {
+    "reason": "SuccessfulDelete",
+    "message": "Deleted pod: scheduler-7b84bdd8b8-ltds8",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "scheduler-7b84bdd8b8"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container scheduler",
+    "first": "2026-10-11T23:22:29Z",
+    "last": "2026-10-11T23:22:29Z",
+    "count": 1,
+    "object": "scheduler-84978b7dcb-n5cw2"
+  },
+  {
+    "reason": "SuccessfulDelete",
+    "message": "Deleted pod: scheduler-84978b7dcb-n5cw2",
+    "first": "2026-10-11T23:22:29Z",
+    "last": "2026-10-11T23:22:29Z",
+    "count": 1,
+    "object": "scheduler-84978b7dcb"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled up replica set scheduler-7b84bdd8b8 from 0 to 1",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "scheduler"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled down replica set scheduler-84978b7dcb from 1 to 0",
+    "first": "2026-10-11T23:22:29Z",
+    "last": "2026-10-11T23:22:29Z",
+    "count": 1,
+    "object": "scheduler"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled up replica set scheduler-659c7b8689 from 0 to 1",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "scheduler"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled down replica set scheduler-7b84bdd8b8 from 1 to 0",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "scheduler"
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned lab/worker-54cc9d5b96-8xg26 to laravel-reliability-lab-control-plane",
+    "first": "2026-10-11T23:22:29Z",
+    "last": "2026-10-11T23:22:29Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96-8xg26"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:22:30Z",
+    "last": "2026-10-11T23:22:30Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96-8xg26"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: storage-init",
+    "first": "2026-10-11T23:22:30Z",
+    "last": "2026-10-11T23:22:30Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96-8xg26"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container storage-init",
+    "first": "2026-10-11T23:22:30Z",
+    "last": "2026-10-11T23:22:30Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96-8xg26"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:22:31Z",
+    "last": "2026-10-11T23:22:31Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96-8xg26"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: worker",
+    "first": "2026-10-11T23:22:31Z",
+    "last": "2026-10-11T23:22:31Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96-8xg26"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container worker",
+    "first": "2026-10-11T23:22:31Z",
+    "last": "2026-10-11T23:22:31Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96-8xg26"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container worker",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96-8xg26"
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned lab/worker-54cc9d5b96-n9qzm to laravel-reliability-lab-control-plane",
+    "first": "2026-10-11T23:22:25Z",
+    "last": "2026-10-11T23:22:25Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96-n9qzm"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96-n9qzm"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: storage-init",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96-n9qzm"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container storage-init",
+    "first": "2026-10-11T23:22:26Z",
+    "last": "2026-10-11T23:22:26Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96-n9qzm"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96-n9qzm"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: worker",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96-n9qzm"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container worker",
+    "first": "2026-10-11T23:22:27Z",
+    "last": "2026-10-11T23:22:27Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96-n9qzm"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container worker",
+    "first": "2026-10-11T23:25:23Z",
+    "last": "2026-10-11T23:25:23Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96-n9qzm"
+  },
+  {
+    "reason": "SuccessfulCreate",
+    "message": "Created pod: worker-54cc9d5b96-n9qzm",
+    "first": "2026-10-11T23:22:25Z",
+    "last": "2026-10-11T23:22:25Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96"
+  },
+  {
+    "reason": "SuccessfulCreate",
+    "message": "Created pod: worker-54cc9d5b96-8xg26",
+    "first": "2026-10-11T23:22:29Z",
+    "last": "2026-10-11T23:22:29Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96"
+  },
+  {
+    "reason": "SuccessfulDelete",
+    "message": "Deleted pod: worker-54cc9d5b96-8xg26",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96"
+  },
+  {
+    "reason": "SuccessfulDelete",
+    "message": "Deleted pod: worker-54cc9d5b96-n9qzm",
+    "first": "2026-10-11T23:25:23Z",
+    "last": "2026-10-11T23:25:23Z",
+    "count": 1,
+    "object": "worker-54cc9d5b96"
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned lab/worker-6c64d49769-78x72 to laravel-reliability-lab-control-plane",
+    "first": "2026-10-11T23:26:02Z",
+    "last": "2026-10-11T23:26:02Z",
+    "count": 1,
+    "object": "worker-6c64d49769-78x72"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:26:02Z",
+    "last": "2026-10-11T23:26:02Z",
+    "count": 1,
+    "object": "worker-6c64d49769-78x72"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: storage-init",
+    "first": "2026-10-11T23:26:02Z",
+    "last": "2026-10-11T23:26:02Z",
+    "count": 1,
+    "object": "worker-6c64d49769-78x72"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container storage-init",
+    "first": "2026-10-11T23:26:03Z",
+    "last": "2026-10-11T23:26:03Z",
+    "count": 1,
+    "object": "worker-6c64d49769-78x72"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:26:03Z",
+    "last": "2026-10-11T23:26:03Z",
+    "count": 1,
+    "object": "worker-6c64d49769-78x72"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: worker",
+    "first": "2026-10-11T23:26:03Z",
+    "last": "2026-10-11T23:26:03Z",
+    "count": 1,
+    "object": "worker-6c64d49769-78x72"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container worker",
+    "first": "2026-10-11T23:26:03Z",
+    "last": "2026-10-11T23:26:03Z",
+    "count": 1,
+    "object": "worker-6c64d49769-78x72"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container worker",
+    "first": "2026-10-11T23:27:07Z",
+    "last": "2026-10-11T23:27:07Z",
+    "count": 1,
+    "object": "worker-6c64d49769-78x72"
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned lab/worker-6c64d49769-f5wrp to laravel-reliability-lab-control-plane",
+    "first": "2026-10-11T23:26:02Z",
+    "last": "2026-10-11T23:26:02Z",
+    "count": 1,
+    "object": "worker-6c64d49769-f5wrp"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:26:02Z",
+    "last": "2026-10-11T23:26:02Z",
+    "count": 1,
+    "object": "worker-6c64d49769-f5wrp"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: storage-init",
+    "first": "2026-10-11T23:26:02Z",
+    "last": "2026-10-11T23:26:02Z",
+    "count": 1,
+    "object": "worker-6c64d49769-f5wrp"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container storage-init",
+    "first": "2026-10-11T23:26:03Z",
+    "last": "2026-10-11T23:26:03Z",
+    "count": 1,
+    "object": "worker-6c64d49769-f5wrp"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:26:03Z",
+    "last": "2026-10-11T23:26:03Z",
+    "count": 1,
+    "object": "worker-6c64d49769-f5wrp"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: worker",
+    "first": "2026-10-11T23:26:03Z",
+    "last": "2026-10-11T23:26:03Z",
+    "count": 1,
+    "object": "worker-6c64d49769-f5wrp"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container worker",
+    "first": "2026-10-11T23:26:03Z",
+    "last": "2026-10-11T23:26:03Z",
+    "count": 1,
+    "object": "worker-6c64d49769-f5wrp"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container worker",
+    "first": "2026-10-11T23:27:07Z",
+    "last": "2026-10-11T23:27:07Z",
+    "count": 1,
+    "object": "worker-6c64d49769-f5wrp"
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned lab/worker-6c64d49769-flb5l to laravel-reliability-lab-control-plane",
+    "first": "2026-10-11T23:27:10Z",
+    "last": "2026-10-11T23:27:10Z",
+    "count": 1,
+    "object": "worker-6c64d49769-flb5l"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:27:10Z",
+    "last": "2026-10-11T23:27:10Z",
+    "count": 1,
+    "object": "worker-6c64d49769-flb5l"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: storage-init",
+    "first": "2026-10-11T23:27:10Z",
+    "last": "2026-10-11T23:27:10Z",
+    "count": 1,
+    "object": "worker-6c64d49769-flb5l"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container storage-init",
+    "first": "2026-10-11T23:27:11Z",
+    "last": "2026-10-11T23:27:11Z",
+    "count": 1,
+    "object": "worker-6c64d49769-flb5l"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:27:12Z",
+    "last": "2026-10-11T23:27:12Z",
+    "count": 1,
+    "object": "worker-6c64d49769-flb5l"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: worker",
+    "first": "2026-10-11T23:27:12Z",
+    "last": "2026-10-11T23:27:12Z",
+    "count": 1,
+    "object": "worker-6c64d49769-flb5l"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container worker",
+    "first": "2026-10-11T23:27:13Z",
+    "last": "2026-10-11T23:27:13Z",
+    "count": 1,
+    "object": "worker-6c64d49769-flb5l"
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned lab/worker-6c64d49769-p2qln to laravel-reliability-lab-control-plane",
+    "first": "2026-10-11T23:27:10Z",
+    "last": "2026-10-11T23:27:10Z",
+    "count": 1,
+    "object": "worker-6c64d49769-p2qln"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:27:10Z",
+    "last": "2026-10-11T23:27:10Z",
+    "count": 1,
+    "object": "worker-6c64d49769-p2qln"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: storage-init",
+    "first": "2026-10-11T23:27:10Z",
+    "last": "2026-10-11T23:27:10Z",
+    "count": 1,
+    "object": "worker-6c64d49769-p2qln"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container storage-init",
+    "first": "2026-10-11T23:27:11Z",
+    "last": "2026-10-11T23:27:11Z",
+    "count": 1,
+    "object": "worker-6c64d49769-p2qln"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:27:12Z",
+    "last": "2026-10-11T23:27:12Z",
+    "count": 1,
+    "object": "worker-6c64d49769-p2qln"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: worker",
+    "first": "2026-10-11T23:27:12Z",
+    "last": "2026-10-11T23:27:12Z",
+    "count": 1,
+    "object": "worker-6c64d49769-p2qln"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container worker",
+    "first": "2026-10-11T23:27:13Z",
+    "last": "2026-10-11T23:27:13Z",
+    "count": 1,
+    "object": "worker-6c64d49769-p2qln"
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned lab/worker-6c64d49769-qglrr to laravel-reliability-lab-control-plane",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "worker-6c64d49769-qglrr"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "worker-6c64d49769-qglrr"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: storage-init",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "worker-6c64d49769-qglrr"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container storage-init",
+    "first": "2026-10-11T23:25:16Z",
+    "last": "2026-10-11T23:25:16Z",
+    "count": 1,
+    "object": "worker-6c64d49769-qglrr"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:25:16Z",
+    "last": "2026-10-11T23:25:16Z",
+    "count": 1,
+    "object": "worker-6c64d49769-qglrr"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: worker",
+    "first": "2026-10-11T23:25:16Z",
+    "last": "2026-10-11T23:25:16Z",
+    "count": 1,
+    "object": "worker-6c64d49769-qglrr"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container worker",
+    "first": "2026-10-11T23:25:16Z",
+    "last": "2026-10-11T23:25:16Z",
+    "count": 1,
+    "object": "worker-6c64d49769-qglrr"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container worker",
+    "first": "2026-10-11T23:25:24Z",
+    "last": "2026-10-11T23:25:24Z",
+    "count": 1,
+    "object": "worker-6c64d49769-qglrr"
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned lab/worker-6c64d49769-qxxqv to laravel-reliability-lab-control-plane",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "worker-6c64d49769-qxxqv"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "worker-6c64d49769-qxxqv"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: storage-init",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "worker-6c64d49769-qxxqv"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container storage-init",
+    "first": "2026-10-11T23:25:20Z",
+    "last": "2026-10-11T23:25:20Z",
+    "count": 1,
+    "object": "worker-6c64d49769-qxxqv"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:25:21Z",
+    "last": "2026-10-11T23:25:21Z",
+    "count": 1,
+    "object": "worker-6c64d49769-qxxqv"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: worker",
+    "first": "2026-10-11T23:25:21Z",
+    "last": "2026-10-11T23:25:21Z",
+    "count": 1,
+    "object": "worker-6c64d49769-qxxqv"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container worker",
+    "first": "2026-10-11T23:25:21Z",
+    "last": "2026-10-11T23:25:21Z",
+    "count": 1,
+    "object": "worker-6c64d49769-qxxqv"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container worker",
+    "first": "2026-10-11T23:25:26Z",
+    "last": "2026-10-11T23:25:26Z",
+    "count": 1,
+    "object": "worker-6c64d49769-qxxqv"
+  },
+  {
+    "reason": "SuccessfulCreate",
+    "message": "Created pod: worker-6c64d49769-qglrr",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "worker-6c64d49769"
+  },
+  {
+    "reason": "SuccessfulCreate",
+    "message": "Created pod: worker-6c64d49769-qxxqv",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "worker-6c64d49769"
+  },
+  {
+    "reason": "SuccessfulDelete",
+    "message": "Deleted pod: worker-6c64d49769-qglrr",
+    "first": "2026-10-11T23:25:24Z",
+    "last": "2026-10-11T23:25:24Z",
+    "count": 1,
+    "object": "worker-6c64d49769"
+  },
+  {
+    "reason": "SuccessfulDelete",
+    "message": "Deleted pod: worker-6c64d49769-qxxqv",
+    "first": "2026-10-11T23:25:24Z",
+    "last": "2026-10-11T23:25:24Z",
+    "count": 1,
+    "object": "worker-6c64d49769"
+  },
+  {
+    "reason": "SuccessfulCreate",
+    "message": "Created pod: worker-6c64d49769-f5wrp",
+    "first": "2026-10-11T23:26:02Z",
+    "last": "2026-10-11T23:26:02Z",
+    "count": 1,
+    "object": "worker-6c64d49769"
+  },
+  {
+    "reason": "SuccessfulCreate",
+    "message": "Created pod: worker-6c64d49769-78x72",
+    "first": "2026-10-11T23:26:02Z",
+    "last": "2026-10-11T23:26:02Z",
+    "count": 1,
+    "object": "worker-6c64d49769"
+  },
+  {
+    "reason": "SuccessfulDelete",
+    "message": "Deleted pod: worker-6c64d49769-78x72",
+    "first": "2026-10-11T23:27:07Z",
+    "last": "2026-10-11T23:27:07Z",
+    "count": 1,
+    "object": "worker-6c64d49769"
+  },
+  {
+    "reason": "SuccessfulDelete",
+    "message": "Deleted pod: worker-6c64d49769-f5wrp",
+    "first": "2026-10-11T23:27:07Z",
+    "last": "2026-10-11T23:27:07Z",
+    "count": 1,
+    "object": "worker-6c64d49769"
+  },
+  {
+    "reason": "SuccessfulCreate",
+    "message": "Created pod: worker-6c64d49769-flb5l",
+    "first": "2026-10-11T23:27:10Z",
+    "last": "2026-10-11T23:27:10Z",
+    "count": 1,
+    "object": "worker-6c64d49769"
+  },
+  {
+    "reason": "SuccessfulCreate",
+    "message": "Created pod: worker-6c64d49769-p2qln",
+    "first": "2026-10-11T23:27:10Z",
+    "last": "2026-10-11T23:27:10Z",
+    "count": 1,
+    "object": "worker-6c64d49769"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T21:02:34Z",
+    "last": "2026-10-11T23:00:50Z",
+    "count": 2,
+    "object": "worker-b7794db7b-5sdn4"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: worker",
+    "first": "2026-10-11T21:02:34Z",
+    "last": "2026-10-11T23:00:50Z",
+    "count": 2,
+    "object": "worker-b7794db7b-5sdn4"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container worker",
+    "first": "2026-10-11T21:02:34Z",
+    "last": "2026-10-11T23:00:50Z",
+    "count": 2,
+    "object": "worker-b7794db7b-5sdn4"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container worker",
+    "first": "2026-10-11T23:16:33Z",
+    "last": "2026-10-11T23:16:33Z",
+    "count": 1,
+    "object": "worker-b7794db7b-5sdn4"
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned lab/worker-b7794db7b-dmhdp to laravel-reliability-lab-control-plane",
+    "first": "2026-10-11T23:17:09Z",
+    "last": "2026-10-11T23:17:09Z",
+    "count": 1,
+    "object": "worker-b7794db7b-dmhdp"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:17:10Z",
+    "last": "2026-10-11T23:17:10Z",
+    "count": 1,
+    "object": "worker-b7794db7b-dmhdp"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: storage-init",
+    "first": "2026-10-11T23:17:10Z",
+    "last": "2026-10-11T23:17:10Z",
+    "count": 1,
+    "object": "worker-b7794db7b-dmhdp"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container storage-init",
+    "first": "2026-10-11T23:17:10Z",
+    "last": "2026-10-11T23:17:10Z",
+    "count": 1,
+    "object": "worker-b7794db7b-dmhdp"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:17:11Z",
+    "last": "2026-10-11T23:17:11Z",
+    "count": 1,
+    "object": "worker-b7794db7b-dmhdp"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: worker",
+    "first": "2026-10-11T23:17:11Z",
+    "last": "2026-10-11T23:17:11Z",
+    "count": 1,
+    "object": "worker-b7794db7b-dmhdp"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container worker",
+    "first": "2026-10-11T23:17:11Z",
+    "last": "2026-10-11T23:17:11Z",
+    "count": 1,
+    "object": "worker-b7794db7b-dmhdp"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container worker",
+    "first": "2026-10-11T23:22:33Z",
+    "last": "2026-10-11T23:22:33Z",
+    "count": 1,
+    "object": "worker-b7794db7b-dmhdp"
+  },
+  {
+    "reason": "Scheduled",
+    "message": "Successfully assigned lab/worker-b7794db7b-m6qrj to laravel-reliability-lab-control-plane",
+    "first": "2026-10-11T23:17:09Z",
+    "last": "2026-10-11T23:17:09Z",
+    "count": 1,
+    "object": "worker-b7794db7b-m6qrj"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:17:10Z",
+    "last": "2026-10-11T23:17:10Z",
+    "count": 1,
+    "object": "worker-b7794db7b-m6qrj"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: storage-init",
+    "first": "2026-10-11T23:17:10Z",
+    "last": "2026-10-11T23:17:10Z",
+    "count": 1,
+    "object": "worker-b7794db7b-m6qrj"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container storage-init",
+    "first": "2026-10-11T23:17:11Z",
+    "last": "2026-10-11T23:17:11Z",
+    "count": 1,
+    "object": "worker-b7794db7b-m6qrj"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T23:17:11Z",
+    "last": "2026-10-11T23:17:11Z",
+    "count": 1,
+    "object": "worker-b7794db7b-m6qrj"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: worker",
+    "first": "2026-10-11T23:17:11Z",
+    "last": "2026-10-11T23:17:11Z",
+    "count": 1,
+    "object": "worker-b7794db7b-m6qrj"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container worker",
+    "first": "2026-10-11T23:17:11Z",
+    "last": "2026-10-11T23:17:11Z",
+    "count": 1,
+    "object": "worker-b7794db7b-m6qrj"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container worker",
+    "first": "2026-10-11T23:22:29Z",
+    "last": "2026-10-11T23:22:29Z",
+    "count": 1,
+    "object": "worker-b7794db7b-m6qrj"
+  },
+  {
+    "reason": "Pulled",
+    "message": "Container image \"laravel-reliability-app:g2\" already present on machine",
+    "first": "2026-10-11T21:02:38Z",
+    "last": "2026-10-11T23:00:50Z",
+    "count": 2,
+    "object": "worker-b7794db7b-nhcbn"
+  },
+  {
+    "reason": "Created",
+    "message": "Created container: worker",
+    "first": "2026-10-11T21:02:38Z",
+    "last": "2026-10-11T23:00:50Z",
+    "count": 2,
+    "object": "worker-b7794db7b-nhcbn"
+  },
+  {
+    "reason": "Started",
+    "message": "Started container worker",
+    "first": "2026-10-11T21:02:38Z",
+    "last": "2026-10-11T23:00:50Z",
+    "count": 2,
+    "object": "worker-b7794db7b-nhcbn"
+  },
+  {
+    "reason": "Unhealthy",
+    "message": "Readiness probe failed: ",
+    "first": "2026-10-11T23:00:50Z",
+    "last": "2026-10-11T23:00:50Z",
+    "count": 1,
+    "object": "worker-b7794db7b-nhcbn"
+  },
+  {
+    "reason": "Killing",
+    "message": "Stopping container worker",
+    "first": "2026-10-11T23:16:33Z",
+    "last": "2026-10-11T23:16:33Z",
+    "count": 1,
+    "object": "worker-b7794db7b-nhcbn"
+  },
+  {
+    "reason": "SuccessfulDelete",
+    "message": "Deleted pod: worker-b7794db7b-5sdn4",
+    "first": "2026-10-11T23:16:33Z",
+    "last": "2026-10-11T23:16:33Z",
+    "count": 1,
+    "object": "worker-b7794db7b"
+  },
+  {
+    "reason": "SuccessfulDelete",
+    "message": "Deleted pod: worker-b7794db7b-nhcbn",
+    "first": "2026-10-11T23:16:33Z",
+    "last": "2026-10-11T23:16:33Z",
+    "count": 1,
+    "object": "worker-b7794db7b"
+  },
+  {
+    "reason": "SuccessfulCreate",
+    "message": "Created pod: worker-b7794db7b-m6qrj",
+    "first": "2026-10-11T23:17:09Z",
+    "last": "2026-10-11T23:17:09Z",
+    "count": 1,
+    "object": "worker-b7794db7b"
+  },
+  {
+    "reason": "SuccessfulCreate",
+    "message": "Created pod: worker-b7794db7b-dmhdp",
+    "first": "2026-10-11T23:17:09Z",
+    "last": "2026-10-11T23:17:09Z",
+    "count": 1,
+    "object": "worker-b7794db7b"
+  },
+  {
+    "reason": "SuccessfulDelete",
+    "message": "Deleted pod: worker-b7794db7b-m6qrj",
+    "first": "2026-10-11T23:22:29Z",
+    "last": "2026-10-11T23:22:29Z",
+    "count": 1,
+    "object": "worker-b7794db7b"
+  },
+  {
+    "reason": "SuccessfulDelete",
+    "message": "Deleted pod: worker-b7794db7b-dmhdp",
+    "first": "2026-10-11T23:22:33Z",
+    "last": "2026-10-11T23:22:33Z",
+    "count": 1,
+    "object": "worker-b7794db7b"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled down replica set worker-b7794db7b from 2 to 0",
+    "first": "2026-10-11T23:16:33Z",
+    "last": "2026-10-11T23:16:33Z",
+    "count": 1,
+    "object": "worker"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled up replica set worker-b7794db7b from 0 to 2",
+    "first": "2026-10-11T23:17:09Z",
+    "last": "2026-10-11T23:17:09Z",
+    "count": 1,
+    "object": "worker"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled up replica set worker-54cc9d5b96 from 0 to 1",
+    "first": "2026-10-11T23:22:25Z",
+    "last": "2026-10-11T23:22:25Z",
+    "count": 1,
+    "object": "worker"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled down replica set worker-b7794db7b from 2 to 1",
+    "first": "2026-10-11T23:22:29Z",
+    "last": "2026-10-11T23:22:29Z",
+    "count": 1,
+    "object": "worker"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled up replica set worker-54cc9d5b96 from 1 to 2",
+    "first": "2026-10-11T23:22:29Z",
+    "last": "2026-10-11T23:22:29Z",
+    "count": 1,
+    "object": "worker"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled down replica set worker-b7794db7b from 1 to 0",
+    "first": "2026-10-11T23:22:33Z",
+    "last": "2026-10-11T23:22:33Z",
+    "count": 1,
+    "object": "worker"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled up replica set worker-6c64d49769 from 0 to 1",
+    "first": "2026-10-11T23:25:15Z",
+    "last": "2026-10-11T23:25:15Z",
+    "count": 1,
+    "object": "worker"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled down replica set worker-54cc9d5b96 from 2 to 1",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "worker"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled up replica set worker-6c64d49769 from 1 to 2",
+    "first": "2026-10-11T23:25:19Z",
+    "last": "2026-10-11T23:25:19Z",
+    "count": 1,
+    "object": "worker"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "(combined from similar events): Scaled up replica set worker-6c64d49769 from 0 to 2",
+    "first": "2026-10-11T23:25:23Z",
+    "last": "2026-10-11T23:26:02Z",
+    "count": 3,
+    "object": "worker"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled down replica set worker-6c64d49769 from 2 to 0",
+    "first": "2026-10-11T23:27:07Z",
+    "last": "2026-10-11T23:27:07Z",
+    "count": 1,
+    "object": "worker"
+  },
+  {
+    "reason": "ScalingReplicaSet",
+    "message": "Scaled up replica set worker-6c64d49769 from 0 to 2",
+    "first": "2026-10-11T23:27:10Z",
+    "last": "2026-10-11T23:27:10Z",
+    "count": 1,
+    "object": "worker"
+  }
+]

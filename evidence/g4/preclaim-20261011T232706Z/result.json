@@ -1,0 +1,40 @@
+{
+  "start": "2026-10-11T23:27:06Z",
+  "source_sha": "8dc1c37e8b3f6c92a255e0f74abc4bfca566a26b",
+  "notes": "Quiescent project worker pause; API acceptance creates one fault report. An owned ephemeral PHP CLI consumer in an API pod reserves that notification then SIGKILLs itself before handle. Restore original workers in finally; no live Redis deletion or API master termination.",
+  "report_id": "8bbac369-c2c3-4f2e-a6c7-23dd96534739",
+  "consumer_exit": {
+    "code": 137,
+    "stdout": "{\"report_id\":\"8bbac369-c2c3-4f2e-a6c7-23dd96534739\",\"attempts\":1,\"pid\":20}\n",
+    "stderr": "command terminated with exit code 137\n"
+  },
+  "after_reservation": {
+    "state": "pending|0",
+    "notifications": {
+      "ready": 0,
+      "reserved": 1,
+      "delayed": 0
+    }
+  },
+  "report": {
+    "id": "8bbac369-c2c3-4f2e-a6c7-23dd96534739",
+    "state": "completed",
+    "attempts": 1,
+    "result": {
+      "checksum": "6c2dd9e484bc51709e781f2d8795a7a7aa2b77fb520c5073bd20e593fe941e5d"
+    },
+    "error": null,
+    "deadline_met": null,
+    "overdue": false
+  },
+  "recovery_seconds": 21.986497779987985,
+  "transport_failure_delta": 1.0,
+  "guard_exists": 0,
+  "queue_after": {
+    "ready": 0,
+    "reserved": 0,
+    "delayed": 0
+  },
+  "end": "2026-10-11T23:27:32Z",
+  "result": "PASS"
+}

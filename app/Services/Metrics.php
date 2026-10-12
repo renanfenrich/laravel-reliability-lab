@@ -43,8 +43,8 @@ class Metrics {
             foreach([1,5,15,30,60,120,'+Inf'] as $le) $zero('lab_processing_seconds_bucket',['traffic'=>$traffic,'le'=>$le]);
             $zero('lab_processing_seconds_count',['traffic'=>$traffic]); $zero('lab_processing_seconds_sum',['traffic'=>$traffic]);
         }
-        foreach(['queued','error'] as $outcome) $zero('lab_dispatch_total',['outcome'=>$outcome]);
-        $zero('lab_scheduler_heartbeat_seconds');
+        foreach(['queued','suppressed','error'] as $outcome) $zero('lab_dispatch_total',['outcome'=>$outcome]);
+        $zero('lab_scheduler_heartbeat_seconds'); $zero('lab_notification_failures_total');
         foreach(DB::table('metric_samples')->get() as $sample) $defaults[$sample->series]=$sample->value;
         $lines=[];
         foreach(['http','external','processing'] as $h) $lines[]='# TYPE lab_'.$h.'_seconds histogram';
@@ -70,6 +70,10 @@ class Metrics {
         foreach ($waits as $w) $sessions[$w->operation][$w->wait_type]=$w->sessions;
         foreach (['metrics','reports','other'] as $operation) foreach (['Lock','IO','Client','running','other'] as $type) $lines[]='lab_postgres_sessions{operation="'.$operation.'",wait_type="'.$type.'"} '.($sessions[$operation][$type]??0);
         $lines[]='lab_redis_queue_jobs '.\Illuminate\Support\Facades\Redis::llen('queues:reports');
+        foreach(['ready'=>'llen','reserved'=>'zcard','delayed'=>'zcard'] as $state=>$method) {
+            $key='queues:reports'.($state==='ready'?'':':'.$state);
+            $lines[]='lab_queue_notifications{state="'.$state.'"} '.\Illuminate\Support\Facades\Redis::$method($key);
+        }
         $lines[]='lab_telemetry_heartbeat_seconds '.time();
         return implode("\n",$lines)."\n";
     }

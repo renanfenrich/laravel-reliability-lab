@@ -1,0 +1,19 @@
+{
+  "start": "2026-10-11T23:58:11Z",
+  "end": "2026-10-11T23:58:11Z",
+  "source_sha": "0fb29426c42cbe87a673fe2e629cc6b8c1c568c0",
+  "report": {
+    "id": "5134754f-4ac6-462d-b8d4-3e6889bc42ec",
+    "state": "completed",
+    "attempts": 1,
+    "result": {
+      "checksum": "90cbfc5af0bf2b27e671e0384fbc49a0859c81ff2ab3f9c963e96b57c945eca5"
+    },
+    "error": null,
+    "deadline_met": null,
+    "overdue": false
+  },
+  "wait_seconds": 0.31979276999481954,
+  "result": "PASS",
+  "notes": "Separate Compose developer stack; no Kubernetes load cohort or reset."
+}
