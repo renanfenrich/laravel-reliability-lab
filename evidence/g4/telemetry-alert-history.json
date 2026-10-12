@@ -1,0 +1,101 @@
+{
+  "utc": "2026-10-11T23:59:02Z",
+  "expression": "ALERTS{alertname=\"TelemetryUnavailable\"}",
+  "result": [
+    {
+      "metric": {
+        "__name__": "ALERTS",
+        "alertname": "TelemetryUnavailable",
+        "alertstate": "firing",
+        "routing": "local-email",
+        "severity": "warning"
+      },
+      "values": [
+        [
+          1791761887.35,
+          "1"
+        ],
+        [
+          1791761902.35,
+          "1"
+        ],
+        [
+          1791761917.35,
+          "1"
+        ],
+        [
+          1791761932.35,
+          "1"
+        ],
+        [
+          1791761947.35,
+          "1"
+        ],
+        [
+          1791761962.35,
+          "1"
+        ],
+        [
+          1791761977.35,
+          "1"
+        ],
+        [
+          1791761992.35,
+          "1"
+        ],
+        [
+          1791762007.35,
+          "1"
+        ],
+        [
+          1791762022.35,
+          "1"
+        ],
+        [
+          1791762037.35,
+          "1"
+        ],
+        [
+          1791762052.35,
+          "1"
+        ],
+        [
+          1791762067.35,
+          "1"
+        ],
+        [
+          1791762082.35,
+          "1"
+        ]
+      ]
+    },
+    {
+      "metric": {
+        "__name__": "ALERTS",
+        "alertname": "TelemetryUnavailable",
+        "alertstate": "pending",
+        "routing": "local-email",
+        "severity": "warning"
+      },
+      "values": [
+        [
+          1791761827.35,
+          "1"
+        ],
+        [
+          1791761842.35,
+          "1"
+        ],
+        [
+          1791761857.35,
+          "1"
+        ],
+        [
+          1791761872.35,
+          "1"
+        ]
+      ]
+    }
+  ],
+  "note": "Historical real alert evaluation during the executed load; not notification fixtures or SLO attainment."
+}

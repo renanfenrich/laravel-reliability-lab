@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-11T23:39:09Z",
+  "timestamp_basis": "UTC date output from the same tool command, second resolution",
+  "source_sha": "0fb29426c42cbe87a673fe2e629cc6b8c1c568c0",
+  "queue": {
+    "ready": 3069,
+    "reserved": 2,
+    "delayed": 0
+  },
+  "note": "Actual read-only atomic Redis snapshot previously returned by notification_depth during the high-rate step; preserved from tool output. Not raw payload inspection or an exhaustive peak."
+}
